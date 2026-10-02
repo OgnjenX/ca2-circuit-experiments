@@ -1,0 +1,263 @@
+{
+  "created_UTC": "2026-10-02T17:16:22Z",
+  "pre_freeze_commit": "7235a096a238ef9ce3cb9be6ba53b2eff76cfdbd",
+  "calibration": {
+    "commit": "7235a096a238ef9ce3cb9be6ba53b2eff76cfdbd",
+    "selections": [
+      {
+        "target_amplitude_mV": 1.44,
+        "selected": {
+          "active": 443,
+          "mean_peak_mV": 1.4129687547683716,
+          "eligible": true
+        },
+        "candidates": [
+          {
+            "active": 5409,
+            "mean_peak_mV": 78.77933883666992,
+            "eligible": false
+          },
+          {
+            "active": 2704,
+            "mean_peak_mV": 54.43651580810547,
+            "eligible": false
+          },
+          {
+            "active": 1352,
+            "mean_peak_mV": 4.825051784515381,
+            "eligible": false
+          },
+          {
+            "active": 676,
+            "mean_peak_mV": 2.1574831008911133,
+            "eligible": true
+          },
+          {
+            "active": 338,
+            "mean_peak_mV": 1.1230140328407288,
+            "eligible": true
+          },
+          {
+            "active": 507,
+            "mean_peak_mV": 1.6099056005477905,
+            "eligible": true
+          },
+          {
+            "active": 422,
+            "mean_peak_mV": 1.3479490876197815,
+            "eligible": true
+          },
+          {
+            "active": 464,
+            "mean_peak_mV": 1.4704182147979736,
+            "eligible": true
+          },
+          {
+            "active": 443,
+            "mean_peak_mV": 1.4129687547683716,
+            "eligible": true
+          }
+        ]
+      },
+      {
+        "target_amplitude_mV": 1.76,
+        "selected": {
+          "active": 559,
+          "mean_peak_mV": 1.757037103176117,
+          "eligible": true
+        },
+        "candidates": [
+          {
+            "active": 5409,
+            "mean_peak_mV": 78.77933883666992,
+            "eligible": false
+          },
+          {
+            "active": 2704,
+            "mean_peak_mV": 54.43651580810547,
+            "eligible": false
+          },
+          {
+            "active": 1352,
+            "mean_peak_mV": 4.825051784515381,
+            "eligible": false
+          },
+          {
+            "active": 676,
+            "mean_peak_mV": 2.1574831008911133,
+            "eligible": true
+          },
+          {
+            "active": 338,
+            "mean_peak_mV": 1.1230140328407288,
+            "eligible": true
+          },
+          {
+            "active": 507,
+            "mean_peak_mV": 1.6099056005477905,
+            "eligible": true
+          },
+          {
+            "active": 591,
+            "mean_peak_mV": 1.8771334290504456,
+            "eligible": true
+          },
+          {
+            "active": 549,
+            "mean_peak_mV": 1.7297003269195557,
+            "eligible": true
+          },
+          {
+            "active": 570,
+            "mean_peak_mV": 1.8082736730575562,
+            "eligible": true
+          },
+          {
+            "active": 559,
+            "mean_peak_mV": 1.757037103176117,
+            "eligible": true
+          }
+        ]
+      },
+      {
+        "target_amplitude_mV": 2.08,
+        "selected": {
+          "active": 654,
+          "mean_peak_mV": 2.0867756605148315,
+          "eligible": true
+        },
+        "candidates": [
+          {
+            "active": 5409,
+            "mean_peak_mV": 78.77933883666992,
+            "eligible": false
+          },
+          {
+            "active": 2704,
+            "mean_peak_mV": 54.43651580810547,
+            "eligible": false
+          },
+          {
+            "active": 1352,
+            "mean_peak_mV": 4.825051784515381,
+            "eligible": false
+          },
+          {
+            "active": 676,
+            "mean_peak_mV": 2.1574831008911133,
+            "eligible": true
+          },
+          {
+            "active": 338,
+            "mean_peak_mV": 1.1230140328407288,
+            "eligible": true
+          },
+          {
+            "active": 507,
+            "mean_peak_mV": 1.6099056005477905,
+            "eligible": true
+          },
+          {
+            "active": 591,
+            "mean_peak_mV": 1.8771334290504456,
+            "eligible": true
+          },
+          {
+            "active": 633,
+            "mean_peak_mV": 2.006001114845276,
+            "eligible": true
+          },
+          {
+            "active": 654,
+            "mean_peak_mV": 2.0867756605148315,
+            "eligible": true
+          }
+        ]
+      }
+    ],
+    "source": "Figure 4 weak first EPSP mean +/- SEM transferred to Figure 5 APV as an explicit assumption",
+    "train_outcomes_seen": false
+  },
+  "calibration_sha256": "85bbde29edd4725a5e703cebe462e0fd10e1e08307b74f7b9a0f7fc2f285f956",
+  "analysis_sha256": "5cc63674a5967f58c5702ec1309b086f88c7ac1e7e1276c35947d01856f6821f",
+  "scientific_file_sha256": {
+    "experiments/003_corrected_ca2_frequency/experiment.py": "8c290c2923ab9f3bb4a81925293dd1ed48439d226766d50e7191e7684febdcc2",
+    "experiments/003_corrected_ca2_frequency/analyze.py": "5cc63674a5967f58c5702ec1309b086f88c7ac1e7e1276c35947d01856f6821f",
+    "experiments/003_corrected_ca2_frequency/protocol.json": "84adc810a123f738130eb4f923d0b0e4d8085eb42865645bc325254210013545",
+    "experiments/003_corrected_ca2_frequency/source_targets.json": "bafc32c1f65a662bcf5718e99e1b7b1586f98c8085190b409bc0a741ec044909",
+    "experiments/003_corrected_ca2_frequency/source_audit.json": "3bc68446d1598ca81660c719e33baee41d4c46a2dc42fa1a5abbafc172e6b521",
+    "src/ca2lab/slice.py": "f1c7d8a68c64183c99d390a5a6afb0b6161f7a73371e3a06c8ea4a6b565a3eb8",
+    "src/ca2lab/benchmark.py": "fe88d3ba6077a7e7967096d57176e11151e13cc460bf8fc42abda7df6d411d74",
+    "src/ca2lab/monitors.py": "1cbf45958d61acbba57fd62263b34fe327ca83977ff17d969a8ddc0e0c8130d7",
+    "models/ca2_slice/src/assay.cpp": "4ea83fd1f470688a15d582d85bff3db087248cb42a8f9f40bdd559e8606fdfad",
+    "simulators/carlsim4/synapse_dynamics_v2.json": "12176617dd062101c224a8e6fa529d9950cf523b2ffb2ce83bea2a91635572ee",
+    "simulators/carlsim4/patches/synapse_dynamics_v2.patch": "54a579de0e694b6e3a57fc2f729e08cf2903e1802945d3ad227f2f2aa3c0a646",
+    "simulators/carlsim4/validation/spec.json": "364d5124d533ca3161b7a062150ce718c68db8ac3c20b3f648f6f43ee0f8174f",
+    "simulators/carlsim4/validation/oracle.py": "15d3da757b9631f65f613cdb80fdfeb11c3d5af99a75dcba964079abbc63bcc5",
+    "data/hippocampome/2026-10-01/CA2_CA3_CA1_EC_conn_parameters10-01-2026_10_48_20.csv": "93df10e7cb0b00261e9d5051c99d62a97f55afaa56f9e3c039eab6660b4fd9e9",
+    "data/hippocampome/2026-10-01/CA2_CA3_CA1_EC_neuron_parameters10-01-2026_10_48_20.csv": "48a4651de1028785e582029955d5150a31d905d90874c0f17a4ceaeba85ce73a"
+  },
+  "executable_sha256": "47903c167455f75b7f945842f72a074907e846e734e684d639f4e9d7b3c0a72d",
+  "generated_config_sha256": "c9ba903acee996d34f8aef6afb936f5d43dae704ef863d337099ea1c729ad976",
+  "build_record_sha256": "150c1338f62c54db8aa31124a22637408a7a2abc97dde115438ec468f6fcf127",
+  "build_record": {
+    "source_commit": "fd90779a443c420b600a1de19bdace90a31d9ccc",
+    "backend_identity": "carlsim4-synapse-dynamics-v2",
+    "library_sha256": "0a113b96470ce862f32e6494f899b237e45542a7fa5089ad7e3e027fdc404895",
+    "static_executable_sha256": "d233395ca25d29c73bcb8dd656e89935f5c1a404edb6e5e799485a01bceab553",
+    "executable_sha256": "47903c167455f75b7f945842f72a074907e846e734e684d639f4e9d7b3c0a72d",
+    "config_sha256": "c9ba903acee996d34f8aef6afb936f5d43dae704ef863d337099ea1c729ad976",
+    "compiler": "g++-12 (Ubuntu 12.5.0-9ubuntu1) 12.5.0",
+    "build_command": [
+      "g++-12",
+      "-std=c++11",
+      "-O2",
+      "-g",
+      "-I<repository>/data/workspaces/experiment_003/build",
+      "-I<backend>/carlsim/interface/inc",
+      "-I<backend>/carlsim/kernel/inc",
+      "-I<backend>/carlsim/monitor",
+      "<repository>/models/ca2_slice/src/assay.cpp",
+      "<backend>/libcarlsim.a.4.0.0",
+      "-lcurand",
+      "-lcudart",
+      "-lpthread",
+      "-o",
+      "<repository>/data/workspaces/experiment_003/build/assay"
+    ],
+    "neuron": {
+      "Neuron Type": "CA2 Pyramidal",
+      "E/I": "e",
+      "rank": "3",
+      "Population Size": "18956",
+      "Izh C": "1630.0",
+      "Izh k": "5.9432435",
+      "Izh Vr": "-72.58829",
+      "Izh Vt": "-58.78362",
+      "Izh a": "0.0011350543",
+      "Izh b": "-15.885261",
+      "Izh Vpeak": "19.99006",
+      "Izh Vmin": "-62.646779",
+      "Izh d": "74.0",
+      "Refractory Period": "1",
+      "CARLsim_default": "N"
+    },
+    "edge": {
+      "Source Subregion": "MEC",
+      "Presynaptic Neuron Type": "MEC LII Stellate",
+      "Target Subregion": "CA2",
+      "Postsynaptic Neuron Type": "CA2 Pyramidal",
+      "g": "2.1476304960784307",
+      "tau_d": "4.788581445098041",
+      "tau_r": "328.3802538235294",
+      "tau_f": "45.805902774509796",
+      "u": "0.25328488754901973",
+      "Connection Probability": "0.0084661227921748",
+      "Synaptic Delay": "1",
+      "CARLsim_default": "Y"
+    },
+    "holding_current_pA": 131.42409113662896,
+    "holding_formula": "b*(Vhold-Vr)-k*(Vhold-Vr)*(Vhold-Vt); intrinsic parameters unchanged",
+    "implementation": "Direct MEC input, no recurrence or inhibition; NMDA multiplier zero"
+  }
+}
