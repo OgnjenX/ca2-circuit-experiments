@@ -1,3 +1,7 @@
+#include "../old_config.h"
+#include "../setup.h"
+#include "../fresh_config.h"
+
 #include <carlsim.h>
 #include <cstdlib>
 #include <iostream>
@@ -14,18 +18,18 @@ int main(int argc, char** argv) {
         return 2;
     CARLsim sim("ca2_baseline", GPU_MODE, USER, 0, seed);
     if (config == "old") {
-#include "../old_config.h"
+        const auto groups = ca2_nominal::configure_old(sim);
         sim.setIntegrationMethod(RUNGE_KUTTA4, steps);
         sim.setupNetwork();
-#include "../setup.h"
-        sim.setExternalCurrent(CA2_Pyramidal, 300.0f);
+        ca2_nominal::setup_monitors(sim, groups);
+        sim.setExternalCurrent(groups.CA2_Pyramidal, 300.0f);
         sim.runNetwork(duration / 1000, duration % 1000);
     } else {
-#include "../fresh_config.h"
+        const auto groups = ca2_nominal::configure_fresh(sim);
         sim.setIntegrationMethod(RUNGE_KUTTA4, steps);
         sim.setupNetwork();
-#include "../setup.h"
-        sim.setExternalCurrent(CA2_Pyramidal, 300.0f);
+        ca2_nominal::setup_monitors(sim, groups);
+        sim.setExternalCurrent(groups.CA2_Pyramidal, 300.0f);
         sim.runNetwork(duration / 1000, duration % 1000);
     }
     std::cout << "EXPERIMENT_COMPLETE config=" << config << " seed=" << seed

@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-02",
+  "comparison_base": "46fc79aded1e3241b1b395c76c9fdf0577384e50",
+  "scope": "Configuration function bodies and harness control flow; original experiment remains frozen. Structural comparison is not a numerical or biological validation.",
+  "files": {
+    "models/ca2_carlsim/sensitivity/core_config.h": {
+      "configuration_body_tokens_identical": true
+    },
+    "models/ca2_carlsim/sensitivity/readout_config.h": {
+      "configuration_body_tokens_identical": true
+    },
+    "models/ca2_carlsim/sensitivity/setup.h": {
+      "configuration_body_tokens_identical": true
+    },
+    "models/ca2_carlsim/sensitivity/calibration_config.h": {
+      "configuration_body_tokens_identical": true
+    },
+    "models/ca2_carlsim/ca1_adequacy/core_config.h": {
+      "configuration_body_tokens_identical": true
+    },
+    "models/ca2_carlsim/ca1_adequacy/readout_config.h": {
+      "configuration_body_tokens_identical": true
+    },
+    "models/ca2_carlsim/ca1_adequacy/setup.h": {
+      "configuration_body_tokens_identical": true
+    },
+    "models/ca2_carlsim/ca1_adequacy/calibration_config.h": {
+      "configuration_body_tokens_identical": true
+    },
+    "models/ca2_carlsim/nominal/core_config.h": {
+      "configuration_body_tokens_identical": true
+    },
+    "models/ca2_carlsim/nominal/old_config.h": {
+      "configuration_body_tokens_identical": true
+    },
+    "models/ca2_carlsim/nominal/readout_config.h": {
+      "configuration_body_tokens_identical": true
+    },
+    "models/ca2_carlsim/nominal/setup.h": {
+      "configuration_body_tokens_identical": true
+    },
+    "models/ca2_carlsim/nominal/calibration_config.h": {
+      "configuration_body_tokens_identical": true
+    },
+    "models/ca2_carlsim/nominal/fresh_config.h": {
+      "configuration_body_tokens_identical": true
+    },
+    "models/ca2_carlsim/nominal/src/circuit.cpp": {
+      "harness_tokens_identical_after_replacing_function_calls_with_original_includes": true
+    },
+    "models/ca2_carlsim/nominal/src/baseline.cpp": {
+      "harness_tokens_identical_after_replacing_function_calls_with_original_includes": true
+    },
+    "models/ca2_carlsim/ca1_adequacy/src/circuit.cpp": {
+      "harness_tokens_identical_after_replacing_function_calls_with_original_includes": true
+    },
+    "models/ca2_carlsim/sensitivity/src/circuit.cpp": {
+      "harness_tokens_identical_after_replacing_function_calls_with_original_includes": true
+    }
+  },
+  "native_build": {
+    "compiler": "g++ 12.5.0",
+    "targets": [
+      "ca2_nominal",
+      "ca2_sensitivity",
+      "ca1_adequacy",
+      "ca2_baseline"
+    ],
+    "all_built": true,
+    "all_14_headers_compile_at_file_scope_against_real_carlsim": true
+  }
+}

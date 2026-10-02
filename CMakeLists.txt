@@ -45,4 +45,8 @@ if(CA2_BUILD_MODELS)
     add_model(ca2_sensitivity models/ca2_carlsim/sensitivity/src/circuit.cpp)
     add_model(ca1_adequacy models/ca2_carlsim/ca1_adequacy/src/circuit.cpp)
     add_model(ca2_baseline models/ca2_carlsim/nominal/src/baseline.cpp)
+
+    add_test(NAME native_configuration_calls
+        COMMAND "${Python3_EXECUTABLE}" "${CMAKE_SOURCE_DIR}/scripts/check_native_call_trace.py"
+            --compiler "${CMAKE_CXX_COMPILER}")
 endif()

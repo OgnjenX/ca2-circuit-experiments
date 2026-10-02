@@ -36,8 +36,8 @@ ctest --preset development
 ```
 
 The four native targets are `ca2_nominal`, `ca2_sensitivity`, `ca1_adequacy`, and
-`ca2_baseline`. CTest runs repository integrity and Python checks. It does not
-launch GPU simulations. Native run arguments and an isolated results directory
+`ca2_baseline`. CTest runs repository integrity, Python checks, and native API call comparisons.
+It does not launch GPU simulations. Native run arguments and an isolated results directory
 must be chosen for the particular experiment; running a binary without arguments
 prints its usage. Use the archived reproduction workflow for experiment 001.
 
@@ -64,3 +64,32 @@ Their source hashes and the release assets retain the historical experiment
 record. The initial cleanup verifies that working and frozen sources have the
 same C++ token sequence. Include order and string literals are preserved.
 Changes to scientific logic or parameters require a new experiment/model revision.
+
+## Configuration headers and navigation
+
+The working configuration headers define functions such as `configure_fresh` and
+`configure_core`. Include these headers at file scope and call their functions
+with a `CARLsim` reference. The returned group IDs and monitor pointers belong to
+that simulator. Connection vectors are passed by reference so the existing gain
+controls still operate on the same connections.
+
+CLion's bundled C++ engine disables analysis for headers included inside a
+function (inline includes). The frozen original uses that structure. The working
+model now uses ordinary functions so declaration navigation and completion can
+resolve `sim` and the CARLsim API inside the headers.
+
+Check the refactor against the frozen originals without CUDA:
+
+```sh
+python scripts/check_native_call_trace.py --compiler g++
+```
+
+This compiles both sets of harnesses against an API recorder and compares every
+call, argument, returned group/connection ID, monitor recording operation, and
+first input event delivered to each spike-generator group. It covers all modes,
+both inhibitory scopes, output-gain controls, and the old/fresh baseline. It does
+not integrate neuron dynamics or replace numerical reproducibility checks.
+The recorded comparisons are in `configuration_call_trace_checks.json`; the
+configuration-body and harness-control-flow comparisons are in
+`configuration_refactor_checks.json`. The earlier experiment provenance record
+`formatting_checks.json` describes the formatting-only state at commit `46fc79a`.

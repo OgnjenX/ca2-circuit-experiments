@@ -1,3 +1,8 @@
+#include "../calibration_config.h"
+#include "../core_config.h"
+#include "../setup.h"
+#include "../readout_config.h"
+
 #include <carlsim.h>
 #include <callback.h>
 #include <neuron_monitor.h>
@@ -57,41 +62,45 @@ int main(int argc, char** argv) {
     if (mode == "calibration") {
         Events ec(10818, dir + "/MEC_LII_Stellate.txt"), ca3(4096, dir + "/CA3_Pyramidal.txt");
         CARLsim sim("ca2_calibration", GPU_MODE, USER, 0, seed);
-#include "../calibration_config.h"
-        sim.setSpikeGenerator(MEC_LII_Stellate, &ec);
-        sim.setSpikeGenerator(CA3_Pyramidal, &ca3);
+        const auto groups = ca2_sensitivity::configure_calibration(sim);
+        sim.setSpikeGenerator(groups.MEC_LII_Stellate, &ec);
+        sim.setSpikeGenerator(groups.CA3_Pyramidal, &ca3);
         sim.setIntegrationMethod(RUNGE_KUTTA4, steps);
         sim.setupNetwork();
-        sim.setSpikeMonitor(CA2_Pyramidal, "DEFAULT");
-        sim.setSpikeMonitor(MEC_LII_Stellate, "DEFAULT");
-        sim.setSpikeMonitor(CA3_Pyramidal, "DEFAULT");
-        monitor_CA2->startRecording();
+        sim.setSpikeMonitor(groups.CA2_Pyramidal, "DEFAULT");
+        sim.setSpikeMonitor(groups.MEC_LII_Stellate, "DEFAULT");
+        sim.setSpikeMonitor(groups.CA3_Pyramidal, "DEFAULT");
+        groups.monitor_CA2->startRecording();
         sim.runNetwork(duration / 1000, duration % 1000);
-        monitor_CA2->stopRecording();
+        groups.monitor_CA2->stopRecording();
     } else if (mode == "core") {
         Events ec(10818, dir + "/MEC_LII_Stellate.txt"), ca3(4096, dir + "/CA3_Pyramidal.txt");
         CARLsim sim("ca2_core", GPU_MODE, USER, 0, seed);
         std::vector<short int> core_inhibitory_connections, core_pyramidal_inhibitory_connections;
-#include "../core_config.h"
+        const auto groups = ca2_sensitivity::configure_core(
+            sim, core_inhibitory_connections, core_pyramidal_inhibitory_connections);
         std::vector<NeuronMonitor*> inhibitory_monitors;
-        for (int group : {CA2_Basket, CA2_Wide_Arbor_Basket, CA2_Bistratified, CA2_SP_SR})
+        for (int group : {groups.CA2_Basket,
+                          groups.CA2_Wide_Arbor_Basket,
+                          groups.CA2_Bistratified,
+                          groups.CA2_SP_SR})
             inhibitory_monitors.push_back(sim.setNeuronMonitor(group, "DEFAULT"));
-        sim.setSpikeGenerator(MEC_LII_Stellate, &ec);
-        sim.setSpikeGenerator(CA3_Pyramidal, &ca3);
+        sim.setSpikeGenerator(groups.MEC_LII_Stellate, &ec);
+        sim.setSpikeGenerator(groups.CA3_Pyramidal, &ca3);
         sim.setIntegrationMethod(RUNGE_KUTTA4, steps);
         sim.setupNetwork();
-#include "../setup.h"
+        ca2_sensitivity::setup_monitors(sim, groups);
         if (inhibitory_gain != 1.0f)
             for (short int id : (inhibitory_scope == "all" ? core_inhibitory_connections
                                                            : core_pyramidal_inhibitory_connections))
                 sim.scaleWeights(id, inhibitory_gain, true);
-        sim.setSpikeMonitor(MEC_LII_Stellate, "DEFAULT");
-        sim.setSpikeMonitor(CA3_Pyramidal, "DEFAULT");
+        sim.setSpikeMonitor(groups.MEC_LII_Stellate, "DEFAULT");
+        sim.setSpikeMonitor(groups.CA3_Pyramidal, "DEFAULT");
         for (auto* m : inhibitory_monitors)
             m->startRecording();
-        monitor_CA2->startRecording();
+        groups.monitor_CA2->startRecording();
         sim.runNetwork(duration / 1000, duration % 1000);
-        monitor_CA2->stopRecording();
+        groups.monitor_CA2->stopRecording();
         for (auto* m : inhibitory_monitors)
             m->stopRecording();
     } else {
@@ -100,29 +109,29 @@ int main(int argc, char** argv) {
             sp(94, dir + "/CA2_SP_SR.txt"), ca3(4096, dir + "/CA3_Pyramidal.txt");
         CARLsim sim("ca1_readout", GPU_MODE, USER, 0, seed);
         std::vector<short int> default_output_connections;
-#include "../readout_config.h"
-        NeuronMonitor* monitor_CA1 = sim.setNeuronMonitor(CA1_Pyramidal, "DEFAULT");
-        sim.setSpikeGenerator(CA2_Pyramidal, &pyr);
-        sim.setSpikeGenerator(CA2_Basket, &basket);
-        sim.setSpikeGenerator(CA2_Wide_Arbor_Basket, &wide);
-        sim.setSpikeGenerator(CA2_Bistratified, &bi);
-        sim.setSpikeGenerator(CA2_SP_SR, &sp);
-        sim.setSpikeGenerator(CA3_Pyramidal, &ca3);
+        const auto groups = ca2_sensitivity::configure_readout(sim, default_output_connections);
+        NeuronMonitor* monitor_CA1 = sim.setNeuronMonitor(groups.CA1_Pyramidal, "DEFAULT");
+        sim.setSpikeGenerator(groups.CA2_Pyramidal, &pyr);
+        sim.setSpikeGenerator(groups.CA2_Basket, &basket);
+        sim.setSpikeGenerator(groups.CA2_Wide_Arbor_Basket, &wide);
+        sim.setSpikeGenerator(groups.CA2_Bistratified, &bi);
+        sim.setSpikeGenerator(groups.CA2_SP_SR, &sp);
+        sim.setSpikeGenerator(groups.CA3_Pyramidal, &ca3);
         sim.setIntegrationMethod(RUNGE_KUTTA4, steps);
         sim.setupNetwork();
         if (output_gain != 1.0f)
             for (short int id : default_output_connections)
                 sim.scaleWeights(id, output_gain, true);
-        for (int group : {CA2_Pyramidal,
-                          CA2_Basket,
-                          CA2_Wide_Arbor_Basket,
-                          CA2_Bistratified,
-                          CA2_SP_SR,
-                          CA3_Pyramidal})
+        for (int group : {groups.CA2_Pyramidal,
+                          groups.CA2_Basket,
+                          groups.CA2_Wide_Arbor_Basket,
+                          groups.CA2_Bistratified,
+                          groups.CA2_SP_SR,
+                          groups.CA3_Pyramidal})
             sim.setSpikeMonitor(group, "DEFAULT");
-        sim.setSpikeMonitor(CA1_Pyramidal, "DEFAULT");
-        sim.setSpikeMonitor(CA1_Basket, "DEFAULT");
-        sim.setSpikeMonitor(CA1_Bistratified, "DEFAULT");
+        sim.setSpikeMonitor(groups.CA1_Pyramidal, "DEFAULT");
+        sim.setSpikeMonitor(groups.CA1_Basket, "DEFAULT");
+        sim.setSpikeMonitor(groups.CA1_Bistratified, "DEFAULT");
         monitor_CA1->startRecording();
         sim.runNetwork(duration / 1000, duration % 1000);
         monitor_CA1->stopRecording();

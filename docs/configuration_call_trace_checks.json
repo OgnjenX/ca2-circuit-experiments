@@ -1,0 +1,286 @@
+{
+  "scope": "Simulator API call equivalence using a recorder, not numerical or biological validation.",
+  "cases": [
+    {
+      "variant": "nominal",
+      "harness": "circuit",
+      "arguments": [
+        "calibration",
+        "17",
+        "10",
+        "20",
+        "<event_directory>"
+      ],
+      "calls": 22,
+      "trace_sha256": "cf2e8d4c82b7a31669e12418d97a71e5fe4bdf266b2933a13197bff0a11fb22d",
+      "identical": true
+    },
+    {
+      "variant": "nominal",
+      "harness": "circuit",
+      "arguments": [
+        "core",
+        "17",
+        "10",
+        "20",
+        "<event_directory>"
+      ],
+      "calls": 108,
+      "trace_sha256": "d4d75a30e2e360341bcaf374ef97e20fa0b5cf30fda15689f0c6fb37ab65126b",
+      "identical": true
+    },
+    {
+      "variant": "nominal",
+      "harness": "circuit",
+      "arguments": [
+        "readout",
+        "17",
+        "10",
+        "20",
+        "<event_directory>"
+      ],
+      "calls": 76,
+      "trace_sha256": "a978d7dfed4658fb80dcf149de15b76d2782e5db39abd15cbe9d386f2135e0d7",
+      "identical": true
+    },
+    {
+      "variant": "nominal",
+      "harness": "circuit",
+      "arguments": [
+        "core",
+        "17",
+        "10",
+        "20",
+        "<event_directory>",
+        "100",
+        "all"
+      ],
+      "calls": 128,
+      "trace_sha256": "0311e176bd40597e26144982c80326b42d7b4a0a2e3a464f8a61f7d407b62047",
+      "identical": true
+    },
+    {
+      "variant": "nominal",
+      "harness": "circuit",
+      "arguments": [
+        "core",
+        "17",
+        "10",
+        "20",
+        "<event_directory>",
+        "100",
+        "pyramidal"
+      ],
+      "calls": 112,
+      "trace_sha256": "0ab97240f27d4f1030a987c12c8c33c96f36c3bb6eb566725363b908b4f1b3d7",
+      "identical": true
+    },
+    {
+      "variant": "nominal",
+      "harness": "baseline",
+      "arguments": [
+        "old",
+        "17",
+        "10",
+        "20"
+      ],
+      "calls": 75,
+      "trace_sha256": "4202bdd929e344dc4c5f2826cbc71d24c1a4b4d714ae48c5880ebefb56ee0ce8",
+      "identical": true
+    },
+    {
+      "variant": "nominal",
+      "harness": "baseline",
+      "arguments": [
+        "fresh",
+        "17",
+        "10",
+        "20"
+      ],
+      "calls": 75,
+      "trace_sha256": "e7647d8d0c9f9bb633acdf067c437df6879e87b1f4fab0b6665222c502a3a394",
+      "identical": true
+    },
+    {
+      "variant": "sensitivity",
+      "harness": "circuit",
+      "arguments": [
+        "calibration",
+        "17",
+        "10",
+        "20",
+        "<event_directory>"
+      ],
+      "calls": 22,
+      "trace_sha256": "cf2e8d4c82b7a31669e12418d97a71e5fe4bdf266b2933a13197bff0a11fb22d",
+      "identical": true
+    },
+    {
+      "variant": "sensitivity",
+      "harness": "circuit",
+      "arguments": [
+        "core",
+        "17",
+        "10",
+        "20",
+        "<event_directory>"
+      ],
+      "calls": 108,
+      "trace_sha256": "d4d75a30e2e360341bcaf374ef97e20fa0b5cf30fda15689f0c6fb37ab65126b",
+      "identical": true
+    },
+    {
+      "variant": "sensitivity",
+      "harness": "circuit",
+      "arguments": [
+        "readout",
+        "17",
+        "10",
+        "20",
+        "<event_directory>"
+      ],
+      "calls": 76,
+      "trace_sha256": "a978d7dfed4658fb80dcf149de15b76d2782e5db39abd15cbe9d386f2135e0d7",
+      "identical": true
+    },
+    {
+      "variant": "sensitivity",
+      "harness": "circuit",
+      "arguments": [
+        "core",
+        "17",
+        "10",
+        "20",
+        "<event_directory>",
+        "100",
+        "all"
+      ],
+      "calls": 128,
+      "trace_sha256": "0311e176bd40597e26144982c80326b42d7b4a0a2e3a464f8a61f7d407b62047",
+      "identical": true
+    },
+    {
+      "variant": "sensitivity",
+      "harness": "circuit",
+      "arguments": [
+        "core",
+        "17",
+        "10",
+        "20",
+        "<event_directory>",
+        "100",
+        "pyramidal"
+      ],
+      "calls": 112,
+      "trace_sha256": "0ab97240f27d4f1030a987c12c8c33c96f36c3bb6eb566725363b908b4f1b3d7",
+      "identical": true
+    },
+    {
+      "variant": "sensitivity",
+      "harness": "circuit",
+      "arguments": [
+        "readout",
+        "17",
+        "10",
+        "20",
+        "<event_directory>",
+        "1",
+        "all",
+        "2"
+      ],
+      "calls": 79,
+      "trace_sha256": "d33472fbdce2f6a48df73b53666c9cb7ce8874f66fe6a6ee025edab2d732aa82",
+      "identical": true
+    },
+    {
+      "variant": "ca1_adequacy",
+      "harness": "circuit",
+      "arguments": [
+        "calibration",
+        "17",
+        "10",
+        "20",
+        "<event_directory>"
+      ],
+      "calls": 22,
+      "trace_sha256": "cf2e8d4c82b7a31669e12418d97a71e5fe4bdf266b2933a13197bff0a11fb22d",
+      "identical": true
+    },
+    {
+      "variant": "ca1_adequacy",
+      "harness": "circuit",
+      "arguments": [
+        "core",
+        "17",
+        "10",
+        "20",
+        "<event_directory>"
+      ],
+      "calls": 108,
+      "trace_sha256": "d4d75a30e2e360341bcaf374ef97e20fa0b5cf30fda15689f0c6fb37ab65126b",
+      "identical": true
+    },
+    {
+      "variant": "ca1_adequacy",
+      "harness": "circuit",
+      "arguments": [
+        "readout",
+        "17",
+        "10",
+        "20",
+        "<event_directory>"
+      ],
+      "calls": 76,
+      "trace_sha256": "a978d7dfed4658fb80dcf149de15b76d2782e5db39abd15cbe9d386f2135e0d7",
+      "identical": true
+    },
+    {
+      "variant": "ca1_adequacy",
+      "harness": "circuit",
+      "arguments": [
+        "core",
+        "17",
+        "10",
+        "20",
+        "<event_directory>",
+        "100",
+        "all"
+      ],
+      "calls": 128,
+      "trace_sha256": "0311e176bd40597e26144982c80326b42d7b4a0a2e3a464f8a61f7d407b62047",
+      "identical": true
+    },
+    {
+      "variant": "ca1_adequacy",
+      "harness": "circuit",
+      "arguments": [
+        "core",
+        "17",
+        "10",
+        "20",
+        "<event_directory>",
+        "100",
+        "pyramidal"
+      ],
+      "calls": 112,
+      "trace_sha256": "0ab97240f27d4f1030a987c12c8c33c96f36c3bb6eb566725363b908b4f1b3d7",
+      "identical": true
+    },
+    {
+      "variant": "ca1_adequacy",
+      "harness": "circuit",
+      "arguments": [
+        "readout",
+        "17",
+        "10",
+        "20",
+        "<event_directory>",
+        "3",
+        "all"
+      ],
+      "calls": 80,
+      "trace_sha256": "246b8c6a9d4c562d91e1e1e943b418b6cfa9f1064d41bc974cbe1d20184e1b32",
+      "identical": true
+    }
+  ]
+}
