@@ -42,8 +42,12 @@ def commit():
 def scientific_files():
     return [HERE/'experiment.py', HERE/'analyze.py', HERE/'protocol.json',
             HERE/'source_targets.json', HERE/'source_audit.json',
-            ROOT/'src/ca2lab/slice.py', ROOT/'src/ca2lab/monitors.py',
+            ROOT/'src/ca2lab/slice.py', ROOT/'src/ca2lab/benchmark.py', ROOT/'src/ca2lab/monitors.py',
             ROOT/'models/ca2_slice/src/assay.cpp',
+            ROOT/'simulators/carlsim4/synapse_dynamics_v2.json',
+            ROOT/'simulators/carlsim4/patches/synapse_dynamics_v2.patch',
+            ROOT/'simulators/carlsim4/validation/spec.json',
+            ROOT/'simulators/carlsim4/validation/oracle.py',
             *sorted((ROOT/'data/hippocampome/2026-10-01').glob('*.csv'))]
 
 
@@ -58,6 +62,8 @@ def verify_frozen(workspace):
         raise ValueError('Generated configuration changed after freeze')
     if sha(workspace/'build/build_record.json') != frozen['build_record_sha256']:
         raise ValueError('Backend/build identity changed after freeze')
+    if sha(workspace/'build/assay-static')!=frozen['build_record']['static_executable_sha256']:
+        raise ValueError('Static executable changed after freeze')
     return frozen
 
 
@@ -83,7 +89,7 @@ int configure_source(CARLsim& sim, int target) {{
     sim.connect(source, target, "random", RangeWeight(0.0f,1.0f,2.0f),
                 {edge['Connection Probability']}f, RangeDelay({edge['Synaptic Delay']}),
                 RadiusRF(-1), SYN_PLASTIC, {edge['g']}f, 0.0f);
-    sim.setSTP(source, target, true, STPu({edge['u']}f,0),
+    sim.setSTP(source, target, CA2_RELEASE_STP,  STPu({edge['u']}f,0),
                STPtauU({edge['tau_f']}f,0), STPtauX({edge['tau_r']}f,0),
                STPtdAMPA({edge['tau_d']}f,0), STPtdNMDA(150.0f,0),
                STPtdGABAa(6.0f,0), STPtdGABAb(150.0f,0),
@@ -91,12 +97,18 @@ int configure_source(CARLsim& sim, int target) {{
     return source;
 }}
 '''
-    (folder/'slice_config.h').write_text(config)
+    (folder/'slice_config.h').write_text('#ifndef CA2_RELEASE_STP\n#define CA2_RELEASE_STP true\n#endif\n'+config)
     backend = args.backend.resolve()
     library = backend/'libcarlsim.a.4.0.0'
-    expected = load(ROOT/'simulators/carlsim4/source.json')['recorded_builds'][0]['library_sha256']
+    identity=load(ROOT/'simulators/carlsim4/synapse_dynamics_v2.json')
+    expected = identity['local_library_sha256']
+    for name,digest in identity['changed_source_sha256'].items():
+        if sha(backend/name)!=digest: raise ValueError('Corrected backend source mismatch')
+    validation=load(ROOT/'simulators/carlsim4/validation/evidence/corrected.json')
+    if not validation['passed'] or validation['library_sha256']!=sha(library):
+        raise ValueError('Independent validation missing for this library')
     if sha(library) != expected:
-        raise ValueError('Backend is not the recorded nominal library')
+        raise ValueError('Backend is not the separately versioned corrected library')
     command = ['g++-12', '-std=c++11', '-O2', '-g', '-I'+str(folder),
                '-I'+str(backend/'carlsim/interface/inc'),
                '-I'+str(backend/'carlsim/kernel/inc'), '-I'+str(backend/'carlsim/monitor'),
@@ -104,11 +116,14 @@ int configure_source(CARLsim& sim, int target) {{
                '-lcurand', '-lcudart', '-lpthread', '-o', str(folder/'assay')]
     with (folder/'build.log').open('w') as log:
         subprocess.run(command, stdout=log, stderr=subprocess.STDOUT, check=True)
+    static_command=command[:-2]+['-DCA2_RELEASE_STP=false','-o',str(folder/'assay-static')]
+    with (folder/'static-build.log').open('w') as log:
+        subprocess.run(static_command,stdout=log,stderr=subprocess.STDOUT,check=True)
     k, vr, vt, b = (float(neuron[col]) for col in ['Izh k', 'Izh Vr', 'Izh Vt', 'Izh b'])
     holding_v = load(HERE/'protocol.json')['holding_mV']
     holding_i = b*(holding_v-vr)-k*(holding_v-vr)*(holding_v-vt)
     save(folder/'build_record.json', {
-        'source_commit': commit(), 'library_sha256': sha(library),
+        'source_commit': commit(), 'backend_identity':identity['id'], 'library_sha256': sha(library), 'static_executable_sha256':sha(folder/'assay-static'),
         'executable_sha256': sha(folder/'assay'), 'config_sha256': sha(folder/'slice_config.h'),
         'compiler': subprocess.check_output(['g++-12', '--version'], text=True).splitlines()[0],
         'build_command': [item.replace(str(ROOT), '<repository>').replace(str(backend), '<backend>')
@@ -117,10 +132,11 @@ int configure_source(CARLsim& sim, int target) {{
         'holding_formula': 'b*(Vhold-Vr)-k*(Vhold-Vr)*(Vhold-Vt); intrinsic parameters unchanged',
         'implementation': 'Direct MEC input, no recurrence or inhibition; NMDA multiplier zero',
     })
-    print('Built assay with recorded backend and unchanged exported intrinsic/STP values.', flush=True)
+    print('Built separately versioned corrected assay and matched static release control.', flush=True)
 
 
-def simulate(workspace, label, seed, active, frequency, steps, phase_commit):
+def simulate(workspace, label, seed, active, frequency, steps, phase_commit, release='stp'):
+    executable=workspace/'build'/('assay' if release=='stp' else 'assay-static')
     directory = workspace/'runs'/label
     if directory.exists():
         if (directory/'measurement.json').exists():
@@ -128,7 +144,7 @@ def simulate(workspace, label, seed, active, frequency, steps, phase_commit):
             cfg = load(directory/'configuration.json')
             if (cfg['seed'], cfg['active'], cfg['frequency_Hz'], cfg['steps']) != (seed, active, frequency, steps):
                 raise ValueError('Existing run does not match requested configuration')
-            if cfg['executable_sha256'] != sha(workspace/'build/assay'):
+            if cfg['executable_sha256'] != sha(executable):
                 raise ValueError('Existing run used a different executable')
             return measurement
         raise ValueError(f'Incomplete previous run: {directory}')
@@ -138,15 +154,15 @@ def simulate(workspace, label, seed, active, frequency, steps, phase_commit):
     duration = pulses[-1]+100
     pulse_file = directory/'pulses.txt'
     pulse_file.write_text(''.join(f'{t}\n' for t in pulses))
-    cfg = {'seed':seed, 'active':active, 'frequency_Hz':frequency, 'steps':steps,
+    cfg = {'release':release, 'seed':seed, 'active':active, 'frequency_Hz':frequency, 'steps':steps,
            'pulses_ms':pulses, 'duration_ms':duration, 'record_start_ms':4950,
            'phase_commit':phase_commit, 'scientific_file_sha256':{str(p.relative_to(ROOT)):sha(p) for p in scientific_files()},
-           'executable_sha256':sha(workspace/'build/assay'), 'pulses_sha256':sha(pulse_file)}
+           'executable_sha256':sha(executable), 'pulses_sha256':sha(pulse_file)}
     holding = load(workspace/'build/build_record.json')['holding_current_pA']
     save(directory/'configuration.json', cfg)
     before = time.monotonic()
     with (directory/'run.log').open('w') as log:
-        outcome = subprocess.run([str(workspace/'build/assay'), str(seed), str(active), str(duration),
+        outcome = subprocess.run([str(executable), str(seed), str(active), str(duration),
                                   str(steps), str(pulse_file), str(holding)], cwd=directory,
                                  stdout=log, stderr=subprocess.STDOUT)
     (directory/'exit-status.txt').write_text(str(outcome.returncode)+'\n')
@@ -237,17 +253,15 @@ def run(args):
     if protocol['evaluation_seeds'] and set(protocol['evaluation_seeds']) & set(protocol['calibration_seeds']):
         raise ValueError('Calibration and evaluation seeds overlap')
     measurements=[]
-    for selection in frozen['calibration']['selections']:
-        level=selection['target_amplitude_mV'];active=selection['selected']['active']
-        for seed in protocol['evaluation_seeds']:
-            for frequency in protocol['frequencies_Hz']:
-                label=f'test-a{level}-s{seed}-f{frequency}-rk{protocol["nominal_substeps"]}'
-                measurements.append(simulate(args.workspace,label,seed,active,frequency,
-                                             protocol['nominal_substeps'],commit()))
-            for frequency in protocol['primary_frequencies_Hz']:
-                label=f'test-a{level}-s{seed}-f{frequency}-rk{protocol["precision_substeps"]}'
-                measurements.append(simulate(args.workspace,label,seed,active,frequency,
-                                             protocol['precision_substeps'],commit()))
+    for release in ['stp','static']:
+        for selection in frozen['calibration']['selections']:
+            level=selection['target_amplitude_mV'];active=selection['selected']['active']
+            for seed in protocol['evaluation_seeds']:
+                for steps,frequencies in [(protocol['nominal_substeps'],protocol['frequencies_Hz']),
+                                          (protocol['precision_substeps'],protocol['primary_frequencies_Hz'])]:
+                    for frequency in frequencies:
+                        label=f'test-{release}-a{level}-s{seed}-f{frequency}-rk{steps}'
+                        measurements.append(simulate(args.workspace,label,seed,active,frequency,steps,commit(),release))
     save(args.workspace/'measurements.json',{'frozen_sha256':sha(HERE/'frozen_configuration.json'),'runs':measurements})
 
 

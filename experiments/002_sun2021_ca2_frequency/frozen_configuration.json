@@ -1,45 +1,60 @@
 {
-  "created_UTC": "2026-10-02T14:48:40Z",
-  "pre_freeze_commit": "e9efe8b6905967608c2e877fb16999d3a23195b2",
+  "created_UTC": "2026-10-02T17:16:22Z",
+  "pre_freeze_commit": "7235a096a238ef9ce3cb9be6ba53b2eff76cfdbd",
   "calibration": {
-    "commit": "9b10f20ccd4a52f4487949654b74230ed471f775",
+    "commit": "7235a096a238ef9ce3cb9be6ba53b2eff76cfdbd",
     "selections": [
       {
         "target_amplitude_mV": 1.44,
         "selected": {
-          "active": 1859,
-          "mean_peak_mV": 1.4510774612426758,
+          "active": 443,
+          "mean_peak_mV": 1.4129687547683716,
           "eligible": true
         },
         "candidates": [
           {
             "active": 5409,
-            "mean_peak_mV": 4.088786363601685,
-            "eligible": true
+            "mean_peak_mV": 78.77933883666992,
+            "eligible": false
           },
           {
             "active": 2704,
-            "mean_peak_mV": 2.0826523303985596,
-            "eligible": true
+            "mean_peak_mV": 54.43651580810547,
+            "eligible": false
           },
           {
             "active": 1352,
-            "mean_peak_mV": 1.0561268329620361,
+            "mean_peak_mV": 4.825051784515381,
+            "eligible": false
+          },
+          {
+            "active": 676,
+            "mean_peak_mV": 2.1574831008911133,
             "eligible": true
           },
           {
-            "active": 2028,
-            "mean_peak_mV": 1.5845367312431335,
+            "active": 338,
+            "mean_peak_mV": 1.1230140328407288,
             "eligible": true
           },
           {
-            "active": 1690,
-            "mean_peak_mV": 1.328267216682434,
+            "active": 507,
+            "mean_peak_mV": 1.6099056005477905,
             "eligible": true
           },
           {
-            "active": 1859,
-            "mean_peak_mV": 1.4510774612426758,
+            "active": 422,
+            "mean_peak_mV": 1.3479490876197815,
+            "eligible": true
+          },
+          {
+            "active": 464,
+            "mean_peak_mV": 1.4704182147979736,
+            "eligible": true
+          },
+          {
+            "active": 443,
+            "mean_peak_mV": 1.4129687547683716,
             "eligible": true
           }
         ]
@@ -47,44 +62,59 @@
       {
         "target_amplitude_mV": 1.76,
         "selected": {
-          "active": 2281,
-          "mean_peak_mV": 1.7695134282112122,
+          "active": 559,
+          "mean_peak_mV": 1.757037103176117,
           "eligible": true
         },
         "candidates": [
           {
             "active": 5409,
-            "mean_peak_mV": 4.088786363601685,
-            "eligible": true
+            "mean_peak_mV": 78.77933883666992,
+            "eligible": false
           },
           {
             "active": 2704,
-            "mean_peak_mV": 2.0826523303985596,
-            "eligible": true
+            "mean_peak_mV": 54.43651580810547,
+            "eligible": false
           },
           {
             "active": 1352,
-            "mean_peak_mV": 1.0561268329620361,
+            "mean_peak_mV": 4.825051784515381,
+            "eligible": false
+          },
+          {
+            "active": 676,
+            "mean_peak_mV": 2.1574831008911133,
             "eligible": true
           },
           {
-            "active": 2028,
-            "mean_peak_mV": 1.5845367312431335,
+            "active": 338,
+            "mean_peak_mV": 1.1230140328407288,
             "eligible": true
           },
           {
-            "active": 2366,
-            "mean_peak_mV": 1.8285394310951233,
+            "active": 507,
+            "mean_peak_mV": 1.6099056005477905,
             "eligible": true
           },
           {
-            "active": 2197,
-            "mean_peak_mV": 1.7076420783996582,
+            "active": 591,
+            "mean_peak_mV": 1.8771334290504456,
             "eligible": true
           },
           {
-            "active": 2281,
-            "mean_peak_mV": 1.7695134282112122,
+            "active": 549,
+            "mean_peak_mV": 1.7297003269195557,
+            "eligible": true
+          },
+          {
+            "active": 570,
+            "mean_peak_mV": 1.8082736730575562,
+            "eligible": true
+          },
+          {
+            "active": 559,
+            "mean_peak_mV": 1.757037103176117,
             "eligible": true
           }
         ]
@@ -92,19 +122,54 @@
       {
         "target_amplitude_mV": 2.08,
         "selected": {
-          "active": 2704,
-          "mean_peak_mV": 2.0826523303985596,
+          "active": 654,
+          "mean_peak_mV": 2.0867756605148315,
           "eligible": true
         },
         "candidates": [
           {
             "active": 5409,
-            "mean_peak_mV": 4.088786363601685,
-            "eligible": true
+            "mean_peak_mV": 78.77933883666992,
+            "eligible": false
           },
           {
             "active": 2704,
-            "mean_peak_mV": 2.0826523303985596,
+            "mean_peak_mV": 54.43651580810547,
+            "eligible": false
+          },
+          {
+            "active": 1352,
+            "mean_peak_mV": 4.825051784515381,
+            "eligible": false
+          },
+          {
+            "active": 676,
+            "mean_peak_mV": 2.1574831008911133,
+            "eligible": true
+          },
+          {
+            "active": 338,
+            "mean_peak_mV": 1.1230140328407288,
+            "eligible": true
+          },
+          {
+            "active": 507,
+            "mean_peak_mV": 1.6099056005477905,
+            "eligible": true
+          },
+          {
+            "active": 591,
+            "mean_peak_mV": 1.8771334290504456,
+            "eligible": true
+          },
+          {
+            "active": 633,
+            "mean_peak_mV": 2.006001114845276,
+            "eligible": true
+          },
+          {
+            "active": 654,
+            "mean_peak_mV": 2.0867756605148315,
             "eligible": true
           }
         ]
@@ -113,35 +178,42 @@
     "source": "Figure 4 weak first EPSP mean +/- SEM transferred to Figure 5 APV as an explicit assumption",
     "train_outcomes_seen": false
   },
-  "calibration_sha256": "4228b9bd4e93a3438656be109a453ec2b8ffed386de8d15b6749cafe65b1b542",
-  "analysis_sha256": "8326bec911813a9fe5a6db2fcb7c30d6195e8189723611dbfa180f499caa4a2d",
+  "calibration_sha256": "85bbde29edd4725a5e703cebe462e0fd10e1e08307b74f7b9a0f7fc2f285f956",
+  "analysis_sha256": "5cc63674a5967f58c5702ec1309b086f88c7ac1e7e1276c35947d01856f6821f",
   "scientific_file_sha256": {
-    "experiments/002_sun2021_ca2_frequency/experiment.py": "77eaab3b1f4c28872e5d545454d16f1daa52be4b02e139e26e1ab2ee5247add4",
-    "experiments/002_sun2021_ca2_frequency/analyze.py": "8326bec911813a9fe5a6db2fcb7c30d6195e8189723611dbfa180f499caa4a2d",
-    "experiments/002_sun2021_ca2_frequency/protocol.json": "3f4b1959bacf2319504aac2ce09b847bd6961ea941b286e3b03b9998871de202",
-    "experiments/002_sun2021_ca2_frequency/source_targets.json": "bafc32c1f65a662bcf5718e99e1b7b1586f98c8085190b409bc0a741ec044909",
-    "experiments/002_sun2021_ca2_frequency/source_audit.json": "fa9ff1ff612edf7e7ab6a7a63c8190651e6655eb4213443121f07755f6f69286",
+    "experiments/003_corrected_ca2_frequency/experiment.py": "8c290c2923ab9f3bb4a81925293dd1ed48439d226766d50e7191e7684febdcc2",
+    "experiments/003_corrected_ca2_frequency/analyze.py": "5cc63674a5967f58c5702ec1309b086f88c7ac1e7e1276c35947d01856f6821f",
+    "experiments/003_corrected_ca2_frequency/protocol.json": "84adc810a123f738130eb4f923d0b0e4d8085eb42865645bc325254210013545",
+    "experiments/003_corrected_ca2_frequency/source_targets.json": "bafc32c1f65a662bcf5718e99e1b7b1586f98c8085190b409bc0a741ec044909",
+    "experiments/003_corrected_ca2_frequency/source_audit.json": "3bc68446d1598ca81660c719e33baee41d4c46a2dc42fa1a5abbafc172e6b521",
     "src/ca2lab/slice.py": "f1c7d8a68c64183c99d390a5a6afb0b6161f7a73371e3a06c8ea4a6b565a3eb8",
+    "src/ca2lab/benchmark.py": "fe88d3ba6077a7e7967096d57176e11151e13cc460bf8fc42abda7df6d411d74",
     "src/ca2lab/monitors.py": "1cbf45958d61acbba57fd62263b34fe327ca83977ff17d969a8ddc0e0c8130d7",
     "models/ca2_slice/src/assay.cpp": "4ea83fd1f470688a15d582d85bff3db087248cb42a8f9f40bdd559e8606fdfad",
+    "simulators/carlsim4/synapse_dynamics_v2.json": "12176617dd062101c224a8e6fa529d9950cf523b2ffb2ce83bea2a91635572ee",
+    "simulators/carlsim4/patches/synapse_dynamics_v2.patch": "54a579de0e694b6e3a57fc2f729e08cf2903e1802945d3ad227f2f2aa3c0a646",
+    "simulators/carlsim4/validation/spec.json": "364d5124d533ca3161b7a062150ce718c68db8ac3c20b3f648f6f43ee0f8174f",
+    "simulators/carlsim4/validation/oracle.py": "15d3da757b9631f65f613cdb80fdfeb11c3d5af99a75dcba964079abbc63bcc5",
     "data/hippocampome/2026-10-01/CA2_CA3_CA1_EC_conn_parameters10-01-2026_10_48_20.csv": "93df10e7cb0b00261e9d5051c99d62a97f55afaa56f9e3c039eab6660b4fd9e9",
     "data/hippocampome/2026-10-01/CA2_CA3_CA1_EC_neuron_parameters10-01-2026_10_48_20.csv": "48a4651de1028785e582029955d5150a31d905d90874c0f17a4ceaeba85ce73a"
   },
-  "executable_sha256": "7ffc721591ee1f2261a78fe0cbb7a4a305b72b2f388a60dd24f79bcb13f23068",
-  "generated_config_sha256": "8f8d01e9b306ecdda5e1d6c08e5e5f1835eb2d5c3b9befb38b58197fa3627e9c",
-  "build_record_sha256": "8fde73fe028a027ed038fd777b47137e90053de7a92a7eaba27c57af60f0531f",
+  "executable_sha256": "47903c167455f75b7f945842f72a074907e846e734e684d639f4e9d7b3c0a72d",
+  "generated_config_sha256": "c9ba903acee996d34f8aef6afb936f5d43dae704ef863d337099ea1c729ad976",
+  "build_record_sha256": "150c1338f62c54db8aa31124a22637408a7a2abc97dde115438ec468f6fcf127",
   "build_record": {
-    "source_commit": "a249457f4be767d6b50be8f639e46f675ef3866a",
-    "library_sha256": "aeb6838ecde6859f50ddcce09975c85f2d9f72bfd0680ccc2a2741df3ef9345d",
-    "executable_sha256": "7ffc721591ee1f2261a78fe0cbb7a4a305b72b2f388a60dd24f79bcb13f23068",
-    "config_sha256": "8f8d01e9b306ecdda5e1d6c08e5e5f1835eb2d5c3b9befb38b58197fa3627e9c",
+    "source_commit": "fd90779a443c420b600a1de19bdace90a31d9ccc",
+    "backend_identity": "carlsim4-synapse-dynamics-v2",
+    "library_sha256": "0a113b96470ce862f32e6494f899b237e45542a7fa5089ad7e3e027fdc404895",
+    "static_executable_sha256": "d233395ca25d29c73bcb8dd656e89935f5c1a404edb6e5e799485a01bceab553",
+    "executable_sha256": "47903c167455f75b7f945842f72a074907e846e734e684d639f4e9d7b3c0a72d",
+    "config_sha256": "c9ba903acee996d34f8aef6afb936f5d43dae704ef863d337099ea1c729ad976",
     "compiler": "g++-12 (Ubuntu 12.5.0-9ubuntu1) 12.5.0",
     "build_command": [
       "g++-12",
       "-std=c++11",
       "-O2",
       "-g",
-      "-I<repository>/data/workspaces/experiment_002/build",
+      "-I<repository>/data/workspaces/experiment_003/build",
       "-I<backend>/carlsim/interface/inc",
       "-I<backend>/carlsim/kernel/inc",
       "-I<backend>/carlsim/monitor",
@@ -151,7 +223,7 @@
       "-lcudart",
       "-lpthread",
       "-o",
-      "<repository>/data/workspaces/experiment_002/build/assay"
+      "<repository>/data/workspaces/experiment_003/build/assay"
     ],
     "neuron": {
       "Neuron Type": "CA2 Pyramidal",

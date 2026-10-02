@@ -1,0 +1,23 @@
+{
+  "snapshot_commit": "81cbbb7ad130c4575713b99dba96b2743ecb5650",
+  "simulations_run": false,
+  "repository_integrity": "79 source/parameter files, 62 reference files, 238 repository files passed",
+  "unit_tests": 14,
+  "native_API_trace_cases": 19,
+  "frozen_verifiers": {
+    "original_runs": 120,
+    "original_numerical_pairs": 30,
+    "corrected_runs": 240,
+    "corrected_numerical_pairs": 60
+  },
+  "relocated_files": 34,
+  "negative_integrity_check": "Mocked modified relocated protocol rejected without filesystem mutation",
+  "raw_monitor_reanalysis": "All corrected raw monitors reread via compatibility runner; regenerated four scoring/measurement/null artifacts byte-identical",
+  "regenerated_sha256": {
+    "results.json": "0cc42e013927d786c00c5f9d4eb23d7b4bf70c53415738cd98aaf8700b8343a7",
+    "numerical_checks.json": "df93db479854fb8887e50d099e485a4479c88c95d1f6a3a94ef1566e8d89874b",
+    "run_measurements.json": "778edb512650f55205fb4c15458b5c98750e15d061d95e193778f77093a6aae6",
+    "linear_null.json": "e8be1f8f30d35d0fd7314faa8aa7613cdf7787605a9b29f1a02ddf5588b7403b"
+  },
+  "published_assets_or_tags_changed": false
+}

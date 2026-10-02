@@ -1,193 +1,177 @@
-# What this experiment established
+# Corrected CA2 assay: scientific status
 
-**We have not established biological replication of the paper.** The frozen
-model produces more summation at higher input frequencies, which resembles one
-qualitative feature of the published CA2 response. The central setup passes the
-broad, predeclared comparison bands at 30 and 50 Hz, but predicts ratios about
-42–44% smaller than the published averages. The result is conditional
-compatibility with a limited observation, rather than a close quantitative match
-or validation of the full circuit.
+The corrected experiment does **not establish biological compatibility** with
+Sun 2021's CA2 APV frequency response. Every STP and static setup fails the
+predeclared success gate. Spiking excludes primary EPSP comparisons, and the
+neuron integration sensitivity gates fail. The independent synaptic impulse
+regressions pass; that is evidence for the repaired dynamics in the tested
+cases, not a biological validation or a fully converged neuronal benchmark.
 
-In simple words: we gave the model five identical input pulses and asked how
-large the last response was compared with the first. Faster pulses overlap more
-in the model, but the growth is weaker than in the paper. Wide uncertainty bands
-allow the central setup to pass our limited check. That pass does not establish
-that the model is an accurate substitute for an animal experiment.
+## What changed
 
-## Primary results
+The recorded backend decayed one cell-wide conductance once per incoming
+synapse. Independent historical GPU impulse readbacks give one-tick retention
+of about 0.791 for one edge and 4.37e−10 for 92 edges with only one active
+input. An additional diagnostic directly links the checksum-matched archived original
+library (`aeb6838…`) and reproduces the same GPU decay and CPU crash. Earlier
+probes used a source-hash-verified rebuild with its separately recorded binary
+hash; they are not silently relabeled as archived-binary runs. The static GPU
+event path was absent, mixed configuration calls could
+suppress STP, and optimized CPU workers crashed from undefined return values.
+The historical experiment 002 interpretation is invalid; experiment 001 shares
+the backend and needs revalidation. Their original scientific files, hashes,
+backend identities and raw archives remain intact.
 
-The biological comparison is the CA2 **APV** arm of Figure 5H in
-[Sun et al. (2021)](https://pmc.ncbi.nlm.nih.gov/articles/PMC8482869/), in which NMDA
-receptors and inhibitory GABA receptors were blocked. The original observations
-are from mice; network seeds and simulated cells here are not animals.
-Published values below are approximate readings from the graph, not raw data.
+The separately versioned v2 patch stores eight receptor states per synapse,
+decays each with its own constants, and sums them for each neuron. It preserves
+first-response 1/U normalization. Exact exponential receptor decay and TM
+recovery replace the historical Euler discretization, explicitly declared in
+the validation spec. The synaptic clock remains 1 ms; 20/40 RK substeps change
+neuron integration only. For tau=4.7886 ms the corrected exponential retention
+is about 0.8115; it is not silently equated with the historical Euler 0.7912.
 
-| Single-pulse setup | Model ratio at 30 Hz | Model ratio at 50 Hz | Predeclared decision |
-|---|---:|---:|---|
-| 1.44 mV | 1.022 | 1.540 | Does not pass both: 30 Hz narrowly below band |
-| 1.76 mV | 1.061 | 1.644 | Passes both broad bands, conditional on setup assumptions |
-| 2.08 mV | 1.111 | Ineligible | One of five seeds spikes at 50 Hz; group cannot pass |
-| Paper CA2 + APV | ≈1.844 | ≈2.938 | Digitized biological means, n = 5 |
+All 38 actual CPU/GPU conductance cases pass an independent float64 analytical
+oracle, with maximum absolute error 1.8416423937933635e−8 versus a predeclared tolerance
+of 2e−5 + 1e−4 relative. Tests include silent afferents, heterogeneous and summed
+inputs, E/I and all receptors, static/STP/mixed release, rise modes, paired pulses,
+recovery, delays, boundary events, new-network reset and configuration order.
+The final validation source and prospective controls were committed before
+calibration. The calibrated configuration and unchanged analysis were then
+committed at `b2714df` before held-out trains. Development failures are retained.
 
-At the central setup, the fifth response is about **6% bigger** than the first
-at 30 Hz and **64% bigger** at 50 Hz. The paper's corresponding averages are
-approximately **84% bigger** and **194% bigger**. The model means are 42.4% and
-44.0% below the digitized means; these are descriptive errors, not significance
-tests. Five new network seeds give ranges 1.057–1.069 at 30 Hz and 1.632–1.664
-at 50 Hz. Those narrow ranges describe model topology variability, not
-biological uncertainty.
+## Runs and controls
 
-The predeclared approximate compatibility bands are 1.025–2.663 at 30 Hz and
-1.511–4.364 at 50 Hz. They combine graph-read SEM upper bounds, a small-sample
-multiplier and pixel extraction error. They are deliberately conservative;
-therefore passing them is a weak constraint and does not imply matching the
-published central values. They are not exact confidence intervals or prediction
-intervals for animals. Both the scoring rule and graph extraction were committed
-before any five-pulse test.
+Only single-pulse recruitment was recalibrated, on seeds 101–102. Exported
+intrinsic parameters, conductance, connection probability, delay and STP values
+remain fixed. Target bands and the all-cell peak convention are unchanged from
+experiment 002. Evaluation uses seeds 201–205, six frequencies, and paired
+20/40 RK settings at 30/50 Hz. No train-outcome tuning was performed.
 
-The low setup misses the lower 30 Hz boundary by only about 0.0025 ratio units,
-and some seeds fall above that boundary. Treat that as a borderline failure of
-this fixed rule, not decisive biological disagreement. The predefined robust
-mismatch criterion is **not met**. Only the central setup passes both endpoints;
-the experiment does not support either broad validation or a robust rejection
-across all possible setups.
+| Target single EPSP (mV) | Historical active inputs | Corrected active inputs | Corrected calibration mean (mV) |
+|---:|---:|---:|---:|
+| 1.44 | 1859 | 443 | 1.4130 |
+| 1.76 | 2281 | 559 | 1.7570 |
+| 2.08 | 2704 | 654 | 2.0868 |
 
-![Frequency comparison](figures/frequency_response.png)
+All 240 trains were run sequentially on the 4 GB RTX 3050 Ti. Native train wall time totaled 792.8 s. The static model uses identical kinetics and input recruitment but release=1. Its largest matched first-peak population-mean difference from STP is 0 mV. The linear null superposes calibration-only per-cell single-pulse kernels; it has 100 ms support, zero thereafter, and no train fit. It is a generic temporal-summation control, not a new validated neuron model.
 
-Black points are digitized paper means. Gray shading is the approximate
-compatibility band. Colored curves are model means; their small shaded ranges
-represent five network seeds. The upper 50 Hz group is omitted because it
-contains a spike. Other frequencies are descriptive, not extra held-out success
-criteria. Negative lower bounds at low frequencies are an artifact of the
-symmetric conservative construction and have no biological interpretation.
+| Model | Train runs | Eligible runs | Passing numerical pairs | Setup passes |
+|---|---:|---:|---:|---:|
+| stp | 120 | 56 | 3/30 | 0/3 |
+| static | 120 | 46 | 2/30 | 0/3 |
 
-## Setup and calibration
+The 102 eligible runs are mostly at lower frequencies. Every primary setup
+contains excluded runs; all nominal 50 Hz runs spike in both models. Eligibility,
+complete coverage and numerical pass are all required for setup success. The
+frozen analyzer applies the release-wide numerical gate (all 30 pairs for a
+release condition) to every amplitude level, rather than a level-specific
+subset. This conservative scope could veto an otherwise passing level in other
+data. Here each level independently fails, so the scope changes no conclusion;
+the frozen scoring is preserved.
+The categorical release label omitted by the frozen controller's measurement
+rows was recovered one-to-one from verified run configurations and executable
+hashes. The original batch is retained, and numerical fields are unchanged;
+see `METADATA_ERRATUM.md` and `evidence/metadata_mapping.json`.
 
-A direct MEC LII stellate → CA2 pyramidal pathway was isolated from the existing
-Hippocampome-derived model. The assay contains 128 CA2 point cells and a pool of
-10,818 prescribed input cells. It does not contain CA3, CA1, an entorhinal network,
-recurrence, or interneurons. This reduction approximates the pharmacologically
-isolated EPSP assay; it does not reproduce the whole slice. The original
-perforant-path electrode does not establish that precisely this single exported
-cell class was recruited.
+## Comparison and effect sizes
 
-The exported intrinsic parameters and direct-pathway conductance/STP values were
-left unchanged. NMDA conductance is zero and inhibition is absent, approximating
-the selected drug-blocked arm. The export's connection-probability fallback is
-retained. The official exporter code indicates that the `CARLsim_default` flag
-refers to this fallback; it does **not** by itself mark all synaptic dynamics as
-generic defaults. The exact physiological source ancestry of this row, and the
-deployed exporter revision, remain unverified. See `source_audit.json`.
+The table reports population means of the original per-cell fifth/first metric.
+**Corrected STP/static numbers include spiking, ineligible traces and are
+monitor-statistic diagnostics, not scored biological EPSP ratios.** Printing
+those numbers does not override the exclusion gate. The linear null is computed
+from single-pulse calibration responses alone. The historical ratios come from
+the invalid backend and are retained solely to show how the record changed.
 
-The holding current was computed from the unchanged intrinsic model's equations
-to settle near −70 mV. Afferent recruitment was the only input fit. Single pulses
-at seeds 101–102 selected:
+| Level (mV) | Hz | Source mean | Historical ratio | Corrected STP diagnostic | Static diagnostic | Linear null |
+|---:|---:|---:|---:|---:|---:|---:|
+| 1.44 | 30 | 1.844 | 1.022 | 1.537 | 3.035 | 1.689 |
+| 1.44 | 50 | 2.938 | 1.540 | 3.667 | 8.400 | 2.519 |
+| 1.76 | 30 | 1.844 | 1.061 | 2.524 | 4.761 | 1.709 |
+| 1.76 | 50 | 2.938 | 1.644 | 5.898 | 13.466 | 2.557 |
+| 2.08 | 30 | 1.844 | 1.111 | 3.378 | 7.052 | 1.734 |
+| 2.08 | 50 | 2.938 | 1.808 | 8.181 | 16.140 | 2.603 |
 
-| Target first EPSP | Active afferents | Calibration mean | Held-out mean first EPSP |
-|---|---:|---:|---:|
-| 1.44 mV | 1,859 | 1.451 mV | 1.428 mV |
-| 1.76 mV | 2,281 | 1.770 mV | 1.742 mV |
-| 2.08 mV | 2,704 | 2.083 mV | 2.059 mV |
+The linear null spans 1.689–1.734 at 30 Hz (absolute errors 0.110–0.155); 2.519–2.603 at 50 Hz (absolute errors 0.334–0.419); the original conservative bands can therefore admit a generic linear response. Band inclusion alone has little power to validate CA2-specific dynamics. Signed and relative errors, every seed, all six frequencies and alternative baseline measurements remain in the evidence.
 
-Calibration agreement is an imposed setup constraint, not evidence of successful
-prediction. The three targets transfer Figure 4's weak CA2 first-response mean
-± SEM to Figure 5's APV arm. **That transfer is unverified:** the absolute initial
-CA2 APV amplitude in Figure 5 was not recovered. These are three operating
-scenarios, not a known range for that preparation or biological variability.
+## Numerical and measurement sensitivity
 
-Testing used five synchronous pulses at 2, 5, 10, 20, 30 and 50 Hz with seeds
-201–205. First pulse: 5,100 ms; delay: 1 ms; integration: RK4 with 20 substeps/ms.
-At 30 Hz, the millisecond input grid gives times 5,100, 5,133, 5,167, 5,200 and
-5,233 ms. All exact schedules and run configurations are retained. No intrinsic
-or synaptic retuning followed train outcomes.
+For stp, the largest 20/40 RK change is 0.290 in the mean ratio and 0.795 mV in mean peaks, exceeding the fixed 0.05/0.1 mV gates. For static, the largest 20/40 RK change is 0.890 in the mean ratio and 2.002 mV in mean peaks, exceeding the fixed 0.05/0.1 mV gates. All 55 failed pairs include spiking, and all fail the mean-peak gate (27 STP,
+28 static). None fail only because of the ratio's tiny denominator. Paired
+eligibility and spike counts are identical: their metrics change within spiking
+trajectories with the same counts. Only two pairs are eligible/nonspiking, both
+STP at 30 Hz in the weakest setup; both pass. Their maximum per-cell waveform
+difference is 0.01613 mV and maximum population peak difference is 0.001282 mV.
+There are no failed eligible/nonspiking pairs. This classification is descriptive;
+it changes neither numerical gates nor exclusions.
 
-The preparation's temperature (31–32°C), morphology, dendritic conductances and
-stimulation geometry are not represented explicitly. An effective point-cell
-parameter fit is not a reconstruction of a particular recorded neuron.
+A separately labeled post-outcome diagnostic tests the unchanged CA2 intrinsic
+ODE with a +100 pA, 100 ms current step after 5000 ms holding, no synaptic input
+and no spikes/resets. Independently authored float64 RK4 at 80/160 substeps
+provides the reference. Actual CPU/GPU RK20/RK40 traces differ from that reference
+by at most 0.006011 mV and meet a diagnostic-only 0.05 mV tolerance. The float64
+refinement discrepancy is recorded in `evidence/current_step_diagnostic.json`.
+RK40 has slightly larger float32 equilibrium error than RK20, consistent with
+rounding at small per-step increments; increasing substeps is not automatically
+monotonic convergence at this precision. The diagnostic reveals no additional
+fault in smooth intrinsic current-step integration. It supports sensitivity of
+spiking waveforms/peak timing as an explanation for the assay's failed metrics,
+but does **not** validate spike-reset branches, voltage-dependent conductance
+coupling, or prove that no other implementation fault exists. In the current
+implementation synaptic current is evaluated at the beginning of each RK
+substep and held across its RK stages; this limits claims about the formal RK4
+order of the conductance-coupled dynamics and needs a future dedicated test.
+The synaptic regressions and this bounded ODE diagnostic do not rescue failed
+neuronal gates or establish general backend validation.
 
-## Verification, exclusions and measurement limits
 
-All **120 held-out runs** completed: 90 nominal tests and 30 paired numerical
-checks with 40 substeps/ms. Every raw voltage/spike file was re-read and checked
-against its checksum, configuration and prescribed input events. All 30 pairs
-passed the declared gates on mean ratios, mean peak amplitudes, eligibility and
-spike counts. For the 29 eligible pairs, the largest mean-ratio change was 0.00164
-and the largest mean-peak change was 0.00659 mV, well below the fixed limits of
-0.05 and 0.1 mV.
+A descriptive post-outcome audit finds 0–5 of 128 cells per run with first peaks below 0.05 mV. This diagnostic threshold changes no score or exclusion. Sparse recruitment leaves some near-zero responses, making individual normalized ratios sensitive to small baseline or integration differences. The frozen all-cell mean convention is preserved for comparability, rather than filtering cells after observing outcomes. The incremental pre-pulse convention is reported separately. All 240 raw neuron and spike monitors were reread; no failures or ineligible runs were removed.
 
-Two of the 120 runs are ineligible: the nominal and precision versions of the
-same upper-level, 50 Hz, seed-205 setup. Cell 12 fired once at 5,229 ms with
-20 substeps and 5,230 ms with 40 substeps. Both recordings are retained. Across
-all pairs, maximum mean-ratio change was 0.02661 and maximum mean-peak change
-0.09095 mV. The ineligible pair's individual-cell ratio changed by 3.533 and its
-spike time changed by 1 ms. The declared gates concern population means; they
-do **not** establish numerical convergence of every cell or precise spike timing.
+## Source and assay limits
 
-The upper 50 Hz all-run mean remains in the JSON audit record, along with its
-ineligibility flag. It contains a spike and is **not a valid subthreshold EPSP
-comparison**. We do not discard the spiking seed to make the condition pass.
+The [public means_cond16 row](https://github.com/Hippocampome-Org/synaptome_db/blob/master/data/renamed/means_cond16.csv)
+differs from the archived selected export. Public
+[condition 16 metadata](https://github.com/Hippocampome-Org/synaptome_db/blob/master/data/conditions.csv)
+identifies rat, male, P56, 32°C and −60 mV; those labels cannot be assigned to the
+archived values without deployed revision/transformation provenance. The
+export's `CARLsim_default` flag concerns connection-probability fallback, and
+does not certify or negate the physiological ancestry of STP parameters.
 
-The primary measurement takes every pulse peak relative to the same prestimulus
-baseline, then divides by that cell's first peak. This includes the residual
-voltage from earlier pulses. The convention was inferred from the paper's scaled
-traces; the authors' analysis implementation was not recovered. As a diagnostic,
-measuring only the extra increment above the voltage immediately before each
-pulse gives a very different result: for central seed 201 at 50 Hz, the ratio is
-0.359 rather than the primary 1.632. This diagnostic was predeclared but does not
-replace the primary score. It shows why exact agreement on the measurement
-convention is necessary before claiming replication.
+The [fitting utility's normalization note](https://github.com/k1moradi/SynapseModelingUtility#note)
+states biological g is fitted g times U, supporting retention of the first
+impulse normalization. It does not resolve which source data produced this
+particular export.
 
-![Traces and setup sensitivity](figures/traces_and_sensitivity.png)
+[Sun et al. 2021](https://pmc.ncbi.nlm.nih.gov/articles/PMC8482869/) matched initial
+EPSPs between control and APV conditions by changing stimulation intensity.
+The exact absolute Figure 5 CA2 APV initial amplitude remains unknown here.
+Figure 4's 1.76 ± 0.32 mV is a transparently unverified cross-figure setup
+assumption, not an established APV amplitude range or animal variability.
+The authors' exact peak/baseline convention remains unknown. Digitized source
+bands are broad approximate mean-compatibility intervals, not recovered animal
+confidence/prediction intervals. No author contact was made and no missing
+naturalistic timestamps or assay details were invented.
 
-The trace panel shows mean normalized model voltages for seed 201 only, without
-asserting that they reproduce a recorded biological waveform. The final peak
-includes earlier responses that have not fully decayed. Separating the role of
-short-term synaptic dynamics from membrane integration would require a new,
-prospectively defined intervention experiment.
+The assay omits dendrites, recurrence, inhibition and NMDA currents, and cannot
+establish CA2's function, behavior, naturalistic replay, or CA1/CA2 differences.
 
-One earlier single-pulse setup attempt had native exit status 0 but failed in
-the recording reader: this backend writes the warmup to disk even when the
-in-memory monitor is stopped. The reader was repaired before train testing; the
-original attempt, full file and log remain in the archive. That was a software
-setup failure, not evidence about biology. There were no failed native test exits
-or warning lines in the assay logs. Recorded legacy backend compilation warnings
-remain in its source metadata. The assay used GPU integration, not the warned
-CPU integration paths.
+## Readiness for hypotheses
 
-## Answer to the replication question
+Hippocampome remains useful for assembling traceable candidate cell/connection
+models and identifying evidence gaps. This repair distinguishes that usefulness
+from tested simulator correctness and from biological validity. The corrected
+backend is suitable for bounded mechanistic exploration within its independently
+tested dynamics, with the reported 1 ms clock and normalization conventions.
+The selected exported somatic assay is **not ready as a quantitatively validated
+platform for CA2 functional predictions**: it fails subthreshold and neuronal
+numerical gates under the declared setups, and its physiological/assay ancestry
+is unresolved. New hypotheses can be explored as explicitly conditional model
+comparisons for later biological testing, not as validated CA2 conclusions.
+A future study should declare source/preparation assumptions and numerical
+criteria before choosing a new configuration; this task did not tune trains
+to rescue the benchmark.
 
-**Selected qualitative feature:** reproduced within the reduced model—greater
-EPSP summation at higher frequency in the drug-blocked direct-input assay.
-
-**Selected quantitative endpoints:** conditional compatibility at the central
-setup under the prospectively fixed, broad graph bands. The means substantially
-underestimate the published averages. This is limited evidence, and the outcome
-is not robust across the three declared operating scenarios.
-
-**Strict biological replication or full-paper replication:** not established.
-Unknown APV starting amplitude, unresolved parameter ancestry and measurement
-convention, and omitted preparation mechanisms prevent that conclusion. The CA1
-comparison, NMDA-on arm and naturalistic sequence were not tested. No inference
-about behavior or CA2's general function follows from this result.
-
-The next useful step is to obtain the numerical Figure 5H responses, exact
-initial amplitudes and analysis definition, and trace the selected Hippocampome
-synaptic fit to its source experiments. Then define a new matched protocol
-without tuning on its held-out responses. If further calibration is needed, use
-separate data and reserve an independent condition or dataset for validation.
-
-## Traceability
-
-- Prospective plan/model commit: `a249457`.
-- Recording-reader repair: `9b10f20`.
-- Analysis specified before trains: `e9efe8b`.
-- Calibrated configuration frozen before trains: `d58db6f`.
-- `protocol.json`, `source_targets.json`, `source_audit.json` and
-  `frozen_configuration.json` contain the exact definitions and scientific hashes.
-- `evidence/` contains all individual results, run configurations, numerical
-  checks, exclusions, figure traces, hardware record and raw-file manifest.
-- `evidence/archive.json` identifies the full versioned raw workspace, including
-  the original executable, calibration and retained setup attempt.
-- `reproduce.md` explains checking the compact record, re-analyzing the raw data,
-  and launching fresh GPU runs. Figures are independently reproducible from the
-  compact evidence; no animal recordings are represented as simulation outputs.
+The separately versioned raw archive, backend and reproduction instructions
+are linked in `evidence/archive.json` and [reproduce.md](reproduce.md). Local unit,
+source-integrity, historical evidence, native call-trace and corrected evidence
+checks are recorded in `evidence/local_checks.json`; exact-head hosted checks
+are visible on PR #1. Hosted CI does not execute GPU simulations.

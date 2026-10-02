@@ -1,23 +1,14 @@
 {
-  "execution_date": "2026-10-02",
-  "gpu": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
-  "gpu_memory_MiB": 4096,
-  "compute_capability": "8.6",
-  "driver": "580.178.04",
-  "CUDA_toolkit": "12.4.131",
-  "compiler": "g++ 12; exact version and command in frozen build_record",
-  "CARLsim": "CARLsim4 commit 11ea96f750d125e4dcfbf67231429204322fa1bd plus recorded CUDA/sm86 and monitor/reversal patches",
-  "backend_library_sha256": "aeb6838ecde6859f50ddcce09975c85f2d9f72bfd0680ccc2a2741df3ef9345d",
-  "temperature": "Paper 31-32 C; no explicit simulator temperature parameter or temperature scaling introduced",
-  "execution_warnings": "No warning or failed native exit was observed in the assay run logs. Backend's recorded build contains legacy CPU return-value and CUDA deprecation warnings, retained in simulator source metadata; CPU integration was not used.",
-  "monitor_limit": "Recorded backend monitors 128 target cells. It writes warmup to disk even when the in-memory monitor is stopped; the entire file is validated before window extraction.",
-  "analysis_runtime": {
-    "Python": "3.12.14",
-    "NumPy": "2.3.5"
+  "machine": "Lenovo RTX3050Ti laptop",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.14.0-37-generic-x86_64-with-glibc2.43",
+  "nvcc": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2024 NVIDIA Corporation\nBuilt on Thu_Mar_28_02:18:24_PDT_2024\nCuda compilation tools, release 12.4, V12.4.131\nBuild cuda_12.4.r12.4/compiler.34097967_0\n",
+  "g++": "g++-12 (Ubuntu 12.5.0-9ubuntu1) 12.5.0",
+  "gpu_snapshot": {
+    "device": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+    "memory_total_MiB": 4096,
+    "sampled_total_used_MiB": 250,
+    "measured_peak": false
   },
-  "figure_runtime": {
-    "Python": "3.12.14",
-    "NumPy": "2.5.3",
-    "Matplotlib": "3.11.2"
-  }
+  "execution": "All biological runs sequential; independent tiny CPU/GPU probes bounded. No system changes, merge, or author contact."
 }

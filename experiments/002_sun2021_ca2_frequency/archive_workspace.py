@@ -24,17 +24,17 @@ with args.output.open('xb') as compressed:
                 content=path.read_bytes()
                 relative=path.relative_to(workspace).as_posix()
                 manifest[relative]={'bytes':len(content),'sha256':hashlib.sha256(content).hexdigest()}
-                info=archive.gettarinfo(str(path),arcname='experiment_002/'+relative)
+                info=archive.gettarinfo(str(path),arcname='experiment_003/'+relative)
                 info.mtime=0;info.uid=0;info.gid=0;info.uname='';info.gname=''
                 with path.open('rb') as source:archive.addfile(info,source)
 (HERE/'evidence/workspace_manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
-record={'experiment':'002_sun2021_ca2_frequency','release':'experiment-002-v1',
+record={'experiment':'003_corrected_ca2_frequency','release':'experiment-003-v1',
         'asset':{'filename':args.output.name,'bytes':args.output.stat().st_size,
                  'sha256':hashlib.sha256(args.output.read_bytes()).hexdigest(),
-                 'url':'https://github.com/OgnjenX/ca2-circuit-experiments/releases/download/experiment-002-v1/'+args.output.name},
-        'contains':['Original executable and generated configuration','Single-pulse calibration',
-                    'All 120 test runs and full raw neuron/spike monitors','Retained setup reader failure'],
-        'external_backend':'artifacts/experiment_001.json runtime asset; identical nominal library SHA',
+                 'url':'https://github.com/OgnjenX/ca2-circuit-experiments/releases/download/experiment-003-v1/'+args.output.name},
+        'contains':['Corrected STP/static executables and generated configuration','Single-pulse calibration',
+                    'All 240 test runs (STP and static release controls) and full raw neuron/spike monitors','Retained backend/harness validation failures and original categorical-label batch'],
+        'external_backend':'simulators/carlsim4/synapse_dynamics_v2.json; corrected backend included in archive',
         'copyrighted_source_figure_included':False}
 (HERE/'evidence/archive.json').write_text(json.dumps(record,indent=2)+'\n')
 print(json.dumps(record,indent=2))

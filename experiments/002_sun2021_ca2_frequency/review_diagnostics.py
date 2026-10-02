@@ -1,37 +1,24 @@
-"""Describe exclusions and numerical limits without changing prospective scores."""
-import argparse
-import json
+"""Descriptive post-outcome sensitivity audit; never changes frozen scores or exclusions."""
+import argparse,json,sys
 from pathlib import Path
-import sys
-
-HERE=Path(__file__).resolve().parent
-ROOT=HERE.parents[1]
-sys.path.insert(0,str(ROOT/'src'))
-from ca2lab.monitors import read_spikes
-
-parser=argparse.ArgumentParser(description=__doc__)
-parser.add_argument('--workspace',type=Path,required=True)
-args=parser.parse_args()
-load=lambda name:json.loads((HERE/'evidence'/name).read_text())
-rows=load('run_measurements.json');checks=load('numerical_checks.json')
-by_key={(r['active'],r['seed'],r['frequency_Hz'],r['steps']):r for r in rows}
-eligible=[c for c in checks if by_key[(c['active'],c['seed'],c['frequency_Hz'],20)]['eligible']]
-def maxima(group):
-    return {name:max(c[name] for c in group) for name in
-            ['mean_ratio_difference','max_mean_peak_difference_mV','max_cell_ratio_difference']}
-exclusions=[]
+import numpy as np
+HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[1];sys.path.insert(0,str(ROOT/'src'))
+from ca2lab.slice import read_voltage_window
+from experiment import load,save,sha,verify_frozen
+p=argparse.ArgumentParser(description=__doc__);p.add_argument('--workspace',type=Path,required=True);a=p.parse_args();w=a.workspace.resolve();frozen=verify_frozen(w)
+rows=load(HERE/'evidence/run_measurements.json');checks=load(HERE/'evidence/numerical_checks.json');diagnostics=[]
 for row in rows:
-    if row['eligible']:continue
-    directory=args.workspace/'runs'/row['label']
-    cfg=json.loads((directory/'configuration.json').read_text())
-    spikes=read_spikes(directory/'results/spk_CA2_Pyramidal.dat',128,cfg['duration_ms'])
-    exclusions.append({'label':row['label'],'reason':'Target spiking; EPSP comparison ineligible',
-                       'spikes':[{'absolute_ms':int(r['t']),'cell_id':int(r['id'])} for r in spikes],
-                       'baseline_mV':row['baseline_mV'],'baseline_drift_mV':row['max_baseline_drift_mV']})
-record={'post_analysis_descriptive_audit':True,'primary_scores_changed':False,
-        'eligible_pair_count':len(eligible),'all_pair_maxima':maxima(checks),
-        'eligible_pair_maxima':maxima(eligible),'excluded_runs':exclusions,
-        'numerical_limit':'The declared gates concern mean EPSP ratios and mean peaks, and unchanged eligibility/spike counts. They do not establish convergence of every cell or spike time. The ineligible spiking pair has a large individual-cell ratio difference and a 1ms spike-time difference.',
-        'ineligible_aggregation_limit':'results.json retains all-run means and errors even for the ineligible upper 50Hz condition, for auditability. These numbers include a spike and are not valid subthreshold EPSP comparisons. Figures omit that group, without dropping a seed to rescue its score.'}
-(HERE/'evidence/review_diagnostics.json').write_text(json.dumps(record,indent=2)+'\n')
-print(json.dumps(record,indent=2))
+    directory=w/'runs'/row['label'];cfg=load(directory/'configuration.json')
+    for name,digest in row['raw_sha256'].items():
+        if sha(directory/'results'/name)!=digest:raise ValueError('Raw record changed')
+    v=read_voltage_window(directory/'results/n_CA2_Pyramidal.dat',128,4950,cfg['duration_ms']);base=v[:,50:150].mean(axis=1);end=cfg['pulses_ms'][1]+1-4950
+    first=v[:,151:end].max(axis=1)-base
+    diagnostics.append({'label':row['label'],'release':row['release'],'frequency_Hz':row['frequency_Hz'],'seed':row['seed'],'active':row['active'],'steps':row['steps'],'eligible':row['eligible'],'spikes':row['spikes'],'first_peak_min_mV':float(first.min()),'first_peak_max_mV':float(first.max()),'cells_first_peak_below_0_05mV':int(np.sum(first<.05))})
+lookup={(r['release'],r['active'],r['seed'],r['frequency_Hz'],r['steps']):r for r in rows}
+first_differences=[]
+for row in rows:
+    if row['release']!='stp':continue
+    other=lookup[('static',row['active'],row['seed'],row['frequency_Hz'],row['steps'])]
+    first_differences.append(abs(row['mean_peaks_mV'][0]-other['mean_peaks_mV'][0]))
+record={'post_outcome_descriptive_audit':True,'primary_scoring_changed':False,'low_response_threshold_is_diagnostic_only_mV':.05,'per_run':diagnostics,'matched_first_peak_max_mean_difference_mV':max(first_differences),'numerical_failures':[r for r in checks if not r['pass']],'excluded_runs':[r for r in diagnostics if not r['eligible']],'interpretation':'All-cell mean ratios retain the original convention. Near-zero first responses can make individual ratios unstable. Spiking runs do not represent EPSP compatibility regardless of apparent mean ratios.'}
+save(HERE/'evidence/review_diagnostics.json',record);print('Descriptive audit saved; frozen primary scores unchanged.')

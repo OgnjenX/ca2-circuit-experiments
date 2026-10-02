@@ -1,32 +1,30 @@
-# Backend dynamics erratum — 2 October 2026
+# Historical backend defect and revision numbering
 
-The biological interpretation of experiment 002 is invalid pending corrected
-synaptic dynamics. Its frozen files, source hashes, raw archive, executable
-identities and reported measurements remain historical evidence and have not
-been replaced. Numerical agreement between RK substep settings did not detect
-the synaptic defect because both settings used the same 1 ms synaptic clock.
+The original experiment 002 used the defective receptor dynamics and its
+biological interpretation is invalid. Experiment 001 shares that backend and
+requires revalidation. Silent afferents changed active receptor decay; static
+and mixed-STP event/configuration paths also had defects. The corrected backend
+uses independent per-synapse receptor states and preserves first-impulse
+normalization. Its independent oracle passes, but all corrected assay setups
+fail the numerical/coverage eligibility requirements. See [report.md](report.md).
 
-In the recorded CARLsim4 backend, a cell-wide receptor state is decayed once
-for every incoming synapse. Consequently silent afferents change the response
-of an active synapse, and heterogeneous connections cannot retain their own
-time constants. Independent GPU impulse readbacks reproduce this failure.
-The CPU source has the same aggregate-state defect, and its optimized worker
-routines additionally exhibit undefined behavior from missing return values.
-Mixed STP configuration calls can suppress GPU events; static GPU events were
-also omitted. Receptor kinetics were initialized only inside STP enable paths.
+The corrected run was provisionally numbered 003. It now lives here as the
+corrected revision of experiment 002. Its frozen identifiers and published
+`experiment-003-v1` release deliberately retain their original names.
+Experiment 003 is free for a new scientific question. This relocation changes
+no biology, code used to generate the results, calibration, scoring or values.
 
-Experiment 001 shares this backend and its physiological/functional conclusions
-require revalidation. Repeating its full experiment is outside this repair.
-The database's usefulness is a separate question from simulator correctness.
+The exact pre-consolidation snapshot is
+[81cbbb7ad130c4575713b99dba96b2743ecb5650](https://github.com/OgnjenX/ca2-circuit-experiments/tree/81cbbb7ad130c4575713b99dba96b2743ecb5650).
+Its [original revision](https://github.com/OgnjenX/ca2-circuit-experiments/tree/81cbbb7ad130c4575713b99dba96b2743ecb5650/experiments/002_sun2021_ca2_frequency)
+and [corrected revision](https://github.com/OgnjenX/ca2-circuit-experiments/tree/81cbbb7ad130c4575713b99dba96b2743ecb5650/experiments/003_corrected_ca2_frequency)
+preserve every tracked historical byte. Large raw files remain in the unchanged
+[original release](https://github.com/OgnjenX/ca2-circuit-experiments/releases/tag/experiment-002-v1)
+and [corrected release](https://github.com/OgnjenX/ca2-circuit-experiments/releases/tag/experiment-003-v1),
+including the supplemental diagnostic asset. Git alone does not store those raw
+archives.
 
-The separately versioned `synapse_dynamics_v2.patch` and experiment
-[003](../003_corrected_ca2_frequency/readme.md) contain the correction,
-independent oracle validation and prospective controls. The new backend uses
-exact exponential decay and recovery on the declared 1 ms arrival-event clock,
-rather than preserving the historical Euler discretization. The first impulse
-normalization by 1/U remains: the fitting utility describes biological g as
-fitted g times U. This normalization is not itself evidence of a defect.
-
-Historical results must not be cited as evidence that Hippocampome fails (or
-validates) CA2 biology. Even corrected agreement with broad digitized bands
-would be conditional compatibility under unresolved assay/provenance assumptions.
+`python scripts/verify_assay_revisions.py` reconstructs both snapshots temporarily
+at their original paths and runs their unchanged integrity/scoring verifiers.
+It also checks every relocated frozen file against its pinned Git blob. No
+historical archive directory is carried in the current tree.
