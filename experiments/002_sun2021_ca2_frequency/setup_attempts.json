@@ -1,0 +1,9 @@
+{
+  "phase": "single-pulse setup",
+  "native_exit_status": 0,
+  "reader_failed": true,
+  "reason": "Recorded CARLsim backend writes voltage during warmup irrespective of startRecording. Initial reader expected only4950ms onward. Corrected reader validates full recording before selecting assay window.",
+  "parameter_changes": false,
+  "train_outcomes_seen": false,
+  "retained_directory": "data/workspaces/experiment_002/attempts/initial-full-recording-reader"
+}

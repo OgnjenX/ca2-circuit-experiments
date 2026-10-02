@@ -30,6 +30,9 @@ class SliceMeasurementTest(unittest.TestCase):
                                  + np.array(records, dtype=VOLTAGE_DTYPE).tobytes())
             save(rows)
             self.assertEqual(read_voltage_window(path, 2, 4950, 4953).shape, (2, 3))
+            full = [(t, cell, -70, 0, 0) for t in range(4953) for cell in range(2)]
+            save(full)
+            self.assertEqual(read_voltage_window(path, 2, 4950, 4953).shape, (2, 3))
             for bad in (rows[:-1], rows[:-1]+[rows[0]], rows[:-1]+[(4953, 1, -70, 0, 0)]):
                 save(bad)
                 with self.assertRaises(ValueError):

@@ -5,7 +5,7 @@ import struct
 
 import numpy as np
 
-from ca2lab.monitors import VOLTAGE_DTYPE
+from ca2lab.monitors import VOLTAGE_DTYPE, read_voltage
 
 
 def read_voltage_window(path, population, start_ms, end_ms):
@@ -20,6 +20,10 @@ def read_voltage_window(path, population, start_ms, end_ms):
         raise ValueError("Invalid recording window")
     records = np.frombuffer(raw, dtype=VOLTAGE_DTYPE, offset=24)
     width = end_ms - start_ms
+    # This recorded backend writes its file throughout the warm-up even while
+    # the in-memory monitor is stopped. Validate the entire file before slicing.
+    if len(records) == end_ms * population:
+        return read_voltage(path, population, end_ms)[:, start_ms:end_ms]
     if len(records) != width * population:
         raise ValueError("Incomplete recording window")
     if np.any(records['id'] >= population) or np.any(records['t'] < start_ms) or np.any(records['t'] >= end_ms):
