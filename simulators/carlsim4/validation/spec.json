@@ -1,0 +1,33 @@
+{
+  "identity": "synapse-dynamics-v2-validation-1",
+  "clock_ms": 1,
+  "receptor_decay": "Exact exponential exp(-1/tau) per synapse, applied before arrival events; neuron RK substeps do not refine synaptic clock.",
+  "TM": "At each tick recover u*=exp(-1/tau_f), x=1-(1-x)*exp(-1/tau_r); at arrival u+=U*(1-u), release=u*x/U, then x-=u*x. Start u=0,x=1. Fixed delays translate arrival times. Static release is 1 and preserves first impulse.",
+  "rise": "For tau_r>0, impulse adds equal scaled rise and decay states, effective g=d-r. Continuous analytical peak normalization retained; discrete sampled peak need not equal 1. Instantaneous rise contributes only decay state even alongside rising connections.",
+  "silent_afferents": [
+    0,
+    1,
+    31,
+    91,
+    255
+  ],
+  "cases": [
+    "AMPA homogeneous/heterogeneous",
+    "summed impulses",
+    "AMPA/NMDA/GABAa/GABAb",
+    "static/STP/mixed",
+    "paired pulse and recovery",
+    "delay 1 and 5",
+    "events at 0/999/1000/1001",
+    "new-network reset",
+    "configuration order",
+    "rise off/on/mixed"
+  ],
+  "comparison": "Actual CARLsim CPU and GPU public conductance readbacks against independently authored Python float64 analytical convolution and TM recurrence; CPU/GPU agreement is secondary.",
+  "tolerances": {
+    "absolute": 2e-05,
+    "relative": 0.0001
+  },
+  "biology_gate": "All independent backend cases pass before calibration; complete coverage, eligibility and numerical pass required for setup success. Retain all failures.",
+  "timestamp_convention": "Readback indexed by integration tick t after runNetwork(0,1). CARLsim delay 1 arrives during emission tick; arrival readback index is emission+delay-1 (effective wall boundary emission+delay). Event at t=0 is included."
+}

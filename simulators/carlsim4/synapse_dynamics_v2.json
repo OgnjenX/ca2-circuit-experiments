@@ -1,0 +1,24 @@
+{
+  "id": "carlsim4-synapse-dynamics-v2",
+  "upstream_commit": "11ea96f750d125e4dcfbf67231429204322fa1bd",
+  "base_patch_sha256": "598cfcb7f5462725b4296fcced6d49f4292217f2a5ca6c0060c6a980e7254955",
+  "patch": "patches/synapse_dynamics_v2.patch",
+  "patch_sha256": "54a579de0e694b6e3a57fc2f729e08cf2903e1802945d3ad227f2f2aa3c0a646",
+  "changed_source_sha256": {
+    "carlsim/interface/src/carlsim.cpp": "e21464941f00f9e3c1fa6d0b0c93095479924fcdda21717857e3672a000994a3",
+    "carlsim/kernel/inc/snn_datastructures.h": "d3e589f0d847e1b0b77c681c0f45b001cb3e5ce2644d4c9b8b38c199859d80cd",
+    "carlsim/kernel/src/snn_cpu_module.cpp": "4bdbc15c10995373972ed7f990b5e3f1f6eb3efaf11fce8440f74ea274b68945",
+    "carlsim/kernel/src/snn_manager.cpp": "d8247b2d503abfb92b3c5ca7df779b5ab87a4ee5a8e822f081b1085a8cbdb15c",
+    "carlsim/kernel/src/gpu_module/snn_gpu_module.cu": "22e39c5763676ac52908751fae5df7872e0dfba859f96e983d4135dcae66efb7"
+  },
+  "local_library_sha256": "0a113b96470ce862f32e6494f899b237e45542a7fa5089ad7e3e027fdc404895",
+  "numerics": "Exact exponential receptor decay and TM recovery on a 1ms arrival-event clock; first-response 1/U normalization retained. Eight float32 receptor states per incoming synapse (32 extra bytes/edge).",
+  "build_command": [
+    "make",
+    "-j2",
+    "CXX=g++-12",
+    "NVCC=/usr/bin/nvcc -ccbin g++-12",
+    "CUDA_PATH=",
+    "CA2_GABAA_MAGNITUDE=77.8f"
+  ]
+}

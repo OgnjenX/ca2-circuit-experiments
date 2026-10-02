@@ -1,0 +1,146 @@
+[
+  {
+    "level": 1.44,
+    "frequency_Hz": 2,
+    "mean_ratio": 1.0,
+    "source_mean_ratio": 0.875,
+    "absolute_error": 0.125,
+    "construction": "Calibration single-pulse kernels only; 100ms support, zero thereafter; no train fits"
+  },
+  {
+    "level": 1.44,
+    "frequency_Hz": 5,
+    "mean_ratio": 1.0,
+    "source_mean_ratio": 0.875,
+    "absolute_error": 0.125,
+    "construction": "Calibration single-pulse kernels only; 100ms support, zero thereafter; no train fits"
+  },
+  {
+    "level": 1.44,
+    "frequency_Hz": 10,
+    "mean_ratio": 1.0,
+    "source_mean_ratio": 0.875,
+    "absolute_error": 0.125,
+    "construction": "Calibration single-pulse kernels only; 100ms support, zero thereafter; no train fits"
+  },
+  {
+    "level": 1.44,
+    "frequency_Hz": 20,
+    "mean_ratio": 1.300534112132329,
+    "source_mean_ratio": 1.3125,
+    "absolute_error": 0.011965887867670943,
+    "construction": "Calibration single-pulse kernels only; 100ms support, zero thereafter; no train fits"
+  },
+  {
+    "level": 1.44,
+    "frequency_Hz": 30,
+    "mean_ratio": 1.689044015612767,
+    "source_mean_ratio": 1.84375,
+    "absolute_error": 0.15470598438723293,
+    "construction": "Calibration single-pulse kernels only; 100ms support, zero thereafter; no train fits"
+  },
+  {
+    "level": 1.44,
+    "frequency_Hz": 50,
+    "mean_ratio": 2.5188969439352924,
+    "source_mean_ratio": 2.9375,
+    "absolute_error": 0.4186030560647076,
+    "construction": "Calibration single-pulse kernels only; 100ms support, zero thereafter; no train fits"
+  },
+  {
+    "level": 1.76,
+    "frequency_Hz": 2,
+    "mean_ratio": 1.0,
+    "source_mean_ratio": 0.875,
+    "absolute_error": 0.125,
+    "construction": "Calibration single-pulse kernels only; 100ms support, zero thereafter; no train fits"
+  },
+  {
+    "level": 1.76,
+    "frequency_Hz": 5,
+    "mean_ratio": 1.0,
+    "source_mean_ratio": 0.875,
+    "absolute_error": 0.125,
+    "construction": "Calibration single-pulse kernels only; 100ms support, zero thereafter; no train fits"
+  },
+  {
+    "level": 1.76,
+    "frequency_Hz": 10,
+    "mean_ratio": 1.0,
+    "source_mean_ratio": 0.875,
+    "absolute_error": 0.125,
+    "construction": "Calibration single-pulse kernels only; 100ms support, zero thereafter; no train fits"
+  },
+  {
+    "level": 1.76,
+    "frequency_Hz": 20,
+    "mean_ratio": 1.3106917706161516,
+    "source_mean_ratio": 1.3125,
+    "absolute_error": 0.001808229383848392,
+    "construction": "Calibration single-pulse kernels only; 100ms support, zero thereafter; no train fits"
+  },
+  {
+    "level": 1.76,
+    "frequency_Hz": 30,
+    "mean_ratio": 1.7093564158656709,
+    "source_mean_ratio": 1.84375,
+    "absolute_error": 0.1343935841343291,
+    "construction": "Calibration single-pulse kernels only; 100ms support, zero thereafter; no train fits"
+  },
+  {
+    "level": 1.76,
+    "frequency_Hz": 50,
+    "mean_ratio": 2.5570466450958245,
+    "source_mean_ratio": 2.9375,
+    "absolute_error": 0.38045335490417553,
+    "construction": "Calibration single-pulse kernels only; 100ms support, zero thereafter; no train fits"
+  },
+  {
+    "level": 2.08,
+    "frequency_Hz": 2,
+    "mean_ratio": 1.0,
+    "source_mean_ratio": 0.875,
+    "absolute_error": 0.125,
+    "construction": "Calibration single-pulse kernels only; 100ms support, zero thereafter; no train fits"
+  },
+  {
+    "level": 2.08,
+    "frequency_Hz": 5,
+    "mean_ratio": 1.0,
+    "source_mean_ratio": 0.875,
+    "absolute_error": 0.125,
+    "construction": "Calibration single-pulse kernels only; 100ms support, zero thereafter; no train fits"
+  },
+  {
+    "level": 2.08,
+    "frequency_Hz": 10,
+    "mean_ratio": 1.0,
+    "source_mean_ratio": 0.875,
+    "absolute_error": 0.125,
+    "construction": "Calibration single-pulse kernels only; 100ms support, zero thereafter; no train fits"
+  },
+  {
+    "level": 2.08,
+    "frequency_Hz": 20,
+    "mean_ratio": 1.323286885716354,
+    "source_mean_ratio": 1.3125,
+    "absolute_error": 0.010786885716354,
+    "construction": "Calibration single-pulse kernels only; 100ms support, zero thereafter; no train fits"
+  },
+  {
+    "level": 2.08,
+    "frequency_Hz": 30,
+    "mean_ratio": 1.7341244543085395,
+    "source_mean_ratio": 1.84375,
+    "absolute_error": 0.10962554569146055,
+    "construction": "Calibration single-pulse kernels only; 100ms support, zero thereafter; no train fits"
+  },
+  {
+    "level": 2.08,
+    "frequency_Hz": 50,
+    "mean_ratio": 2.603342162530926,
+    "source_mean_ratio": 2.9375,
+    "absolute_error": 0.3341578374690739,
+    "construction": "Calibration single-pulse kernels only; 100ms support, zero thereafter; no train fits"
+  }
+]

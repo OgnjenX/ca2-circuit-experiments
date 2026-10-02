@@ -1,0 +1,99 @@
+{
+  "spec_sha256": "d5eb798737d5f12f4d641121eb5f5d4fa5e708e15c741054be17f288c1a0ce63",
+  "oracle_sha256": "fff58109e7a9aad654419acfc66a2a42c68f96839dfdd036cf2ab9f1232f809f",
+  "library_sha256": "d804eab07125635d8371d7b9f7850575657fad2f72abd7f547af01bb7c9d0c8f",
+  "historical": true,
+  "results": [
+    {
+      "mode": "cpu",
+      "case": "silent-0",
+      "exit_code": -11,
+      "pass_oracle": false
+    },
+    {
+      "mode": "cpu",
+      "case": "silent-1",
+      "exit_code": -11,
+      "pass_oracle": false
+    },
+    {
+      "mode": "cpu",
+      "case": "silent-31",
+      "exit_code": -11,
+      "pass_oracle": false
+    },
+    {
+      "mode": "cpu",
+      "case": "silent-91",
+      "exit_code": -11,
+      "pass_oracle": false
+    },
+    {
+      "mode": "cpu",
+      "case": "silent-255",
+      "exit_code": -11,
+      "pass_oracle": false
+    },
+    {
+      "mode": "gpu",
+      "case": "silent-0",
+      "exit_code": 0,
+      "max_absolute_error": 0.01,
+      "pass_oracle": false,
+      "observed_first": 0.0,
+      "observed_second": 0.0,
+      "expected_first": 0.01,
+      "expected_second": 0.008115337502562266,
+      "trace_sha256": "9babcd06ff54d27327c4f8a4e0874bcf7d44a9beeeb85c7d926141093f56fc14"
+    },
+    {
+      "mode": "gpu",
+      "case": "silent-1",
+      "exit_code": 0,
+      "max_absolute_error": 0.01,
+      "pass_oracle": false,
+      "observed_first": 0.0,
+      "observed_second": 0.0,
+      "expected_first": 0.01,
+      "expected_second": 0.008115337502562266,
+      "trace_sha256": "e579d5c15ef3b4a89870daf535e6a42cbe02058bdc791771d26551286493e36c"
+    },
+    {
+      "mode": "gpu",
+      "case": "silent-31",
+      "exit_code": 0,
+      "max_absolute_error": 0.01,
+      "pass_oracle": false,
+      "observed_first": 0.0,
+      "observed_second": 0.0,
+      "expected_first": 0.01,
+      "expected_second": 0.008115337502562266,
+      "trace_sha256": "e579d5c15ef3b4a89870daf535e6a42cbe02058bdc791771d26551286493e36c"
+    },
+    {
+      "mode": "gpu",
+      "case": "silent-91",
+      "exit_code": 0,
+      "max_absolute_error": 0.01,
+      "pass_oracle": false,
+      "observed_first": 0.0,
+      "observed_second": 0.0,
+      "expected_first": 0.01,
+      "expected_second": 0.008115337502562266,
+      "trace_sha256": "e579d5c15ef3b4a89870daf535e6a42cbe02058bdc791771d26551286493e36c"
+    },
+    {
+      "mode": "gpu",
+      "case": "silent-255",
+      "exit_code": 0,
+      "max_absolute_error": 0.01,
+      "pass_oracle": false,
+      "observed_first": 0.0,
+      "observed_second": 0.0,
+      "expected_first": 0.01,
+      "expected_second": 0.008115337502562266,
+      "trace_sha256": "e579d5c15ef3b4a89870daf535e6a42cbe02058bdc791771d26551286493e36c"
+    }
+  ],
+  "passed": false
+}

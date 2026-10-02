@@ -1,0 +1,16 @@
+{
+  "post_outcome_diagnostics_only": true,
+  "frozen_scores_changed": false,
+  "main_raw_archive_unchanged": true,
+  "asset": {
+    "filename": "experiment_003_diagnostics.tar.gz",
+    "bytes": 1056446,
+    "sha256": "e8362a9aa0d11b1c18f525254fcb3a45b9cdb306a30f5a1035f99b97a49dd9c0",
+    "url": "https://github.com/OgnjenX/ca2-circuit-experiments/releases/download/experiment-003-v1/experiment_003_diagnostics.tar.gz"
+  },
+  "contains": [
+    "Numerical-pair raw-waveform classification",
+    "Independent float64 current-step oracle and CPU/GPU raw monitors",
+    "Checksum-matched archived-original binary impulse probes"
+  ]
+}

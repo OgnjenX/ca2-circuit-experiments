@@ -1,0 +1,71 @@
+{
+  "checked_date": "2026-10-02",
+  "manual_fit_independence": true,
+  "full_database_ancestry_certified": false,
+  "correction_to_prior_audit": "Current official exporter code sets connection-row CARLsim_default from whether pair-specific connection probability exists. Y invokes an excitatory/inhibitory class aggregate; it does not label g, tau_d, tau_r, tau_f or u as CARLsim defaults. Those fields are queried from tm_cond16 means. The earlier row-level warning does not establish physiological STP provenance.",
+  "official_code": [
+    {
+      "url": "https://github.com/Hippocampome-Org/php_v2/blob/master/simulation_params/get_connection_parameters.php",
+      "git_blob_sha": "89b805c931ca6af33d9aa6ff2c9dcd28c75c6149"
+    },
+    {
+      "url": "https://github.com/Hippocampome-Org/php_v2/blob/master/simulation_params/functions/default_data_type_synap.php",
+      "git_blob_sha": "d02e24189f57775f8fe887e681bfaf0ccc24cbbc"
+    },
+    {
+      "url": "https://github.com/Hippocampome-Org/php_v2/blob/master/simulation_params/get_neuron_parameters.php",
+      "git_blob_sha": "098822023ede5d6083eb03e0b43709dd712a4376"
+    }
+  ],
+  "connection_probability_code": "function get_connection_probability($row, $synprocptotal_data, $type_details, $synaptic)\n{\n    $connection_probability = 1;\n    $carlsim_default = 'Y';\n    $source_id = $row[2];\n    $target_id = $row[5];\n    $source_id_type = $type_details[$source_id]['excit_inhib'];\n    $target_id_type = $type_details[$target_id]['excit_inhib'];\n    $source_ei_vals = $target_ei_vals =array();\n\n    $key = $source_id.\",\".$target_id;\n    //if(isset($synprocptotal_data[$key]) && $synaptic == 'mean'){\n    if(isset($synprocptotal_data[$key])){\n        $connection_probability = $synprocptotal_data[$key]['cp_mean_total'];\n        $carlsim_default = 'N';\n    }\n    else{\n        //If mean, median and other option is selected\n        $source_ei_vals = get_ei_vals($type_details, $source_id_type);\n        $target_ei_vals = get_ei_vals($type_details, $target_id_type);\n\n        $connection_probability = calculate_cptotals($synprocptotal_data, $source_id_type, $source_ei_vals, $target_id_type, $target_ei_vals, $synaptic);\n    }\n    return array($connection_probability, $carlsim_default);\n}",
+  "parameter_query_code": "    if($table_name == NULL){$table_name ='tm_cond16';}\n    $select_default_synaptome_query = \"SELECT \n    left(pre,LOCATE(' ',pre) - 1) as source_subregion, \n    left(pre,LOCATE(' (',pre) - 1) as pre,  \n    (select sr.type_id from synprotypetyperel sr where \n    sr.type_name = pre\n    or sr.type_nickname = SUBSTRING_INDEX(SUBSTRING_INDEX(pre ,' (',1),' ',-2) \n    OR \n    sr.type_nickname = SUBSTRING_INDEX(SUBSTRING_INDEX(pre,' (',1),' ',-3) \n    ) as pre_type_id, \n    left(post,LOCATE(' ',post) - 1) as target_subregion,  \n    left(post,LOCATE(' (',post) - 1) as post, \n    (select sr.type_id from synprotypetyperel sr where \n    sr.type_name = post\n    or sr.type_nickname = SUBSTRING_INDEX(SUBSTRING_INDEX(post,' (',1),' ',-2) \n    OR \n    sr.type_nickname = SUBSTRING_INDEX(SUBSTRING_INDEX(post,' (',1),' ',-3) \n    ) as post_type_id, \";\n\n    $column = \"Source Subregion, Presynaptic Neuron Type, Target Subregion, Postsynaptic Neuron Type, g, tau_d, tau_r, tau_f, u, Connection Probability, Synaptic Delay, CARLsim_default, \";\n    $column1 = \"Source Subregion, Presynaptic Neuron Type, Pre Type Id, Target Subregion, Postsynaptic Neuron Type, Post Type Id, g, tau_d, tau_r, tau_f, u, Connection Probability, Synaptic Delay, CARLsim_default, \";\n\n    $select_default_synaptome_query .= \" means_g, means_tau_d, means_tau_r, means_tau_f, means_u, \";\n",
+  "deployment_limit": "Official public source is consistent with exported Y rows; deployed website revision was not obtained. Physiological source ancestry of this row remains unresolved.",
+  "source_data_limits": "Public PMC text provides methods and summary data; no raw-recording or exact naturalistic sequence link found. Publisher fetch returned403. No author message sent.",
+  "first_amplitude_gap": "Figure 5 says first EPSPs were matched between control and APV without an explicit absolute CA2 value. Figure 4 weak amplitude is used as a transparent conditional assumption, with its +/- SEM setup sensitivity.",
+  "archived_selected_row": {
+    "Source Subregion": "MEC",
+    "Presynaptic Neuron Type": "MEC LII Stellate",
+    "Target Subregion": "CA2",
+    "Postsynaptic Neuron Type": "CA2 Pyramidal",
+    "g": "2.1476304960784307",
+    "tau_d": "4.788581445098041",
+    "tau_r": "328.3802538235294",
+    "tau_f": "45.805902774509796",
+    "u": "0.25328488754901973",
+    "Connection Probability": "0.0084661227921748",
+    "Synaptic Delay": "1",
+    "CARLsim_default": "Y"
+  },
+  "public_means_cond16_row": {
+    "": "1033",
+    "Presynaptic Neuron": "MEC LII Stellate (+)331111p",
+    "Postsynaptic Neuron": "CA2 Pyramidal (+)2333p",
+    "g": "2.66622965",
+    "tau_d": "8.033108954000001",
+    "tau_r": "312.84612710000005",
+    "tau_f": "53.54953866999999",
+    "U": "0.16225358020000002"
+  },
+  "public_conditions_16": {
+    "species": "Rat",
+    "sex": "Male",
+    "age": "P56",
+    "temp": "T32",
+    "rec_mode": "Vh=-60"
+  },
+  "public_primary_sources": [
+    {
+      "url": "https://github.com/Hippocampome-Org/synaptome_db/blob/master/data/renamed/means_cond16.csv",
+      "sha256": "31ccc8a8870c4f463b57a5918e2ad3dcde0ef7bc467322f4f4c5dc7db9b241ec"
+    },
+    {
+      "url": "https://github.com/Hippocampome-Org/synaptome_db/blob/master/data/conditions.csv",
+      "sha256": "cca20d5bb21b4a7fb4ca006cef71b996d8160c0db0746f74b05f6e093370776f"
+    },
+    {
+      "url": "https://github.com/k1moradi/SynapseModelingUtility#note",
+      "finding": "Biological g = fitted g_syn times U; preserve first-response 1/U release normalization."
+    }
+  ],
+  "ancestry_result": "Selected archived row differs from public means_cond16. The public condition labels cannot be assigned to the archived export without its deployed revision and transformation provenance. No author contact."
+}
