@@ -10,9 +10,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Verify frozen source and blocked pre-run record
+      - name: Verify preserved revision 1 blocked snapshot
         run: python experiments/003_whitebirch_intrinsic/verify_readiness.py
-      - name: Confirm production remains gated
+      - name: Confirm revision 1 remains blocked
         shell: bash
         run: |
           set +e
