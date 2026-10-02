@@ -19,7 +19,7 @@ callback skipped a pulse at t=0; its scheduling state was repaired. These
 validation-only revisions were committed with the final implementation before
 calibration and the exact biological freeze. No biological train was used to
 set these methods or tolerances. The tolerated error is 2e−5 absolute plus
-1e−4 relative. All final errors are far smaller (maximum about 1.4e−8).
+1e−4 relative. All final errors are far smaller (maximum 1.8416423937933635e−8).
 
 `evidence/corrected.json` records the final independently passing suite and
 library hash. Development failures are preserved separately; earlier incomplete
@@ -48,3 +48,10 @@ biological g convention supports retaining the 1/U first-response normalization.
 CPU/GPU agreement is secondary to the independent expectation. Passing these
 finite cases establishes tested numerical behavior, not all backend features
 or biological validity.
+
+A separately labeled post-outcome archived-binary diagnostic directly links the
+original nominal library with recorded SHA aeb6838ecde6859f50ddcce09975c85f2d9f72bfd0680ccc2a2741df3ef9345d.
+It reproduces the same silent-afferent GPU decay and CPU crash; raw GPU trace
+hashes match the earlier verified-source rebuild. See
+`evidence/archived_binary_diagnostic.json`. This confirms original binary
+behavior while preserving the different identity of the reconstructed build.

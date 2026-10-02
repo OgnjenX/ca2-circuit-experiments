@@ -13,9 +13,29 @@
       "bytes": 2498,
       "sha256": "82d1847b9a87cc423b86e8a9f0ae6e81c6063ff64855612657b5e449c0c871fd"
     },
+    "diagnostics/current_step.cpp": {
+      "bytes": 1290,
+      "sha256": "f1aefaa6b555a038557caf42fc6e6e7b2ce7e12df43b54f709ae90c03b756bb8"
+    },
+    "diagnostics/current_step.py": {
+      "bytes": 4074,
+      "sha256": "010edf585397598b70d9c33d44846da5b824c7408783367ec5b585fa96c24789"
+    },
+    "diagnostics/pair_diagnosis.py": {
+      "bytes": 2933,
+      "sha256": "c7a9463b5a017ea03a2de9784488e0c2980cc2a9d1b801de840958eece5ffe72"
+    },
     "evidence/archive.json": {
       "bytes": 857,
       "sha256": "6bc255c9b981e6a2e4294c443a8a9ba77c5d6eb44ae6132a990b291db4265755"
+    },
+    "evidence/current_step_diagnostic.json": {
+      "bytes": 1886,
+      "sha256": "4cd47bfcf7b51e0f4d98edef1c27820c1cdfc30b87dcf502a87449394f4f118b"
+    },
+    "evidence/diagnostics_archive.json": {
+      "bytes": 631,
+      "sha256": "70f10d2713fd228f5ff1a87fac49554216cedcc539ebd262df30cd8390fd0be1"
     },
     "evidence/environment.json": {
       "bytes": 762,
@@ -40,6 +60,10 @@
     "evidence/numerical_checks.json": {
       "bytes": 16071,
       "sha256": "df93db479854fb8887e50d099e485a4479c88c95d1f6a3a94ef1566e8d89874b"
+    },
+    "evidence/numerical_failure_diagnostics.json": {
+      "bytes": 57900,
+      "sha256": "a368f886a8658fc3fc832f306c7e841c1e6410252a2bd3c50fc413630151a036"
     },
     "evidence/results.json": {
       "bytes": 38589,
@@ -86,12 +110,12 @@
       "sha256": "a296aa017e1c8498ed97803665cbf6314046a24c00cb68b3036568f7a38bd62e"
     },
     "report.md": {
-      "bytes": 9726,
-      "sha256": "549e9b16ebdc2df0fdc823d6d5c3ac4bb9a248d2e7044f963118881492d64a9d"
+      "bytes": 12130,
+      "sha256": "9f325d20f9187377f65a5476cca2b1587cbfade0dc8bdcfa96eb30fc30ba1185"
     },
     "reproduce.md": {
-      "bytes": 2920,
-      "sha256": "1e5680bd33197162b6bf8c720248407fdee3ebbbd0da7a078ff5d0ad5e6d7ec3"
+      "bytes": 3702,
+      "sha256": "fba98a0726cdb6c71dba693fdcb1d36d5da3c21bc8f1a8926aaa31912abc422c"
     },
     "review_diagnostics.py": {
       "bytes": 2432,

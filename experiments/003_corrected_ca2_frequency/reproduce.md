@@ -52,3 +52,20 @@ incomplete earlier runs, or overwritten calibration. Recorded failures from
 backend development are retained in the validation archive; they are not
 biological calibration exclusions. Failed calibration candidates and all
 ineligible train runs remain in this experiment's raw archive.
+
+## Separately labeled post-outcome diagnostics
+
+The original main raw archive is unchanged. `evidence/diagnostics_archive.json`
+links a supplemental archive containing the archived-binary probe and isolated
+current-step raw traces/float64 oracle. These diagnostics do not change frozen
+scores or expand backend validation claims. Reproduce with:
+
+```sh
+python experiments/003_corrected_ca2_frequency/diagnostics/pair_diagnosis.py \
+  --workspace /path/to/extracted/experiment_003
+python experiments/003_corrected_ca2_frequency/diagnostics/current_step.py \
+  --backend /path/to/corrected/backend --output /new/path/current-step
+```
+
+The current-step diagnostic records no spikes or resets and does not test
+voltage-dependent conductance coupling. Its threshold is diagnostic only.

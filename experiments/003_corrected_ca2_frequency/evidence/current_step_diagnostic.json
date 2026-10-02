@@ -1,0 +1,60 @@
+{
+  "post_outcome_diagnostic_only": true,
+  "scientific_scores_unchanged": true,
+  "scope": "Unchanged exported CA2 intrinsic ODE, no synaptic input, +100pA current for 100ms after 5000ms holding; no resets triggered. Does not validate spike resets or voltage-dependent synaptic coupling.",
+  "equations": "C dv/dt=k(v-vr)(v-vt)-u+I; du/dt=a(b(v-vr)-u)",
+  "oracle_float64_substeps": [
+    80,
+    160
+  ],
+  "oracle_refinement_max_error": 3.062439191126032e-12,
+  "diagnostic_tolerance_mV": 0.05,
+  "library_sha256": "0a113b96470ce862f32e6494f899b237e45542a7fa5089ad7e3e027fdc404895",
+  "results": [
+    {
+      "mode": "cpu",
+      "substeps": 20,
+      "spikes": 0,
+      "max_voltage_error_mV": 0.002592519361343193,
+      "post_warmup_max_error_mV": 0.002592519361343193,
+      "baseline_mV": -70.0193099975586,
+      "peak_mV": -67.67857360839844,
+      "pass_diagnostic": true
+    },
+    {
+      "mode": "cpu",
+      "substeps": 40,
+      "spikes": 0,
+      "max_voltage_error_mV": 0.006010488111343193,
+      "post_warmup_max_error_mV": 0.006010488111343193,
+      "baseline_mV": -70.0227279663086,
+      "peak_mV": -67.68057250976562,
+      "pass_diagnostic": true
+    },
+    {
+      "mode": "gpu",
+      "substeps": 20,
+      "spikes": 0,
+      "max_voltage_error_mV": 0.002592519361343193,
+      "post_warmup_max_error_mV": 0.002592519361343193,
+      "baseline_mV": -70.0193099975586,
+      "peak_mV": -67.67857360839844,
+      "pass_diagnostic": true
+    },
+    {
+      "mode": "gpu",
+      "substeps": 40,
+      "spikes": 0,
+      "max_voltage_error_mV": 0.0060074985005087456,
+      "post_warmup_max_error_mV": 0.0060074985005087456,
+      "baseline_mV": -70.0227279663086,
+      "peak_mV": -67.68057250976562,
+      "pass_diagnostic": true
+    }
+  ],
+  "rk20_40_waveform_difference_mV": {
+    "cpu": 0.00342559814453125,
+    "gpu": 0.00341796875
+  },
+  "passed": true
+}

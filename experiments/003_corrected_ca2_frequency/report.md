@@ -12,7 +12,11 @@ cases, not a biological validation or a fully converged neuronal benchmark.
 The recorded backend decayed one cell-wide conductance once per incoming
 synapse. Independent historical GPU impulse readbacks give one-tick retention
 of about 0.791 for one edge and 4.37e−10 for 92 edges with only one active
-input. The static GPU event path was absent, mixed configuration calls could
+input. An additional diagnostic directly links the checksum-matched archived original
+library (`aeb6838…`) and reproduces the same GPU decay and CPU crash. Earlier
+probes used a source-hash-verified rebuild with its separately recorded binary
+hash; they are not silently relabeled as archived-binary runs. The static GPU
+event path was absent, mixed configuration calls could
 suppress STP, and optimized CPU workers crashed from undefined return values.
 The historical experiment 002 interpretation is invalid; experiment 001 shares
 the backend and needs revalidation. Their original scientific files, hashes,
@@ -27,7 +31,7 @@ neuron integration only. For tau=4.7886 ms the corrected exponential retention
 is about 0.8115; it is not silently equated with the historical Euler 0.7912.
 
 All 38 actual CPU/GPU conductance cases pass an independent float64 analytical
-oracle, with maximum absolute error about 1.4e−8 versus a predeclared tolerance
+oracle, with maximum absolute error 1.8416423937933635e−8 versus a predeclared tolerance
 of 2e−5 + 1e−4 relative. Tests include silent afferents, heterogeneous and summed
 inputs, E/I and all receptors, static/STP/mixed release, rise modes, paired pulses,
 recovery, delays, boundary events, new-network reset and configuration order.
@@ -58,7 +62,12 @@ All 240 trains were run sequentially on the 4 GB RTX 3050 Ti. Native train wall 
 
 The 102 eligible runs are mostly at lower frequencies. Every primary setup
 contains excluded runs; all nominal 50 Hz runs spike in both models. Eligibility,
-complete coverage and numerical pass are all required for setup success.
+complete coverage and numerical pass are all required for setup success. The
+frozen analyzer applies the release-wide numerical gate (all 30 pairs for a
+release condition) to every amplitude level, rather than a level-specific
+subset. This conservative scope could veto an otherwise passing level in other
+data. Here each level independently fails, so the scope changes no conclusion;
+the frozen scoring is preserved.
 The categorical release label omitted by the frozen controller's measurement
 rows was recovered one-to-one from verified run configurations and executable
 hashes. The original batch is retained, and numerical fields are unchanged;
@@ -86,7 +95,34 @@ The linear null spans 1.689–1.734 at 30 Hz (absolute errors 0.110–0.155); 2.
 
 ## Numerical and measurement sensitivity
 
-For stp, the largest 20/40 RK change is 0.290 in the mean ratio and 0.795 mV in mean peaks, exceeding the fixed 0.05/0.1 mV gates. For static, the largest 20/40 RK change is 0.890 in the mean ratio and 2.002 mV in mean peaks, exceeding the fixed 0.05/0.1 mV gates. Spike-count or eligibility differences also fail the gate. Larger ratios in spiking traces are not interpretable as facilitated EPSPs. The suite establishes corrected conductance behavior; the neuronal assay remains sensitive around spike threshold.
+For stp, the largest 20/40 RK change is 0.290 in the mean ratio and 0.795 mV in mean peaks, exceeding the fixed 0.05/0.1 mV gates. For static, the largest 20/40 RK change is 0.890 in the mean ratio and 2.002 mV in mean peaks, exceeding the fixed 0.05/0.1 mV gates. All 55 failed pairs include spiking, and all fail the mean-peak gate (27 STP,
+28 static). None fail only because of the ratio's tiny denominator. Paired
+eligibility and spike counts are identical: their metrics change within spiking
+trajectories with the same counts. Only two pairs are eligible/nonspiking, both
+STP at 30 Hz in the weakest setup; both pass. Their maximum per-cell waveform
+difference is 0.01613 mV and maximum population peak difference is 0.001282 mV.
+There are no failed eligible/nonspiking pairs. This classification is descriptive;
+it changes neither numerical gates nor exclusions.
+
+A separately labeled post-outcome diagnostic tests the unchanged CA2 intrinsic
+ODE with a +100 pA, 100 ms current step after 5000 ms holding, no synaptic input
+and no spikes/resets. Independently authored float64 RK4 at 80/160 substeps
+provides the reference. Actual CPU/GPU RK20/RK40 traces differ from that reference
+by at most 0.006011 mV and meet a diagnostic-only 0.05 mV tolerance. The float64
+refinement discrepancy is recorded in `evidence/current_step_diagnostic.json`.
+RK40 has slightly larger float32 equilibrium error than RK20, consistent with
+rounding at small per-step increments; increasing substeps is not automatically
+monotonic convergence at this precision. The diagnostic reveals no additional
+fault in smooth intrinsic current-step integration. It supports sensitivity of
+spiking waveforms/peak timing as an explanation for the assay's failed metrics,
+but does **not** validate spike-reset branches, voltage-dependent conductance
+coupling, or prove that no other implementation fault exists. In the current
+implementation synaptic current is evaluated at the beginning of each RK
+substep and held across its RK stages; this limits claims about the formal RK4
+order of the conductance-coupled dynamics and needs a future dedicated test.
+The synaptic regressions and this bounded ODE diagnostic do not rescue failed
+neuronal gates or establish general backend validation.
+
 
 A descriptive post-outcome audit finds 0–5 of 128 cells per run with first peaks below 0.05 mV. This diagnostic threshold changes no score or exclusion. Sparse recruitment leaves some near-zero responses, making individual normalized ratios sensitive to small baseline or integration differences. The frozen all-cell mean convention is preserved for comparability, rather than filtering cells after observing outcomes. The incremental pre-pulse convention is reported separately. All 240 raw neuron and spike monitors were reread; no failures or ineligible runs were removed.
 
