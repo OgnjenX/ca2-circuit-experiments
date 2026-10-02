@@ -13,6 +13,7 @@ a function of CA2 in animals.
 - [Experiment 001](experiments/001_input_patterns/readme.md): question, controls and findings.
 - [Reproduction](docs/reproduction.md): inspect the results, recover the recorded run, or run a fresh experiment.
 - [Model provenance](docs/model_provenance.md): measured ingredients, defaults, fits and validation limits.
+- [Development](docs/development.md): CLion, Python environment, formatting and CMake targets.
 - [Repository layout](docs/repository_layout.md): where code, plans and data belong.
 - [Migration checks](docs/migration_checks.md): what was tested while packaging this repository.
 - [New experiments](docs/experiment_workflow.md): how to add a study without changing an existing record.

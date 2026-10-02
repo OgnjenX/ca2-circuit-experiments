@@ -3,7 +3,7 @@
 | Path | Contents |
 | --- | --- |
 | `src/ca2lab/` | Shared monitor readers, event checks, decoding and checksum utilities. |
-| `models/ca2_carlsim/` | Native circuit code and configurations used in experiment 001. |
+| `models/ca2_carlsim/` | Readable working circuit code and configurations. |
 | `simulators/carlsim4/` | Upstream source identity, local patch and build instructions. |
 | `data/hippocampome/2026-10-01/` | Exact exported parameter tables. |
 | `experiments/001_input_patterns/` | The existing study: protocol, unchanged implementation, reference results and plots. |
@@ -19,4 +19,5 @@ Generated outputs belong in a workspace, not beside shared code.
 The experiment implementation is a historical snapshot. Its scripts expect a
 flat working directory, so the runtime bundle restores that layout in a new
 workspace. Source paths are mapped in `experiments/001_input_patterns/provenance/source_map.json`.
+Exact pre-format model sources live in `experiments/001_input_patterns/frozen_model/`.
 New experiments can use `ca2lab` directly and keep their own plans and outputs.

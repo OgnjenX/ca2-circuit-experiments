@@ -1,0 +1,114 @@
+{
+  "date": "2026-10-02",
+  "change": "Formatting only; original sources archived without changing their content hashes",
+  "formatter_version": "clang-format version 22.0.0git (ssh://git@git.jetbrains.team/llvm/llvm-project.git d4118a914908811fd6b90c13f4322d12b8294adb based on LLVM 825c956c64eb703a1874116df5bf894159f51aae revision)",
+  "format_configuration_sha256": "2ee3c675a673e223bc94571516550e487c6379fb083064749193ecda1c648665",
+  "files": {
+    "models/ca2_carlsim/sensitivity/core_config.h": {
+      "working_sha256": "048ee03201bfcd638bac7f7fcb386dd389b33ad91395f1bf722ddefcce3807b0",
+      "frozen_sha256": "42b3eed12457f55bf5c4ac14417ec5790b60441f1de2bd1286e965e68e7a689c",
+      "tokens_identical": true
+    },
+    "models/ca2_carlsim/sensitivity/readout_config.h": {
+      "working_sha256": "3ee88f21a46228cae6512416cb7a5ced1bb411c276952648cb669c36c954f4af",
+      "frozen_sha256": "628d508b6205ae286267bf3c48c7c783e34386d7c94df459fcb5afff135c967d",
+      "tokens_identical": true
+    },
+    "models/ca2_carlsim/sensitivity/setup.h": {
+      "working_sha256": "e346c451ebe9d05df5f9aadea2a1d7220fb0cb13cecbdcaa74a21a1e90b1e4ba",
+      "frozen_sha256": "da861450062757173d36a284d145413c8ef7b4351f1823afaeead8ae1ad27ed7",
+      "tokens_identical": true
+    },
+    "models/ca2_carlsim/sensitivity/calibration_config.h": {
+      "working_sha256": "dfbb5441cfe7e91f761a9d77793225387486aa0d9ee228af7e03930cc1ad6203",
+      "frozen_sha256": "e40c4562256a19f3fcfbab4d587db537b4932f5a39f0919a07d92675235f7f2d",
+      "tokens_identical": true
+    },
+    "models/ca2_carlsim/ca1_adequacy/core_config.h": {
+      "working_sha256": "048ee03201bfcd638bac7f7fcb386dd389b33ad91395f1bf722ddefcce3807b0",
+      "frozen_sha256": "42b3eed12457f55bf5c4ac14417ec5790b60441f1de2bd1286e965e68e7a689c",
+      "tokens_identical": true
+    },
+    "models/ca2_carlsim/ca1_adequacy/readout_config.h": {
+      "working_sha256": "3dfb482432e4c5d25e2c5f0f99ecb1700572e40297647c7644966f3408775f3f",
+      "frozen_sha256": "e8be2835251b1607b87558a5a5afc2994df8f0c2ab0257844292c47d3e502029",
+      "tokens_identical": true
+    },
+    "models/ca2_carlsim/ca1_adequacy/setup.h": {
+      "working_sha256": "e346c451ebe9d05df5f9aadea2a1d7220fb0cb13cecbdcaa74a21a1e90b1e4ba",
+      "frozen_sha256": "da861450062757173d36a284d145413c8ef7b4351f1823afaeead8ae1ad27ed7",
+      "tokens_identical": true
+    },
+    "models/ca2_carlsim/ca1_adequacy/calibration_config.h": {
+      "working_sha256": "dfbb5441cfe7e91f761a9d77793225387486aa0d9ee228af7e03930cc1ad6203",
+      "frozen_sha256": "e40c4562256a19f3fcfbab4d587db537b4932f5a39f0919a07d92675235f7f2d",
+      "tokens_identical": true
+    },
+    "models/ca2_carlsim/nominal/core_config.h": {
+      "working_sha256": "048ee03201bfcd638bac7f7fcb386dd389b33ad91395f1bf722ddefcce3807b0",
+      "frozen_sha256": "42b3eed12457f55bf5c4ac14417ec5790b60441f1de2bd1286e965e68e7a689c",
+      "tokens_identical": true
+    },
+    "models/ca2_carlsim/nominal/old_config.h": {
+      "working_sha256": "6d9555337a90e6ed99ec152ee25e776a73f795556dbb03eb45f0cc6e3d2ecb69",
+      "frozen_sha256": "57c025707fdfbbd266bd66b00e5797a0cf53349f1e907523d438fd86632b3e32",
+      "tokens_identical": true
+    },
+    "models/ca2_carlsim/nominal/readout_config.h": {
+      "working_sha256": "76d6960a1433a33562db64c91d1ce32d9dc24aea52ede78fb08364bcfee3e820",
+      "frozen_sha256": "923df83a6b55f80b6c8793907b8ddd6de86cb9c20005d9402bd169f666ec50dc",
+      "tokens_identical": true
+    },
+    "models/ca2_carlsim/nominal/setup.h": {
+      "working_sha256": "e346c451ebe9d05df5f9aadea2a1d7220fb0cb13cecbdcaa74a21a1e90b1e4ba",
+      "frozen_sha256": "da861450062757173d36a284d145413c8ef7b4351f1823afaeead8ae1ad27ed7",
+      "tokens_identical": true
+    },
+    "models/ca2_carlsim/nominal/calibration_config.h": {
+      "working_sha256": "dfbb5441cfe7e91f761a9d77793225387486aa0d9ee228af7e03930cc1ad6203",
+      "frozen_sha256": "e40c4562256a19f3fcfbab4d587db537b4932f5a39f0919a07d92675235f7f2d",
+      "tokens_identical": true
+    },
+    "models/ca2_carlsim/nominal/fresh_config.h": {
+      "working_sha256": "c5ca940973bcf4e76061550c0484d2c7e987fee199e608695711c9a90d98f429",
+      "frozen_sha256": "edcf0ff0198083a045f2cc24f22bd7496046ad738dec97838841e3a7912292d0",
+      "tokens_identical": true
+    },
+    "models/ca2_carlsim/nominal/src/circuit.cpp": {
+      "working_sha256": "40fa66e279d1edc8830af13b9310d89595739502424834c86f0e5c30c573ebf4",
+      "frozen_sha256": "c3951c60b616eff994ac6f2f7361cd0f342da2b62c2ccdacc0608cca6a7afad9",
+      "tokens_identical": true
+    },
+    "models/ca2_carlsim/nominal/src/baseline.cpp": {
+      "working_sha256": "87e0a5ac44df384942990f08d7a9dd32f8c0171a50a237514823721ac0098e70",
+      "frozen_sha256": "54d7f96da8cdb7ac619ee15304cbd3545792128f895cdd7e5270ee09dd31c29a",
+      "tokens_identical": true
+    },
+    "models/ca2_carlsim/ca1_adequacy/src/circuit.cpp": {
+      "working_sha256": "e1ddb61494ce7e27a4e5222a33e95f504193189a0f647e2beb934ad7185ad321",
+      "frozen_sha256": "e92a31dfb98e05b00a83d33963c92ef1e88d9ffe7aa25386cfecd45f95694d11",
+      "tokens_identical": true
+    },
+    "models/ca2_carlsim/sensitivity/src/circuit.cpp": {
+      "working_sha256": "ee9043f4b7110157b9f9cd764dc200f0c6828bf1a436ebe182b89e4160a82d4e",
+      "frozen_sha256": "4fc1829c0a176ae3c83616f2d8d7751f8e0b2e191944b5c31f7bb9a6b6938f92",
+      "tokens_identical": true
+    }
+  },
+  "gcc_preprocessing": {
+    "models/ca2_carlsim/nominal/src/circuit.cpp": {
+      "preprocessed_tokens_identical": true
+    },
+    "models/ca2_carlsim/nominal/src/baseline.cpp": {
+      "preprocessed_tokens_identical": true
+    },
+    "models/ca2_carlsim/ca1_adequacy/src/circuit.cpp": {
+      "preprocessed_tokens_identical": true
+    },
+    "models/ca2_carlsim/sensitivity/src/circuit.cpp": {
+      "preprocessed_tokens_identical": true
+    }
+  },
+  "working_sources_have_identical_tokens": true,
+  "all_four_translation_units_preprocess_identically": true
+}

@@ -236,75 +236,75 @@
     "sha256": "26ad136070c82a96d4f56cb7bae6c93f2d6223d20143bbd6aa13e0b51820e96a"
   },
   "model/calibration_config.h": {
-    "repository_path": "models/ca2_carlsim/nominal/calibration_config.h",
+    "repository_path": "experiments/001_input_patterns/frozen_model/nominal/calibration_config.h",
     "sha256": "e40c4562256a19f3fcfbab4d587db537b4932f5a39f0919a07d92675235f7f2d"
   },
   "model/core_config.h": {
-    "repository_path": "models/ca2_carlsim/nominal/core_config.h",
+    "repository_path": "experiments/001_input_patterns/frozen_model/nominal/core_config.h",
     "sha256": "42b3eed12457f55bf5c4ac14417ec5790b60441f1de2bd1286e965e68e7a689c"
   },
   "model/fresh_config.h": {
-    "repository_path": "models/ca2_carlsim/nominal/fresh_config.h",
+    "repository_path": "experiments/001_input_patterns/frozen_model/nominal/fresh_config.h",
     "sha256": "edcf0ff0198083a045f2cc24f22bd7496046ad738dec97838841e3a7912292d0"
   },
   "model/old_config.h": {
-    "repository_path": "models/ca2_carlsim/nominal/old_config.h",
+    "repository_path": "experiments/001_input_patterns/frozen_model/nominal/old_config.h",
     "sha256": "57c025707fdfbbd266bd66b00e5797a0cf53349f1e907523d438fd86632b3e32"
   },
   "model/readout_config.h": {
-    "repository_path": "models/ca2_carlsim/nominal/readout_config.h",
+    "repository_path": "experiments/001_input_patterns/frozen_model/nominal/readout_config.h",
     "sha256": "923df83a6b55f80b6c8793907b8ddd6de86cb9c20005d9402bd169f666ec50dc"
   },
   "model/setup.h": {
-    "repository_path": "models/ca2_carlsim/nominal/setup.h",
+    "repository_path": "experiments/001_input_patterns/frozen_model/nominal/setup.h",
     "sha256": "da861450062757173d36a284d145413c8ef7b4351f1823afaeead8ae1ad27ed7"
   },
   "model/src/baseline.cpp": {
-    "repository_path": "models/ca2_carlsim/nominal/src/baseline.cpp",
+    "repository_path": "experiments/001_input_patterns/frozen_model/nominal/src/baseline.cpp",
     "sha256": "54d7f96da8cdb7ac619ee15304cbd3545792128f895cdd7e5270ee09dd31c29a"
   },
   "model/src/circuit.cpp": {
-    "repository_path": "models/ca2_carlsim/nominal/src/circuit.cpp",
+    "repository_path": "experiments/001_input_patterns/frozen_model/nominal/src/circuit.cpp",
     "sha256": "c3951c60b616eff994ac6f2f7361cd0f342da2b62c2ccdacc0608cca6a7afad9"
   },
   "model/sensitivity/calibration_config.h": {
-    "repository_path": "models/ca2_carlsim/sensitivity/calibration_config.h",
+    "repository_path": "experiments/001_input_patterns/frozen_model/sensitivity/calibration_config.h",
     "sha256": "e40c4562256a19f3fcfbab4d587db537b4932f5a39f0919a07d92675235f7f2d"
   },
   "model/sensitivity/core_config.h": {
-    "repository_path": "models/ca2_carlsim/sensitivity/core_config.h",
+    "repository_path": "experiments/001_input_patterns/frozen_model/sensitivity/core_config.h",
     "sha256": "42b3eed12457f55bf5c4ac14417ec5790b60441f1de2bd1286e965e68e7a689c"
   },
   "model/sensitivity/readout_config.h": {
-    "repository_path": "models/ca2_carlsim/sensitivity/readout_config.h",
+    "repository_path": "experiments/001_input_patterns/frozen_model/sensitivity/readout_config.h",
     "sha256": "628d508b6205ae286267bf3c48c7c783e34386d7c94df459fcb5afff135c967d"
   },
   "model/sensitivity/setup.h": {
-    "repository_path": "models/ca2_carlsim/sensitivity/setup.h",
+    "repository_path": "experiments/001_input_patterns/frozen_model/sensitivity/setup.h",
     "sha256": "da861450062757173d36a284d145413c8ef7b4351f1823afaeead8ae1ad27ed7"
   },
   "model/sensitivity/src/circuit.cpp": {
-    "repository_path": "models/ca2_carlsim/sensitivity/src/circuit.cpp",
+    "repository_path": "experiments/001_input_patterns/frozen_model/sensitivity/src/circuit.cpp",
     "sha256": "4fc1829c0a176ae3c83616f2d8d7751f8e0b2e191944b5c31f7bb9a6b6938f92"
   },
   "model/ca1-adequacy/calibration_config.h": {
-    "repository_path": "models/ca2_carlsim/ca1_adequacy/calibration_config.h",
+    "repository_path": "experiments/001_input_patterns/frozen_model/ca1_adequacy/calibration_config.h",
     "sha256": "e40c4562256a19f3fcfbab4d587db537b4932f5a39f0919a07d92675235f7f2d"
   },
   "model/ca1-adequacy/core_config.h": {
-    "repository_path": "models/ca2_carlsim/ca1_adequacy/core_config.h",
+    "repository_path": "experiments/001_input_patterns/frozen_model/ca1_adequacy/core_config.h",
     "sha256": "42b3eed12457f55bf5c4ac14417ec5790b60441f1de2bd1286e965e68e7a689c"
   },
   "model/ca1-adequacy/readout_config.h": {
-    "repository_path": "models/ca2_carlsim/ca1_adequacy/readout_config.h",
+    "repository_path": "experiments/001_input_patterns/frozen_model/ca1_adequacy/readout_config.h",
     "sha256": "e8be2835251b1607b87558a5a5afc2994df8f0c2ab0257844292c47d3e502029"
   },
   "model/ca1-adequacy/setup.h": {
-    "repository_path": "models/ca2_carlsim/ca1_adequacy/setup.h",
+    "repository_path": "experiments/001_input_patterns/frozen_model/ca1_adequacy/setup.h",
     "sha256": "da861450062757173d36a284d145413c8ef7b4351f1823afaeead8ae1ad27ed7"
   },
   "model/ca1-adequacy/src/circuit.cpp": {
-    "repository_path": "models/ca2_carlsim/ca1_adequacy/src/circuit.cpp",
+    "repository_path": "experiments/001_input_patterns/frozen_model/ca1_adequacy/src/circuit.cpp",
     "sha256": "e92a31dfb98e05b00a83d33963c92ef1e88d9ffe7aa25386cfecd45f95694d11"
   },
   "revised-source-export/CA2_CA3_CA1_EC_conn_parameters10-01-2026_10_48_20.csv": {
