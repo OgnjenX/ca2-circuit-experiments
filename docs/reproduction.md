@@ -24,6 +24,7 @@ CUDA 12 runtime and cuRAND 10 libraries. The build environment used CUDA 12.4 an
 g++ 12. A different architecture or rebuild requires renewed numerical checks.
 
 ```sh
+python -m pip install -e '.[report]'
 python scripts/fetch_artifacts.py runtime
 python scripts/prepare_workspace.py data/workspaces/experiment_001
 python scripts/smoke_run.py data/workspaces/experiment_001
