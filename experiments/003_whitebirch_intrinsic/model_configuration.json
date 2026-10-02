@@ -1,0 +1,40 @@
+{
+  "base_commit": "ffb10ccb60b36742b9906b3c3001bb31ff46b105",
+  "parameter_file": "data/hippocampome/2026-10-01/CA2_CA3_CA1_EC_neuron_parameters10-01-2026_10_48_20.csv",
+  "parameter_file_sha256": "48a4651de1028785e582029955d5150a31d905d90874c0f17a4ceaeba85ce73a",
+  "archived_row": {
+    "Neuron Type": "CA2 Pyramidal",
+    "E/I": "e",
+    "rank": "3",
+    "Population Size": "18956",
+    "Izh C": "1630.0",
+    "Izh k": "5.9432435",
+    "Izh Vr": "-72.58829",
+    "Izh Vt": "-58.78362",
+    "Izh a": "0.0011350543",
+    "Izh b": "-15.885261",
+    "Izh Vpeak": "19.99006",
+    "Izh Vmin": "-62.646779",
+    "Izh d": "74.0",
+    "Refractory Period": "1",
+    "CARLsim_default": "N"
+  },
+  "parameters": {
+    "C": 1630.0,
+    "k": 5.9432435,
+    "Vr": -72.58829,
+    "Vt": -58.78362,
+    "a": 0.0011350543,
+    "b": -15.885261,
+    "Vpeak": 19.99006,
+    "Vmin": -62.646779,
+    "d": 74.0
+  },
+  "holding_mV": -70,
+  "u_hold_pA": -41.11566219369001,
+  "I_hold_pA": 131.42409113662896,
+  "standard_equations": "C dV/dt=k(V-Vr)(V-Vt)-u+I; du/dt=a[b(V-Vr)-u]",
+  "specified_hybrid_reset": "V=Vmin; u+=d at localized upward Vpeak crossing",
+  "unexpected_backend_difference": "Archived Refractory Period=1; CARLsim9 RK4 checks previous nextVoltage for crossing, clamps V to Vmin on lastIter during refractory. Backend also clamps V below -90 mV. These are not part of specified immediate-reset reference. User reviewed and selected archived semantics as primary;immediate reset separate diagnostic.",
+  "user_selected_semantics": "Option2 primary existing refractory/reset behavior,option1 separate diagnostic;no existing backend modifications"
+}

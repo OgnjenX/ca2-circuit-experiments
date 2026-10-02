@@ -1,0 +1,22 @@
+name: whitebirch pre-run record
+on: [push, pull_request]
+jobs:
+  frozen-record:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify frozen source and blocked pre-run record
+        run: python experiments/003_whitebirch_intrinsic/verify_readiness.py
+      - name: Confirm production remains gated
+        shell: bash
+        run: |
+          set +e
+          python experiments/003_whitebirch_intrinsic/verify_readiness.py --require-ready
+          result=$?
+          set -e
+          test "$result" -eq 2

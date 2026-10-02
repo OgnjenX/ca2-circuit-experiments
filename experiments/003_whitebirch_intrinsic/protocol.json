@@ -1,0 +1,126 @@
+{
+  "id": "003_whitebirch_intrinsic",
+  "revision": 1,
+  "status": "blocked_before_production",
+  "base_commit": "ffb10ccb60b36742b9906b3c3001bb31ff46b105",
+  "question": "How does the unchanged archived CA2 somatic point-neuron firing count differ from Whitebirch2022 Figure1C NON-PILO control means?",
+  "held_out_observation": "2022 observations later than the frozen 2018 intrinsic fit to ChevaleyreSiegelbaum2010; no current or parameter fits permitted.",
+  "source": {
+    "article": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9547935/",
+    "figure": "1C control blue only",
+    "cohort": "92 cells,48 mice; NON-PILO controls received methylatropine,diazepam,levetiracetam; not untreated and not PILO non-SE",
+    "conditions_from_delegation": "1s100..1000pA steps; bias-held-70mV;32C;14-18weeks;both sexes;F1 background;dorsal/intermediate acute slices",
+    "method_verification_limit": "Article RESULTS and caption successfully read; detailed methods supplied by delegation. Subsequent methods page access CAPTCHA. Must independently verify full methods before production.",
+    "raw_voltage": "request-only; no contact authorized",
+    "zenodo": "https://zenodo.org/records/6835900 analysis CODE only",
+    "ramp": "excluded:article1s vs apparent1.2s code unresolved"
+  },
+  "currents_pA": [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+  ],
+  "holding_only_control_pA": 0,
+  "windows_ms": {
+    "baseline": [
+      0,
+      100
+    ],
+    "pulse": [
+      100,
+      1100
+    ],
+    "postpulse": [
+      1100,
+      1200
+    ]
+  },
+  "pulse_count": "Primary half-open [100,1100), record all localized crossings and pre/post counts. Also report inclusive endpoint sensitivity and nearest distance to boundaries. If count ambiguity changes result mark comparability unresolved.",
+  "initial_state": {
+    "V_mV": -70,
+    "u_pA": -41.11566219369001
+  },
+  "holding_current_pA": 131.42409113662896,
+  "sweep_recovery": "Identical equilibrium restart each sweep; full recovery assumed because experimental inter-sweep timing unknown.",
+  "parameters": "Exact archived CSV vector unchanged, see model_configuration.json; rounded supplied vector used only as independent algebra check.",
+  "production_backend": "Primary: unchanged archived CARLsim9 RK4 refractory/reset semantics (user approved option2). Standard immediate-reset hybrid ODE is separately labelled diagnostic (user approved option1 diagnostic); neither variant may be chosen based on fit.",
+  "candidate_production_refinement_dt_ms": [
+    0.05,
+    0.025,
+    0.0125
+  ],
+  "reference": {
+    "implementation": "Primary candidate reference_carlsim.py independently integrates substep spans with DOP853 and explicit original clock/reset/refractory semantics; diagnostic reference.py uses standard immediate localized reset. Both unexecuted pending source gate. Production implementation and matching numerical verification are not yet complete.",
+    "refinements": [
+      {
+        "rtol": 1e-09,
+        "atol": 1e-10,
+        "max_step_ms": 0.5
+      },
+      {
+        "rtol": 1e-11,
+        "atol": 1e-12,
+        "max_step_ms": 0.1
+      }
+    ]
+  },
+  "numerical_criteria": {
+    "counts_and_event_order": "all phases identical across production refinements and reference refinements",
+    "event_time_max_error_ms": 0.05,
+    "interpretation": "engineering criterion based on20kHz sample interval, not biological tolerance",
+    "reset": "At every localized event verify Vbefore=Vpeak within1e-7mV,Vafter=Vmin,uafter-ubefore=d within1e-7pA. Compare pre-reset u across solvers within0.01pA.",
+    "holding_only": "zero spikes;baseline stays within1e-7mV of-70",
+    "fail_policy": "Preserve failures; do not interpret biological residuals for numerically failing production.",
+    "event_times": "Audit localized ODE crossing and actual delayed grid reset/detection times separately. Compare like-for-like records; quantized1ms spike monitors cannot establish0.05ms timing. Primary highaccuracy reference follows unchanged counter clock; diagnostic has immediate events."
+  },
+  "measurement_adapter": {
+    "public_code_sha256": "f36c36ece4a3306eab6ce12e06d6ac441bab87cc4d2623d2aa6773f2957951ab",
+    "baseline": "author code subtracts mean samples3400:4000 from each imported trace",
+    "detector": "20kHz findpeaks >=60mV above baseline and >=6ms separation, apparently entire imported trace",
+    "model": "Use localized events; instantaneous resets can omit sampled peaks; exact Vpeak-hold=89.99006mV. Audit all ISIs over whole recording. Report raw and detector-compatible pulse/pre/post/whole-record counts separately if exclusion occurs. Do not claim AP width/waveform from reset markers.",
+    "limit": "Our100ms baseline/post windows do not establish authors full imported duration; if whole-trace/pulse choice affects comparison mark unresolved."
+  },
+  "scoring": {
+    "requires": "all ten honest targets,approved frozen implementation,numerical gates pass",
+    "residual": "model1s pulse count minus digitized paper mean in spikes/second",
+    "metrics": [
+      "signed mean error",
+      "RMSE",
+      "max absolute error",
+      "all10residuals"
+    ],
+    "bounds": "For each mean interval [L,U], residual interval [m-U,m-L]; min absolute error0 if interval contains0 else nearest endpoint; max farthest endpoint. RMSE bounds=sqrt(mean(minabs^2))..sqrt(mean(maxabs^2)); signed mean bounds average residual endpoints; maxabs bounds max(minabs)..max(maxabs). Digitization bounds not confidence intervals.",
+    "paper_SEM": "Report separately when visible; missing is missing,not0;not individual-cell tolerance.",
+    "inference": "No invented biological equivalence margin,pass/fail biological tolerance,artificial128cellSEM,chi-square or covariance assumption. Repeated currents,cells nested within mice. Quantitative discrepancy only; population validation may remain inconclusive."
+  },
+  "prohibited": [
+    "retuning",
+    "temperature compensation",
+    "current-axis fitting",
+    "synapse/network claims",
+    "changing previous experiments",
+    "reusing experiment-003-v1 tag",
+    "merging PR",
+    "contacting authors"
+  ],
+  "gates": {
+    "all_ten_means": false,
+    "highest_resolution_official_asset_verified": false,
+    "backend_choice_approved": true,
+    "production_started": false
+  },
+  "revision_policy": "Any approved method/source repair requires a new committed preregistration revision and hashes before production; retain this blocked record.",
+  "diagnostic": {
+    "id": "standard_immediate_reset",
+    "code": "reference.py",
+    "role": "separately labelled implementation-semantic sensitivity only; does not replace primary",
+    "frozen_before_biological_comparison": true
+  }
+}

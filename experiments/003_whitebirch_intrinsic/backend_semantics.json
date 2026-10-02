@@ -1,0 +1,21 @@
+{
+  "primary_choice": "User selected unchanged CARLsim refractory/reset semantics; immediate-reset ODE diagnostic only.",
+  "backend_identity": "carlsim4-synapse-dynamics-v2",
+  "inspected_files_sha256": {
+    "carlsim/kernel/src/snn_cpu_module.cpp": "4bdbc15c10995373972ed7f990b5e3f1f6eb3efaf11fce8440f74ea274b68945",
+    "carlsim/kernel/src/snn_manager.cpp": "d8247b2d503abfb92b3c5ca7df779b5ab87a4ee5a8e822f081b1085a8cbdb15c",
+    "carlsim/kernel/src/gpu_module/snn_gpu_module.cu": "22e39c5763676ac52908751fae5df7872e0dfba859f96e983d4135dcae66efb7"
+  },
+  "source_identity_check": "Hashes correspond to repository synapse_dynamics_v2.json changed source map; actual library not executed in this experiment.",
+  "units": "ms,mV,pA; refractory counter decremented on lastIter,once per1ms tick. This is a tick counter,not fractional substep duration.",
+  "semantics": [
+    "Manager sets Izh_ref=1 regardless of supplied integer; archived row also1.",
+    "At substep start load v=voltage,v_next=nextVoltage,u=recovery. Strict previous v_next>Vpeak check occurs before smooth integration. Crossing inside a substep is detected at the next substep boundary.",
+    "When counter>0,suppress BOTH voltage and recovery updates. On lastIter,decrement counter and clamp v_next=Vmin.",
+    "Otherwise when v_next>Vpeak,set curSpike=true,v_next=Vmin,u+=d; set counter1 on lastIter or2 otherwise; skip ODE integration in reset substep.",
+    "Otherwise RK4 integrates full substep with float32 model state; lower voltage clamp-90mV applies.",
+    "For dt=1/Nms,reset at substep j leaves integration suppressed through end of current tick (if j<N-1) and all of following tick. At j=N-1,it sets1 and next full tick is suppressed. First resumed integration occurs at start of next tick after counter reaches0. Thus refractory duration measured from reset is grid-phase dependent ~1..2ms,not simply exactly1ms.",
+    "Spike monitor timestamps are1ms. Numerical verification must instrument/compare true substep state and crossing/reset records separately."
+  ],
+  "verification_status": "Source inspection and independent review only;not spike/reset numerical validation."
+}
