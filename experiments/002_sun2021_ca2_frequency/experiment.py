@@ -40,7 +40,8 @@ def commit():
 
 
 def scientific_files():
-    return [HERE/'experiment.py', HERE/'protocol.json', HERE/'source_targets.json',
+    return [HERE/'experiment.py', HERE/'analyze.py', HERE/'protocol.json',
+            HERE/'source_targets.json', HERE/'source_audit.json',
             ROOT/'src/ca2lab/slice.py', ROOT/'src/ca2lab/monitors.py',
             ROOT/'models/ca2_slice/src/assay.cpp',
             *sorted((ROOT/'data/hippocampome/2026-10-01').glob('*.csv'))]
@@ -219,6 +220,7 @@ def freeze(args):
     save(destination,{'created_UTC':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),
                       'pre_freeze_commit':commit(), 'calibration':calibration,
                       'calibration_sha256':sha(args.workspace/'calibration.json'),
+                      'analysis_sha256':sha(HERE/'analyze.py'),
                       'scientific_file_sha256':{str(p.relative_to(ROOT)):sha(p) for p in scientific_files()},
                       'executable_sha256':build_record['executable_sha256'],
                       'generated_config_sha256':sha(args.workspace/'build/slice_config.h'),
