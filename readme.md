@@ -46,3 +46,10 @@ The original raw records and a fresh-run runtime bundle are release assets, kept
 out of Git. Each asset has a SHA-256 checksum in [the archive index](artifacts/experiment_001.json).
 The archived experiment scripts are preserved byte-for-byte; their compact style
 and historical filenames are not the convention for new code.
+
+## Scientific status correction
+
+The recorded backend used by experiments 001 and 002 has a reproduced synaptic
+dynamics defect. Their biological interpretations require revalidation. See
+[the erratum](docs/synapse_dynamics_erratum.md) and the separately versioned
+[corrected experiment 003](experiments/003_corrected_ca2_frequency/readme.md).

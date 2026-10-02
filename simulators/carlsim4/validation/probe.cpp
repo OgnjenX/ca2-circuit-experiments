@@ -6,11 +6,12 @@
 #include <vector>
 #include <string>
 struct Events: SpikeGenerator {
-    int active; std::vector<int> times;
+    int active; std::vector<int> times; std::vector<int> scheduled;
     int nextSpikeTime(CARLsim*,int,int cell,int now,int last,int end) override {
         if(cell>=active) return -1;
-        auto p=std::lower_bound(times.begin(),times.end(),std::max(now,last+1));
-        return p!=times.end() && *p<end?*p:-1;
+        auto p=std::lower_bound(times.begin(),times.end(),std::max(now,scheduled[cell]+1));
+        if(p==times.end() || *p>=end) return -1;
+        scheduled[cell]=*p; return *p;
     }
 };
 void kinetics(CARLsim& sim,int pre,int post,bool stp,float td,float rise) {
@@ -29,7 +30,7 @@ int main(int argc,char** argv) {
     std::vector<Events*> events;
     int n,active,inh,stp,delay,count;float td,rise;
     while(in>>n>>active>>inh>>stp>>td>>rise>>delay>>count) {
-        Events* e=new Events;e->active=active;
+        Events* e=new Events;e->active=active;e->scheduled.assign(n,-1);
         for(int i=0,t;i<count;++i){in>>t;e->times.push_back(t);}
         int pre=sim.createSpikeGeneratorGroup("input"+std::to_string(events.size()),n,inh?INHIBITORY_NEURON:EXCITATORY_NEURON);
         sim.connect(pre,target,"full",RangeWeight(.01f),1,RangeDelay(delay),RadiusRF(-1),SYN_FIXED,1.f,1.f);
@@ -37,6 +38,7 @@ int main(int argc,char** argv) {
         // same pre-group has static and dynamic outgoing connections; order must not disable the other edge
         if(reverse){kinetics(sim,pre,auxiliary,false,td,rise);kinetics(sim,pre,target,stp,td,rise);}
         else{kinetics(sim,pre,target,stp,td,rise);kinetics(sim,pre,auxiliary,false,td,rise);}
+        if(reverse==2){kinetics(sim,pre,auxiliary,true,td,rise);sim.setSTP(pre,auxiliary,false);kinetics(sim,pre,target,!stp,td,rise);kinetics(sim,pre,target,stp,td,rise);}
         sim.setSpikeGenerator(pre,e);events.push_back(e);
     }
     sim.setupNetwork();

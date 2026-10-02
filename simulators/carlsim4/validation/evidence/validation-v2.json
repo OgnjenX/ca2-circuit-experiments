@@ -1,0 +1,177 @@
+{
+  "spec_sha256": "d5eb798737d5f12f4d641121eb5f5d4fa5e708e15c741054be17f288c1a0ce63",
+  "oracle_sha256": "fff58109e7a9aad654419acfc66a2a42c68f96839dfdd036cf2ab9f1232f809f",
+  "library_sha256": "458d23f29da6805ff4604c8b5af15b6e4109540c63973f762b3cf8ab68ebda68",
+  "historical": false,
+  "results": [
+    {
+      "mode": "cpu",
+      "case": "silent-0",
+      "exit_code": -11,
+      "pass_oracle": false
+    },
+    {
+      "mode": "cpu",
+      "case": "silent-1",
+      "exit_code": -11,
+      "pass_oracle": false
+    },
+    {
+      "mode": "cpu",
+      "case": "silent-31",
+      "exit_code": -11,
+      "pass_oracle": false
+    },
+    {
+      "mode": "cpu",
+      "case": "silent-91",
+      "exit_code": -11,
+      "pass_oracle": false
+    },
+    {
+      "mode": "cpu",
+      "case": "silent-255",
+      "exit_code": -11,
+      "pass_oracle": false
+    },
+    {
+      "mode": "cpu",
+      "case": "components-stpFalse-rise0-order0",
+      "exit_code": -11,
+      "pass_oracle": false
+    },
+    {
+      "mode": "cpu",
+      "case": "components-stpFalse-rise0-order1",
+      "exit_code": -11,
+      "pass_oracle": false
+    },
+    {
+      "mode": "cpu",
+      "case": "components-stpFalse-rise2-order0",
+      "exit_code": -11,
+      "pass_oracle": false
+    },
+    {
+      "mode": "cpu",
+      "case": "components-stpFalse-rise2-order1",
+      "exit_code": -11,
+      "pass_oracle": false
+    },
+    {
+      "mode": "cpu",
+      "case": "components-stpTrue-rise0-order0",
+      "exit_code": -11,
+      "pass_oracle": false
+    },
+    {
+      "mode": "cpu",
+      "case": "components-stpTrue-rise0-order1",
+      "exit_code": -11,
+      "pass_oracle": false
+    },
+    {
+      "mode": "cpu",
+      "case": "components-stpTrue-rise2-order0",
+      "exit_code": -11,
+      "pass_oracle": false
+    },
+    {
+      "mode": "cpu",
+      "case": "components-stpTrue-rise2-order1",
+      "exit_code": -11,
+      "pass_oracle": false
+    },
+    {
+      "mode": "cpu",
+      "case": "reset-repeat",
+      "exit_code": -11,
+      "pass_oracle": false
+    },
+    {
+      "mode": "gpu",
+      "case": "silent-0",
+      "exit_code": 1,
+      "pass_oracle": false
+    },
+    {
+      "mode": "gpu",
+      "case": "silent-1",
+      "exit_code": 1,
+      "pass_oracle": false
+    },
+    {
+      "mode": "gpu",
+      "case": "silent-31",
+      "exit_code": 1,
+      "pass_oracle": false
+    },
+    {
+      "mode": "gpu",
+      "case": "silent-91",
+      "exit_code": 1,
+      "pass_oracle": false
+    },
+    {
+      "mode": "gpu",
+      "case": "silent-255",
+      "exit_code": 1,
+      "pass_oracle": false
+    },
+    {
+      "mode": "gpu",
+      "case": "components-stpFalse-rise0-order0",
+      "exit_code": 1,
+      "pass_oracle": false
+    },
+    {
+      "mode": "gpu",
+      "case": "components-stpFalse-rise0-order1",
+      "exit_code": 1,
+      "pass_oracle": false
+    },
+    {
+      "mode": "gpu",
+      "case": "components-stpFalse-rise2-order0",
+      "exit_code": 1,
+      "pass_oracle": false
+    },
+    {
+      "mode": "gpu",
+      "case": "components-stpFalse-rise2-order1",
+      "exit_code": 1,
+      "pass_oracle": false
+    },
+    {
+      "mode": "gpu",
+      "case": "components-stpTrue-rise0-order0",
+      "exit_code": 1,
+      "pass_oracle": false
+    },
+    {
+      "mode": "gpu",
+      "case": "components-stpTrue-rise0-order1",
+      "exit_code": 1,
+      "pass_oracle": false
+    },
+    {
+      "mode": "gpu",
+      "case": "components-stpTrue-rise2-order0",
+      "exit_code": 1,
+      "pass_oracle": false
+    },
+    {
+      "mode": "gpu",
+      "case": "components-stpTrue-rise2-order1",
+      "exit_code": 1,
+      "pass_oracle": false
+    },
+    {
+      "mode": "gpu",
+      "case": "reset-repeat",
+      "exit_code": 1,
+      "pass_oracle": false
+    }
+  ],
+  "passed": false
+}

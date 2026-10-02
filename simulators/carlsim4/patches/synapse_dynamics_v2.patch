@@ -1,0 +1,953 @@
+--- a/carlsim/interface/src/carlsim.cpp
++++ b/carlsim/interface/src/carlsim.cpp
+@@ -826,16 +826,10 @@
+ 
+ 		hasSetSTPALL_ = preGrpId==ALL; // adding groups after this will not have conductances set
+ 
+-		if (isSet) { // enable STDP, use default values
+-			UserErrors::assertTrue(isExcitatoryGroup(preGrpId) || isInhibitoryGroup(preGrpId), UserErrors::WRONG_NEURON_TYPE,
+-				funcName,"setSTP");
+-
+-// 			snn_->setSTP(preGrpId, postGrpId, isSet, STP_U.mean, STP_U.std, STP_tau_u.mean, STP_tau_u.std, STP_tau_x.mean, STP_tau_x.std);
++		// Receptor kinetics are independent of release plasticity.
++
+ 			snn_->setSTP(preGrpId, postGrpId, isSet, STP_U.mean, STP_U.std, STP_tau_u.mean, STP_tau_u.std, STP_tau_x.mean, STP_tau_x.std, STP_tdAMPA.mean, STP_tdAMPA.std, STP_tdNMDA.mean, STP_tdNMDA.std, STP_tdGABAa.mean, STP_tdGABAa.std, STP_tdGABAb.mean, STP_tdGABAb.std, STP_trNMDA.mean, STP_trNMDA.std, STP_trGABAb.mean, STP_trGABAb.std);
+-		} else { // disable STDP
+-// 			snn_->setSTP(preGrpId, postGrpId, isSet, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+-			snn_->setSTP(preGrpId, postGrpId, isSet, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+-		}
++
+ 	}
+ 
+ 	void setWeightAndWeightChangeUpdate(UpdateInterval wtANDwtChangeUpdateInterval, bool enableWtChangeDecay,
+--- a/carlsim/kernel/inc/snn_datastructures.h
++++ b/carlsim/kernel/inc/snn_datastructures.h
+@@ -539,6 +539,7 @@
+ 	float* gNMDA;   //!< conductance of gNMDA
+ 	float* gNMDA_r;
+ 	float* gNMDA_d;
++	float* synConductance; //!< Eight receptor states per incoming synapse; neuron arrays are sums.
+ 	float* gAMPA;   //!< conductance of gAMPA
+ 	float* gGABAa;  //!< conductance of gGABAa
+ 	float* gGABAb;  //!< conductance of gGABAb
+--- a/carlsim/kernel/src/snn_cpu_module.cpp
++++ b/carlsim/kernel/src/snn_cpu_module.cpp
+@@ -82,6 +82,10 @@
+ 		// copy the spikeGenBits from the manager to the CPU runtime
+ 		memcpy(runtimeData[netId].spikeGenBits, managerRuntimeData.spikeGenBits, sizeof(int) * (networkConfigs[netId].numNSpikeGen / 32 + 1));
+ 	}
++
++#if !defined(WIN32) && !defined(WIN64) && !defined(__APPLE__)
++    return NULL;
++#endif
+ }
+ 
+ #if !defined(WIN32) && !defined(WIN64) && !defined(__APPLE__) // Linux or MAC
+@@ -103,6 +107,10 @@
+ 
+ 	runtimeData[netId].timeTableD2[simTimeMs + networkConfigs[netId].maxDelay + 1] = runtimeData[netId].spikeCountD2Sec + runtimeData[netId].spikeCountLastSecLeftD2;
+ 	runtimeData[netId].timeTableD1[simTimeMs + networkConfigs[netId].maxDelay + 1] = runtimeData[netId].spikeCountD1Sec;
++
++#if !defined(WIN32) && !defined(WIN64) && !defined(__APPLE__)
++    return NULL;
++#endif
+ }
+ 
+ #if !defined(WIN32) && !defined(WIN64) && !defined(__APPLE__) // Linux or MAC
+@@ -245,6 +253,10 @@
+ 	//if (firingTableIdx < endIdx)
+ 	for (int extIdx = startIdx; extIdx < endIdx; extIdx++)
+ 		runtimeData[netId].firingTableD2[extIdx] += GtoLOffset;
++
++#if !defined(WIN32) && !defined(WIN64) && !defined(__APPLE__)
++    return NULL;
++#endif
+ }
+ 
+ #if !defined(WIN32) && !defined(WIN64) && !defined(__APPLE__) // Linux or MAC
+@@ -271,6 +283,10 @@
+ 	// FIXME: if endIdx - startIdx > 64 * 128
+ 	for (int extIdx = startIdx; extIdx < endIdx; extIdx++)
+ 		runtimeData[netId].firingTableD1[extIdx] += GtoLOffset;
++
++#if !defined(WIN32) && !defined(WIN64) && !defined(__APPLE__)
++    return NULL;
++#endif
+ }
+ 
+ #if !defined(WIN32) && !defined(WIN64) && !defined(__APPLE__) // Linux or MAC
+@@ -292,6 +308,10 @@
+ 
+ 	memset(runtimeData[netId].extFiringTableEndIdxD1, 0, sizeof(int) * networkConfigs[netId].numGroups);
+ 	memset(runtimeData[netId].extFiringTableEndIdxD2, 0, sizeof(int) * networkConfigs[netId].numGroups);
++
++#if !defined(WIN32) && !defined(WIN64) && !defined(__APPLE__)
++    return NULL;
++#endif
+ }
+ 
+ #if !defined(WIN32) && !defined(WIN64) && !defined(__APPLE__) // Linux or MAC
+@@ -344,6 +364,10 @@
+ 		int numN = groupConfigs[netId][lGrpId].numN;
+ 		memset(runtimeData[netId].nSpikeCnt + lStartN, 0, sizeof(int) * numN);
+ 	}
++
++#if !defined(WIN32) && !defined(WIN64) && !defined(__APPLE__)
++    return NULL;
++#endif
+ }
+ 
+ #if !defined(WIN32) && !defined(WIN64) && !defined(__APPLE__) // Linux or MAC
+@@ -392,6 +416,10 @@
+ 
+ 		k = k - 1;
+ 	}
++
++#if !defined(WIN32) && !defined(WIN64) && !defined(__APPLE__)
++    return NULL;
++#endif
+ }
+ 
+ #if !defined(WIN32) && !defined(WIN64) && !defined(__APPLE__) // Linux or MAC
+@@ -457,6 +485,10 @@
+ 			k = k - 1;
+ 		}
+ 	}
++
++#if !defined(WIN32) && !defined(WIN64) && !defined(__APPLE__)
++    return NULL;
++#endif
+ }
+ 
+ #if !defined(WIN32) && !defined(WIN64) && !defined(__APPLE__) // Linux or MAC
+@@ -474,76 +506,38 @@
+ #else // POSIX
+ 	void* SNN::doSTPUpdateAndDecayCond_CPU(int netId) {
+ #endif
+-	// KERNEL_INFO("Inside SNN::doSTPUpdateAndDecayCond_CPU(int netId)");
+-	assert(runtimeData[netId].memType == CPU_MEM);
+-	// ToDo: This can be further optimized using multiple threads allocated on mulitple CPU cores
+-	// decay the STP variables before adding new spikes.
+-
+-	// update stpu and stpx for connections with STP
+-
+-
+-	// decay conductances 
+-	for (int lGrpId = 0; lGrpId < networkConfigs[netId].numGroups; lGrpId++) {
+-		for(int lNId = groupConfigs[netId][lGrpId].lStartN; lNId <= groupConfigs[netId][lGrpId].lEndN; lNId++) {
+-			//KERNEL_INFO("lNId < networkConfigs[netId].numNReg: %d - %d - %d\n", lNId, networkConfigs[netId].numNReg, groupConfigs[netId][lGrpId].lEndN);
+-			//assert(lNId < networkConfigs[netId].numN);
+-			unsigned int offset = runtimeData[netId].cumulativePre[lNId];
+-			//KERNEL_INFO("lGrpId: %d -- lNId: %d ", lGrpId, lNId);
+-			//KERNEL_INFO("runtimeData[netId].Npre[lNId]: %d", runtimeData[netId].Npre[lNId]);
+-			// if (groupConfigs[netId][lGrpId].isSpikeGenerator){
+-			// 	KERNEL_INFO("%d is a spike generator", lNId);
+-			// }
+-			for (int j = 0; j < runtimeData[netId].Npre[lNId]; j++) {
+-				int lSId = offset + j;
+-				//KERNEL_INFO("lGrpId: %d -- lNId: %d -- lSId: %d ", lGrpId, lNId, lSId);
+-				if (runtimeData[netId].withSTP[lSId]) {
+-					//KERNEL_INFO("inside: %d", lSId);
+-					int ind_plus  = STP_BUF_POS(lSId, simTime, 1);
+-					int ind_minus = STP_BUF_POS(lSId, (simTime - 1), 1);
+-					runtimeData[netId].stpu[ind_plus] = runtimeData[netId].stpu[ind_minus] * (1.0f - runtimeData[netId].stp_tau_u_inv[lSId]);
+-					runtimeData[netId].stpx[ind_plus] = runtimeData[netId].stpx[ind_minus] + (1.0f - runtimeData[netId].stpx[ind_minus]) * runtimeData[netId].stp_tau_x_inv[lSId];
+-			// decay conductances
+-				if (networkConfigs[netId].sim_with_conductances && IS_REGULAR_NEURON(lNId, networkConfigs[netId].numNReg, networkConfigs[netId].numNPois)) {
+-// 					runtimeData[netId].gAMPA[lNId]  *= dAMPA;
+-					runtimeData[netId].gAMPA[lNId]  *= runtimeData[netId].stp_dAMPA[lSId];
+-					if (sim_with_NMDA_rise) {
+-// 						runtimeData[netId].gNMDA_r[lNId] *= rNMDA;	// rise
+-// 						runtimeData[netId].gNMDA_d[lNId] *= dNMDA;	// decay
+-						runtimeData[netId].gNMDA_r[lNId] *= runtimeData[netId].stp_rNMDA[lSId];	// rise
+-						runtimeData[netId].gNMDA_d[lNId] *= runtimeData[netId].stp_dNMDA[lSId];	// decay
+-					} else {
+-// 						runtimeData[netId].gNMDA[lNId]   *= dNMDA;	// instantaneous rise
+-					runtimeData[netId].gNMDA[lNId]  *= runtimeData[netId].stp_dNMDA[lSId];	// instantaneous rise
+-					}
+-
+-// 					runtimeData[netId].gGABAa[lNId] *= dGABAa;
+-					runtimeData[netId].gGABAa[lNId] *= runtimeData[netId].stp_dGABAa[lSId];
+-					if (sim_with_GABAb_rise) {
+-// 						runtimeData[netId].gGABAb_r[lNId] *= rGABAb;	// rise
+-// 						runtimeData[netId].gGABAb_d[lNId] *= dGABAb;	// decay
+-						runtimeData[netId].gGABAb_r[lNId] *= runtimeData[netId].stp_rGABAb[lSId];	// rise
+-						runtimeData[netId].gGABAb_d[lNId] *= runtimeData[netId].stp_dGABAb[lSId];	// decay
+-					} else {
+-// 						runtimeData[netId].gGABAb[lNId] *= dGABAb;	// instantaneous rise
+-						runtimeData[netId].gGABAb[lNId] *= runtimeData[netId].stp_dGABAb[lSId];	// instantaneous rise
+-					}
+-				}
+-					// KERNEL_INFO("lGrpId: %d -- lNId: %d -- lSId: %d -- stpu: %f -- stpx: %f", lGrpId, lNId, lSId, runtimeData[netId].stpu[ind_plus], runtimeData[netId].stpx[ind_plus]);
+-					// KERNEL_INFO("\ndoSTPUpdateAndDecayCond_CPU, group id: %d, neuron id: %d, Synapse id: %d, minus: %d, plus: %d, netid: %d", lGrpId, lNId, lSId, ind_minus, ind_plus, netId);
+-					// KERNEL_INFO("stpu: %f/%f -- stpx: %f/%f", runtimeData[netId].stpu[ind_minus], runtimeData[netId].stpu[ind_plus], runtimeData[netId].stpx[ind_minus], runtimeData[netId].stpx[ind_plus]);
+-					// KERNEL_INFO("tau_u_inv: %f -- tau_x_inv: %f", runtimeData[netId].stp_tau_u_inv[lSId], runtimeData[netId].stp_tau_x_inv[lSId]);
+-				}
+-			}
+-			// if (groupConfigs[netId][lGrpId].WithSTP) {
+-			// 	int ind_plus  = STP_BUF_POS(lNId, simTime, glbNetworkConfig.maxDelay);
+-			// 	int ind_minus = STP_BUF_POS(lNId, (simTime - 1), glbNetworkConfig.maxDelay);
+-			// 	runtimeData[netId].stpu[ind_plus] = runtimeData[netId].stpu[ind_minus] * (1.0f - groupConfigs[netId][lGrpId].STP_tau_u_inv);
+-			// 	runtimeData[netId].stpx[ind_plus] = runtimeData[netId].stpx[ind_minus] + (1.0f - runtimeData[netId].stpx[ind_minus]) * groupConfigs[netId][lGrpId].STP_tau_x_inv;
+-			// }
+-
+-
+-		}
+-	}
++
++    RuntimeData& data=runtimeData[netId];
++    for (int nid=0; nid<networkConfigs[netId].numN; ++nid) {
++        float sums[8]={0};
++        unsigned int offset=data.cumulativePre[nid];
++        for (int j=0; j<data.Npre[nid]; ++j) {
++            int pos=offset+j;
++            if (data.withSTP[pos]) {
++                int prev=STP_BUF_POS(pos,simTime-1,1), now=STP_BUF_POS(pos,simTime,1);
++                data.stpu[now]=data.stpu[prev]*expf(-data.stp_tau_u_inv[pos]);
++                data.stpx[now]=1.0f-(1.0f-data.stpx[prev])*expf(-data.stp_tau_x_inv[pos]);
++            }
++            if (sim_with_conductances && nid<networkConfigs[netId].numNReg) {
++                float factors[8]={data.stp_dAMPA[pos],data.stp_dNMDA[pos],data.stp_rNMDA[pos],data.stp_dNMDA[pos],data.stp_dGABAa[pos],data.stp_dGABAb[pos],data.stp_rGABAb[pos],data.stp_dGABAb[pos]};
++                for(int c=0;c<8;++c) { data.synConductance[8*pos+c]*=factors[c]; sums[c]+=data.synConductance[8*pos+c]; }
++            }
++        }
++        if(sim_with_conductances && nid<networkConfigs[netId].numNReg) {
++            data.gAMPA[nid]=sums[0];
++            if (!sim_with_NMDA_rise) data.gNMDA[nid]=sums[1];
++            if (sim_with_NMDA_rise) data.gNMDA_r[nid]=sums[2];
++            if (sim_with_NMDA_rise) data.gNMDA_d[nid]=sums[3];
++            data.gGABAa[nid]=sums[4];
++            if (!sim_with_GABAb_rise) data.gGABAb[nid]=sums[5];
++            if (sim_with_GABAb_rise) data.gGABAb_r[nid]=sums[6];
++            if (sim_with_GABAb_rise) data.gGABAb_d[nid]=sums[7];
++        }
++    }
++#if !defined(WIN32) && !defined(WIN64) && !defined(__APPLE__)
++    return NULL;
++#endif
++
+ }
+ 
+ #if !defined(WIN32) && !defined(WIN64) && !defined(__APPLE__) // Linux or MAC
+@@ -654,6 +648,10 @@
+ 			}
+ 		}
+ 	}
++
++#if !defined(WIN32) && !defined(WIN64) && !defined(__APPLE__)
++    return NULL;
++#endif
+ }
+ 
+ #if !defined(WIN32) && !defined(WIN64) && !defined(__APPLE__) // Linux or MAC
+@@ -814,7 +812,7 @@
+ 	// P2
+ 	//int stp_tDiff = runtimeData[netId].delay[pos];
+ 
+-	if (groupConfigs[netId][pre_grpId].WithSTP) {
++	if (runtimeData[netId].withSTP[pos]) {
+ 		// if pre-group has STP enabled, we need to modulate the weight
+ 		// NOTE: Order is important! (Tsodyks & Markram, 1998; Mongillo, Barak, & Tsodyks, 2008)
+ 		// use u^+ (value right after spike-update) but x^- (value right before spike-update)
+@@ -829,61 +827,39 @@
+ 		int ind_plus  = STP_BUF_POS(pos, (simTime), 1);
+ 
+ 		//int lSId = offset + j;
+-		if (runtimeData[netId].withSTP[pos]) {
+-			//int ind_plus  = STP_BUF_POS(lSId, simTime, glbNetworkConfig.maxDelay);
+-			//int ind_minus = STP_BUF_POS(lSId, (simTime - 1), glbNetworkConfig.maxDelay);
+-			runtimeData[netId].stpu[ind_plus] += runtimeData[netId].stp_U[pos] * (1.0f - runtimeData[netId].stpu[ind_minus]);
+-			runtimeData[netId].stpx[ind_plus] -= runtimeData[netId].stpu[ind_plus]  * runtimeData[netId].stpx[ind_minus];
+-
+-			// KERNEL_INFO("Firing Update STP -- postGrpId: %d -- postNId: %d -- lSid: %d --simTime: %d  --minus: %d  --plus: %d \n", post_grpId, postNId, pos, simTime, ind_minus, ind_plus);
+-			// KERNEL_INFO("stpu: %f/%f -- stpx: %f/%f\n", runtimeData[netId].stpu[ind_minus], runtimeData[netId].stpu[ind_plus], runtimeData[netId].stpx[ind_minus], runtimeData[netId].stpx[ind_plus]);
+-			// KERNEL_INFO("tau_u_inv: %f -- tau_x_inv: %f -- stp_U:%f\n", runtimeData[netId].stp_tau_u_inv[pos], runtimeData[netId].stp_tau_x_inv[pos], runtimeData[netId].stp_U[pos]);
+-		}
+-		
+-		float STP_A = (runtimeData[netId].stp_U[pos] > 0.0f) ? 1.0 / runtimeData[netId].stp_U[pos] : 1.0f;
+-		change *= STP_A * runtimeData[netId].stpu[ind_plus] * runtimeData[netId].stpx[ind_minus];
+-		// KERNEL_INFO("change: %f -- pos:%d -- preNId:%d -- postNId:%d -- netId:%d\n", change, pos, preNId, postNId, netId);
+-		// KERNEL_INFO("STP_A: %f -- stpu:%f -- stpx:%f", STP_A, runtimeData[netId].stpu[ind_plus], runtimeData[netId].stpx[ind_minus]);
+-
+-		//printf("%d: %d[%d], numN=%d, td=%d, maxDelay_=%d, ind-=%d, ind+=%d, stpu=[%f,%f], stpx=[%f,%f], change=%f, wt=%f\n",
+-		//	simTime, pre_grpId, preNId,
+-		//	groupConfigs[netId][pre_grpId].numN, tD, networkConfigs[netId].maxDelay, ind_minus, ind_plus,
+-		//	runtimeData[netId].stpu[ind_minus], runtimeData[netId].stpu[ind_plus],
+-		//	runtimeData[netId].stpx[ind_minus], runtimeData[netId].stpx[ind_plus],
+-		//	change, runtimeData[netId].wt[pos]);
+-	}
+-
+-	// P3-1, P3-2
+-	// update currents
+-	// NOTE: it's faster to += 0.0 rather than checking for zero and not updating
+-	if (sim_with_conductances) {
+-		if (pre_type & TARGET_AMPA) // if postNId expresses AMPAR
+-			runtimeData[netId].gAMPA [postNId] += change * mulSynFast[mulIndex]; // scale by some factor
+-		if (pre_type & TARGET_NMDA) {
+-			if (sim_with_NMDA_rise) {
+-// 				runtimeData[netId].gNMDA_r[postNId] += change * sNMDA * mulSynSlow[mulIndex];
+-// 				runtimeData[netId].gNMDA_d[postNId] += change * sNMDA * mulSynSlow[mulIndex];
+-				runtimeData[netId].gNMDA_r[postNId] += change * runtimeData[netId].stp_sNMDA[pos] * mulSynSlow[mulIndex];
+-				runtimeData[netId].gNMDA_d[postNId] += change * runtimeData[netId].stp_sNMDA[pos] * mulSynSlow[mulIndex];
+-			} else {
+-				runtimeData[netId].gNMDA [postNId] += change * mulSynSlow[mulIndex];
+-			}
+-		}
+-		if (pre_type & TARGET_GABAa)
+-			runtimeData[netId].gGABAa[postNId] -= change * mulSynFast[mulIndex]; // wt should be negative for GABAa and GABAb
+-		if (pre_type & TARGET_GABAb) {
+-			if (sim_with_GABAb_rise) {
+-// 				runtimeData[netId].gGABAb_r[postNId] -= change * sGABAb * mulSynSlow[mulIndex];
+-// 				runtimeData[netId].gGABAb_d[postNId] -= change * sGABAb * mulSynSlow[mulIndex];
+-				runtimeData[netId].gGABAb_r[postNId] -= change * runtimeData[netId].stp_sGABAb[pos] * mulSynSlow[mulIndex];
+-				runtimeData[netId].gGABAb_d[postNId] -= change * runtimeData[netId].stp_sGABAb[pos] * mulSynSlow[mulIndex];
+-			} else {
+-				runtimeData[netId].gGABAb[postNId] -= change * mulSynSlow[mulIndex];
+-			}
+-		}
+-	} else {
+-		runtimeData[netId].current[postNId] += change;
+-	}
++        float u=runtimeData[netId].stpu[ind_plus];
++        float x=runtimeData[netId].stpx[ind_plus];
++        u+=runtimeData[netId].stp_U[pos]*(1.0f-u);
++        change*=u*x/runtimeData[netId].stp_U[pos];
++        runtimeData[netId].stpu[ind_plus]=u;
++        runtimeData[netId].stpx[ind_plus]=x*(1.0f-u);
++
++	}
++
++
++    if (sim_with_conductances) {
++        float impulse[8]={0};
++        bool nr=runtimeData[netId].stp_rNMDA[pos]>0.0f, gr=runtimeData[netId].stp_rGABAb[pos]>0.0f;
++        if (pre_type&TARGET_AMPA) impulse[0]=change*mulSynFast[mulIndex];
++        if (pre_type&TARGET_NMDA) {
++            float value=change*mulSynSlow[mulIndex]*(nr?runtimeData[netId].stp_sNMDA[pos]:1.0f);
++            if (sim_with_NMDA_rise) { impulse[3]=value; impulse[2]=nr?value:0.0f; } else impulse[1]=value;
++        }
++        if (pre_type&TARGET_GABAa) impulse[4]=-change*mulSynFast[mulIndex];
++        if (pre_type&TARGET_GABAb) {
++            float value=-change*mulSynSlow[mulIndex]*(gr?runtimeData[netId].stp_sGABAb[pos]:1.0f);
++            if (sim_with_GABAb_rise) { impulse[7]=value; impulse[6]=gr?value:0.0f; } else impulse[5]=value;
++        }
++        for(int c=0;c<8;++c) runtimeData[netId].synConductance[8*pos+c]+=impulse[c];
++        runtimeData[netId].gAMPA[postNId]+=impulse[0];
++        if (!sim_with_NMDA_rise) runtimeData[netId].gNMDA[postNId]+=impulse[1];
++        if (sim_with_NMDA_rise) runtimeData[netId].gNMDA_r[postNId]+=impulse[2];
++        if (sim_with_NMDA_rise) runtimeData[netId].gNMDA_d[postNId]+=impulse[3];
++        runtimeData[netId].gGABAa[postNId]+=impulse[4];
++        if (!sim_with_GABAb_rise) runtimeData[netId].gGABAb[postNId]+=impulse[5];
++        if (sim_with_GABAb_rise) runtimeData[netId].gGABAb_r[postNId]+=impulse[6];
++        if (sim_with_GABAb_rise) runtimeData[netId].gGABAb_d[postNId]+=impulse[7];
++    } else { runtimeData[netId].current[postNId]+=change; }
+ 
+ 	// P4
+ 	runtimeData[netId].synSpikeTime[pos] = simTime;
+@@ -1306,6 +1282,9 @@
+ 		memcpy(runtimeData[netId].voltage, runtimeData[netId].nextVoltage, sizeof(float)*networkConfigs[netId].numNReg);
+ 
+ 	} // end simNumStepsPerMs loop
++#if !defined(WIN32) && !defined(WIN64) && !defined(__APPLE__)
++    return NULL;
++#endif
+ }
+ 
+ #if !defined(WIN32) && !defined(WIN64) && !defined(__APPLE__) // Linux or MAC
+@@ -1425,6 +1404,10 @@
+ 			}
+ 		}
+ 	}
++
++#if !defined(WIN32) && !defined(WIN64) && !defined(__APPLE__)
++    return NULL;
++#endif
+ }
+ 
+ #if !defined(WIN32) && !defined(WIN64) && !defined(__APPLE__) // Linux or MAC
+@@ -1469,6 +1452,10 @@
+ 	runtimeData[netId].spikeCountExtRxD1Sec = 0;
+ 
+ 	runtimeData[netId].spikeCountLastSecLeftD2 = runtimeData[netId].timeTableD2[networkConfigs[netId].maxDelay];
++
++#if !defined(WIN32) && !defined(WIN64) && !defined(__APPLE__)
++    return NULL;
++#endif
+ }
+ 
+ #if !defined(WIN32) && !defined(WIN64) && !defined(__APPLE__) // Linux or MAC
+@@ -1752,6 +1739,9 @@
+ void SNN::copySynapseState(int netId, RuntimeData* dest, RuntimeData* src, bool allocateMem) {
+ 	assert(networkConfigs[netId].numPreSynNet > 0);
+ 
++	if (allocateMem) dest->synConductance = new float[8*networkConfigs[netId].numPreSynNet];
++	memcpy(dest->synConductance, src->synConductance, sizeof(float)*8*networkConfigs[netId].numPreSynNet);
++
+ 	// synaptic information based
+ 	if(allocateMem)
+ 		dest->wt = new float[networkConfigs[netId].numPreSynNet];
+@@ -1773,35 +1763,35 @@
+ 	}
+ 	// allocate synapse stp parameters to runtime data
+ 	if(allocateMem) {
+-		dest->stp_U = new float[networkConfigs[netId].numPostSynNet];
+-		dest->stp_tau_u_inv = new float[networkConfigs[netId].numPostSynNet];
+-		dest->stp_tau_x_inv = new float[networkConfigs[netId].numPostSynNet];
+-		dest->stp_dAMPA = new float[networkConfigs[netId].numPostSynNet];
+-		dest->stp_dNMDA = new float[networkConfigs[netId].numPostSynNet];
+-		dest->stp_dGABAa = new float[networkConfigs[netId].numPostSynNet];
+-		dest->stp_dGABAb = new float[networkConfigs[netId].numPostSynNet];
+-		dest->stp_rNMDA = new float[networkConfigs[netId].numPostSynNet];
+-		dest->stp_sNMDA = new float[networkConfigs[netId].numPostSynNet];
+-		dest->stp_rGABAb = new float[networkConfigs[netId].numPostSynNet];
+-		dest->stp_sGABAb = new float[networkConfigs[netId].numPostSynNet];
+-		dest->withSTP = new bool[networkConfigs[netId].numPostSynNet];
+-		dest->delay = new int[networkConfigs[netId].numPostSynNet];
++		dest->stp_U = new float[networkConfigs[netId].numPreSynNet];
++		dest->stp_tau_u_inv = new float[networkConfigs[netId].numPreSynNet];
++		dest->stp_tau_x_inv = new float[networkConfigs[netId].numPreSynNet];
++		dest->stp_dAMPA = new float[networkConfigs[netId].numPreSynNet];
++		dest->stp_dNMDA = new float[networkConfigs[netId].numPreSynNet];
++		dest->stp_dGABAa = new float[networkConfigs[netId].numPreSynNet];
++		dest->stp_dGABAb = new float[networkConfigs[netId].numPreSynNet];
++		dest->stp_rNMDA = new float[networkConfigs[netId].numPreSynNet];
++		dest->stp_sNMDA = new float[networkConfigs[netId].numPreSynNet];
++		dest->stp_rGABAb = new float[networkConfigs[netId].numPreSynNet];
++		dest->stp_sGABAb = new float[networkConfigs[netId].numPreSynNet];
++		dest->withSTP = new bool[networkConfigs[netId].numPreSynNet];
++		dest->delay = new int[networkConfigs[netId].numPreSynNet];
+ 		// dest->stpu = new float[networkConfigs[netId].numPreSynNet * 2];
+ 		// dest->stpx = new float[networkConfigs[netId].numPreSynNet * 2];
+ 	}
+-	memcpy(dest->stp_U, src->stp_U, sizeof(float) * networkConfigs[netId].numPostSynNet);
+-	memcpy(dest->stp_tau_u_inv, src->stp_tau_u_inv, sizeof(float) * networkConfigs[netId].numPostSynNet);
+-	memcpy(dest->stp_tau_x_inv, src->stp_tau_x_inv, sizeof(float) * networkConfigs[netId].numPostSynNet);
+-	memcpy(dest->stp_dAMPA, src->stp_dAMPA, sizeof(float) * networkConfigs[netId].numPostSynNet);
+-	memcpy(dest->stp_dNMDA, src->stp_dNMDA, sizeof(float) * networkConfigs[netId].numPostSynNet);
+-	memcpy(dest->stp_dGABAa, src->stp_dGABAa, sizeof(float) * networkConfigs[netId].numPostSynNet);
+-	memcpy(dest->stp_dGABAb, src->stp_dGABAb, sizeof(float) * networkConfigs[netId].numPostSynNet);
+-	memcpy(dest->stp_rNMDA, src->stp_rNMDA, sizeof(float) * networkConfigs[netId].numPostSynNet);
+-	memcpy(dest->stp_sNMDA, src->stp_sNMDA, sizeof(float) * networkConfigs[netId].numPostSynNet);
+-	memcpy(dest->stp_rGABAb, src->stp_rGABAb, sizeof(float) * networkConfigs[netId].numPostSynNet);
+-	memcpy(dest->stp_sGABAb, src->stp_sGABAb, sizeof(float) * networkConfigs[netId].numPostSynNet);
+-	memcpy(dest->withSTP, src->withSTP, sizeof(bool) * networkConfigs[netId].numPostSynNet);
+-	memcpy(dest->delay, src->delay, sizeof(int) * networkConfigs[netId].numPostSynNet);
++	memcpy(dest->stp_U, src->stp_U, sizeof(float) * networkConfigs[netId].numPreSynNet);
++	memcpy(dest->stp_tau_u_inv, src->stp_tau_u_inv, sizeof(float) * networkConfigs[netId].numPreSynNet);
++	memcpy(dest->stp_tau_x_inv, src->stp_tau_x_inv, sizeof(float) * networkConfigs[netId].numPreSynNet);
++	memcpy(dest->stp_dAMPA, src->stp_dAMPA, sizeof(float) * networkConfigs[netId].numPreSynNet);
++	memcpy(dest->stp_dNMDA, src->stp_dNMDA, sizeof(float) * networkConfigs[netId].numPreSynNet);
++	memcpy(dest->stp_dGABAa, src->stp_dGABAa, sizeof(float) * networkConfigs[netId].numPreSynNet);
++	memcpy(dest->stp_dGABAb, src->stp_dGABAb, sizeof(float) * networkConfigs[netId].numPreSynNet);
++	memcpy(dest->stp_rNMDA, src->stp_rNMDA, sizeof(float) * networkConfigs[netId].numPreSynNet);
++	memcpy(dest->stp_sNMDA, src->stp_sNMDA, sizeof(float) * networkConfigs[netId].numPreSynNet);
++	memcpy(dest->stp_rGABAb, src->stp_rGABAb, sizeof(float) * networkConfigs[netId].numPreSynNet);
++	memcpy(dest->stp_sGABAb, src->stp_sGABAb, sizeof(float) * networkConfigs[netId].numPreSynNet);
++	memcpy(dest->withSTP, src->withSTP, sizeof(bool) * networkConfigs[netId].numPreSynNet);
++	memcpy(dest->delay, src->delay, sizeof(int) * networkConfigs[netId].numPreSynNet);
+ 	// memcpy(dest->stpu, src->stpu, sizeof(float) * networkConfigs[netId].numPreSynNet* 2);
+ 	// memcpy(dest->stpx, src->stpx, sizeof(float) * networkConfigs[netId].numPreSynNet* 2);
+ }
+@@ -2613,6 +2603,10 @@
+ 					sizeof(float) * rate->getNumNeurons());
+ 		}
+ 	}
++
++#if !defined(WIN32) && !defined(WIN64) && !defined(__APPLE__)
++    return NULL;
++#endif
+ }
+ 
+ #if !defined(WIN32) && !defined(WIN64) && !defined(__APPLE__) // Linux or MAC
+@@ -2737,6 +2731,7 @@
+ 	delete [] runtimeData[netId].cumulativePost;
+ 	delete [] runtimeData[netId].cumulativePre;
+ 	delete [] runtimeData[netId].synSpikeTime;
++	delete [] runtimeData[netId].synConductance;
+ 	delete [] runtimeData[netId].wt;
+ 	delete [] runtimeData[netId].wtChange;
+ 	delete [] runtimeData[netId].maxSynWt;
+@@ -2841,6 +2836,10 @@
+ 
+ 	if (runtimeData[netId].randNum != NULL) delete [] runtimeData[netId].randNum;
+ 	runtimeData[netId].randNum = NULL;
++
++#if !defined(WIN32) && !defined(WIN64) && !defined(__APPLE__)
++    return NULL;
++#endif
+ }
+ 
+ #if !defined(WIN32) && !defined(WIN64) && !defined(__APPLE__) // Linux or MAC
+--- a/carlsim/kernel/src/snn_manager.cpp
++++ b/carlsim/kernel/src/snn_manager.cpp
+@@ -813,6 +813,7 @@
+ 	connectConfigMap[connId].STP_tau_u_std = STP_tau_u_std;
+ 	connectConfigMap[connId].STP_tau_x_mean = STP_tau_x_mean;
+ 	connectConfigMap[connId].STP_tau_x_std = STP_tau_x_std;
++    if (STP_tdAMPA_mean>0.0f) { // Disabling via short overload preserves previously configured kinetics.
+ 	connectConfigMap[connId].STP_dAMPA_mean = STP_tdAMPA_mean;
+ 	connectConfigMap[connId].STP_dAMPA_std = STP_tdAMPA_std;
+ 	connectConfigMap[connId].STP_dNMDA_mean = STP_tdNMDA_mean;
+@@ -825,11 +826,15 @@
+ 	connectConfigMap[connId].STP_rNMDA_std = STP_trNMDA_std;
+ 	connectConfigMap[connId].STP_rGABAb_mean = STP_trGABAb_mean;
+ 	connectConfigMap[connId].STP_rGABAb_std = STP_trGABAb_std;
+-	connectConfigMap[connId].stpConfig.WithSTP = true;
+-
+-	sim_with_conductances									|= isSet;
++    }
++	connectConfigMap[connId].stpConfig.WithSTP = isSet;
++
++	sim_with_conductances = true; // Kinetics also apply to static release
+ 	sim_with_stp									|= isSet;
+-	groupConfigMap[preGrpId].stpConfig.WithSTP		= isSet;
++	groupConfigMap[preGrpId].stpConfig.WithSTP = false;
++    for (std::map<int, ConnectConfig>::const_iterator it=connectConfigMap.begin(); it!=connectConfigMap.end(); ++it)
++        if (it->second.grpSrc==preGrpId && it->second.stpConfig.WithSTP)
++            groupConfigMap[preGrpId].stpConfig.WithSTP = true;
+ 
+ 	// groupConfigMap[gGrpId].stpConfig.STP_A			= (STP_U > 0.0f) ? 1.0 / STP_U : 1.0f; // scaling factor
+ 	// groupConfigMap[gGrpId].stpConfig.STP_U 			= STP_U;
+@@ -3043,6 +3048,7 @@
+ 	managerRuntimeData.stp_U           = new float[managerRTDSize.maxNumPreSynNet];
+ 	managerRuntimeData.stp_tau_u_inv           = new float[managerRTDSize.maxNumPreSynNet];
+ 	managerRuntimeData.stp_tau_x_inv           = new float[managerRTDSize.maxNumPreSynNet];
++	managerRuntimeData.synConductance = new float[8*managerRTDSize.maxNumPreSynNet]();
+ 	managerRuntimeData.stp_dAMPA           = new float[managerRTDSize.maxNumPreSynNet];
+ 	managerRuntimeData.stp_dNMDA           = new float[managerRTDSize.maxNumPreSynNet];
+ 	managerRuntimeData.stp_dGABAa           = new float[managerRTDSize.maxNumPreSynNet];
+@@ -3942,24 +3948,34 @@
+ 	connInfo.STP_tau_u_inv = 1.0f;
+ 	connInfo.STP_tau_x_inv = 1.0f;
+ 	connInfo.withSTP = false;
++    connInfo.STP_dAMPA=expf(-1.0f/5.0f); connInfo.STP_dNMDA=expf(-1.0f/150.0f);
++    connInfo.STP_dGABAa=expf(-1.0f/6.0f); connInfo.STP_dGABAb=expf(-1.0f/150.0f);
++    connInfo.STP_rNMDA=0.0f;
++    connInfo.STP_sNMDA=1.0f;
++    connInfo.STP_rGABAb=0.0f;
++    connInfo.STP_sGABAb=1.0f;
++
+ 	
+ 	//KERNEL_INFO("outside netId: %d, grpSrc: %d, grpDest: %d, connId: %d", netId, _grpSrc,_grpDest, connInfo.connId);
+ 	if (connectConfigMap[_connId].stpConfig.WithSTP){
+ 			connInfo.STP_U = generateNormalSample(connectConfigMap[_connId].STP_U_mean, connectConfigMap[_connId].STP_U_std, std::numeric_limits<float>::epsilon(), 1);
+ 			connInfo.STP_tau_u_inv = 1.0f / generateNormalSample(connectConfigMap[_connId].STP_tau_u_mean, connectConfigMap[_connId].STP_tau_u_std, std::numeric_limits<float>::epsilon(), -1);
+ 			connInfo.STP_tau_x_inv = 1.0f / generateNormalSample(connectConfigMap[_connId].STP_tau_x_mean, connectConfigMap[_connId].STP_tau_x_std, std::numeric_limits<float>::epsilon(), -1);
+-			connInfo.STP_dAMPA = 1.0f - 1.0f / generateNormalSample(connectConfigMap[_connId].STP_dAMPA_mean, connectConfigMap[_connId].STP_dAMPA_std, std::numeric_limits<float>::epsilon(), -1);
+-			connInfo.STP_dNMDA = 1.0f - 1.0f / generateNormalSample(connectConfigMap[_connId].STP_dNMDA_mean, connectConfigMap[_connId].STP_dNMDA_std, std::numeric_limits<float>::epsilon(), -1);
+-			connInfo.STP_dGABAa = 1.0f - 1.0f / generateNormalSample(connectConfigMap[_connId].STP_dGABAa_mean, connectConfigMap[_connId].STP_dGABAa_std, std::numeric_limits<float>::epsilon(), -1);
+-			connInfo.STP_dGABAb = 1.0f - 1.0f / generateNormalSample(connectConfigMap[_connId].STP_dGABAb_mean, connectConfigMap[_connId].STP_dGABAb_std, std::numeric_limits<float>::epsilon(), -1);
++			connInfo.withSTP = true;
++	}
++	if (connectConfigMap[_connId].STP_dAMPA_mean > 0.0f) {
++			connInfo.STP_dAMPA = expf(-1.0f / generateNormalSample(connectConfigMap[_connId].STP_dAMPA_mean, connectConfigMap[_connId].STP_dAMPA_std, std::numeric_limits<float>::epsilon(), -1));
++			connInfo.STP_dNMDA = expf(-1.0f / generateNormalSample(connectConfigMap[_connId].STP_dNMDA_mean, connectConfigMap[_connId].STP_dNMDA_std, std::numeric_limits<float>::epsilon(), -1));
++			connInfo.STP_dGABAa = expf(-1.0f / generateNormalSample(connectConfigMap[_connId].STP_dGABAa_mean, connectConfigMap[_connId].STP_dGABAa_std, std::numeric_limits<float>::epsilon(), -1));
++			connInfo.STP_dGABAb = expf(-1.0f / generateNormalSample(connectConfigMap[_connId].STP_dGABAb_mean, connectConfigMap[_connId].STP_dGABAb_std, std::numeric_limits<float>::epsilon(), -1));
+ 		if (connectConfigMap[_connId].STP_rNMDA_mean>0) {
+ // use rise time for NMDA
+ 				sim_with_NMDA_rise = true;
+-				connInfo.STP_rNMDA = 1.0f - 1.0f / generateNormalSample(connectConfigMap[_connId].STP_rNMDA_mean, connectConfigMap[_connId].STP_rNMDA_std, std::numeric_limits<float>::epsilon(), -1);
++				connInfo.STP_rNMDA = expf(-1.0f / generateNormalSample(connectConfigMap[_connId].STP_rNMDA_mean, connectConfigMap[_connId].STP_rNMDA_std, std::numeric_limits<float>::epsilon(), -1));
+ 				// compute max conductance under this model to scale it back to 1
+ 				// otherwise the peak conductance will not be equal to the weight
+-				float trNMDA = -1.0f / (connInfo.STP_rNMDA - 1.0f);
+-				float tdNMDA = -1.0f / (connInfo.STP_dNMDA - 1.0f);
++				float trNMDA = -1.0f / logf(connInfo.STP_rNMDA);
++				float tdNMDA = -1.0f / logf(connInfo.STP_dNMDA);
+ 				float tmax = (-tdNMDA*trNMDA*log(1.0f*trNMDA/tdNMDA))/(tdNMDA-trNMDA); // t at which cond will be max
+ 				connInfo.STP_sNMDA = 1.0f / (exp(-tmax/tdNMDA)-exp(-tmax/trNMDA)); // scaling factor, 1 over max amplitude
+ 				assert(!std::isinf(tmax) && !std::isnan(tmax) && tmax>=0);
+@@ -3968,18 +3984,17 @@
+ 		if (connectConfigMap[_connId].STP_rGABAb_mean>0) {
+ 				// use rise time for GABAb
+ 				sim_with_GABAb_rise = true;
+-				connInfo.STP_rGABAb = 1.0f - 1.0f / generateNormalSample(connectConfigMap[_connId].STP_rGABAb_mean, connectConfigMap[_connId].STP_rGABAb_std, std::numeric_limits<float>::epsilon(), -1);
++				connInfo.STP_rGABAb = expf(-1.0f / generateNormalSample(connectConfigMap[_connId].STP_rGABAb_mean, connectConfigMap[_connId].STP_rGABAb_std, std::numeric_limits<float>::epsilon(), -1));
+ 				// compute max conductance under this model to scale it back to 1
+ 				// otherwise the peak conductance will not be equal to the weight
+-				float trGABAb = -1.0f / (connInfo.STP_rGABAb - 1.0f);
+-				float tdGABAb = -1.0f / (connInfo.STP_dGABAb - 1.0f);
++				float trGABAb = -1.0f / logf(connInfo.STP_rGABAb);
++				float tdGABAb = -1.0f / logf(connInfo.STP_dGABAb);
+ 				float tmax = (-tdGABAb*trGABAb*log(1.0*trGABAb/tdGABAb))/(tdGABAb-trGABAb); // t at which cond will be max
+ 				connInfo.STP_sGABAb = 1.0/(exp(-tmax/tdGABAb)-exp(-tmax/trGABAb)); // scaling factor, 1 over max amplitude
+ 				assert(!std::isinf(tmax) && !std::isnan(tmax));
+ 				assert(!std::isinf(connInfo.STP_sGABAb) && !std::isnan(connInfo.STP_sGABAb) && connInfo.STP_sGABAb>0);
+ 	}
+-			connInfo.withSTP = true;
+-			//KERNEL_INFO("inside netId: %d, grpSrc: %d, grpDest: %d, connId: %d", netId, _grpSrc,_grpDest, connInfo.connId);
++
+ 	}
+ 
+ 	connectionLists[netId].push_back(connInfo);
+@@ -4009,24 +4024,34 @@
+ 	connInfo.STP_tau_u_inv = 1.0f;
+ 	connInfo.STP_tau_x_inv = 1.0f;
+ 	connInfo.withSTP = false;
++    connInfo.STP_dAMPA=expf(-1.0f/5.0f); connInfo.STP_dNMDA=expf(-1.0f/150.0f);
++    connInfo.STP_dGABAa=expf(-1.0f/6.0f); connInfo.STP_dGABAb=expf(-1.0f/150.0f);
++    connInfo.STP_rNMDA=0.0f;
++    connInfo.STP_sNMDA=1.0f;
++    connInfo.STP_rGABAb=0.0f;
++    connInfo.STP_sGABAb=1.0f;
++
+ 
+ 	//KERNEL_INFO("outside netId: %d, grpSrc: %d, grpDest: %d, connId: %d", netId, _grpSrc,_grpDest, connInfo.connId);
+ 	if (connectConfigMap[_connId].stpConfig.WithSTP){
+ 			connInfo.STP_U = generateNormalSample(connectConfigMap[_connId].STP_U_mean, connectConfigMap[_connId].STP_U_std, std::numeric_limits<float>::epsilon(), 1);
+ 			connInfo.STP_tau_u_inv = 1.0f / generateNormalSample(connectConfigMap[_connId].STP_tau_u_mean, connectConfigMap[_connId].STP_tau_u_std, std::numeric_limits<float>::epsilon(), -1);
+ 			connInfo.STP_tau_x_inv = 1.0f / generateNormalSample(connectConfigMap[_connId].STP_tau_x_mean, connectConfigMap[_connId].STP_tau_x_std, std::numeric_limits<float>::epsilon(), -1);
+-			connInfo.STP_dAMPA = 1.0f - 1.0f / generateNormalSample(connectConfigMap[_connId].STP_dAMPA_mean, connectConfigMap[_connId].STP_dAMPA_std, std::numeric_limits<float>::epsilon(), -1);
+-			connInfo.STP_dNMDA = 1.0f - 1.0f / generateNormalSample(connectConfigMap[_connId].STP_dNMDA_mean, connectConfigMap[_connId].STP_dNMDA_std, std::numeric_limits<float>::epsilon(), -1);
+-			connInfo.STP_dGABAa = 1.0f - 1.0f / generateNormalSample(connectConfigMap[_connId].STP_dGABAa_mean, connectConfigMap[_connId].STP_dGABAa_std, std::numeric_limits<float>::epsilon(), -1);
+-			connInfo.STP_dGABAb = 1.0f - 1.0f / generateNormalSample(connectConfigMap[_connId].STP_dGABAb_mean, connectConfigMap[_connId].STP_dGABAb_std, std::numeric_limits<float>::epsilon(), -1);
++			connInfo.withSTP = true;
++	}
++	if (connectConfigMap[_connId].STP_dAMPA_mean > 0.0f) {
++			connInfo.STP_dAMPA = expf(-1.0f / generateNormalSample(connectConfigMap[_connId].STP_dAMPA_mean, connectConfigMap[_connId].STP_dAMPA_std, std::numeric_limits<float>::epsilon(), -1));
++			connInfo.STP_dNMDA = expf(-1.0f / generateNormalSample(connectConfigMap[_connId].STP_dNMDA_mean, connectConfigMap[_connId].STP_dNMDA_std, std::numeric_limits<float>::epsilon(), -1));
++			connInfo.STP_dGABAa = expf(-1.0f / generateNormalSample(connectConfigMap[_connId].STP_dGABAa_mean, connectConfigMap[_connId].STP_dGABAa_std, std::numeric_limits<float>::epsilon(), -1));
++			connInfo.STP_dGABAb = expf(-1.0f / generateNormalSample(connectConfigMap[_connId].STP_dGABAb_mean, connectConfigMap[_connId].STP_dGABAb_std, std::numeric_limits<float>::epsilon(), -1));
+ 		if (connectConfigMap[_connId].STP_rNMDA_mean>0) {
+ // use rise time for NMDA
+ 				sim_with_NMDA_rise = true;
+-				connInfo.STP_rNMDA = 1.0f - 1.0f / generateNormalSample(connectConfigMap[_connId].STP_rNMDA_mean, connectConfigMap[_connId].STP_rNMDA_std, std::numeric_limits<float>::epsilon(), -1);
++				connInfo.STP_rNMDA = expf(-1.0f / generateNormalSample(connectConfigMap[_connId].STP_rNMDA_mean, connectConfigMap[_connId].STP_rNMDA_std, std::numeric_limits<float>::epsilon(), -1));
+ 				// compute max conductance under this model to scale it back to 1
+ 				// otherwise the peak conductance will not be equal to the weight
+-				float trNMDA = -1.0f / (connInfo.STP_rNMDA - 1.0f);
+-				float tdNMDA = -1.0f / (connInfo.STP_dNMDA - 1.0f);
++				float trNMDA = -1.0f / logf(connInfo.STP_rNMDA);
++				float tdNMDA = -1.0f / logf(connInfo.STP_dNMDA);
+ 				float tmax = (-tdNMDA*trNMDA*log(1.0f*trNMDA/tdNMDA))/(tdNMDA-trNMDA); // t at which cond will be max
+ 				connInfo.STP_sNMDA = 1.0f / (exp(-tmax/tdNMDA)-exp(-tmax/trNMDA)); // scaling factor, 1 over max amplitude
+ 				assert(!std::isinf(tmax) && !std::isnan(tmax) && tmax>=0);
+@@ -4035,18 +4060,17 @@
+ 		if (connectConfigMap[_connId].STP_rGABAb_mean>0) {
+ 				// use rise time for GABAb
+ 				sim_with_GABAb_rise = true;
+-				connInfo.STP_rGABAb = 1.0f - 1.0f / generateNormalSample(connectConfigMap[_connId].STP_rGABAb_mean, connectConfigMap[_connId].STP_rGABAb_std, std::numeric_limits<float>::epsilon(), -1);
++				connInfo.STP_rGABAb = expf(-1.0f / generateNormalSample(connectConfigMap[_connId].STP_rGABAb_mean, connectConfigMap[_connId].STP_rGABAb_std, std::numeric_limits<float>::epsilon(), -1));
+ 				// compute max conductance under this model to scale it back to 1
+ 				// otherwise the peak conductance will not be equal to the weight
+-				float trGABAb = -1.0f / (connInfo.STP_rGABAb - 1.0f);
+-				float tdGABAb = -1.0f / (connInfo.STP_dGABAb - 1.0f);
++				float trGABAb = -1.0f / logf(connInfo.STP_rGABAb);
++				float tdGABAb = -1.0f / logf(connInfo.STP_dGABAb);
+ 				float tmax = (-tdGABAb*trGABAb*log(1.0*trGABAb/tdGABAb))/(tdGABAb-trGABAb); // t at which cond will be max
+ 				connInfo.STP_sGABAb = 1.0/(exp(-tmax/tdGABAb)-exp(-tmax/trGABAb)); // scaling factor, 1 over max amplitude
+ 				assert(!std::isinf(tmax) && !std::isnan(tmax));
+ 				assert(!std::isinf(connInfo.STP_sGABAb) && !std::isnan(connInfo.STP_sGABAb) && connInfo.STP_sGABAb>0);
+ 	}
+-			connInfo.withSTP = true;
+-			//KERNEL_INFO("inside netId: %d, grpSrc: %d, grpDest: %d, connId: %d", netId, _grpSrc,_grpDest, connInfo.connId);
++
+ 	}
+ 
+ 	connectionLists[netId].push_back(connInfo);
+@@ -6257,6 +6281,8 @@
+ 	if (managerRuntimeData.stp_U!=NULL) delete[] managerRuntimeData.stp_U;
+ 	if (managerRuntimeData.stp_tau_u_inv!=NULL) delete[] managerRuntimeData.stp_tau_u_inv;
+ 	if (managerRuntimeData.stp_tau_x_inv!=NULL) delete[] managerRuntimeData.stp_tau_x_inv;
++	if (managerRuntimeData.synConductance!=NULL) delete[] managerRuntimeData.synConductance;
++	managerRuntimeData.synConductance=NULL;
+ 	if (managerRuntimeData.stp_dAMPA!=NULL) delete[] managerRuntimeData.stp_dAMPA;
+ 	if (managerRuntimeData.stp_dNMDA!=NULL) delete[] managerRuntimeData.stp_dNMDA;
+ 	if (managerRuntimeData.stp_dGABAa!=NULL) delete[] managerRuntimeData.stp_dGABAa;
+--- a/carlsim/kernel/src/gpu_module/snn_gpu_module.cu
++++ b/carlsim/kernel/src/gpu_module/snn_gpu_module.cu
+@@ -822,99 +822,40 @@
+ 					// load the synaptic weight for the wtId'th input
+ 					float change = runtimeDataGPU.wt[cum_pos + wtId];
+ 
+-					// Adjust the weight according to STP scaling
+-					if (groupConfigsGPU[preGrpId].WithSTP) {
+-						//int tD = 0; // \FIXME find delay
+-						int pos = cum_pos + wtId;
+-						// \FIXME I think pre_nid needs to be adjusted for the delay
+-						int ind_minus = getSTPBufPos(pos, (simTime - 1)); // \FIXME should be adjusted for delay
+-						int ind_plus = getSTPBufPos(pos, (simTime));
+-						// dI/dt = -I/tau_S + A * u^+ * x^- * \delta(t-t_{spk})
+-
+-						if (runtimeDataGPU.withSTP[pos]){
+-							// at this point, stpu[ind_plus] has already been assigned, and the decay applied
+-							// so add the spike-dependent part to that
+-							// du/dt = -u/tau_F + U * (1-u^-) * \delta(t-t_{spk})
+-							runtimeDataGPU.stpu[ind_plus] += runtimeDataGPU.stp_U[pos] * (1.0f - runtimeDataGPU.stpu[ind_minus]);
+-
+-							// dx/dt = (1-x)/tau_D - u^+ * x^- * \delta(t-t_{spk})
+-							runtimeDataGPU.stpx[ind_plus] -= runtimeDataGPU.stpu[ind_plus] * runtimeDataGPU.stpx[ind_minus];
+-
+-							float STP_A = (runtimeDataGPU.stp_U[pos] > 0.0f) ? 1.0 / runtimeDataGPU.stp_U[pos] : 1.0f;
+-							change *= STP_A * runtimeDataGPU.stpx[ind_minus] * runtimeDataGPU.stpu[ind_plus];
+-
+-						if (networkConfigGPU.sim_with_conductances) {
+-							short int connId = runtimeDataGPU.connIdsPreIdx[cum_pos+wtId];
+-							if (type & TARGET_AMPA)
+-								AMPA_sum += change * d_mulSynFast[connId];
+-// 								AMPA_sum += change * d_mulSynFast[connId] * runtimeDataGPU.stp_dAMPA[pos];
+-							if (type & TARGET_NMDA) {
+-								if (networkConfigGPU.sim_with_NMDA_rise) {
+-// 									NMDA_r_sum += change * d_mulSynSlow[connId] * networkConfigGPU.sNMDA;
+-// 									NMDA_d_sum += change * d_mulSynSlow[connId] * networkConfigGPU.sNMDA;
+-									NMDA_r_sum += change * d_mulSynSlow[connId] * runtimeDataGPU.stp_sNMDA[pos];
+-									NMDA_d_sum += change * d_mulSynSlow[connId] * runtimeDataGPU.stp_sNMDA[pos];
+-								} else {
+-									NMDA_sum += change * d_mulSynSlow[connId];
+-// 									NMDA_sum += change * d_mulSynSlow[connId] * runtimeDataGPU.stp_dNMDA[pos];
+-								}
+-							}
+-							if (type & TARGET_GABAa)
+-								GABAa_sum += change * d_mulSynFast[connId];	// wt should be negative for GABAa and GABAb
+-// 								GABAa_sum += change * d_mulSynFast[connId] * runtimeDataGPU.stp_dGABAa[pos];	// wt should be negative for GABAa and GABAb
+-							if (type & TARGET_GABAb) {						// but that is dealt with below
+-								if (networkConfigGPU.sim_with_GABAb_rise) {
+-// 									GABAb_r_sum += change * d_mulSynSlow[connId] * networkConfigGPU.sGABAb;
+-// 									GABAb_d_sum += change * d_mulSynSlow[connId] * networkConfigGPU.sGABAb;
+-									GABAb_r_sum += change * d_mulSynSlow[connId] * runtimeDataGPU.stp_sGABAb[pos];
+-									GABAb_d_sum += change * d_mulSynSlow[connId] * runtimeDataGPU.stp_sGABAb[pos];
+-								} else {
+-									GABAb_sum += change * d_mulSynSlow[connId];
+-// 									GABAb_sum += change * d_mulSynSlow[connId] * runtimeDataGPU.stp_dGABAb[pos];
+-								}
+-							}
+-						}
+-						else {
+-							// current based model with STP (CUBA)
+-							// updated current for neuron 'post_nid'
+-							AMPA_sum += change;
+-						}
+-
+-							// if((simTime % 100) && pos == 0){
+-							// 	printf("spike update:: simtime:%d, postNid:%d -- pos:%d -- stpu: %f/%f -- stpx: %f/%f -- imin: %d -- iplus: %d\n", simTime, postNId, pos, runtimeDataGPU.stpu[ind_minus], runtimeDataGPU.stpu[ind_plus],
+-							// 	runtimeDataGPU.stpx[ind_minus], runtimeDataGPU.stpx[ind_plus], ind_minus, ind_plus);
+-							// }
+-						}
+-					}
+-
+-// 					if (networkConfigGPU.sim_with_conductances) {
+-// 						short int connId = runtimeDataGPU.connIdsPreIdx[cum_pos+wtId];
+-// 						if (type & TARGET_AMPA)
+-// 							AMPA_sum += change * d_mulSynFast[connId];
+-// 						if (type & TARGET_NMDA) {
+-// 							if (networkConfigGPU.sim_with_NMDA_rise) {
+-// 								NMDA_r_sum += change * d_mulSynSlow[connId] * networkConfigGPU.sNMDA;
+-// 								NMDA_d_sum += change * d_mulSynSlow[connId] * networkConfigGPU.sNMDA;
+-// 							} else {
+-// 								NMDA_sum += change * d_mulSynSlow[connId];
+-// 							}
+-// 						}
+-// 						if (type & TARGET_GABAa)
+-// 							GABAa_sum += change * d_mulSynFast[connId];	// wt should be negative for GABAa and GABAb
+-// 						if (type & TARGET_GABAb) {						// but that is dealt with below
+-// 							if (networkConfigGPU.sim_with_GABAb_rise) {
+-// 								GABAb_r_sum += change * d_mulSynSlow[connId] * networkConfigGPU.sGABAb;
+-// 								GABAb_d_sum += change * d_mulSynSlow[connId] * networkConfigGPU.sGABAb;
+-// 							} else {
+-// 								GABAb_sum += change * d_mulSynSlow[connId];
+-// 							}
+-// 						}
+-// 					}
+-// 					else {
+-// 						// current based model with STP (CUBA)
+-// 						// updated current for neuron 'post_nid'
+-// 						AMPA_sum += change;
+-// 					}
++                    int pos=cum_pos+wtId;
++                    if(runtimeDataGPU.withSTP[pos]) {
++                        int now=getSTPBufPos(pos,simTime);
++                        float u=runtimeDataGPU.stpu[now], x=runtimeDataGPU.stpx[now];
++                        u+=runtimeDataGPU.stp_U[pos]*(1.0f-u);
++                        change*=u*x/runtimeDataGPU.stp_U[pos];
++                        runtimeDataGPU.stpu[now]=u;
++                        runtimeDataGPU.stpx[now]=x*(1.0f-u);
++                    }
++                    short int connId=runtimeDataGPU.connIdsPreIdx[pos];
++
++    if (networkConfigGPU.sim_with_conductances) {
++        float impulse[8]={0};
++        bool nr=runtimeDataGPU.stp_rNMDA[pos]>0.0f, gr=runtimeDataGPU.stp_rGABAb[pos]>0.0f;
++        if (type&TARGET_AMPA) impulse[0]=change*d_mulSynFast[connId];
++        if (type&TARGET_NMDA) {
++            float value=change*d_mulSynSlow[connId]*(nr?runtimeDataGPU.stp_sNMDA[pos]:1.0f);
++            if (networkConfigGPU.sim_with_NMDA_rise) { impulse[3]=value; impulse[2]=nr?value:0.0f; } else impulse[1]=value;
++        }
++        if (type&TARGET_GABAa) impulse[4]=-change*d_mulSynFast[connId];
++        if (type&TARGET_GABAb) {
++            float value=-change*d_mulSynSlow[connId]*(gr?runtimeDataGPU.stp_sGABAb[pos]:1.0f);
++            if (networkConfigGPU.sim_with_GABAb_rise) { impulse[7]=value; impulse[6]=gr?value:0.0f; } else impulse[5]=value;
++        }
++        for(int c=0;c<8;++c) runtimeDataGPU.synConductance[8*pos+c]+=impulse[c];
++        runtimeDataGPU.gAMPA[postNId]+=impulse[0];
++        if (!networkConfigGPU.sim_with_NMDA_rise) runtimeDataGPU.gNMDA[postNId]+=impulse[1];
++        if (networkConfigGPU.sim_with_NMDA_rise) runtimeDataGPU.gNMDA_r[postNId]+=impulse[2];
++        if (networkConfigGPU.sim_with_NMDA_rise) runtimeDataGPU.gNMDA_d[postNId]+=impulse[3];
++        runtimeDataGPU.gGABAa[postNId]+=impulse[4];
++        if (!networkConfigGPU.sim_with_GABAb_rise) runtimeDataGPU.gGABAb[postNId]+=impulse[5];
++        if (networkConfigGPU.sim_with_GABAb_rise) runtimeDataGPU.gGABAb_r[postNId]+=impulse[6];
++        if (networkConfigGPU.sim_with_GABAb_rise) runtimeDataGPU.gGABAb_d[postNId]+=impulse[7];
++    } else { AMPA_sum+=change; }
+ 
+ 					tmp_I_cnt++;
+ 					tmp_I_set = tmp_I_set & (~(1 << (8 * cnt + wt_i)));
+@@ -925,10 +866,10 @@
+ 				if(tmp_I_cnt)
+ 					*tmp_I_set_p = 0;
+ 
+-				__syncthreads();
++				
+ 			}
+ 
+-			//__syncthreads();
++			//
+ 
+ 			// P6-2
+ 			if (networkConfigGPU.sim_with_conductances) {
+@@ -1445,100 +1386,34 @@
+  * rtd access gAMPA, gNMDA_r, gNMDA_d, gNMDA, gBABAa, gGABAb_r, gGABAb_d, gGABAb
+  * rtd access stpu, stpx
+  */
+-__global__ void kernel_STPUpdateAndDecayConductances (int t, int sec, int simTime) {
+-	const int totBuffers = loadBufferCount;
+-
+-	for (int bufPos = blockIdx.x; bufPos < totBuffers; bufPos += gridDim.x) {
+-		// KILLME !!! This can be further optimized ....
+-		// instead of reading each neuron group separately .....
+-		// read a whole buffer and use the result ......
+-		int2 threadLoad = getStaticThreadLoad(bufPos);
+-		int nid			= (STATIC_LOAD_START(threadLoad) + threadIdx.x);
+-		int lastId		= STATIC_LOAD_SIZE(threadLoad);
+-		//int grpId		= STATIC_LOAD_GROUP(threadLoad);
+-
+-
+-// 		// update the conductane parameter of the current neron
+-// 		if (networkConfigGPU.sim_with_conductances && IS_REGULAR_NEURON(nid, networkConfigGPU.numNReg, networkConfigGPU.numNPois)) {
+-// 			runtimeDataGPU.gAMPA[nid]       *= networkConfigGPU.dAMPA;
+-// 			if (networkConfigGPU.sim_with_NMDA_rise) {
+-// 				runtimeDataGPU.gNMDA_r[nid] *= networkConfigGPU.rNMDA;
+-// 				runtimeDataGPU.gNMDA_d[nid] *= networkConfigGPU.dNMDA;
+-// 			} else {
+-// 				runtimeDataGPU.gNMDA[nid] *= networkConfigGPU.dNMDA;
+-// 			}
+-// 			runtimeDataGPU.gGABAa[nid] *= networkConfigGPU.dGABAa;
+-// 			if (networkConfigGPU.sim_with_GABAb_rise) {
+-// 				runtimeDataGPU.gGABAb_r[nid] *= networkConfigGPU.rGABAb;
+-// 				runtimeDataGPU.gGABAb_d[nid] *= networkConfigGPU.dGABAb;
+-// 			} else {
+-// 				runtimeDataGPU.gGABAb[nid] *= networkConfigGPU.dGABAb;
+-// 			}
+-// 		}
+-
+-		// printf("outside decay update:: simtime:%d, postNid:%d, grpId:%d, groupConfigsGPU[grpId].withSTP: %s \n", simTime, nid, grpId, groupConfigsGPU[grpId].WithSTP ? "True" : "False");
+-
+-		// if (groupConfigsGPU[grpId].WithSTP && (threadIdx.x < lastId) && (nid < networkConfigGPU.numN)) {
+-		// 	unsigned int offset = runtimeDataGPU.cumulativePre[nid];
+-		// 	printf("outside decay update loop:: simtime:%d -- postNid:%d -- offset:%d -- npre:%d\n", simTime, nid, offset, runtimeDataGPU.Npre[nid]);
+-		// 	for (int j = 0; j < runtimeDataGPU.Npre[nid]; j++) {
+-		// 		printf("inside decay update loop:: simtime:%d -- postNid:%d -- offset:%d -- npre:%d\n", simTime, nid, offset, runtimeDataGPU.Npre[nid]);
+-		// 		int lSId = offset + j;
+-		// 		if (runtimeDataGPU.withSTP[lSId]){
+-		// 			int ind_minus = getSTPBufPos(lSId, (simTime - 1)); // \FIXME should be adjusted for delay
+-		// 			int ind_plus = getSTPBufPos(lSId, (simTime));
+-
+-		// 			runtimeDataGPU.stpu[ind_plus] = runtimeDataGPU.stpu[ind_minus]*(1.0f- runtimeDataGPU.stp_tau_u_inv[lSId]);
+-		// 			runtimeDataGPU.stpx[ind_plus] = runtimeDataGPU.stpx[ind_minus] + (1.0f-runtimeDataGPU.stpx[ind_minus])* runtimeDataGPU.stp_tau_x_inv[lSId];
+-
+-		// 			printf("decay update:: simtime:%d, postNid:%d -- pos:%d -- stpu: %f/%f -- stpx: %f/%f\n", simTime, nid, lSId, runtimeDataGPU.stpu[ind_minus], runtimeDataGPU.stpu[ind_plus],
+-		// 			runtimeDataGPU.stpx[ind_minus], runtimeDataGPU.stpx[ind_plus]);
+-					
+-		// 		}
+-		// 	}
+-			if ((threadIdx.x < lastId) && (nid < networkConfigGPU.numN)) {
+-				unsigned int offset = runtimeDataGPU.cumulativePre[nid];
+-				// printf("outside decay update loop:: simtime:%d -- postNid:%d -- offset:%d -- npre:%d\n", simTime, nid, offset, runtimeDataGPU.Npre[nid]);
+-				for (int j = 0; j < runtimeDataGPU.Npre[nid]; j++) {
+-					// printf("inside decay update loop:: simtime:%d -- postNid:%d -- offset:%d -- npre:%d\n", simTime, nid, offset, runtimeDataGPU.Npre[nid]);
+-					int lSId = offset + j;
+-
+-					// update the conductane parameter of the current neron
+-					if (networkConfigGPU.sim_with_conductances && IS_REGULAR_NEURON(nid, networkConfigGPU.numNReg, networkConfigGPU.numNPois)){
+-						runtimeDataGPU.gAMPA[nid]       *= runtimeDataGPU.stp_dAMPA[lSId];
+-						if (networkConfigGPU.sim_with_NMDA_rise) {
+-							runtimeDataGPU.gNMDA_r[nid] *= runtimeDataGPU.stp_rNMDA[lSId];
+-							runtimeDataGPU.gNMDA_d[nid] *= runtimeDataGPU.stp_dNMDA[lSId];
+-						} else {
+-							runtimeDataGPU.gNMDA[nid] *= runtimeDataGPU.stp_dNMDA[lSId];
+-						}
+-						runtimeDataGPU.gGABAa[nid] *= runtimeDataGPU.stp_dGABAa[lSId];
+-						if (networkConfigGPU.sim_with_GABAb_rise) {
+-							runtimeDataGPU.gGABAb_r[nid] *= runtimeDataGPU.stp_rGABAb[lSId];
+-							runtimeDataGPU.gGABAb_d[nid] *= runtimeDataGPU.stp_dGABAb[lSId];
+-						} else {
+-							runtimeDataGPU.gGABAb[nid] *= runtimeDataGPU.stp_dGABAb[lSId];
+-						}
+-					}
+-
+-					if (runtimeDataGPU.withSTP[lSId]){
+-						int ind_minus = getSTPBufPos(lSId, (simTime - 1)); // \FIXME should be adjusted for delay
+-						int ind_plus = getSTPBufPos(lSId, (simTime));
+-	
+-						runtimeDataGPU.stpu[ind_plus] = runtimeDataGPU.stpu[ind_minus]*(1.0f- runtimeDataGPU.stp_tau_u_inv[lSId]);
+-						runtimeDataGPU.stpx[ind_plus] = runtimeDataGPU.stpx[ind_minus] + (1.0f-runtimeDataGPU.stpx[ind_minus])* runtimeDataGPU.stp_tau_x_inv[lSId];
+-						// if(simTime <10){
+-						// 	printf("decay update:: simtime:%d, postNid:%d -- pos:%d -- stpu: %f/%f -- stpx: %f/%f -- tauu_inv: %f -- taux_inv: %f -- imin: %d -- iplus: %d\n", simTime, nid, lSId, runtimeDataGPU.stpu[ind_minus], runtimeDataGPU.stpu[ind_plus],
+-						// 		runtimeDataGPU.stpx[ind_minus], runtimeDataGPU.stpx[ind_plus], runtimeDataGPU.stp_tau_u_inv[lSId], runtimeDataGPU.stp_tau_x_inv[lSId], ind_minus, ind_plus);
+-						// }
+-					}
+-				}
+-	
+-
+-			// int ind_plus  = getSTPBufPos(nid, simTime);
+-			// int ind_minus = getSTPBufPos(nid, (simTime-1)); // \FIXME sure?
+-		}
+-	}
++__global__ void kernel_STPUpdateAndDecayConductances(int t,int sec,int simTime) {
++    RuntimeData& data=runtimeDataGPU;
++    for (int nid=blockIdx.x*blockDim.x+threadIdx.x; nid<networkConfigGPU.numN; nid+=blockDim.x*gridDim.x) {
++        float sums[8]={0};
++        unsigned int offset=data.cumulativePre[nid];
++        for (int j=0; j<data.Npre[nid]; ++j) {
++            int pos=offset+j;
++            if (data.withSTP[pos]) {
++                int prev=getSTPBufPos(pos,simTime-1), now=getSTPBufPos(pos,simTime);
++                data.stpu[now]=data.stpu[prev]*expf(-data.stp_tau_u_inv[pos]);
++                data.stpx[now]=1.0f-(1.0f-data.stpx[prev])*expf(-data.stp_tau_x_inv[pos]);
++            }
++            if (networkConfigGPU.sim_with_conductances && nid<networkConfigGPU.numNReg) {
++                float factors[8]={data.stp_dAMPA[pos],data.stp_dNMDA[pos],data.stp_rNMDA[pos],data.stp_dNMDA[pos],data.stp_dGABAa[pos],data.stp_dGABAb[pos],data.stp_rGABAb[pos],data.stp_dGABAb[pos]};
++                for(int c=0;c<8;++c) { data.synConductance[8*pos+c]*=factors[c]; sums[c]+=data.synConductance[8*pos+c]; }
++            }
++        }
++        if(networkConfigGPU.sim_with_conductances && nid<networkConfigGPU.numNReg) {
++            data.gAMPA[nid]=sums[0];
++            if (!networkConfigGPU.sim_with_NMDA_rise) data.gNMDA[nid]=sums[1];
++            if (networkConfigGPU.sim_with_NMDA_rise) data.gNMDA_r[nid]=sums[2];
++            if (networkConfigGPU.sim_with_NMDA_rise) data.gNMDA_d[nid]=sums[3];
++            data.gGABAa[nid]=sums[4];
++            if (!networkConfigGPU.sim_with_GABAb_rise) data.gGABAb[nid]=sums[5];
++            if (networkConfigGPU.sim_with_GABAb_rise) data.gGABAb_r[nid]=sums[6];
++            if (networkConfigGPU.sim_with_GABAb_rise) data.gGABAb_d[nid]=sums[7];
++        }
++    }
+ }
+ 
+ //********************************UPDATE SYNAPTIC WEIGHTS EVERY SECOND  *************************************************************
+@@ -2979,6 +2854,9 @@
+ 
+ 	assert(networkConfigs[netId].numPreSynNet > 0);
+ 
++	if (allocateMem) CUDA_CHECK_ERRORS(cudaMalloc((void**)&dest->synConductance, sizeof(float)*8*networkConfigs[netId].numPreSynNet));
++	CUDA_CHECK_ERRORS(cudaMemcpy(dest->synConductance, src->synConductance, sizeof(float)*8*networkConfigs[netId].numPreSynNet, kind));
++
+ 	// synaptic information based
+ 	if(allocateMem)
+ 		CUDA_CHECK_ERRORS(cudaMalloc((void**)&dest->wt, sizeof(float) * networkConfigs[netId].numPreSynNet));
+@@ -3285,6 +3163,7 @@
+ 	CUDA_CHECK_ERRORS( cudaFree(runtimeData[netId].cumulativePost) );
+ 	CUDA_CHECK_ERRORS( cudaFree(runtimeData[netId].cumulativePre) );
+ 	CUDA_CHECK_ERRORS( cudaFree(runtimeData[netId].synSpikeTime) );
++	CUDA_CHECK_ERRORS( cudaFree(runtimeData[netId].synConductance) );
+ 	CUDA_CHECK_ERRORS( cudaFree(runtimeData[netId].wt) );
+ 	CUDA_CHECK_ERRORS( cudaFree(runtimeData[netId].wtChange) );
+ 	CUDA_CHECK_ERRORS( cudaFree(runtimeData[netId].maxSynWt) );

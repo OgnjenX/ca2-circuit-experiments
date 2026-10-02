@@ -14,10 +14,11 @@ cases=[]
 for silent in [0,1,31,91,255]:cases.append((f'silent-{silent}',80,[edge(n=1+silent)],0))
 for stp in [False,True]:
  for rise in [0,2]:
-  for reverse in [0,1]:
+  for reverse in [0,1,2]:
    cases.append((f'components-stp{stp}-rise{rise}-order{reverse}',1080,[edge(n=3,active=2,stp=stp,rise=rise,events=(0,20,200,999,1000,1001)),edge(n=5,active=3,tau=9,stp=not stp,rise=0,inh=True,delay=5,events=(0,20,200,999,1000,1001)),edge(tau=12,stp=False,rise=0,events=(10,30))],reverse))
+cases.append(('pure-static',1080,[edge(stp=False,events=(0,20,999,1000,1001)),edge(stp=False,inh=True,tau=9,rise=2,delay=5,events=(0,20,999,1000,1001))],0))
 cases.append(('reset-repeat',80,[edge()],0))
-if a.historical:cases=cases[:5]
+if a.historical:cases=[(name,duration,edges,1) for name,duration,edges,_ in cases[:5]]
 results=[]
 for mode in ['cpu','gpu']:
  for name,duration,edges,order in cases:

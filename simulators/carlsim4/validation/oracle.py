@@ -7,7 +7,7 @@ def expected(duration, edges, static=False):
     for edge in edges:
         td=edge['tau']; rise=edge['rise']; u=0.; x=1.; last=None
         for emit in edge['events']:
-            arrival=emit+edge['delay']
+            arrival=emit+edge['delay']-1 # readback after tick t; delay=1 is delivered in emission tick
             release=1.
             if edge['stp'] and not static:
                 if last is not None:
