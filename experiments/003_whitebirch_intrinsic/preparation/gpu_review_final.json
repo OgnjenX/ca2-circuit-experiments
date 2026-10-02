@@ -1,0 +1,50 @@
+{
+  "review_kind": "Independent static pre-run final GPU and numerical-controller review",
+  "approved_for_numerical_execution": true,
+  "approval_scope": "Reviewed implementation may execute only after its committed preregistration and existing readiness gates pass. This is not approval of numerical or biological results.",
+  "neuron_runs_executed_by_reviewer": false,
+  "biological_agreement_outputs_inspected": false,
+  "preregistration_manifest_status_at_review": "Pending creation and commit; expected schema inspected from runtime/stage code. Authoritative gates must verify committed sha256 map and runtime_pins before execution.",
+  "reviewed_artifact_sha256": {
+    "preparation/build_driver.py": "1f4cb3500ff861ec4ba8ea48b239f7190a5cac9b0e0b0f9774bb1d894a233172",
+    "preparation/gpu_harness.cpp": "8f841eb794b70813068f50216683edf8ae907220fead9e6a449d0905e2f6a0b1",
+    "revisions/002/numerics.py": "d0868fd55c116e54f63ff4b99311b2b46e353586479f926f0fb994e84f0ff611",
+    "revisions/002/verify_stages.py": "c4a62dbb8be5a87a15fcd4a834e129ccfe1f4d00225bab0d51c6c61310ba2920",
+    "data/workspaces/003-whitebirch-gpu-pre-freeze-v7/gpu_harness": "0c3c73f206b36a3505209144633c6560c5e235d1d9742ee81852c2b1b56e8d3c",
+    "backend_static_library": "0a113b96470ce862f32e6494f899b237e45542a7fa5089ad7e3e027fdc404895"
+  },
+  "resolved_previous_findings": [
+    "Runtime checker binds actual frozen build_record bytes and backend/library/source/header/executable/harness/driver identities, verifies resolved dynamic dependencies and rejects loader overrides before each native process.",
+    "Native exit status, stdout, stderr and configuration/failure metadata are preserved before raising; failed runs cannot silently continue.",
+    "Stage verifier now separates source sufficiency, committed implementation, runtime/dependency availability, numerical readiness, scoring validity and measurement comparability.",
+    "Numerical controller requires each trace's adjacent stdout, stderr and exit JSON; checks exit0, frozen commit, metadata_matches_freeze, no failure; revalidates actual stdout through frozen driver's exact configuration checker and requires exit metadata equality.",
+    "Primary independent clock-reference reset invariants and holding boundary checks are explicitly audited for both refinements and required in aggregate numerical pass.",
+    "Primary same-grid numerical checks and separate production timestep refinement retain counts, phases, ordering, crossing/detection times, reset states and holding checks. Immediate-reset diagnostic remains separate and is never selected by fit."
+  ],
+  "generic_test_evidence": {
+    "command": ".venv-whitebirch/bin/python experiments/003_whitebirch_intrinsic/revisions/002/tests_unit.py",
+    "result": "9 tests passed",
+    "scope": "Generic synthetic metadata, reset/refractory traces, completeness, clocks, native sidecars, reference reset invariants and endpoint/detector tests; no ODE integration or biological scoring."
+  },
+  "static_GPU_findings": [
+    "Fresh GPU simulator per sweep; target V/nextV/u/refcounter/curSpike initialization occurs before runNetwork and roundtrips float32. Inspected unchanged manager run path does not overwrite initialized neuron state.",
+    "Silent zero-weight auxiliary connection supplies allocation requirements without events/current or synthetic biological replication.",
+    "Observer follows unchanged original GPU substep DtoD nextVoltage-to-voltage copy, reads state synchronously through real DtoH and performs no state writes during recording.",
+    "Clock labels match inspected simTime ordering; sticky curSpike is audited as reset evidence rather than counted as APs.",
+    "Initial v6 static disassembly showed globalStateUpdate_N_GPU calling __wrap_cudaMemcpy; unchanged harness v7 retains this linkage design. Compile records pin GPU archive/source identity and reject duplicate interface archive selection.",
+    "Independent reference reflects strict previous-state threshold detection, reset-only iteration, millisecond refractory freeze/decrement and voltage floor; it integrates with DOP853 rather than production RK4."
+  ],
+  "source_consistency_review": {
+    "target": "Only published blue NON-PILO control cohort; nine visible means reconciled by two model-blind passes with union bounds; 100pA mean remains null with conditional [0,1.2]Hz interval; SEM endpoints remain missing.",
+    "resolution_statement": "Largest recovered official publisher asset is a supported claim; no absolute highest-possible claim is needed under explicitly conservative conditional interval policy.",
+    "conditional_limit": "Raster alone cannot establish plotted-but-hidden versus omitted 100pA marker. Full ten-current metrics must remain conditional bounds, with no hidden-point estimate or midpoint.",
+    "model_source_note": "Exact archived CSV vector remains unchanged. Original immediate-reset field in model_configuration is clarified by user_selected_semantics and revision2 primary/diagnostic protocol, rather than silently redefining the backend."
+  },
+  "limitations": [
+    "No native neuron execution or numerical-reference integration was performed in this review; runtime allocation, holding drift, trace completeness and numerical gates remain unverified until execution.",
+    "Unsupported internal initial-state access and synchronous observer barriers are documented and pinned; static review establishes design, not runtime fidelity.",
+    "Native float32 parameter/current/state/timestep arithmetic differs from float64 exact-grid reference arithmetic; differences must be measured against preregistered engineering criteria.",
+    "A numerical pass verifies implementation under specified semantics and cannot establish population biological equivalence or validate synapses, networks or Hippocampome generally."
+  ],
+  "remaining_pre_run_implementation_blockers": []
+}

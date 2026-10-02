@@ -1,0 +1,315 @@
+{
+  "extraction_pass": "recovery B",
+  "model_blind": true,
+  "original_frozen_extraction_preserved": true,
+  "source": {
+    "path": "source-recovery/publisher-figure1.jpg",
+    "official_url": "https://ars.els-cdn.com/content/image/1-s2.0-S0896627322006651-gr1_lrg.jpg",
+    "dimensions_px": [
+      3362,
+      3626
+    ],
+    "sha256": "ff69a7084a5ba949ac617790df5470826d1a1f828a20aefbe3d7703c248c3d69",
+    "resolution": "official publisher 500dpiHiRes supplied by parent recovery; highest recovered official Figure1 asset",
+    "coordinate_system": "global original zero based pixels, origin top left"
+  },
+  "control_identity": "Figure1C blue open circles legend control; red open circles PILO-SE. Only blue points used.",
+  "calibration": {
+    "x_ticks": [
+      [
+        2565,
+        0
+      ],
+      [
+        2810,
+        400
+      ],
+      [
+        2933,
+        600
+      ],
+      [
+        3055,
+        800
+      ],
+      [
+        3178,
+        1000
+      ]
+    ],
+    "x_formula": "I_pA=(x-2565)*1000/613",
+    "y_ticks": [
+      [
+        844,
+        0
+      ],
+      [
+        721,
+        5
+      ],
+      [
+        599,
+        10
+      ],
+      [
+        476,
+        15
+      ],
+      [
+        354,
+        20
+      ],
+      [
+        232,
+        25
+      ]
+    ],
+    "y_formula": "f_Hz=(844-y)/24.48",
+    "y_origin_uncertainty_px": 1,
+    "y_scale_interval_px_per_Hz": [
+      24.43,
+      24.53
+    ]
+  },
+  "method": "Independently inspected publisher panel crop [2350,160,3290,1040]. Read dark tick centers. For clear rings, thresholded connected white-interior pixels R,G,B>220 and computed centroids, checked blue perimeter visually. For200 and300 used remaining lower blue perimeter instead of overwritten white interior; radius approximately21px matched clear marker geometry. 200 lower boundary y864, center843.3; 300 lower boundary y858, center837.0. No pass A or model output viewed.",
+  "uncertainty": "Intervals combine2px centroid/perimeter reading for400..1000,3px for200..300,1px axis origin and24.43..24.53px/Hz scale; clipped to physical nonnegative rate. Digitization bounds only, neither CI nor SEM.",
+  "rows": [
+    {
+      "current_pA": 100,
+      "mean_pixel_xy": null,
+      "mean_Hz": null,
+      "mean_reading_interval_Hz": null,
+      "mean_y_uncertainty_px": null,
+      "visibility": "fully_occluded",
+      "sem_upper_pixel_y": null,
+      "sem_lower_pixel_y": null,
+      "SEM_Hz": null,
+      "SEM_status": "No independent upper/lower endpoint visible; hidden or absent is unresolved",
+      "conditional_occlusion_interval_Hz": [
+        0,
+        1.0
+      ],
+      "conditional_interval_is_primary_data": false
+    },
+    {
+      "current_pA": 200,
+      "mean_pixel_xy": [
+        2687.89,
+        843.3
+      ],
+      "mean_Hz": 0.028594771241831924,
+      "mean_reading_interval_Hz": [
+        0,
+        0.192386410151455
+      ],
+      "mean_y_uncertainty_px": 3,
+      "visibility": "partial_blue_ring",
+      "sem_upper_pixel_y": null,
+      "sem_lower_pixel_y": null,
+      "SEM_Hz": null,
+      "SEM_status": "No independent upper/lower endpoint visible; hidden or absent is unresolved",
+      "conditional_occlusion_interval_Hz": null,
+      "conditional_interval_is_primary_data": null
+    },
+    {
+      "current_pA": 300,
+      "mean_pixel_xy": [
+        2749.041,
+        837.0
+      ],
+      "mean_Hz": 0.28594771241830064,
+      "mean_reading_interval_Hz": [
+        0.12229922543823889,
+        0.4502660663119116
+      ],
+      "mean_y_uncertainty_px": 3,
+      "visibility": "partial_blue_ring",
+      "sem_upper_pixel_y": null,
+      "sem_lower_pixel_y": null,
+      "SEM_Hz": null,
+      "SEM_status": "No independent upper/lower endpoint visible; hidden or absent is unresolved",
+      "conditional_occlusion_interval_Hz": null,
+      "conditional_interval_is_primary_data": null
+    },
+    {
+      "current_pA": 400,
+      "mean_pixel_xy": [
+        2810.339,
+        799.335
+      ],
+      "mean_Hz": 1.8245506535947698,
+      "mean_reading_interval_Hz": [
+        1.6985324092947396,
+        1.9510847318870226
+      ],
+      "mean_y_uncertainty_px": 2,
+      "visibility": "visible_blue_ring_and_white_interior",
+      "sem_upper_pixel_y": null,
+      "sem_lower_pixel_y": null,
+      "SEM_Hz": null,
+      "SEM_status": "No independent upper/lower endpoint visible; hidden or absent is unresolved",
+      "conditional_occlusion_interval_Hz": null,
+      "conditional_interval_is_primary_data": null
+    },
+    {
+      "current_pA": 500,
+      "mean_pixel_xy": [
+        2871.5,
+        734.465
+      ],
+      "mean_Hz": 4.474468954248365,
+      "mean_reading_interval_Hz": [
+        4.343049327354259,
+        4.6064265247646325
+      ],
+      "mean_y_uncertainty_px": 2,
+      "visibility": "visible_blue_ring_and_white_interior",
+      "sem_upper_pixel_y": null,
+      "sem_lower_pixel_y": null,
+      "SEM_Hz": null,
+      "SEM_status": "No independent upper/lower endpoint visible; hidden or absent is unresolved",
+      "conditional_occlusion_interval_Hz": null,
+      "conditional_interval_is_primary_data": null
+    },
+    {
+      "current_pA": 600,
+      "mean_pixel_xy": [
+        2932.682,
+        659.878
+      ],
+      "mean_Hz": 7.521323529411763,
+      "mean_reading_interval_Hz": [
+        7.383693436608232,
+        7.659516987310682
+      ],
+      "mean_y_uncertainty_px": 2,
+      "visibility": "visible_blue_ring_and_white_interior",
+      "sem_upper_pixel_y": null,
+      "sem_lower_pixel_y": null,
+      "SEM_Hz": null,
+      "SEM_status": "No independent upper/lower endpoint visible; hidden or absent is unresolved",
+      "conditional_occlusion_interval_Hz": null,
+      "conditional_interval_is_primary_data": null
+    },
+    {
+      "current_pA": 700,
+      "mean_pixel_xy": [
+        2993.84,
+        591.779
+      ],
+      "mean_Hz": 10.303145424836602,
+      "mean_reading_interval_Hz": [
+        10.159845087647778,
+        10.447032337290217
+      ],
+      "mean_y_uncertainty_px": 2,
+      "visibility": "visible_blue_ring_and_white_interior",
+      "sem_upper_pixel_y": null,
+      "sem_lower_pixel_y": null,
+      "SEM_Hz": null,
+      "SEM_status": "No independent upper/lower endpoint visible; hidden or absent is unresolved",
+      "conditional_occlusion_interval_Hz": null,
+      "conditional_interval_is_primary_data": null
+    },
+    {
+      "current_pA": 800,
+      "mean_pixel_xy": [
+        3055.177,
+        526.926
+      ],
+      "mean_Hz": 12.95236928104575,
+      "mean_reading_interval_Hz": [
+        12.803668976763145,
+        13.10167826442898
+      ],
+      "mean_y_uncertainty_px": 2,
+      "visibility": "visible_blue_ring_and_white_interior",
+      "sem_upper_pixel_y": null,
+      "sem_lower_pixel_y": null,
+      "SEM_Hz": null,
+      "SEM_status": "No independent upper/lower endpoint visible; hidden or absent is unresolved",
+      "conditional_occlusion_interval_Hz": null,
+      "conditional_interval_is_primary_data": null
+    },
+    {
+      "current_pA": 900,
+      "mean_pixel_xy": [
+        3116.389,
+        472.73
+      ],
+      "mean_Hz": 15.16625816993464,
+      "mean_reading_interval_Hz": [
+        15.013045250713411,
+        15.320098239869013
+      ],
+      "mean_y_uncertainty_px": 2,
+      "visibility": "visible_blue_ring_and_white_interior",
+      "sem_upper_pixel_y": null,
+      "sem_lower_pixel_y": null,
+      "SEM_Hz": null,
+      "SEM_status": "No independent upper/lower endpoint visible; hidden or absent is unresolved",
+      "conditional_occlusion_interval_Hz": null,
+      "conditional_interval_is_primary_data": null
+    },
+    {
+      "current_pA": 1000,
+      "mean_pixel_xy": [
+        3177.588,
+        431.923
+      ],
+      "mean_Hz": 16.833210784313724,
+      "mean_reading_interval_Hz": [
+        16.676600081532815,
+        16.99046254604994
+      ],
+      "mean_y_uncertainty_px": 2,
+      "visibility": "visible_blue_ring_and_white_interior",
+      "sem_upper_pixel_y": null,
+      "sem_lower_pixel_y": null,
+      "SEM_Hz": null,
+      "SEM_status": "No independent upper/lower endpoint visible; hidden or absent is unresolved",
+      "conditional_occlusion_interval_Hz": null,
+      "conditional_interval_is_primary_data": null
+    }
+  ],
+  "hidden100_geometry": {
+    "inspection_crop_original_xyxy": [
+      2585,
+      795,
+      2725,
+      885
+    ],
+    "red100_white_interior_centroid_xy": [
+      2626.629,
+      843.686
+    ],
+    "red100_marker_outer_y_support_px": [
+      823,
+      864
+    ],
+    "expanded_support_y_px": [
+      821,
+      866
+    ],
+    "axis_origin_y_px": 844,
+    "conditional_frequency_interval_Hz": [
+      0,
+      1.0
+    ],
+    "assumptions": [
+      "A100pA blue control marker was actually plotted at the regularly spaced100pA coordinate.",
+      "It uses the same circular marker convention as other blue points.",
+      "It is hidden by the foreground red marker and local red connecting line/black axis; no arbitrary remote graphical occluder exists.",
+      "Firing rate is nonnegative."
+    ],
+    "reason": "No blue marker is visible at100pA. The red marker is centered atx2626.6 and its entire circular vertical support isy823..864; local red connecting line and black axis are inside that vertical band. Under the stated plotting/occlusion convention the blue marker center must be within the band covered by this marker/line/axis. Expand by2px each side for raster stroke ambiguity, then transform y821 with1px origin and minimum24.43px/Hz scale:(845-821)/24.43=0.9824Hz, conservatively rounded outward to1Hz. No point estimate is identified.",
+    "limit": "This is a conditional graphical assumption bound, not an identifiable measured mean. The raster alone cannot distinguish an omitted100pA blue marker from a fully hidden one; without the assumption100pA remains unconstrained/missing. Equal marker radii are not used to assert an exact zero."
+  },
+  "readiness": {
+    "identifiable_means": 9,
+    "missing_means": 1,
+    "SEM_endpoints_visible": 0,
+    "complete_ten_identifiable_mean_gate": false,
+    "conditional_descriptive_scoring_possible": "Only if explicitly revised and accepted as conditional occlusion-bound sensitivity, preserving missing primary100pA mean."
+  }
+}

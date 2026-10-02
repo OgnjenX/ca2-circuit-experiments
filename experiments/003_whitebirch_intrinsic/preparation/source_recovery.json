@@ -1,0 +1,93 @@
+{
+  "status": "pre-run source recovery;does not amend first frozen target",
+  "asset": {
+    "url": "https://ars.els-cdn.com/content/image/1-s2.0-S0896627322006651-gr1_lrg.jpg",
+    "dimensions_px": [
+      3362,
+      3626
+    ],
+    "dpi": 500,
+    "jpeg_comment": "HiRes",
+    "sha256": "ff69a7084a5ba949ac617790df5470826d1a1f828a20aefbe3d7703c248c3d69",
+    "bytes": 1530429
+  },
+  "paper": {
+    "url": "https://ars.els-cdn.com/content/image/1-s2.0-S0896627322006651-mmc2.pdf",
+    "sha256": "9d346dce1e178ecdee6fca63932f2a2180ebfc0a5c6cb8d8939ded241557d29f",
+    "bytes": 33407156,
+    "pages": 48,
+    "figure1_page": 3,
+    "figure1_image_pixels": [
+      2018,
+      2176
+    ],
+    "figure_vector_geometry_available": false
+  },
+  "correct_publisher_PII": "S0896627322006651",
+  "previous_publisher_attempt_correction": "Initial erroneous PII S0896627322006748 and guessed supplement path did not constitute exhausted publisher-source search. Correct PII verified from search-indexedScienceDirect and officialElsevier metadata.",
+  "attempts": [
+    {
+      "source": "PMC NIHMS PDF",
+      "result": "HTMLbrowserchallenge1817bytes,notPDF"
+    },
+    {
+      "source": "EuropePMC PDF",
+      "result": "HTTP403"
+    },
+    {
+      "source": "search-indexedCell mmc2PDF",
+      "result": "Cell HTTP403;sameassetCDN successful"
+    },
+    {
+      "source": "ElsevierfullXML confirmedPII",
+      "result": "HTTP401;metadataXML accessible"
+    },
+    {
+      "source": "ElsevierPDFaccept",
+      "result": "HTTP406"
+    },
+    {
+      "source": "publisherfiguregr1.jpg",
+      "result": "759x819113dpi"
+    },
+    {
+      "source": "publisherfiguregr1_lrg.jpg",
+      "result": "3362x3626500dpiHiRes"
+    },
+    {
+      "source": "publisherfiguregr1.sml",
+      "result": "152x164GIF"
+    }
+  ],
+  "method_verification": {
+    "status": "verified against officialPDF",
+    "pages": "Publisher article e3-e7 (confirmed bytext andPDF); methods source also independently verified byparent officialPMCHTML/PDF.",
+    "details": [
+      "hold -70mV by applied current",
+      "ten100..1000pAsteps at100pA increments",
+      "one-second square pulses in RESULTS and intrinsic analysis",
+      "ACSF32C duringrecording",
+      "14-18weekage",
+      "dorsal/intermediate400umacuteslices",
+      "controlmethylatropine,diazepam,levetiracetam;noPILO",
+      "bothsexesF1strain documentedanimalmethods"
+    ],
+    "experimental_inter_sweep_timing": "not specified;full-recoveryassumption still needed"
+  },
+  "100pA_assessment": {
+    "direct_mean": "unidentified;fullyoccluded",
+    "conditional_bound_Hz": [
+      0,
+      1.05
+    ],
+    "condition": "100pA blue marker drawn with same series convention and fully concealed by red marker/line/axis. Conservative outer mask bounds and readinguncertainty;not an observedmean or zerovalue. Missingbluepoint itself cannot be ruledout solelyfromraster.",
+    "would_resolve": "An official vectorfigure with underlyingblue marker coordinates or publishednumericmean/sourcegraphdata;raw recordings request-only but noauthorcontactauthorized. HiResraster improves geometry but doesnot restoreoverdrawncenter.",
+    "accepted_conditional_interval_Hz": [
+      0,
+      1.2
+    ],
+    "acceptance": "Parent/source independent review supports interval-censored conditionalcomparison ratherthanunconditionalunknown;no pointestimate. Two newpasses broadgeometrybounds0..1.05/0..1.0 enclosedbyoutward0..1.2 originalPMCgeometrybound. Assumptionplottedunderred remains explicit."
+  },
+  "SEM": "No independentlyvisibleendpoints;keepmissing;nonessential to descriptiveRMSE/errorbounds",
+  "model_outputs_inspected": false
+}

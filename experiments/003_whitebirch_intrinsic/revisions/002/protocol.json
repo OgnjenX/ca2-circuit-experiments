@@ -1,0 +1,80 @@
+{
+  "id": "003_whitebirch_intrinsic",
+  "revision": 2,
+  "status": "preregistered amended execution protocol; no neuron outputs inspected",
+  "preserved_revision_1_commit": "658ad99fdcddd83f375e252da9091c35d504b2f0",
+  "reason": "Official high-resolution publisher source and methods recovered; permit explicitly conditional interval-censored target rather than inventing hidden mean. User selected existing backend semantics primary and immediate-reset diagnostic. Implement actual GPU observation/initialization without backend edits.",
+  "source": "Published 92 cells/48 mice NON-PILO blue controls only; target_data.json. Official publisher HiRes3362x3626JPEG and fullpaperPDF checked. 100pA mean unknown, conditional interval0..1.2Hz; all SEM missing. Earlier preprint/thesis cohorts excluded.",
+  "source_interval_condition": "100pA control marker was drawn and hidden by red overdraw, rather than omitted. This cannot be proved by raster alone. All10scores are conditional bounds; no100pointestimate,midpoint or exactzero. Without assumption,full10scores unknown.",
+  "source_sufficient_for_conditional_bounds": true,
+  "methods_verified": true,
+  "highest_resolution_statement": "Official publisher500dpiHiRes is the largest recovered official asset; paper Figure1 is raster2018x2176. No claim that all possible publisher vector/source assets have been recovered. Conservative reading/occlusion bounds make an absolute highest-possible claim unnecessary.",
+  "primary_backend": "Actual unchanged carlsim4-synapse-dynamics-v2 GPU_MODE/GPU_CORES; original static library and source hashes pinned by build record. No PythonRK4 imitation or backend source edit.",
+  "initialization": "Fresh process/simulator each sweep; after setup initialize existing GPU voltage/nextVoltage to float32(-70), recovery to float32(exact-CSV analytic uhold),counter0,curSpikefalse using harness cudaMemcpy. Validate roundtrip before runNetwork. Unsupported internal access compiles unchanged interface source; interface archive object must not be linked twice. No warmup or claim of exact-real-arithmetic equilibrium: record float32 values and residual derivatives,validate holding-only and baseline.",
+  "observation": "Link-time --wrap=cudaMemcpy calls unchanged real copy first; only when originalGPUsubstepnextVoltage->voltage DtoD occurs,read targetV,u,counter,curSpike through real scalarDtoHcopies. No observation-path statewrites. Counts derive from recorded transition conditions,notstickycurSpike. Record all1200*substeps+initial states. Observer introduces synchronization but no dynamics change; independently audit wrap linkage and state completeness.",
+  "currents_pA": [
+    0,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+  ],
+  "holding_current_exact_CSV_pA": 131.42409113662896,
+  "u_hold_exact_CSV_pA": -41.11566219369001,
+  "phases_ms": [
+    [
+      0,
+      100
+    ],
+    [
+      100,
+      1100
+    ],
+    [
+      1100,
+      1200
+    ]
+  ],
+  "full_recovery": "Every sweep restarts in same prescribed state; experimental inter-sweep timing unknown. This is an explicit full-recovery assumption.",
+  "production_steps_per_ms": [
+    20,
+    40,
+    80
+  ],
+  "primary_production_steps_per_ms": 80,
+  "reference": "Independent DOP853 smooth spans with exact archived delayed detection, reset-only substep, bothV/u refractoryfreeze,hardcoded1mscounter and-90floor. Match actualfloat32 parameters,initialstate and applied currents using float64 integration; do not copy production integrator/reset code.",
+  "reference_refinements": [
+    {
+      "rtol": 1e-09,
+      "atol": 1e-10,
+      "max_step_ms": 0.5
+    },
+    {
+      "rtol": 1e-11,
+      "atol": 1e-12,
+      "max_step_ms": 0.1
+    }
+  ],
+  "validation_order": "At each identical dt,compare production to separately tightenedreference. Then independently compare production acrossdt. Timestep changes hybridclock grid,so compare crossings,detect/resetclocktimes and countambiguities separately; never compare overshootresetstates acrossdifferentgrid as identical events.",
+  "numerical_gates": {
+    "counts_order": "All currents and phases must have stable eventcounts/order across production3timesteps and reference2settings at eachdt; record bothlocalizedcrossings and detection/resetrecords.",
+    "same_grid_crossing_time_max_error_ms": 0.05,
+    "cross_grid_crossing_detection_time_max_difference_ms": 0.05,
+    "timing_interpretation": "Engineering criterion based on20kHzsampling0.05ms,not biological tolerance. Productionlocalizedcrossing estimate is linear interpolation inside observedsubstep bracket;bracket widths also reported.",
+    "reset_states": "Every native reset must obey actualpreviousV>Vpeak/counter0,afterV=Vmin,uafter-ubefore=d withinfloat32roundingtolerance1e-4pA,counter1iflastIterelse2. Reference exactrule within1e-7. Compare samegridpre-resetu within0.01pA; reportVovershoot differences withoutcrossgrididentityclaim.",
+    "refractory": "While previouscounter>0,V/u frozen;counterdecrements onlylastIter andVclampsVminthere. Audit every suppressedsubstep and countertransition.",
+    "holding": "Holding-only0eventsinallphases;Vwithin0.002mVof-70 throughout;allstepsbaselinewithin0.002mV. Bound deliberately accommodatesfloat32quantization,not biological tolerance.",
+    "failure": "Retain failures. No biologicaldiscrepancyscoring/interpretation from numerically failingprimarysimulation. Any engineeringrepair requires separatelyreviewed committedamendment; no change to originalbackend or neuronvector."
+  },
+  "diagnostic": "Independent standard immediate-resetDOP853 withsameparams,currents,initialstate;bothtolerancesseparatelyrefined,allcurrents. Report separately as semanticsdiagnostic,neverprimaryreplacementorfitselection.",
+  "measurement": "Rawlocalizedcrossings primary half-open[100,1100);recordpre/post andwholetrace. Separately record delayed detection/reset counts andinclusiveendpointcounts/nearestboundarydistances. Audit allwholetraceISIs for6ms detector exclusion;Vpeak-hold exceeds60mV threshold. Report raw anddetector-compatiblecounts separately. If countingchoices affectoutcome,comparabilityunresolved. NoAPwidth/waveformclaimsfromresetmarkers.",
+  "scoring": "All10residualintervals; signedmeanerror,RMSE,maxabserrorbounds from conservative readingintervals. No full10pointmetric because100mean has no pointestimate. Separately labelled9visiblemeanspointscore allowed as secondary descriptive summary,not primary substitute. SEMmissingnotzero;intervalsnotCI;no biologicalequivalence margin,populationvariance,chi-square,currentfitting orparameteroptimization.",
+  "gating": "source_sufficient_for_conditional_bounds,implementation_frozen,ready_for_numerical_validation,numerically_valid_for_scoring,measurement_comparable are distinct stages. Compile-only/syntheticchecks may precede freeze and are documented. No model production/reference outputs until committed freeze. No biological scoring until numericalgates pass.",
+  "environment": "Lenovo RTX3050TiLaptop4GBcompute8.6,driver580.178.04. NumPy2.3.5,SciPy1.16.3,Matplotlib3.10.7. Builddriverrecordscompiler/nvcc/library and executable hashes."
+}

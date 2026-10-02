@@ -1,0 +1,59 @@
+{
+  "review_kind": "Independent static pre-run review of actual GPU harness",
+  "neuron_runs_executed": false,
+  "biological_outputs_inspected": false,
+  "reviewed_harness_sha256": "8f841eb794b70813068f50216683edf8ae907220fead9e6a449d0905e2f6a0b1",
+  "reviewed_driver_sha256": "af2e7bcaf76681740062597dcb318568e6eb1986c70ff61d10258be0662e9883",
+  "reviewed_compile_workspace": "data/workspaces/003-whitebirch-gpu-compile-only-v6",
+  "reviewed_executable_sha256": "9823a82b7964c06e7534226e11fd0bd5fe23a2a4dbd09329fd20760c2c0bddad",
+  "reviewed_backend_library_sha256": "0a113b96470ce862f32e6494f899b237e45542a7fa5089ad7e3e027fdc404895",
+  "reviewed_backend_gpu_source_sha256": "22e39c5763676ac52908751fae5df7872e0dfba859f96e983d4135dcae66efb7",
+  "status": "Static dynamics and observation design acceptable; execution gate and failure preservation need repair before freeze",
+  "findings": [
+    {
+      "id": "GPU-01",
+      "severity": "required before execution",
+      "file": "preparation/build_driver.py",
+      "finding": "execute() does not enforce compiled build_record library/source/header/executable identities against committed preregistration pins. An alternate --backend can compile a different backend even when repository inputs remain committed.",
+      "repair": "Require matching preregistered backend/library and production-source hashes; compare build record to current harness, driver, generated header and executable before native invocation. Stage checker may implement this but must audit the actual selected build, not a different historical record."
+    },
+    {
+      "id": "GPU-02",
+      "severity": "required before execution",
+      "file": "preparation/build_driver.py",
+      "finding": "command() uses check=True with capture_output=True. A failed native run raises before execute() writes captured stdout/stderr, losing native failure diagnostics even when an incomplete trace survives.",
+      "repair": "Run native command with check=False; persist stdout, stderr and exit status first, then stop on nonzero exit. Preserve failures without accepting incomplete traces."
+    },
+    {
+      "id": "GPU-03",
+      "severity": "currently fail-closed preparation gap",
+      "file": "revisions/002/verify_stages.py",
+      "finding": "Required stage checker did not exist at review time, so native execution through the driver would fail safely. The future checker must enforce the intended source/implementation/readiness distinctions."
+    },
+    {
+      "id": "GPU-04",
+      "severity": "documentation",
+      "file": "revisions/002/reference_carlsim.py",
+      "finding": "Reference docstring describes only archived CPU semantics, while the primary is actual GPU. Inspected GPU RK4 nine-parameter branch has matching delayed threshold, reset-only iteration, millisecond refractory counter and voltage floor rules.",
+      "repair": "Describe independently specified matching GPU/CPU clock semantics and preserve actual native float32 parameter, current and initial-state matching. Native float32 timestep and inverse_C rounding versus exact-grid float64 reference are numerical differences to measure, not proof of exact arithmetic equivalence."
+    }
+  ],
+  "accepted_static_checks": [
+    "Actual GPU_MODE/GPU_CORES used; one target neuron and silent zero-weight auxiliary connection rather than artificial biological replicate population.",
+    "Fresh process per current/timestep; only initial target voltage, nextVoltage, recovery, ref_counter and curSpike are written before runNetwork, with float32 roundtrip checks.",
+    "Inspected SNN::runNetwork does not reinitialize voltage/recovery after setup. setExternalCurrent copies external current only.",
+    "Archived parameter row is verified by file hash and exact row equality; generated float constants and native stdout expose actual float32 parameter/current/state values.",
+    "Observer calls real DtoD copy first and only matches target partition nextVoltage-to-voltage pointers and DtoD direction. Scalar real DtoH reads serialize completed GPU state without observation-path writes.",
+    "globalStateUpdate_N_GPU launches kernel then DtoD once per substep; simTime increments after advSimStep, so ms+j/substeps labels agree with inspected clock order.",
+    "Link map selects snn_gpu_module-cu.o and excludes interface carlsim-cpp.o. Static disassembly of reviewed binary shows globalStateUpdate_N_GPU calling __wrap_cudaMemcpy; wrapper existence alone was not the only evidence.",
+    "GPU kernel uses hardcoded manager Izh_ref=1, delayed previous-nextVoltage strict threshold, reset-only iteration, counter decrement only lastIteration, frozen recovery/voltage during refractory, and -90mV floor after smooth update. Reference separately implements these rules through DOP853 spans.",
+    "Compile log is empty and record exit code is zero. Build record says no simulation executed; review did not launch the executable."
+  ],
+  "runtime_unverified": [
+    "GPU allocation/state roundtrip and actual parameter assertions",
+    "Observed trace completeness, clock checks and parse integrity",
+    "Holding drift, resets, refractory transitions, event counts/order and boundary ambiguity",
+    "Same-grid independently tightened reference agreement and cross-grid event-time/count stability"
+  ],
+  "gate_scope": "Native environment/argument guard is an operational safeguard; it does not itself inspect a Git commit. The Python driver and stage verifier must be the authoritative frozen-input check. Compile/static review is not numerical validation or biological validation."
+}

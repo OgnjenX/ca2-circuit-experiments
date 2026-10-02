@@ -1,0 +1,18 @@
+{
+  "provenance": "Venkadesh et al. 2018 Table 1 CA2 pyramidal fitted parameter vector and Figure 3(2B), attributed there to Chevaleyre and Siegelbaum 2010. Whitebirch 2022 is later evidence, not the fitting target.",
+  "url": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2018.00008/full",
+  "published_rounded_vector": {
+    "C": 1630,
+    "k": 5.943,
+    "a": 0.00114,
+    "b": -15.89,
+    "d": 74,
+    "Vr": -72.59,
+    "Vt": -58.78,
+    "Vpeak": 19.99,
+    "Vmin": -62.65
+  },
+  "actual_assay_parameters": "Unchanged exact archived CSV row in model_configuration.json, not the rounded paper vector.",
+  "holding_difference": "For rounded prompt vector, uhold=-41.1551pA and Ihold=131.5472914pA. Exact archived CSV independently verified: uhold=-41.11566219369pA and Ihold=131.424091136629pA. GPU float32 realization recorded per sweep.",
+  "independence_limit": "Later paper is independent of the 2018 fitting evidence; this does not establish model-independent biological equivalence."
+}

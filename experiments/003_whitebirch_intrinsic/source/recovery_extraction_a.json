@@ -1,0 +1,160 @@
+{
+  "pass": "A",
+  "model_blind": true,
+  "source_sha256": "ff69a7084a5ba949ac617790df5470826d1a1f828a20aefbe3d7703c248c3d69",
+  "calibration": {
+    "x0_px": 2565.5,
+    "x1000_px": 3178,
+    "y0_px": 843.5,
+    "y25_px": 231.5,
+    "y_scale_px_per_Hz": 24.48,
+    "axis_origin_uncertainty_px": 1,
+    "marker_y_uncertainty_px": 3,
+    "scale_interval": [
+      24.4,
+      24.55
+    ]
+  },
+  "method": "Manual markerwhite-interiorcenters read fromoriginalimage andpanelC crop;hidden100 leftnull. Differentresolution remeasurementbeforemodeloutput.",
+  "rows": [
+    {
+      "current_pA": 100,
+      "mean_pixel_xy": null,
+      "mean_Hz": null,
+      "reading_interval_Hz": null,
+      "SEM_Hz": null,
+      "SEM_endpoints_px": null
+    },
+    {
+      "current_pA": 200,
+      "mean_pixel_xy": [
+        2689,
+        843
+      ],
+      "mean_Hz": 0.02042483660130719,
+      "reading_interval_Hz": [
+        0,
+        0.18442622950819673
+      ],
+      "SEM_Hz": null,
+      "SEM_endpoints_px": null
+    },
+    {
+      "current_pA": 300,
+      "mean_pixel_xy": [
+        2750,
+        837
+      ],
+      "mean_Hz": 0.26552287581699346,
+      "reading_interval_Hz": [
+        0.10183299389002036,
+        0.43032786885245905
+      ],
+      "SEM_Hz": null,
+      "SEM_endpoints_px": null
+    },
+    {
+      "current_pA": 400,
+      "mean_pixel_xy": [
+        2811,
+        800
+      ],
+      "mean_Hz": 1.7769607843137254,
+      "reading_interval_Hz": [
+        1.6089613034623218,
+        1.94672131147541
+      ],
+      "SEM_Hz": null,
+      "SEM_endpoints_px": null
+    },
+    {
+      "current_pA": 500,
+      "mean_pixel_xy": [
+        2872,
+        735
+      ],
+      "mean_Hz": 4.43218954248366,
+      "reading_interval_Hz": [
+        4.256619144602851,
+        4.610655737704918
+      ],
+      "SEM_Hz": null,
+      "SEM_endpoints_px": null
+    },
+    {
+      "current_pA": 600,
+      "mean_pixel_xy": [
+        2933,
+        660
+      ],
+      "mean_Hz": 7.495915032679738,
+      "reading_interval_Hz": [
+        7.311608961303462,
+        7.6844262295081975
+      ],
+      "SEM_Hz": null,
+      "SEM_endpoints_px": null
+    },
+    {
+      "current_pA": 700,
+      "mean_pixel_xy": [
+        2994,
+        592
+      ],
+      "mean_Hz": 10.273692810457517,
+      "reading_interval_Hz": [
+        10.081466395112017,
+        10.471311475409836
+      ],
+      "SEM_Hz": null,
+      "SEM_endpoints_px": null
+    },
+    {
+      "current_pA": 800,
+      "mean_pixel_xy": [
+        3055,
+        527
+      ],
+      "mean_Hz": 12.92892156862745,
+      "reading_interval_Hz": [
+        12.729124236252545,
+        13.135245901639346
+      ],
+      "SEM_Hz": null,
+      "SEM_endpoints_px": null
+    },
+    {
+      "current_pA": 900,
+      "mean_pixel_xy": [
+        3117,
+        473
+      ],
+      "mean_Hz": 15.134803921568627,
+      "reading_interval_Hz": [
+        14.928716904276985,
+        15.348360655737705
+      ],
+      "SEM_Hz": null,
+      "SEM_endpoints_px": null
+    },
+    {
+      "current_pA": 1000,
+      "mean_pixel_xy": [
+        3178,
+        432
+      ],
+      "mean_Hz": 16.809640522875817,
+      "reading_interval_Hz": [
+        16.59877800407332,
+        17.028688524590166
+      ],
+      "SEM_Hz": null,
+      "SEM_endpoints_px": null
+    }
+  ],
+  "conditional100_Hz": [
+    0,
+    1.05
+  ],
+  "conditional100_status": "outerredmaskgeometricboundassumingbluepointdrawn;notadirectmeanreading;notafrozenselectedtarget"
+}
