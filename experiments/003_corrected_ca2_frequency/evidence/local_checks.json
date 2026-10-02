@@ -1,0 +1,49 @@
+{
+  "tests-final.log": {
+    "sha256": "09f25f3651ffab75d770d7275f0030e7776fdf6c96763c7a17938b07846f1514",
+    "last_lines": [
+      "----------------------------------------------------------------------",
+      "Ran 14 tests in 0.033s",
+      "",
+      "OK"
+    ]
+  },
+  "verify-repo-final.log": {
+    "sha256": "492cc808ca8be8edf8e9218afa02397922551e3483fd90a34461cc0fdc9022cf",
+    "last_lines": [
+      "Verified 79 preserved source/parameter files, 62 reference files, 238 repository files, 80 nominal trials and the retained precision failure.",
+      "This is repository integrity and reference consistency, not biological validation or a full rerun."
+    ]
+  },
+  "verify-historical-final.log": {
+    "sha256": "492fe023f3303365113c736cbdcebb62ae6d1e673a49fd125a346de1a09b289f",
+    "last_lines": [
+      "Verified 120 run summaries, 30 numerical pairs and 30 published artifacts.",
+      "Compact-record integrity does not replace re-analysis of raw monitors or biological validation."
+    ]
+  },
+  "verify-native.log": {
+    "sha256": "4890b0bab69e1ad75d0add78e68445fc98bf5fd87986b4bc791c58ddfb0e237b",
+    "last_lines": [
+      "Matched frozen and working API calls in 19 cases; no GPU simulation performed."
+    ]
+  },
+  "v2-apply-verification.log": {
+    "sha256": "b9d7182730cd46ea24e2662b92a34169fc8a866acb7278ef326a2729d0cb9aa2",
+    "last_lines": [
+      "  \"architecture\": \"sm_86 plus compute_86 PTX\",",
+      "  \"GABAa_reversal_mV\": -77.8,",
+      "  \"numerical_status\": \"New build; requires renewed numerical validation\"",
+      "}"
+    ]
+  },
+  "verify-corrected.log": {
+    "sha256": "384db9d8b257b5c768e345d9726ff9a5da86548cda97496104c10638dcf86b86",
+    "last_lines": [
+      "Verified 240 corrected runs, 60 numerical pairs, independent backend gates and complete setup coverage.",
+      "Compact integrity does not replace raw-monitor reanalysis or biological validation."
+    ]
+  },
+  "git_diff_check": "passed",
+  "new_scoring_failure_tests": "Missing, duplicate, ineligible and numerical-fail cases covered by tests/test_benchmark_gates.py"
+}

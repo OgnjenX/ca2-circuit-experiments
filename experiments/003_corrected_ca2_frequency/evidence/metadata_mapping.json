@@ -1,0 +1,1207 @@
+{
+  "original_batch_sha256": "46961e790c997db9c891ef81029fe84fdce739c72c83649116e8a83ee18c882c",
+  "adapted_batch_sha256": "5f7d50d4e55030519bafeef2bfcd696446656a41b9621839a179215db84f4e19",
+  "runs": {
+    "test-stp-a1.44-s201-f2-rk20": {
+      "configuration_sha256": "d4dc9a48dcfa82f5d45779f024f6bf09efdaca145bb79c7d0bbcf11df72b1537",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "128613c60bed5da8ca1784b15b6ffff9437b14cf84866896ad0fe961ad7dc7ba"
+    },
+    "test-stp-a1.44-s201-f5-rk20": {
+      "configuration_sha256": "20eb6c3579f659d7a731134cfd5d0548648544fc0c3e91bfb640c5d47978085c",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "d4e943b0a6b0379497fa7904bdb5ec196402d2601e917500d109f4c0fa768edb"
+    },
+    "test-stp-a1.44-s201-f10-rk20": {
+      "configuration_sha256": "ad6d0438a2b221a52aad959e4e032c12583b102135ab9e1368bf3bd3b421f374",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "664f3f002696fabf1e124704b94803f4f6403521bdffb6d20b9382d5e8cc0553"
+    },
+    "test-stp-a1.44-s201-f20-rk20": {
+      "configuration_sha256": "9ff3eb0c37e2392cc3267e3d286953462666db50f5223470cb4a5accc7c0c656",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "3d8a6182f522de4aeedeab7cfe4cf60c3168d781ab9f385f998cd3b7633c8163"
+    },
+    "test-stp-a1.44-s201-f30-rk20": {
+      "configuration_sha256": "14aeb37ac6047e0c66d27d517f974eeb38791427224f3b20d3acf480568b53a2",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "bb3f155547c7c967d6bc31f816a79bedb0ff4fc45b5bfb4613af4a91da5fdf88"
+    },
+    "test-stp-a1.44-s201-f50-rk20": {
+      "configuration_sha256": "b3a9058b63a218d38a3f8e92348cbde3e0844e0025656d1b9389e0a8fa9bee66",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "ace9fde776a6352a870251dd14a7502e83cf02a77ab64964c111088b119cd58a"
+    },
+    "test-stp-a1.44-s201-f30-rk40": {
+      "configuration_sha256": "0bb9cc35be70eac6ddc42f8f12511fdefb2d889204dc8664459d77bdeb469d78",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "e07b2652ad50937c8f64c69186a6a8e538300fc765e27e5b97220ef216c38e45"
+    },
+    "test-stp-a1.44-s201-f50-rk40": {
+      "configuration_sha256": "9aa01ce8205e4087e970ac3db25f5074900ff84d30e865a4f7ab7dc032142f2b",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "fab835b52192399bc4985016718a5875de72d3f700b1bbfb12a738c3e7a930ca"
+    },
+    "test-stp-a1.44-s202-f2-rk20": {
+      "configuration_sha256": "1cb7dc4490f95994b72594a4098ac83630fd32c17fc377de7a2319c132790fb7",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "d42627fb60228afb6e3b1a305cde29077bf94db8ff2c643ef84ffbecd8073ca3"
+    },
+    "test-stp-a1.44-s202-f5-rk20": {
+      "configuration_sha256": "e041df704ac531615a9c9a591bf61889c65ad8dc03bb50c0ebe4125853f54c62",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "667fbceb59f1ed9b1f34d62856383b84e152641b3851bfaf644a3750cb69c664"
+    },
+    "test-stp-a1.44-s202-f10-rk20": {
+      "configuration_sha256": "edad2d3ab28b1d0b0520d6038898ac3755feb36ff34ac116643f77a8c1f7a071",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "5d1ceab82991154e7cec6ff1b7b02536f4f525181aff35ddc7c56306de65e700"
+    },
+    "test-stp-a1.44-s202-f20-rk20": {
+      "configuration_sha256": "90873d6e2ac7426a6f8a6a0e475f531ba3600f41810c4d94992ab44763df0683",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "7566be2a95d56035cea2293cb8e63eca2a7810a6660baf93be0e18e0608d1aa7"
+    },
+    "test-stp-a1.44-s202-f30-rk20": {
+      "configuration_sha256": "938e08fbb405f428da9631daa6bf22aabeb99c51523955825a1772fbab836768",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "14be2db4dcd66697ec5ed554e49348db3eca4ab9e286128b85639a663af0ded8"
+    },
+    "test-stp-a1.44-s202-f50-rk20": {
+      "configuration_sha256": "802e670fef92efc3f544799c6af0e9f32f8de5f1a0821dfdb18a4cb6c184446c",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "9488e35705a0e99fcbd3cb8309de5f3d37a1dc366e8d4bbf770aefd16782c159"
+    },
+    "test-stp-a1.44-s202-f30-rk40": {
+      "configuration_sha256": "63eb08be1fc60da22d2ef915aa13d563db4a0eda58948945fb14ff8ee28b173c",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "bc1606f9c04a0905b5be04cbcb2f88731df6749f4dbfee12f75ae4e312fbacaa"
+    },
+    "test-stp-a1.44-s202-f50-rk40": {
+      "configuration_sha256": "7aefe9d89cfe5e2af2165e7d5bdc577d558474cd6fac961ac7fed24c78ce2069",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "0fc1b5e6a7c0850355272444e2b8dd961cad00d20e3d0cea4e9355c9e0970e6b"
+    },
+    "test-stp-a1.44-s203-f2-rk20": {
+      "configuration_sha256": "3c9c54580b9c75fb32696e8c6ebf4aa3daeb4444fb5c93df3f03aa2604f1683a",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "167d8f46ff08bc94d23c08aa34b416079058fab17b6750457543fd01ae6fbf42"
+    },
+    "test-stp-a1.44-s203-f5-rk20": {
+      "configuration_sha256": "31c568d8511c7aea2c4944e5713d467c52210b57854e80e78fab924700690e8f",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "42aaa36d66b1371871fde0e9250c849e19d4b83bbce49a8640f1d5a67d0da601"
+    },
+    "test-stp-a1.44-s203-f10-rk20": {
+      "configuration_sha256": "e7ae30555b3da3452ba6783fcb783dc550deb527559bac8d74e780985beb5d51",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "b64a462cb1b3a6e846209872718146a00027882fb7cf7a8f9c1c079de4832b5c"
+    },
+    "test-stp-a1.44-s203-f20-rk20": {
+      "configuration_sha256": "82f68a558b6af51ae99592ec04ee7200c2d5960cfdca1a251913a9fd3b96ac84",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "28f5cc1818238c2d2c1ec06faf4f5470e1ab49d840da8fc5fd97a8c008dd59d3"
+    },
+    "test-stp-a1.44-s203-f30-rk20": {
+      "configuration_sha256": "39aa9896c70d4e9e83b4e757748db150c47ffaecd189252ef463fb15f1caeb3e",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "4d726f6ce076af955694749f97b3d909263f6d0b4be1765753d64789f445dfe8"
+    },
+    "test-stp-a1.44-s203-f50-rk20": {
+      "configuration_sha256": "363c3920381108dfbe308fea9317662913abb075d08a40fd478fa2d9f2eee152",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "64fb47eac356f08c5e6cb5c559d72e97a03d8ba0ee71ceb6e55c071bb96bb7dd"
+    },
+    "test-stp-a1.44-s203-f30-rk40": {
+      "configuration_sha256": "fe89afa10fb870b5936b31780e0cd8bcdab6e808b04621ca64b25a82aec40913",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "52e9737aad02da31cc74417510da6a02d855db1c0dbcad5ecb32753ffa8b7043"
+    },
+    "test-stp-a1.44-s203-f50-rk40": {
+      "configuration_sha256": "9a8fedaef929c1d2f25fad4765b391cd53a8b9462b5bd5871d1673051d3a349d",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "c3077bdc2012b1bca4472471978defb4fd0487686d24439d321a951c7f6383ee"
+    },
+    "test-stp-a1.44-s204-f2-rk20": {
+      "configuration_sha256": "7f299f70de9c68f856710c12e852d2c25b80210b3ba1338c402e0b7a86e8f3ad",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "01986b31916c8eebbe93737e5621297518f67b52bef80e2e8a64b53ff89cd4e8"
+    },
+    "test-stp-a1.44-s204-f5-rk20": {
+      "configuration_sha256": "ccedbb16cac4b35c258d98342798c7ce08dbb130a64e549f2a9538ade7d1b20f",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "c91ce07c418fcd7ef21d61cb1f826f62dcd38a80c225dcd43210a08f2f6fe75f"
+    },
+    "test-stp-a1.44-s204-f10-rk20": {
+      "configuration_sha256": "62507f1de58ec0492de9e67c802913592b37629ce9cfac9f5bdecca51d92a8f1",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "8d8a7e93413d37c5aae3eeea1f54a6defc0b1674d2b45c8b3f96f7515eaa1b6b"
+    },
+    "test-stp-a1.44-s204-f20-rk20": {
+      "configuration_sha256": "ccdf24eaec7554339664901cb97ee55a737923841ada82f4f4e5076b1ac63eaf",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "fca1139365af4bbb654dab908109541fa185744da81bc5e5c8e59b4650c671d0"
+    },
+    "test-stp-a1.44-s204-f30-rk20": {
+      "configuration_sha256": "0f833f3da29038b12add076f96593d9005c7baf9bd890832b64b8f6ab44eea6d",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "9c74898bf7493f4ae7fd0dd57d447df78f7478099096b31c9cac0e163e96c17c"
+    },
+    "test-stp-a1.44-s204-f50-rk20": {
+      "configuration_sha256": "1bc4772d064191e0679057b360995bdc663298bc03f2c0beb779fa565ea6b7b3",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "4596bebf15dbd008fbf1ee512c5f24d39e526c5f5f581283f854c59b55091b2b"
+    },
+    "test-stp-a1.44-s204-f30-rk40": {
+      "configuration_sha256": "1f6576ecd97e7d38b11a21b43570bd7e4bd92147766d9ac1aaf705ccb8ca5485",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "834e8019958a8ec1a5affa2ae0d46dffe5ad77b43a9c619d3895ad49a09ebda2"
+    },
+    "test-stp-a1.44-s204-f50-rk40": {
+      "configuration_sha256": "0ef7e900edb1caa448492e59b242c53100b23aab81018a6e19f578b29069230a",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "3b2580996f14092e1f27e9f18bdd1cdac3704f1ab5e667f6acfe42db5802e9a2"
+    },
+    "test-stp-a1.44-s205-f2-rk20": {
+      "configuration_sha256": "dca826da1b8255de24fdea006b8373362497205f0b5d4e02568f95d62b9a3988",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "1e60223d445b1164b4ad5f176753dd8a0fe10b4cb6ce5e63cddfbb059303039e"
+    },
+    "test-stp-a1.44-s205-f5-rk20": {
+      "configuration_sha256": "8c4bc4f3e0ff2a180f187932fdbe20def4111858cbde1b867765dc79313537e4",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "582f6400bb712ff2b8c32f5f8d6a3e60d2d76297b9564b61db21f66409e2c04f"
+    },
+    "test-stp-a1.44-s205-f10-rk20": {
+      "configuration_sha256": "a502ea927a853a2257bb4f86ab9ceb4aabaa92a139c0662321cab4f2c05ece56",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "0c5391d85ad6f71058b003568b26bcbb25db17defa79e50f0ad72c02471984a2"
+    },
+    "test-stp-a1.44-s205-f20-rk20": {
+      "configuration_sha256": "29e17c26cea53cc4bdda03e36e7856fddd8b0c271ebc55385190f496e6b6f881",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "3ce2107652c1bc30c532c412ed2dd3ec4659a9102a55a94e8d2fe8cfa0b78391"
+    },
+    "test-stp-a1.44-s205-f30-rk20": {
+      "configuration_sha256": "d2ca21425f1b0a1cb3a26d7f4e6b2e745306ac2734394da4ce8f5be6f00e0063",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "75780ceaf3fba6d7216cf7d8e20330f365976282dfb2f03ae68b8235e35b5a58"
+    },
+    "test-stp-a1.44-s205-f50-rk20": {
+      "configuration_sha256": "169ecfc54af75d01f6d990da52046b4ca6792fbd30a6f2f1299c7eae9f5d6956",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "1e1a02b04b96c71912fc9b85b8459815247370894275687c6fc883e46f75cd34"
+    },
+    "test-stp-a1.44-s205-f30-rk40": {
+      "configuration_sha256": "6b5110369c451c6b30bec8b01265c4be81fefc5197239e398946b1a7cb7042da",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "21a98519018dfd50981523a9ef7c5865dfd1ab380994fe0a348f61f64c4a415b"
+    },
+    "test-stp-a1.44-s205-f50-rk40": {
+      "configuration_sha256": "ff7a9648a5109a579bfb2d2e4c7575858cd75f4293ab271baad6111ec2f8cb20",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "f8d49391fc6d7ffdd532571cf9dd7776e4eb0f985df56fede73451a0b4c2f09b"
+    },
+    "test-stp-a1.76-s201-f2-rk20": {
+      "configuration_sha256": "45ff274e52e8665c8fe1666cf76a4c259364d9130e6f160b271c05be524f8db1",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "d12b9807a62eebe25a66dc79e812e08f52804064badf4923e7a96caa0c3cd9a3"
+    },
+    "test-stp-a1.76-s201-f5-rk20": {
+      "configuration_sha256": "0aa78a05978244d7b89102e3e19470d86443dc9291d7b465107d7e00d35e91ca",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "60f96429f3cbda01648656ae706ead5187fbd011333f35232074e62b8bf248c0"
+    },
+    "test-stp-a1.76-s201-f10-rk20": {
+      "configuration_sha256": "a4b1f2da382cc2c7d82afae8380a960922b0cb071456eba01a4946eb6121138f",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "7088c7fc9399161fa4e3bd07d987e83d8fa3f7788368df7d56ab9fb35eea9310"
+    },
+    "test-stp-a1.76-s201-f20-rk20": {
+      "configuration_sha256": "d2207f50ca600e38ec6224b3936b6e6977bfcf7c4e17000f6d0e54c09f042b45",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "954989712707d3a813c280f93eb952af579c862e4b3e539bc44cfe0ac4889811"
+    },
+    "test-stp-a1.76-s201-f30-rk20": {
+      "configuration_sha256": "a1d22882113257ca2a00edba903c2230b920207645c8c763ce058201708e85c4",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "924dfe201934d8a0dc75470e8c73ba3a60bf6fd430168b3f63a8760d30211601"
+    },
+    "test-stp-a1.76-s201-f50-rk20": {
+      "configuration_sha256": "47684eddb52a1765ee9d9aad97b4bb376407f713411a1edca2303e8b0aef7b81",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "828798af812f7be99930823c007b03796dbc1ca048b48e7bc81f4656640119c0"
+    },
+    "test-stp-a1.76-s201-f30-rk40": {
+      "configuration_sha256": "5c68e058bf595e31df48e30984c063f1eb041cb2b232edf75387f007bc36148d",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "2b03be54ab16e1b70e594544257ce972cf4eed30d69e1937a8e910701b6c21d8"
+    },
+    "test-stp-a1.76-s201-f50-rk40": {
+      "configuration_sha256": "95f1dc219f26ad7484f937a0309ac20d29438620d9835719cb3b55cb46cf6259",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "ee6d01b8a5e8ec947e3aad7694886ba3256f5c8f31c035f175e277dbd9a0904c"
+    },
+    "test-stp-a1.76-s202-f2-rk20": {
+      "configuration_sha256": "2663942e36800f64c8aa9cdb3bce7e172d4ad5c2cece5deb1a753ab9449e8179",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "b9d7fa863245bcffe11ef5b100791e3e34469a5a20a73ebfa0beffef2ea7f18b"
+    },
+    "test-stp-a1.76-s202-f5-rk20": {
+      "configuration_sha256": "6d89b86b38c30b1e0dd88230752e6007427959c1e827a8c1542e331245632380",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "8ec739a76f23ee216a7cc7267a5bdb577d919b1be9b5d5f3949651779bcd0668"
+    },
+    "test-stp-a1.76-s202-f10-rk20": {
+      "configuration_sha256": "f92ec8a11e71813c5205fd565544858f5b5fac7554dfa5837bddbb22b9ae97a1",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "23b2905f45153a10f2cf02eaa0e564a0a04c14629ae37f9c47e87f84a9947638"
+    },
+    "test-stp-a1.76-s202-f20-rk20": {
+      "configuration_sha256": "57d94f2bf906334a2446f11634f02414108841fa2e23b3f0cba7230659893739",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "f328ef165836c4fe180c351c30e991b827e043f5a2843bf6c531288b3bab2f17"
+    },
+    "test-stp-a1.76-s202-f30-rk20": {
+      "configuration_sha256": "85b5b7c7d14c3cad53f98389e0109d424496f1a9ae3aa4bf7b6dd9c1f07222e7",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "ff4ff0ca9e2d2a8d367d2b2a26e68d7cb2d052bda144483e3c92b72595142347"
+    },
+    "test-stp-a1.76-s202-f50-rk20": {
+      "configuration_sha256": "764061897b2ada1858d4320307f8bf7d41890aa5ee9daf966d496dc52730fd41",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "8027b6625e605497fb39773d385fadd599a9a2d8b07dc092f9182b9d4aece401"
+    },
+    "test-stp-a1.76-s202-f30-rk40": {
+      "configuration_sha256": "4e90878616423ed1e80dd8b1e2926e0946bf3a6d1d444cc7c4957b04910810db",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "c024f8792f40494b02530cf543637231625e26fb525fc772772a1a1975e6e658"
+    },
+    "test-stp-a1.76-s202-f50-rk40": {
+      "configuration_sha256": "94bb4f17963d8e4aa93256702bdd8b08fa0eae5fda9c1d43e170d4564b008ab0",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "a41a47c2e2dc11e6a058016162762182730e34b9dffa14b2a5d038be49211b07"
+    },
+    "test-stp-a1.76-s203-f2-rk20": {
+      "configuration_sha256": "a702fe46582bd5dbcb25449923ed38f53d0f864371241eaf7c75826189312c82",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "797e6ca53912f3c399287c0f3d4c8b5e55e814098654b9dd62f54518dbe0e70a"
+    },
+    "test-stp-a1.76-s203-f5-rk20": {
+      "configuration_sha256": "0c06ed29e808323c08ad0c1168850255562324e98a1866d9b516797f50278b65",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "18cb0dd7d5069c42fe2d51628c90d1a5a787aef276f5aadd74de43e3c7225180"
+    },
+    "test-stp-a1.76-s203-f10-rk20": {
+      "configuration_sha256": "ff3bafe4050bc5f5029c82ab107dfcc1da085f4f211f482f454c36888e501cdf",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "482ddeac082e7c207b7ac1e7f9e6e4c864be56190d3f30c39a58032c1ed0249c"
+    },
+    "test-stp-a1.76-s203-f20-rk20": {
+      "configuration_sha256": "65d0db94e934fcf10ae40c0f9a8ce231cc31b8bf64f606ff0493b598b2540c62",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "226cfd86d8233da201342c00b42fd984733396a2dc9e8876a45ea2fc1cacc4b6"
+    },
+    "test-stp-a1.76-s203-f30-rk20": {
+      "configuration_sha256": "b9ed025b1725adb35f9f4f6ac0e6b5a49a38c5a2ddced97c664843a10e1bbd6a",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "ad8fe78efda107258f5d273c304b128c813af03bb9c7f33e8d9882ac25701a9c"
+    },
+    "test-stp-a1.76-s203-f50-rk20": {
+      "configuration_sha256": "9393fbff24573a2cd2aa66a50d4fc07113f70727295f51326d1cef0d1ad15df3",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "70b949472cd7c056cc553db7b7c4133e37a0254e64ae8d13d1781c2fbf6951ab"
+    },
+    "test-stp-a1.76-s203-f30-rk40": {
+      "configuration_sha256": "1d738e7ea51c51f77c91143535eba95e8b8a8cd026b4a9eb22f2508fb3a9f55f",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "f0e15a6bc6b0e7f0693d36d79b8a17041730b931ed34e4eab50f2963da95f340"
+    },
+    "test-stp-a1.76-s203-f50-rk40": {
+      "configuration_sha256": "51f991ec31df392d95684b5753d6538be11e4f57d019f680f0206ba12894c56a",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "79ab01c3eda4cdd873eae6c7d2c79a197c62fa40645dcd0c02af00d26a1e4144"
+    },
+    "test-stp-a1.76-s204-f2-rk20": {
+      "configuration_sha256": "7966349e94b8322f21f53d01b0ee4ba55dcdf47180aafe4840a7b75fdc95af33",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "cfaf876d1e79196183f7988299434715d98302318a8d03a3dd85610e4b263783"
+    },
+    "test-stp-a1.76-s204-f5-rk20": {
+      "configuration_sha256": "2de0aa62c26d5c9796d79c218cbefdff73e04ba14c0c46d8e8a980510051f856",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "9cc6037582c97617bc9c0e18b84d1239de224a2e3d8961cbca62c8fb71c1701b"
+    },
+    "test-stp-a1.76-s204-f10-rk20": {
+      "configuration_sha256": "286450a2cf9e85b481fd2021870e7f0c963be90014de502f6d22e88df617d5fd",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "0ffc689032bb1d69f3c6f135a8b51ce90418a2758f5e7811369c6be821a07676"
+    },
+    "test-stp-a1.76-s204-f20-rk20": {
+      "configuration_sha256": "38e0b4dadaa25d1bc716591aa87f82dbfc501abdd484bfde879f7a0eb6cd58ae",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "bc40c1a8f7bd8cdaad0e3cdb58f56b369b29568572b5bbf9defc001502541742"
+    },
+    "test-stp-a1.76-s204-f30-rk20": {
+      "configuration_sha256": "c07a0920bba7e0ec9d328a67785093e233ae1832a9bb1d16ee117f829f4043ba",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "61f8c9ee60279ff34eb5ce80b12d96db94113f9dbd128df09838a5b6283bd855"
+    },
+    "test-stp-a1.76-s204-f50-rk20": {
+      "configuration_sha256": "69d15aa1e4288efa4b36d051a3ab97959fd0ce4bea67a8bdf77f33dae868dac3",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "8db29139564b4602c716c0f1404d9718a7a2aafeda0061aa1af2b7ff700ae439"
+    },
+    "test-stp-a1.76-s204-f30-rk40": {
+      "configuration_sha256": "f549a9ef808a21a3bf1429a52eaf56721f49ff70e5cc6b9e1064ac5a95dcb2b2",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "f0fc4a88dcdc5c4c76990b4ce47e281442a37d4e227ed2dba9c3ad91dfe8e88f"
+    },
+    "test-stp-a1.76-s204-f50-rk40": {
+      "configuration_sha256": "62d864b6052a76913cf72d60dbf49d81f3c28d8f535691769d631ca2dbaa3b60",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "65cfe862caf6483f3a366bd10de010f07bde2ef4c98dc91fb2eb4fed44b4f86c"
+    },
+    "test-stp-a1.76-s205-f2-rk20": {
+      "configuration_sha256": "835fadf4789e36958e6b062a0177a2c2d56c01b64af5c5c3ba07c8790a5f74ea",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "6876ad7fe4857a0c2f7a2b386b8704287ee46a83399d479c7ae7cbbf263a1c1a"
+    },
+    "test-stp-a1.76-s205-f5-rk20": {
+      "configuration_sha256": "cb1eee66f765c512cc2fa036263cd86637cb1edfe7d94614d1834fd99b4f94a1",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "881bada4bf933b080e68b5d8a10b89d6f53e33dc45ab8249ab3d51b67ad164bb"
+    },
+    "test-stp-a1.76-s205-f10-rk20": {
+      "configuration_sha256": "52a11695e0feb64986381812e48ed86cfa8f051dfdc2deb756d14e69660966a6",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "5aa91e4b1381c38b9921e2bbfa265b522bc728c107be8d496dd1759428403f9c"
+    },
+    "test-stp-a1.76-s205-f20-rk20": {
+      "configuration_sha256": "0f6413f90af7f01d4d551521b9624976825d09d98c413d3ff115407ddd7714b5",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "fe86758bb7cb0f1624e8df321172b8ebec76c15aef42cbecbcce0da857264416"
+    },
+    "test-stp-a1.76-s205-f30-rk20": {
+      "configuration_sha256": "1d024065585ddb2474ecf0b580208a77a3e975f8cf2dfdb4957b16281290bc82",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "8549d4a27f027c5725e04def4e1d79cabc7a75aaef5e8329bca11023c58048b1"
+    },
+    "test-stp-a1.76-s205-f50-rk20": {
+      "configuration_sha256": "b5a1b321ce3400772438594bdeab7c66eb69ece0162b8a3562ebe32f8edc66d7",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "44acfb00e4d47f014445ccdeb7f5c921f7dcfa10adf41046fead7e3ede842380"
+    },
+    "test-stp-a1.76-s205-f30-rk40": {
+      "configuration_sha256": "dc5a89f2ead9d5ffed7d1362047ba24021cebbd28503f48d58c5d00dd0723a3b",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "b4a16226b0200df314e5ddcd13d70b636740f6a12defbd29e0f4801a138d03dc"
+    },
+    "test-stp-a1.76-s205-f50-rk40": {
+      "configuration_sha256": "d2223ab0e2be77bdd1859e4dedf8e5ee8306c46dc1eeeb42a6c6e8be612347ce",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "15d1bb9598bced7f2f9c0499950f381fbcad4c6818fcc4d12b00a444b3d8264e"
+    },
+    "test-stp-a2.08-s201-f2-rk20": {
+      "configuration_sha256": "0de0df6daac1ea678fee5ba33893f5b4af270fa972c1fc66eba22ef664abb169",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "888213f304ed0151c7028de5a95d4365be84440160961229cc1ffaf2c79c045b"
+    },
+    "test-stp-a2.08-s201-f5-rk20": {
+      "configuration_sha256": "e4ecc15dfece76602d640ada86bbe7f44b69382be589e80d8dd5abe3371948c9",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "ef232f40ca19db13e08582632f8b258b6e1ff0f54a8f634ed82259e9483e1a75"
+    },
+    "test-stp-a2.08-s201-f10-rk20": {
+      "configuration_sha256": "e1933e9556170d72b3e2f0bb79889a69580e424bb968b7a78d98eba6d8c1f013",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "2ff6197d8629138d5336c1f333475ae941aa34aea0345b3e82c155ca2a375e8d"
+    },
+    "test-stp-a2.08-s201-f20-rk20": {
+      "configuration_sha256": "a36b570d9c6c28bd0e66e24f20889a9f2d460ec7a6d8ff0107d2ab73768f7fe0",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "cf7fc54da8a784c92b735815117b52bff591412d3062b988812d3e6a9b92150b"
+    },
+    "test-stp-a2.08-s201-f30-rk20": {
+      "configuration_sha256": "1f9aa1ee274590d1b412d4669d8ff42a64778c07ede49d66390f7925500203c4",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "e44570dece137a0a6d9bd709bba58f2c2495ccb1c3ab550eaac805696370942a"
+    },
+    "test-stp-a2.08-s201-f50-rk20": {
+      "configuration_sha256": "9a297041482b711fb0987ed3dabbe20fa7220fa1167b00e3cb851e140d6ab2e1",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "cc58d935ed41c911b670194caf80fc7219fb4bf9fcc2e6b4f6a1b497367af771"
+    },
+    "test-stp-a2.08-s201-f30-rk40": {
+      "configuration_sha256": "1d7bf9b21c471e1858c1495b3f633392327893b60c99d8fa26dc0bad755b24e4",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "5ec0e4a421854d67262bf40741c941497f7b5b69a44fe2db4c3b796b3fd8b514"
+    },
+    "test-stp-a2.08-s201-f50-rk40": {
+      "configuration_sha256": "b4df6a4296d54313723ec7ce4a9a5dff7286532d36fee85278d9f690a0032b46",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "36c5b7b03e71474e2b3ea59dd4804e4d1ce1fd77898f7ab89f4fef64eac02761"
+    },
+    "test-stp-a2.08-s202-f2-rk20": {
+      "configuration_sha256": "c3af8a6a5fc72d47c736a7568aab54e990d85cba02571349e216d2d38f83ec20",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "d34795490e72f260be092ce52df4d3be32a9253e85014d78aa62afb2f648efc3"
+    },
+    "test-stp-a2.08-s202-f5-rk20": {
+      "configuration_sha256": "8b3483ce77fcb53a4c7665309545745fdea36e862b834555242c39b2ef29c1c2",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "8df2016e77b48362af736238f713e9f57d784df11daf3e8dacfe229dd996d795"
+    },
+    "test-stp-a2.08-s202-f10-rk20": {
+      "configuration_sha256": "000dd206ab88724f42888a07f09ed071107547f398469334c0f1427930e8d7a0",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "2d1e7409e054a0ab1f3a3a120d42ec5edb2d2c0b3218e21517a77f01cd9fef14"
+    },
+    "test-stp-a2.08-s202-f20-rk20": {
+      "configuration_sha256": "6bbb8ce6779bea708d3356490ee84f18cc0926513ea05de40056e7ac735064ee",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "e5e01ecd9465eb3a35bbb4df0003be812f51fbbe3ab1bfdb351b54902893808e"
+    },
+    "test-stp-a2.08-s202-f30-rk20": {
+      "configuration_sha256": "3e2be1e1c0ddf085ca419a7080e52efa8bad603709663112b0881f381ffdbd42",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "373b4d5910feaf6b2d49491a93cbe2db04fa1b6a967d0a35e0d023950148b02c"
+    },
+    "test-stp-a2.08-s202-f50-rk20": {
+      "configuration_sha256": "df8e3df248e6e55dbcde2c4b518bc3f0ebbe7124e1046a84df161d3bda4f0ceb",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "ba1258c6d36ea4fc96925411f9e51a1427bfa9b145dd7fabdbc5a2e836d83a21"
+    },
+    "test-stp-a2.08-s202-f30-rk40": {
+      "configuration_sha256": "17f4067c375fa9919ad998a94175d3126922a36c848c5d22d4bf29b394701509",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "615a222d729b36aae7414fda35966857e2e58d1ef4b16ce2d05e065c15e8d738"
+    },
+    "test-stp-a2.08-s202-f50-rk40": {
+      "configuration_sha256": "753a94a46e0bcfae40f69e6951c97ccff509c312ae65f8c8b96a6ac61b10af2c",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "5745c25b1df5ea39cf79625ec3c810159d2d5235f9ea90d3647ba55a97a42b89"
+    },
+    "test-stp-a2.08-s203-f2-rk20": {
+      "configuration_sha256": "b44169333716abb400796732f87fe37ed38b95c20b4f48a370fb478f2bd9b0b4",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "eeb168d08223c0f087a0ba5d1c54ffaf7df2d5e2994af54102ada077f606bc85"
+    },
+    "test-stp-a2.08-s203-f5-rk20": {
+      "configuration_sha256": "b202e91977ecfe72bd73e070949ef40ff828e4f7ddef978f284df61811f71710",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "66db65e2b6934a406db6cafeb1bb6ce12b3e7e2d3ca3675ed66d41bf8c56b192"
+    },
+    "test-stp-a2.08-s203-f10-rk20": {
+      "configuration_sha256": "432e805cb75a6228361e1994a8c546565cf2c2edd767c17c2a090c093cb8e269",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "4e0cb67530e911e9b856718b0abe22d915027e5c6d712ff80a112d17781df01b"
+    },
+    "test-stp-a2.08-s203-f20-rk20": {
+      "configuration_sha256": "de5a94de62245cb6563cc44880fd87a5207fd823e9f8a262d7754fe8a9450791",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "3b387f568d47a061fc04cb7d7f7ecf9d5d7ed309158ecc2ac7b4d917e883952a"
+    },
+    "test-stp-a2.08-s203-f30-rk20": {
+      "configuration_sha256": "5776d4bda81352bc5dfa79644c272250433576ee8aa22c0da71aac6dd5e9da7e",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "aa661df951fb01e3869b99e1af380285f071bd7f152bfdb93fa3c42e82398cda"
+    },
+    "test-stp-a2.08-s203-f50-rk20": {
+      "configuration_sha256": "0c9b312aba3a0ad64a36e620addb6b2a1fa8834f2a6c48bf236da7f2633bf9fe",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "73a0116f878bbdcd5f5e625fb9517d59eb04f6add0c16f75565e4fab3ec25210"
+    },
+    "test-stp-a2.08-s203-f30-rk40": {
+      "configuration_sha256": "25e6cda717a98844b6375d9698b10bfa9471ea53e77fa2210308477c0695bb06",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "16cd68d20bb0cd69475f41c417ff8a8b255fdbea4ca94aa5f49ae277c518d97b"
+    },
+    "test-stp-a2.08-s203-f50-rk40": {
+      "configuration_sha256": "d02fddc0d68e2c157b0185e0e88159fecfda0d507f3b9582b3bc6650d6a3c497",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "6eb850fc2ca141499f336c9100961d3bbef33cc1d2ca9fe5f454f77a9a8dd2f6"
+    },
+    "test-stp-a2.08-s204-f2-rk20": {
+      "configuration_sha256": "7064c12bc90565853b3f1f7330b4236a18f76fa773cd251e8ffb3d5e4634812c",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "6e6b0998e541e5df9a09c9a843b1555471d8abae738768ccdf59a79ba086d632"
+    },
+    "test-stp-a2.08-s204-f5-rk20": {
+      "configuration_sha256": "af1983f56e874ec592a8f5b8108bf5bdf88c2b2b9356b3a5e7cde215fc41fafb",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "bf5e1524a6320324b24057a98a31f1719a7b60a560f40590f0e8471c9b87c4b7"
+    },
+    "test-stp-a2.08-s204-f10-rk20": {
+      "configuration_sha256": "dc7b07c96ac54a04a9e7a76605cac7f029b2111c569741970462daf0e10bc64a",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "ad21b8506c526454e4a8801fcf41d00d50d26741111264b6c515db81da639c62"
+    },
+    "test-stp-a2.08-s204-f20-rk20": {
+      "configuration_sha256": "d5148d65fbcac535ca1e672891d6379d9c9fe9767a6cde3633d1de06622a21bc",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "d5994f0d8247238f3dd91b2a95305135bd6fc38c439d2b0137fa7bf43c5eff44"
+    },
+    "test-stp-a2.08-s204-f30-rk20": {
+      "configuration_sha256": "a879291eddbd9cb4c6e1d7271bb03dc7d4ecf5e3d742bc55b6bf2f4adf5741c9",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "b47fbaee2b5c9b0a8c034bdf32760ea8a8d26790daf15d9d440e4ff76c80280c"
+    },
+    "test-stp-a2.08-s204-f50-rk20": {
+      "configuration_sha256": "07d9877931b1ff70b670c3948f52502743fd78fc5e0e073556489b2b5b42433a",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "e2b4120ed9652d46bb928719b6c4157fc191cad6d65f89a6ffa58a1028fabd38"
+    },
+    "test-stp-a2.08-s204-f30-rk40": {
+      "configuration_sha256": "21dfd616206080fc3380c89a929940356bede9dda64a674dd10aecd5591f7b76",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "f7d29f454892692bc7f8e1f241afda0cf2fadf82fefa6a3f4f9e67df40bc2ea1"
+    },
+    "test-stp-a2.08-s204-f50-rk40": {
+      "configuration_sha256": "157babc7be4b6387607d8bb98943fec8086112d04401b0f2bcfe6cc9c23bd946",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "adecb85d8c3f0cc8ebab5b216c4f2ce3ab776f24a8217cb37246878d1ed792f9"
+    },
+    "test-stp-a2.08-s205-f2-rk20": {
+      "configuration_sha256": "c9d99f33f3b7e6643129ff4ba93368a9876719aeb497ffce704faf487c12aeaa",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "c2181aaf21eb0d2023c8332db95335c4576281d552562e051e4059ee196abcf2"
+    },
+    "test-stp-a2.08-s205-f5-rk20": {
+      "configuration_sha256": "bdfed9d63f9d1936772cd285c9483274365a1d20a7c9f1b44d428c7d8627a051",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "3207da2b07a1e1ef75d89815b836101c99c010052db8baf310066ef2b4cef7b6"
+    },
+    "test-stp-a2.08-s205-f10-rk20": {
+      "configuration_sha256": "bd1036569857bab528c88e28b3084baae2363faaed5288cf9680ee371eef2643",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "0a9f8215209b56f07a159bb6c02e0e8b740d79d765b5289e59d11c1a09c64d06"
+    },
+    "test-stp-a2.08-s205-f20-rk20": {
+      "configuration_sha256": "86b11d7d4795021057f16fdc2ee6648228fa8cdca0843f51e5950a01893bb48b",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "dd81e6f5971d5cfc87d0037c7d005bec44fe1f0a5d649be6be620f365554c26b"
+    },
+    "test-stp-a2.08-s205-f30-rk20": {
+      "configuration_sha256": "76fc6582df83440a14d75b2f72cf96bf44026c81797a913d14c63041e88e12e8",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "03fe2d07dadf59012e4deeea6416481b59f31031adf31c59793396d968fc1028"
+    },
+    "test-stp-a2.08-s205-f50-rk20": {
+      "configuration_sha256": "5854ef4fe3ef632616d48bcaa4be797b0336fec50f9c5bc15bb18b50a4337938",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "73f37811b790bd48b0a60e80c62d8202fd22dc333aaaba4a5241a33ef6d5a31d"
+    },
+    "test-stp-a2.08-s205-f30-rk40": {
+      "configuration_sha256": "854daf4f787b21dfeb565bec1e9d1b8bfd650b0bb8d35392e12fd0c057f24d1c",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "00844fb0031ba0d85b607364cd5c15337dbc5d922fe8edd37007a9fbb066ce3b"
+    },
+    "test-stp-a2.08-s205-f50-rk40": {
+      "configuration_sha256": "451564edf511e85d5176f771775d84f7668a2f51a2b190f4212ee09b5f70221b",
+      "release": "stp",
+      "unchanged_measurement_values_sha256": "20e3b5190f2673bb5a8829b0a6a82142813b15b0d0f765ec084add5d10ed9d15"
+    },
+    "test-static-a1.44-s201-f2-rk20": {
+      "configuration_sha256": "5ddaed61516a0770baefaabfa1b8c706bdc23430514180408928800369211e56",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "9c637dd490b734b34399dc7d7592663c416d998d37da87e661bb2d62a9a8a340"
+    },
+    "test-static-a1.44-s201-f5-rk20": {
+      "configuration_sha256": "2f16d2fd6d36485f5a2ce0bf70c47072f9f99fc58266e501696cd1b90bd96bf8",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "1ea85737f6d9dedcf3abd0f83ce78d1f8bde1192be1fd414ba14ee89e4a9e83d"
+    },
+    "test-static-a1.44-s201-f10-rk20": {
+      "configuration_sha256": "3324f2cb2ea84283c9e717c350bdd043042947e649dede59a273175461ae1a1c",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "5416a7ac51e47ee206a7968eace7aa98ede2d29b8f3872db76d5a4daeed23ae1"
+    },
+    "test-static-a1.44-s201-f20-rk20": {
+      "configuration_sha256": "0f0273bab8f16f8f79dad346d7b0adaa262050f37a222478627b858574427ae2",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "bcd533b9e14128bb733c3c39cd909643fb223ddf7f09e708c08a213bed4db02d"
+    },
+    "test-static-a1.44-s201-f30-rk20": {
+      "configuration_sha256": "38010f717016cefaa7678ab2e6583d9e6d077033ce3c7fdb7ea73a9c4ca211da",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "4a246c7245f57e9314130f504dacc5007f9aab3a9ac3c3da3790e9e16b26577b"
+    },
+    "test-static-a1.44-s201-f50-rk20": {
+      "configuration_sha256": "bc7911c9ded29cde4353a13b2e628da35b970af301489d2d485b1e53d6767d10",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "c248c01109cd0ec33f59646b2c9d836bf3429ef105102de5c17d1c17ab9d0783"
+    },
+    "test-static-a1.44-s201-f30-rk40": {
+      "configuration_sha256": "018f41844b49a02c4c865e0d32876892a1aecd7cac36d1ad0fa044dbc6cceacb",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "ea89dcdaef2e0dbb730121cdf39f0cda0b3c76ba2aa510b45a4fb53b818b9a09"
+    },
+    "test-static-a1.44-s201-f50-rk40": {
+      "configuration_sha256": "b0e5cd2f825bcecc0fdf7d951aa989a6de48d9e49af9e791a6c5beb6afae8b18",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "7b0e41d2498a9e9a39e893576c8dcf9d584b68ba4e07c2b25ff264ccbc79e846"
+    },
+    "test-static-a1.44-s202-f2-rk20": {
+      "configuration_sha256": "d868cfd7d1182ca58032e05ad8fe8d5437513debec86c04d5ba61e2b4302983c",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "96211eba773847121159de90059039f9677058fe2175bc6c953412fb6b75323c"
+    },
+    "test-static-a1.44-s202-f5-rk20": {
+      "configuration_sha256": "665ab93ba2cd239ed3f421e674f3e70d996a6a42e2dee4c3b8bf8e5cf16a9e4f",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "4c8c87e21e0baee60fb01116576741f98595434cb9cfe5536717fc318dfc62d8"
+    },
+    "test-static-a1.44-s202-f10-rk20": {
+      "configuration_sha256": "96e798a08635c63e754c44c83d1fb220d47169c306ec1d1de56b3fe71cae0d4c",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "4e9e03a4961f4b4b61eae5231b788c7c25ad67bcc421393bdcef7cf58f34f964"
+    },
+    "test-static-a1.44-s202-f20-rk20": {
+      "configuration_sha256": "88176d9bf466495931f7f6d199a47f1e07780aa33adcbd53dd6ec4187ca4eac0",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "c180827970b37a979e5f6c79bbca16cc22ba4c6826bae511e30cd8fdec78f075"
+    },
+    "test-static-a1.44-s202-f30-rk20": {
+      "configuration_sha256": "5f1c368f16e8a997df32ecc5187c417e504d0e13121081e52dd12cbdbd3ab010",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "3e0303134253143096ae653833f12e9c1b5d8c5b862a51ed9ecd12ad1c7157c7"
+    },
+    "test-static-a1.44-s202-f50-rk20": {
+      "configuration_sha256": "b75741a47781447380893a9bef2f9d4ff83bd27dbe3cfc05f3c68f9b5ddbe2c6",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "278fab0db42c38b56936e2edbb74da3354c114739ac0b94238a592de333df1cd"
+    },
+    "test-static-a1.44-s202-f30-rk40": {
+      "configuration_sha256": "2e447903ab2aca434c891ec2f5b8ea51bfa3d363f21a44510299a5318b51f909",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "98ef5379a8cc4b0431f7b6dde91f5f989d95d603b133d5025442ee8abf5e5f3c"
+    },
+    "test-static-a1.44-s202-f50-rk40": {
+      "configuration_sha256": "8375afa22e70a859ca63ca4e1656fc24b9570f843bc76dce89fdcf1f93590d0e",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "d01b17b7e0193101f54f16ff2dff684c39dab065fd0168c4e3d94d1a2b7089d1"
+    },
+    "test-static-a1.44-s203-f2-rk20": {
+      "configuration_sha256": "34a66795fdd32d677a3e9356296d33b71a41b1686d958ae32f5cd6b2c7a04e3d",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "840e0744f384a065d80c2fc807e8bcfb3725bf9615c1f5c9032269e616dfcc26"
+    },
+    "test-static-a1.44-s203-f5-rk20": {
+      "configuration_sha256": "9e32c090c145dd1e8617bfa6f908a8ac56986d4b6d86d813000a1ec9e9460080",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "f62c7bbdb6f350ab7c7463b934aa97fec586d029b5998682ce0b6b2a674ed8bb"
+    },
+    "test-static-a1.44-s203-f10-rk20": {
+      "configuration_sha256": "4f5cfddf7ae4170869754ef64fbacfa3c09a413711f1a97ba0be86e4db5ad045",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "798bafd55720faaba803ca8d42000f478c670da0e986af6e4be6fa7c4cdc2a65"
+    },
+    "test-static-a1.44-s203-f20-rk20": {
+      "configuration_sha256": "07fcbaa2df5ec342bdab6021d25fa5c234e6d98499e27f4330b9ef1849c6b822",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "a059c93b2a51e22e87eca708030409eaf717f46a828910c92813d7edf222ae47"
+    },
+    "test-static-a1.44-s203-f30-rk20": {
+      "configuration_sha256": "17b892bd6e54ca96b52ec90f5342a348ab05af75a30b8450ed14a937313bda3a",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "5f44766968ecb8ab5334efc98c9f1bc380d7c80e2fa43c9a2a99dfd2f5954e94"
+    },
+    "test-static-a1.44-s203-f50-rk20": {
+      "configuration_sha256": "67febb24200bed58dda0a91cb05a5c096d57672b7a642c44abfe9af5c2e72ee1",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "a601114087d26fb4a236a89c97921a6b5e1997accc1220d51cb882ead98076b0"
+    },
+    "test-static-a1.44-s203-f30-rk40": {
+      "configuration_sha256": "8252b28b3ede8db8df7c54f59c3ecbb114435b669bcd9ffd9ab566ad2965864c",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "f8ae9c16762183bc81107729d2f353451e3e56902ea1d36e9ebec55e992edeec"
+    },
+    "test-static-a1.44-s203-f50-rk40": {
+      "configuration_sha256": "20f9a8fc0bd1f3a33927e32e7f29e4446ea57ce38678fe180c18669ad52377c2",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "9b21f27b7cd85b64b60ed7f1ce7594f4c526d445105f3cb247fc806883bf25a7"
+    },
+    "test-static-a1.44-s204-f2-rk20": {
+      "configuration_sha256": "df54c1c86505f59912efdaf8ec0d210ea9bf1abb79294c2d1786162145a8d852",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "0471e975d227b4ed999b08e5e12dd06aca6f038fd4948119c8b01ae5290cb9f0"
+    },
+    "test-static-a1.44-s204-f5-rk20": {
+      "configuration_sha256": "3ac43958d2f3e8c6116136ba861726114adb06c98c5aa4af47a8cf3e9d2ecc9f",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "3424ffd5ea6fab43b4448691ecda5082c02701bf570f58147d9526f714f28c18"
+    },
+    "test-static-a1.44-s204-f10-rk20": {
+      "configuration_sha256": "f7f0b5f915033cb6f5d70a26cefd911b6763cd15f065adddaf2d2fe5d1a9d890",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "cc654d1a97bd6e9e90f523bbaa944e77f40e11f2c48c062c35bafab11361672f"
+    },
+    "test-static-a1.44-s204-f20-rk20": {
+      "configuration_sha256": "e28154f9124bd1f92ec42f7325a693fb9e02507976bc644a253117602cd4ca4b",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "a61dbfd8c0a373aef41a196d312f9dfce7b486ef7bb3fee6de41934ef85896ca"
+    },
+    "test-static-a1.44-s204-f30-rk20": {
+      "configuration_sha256": "37e114ba35ed6a53f636ded71f7b6f8961834fd9e2e6dc4c148d3f750c7e5628",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "62df265c5ebd820aa62038db8113cf34cf063a54f2eaf2c7c65f7ac9bf2da330"
+    },
+    "test-static-a1.44-s204-f50-rk20": {
+      "configuration_sha256": "db570ffda51c943e3ea4f8fa5bdcff191ef85a474bcb0b754ad14a46784412ff",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "d1357c3182471743613dc9e82a0693fd706b953dffb585bfe03fc512ebd77106"
+    },
+    "test-static-a1.44-s204-f30-rk40": {
+      "configuration_sha256": "5490a5a7a620d46d96484564faded6c000415cd19644a7f7bea4aa29eda7acb4",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "bea1583814fee77ecc0b635649169e56983f3b8c0d2a9300fdbf415a52f15635"
+    },
+    "test-static-a1.44-s204-f50-rk40": {
+      "configuration_sha256": "4b563807d9883d1c3f1e91c0ad05420cdad50a5723e976f984b57d482d893afb",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "1fdfad445a1d5098532fc57a30efe7e112828f2ef9c6aa6c263e4bcf48aaa327"
+    },
+    "test-static-a1.44-s205-f2-rk20": {
+      "configuration_sha256": "e8cf2ab62e16c16b925bc11d865eb27541d5d3a785d9794df0cd88de24c55a92",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "6115d77d11e73c922de51bb7776550a41944330769803dc882bd233ff53cc750"
+    },
+    "test-static-a1.44-s205-f5-rk20": {
+      "configuration_sha256": "23440ac9ca09ded2bd95056518eeebde7d1625644de15648686f195c341d22de",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "4aa41fc9502f516f591d327a17fe34cb5a8ee1494a56feaf2f4c89acf1ea0167"
+    },
+    "test-static-a1.44-s205-f10-rk20": {
+      "configuration_sha256": "08e5ea27e2494097da5900e3a7d28cf30dbc13d5b91b28cf853101f0fb454b15",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "849e999b43de1f44c0246dde3d350b5ea403f329bb8260519ab51689ea3ece40"
+    },
+    "test-static-a1.44-s205-f20-rk20": {
+      "configuration_sha256": "77f96227c715c2b09e51d066ca04eca8aabc1dd2d7a7a017ab755f664729c23b",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "0f513302cb09fa96b6b801b2fb12662b8f101ff0ee3f8dea63a90b07d6f380fd"
+    },
+    "test-static-a1.44-s205-f30-rk20": {
+      "configuration_sha256": "8a0f66d78c2edfcb0cfcc12b387185abcf938409b4d18c60e35930557788b9b7",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "51a050a0bd90704cd055304a20841257231a7487c46645d3aebc7a42460bd728"
+    },
+    "test-static-a1.44-s205-f50-rk20": {
+      "configuration_sha256": "f0e7e474a9249a2e72f997220837e63f5f0e381cfa9cc95982f7cebd3e041492",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "4db167b5fa7252347762f808853d087672f3c88f665a1c5a522904e61d85d875"
+    },
+    "test-static-a1.44-s205-f30-rk40": {
+      "configuration_sha256": "f8d636e1f92fc1a22d6d5a788dfa935aeffc6a4fbc089b579c7fc35f37c38dbf",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "922070e465f6a24ff28b9cc48cb20feccc1256145c8126012e921760a01b476d"
+    },
+    "test-static-a1.44-s205-f50-rk40": {
+      "configuration_sha256": "8606d8fc81ed31fe0754e69723d3400a8729cdbe103f2586c2e46edd6cd3e726",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "50ab2fdd91912544adefa50cb676df538e748ec44540f4902d610cf7f1db6147"
+    },
+    "test-static-a1.76-s201-f2-rk20": {
+      "configuration_sha256": "991bf1539ec68497a53f3b0cfa17994a5df7ad1ff8b65156d43d6d9f5911d133",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "08b307d453a45ebe202089b4e64044506ddf9ded6533913b938f8fda0e573251"
+    },
+    "test-static-a1.76-s201-f5-rk20": {
+      "configuration_sha256": "adb7c7d9ad84933981e413bedc2f24fb69a41da09eea0b994c75e4fbe7c3eafe",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "e53eb6e2fc959893e061c3592de4d85f0aaadc863639f2513e2a227d6f9b7044"
+    },
+    "test-static-a1.76-s201-f10-rk20": {
+      "configuration_sha256": "82bc77762db0b2250bce20b8c78d5858f24e90d27caa2270ff735d2c3fee15ae",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "6b732d4f640c11b8d9ead795bbbd1f2f11808c11e9b8cb2bcabecd254f75e65f"
+    },
+    "test-static-a1.76-s201-f20-rk20": {
+      "configuration_sha256": "dba15a7bdfcea433a88315d4fa37a92a70580d1139d747dc9d97899ec41670d3",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "568a2eeb1b2033ce039924bfa7b2c3b6f056e7e0e997c99e8619f7e5fae28a03"
+    },
+    "test-static-a1.76-s201-f30-rk20": {
+      "configuration_sha256": "2005e325f17915dbdc686907e106b5f8701ae568612e3deaf46d20c55d7566d8",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "8a83b3d4aab468d78fe59c99e33d3c52c32829e84d908f71f81dcd1efc09219f"
+    },
+    "test-static-a1.76-s201-f50-rk20": {
+      "configuration_sha256": "8065a77bf2c36bd63fe8b6488afcc8a5948b9cbbfa494b52965c5e3e31f80ab7",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "8365d76645bff36bb00401d520718e0a2e1cf7a9eaea1e071089c79c429e6a23"
+    },
+    "test-static-a1.76-s201-f30-rk40": {
+      "configuration_sha256": "2fd5b3c6c1c0fded94c58e4da6ad949b1c33c2784ec8a6462c054bf34e371b0a",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "dbd1c447716cab3c02444431a44375ec700c9239c29469050b58438c5e2edb07"
+    },
+    "test-static-a1.76-s201-f50-rk40": {
+      "configuration_sha256": "3253432499a6f4117c85f9ed071e81384c677f8f8b9b568b75f9f3399307ec8b",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "06d0aafacf5a341320c7f9e318513f1d88ba4d1da4c3075b0bc202dc534f1e51"
+    },
+    "test-static-a1.76-s202-f2-rk20": {
+      "configuration_sha256": "2dc127e438fa1d289dac4fb701fc18521a807f1dfac2e42d2bcc6d262b4249ed",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "1d9487b52c0ed3bf69276374d07e22afaf8930ad7f03567bddbd31fcdb75c3de"
+    },
+    "test-static-a1.76-s202-f5-rk20": {
+      "configuration_sha256": "aaf596cbf5302f86010a1f39fae82c0ac57801f1e4856e91e38be4b1d6433663",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "eb0e75fdee5f203428dc56c68a78e4c23b7ee95491cf29c0187cf96815a92406"
+    },
+    "test-static-a1.76-s202-f10-rk20": {
+      "configuration_sha256": "279c50d06a7f3afea4a027c704ee0b7110dc17a193a380356e76752fa2322d72",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "b47fdba8fe439393b3d8b08a428b0f9378736bc81635e515e53853f828bc6a44"
+    },
+    "test-static-a1.76-s202-f20-rk20": {
+      "configuration_sha256": "a52c5fdf896a6571fb5274ffe8bd0b7e86c45e081611671d4267986aca8bfa28",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "f33d87a19aca008e886c9ba1edb2f26699aa8794e61ed984eb74e59b3eb695db"
+    },
+    "test-static-a1.76-s202-f30-rk20": {
+      "configuration_sha256": "0603c17acc3877e0c2fbdfc8cf5ec84a23ecfba13c3f789ceb5fc1e91e4947b0",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "f5cbf6937bd33c6afbce3d8677229d4b152ff9355d59fdc38ca5e9ea5126b9e8"
+    },
+    "test-static-a1.76-s202-f50-rk20": {
+      "configuration_sha256": "7e7f829b7327ce12089e822f34eab9254cb0cc0d5b82d0b4b245571137b94f2f",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "ea121d2de9ab10d67eca2453c5600e0889eef586c618948c74a51537cc7d8907"
+    },
+    "test-static-a1.76-s202-f30-rk40": {
+      "configuration_sha256": "a19f6b5489c70889827c16885bed2c095f36181a8b436eddf537e766ee40621b",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "2a6d9a4340169242f4caf42989309a6d660faf53b6ca9f202a2bb515a3e71913"
+    },
+    "test-static-a1.76-s202-f50-rk40": {
+      "configuration_sha256": "15c8c62330a276d8edde748e2950604a3174396461da4dbdf804a4aef39b9d4a",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "cc0704c6033a3e3e786c127a15285e62f53f3d574af2a1423d920e453c46e056"
+    },
+    "test-static-a1.76-s203-f2-rk20": {
+      "configuration_sha256": "a3625261c9de3985a8297bae793bd1f2ba9c2eb9f253d19012fef417d7c1ae93",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "e4a5d9f9933594cd6fc5fd7bc575e3f16a470020e8915f578379647cd658eef8"
+    },
+    "test-static-a1.76-s203-f5-rk20": {
+      "configuration_sha256": "a6ee4b31d4a4511a8a423e7775d14a667d95b0974483ce34a16cee715ecf9bba",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "3459a277274d567d7793acdbf0b919dfad62f2a7023c8ec7619c45fcc65d904a"
+    },
+    "test-static-a1.76-s203-f10-rk20": {
+      "configuration_sha256": "5b297477fc2658b719835f887bc77913ed7183bea2e0c25c104e832db3981588",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "7b33795ea202d01f3d218821e620a010d1b579f416f1fa38276917e5c11f5d3e"
+    },
+    "test-static-a1.76-s203-f20-rk20": {
+      "configuration_sha256": "693b8361925d0e4a459b3377247114169a0841fbaab4835e538d8628dd78090c",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "e1c9ccef0f323f293a05eb684291271a9b3827a1b26b8066fab50ed1b0418c30"
+    },
+    "test-static-a1.76-s203-f30-rk20": {
+      "configuration_sha256": "abf53c71981d35b6bbe8eedf3661d3b01a59e340fd1cd5ffe44bd32c6a20486c",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "75655aa5a6bfd342cf58ed31d5f750b21a324c1691026a0714735f0641102464"
+    },
+    "test-static-a1.76-s203-f50-rk20": {
+      "configuration_sha256": "db612a94495558c88bf2e72ac90edfd23c38efe272a0aab2649541aff85b060d",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "f8feea4e75de177ce5670dc1fade50bd4057131f345919520d9803fa0853797e"
+    },
+    "test-static-a1.76-s203-f30-rk40": {
+      "configuration_sha256": "ff839de431ed1122469bf7e1f4b35f662fc4972682d7bd255db48fa50bf2ad35",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "3c999d494f49412eec69c805c4c9da9b63150fb449a9d11c19b1a792208a4682"
+    },
+    "test-static-a1.76-s203-f50-rk40": {
+      "configuration_sha256": "08118d04abe2b1a4a82d2231718e5fd0f09e23ba9a3f5929d8c868f150721b88",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "f5ca9ebe38ef9113f5406b9d670fe5274a495f946ca6c3194f9263e4e9c6b656"
+    },
+    "test-static-a1.76-s204-f2-rk20": {
+      "configuration_sha256": "965ab36a63950f97dbcaf91a8759d098b33b05fed0dc65d9eeb966ab856a8891",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "fd5e777e7c35cad71077e6b56df1805e1d1ead3db4685ce77a1561d2b0d79363"
+    },
+    "test-static-a1.76-s204-f5-rk20": {
+      "configuration_sha256": "64aa9a8b90414b00a575b9d69501c89ba970fa0c1830121a4cd9c49bdd7914fe",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "aeba661dc01f74d14b8f21d8826a2ed3d2243aef08ca8f53a19433293cbc991c"
+    },
+    "test-static-a1.76-s204-f10-rk20": {
+      "configuration_sha256": "5af4ed80b0404d0cfd5b5bac6aa250a167f3a4efeabc933ae6f13cdd01a17996",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "797f36d02d89b130d8ad78c2ad92443828fe0be463869bc1e1973608a333cb21"
+    },
+    "test-static-a1.76-s204-f20-rk20": {
+      "configuration_sha256": "c4f247918b216abe7aabcdfba25d03f14cd1a91bdb79c7a688fb7264399a614c",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "9f56d6b929d49484f5b738682d3d2dec968364ce6f685d7ea9e986b0d054fd08"
+    },
+    "test-static-a1.76-s204-f30-rk20": {
+      "configuration_sha256": "df29aa3237ba25df22e56f8af296c587e76f2e2a9f432bd2976a32e3cd6b1c0a",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "23c5ec71ba6f225935c7d597b907011604cb50457d92784692228426a920ccdc"
+    },
+    "test-static-a1.76-s204-f50-rk20": {
+      "configuration_sha256": "e86c979ca283af93315a6a463242c6b05537f991568ee6e2f94dde3341454832",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "4ef77244c0f6764696ecaaefb30de72d3ff9272c98f21e6cbffd16d91c18a95c"
+    },
+    "test-static-a1.76-s204-f30-rk40": {
+      "configuration_sha256": "accf0a87f2d8e4e7c063ed99ddc0942c22bc4e4fa356f45ca7a486825faddac7",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "1c4723f3e0977626c8aeb8995dc3856c38cbf042a351335d3a62f7d7fd0e7e54"
+    },
+    "test-static-a1.76-s204-f50-rk40": {
+      "configuration_sha256": "440b8b595d681aee4cbc5e249eea14842e055e1e6cedd56dc35960a992b232b7",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "b4aabaa6459547e3e45c5bf982fa2a5a0023e55522621155b18d0d7472f6f4bb"
+    },
+    "test-static-a1.76-s205-f2-rk20": {
+      "configuration_sha256": "7d0cefc26abc877c0aed40d276c130e23ebbd2dc157459a61d07f5dd1216a42f",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "cae6ca8bdd24affa0eda57815f0d769b1971b6eb049172cdddf373e285165cfd"
+    },
+    "test-static-a1.76-s205-f5-rk20": {
+      "configuration_sha256": "5cd927aee076184901ca3f3322ff7a54bea664dc284e7f321430c1b6fb714ed3",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "4a6aa253a752714a11e922c15938f125670e9ed9da2bcc2fae59de8b7e9eee05"
+    },
+    "test-static-a1.76-s205-f10-rk20": {
+      "configuration_sha256": "eaf14171cfb1bd096fd0dab7b637047e0758f1231635b93fd9bc8acb9a0abf28",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "30c9d7025d2ae59dd8d1061523ff7d138579f0e389f5bd357050671cf3ca4fed"
+    },
+    "test-static-a1.76-s205-f20-rk20": {
+      "configuration_sha256": "6c308290a44e9f5ee5931537fa32e17d3fccea54db058560d2dbdd17e1ab9851",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "0a3a204fb39336afdb0acf05df491fa161b3e1b55d76e578bca62600f0d835d7"
+    },
+    "test-static-a1.76-s205-f30-rk20": {
+      "configuration_sha256": "d4087f28e104bbd2dbc9c4bf439dd17c23883c78f925cb4c33599a10301b9ad3",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "15341ccaa526ecd4912b2d46b97094aa98b969c6d4962b8399cc87fca95a3f6a"
+    },
+    "test-static-a1.76-s205-f50-rk20": {
+      "configuration_sha256": "9a6be3f8d335d6c9d868c1ba9d88fe477693962947ac2c9058542ec772af4544",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "1dd1409395fa09082aa641c0b4401f6459f0ed393457ab1768b2e1e1ff358a6e"
+    },
+    "test-static-a1.76-s205-f30-rk40": {
+      "configuration_sha256": "3b65fa8a89be961f28f1308ecf012dce40720f16ec637d6c3353ad76159a4d3e",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "fac756bd8b11614cf7087757fcfb13bf0f4a6e10e1e70892832527d1640960c6"
+    },
+    "test-static-a1.76-s205-f50-rk40": {
+      "configuration_sha256": "901991d92322750e3d327719cc28776689854360fcfc75d0d5aef0ebba586822",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "9b0ce2a1c3ae5bf405ca2d8f666160434ccc6d95488370952d57c4e933ed2407"
+    },
+    "test-static-a2.08-s201-f2-rk20": {
+      "configuration_sha256": "e7b7c4dc953d5e2e73e561a1ea082ee71df1614ec3783fab7328bafe6b82cd26",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "c29a9f3dadfa18a8d3caa594a00bff8a79a8261668ebf6c688d836ce2d5fec12"
+    },
+    "test-static-a2.08-s201-f5-rk20": {
+      "configuration_sha256": "e2210407fc82c45f1b146a03885a8b92d22790aae8c07adcae85ae241e530e65",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "290d01f596285c601da6278df3d272d7c37cad06eedb7ded83c6c1b602eb5815"
+    },
+    "test-static-a2.08-s201-f10-rk20": {
+      "configuration_sha256": "6da81302d96b99bcb1024ac8ce26331528875b11f8b3b31ffb724327dff4c035",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "7c96cb140abb4bc011325b17b8e469998534d357a00ff0a5e6a788542c48f89e"
+    },
+    "test-static-a2.08-s201-f20-rk20": {
+      "configuration_sha256": "c1483012b15b441e10f16ad99074dbff5893b4860738ea0343fa20fab906a407",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "3692b0d8a854dd5694805ebc21612a9c85960a073bb8922b13816109ce37557a"
+    },
+    "test-static-a2.08-s201-f30-rk20": {
+      "configuration_sha256": "b6dfc9dc5003adce22bbcb222c5197fc649f5863713ac51ca6c7a57438e799c0",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "c17d5544dabb93535fbcc146d3a157edd2f61b208b7058e52ee451da1a0e69b4"
+    },
+    "test-static-a2.08-s201-f50-rk20": {
+      "configuration_sha256": "4363fe543e113f1101770c53be9d0fb7926335e4f8b9dcf5f6d3cae96b692699",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "dca09e72f4c4c6e5bb90fd33f5702d3cfb2e25ada508458b1f32ecf54ec22cbc"
+    },
+    "test-static-a2.08-s201-f30-rk40": {
+      "configuration_sha256": "9da68eaca46a8b16c0abb48c775017bd887f3887d550d8b8c9d5d5cd3fceb3d7",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "f51c00a6e5915f7737e5199b5c37b77be0730bd1ed8cc9a54cfd86491a0345ff"
+    },
+    "test-static-a2.08-s201-f50-rk40": {
+      "configuration_sha256": "842367f223c73286003bf2befdf4e7443b5736a92d61fbb06497812d70626db2",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "69991d5aa184595d6afee2bd1ef5ede63396b63ce54fb80ff1dc7502250c5d1b"
+    },
+    "test-static-a2.08-s202-f2-rk20": {
+      "configuration_sha256": "571ffafe1e0dd3bc70f6a6b1b0afd215682993245ab965423003a92ee9b6a53c",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "e63ef6e7465c48cde1f32fbb34d617218da01beed870f128d6dac6748835cbe8"
+    },
+    "test-static-a2.08-s202-f5-rk20": {
+      "configuration_sha256": "3845a79db64db0a5716edbb97e9e389165c84f98c6ad0fb78f97753bf9d43067",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "6bb2538e1534638646354b6374f2b6910ce63140058f8a7f86aa6698c6a5d96a"
+    },
+    "test-static-a2.08-s202-f10-rk20": {
+      "configuration_sha256": "763663261e2904be795ed8c327785442f8fbf7d245f7e9f99b832d27aceb5e1d",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "f253ca7342413faecdfb952ba2e3c8d4700a43c0ece75fe4d5a4d6464980866c"
+    },
+    "test-static-a2.08-s202-f20-rk20": {
+      "configuration_sha256": "51489b25c0f5824810ac526f32ce2d988f055b62d8aaa85e525e553281e0e356",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "5673547030e98c8421aab2506d966ebea1a68ec4946ee11467cb79e32a865d42"
+    },
+    "test-static-a2.08-s202-f30-rk20": {
+      "configuration_sha256": "7432d318d7156bfe5aef8994ba151e2a50420b8dac7f34898243f0f1ee2d9b13",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "5030e055abed872cce8d2ccf2e55c63025eeb7568429d8e7396903751cac7613"
+    },
+    "test-static-a2.08-s202-f50-rk20": {
+      "configuration_sha256": "aafb70e331e7a220954aba283aed9cd63bb28ccdfbbcd022e01e938979b74cec",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "a508ec2160bee56e233afe46ac1c4e0f9855b52c496bc6e9e24fa8f5839cba2d"
+    },
+    "test-static-a2.08-s202-f30-rk40": {
+      "configuration_sha256": "02233173160b22a897dd0e6cba8fa22ff3074553a3b66bbcdd3acf7fcb5e1ea4",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "6e0d7c27d7e02c92fa7a30b2c9f3fd5960ad9fac4da3be7d696ea961476e640c"
+    },
+    "test-static-a2.08-s202-f50-rk40": {
+      "configuration_sha256": "0f4667f1c2a22f30fc125d6ed7bb487ac7232da2b205181a7c38fbaa96a38bb0",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "9d5a6df37352cec2bd3a10028970340752cf5a90707e49bb595109e8eb168df1"
+    },
+    "test-static-a2.08-s203-f2-rk20": {
+      "configuration_sha256": "f25cc07970874f32985bba55dd70d151391926b3e527f7f08f510bf053bd2d18",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "a7242e4c5383bb5257ec0722c6c5d98740cb3996fde93633c3d48fb5fe91170d"
+    },
+    "test-static-a2.08-s203-f5-rk20": {
+      "configuration_sha256": "924c76d03a3310717e7bcb68cd6bdc861ada4d1019634210e6fef91e418a3720",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "149788cfbb78f8f7d09a4e22f60a3fbbf9bbf2cdbd1fb26d4feac3cc3d16ba46"
+    },
+    "test-static-a2.08-s203-f10-rk20": {
+      "configuration_sha256": "97d98988fa74b88d4897553c38f6cb098f6754a126fdbfd60f20d4d70dd35b40",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "86145da506083395be224d6abe0bb26ebad7e5b80722b1a1e99d05da1f4a3afc"
+    },
+    "test-static-a2.08-s203-f20-rk20": {
+      "configuration_sha256": "98ca1b06d5abf3a07d1b28ab1e2dd6f9bea854cec92b5cd2d38fdb8d81b2a9f2",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "787c1254036ef81fbbd4fce28b8ebb6b0ed7e24a26d7c3ed0ad8856ab11ecfe7"
+    },
+    "test-static-a2.08-s203-f30-rk20": {
+      "configuration_sha256": "5c5cdf9e992f356cd0fe4e68bf483ccaa5030ad9ba21d21b788806a5f4c22c6e",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "6a93227505c645fdf98be5649b3aa013b5d00ae6d87bfe415428e7dc5dc37018"
+    },
+    "test-static-a2.08-s203-f50-rk20": {
+      "configuration_sha256": "0d723bb4ba3f9a27793350839d48c91043d780751ff4f57f3ec2d103f3025572",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "603a873b7b9f9ab1f98b684fa4ff599a3c71bd06469fbfec842325d67f65abad"
+    },
+    "test-static-a2.08-s203-f30-rk40": {
+      "configuration_sha256": "ae1dec2c87b306db249886f2d1b70bb08fdf2bc0166a4ae7d289f567b7524a8a",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "a1a2cd778a393750629e810a6d9a00870c93aa1d8b4ace1e1edd3c98fdef6d46"
+    },
+    "test-static-a2.08-s203-f50-rk40": {
+      "configuration_sha256": "bfaa1504620ae8b9a38b98e9936f321eedd9002d01bce0fc46bd73177cd6e2bd",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "a077633ac0635625cb679eb346c8c2a922145153feadff5bedaeb590c1d3a395"
+    },
+    "test-static-a2.08-s204-f2-rk20": {
+      "configuration_sha256": "d918618940fa6efdcd64b3a4c985930a4ae2fe6840e50b32a857765cc4dfcc1c",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "1a02d68a288946303d50117d0de373a5155af87ba64e74cbc550187f4a108642"
+    },
+    "test-static-a2.08-s204-f5-rk20": {
+      "configuration_sha256": "14fed8afe16b8b65cf32fc1f1306ca0ea4c2a0ab45ba002160213014ce3f61ed",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "05b696913d73aba7eead57929486491bb7c0bf080e162f2bb420ec480978344a"
+    },
+    "test-static-a2.08-s204-f10-rk20": {
+      "configuration_sha256": "3c40d2308a487a667ce400ee1785a2c468d33252680d078b88dd154535b00a9c",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "10e7ecaffa7d0587e57d59a41993c36657d12fddc17e934a4f8f01b88efbe4be"
+    },
+    "test-static-a2.08-s204-f20-rk20": {
+      "configuration_sha256": "215e8e5b7a4e60557ffa1c12634955b9426cf902def0cec950ace85d28a85244",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "472cb8e7d7d5943eb6179e14832ac371b1aa687147f55815557e94b94565e49d"
+    },
+    "test-static-a2.08-s204-f30-rk20": {
+      "configuration_sha256": "89059947f037f9eae5be4c08cb0f29950f8ebcc8d8b3c286eb11a51c950e6c02",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "5632157fd21101b64ac9a678b5abcfd5a52a39605de391f18ef154e5b6028c16"
+    },
+    "test-static-a2.08-s204-f50-rk20": {
+      "configuration_sha256": "2a9b397a0e4e3101d14f69dd85e55f67e9c1e190e771241a0d3a79763cb9a669",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "7b7d43ee57b007023cd18af31a305188d17019bf2b4a8fb9d696a09eed00517c"
+    },
+    "test-static-a2.08-s204-f30-rk40": {
+      "configuration_sha256": "b7ee7372b17cdef17413fadf0b22a96e30e996d79abfe2d98c2596104f6e8441",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "1f90f2fb53a796d0f8a49f0c5ed480fee26523f597d236f594ec5bea27b1e26d"
+    },
+    "test-static-a2.08-s204-f50-rk40": {
+      "configuration_sha256": "ab03dca7057d736568d20976155ca7b6a30608b74a3517f5d19b07a48710f5a6",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "9f05227cdd9d30223ad15a3eb3d143e749031e61ff189f5489005fd0028120e6"
+    },
+    "test-static-a2.08-s205-f2-rk20": {
+      "configuration_sha256": "bc76dc1ff1b73c47006a909b9eb2fba74a4ae545ebbee269fa3974857a0359f9",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "b2fcc956fbfa31061afa264b57d848642ec2ef14f751cfb504a7c989d39eb636"
+    },
+    "test-static-a2.08-s205-f5-rk20": {
+      "configuration_sha256": "6b6625cc7e2b4fceedf9da61ed7b05ea66b62cc02850e5030591610931ebc85e",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "147cccfeaca1dd96b79bd7872f4e3c8ee4737cbd3862760b9675a7ce0252dfac"
+    },
+    "test-static-a2.08-s205-f10-rk20": {
+      "configuration_sha256": "b032576805df522d7e2b9a8d5ab3e88290eaf268a3969134f1774a57fc9cae5b",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "b7597f6de79d78e0102525c61bd652272f43373aee46a219078aeb6f86a79d6a"
+    },
+    "test-static-a2.08-s205-f20-rk20": {
+      "configuration_sha256": "779ee3f1394259114d33a4eeebcd72ce014d6df892527dddee794ba4f7998ea4",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "2d98c542ee17c4b72b1db8818fc82a0e7a9279ad3f2c573303349cd27a7b3797"
+    },
+    "test-static-a2.08-s205-f30-rk20": {
+      "configuration_sha256": "92c046693749ef7a61ed955a5699b8525437df852118a17dbecd9fa6f4508557",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "63a93af5cb3f3fb40e9961d8df031350c68d9c29c13d6b071bb77078893aa2cd"
+    },
+    "test-static-a2.08-s205-f50-rk20": {
+      "configuration_sha256": "7dcbdf7c17e5be1111c60e85e5726d596e4bef33d2949f6a9cea528703c707ff",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "b7ef7c5fbe1b89980b816137ccb2a84994812ba9e1eea2dfcd3d5ecae07ce50f"
+    },
+    "test-static-a2.08-s205-f30-rk40": {
+      "configuration_sha256": "045f2e89fffbe4bffaefdbb183d99a241eae2f9e979a28ae1397702fd41b25a5",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "deadf4f69d80376b534442099c8a4f8dc2763b58a5986369b3939a219656ede3"
+    },
+    "test-static-a2.08-s205-f50-rk40": {
+      "configuration_sha256": "95652b63ddc296eda0817efb21b23f968e87958dd94b18d8478522598e4d5380",
+      "release": "static",
+      "unchanged_measurement_values_sha256": "16d90b1dd9eada72bb0301a0b70308da91c40545eef53e3620ab9152c4f50ab6"
+    }
+  },
+  "coordinates_and_measurement_values_unchanged": true
+}
