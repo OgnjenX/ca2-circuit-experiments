@@ -1,0 +1,141 @@
+{
+  "pass": "A",
+  "model_blind": true,
+  "source_sha256": "669562afb125d5d6ca5bfafc271368d6be1a02864a957b5c1b5ac08b1a4dbb65",
+  "source_dimensions": [
+    1447,
+    1561
+  ],
+  "identity": "Blue open circles = control, Figure1C legend and article Figure1B caption; red PILO-SE excluded",
+  "method": "Manual center of white interiors/open circles using unmodified original and 4x crop; axes calibrated from horizontal tick centers. No simulated output viewed. Completely occluded 100pA mean remains missing.",
+  "calibration": {
+    "x0": 1105.5,
+    "x1000": 1369.5,
+    "y0": 362.5,
+    "y25": 98.5,
+    "axis_uncertainty_px": 0.5
+  },
+  "reading_uncertainty_px": 1.5,
+  "points": [
+    {
+      "current_pA": 100,
+      "x_px": 1132,
+      "y_px": null,
+      "mean_Hz": null,
+      "sem_low_px": null,
+      "sem_high_px": null,
+      "sem_Hz": null,
+      "status": "missing_fully_occluded_by_red",
+      "sem_status": "no_separately_visible_endpoints"
+    },
+    {
+      "current_pA": 200,
+      "x_px": 1158.5,
+      "y_px": 363,
+      "mean_Hz": 0,
+      "sem_low_px": null,
+      "sem_high_px": null,
+      "sem_Hz": null,
+      "status": "partially_visible_blue_arc",
+      "sem_status": "no_separately_visible_endpoints",
+      "signed_calibrated_reading_Hz": -0.04734848484848485
+    },
+    {
+      "current_pA": 300,
+      "x_px": 1185,
+      "y_px": 360,
+      "mean_Hz": 0.23674242424242425,
+      "sem_low_px": null,
+      "sem_high_px": null,
+      "sem_Hz": null,
+      "status": "visible_mean",
+      "sem_status": "no_separately_visible_endpoints",
+      "signed_calibrated_reading_Hz": 0.23674242424242425
+    },
+    {
+      "current_pA": 400,
+      "x_px": 1211.5,
+      "y_px": 343.5,
+      "mean_Hz": 1.7992424242424243,
+      "sem_low_px": null,
+      "sem_high_px": null,
+      "sem_Hz": null,
+      "status": "visible_mean",
+      "sem_status": "no_separately_visible_endpoints",
+      "signed_calibrated_reading_Hz": 1.7992424242424243
+    },
+    {
+      "current_pA": 500,
+      "x_px": 1238,
+      "y_px": 315.5,
+      "mean_Hz": 4.450757575757576,
+      "sem_low_px": null,
+      "sem_high_px": null,
+      "sem_Hz": null,
+      "status": "visible_mean",
+      "sem_status": "no_separately_visible_endpoints",
+      "signed_calibrated_reading_Hz": 4.450757575757576
+    },
+    {
+      "current_pA": 600,
+      "x_px": 1264,
+      "y_px": 283.5,
+      "mean_Hz": 7.481060606060606,
+      "sem_low_px": null,
+      "sem_high_px": null,
+      "sem_Hz": null,
+      "status": "visible_mean",
+      "sem_status": "no_separately_visible_endpoints",
+      "signed_calibrated_reading_Hz": 7.481060606060606
+    },
+    {
+      "current_pA": 700,
+      "x_px": 1290.5,
+      "y_px": 254,
+      "mean_Hz": 10.274621212121213,
+      "sem_low_px": null,
+      "sem_high_px": null,
+      "sem_Hz": null,
+      "status": "visible_mean",
+      "sem_status": "no_separately_visible_endpoints",
+      "signed_calibrated_reading_Hz": 10.274621212121213
+    },
+    {
+      "current_pA": 800,
+      "x_px": 1317,
+      "y_px": 226,
+      "mean_Hz": 12.926136363636363,
+      "sem_low_px": null,
+      "sem_high_px": null,
+      "sem_Hz": null,
+      "status": "visible_mean",
+      "sem_status": "no_separately_visible_endpoints",
+      "signed_calibrated_reading_Hz": 12.926136363636363
+    },
+    {
+      "current_pA": 900,
+      "x_px": 1343.5,
+      "y_px": 202.5,
+      "mean_Hz": 15.151515151515152,
+      "sem_low_px": null,
+      "sem_high_px": null,
+      "sem_Hz": null,
+      "status": "visible_mean",
+      "sem_status": "no_separately_visible_endpoints",
+      "signed_calibrated_reading_Hz": 15.151515151515152
+    },
+    {
+      "current_pA": 1000,
+      "x_px": 1370,
+      "y_px": 185,
+      "mean_Hz": 16.80871212121212,
+      "sem_low_px": null,
+      "sem_high_px": null,
+      "sem_Hz": null,
+      "status": "visible_mean",
+      "sem_status": "no_separately_visible_endpoints",
+      "signed_calibrated_reading_Hz": 16.80871212121212
+    }
+  ],
+  "nonnegative_constraint": "Signed calibrated reading retained; physical firing mean floored at0 where axis reading lies below0. No hidden point inferred."
+}

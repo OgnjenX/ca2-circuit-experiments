@@ -1,0 +1,21 @@
+{
+  "kind": "Later source-only geometric sensitivity; primary frozen target unchanged",
+  "received_after_scientific_outputs": true,
+  "primary_100pA_interval_Hz": [
+    0,
+    1.2
+  ],
+  "proposed_source_only_interval_Hz": [
+    0,
+    0.4
+  ],
+  "mean_Hz": null,
+  "provenance": "Parent source-only audit reported no production outputs viewed by auditor; not independently rerun here. Original official PMC raster, equal marker diameter19-20px, blue strong-color top radius8.39-9.07px, red beginsrow353, zeroaxis362-363.",
+  "derivation": "Assume blue radius>=8px and2px raster/JPEG/localization allowance: center y>=353+8-2=359; worst calibration25*(363-359)/(363-99)=.379Hz; roundoutward.4.",
+  "conditions": [
+    "marker plotted at100pA",
+    "equal-sized red/blue markers",
+    "2px allowance conservative but not empirically guaranteed"
+  ],
+  "interpretation": "Conditional geometric reading bound, not a statistical confidence interval or exactzero. No biological rescoring because primary numerical gate failed."
+}

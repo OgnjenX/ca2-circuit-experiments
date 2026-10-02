@@ -1,0 +1,747 @@
+{
+  "kind": "Independent bounded runtime structural review",
+  "frozen_commit": "233b068cb7e22663b9ce551806e4a4e573a63872",
+  "actual_native_sweeps": 33,
+  "all_native_exit_zero_and_metadata_verified": true,
+  "trace_completeness_clock_float32_pass": true,
+  "independent_reset_refractory_pass": true,
+  "all_baselines_exact_minus70": true,
+  "all_holding_only_traces_exact_minus70": true,
+  "records": [
+    {
+      "trace": "data/workspaces/003-whitebirch-gpu-pre-freeze-v7/traces/rk20_step0.csv",
+      "trace_sha256": "3a7956a3627a3e3f69ab4ff484568363ffbad28bd3da4e0435d7cab886b67577",
+      "native_exit_record_sha256": "563c3d344864776965bb36563034f89b6564a9a796000b05d01aec3928612b24",
+      "steps_per_ms": 20,
+      "step_current_pA": 0,
+      "shape": [
+        24001,
+        5
+      ],
+      "independent_structural_errors": [],
+      "reset_transitions_audited": 0,
+      "refractory_substeps_audited": 0,
+      "baseline_max_error_mV": 0.0,
+      "holding_max_error_mV": 0.0,
+      "first_pulse_capacitance_times_dVdt_pA": 0.0,
+      "first_pulse_dVdt_difference_from_step_pA": 0.0,
+      "transition_times_on_observed_grid_ms": [
+        100.0,
+        1100.0
+      ]
+    },
+    {
+      "trace": "data/workspaces/003-whitebirch-gpu-pre-freeze-v7/traces/rk20_step100.csv",
+      "trace_sha256": "59bcff6713bd656b18031333deda98016292c32a8901861d72b2c749955b5ae8",
+      "native_exit_record_sha256": "313fc5ac792758da524eef46cb4487ebf4557b6c54715205cc0153fc6580dff1",
+      "steps_per_ms": 20,
+      "step_current_pA": 100,
+      "shape": [
+        24001,
+        5
+      ],
+      "independent_structural_errors": [],
+      "reset_transitions_audited": 2,
+      "refractory_substeps_audited": 54,
+      "baseline_max_error_mV": 0.0,
+      "holding_max_error_mV": null,
+      "first_pulse_capacitance_times_dVdt_pA": 99.98473972104878,
+      "first_pulse_dVdt_difference_from_step_pA": -0.015260278951217288,
+      "transition_times_on_observed_grid_ms": [
+        100.0,
+        1100.0
+      ]
+    },
+    {
+      "trace": "data/workspaces/003-whitebirch-gpu-pre-freeze-v7/traces/rk20_step1000.csv",
+      "trace_sha256": "0246eaf90dbeec849e210d8dce2fb560e6c9315e99607c9d6a2e99da1c1249b6",
+      "native_exit_record_sha256": "171651b1f8015d84b5044ffb38357a392c54747cbd2c6c62710d2de4934ce696",
+      "steps_per_ms": 20,
+      "step_current_pA": 1000,
+      "shape": [
+        24001,
+        5
+      ],
+      "independent_structural_errors": [],
+      "reset_transitions_audited": 23,
+      "refractory_substeps_audited": 659,
+      "baseline_max_error_mV": 0.0,
+      "holding_max_error_mV": null,
+      "first_pulse_capacitance_times_dVdt_pA": 999.1012424364501,
+      "first_pulse_dVdt_difference_from_step_pA": -0.898757563549907,
+      "transition_times_on_observed_grid_ms": [
+        100.0,
+        1100.0
+      ]
+    },
+    {
+      "trace": "data/workspaces/003-whitebirch-gpu-pre-freeze-v7/traces/rk20_step200.csv",
+      "trace_sha256": "1140576d613c162c5766311c15e076142c3390ae947fdd0ed2df21405c94d674",
+      "native_exit_record_sha256": "fefbea912ce12c7a87d49a9ea1905f039ab471628b4421ff8f42162275d330cc",
+      "steps_per_ms": 20,
+      "step_current_pA": 200,
+      "shape": [
+        24001,
+        5
+      ],
+      "independent_structural_errors": [],
+      "reset_transitions_audited": 4,
+      "refractory_substeps_audited": 118,
+      "baseline_max_error_mV": 0.0,
+      "holding_max_error_mV": null,
+      "first_pulse_capacitance_times_dVdt_pA": 199.720761184085,
+      "first_pulse_dVdt_difference_from_step_pA": -0.27923881591499367,
+      "transition_times_on_observed_grid_ms": [
+        100.0,
+        1100.0
+      ]
+    },
+    {
+      "trace": "data/workspaces/003-whitebirch-gpu-pre-freeze-v7/traces/rk20_step300.csv",
+      "trace_sha256": "9e28e9fa8599b844de5db41bf66c1b71b74fa89826a32b6d7ac50edde5f97b16",
+      "native_exit_record_sha256": "fc5ced72c56e42f71acc20d3eb7a8df285da58af98ad5d1ec75a14ceb72ac089",
+      "steps_per_ms": 20,
+      "step_current_pA": 300,
+      "shape": [
+        24001,
+        5
+      ],
+      "independent_structural_errors": [],
+      "reset_transitions_audited": 9,
+      "refractory_substeps_audited": 296,
+      "baseline_max_error_mV": 0.0,
+      "holding_max_error_mV": null,
+      "first_pulse_capacitance_times_dVdt_pA": 299.70550090513376,
+      "first_pulse_dVdt_difference_from_step_pA": -0.2944990948662394,
+      "transition_times_on_observed_grid_ms": [
+        100.0,
+        1100.0
+      ]
+    },
+    {
+      "trace": "data/workspaces/003-whitebirch-gpu-pre-freeze-v7/traces/rk20_step400.csv",
+      "trace_sha256": "6b57aac2e9ab048360f33099ecdd704d031052eac3f78ab398ebb6d1449d9055",
+      "native_exit_record_sha256": "922b7e7e49b1e7568dedb9a78ea9b520ca21366c3363d099a705bd5528e4a980",
+      "steps_per_ms": 20,
+      "step_current_pA": 400,
+      "shape": [
+        24001,
+        5
+      ],
+      "independent_structural_errors": [],
+      "reset_transitions_audited": 11,
+      "refractory_substeps_audited": 274,
+      "baseline_max_error_mV": 0.0,
+      "holding_max_error_mV": null,
+      "first_pulse_capacitance_times_dVdt_pA": 399.6902406261826,
+      "first_pulse_dVdt_difference_from_step_pA": -0.30975937381742824,
+      "transition_times_on_observed_grid_ms": [
+        100.0,
+        1100.0
+      ]
+    },
+    {
+      "trace": "data/workspaces/003-whitebirch-gpu-pre-freeze-v7/traces/rk20_step500.csv",
+      "trace_sha256": "75baea4c58c2b166ab60847d81bc87da67781ed6c88056d7c8650d5c40953f2d",
+      "native_exit_record_sha256": "01361d4525d8ce28dd1e9503eec58054b8f2de559ed14ec1f185e1a90eff42a5",
+      "steps_per_ms": 20,
+      "step_current_pA": 500,
+      "shape": [
+        24001,
+        5
+      ],
+      "independent_structural_errors": [],
+      "reset_transitions_audited": 14,
+      "refractory_substeps_audited": 459,
+      "baseline_max_error_mV": 0.0,
+      "holding_max_error_mV": null,
+      "first_pulse_capacitance_times_dVdt_pA": 499.6749803472313,
+      "first_pulse_dVdt_difference_from_step_pA": -0.32501965276867395,
+      "transition_times_on_observed_grid_ms": [
+        100.0,
+        1100.0
+      ]
+    },
+    {
+      "trace": "data/workspaces/003-whitebirch-gpu-pre-freeze-v7/traces/rk20_step600.csv",
+      "trace_sha256": "9775330958bb10a13c8154475121e6dbb2cd69a5f76fb0fbbb9fef92564cdcbd",
+      "native_exit_record_sha256": "f7799f02de406a1297ba4dcbc2984187c65fcb390b6b14ace767513f2c48365c",
+      "steps_per_ms": 20,
+      "step_current_pA": 600,
+      "shape": [
+        24001,
+        5
+      ],
+      "independent_structural_errors": [],
+      "reset_transitions_audited": 16,
+      "refractory_substeps_audited": 458,
+      "baseline_max_error_mV": 0.0,
+      "holding_max_error_mV": null,
+      "first_pulse_capacitance_times_dVdt_pA": 599.4110018102675,
+      "first_pulse_dVdt_difference_from_step_pA": -0.5889981897324787,
+      "transition_times_on_observed_grid_ms": [
+        100.0,
+        1100.0
+      ]
+    },
+    {
+      "trace": "data/workspaces/003-whitebirch-gpu-pre-freeze-v7/traces/rk20_step700.csv",
+      "trace_sha256": "914162015dd363f201370dd05b01b6ef5dda145a9ea5df848a2476b9ccf0a739",
+      "native_exit_record_sha256": "c1121fe17ef1168b8b6ccf03973a611463d0881cc1e94b5eb591dc198d40bd07",
+      "steps_per_ms": 20,
+      "step_current_pA": 700,
+      "shape": [
+        24001,
+        5
+      ],
+      "independent_structural_errors": [],
+      "reset_transitions_audited": 18,
+      "refractory_substeps_audited": 557,
+      "baseline_max_error_mV": 0.0,
+      "holding_max_error_mV": null,
+      "first_pulse_capacitance_times_dVdt_pA": 699.3957415313163,
+      "first_pulse_dVdt_difference_from_step_pA": -0.6042584686837245,
+      "transition_times_on_observed_grid_ms": [
+        100.0,
+        1100.0
+      ]
+    },
+    {
+      "trace": "data/workspaces/003-whitebirch-gpu-pre-freeze-v7/traces/rk20_step800.csv",
+      "trace_sha256": "7122b89dbb98039eca21bd00d7d1aa12156d88c3fba1e10733f693f7c52d6740",
+      "native_exit_record_sha256": "f1dda7171a529fda6ae41916a85d24e5d99b186a2227bc06f5416d6205788d56",
+      "steps_per_ms": 20,
+      "step_current_pA": 800,
+      "shape": [
+        24001,
+        5
+      ],
+      "independent_structural_errors": [],
+      "reset_transitions_audited": 20,
+      "refractory_substeps_audited": 585,
+      "baseline_max_error_mV": 0.0,
+      "holding_max_error_mV": null,
+      "first_pulse_capacitance_times_dVdt_pA": 799.3804812523651,
+      "first_pulse_dVdt_difference_from_step_pA": -0.6195187476348565,
+      "transition_times_on_observed_grid_ms": [
+        100.0,
+        1100.0
+      ]
+    },
+    {
+      "trace": "data/workspaces/003-whitebirch-gpu-pre-freeze-v7/traces/rk20_step900.csv",
+      "trace_sha256": "fdefd1b729b6102f7c4c2749bf7f1b53892a97c876206f468ad0292f52dc01b1",
+      "native_exit_record_sha256": "3bdd4671c415bcad85df8a512e7779460b02a3a1cf26e2904df9d8eb758719b0",
+      "steps_per_ms": 20,
+      "step_current_pA": 900,
+      "shape": [
+        24001,
+        5
+      ],
+      "independent_structural_errors": [],
+      "reset_transitions_audited": 21,
+      "refractory_substeps_audited": 648,
+      "baseline_max_error_mV": 0.0,
+      "holding_max_error_mV": null,
+      "first_pulse_capacitance_times_dVdt_pA": 899.3652209734139,
+      "first_pulse_dVdt_difference_from_step_pA": -0.6347790265861022,
+      "transition_times_on_observed_grid_ms": [
+        100.0,
+        1100.0
+      ]
+    },
+    {
+      "trace": "data/workspaces/003-whitebirch-gpu-pre-freeze-v7/traces/rk40_step0.csv",
+      "trace_sha256": "be3023443cc88fc98a641acfd889eb9e226963b4c9cec00b697e3e23aa0e0ebe",
+      "native_exit_record_sha256": "c1b64974efc4dd23677dcfd9971729d78641912ce5b3899466e2285f774cf541",
+      "steps_per_ms": 40,
+      "step_current_pA": 0,
+      "shape": [
+        48001,
+        5
+      ],
+      "independent_structural_errors": [],
+      "reset_transitions_audited": 0,
+      "refractory_substeps_audited": 0,
+      "baseline_max_error_mV": 0.0,
+      "holding_max_error_mV": 0.0,
+      "first_pulse_capacitance_times_dVdt_pA": 0.0,
+      "first_pulse_dVdt_difference_from_step_pA": 0.0,
+      "transition_times_on_observed_grid_ms": [
+        100.0,
+        1100.0
+      ]
+    },
+    {
+      "trace": "data/workspaces/003-whitebirch-gpu-pre-freeze-v7/traces/rk40_step100.csv",
+      "trace_sha256": "584618a1e50b57fa25721b6d8776fc303e9c00d2bbbe3dbb1793c3d6747f7656",
+      "native_exit_record_sha256": "43b867a6fa29df2848f27d7c8bcdea2a90cd4d56299030e43859b9130b6fdc4c",
+      "steps_per_ms": 40,
+      "step_current_pA": 100,
+      "shape": [
+        48001,
+        5
+      ],
+      "independent_structural_errors": [],
+      "reset_transitions_audited": 2,
+      "refractory_substeps_audited": 112,
+      "baseline_max_error_mV": 0.0,
+      "holding_max_error_mV": null,
+      "first_pulse_capacitance_times_dVdt_pA": 99.98473972104878,
+      "first_pulse_dVdt_difference_from_step_pA": -0.015260278951217288,
+      "transition_times_on_observed_grid_ms": [
+        100.0,
+        1100.0
+      ]
+    },
+    {
+      "trace": "data/workspaces/003-whitebirch-gpu-pre-freeze-v7/traces/rk40_step1000.csv",
+      "trace_sha256": "795b6442449cba31664dedf75e85e40f6a26ea478820ff9c9a88be248ff4dfd8",
+      "native_exit_record_sha256": "00507d72b74c4b7f53b2f33eef966306061cdaf4c0d73fffa3e6fdff17125322",
+      "steps_per_ms": 40,
+      "step_current_pA": 1000,
+      "shape": [
+        48001,
+        5
+      ],
+      "independent_structural_errors": [],
+      "reset_transitions_audited": 23,
+      "refractory_substeps_audited": 1342,
+      "baseline_max_error_mV": 0.0,
+      "holding_max_error_mV": null,
+      "first_pulse_capacitance_times_dVdt_pA": 999.8473972104878,
+      "first_pulse_dVdt_difference_from_step_pA": -0.15260278951222972,
+      "transition_times_on_observed_grid_ms": [
+        100.0,
+        1100.0
+      ]
+    },
+    {
+      "trace": "data/workspaces/003-whitebirch-gpu-pre-freeze-v7/traces/rk40_step200.csv",
+      "trace_sha256": "4b4cc6b8c58aa6be1612bd704b96ba2cd6a80e8231f102e8dd876af12611078e",
+      "native_exit_record_sha256": "e10949566f638d24c9f587aaa5230104c4159805d8ec4e5182d3e0aee43087ef",
+      "steps_per_ms": 40,
+      "step_current_pA": 200,
+      "shape": [
+        48001,
+        5
+      ],
+      "independent_structural_errors": [],
+      "reset_transitions_audited": 4,
+      "refractory_substeps_audited": 270,
+      "baseline_max_error_mV": 0.0,
+      "holding_max_error_mV": null,
+      "first_pulse_capacitance_times_dVdt_pA": 199.96947944209757,
+      "first_pulse_dVdt_difference_from_step_pA": -0.030520557902434575,
+      "transition_times_on_observed_grid_ms": [
+        100.0,
+        1100.0
+      ]
+    },
+    {
+      "trace": "data/workspaces/003-whitebirch-gpu-pre-freeze-v7/traces/rk40_step300.csv",
+      "trace_sha256": "66fee65e1359caf9db9d6db580b1e1dfe3b325d3d1690eb3dfb9f6bcc941f692",
+      "native_exit_record_sha256": "b5e6261437a719c801497ee0c2a36787e29e7f8ff10dd84dcb790c28572099ec",
+      "steps_per_ms": 40,
+      "step_current_pA": 300,
+      "shape": [
+        48001,
+        5
+      ],
+      "independent_structural_errors": [],
+      "reset_transitions_audited": 9,
+      "refractory_substeps_audited": 587,
+      "baseline_max_error_mV": 0.0,
+      "holding_max_error_mV": null,
+      "first_pulse_capacitance_times_dVdt_pA": 299.9542191631463,
+      "first_pulse_dVdt_difference_from_step_pA": -0.045780836853680285,
+      "transition_times_on_observed_grid_ms": [
+        100.0,
+        1100.0
+      ]
+    },
+    {
+      "trace": "data/workspaces/003-whitebirch-gpu-pre-freeze-v7/traces/rk40_step400.csv",
+      "trace_sha256": "c964d7f472c545324d1d696b542d68d9026bab8fe75bc239286869f0696dc86a",
+      "native_exit_record_sha256": "cf66545737a71ca4b519ecce6733711c22ae6a151e5ac13c57b531207f78bfd5",
+      "steps_per_ms": 40,
+      "step_current_pA": 400,
+      "shape": [
+        48001,
+        5
+      ],
+      "independent_structural_errors": [],
+      "reset_transitions_audited": 11,
+      "refractory_substeps_audited": 591,
+      "baseline_max_error_mV": 0.0,
+      "holding_max_error_mV": null,
+      "first_pulse_capacitance_times_dVdt_pA": 399.93895888419513,
+      "first_pulse_dVdt_difference_from_step_pA": -0.06104111580486915,
+      "transition_times_on_observed_grid_ms": [
+        100.0,
+        1100.0
+      ]
+    },
+    {
+      "trace": "data/workspaces/003-whitebirch-gpu-pre-freeze-v7/traces/rk40_step500.csv",
+      "trace_sha256": "d9fa4dc68979f89b7fd5673175be5272ed3d45cbbbfe85099524ae88cbc4cd0d",
+      "native_exit_record_sha256": "2d096c894b7e6c78ff314e8fea73940ea4aa0166d6e55306277c0d1b6e132464",
+      "steps_per_ms": 40,
+      "step_current_pA": 500,
+      "shape": [
+        48001,
+        5
+      ],
+      "independent_structural_errors": [],
+      "reset_transitions_audited": 14,
+      "refractory_substeps_audited": 923,
+      "baseline_max_error_mV": 0.0,
+      "holding_max_error_mV": null,
+      "first_pulse_capacitance_times_dVdt_pA": 499.9236986052439,
+      "first_pulse_dVdt_difference_from_step_pA": -0.07630139475611486,
+      "transition_times_on_observed_grid_ms": [
+        100.0,
+        1100.0
+      ]
+    },
+    {
+      "trace": "data/workspaces/003-whitebirch-gpu-pre-freeze-v7/traces/rk40_step600.csv",
+      "trace_sha256": "baaad7e3c3b0c261e56ba238676ff0fb2eeced80cbd5d5fc476cc7a5045d066e",
+      "native_exit_record_sha256": "38cc89f894bf9149b02b47f3e162b9164185522a86923d3b9277d2be9134bd97",
+      "steps_per_ms": 40,
+      "step_current_pA": 600,
+      "shape": [
+        48001,
+        5
+      ],
+      "independent_structural_errors": [],
+      "reset_transitions_audited": 16,
+      "refractory_substeps_audited": 928,
+      "baseline_max_error_mV": 0.0,
+      "holding_max_error_mV": null,
+      "first_pulse_capacitance_times_dVdt_pA": 599.9084383262926,
+      "first_pulse_dVdt_difference_from_step_pA": -0.09156167370736057,
+      "transition_times_on_observed_grid_ms": [
+        100.0,
+        1100.0
+      ]
+    },
+    {
+      "trace": "data/workspaces/003-whitebirch-gpu-pre-freeze-v7/traces/rk40_step700.csv",
+      "trace_sha256": "a83303497a5ef2145db52e7f2d6e98eb0133d6fd05325b7d52bdee615e620d68",
+      "native_exit_record_sha256": "acf42cd1d740374ec07a1edea5171cc2d8bc95c3a584f4f2aec55e4a2dc8c2c9",
+      "steps_per_ms": 40,
+      "step_current_pA": 700,
+      "shape": [
+        48001,
+        5
+      ],
+      "independent_structural_errors": [],
+      "reset_transitions_audited": 18,
+      "refractory_substeps_audited": 1090,
+      "baseline_max_error_mV": 0.0,
+      "holding_max_error_mV": null,
+      "first_pulse_capacitance_times_dVdt_pA": 699.8931780473414,
+      "first_pulse_dVdt_difference_from_step_pA": -0.10682195265860628,
+      "transition_times_on_observed_grid_ms": [
+        100.0,
+        1100.0
+      ]
+    },
+    {
+      "trace": "data/workspaces/003-whitebirch-gpu-pre-freeze-v7/traces/rk40_step800.csv",
+      "trace_sha256": "ad90565a0ad22fa4471ca4d51af8eed6d86d2fbedc9c90daef8b49d31df707f4",
+      "native_exit_record_sha256": "47b4445d5866ce273f131a2c692899a1c550558c60dff560c54b051d0f05995a",
+      "steps_per_ms": 40,
+      "step_current_pA": 800,
+      "shape": [
+        48001,
+        5
+      ],
+      "independent_structural_errors": [],
+      "reset_transitions_audited": 20,
+      "refractory_substeps_audited": 1189,
+      "baseline_max_error_mV": 0.0,
+      "holding_max_error_mV": null,
+      "first_pulse_capacitance_times_dVdt_pA": 799.8779177683903,
+      "first_pulse_dVdt_difference_from_step_pA": -0.1220822316097383,
+      "transition_times_on_observed_grid_ms": [
+        100.0,
+        1100.0
+      ]
+    },
+    {
+      "trace": "data/workspaces/003-whitebirch-gpu-pre-freeze-v7/traces/rk40_step900.csv",
+      "trace_sha256": "73e4a6fd54a77ecfe601c37168c0ba0c6455108e6950104b88cc8d232a7c862a",
+      "native_exit_record_sha256": "13aca94afbee711932626ba2354043084e342178b7eab2ab54ff7eb2b71f03be",
+      "steps_per_ms": 40,
+      "step_current_pA": 900,
+      "shape": [
+        48001,
+        5
+      ],
+      "independent_structural_errors": [],
+      "reset_transitions_audited": 21,
+      "refractory_substeps_audited": 1278,
+      "baseline_max_error_mV": 0.0,
+      "holding_max_error_mV": null,
+      "first_pulse_capacitance_times_dVdt_pA": 899.862657489439,
+      "first_pulse_dVdt_difference_from_step_pA": -0.137342510560984,
+      "transition_times_on_observed_grid_ms": [
+        100.0,
+        1100.0
+      ]
+    },
+    {
+      "trace": "data/workspaces/003-whitebirch-gpu-pre-freeze-v7/traces/rk80_step0.csv",
+      "trace_sha256": "793e4561e6367d83f2d9a16180bf16b74b9a5476a4f4bda6d56d25ddce0458a1",
+      "native_exit_record_sha256": "a4ead8355f57d6e22ed6e7b054f68098437f47b697aa9e64e5060f45f3bedd7e",
+      "steps_per_ms": 80,
+      "step_current_pA": 0,
+      "shape": [
+        96001,
+        5
+      ],
+      "independent_structural_errors": [],
+      "reset_transitions_audited": 0,
+      "refractory_substeps_audited": 0,
+      "baseline_max_error_mV": 0.0,
+      "holding_max_error_mV": 0.0,
+      "first_pulse_capacitance_times_dVdt_pA": 0.0,
+      "first_pulse_dVdt_difference_from_step_pA": 0.0,
+      "transition_times_on_observed_grid_ms": [
+        100.0,
+        1100.0
+      ]
+    },
+    {
+      "trace": "data/workspaces/003-whitebirch-gpu-pre-freeze-v7/traces/rk80_step100.csv",
+      "trace_sha256": "1a643f0c86f0120ef0f326c9d15e8965c8597f554e96669e9016390d3f5b1270",
+      "native_exit_record_sha256": "26169f5625010984ab43335f706d1b61f50f3d9889197644b9f212962bbdb9f4",
+      "steps_per_ms": 80,
+      "step_current_pA": 100,
+      "shape": [
+        96001,
+        5
+      ],
+      "independent_structural_errors": [],
+      "reset_transitions_audited": 2,
+      "refractory_substeps_audited": 240,
+      "baseline_max_error_mV": 0.0,
+      "holding_max_error_mV": null,
+      "first_pulse_capacitance_times_dVdt_pA": 99.48730320502366,
+      "first_pulse_dVdt_difference_from_step_pA": -0.5126967949763355,
+      "transition_times_on_observed_grid_ms": [
+        100.0,
+        1100.0
+      ]
+    },
+    {
+      "trace": "data/workspaces/003-whitebirch-gpu-pre-freeze-v7/traces/rk80_step1000.csv",
+      "trace_sha256": "b84190e6312deb464cc00ff4f2b1f25d15a9a8cd1e16f209c698b46b48d0993b",
+      "native_exit_record_sha256": "8b3c704ed330b8650a2bb60d5ba0358113c0255b0ca2b374a6b05c803bbd6e57",
+      "steps_per_ms": 80,
+      "step_current_pA": 1000,
+      "shape": [
+        96001,
+        5
+      ],
+      "independent_structural_errors": [],
+      "reset_transitions_audited": 23,
+      "refractory_substeps_audited": 2708,
+      "baseline_max_error_mV": 0.0,
+      "holding_max_error_mV": null,
+      "first_pulse_capacitance_times_dVdt_pA": 999.8473972104878,
+      "first_pulse_dVdt_difference_from_step_pA": -0.15260278951222972,
+      "transition_times_on_observed_grid_ms": [
+        100.0,
+        1100.0
+      ]
+    },
+    {
+      "trace": "data/workspaces/003-whitebirch-gpu-pre-freeze-v7/traces/rk80_step200.csv",
+      "trace_sha256": "c1f663248e366c7767210e0a38095a7147b55f58c9cedcb57d5e7085e7ecec61",
+      "native_exit_record_sha256": "4089130d170582da73f7baafadb92de8901a7cf121c9490bcb71f066d59c0ca7",
+      "steps_per_ms": 80,
+      "step_current_pA": 200,
+      "shape": [
+        96001,
+        5
+      ],
+      "independent_structural_errors": [],
+      "reset_transitions_audited": 4,
+      "refractory_substeps_audited": 539,
+      "baseline_max_error_mV": 0.0,
+      "holding_max_error_mV": null,
+      "first_pulse_capacitance_times_dVdt_pA": 199.96947944209757,
+      "first_pulse_dVdt_difference_from_step_pA": -0.030520557902434575,
+      "transition_times_on_observed_grid_ms": [
+        100.0,
+        1100.0
+      ]
+    },
+    {
+      "trace": "data/workspaces/003-whitebirch-gpu-pre-freeze-v7/traces/rk80_step300.csv",
+      "trace_sha256": "87cadada98710b659bc260b4b54ded1ece4a58a7635a5b8ff0d9257d8e223a5f",
+      "native_exit_record_sha256": "ef5785f53d9fbf70c6a2c7085934f9db24cd4a55ea7ddfa121946b44f687ca91",
+      "steps_per_ms": 80,
+      "step_current_pA": 300,
+      "shape": [
+        96001,
+        5
+      ],
+      "independent_structural_errors": [],
+      "reset_transitions_audited": 9,
+      "refractory_substeps_audited": 1173,
+      "baseline_max_error_mV": 0.0,
+      "holding_max_error_mV": null,
+      "first_pulse_capacitance_times_dVdt_pA": 299.4567826471212,
+      "first_pulse_dVdt_difference_from_step_pA": -0.5432173528787985,
+      "transition_times_on_observed_grid_ms": [
+        100.0,
+        1100.0
+      ]
+    },
+    {
+      "trace": "data/workspaces/003-whitebirch-gpu-pre-freeze-v7/traces/rk80_step400.csv",
+      "trace_sha256": "214975ccadf2ffdd23c3d1055e217663c3b67020c3069de6ccb63140398a8ef4",
+      "native_exit_record_sha256": "ad18fb7227ca38abd0b60ec49c1128806166772ce5535a14cc264ced9de07796",
+      "steps_per_ms": 80,
+      "step_current_pA": 400,
+      "shape": [
+        96001,
+        5
+      ],
+      "independent_structural_errors": [],
+      "reset_transitions_audited": 11,
+      "refractory_substeps_audited": 1188,
+      "baseline_max_error_mV": 0.0,
+      "holding_max_error_mV": null,
+      "first_pulse_capacitance_times_dVdt_pA": 399.93895888419513,
+      "first_pulse_dVdt_difference_from_step_pA": -0.06104111580486915,
+      "transition_times_on_observed_grid_ms": [
+        100.0,
+        1100.0
+      ]
+    },
+    {
+      "trace": "data/workspaces/003-whitebirch-gpu-pre-freeze-v7/traces/rk80_step500.csv",
+      "trace_sha256": "b2d4d9a0bcf845aeecb1e7876f2126b24ed90de6cbf8b2aeb4041625d67109b3",
+      "native_exit_record_sha256": "e72f14609799ee334b74691a1299914ae3c26eb976d0ba67cbdf08c48d6b3296",
+      "steps_per_ms": 80,
+      "step_current_pA": 500,
+      "shape": [
+        96001,
+        5
+      ],
+      "independent_structural_errors": [],
+      "reset_transitions_audited": 14,
+      "refractory_substeps_audited": 1852,
+      "baseline_max_error_mV": 0.0,
+      "holding_max_error_mV": null,
+      "first_pulse_capacitance_times_dVdt_pA": 499.42626208921877,
+      "first_pulse_dVdt_difference_from_step_pA": -0.573737910781233,
+      "transition_times_on_observed_grid_ms": [
+        100.0,
+        1100.0
+      ]
+    },
+    {
+      "trace": "data/workspaces/003-whitebirch-gpu-pre-freeze-v7/traces/rk80_step600.csv",
+      "trace_sha256": "52f4c4a6daeb98dcd1dccde70b59fc3a7e0c3191afcfc2d2c6754a2b42c0d6c2",
+      "native_exit_record_sha256": "0bab873300cb46a901eedd0da347c4983880ea94418d956f3eae8c0b19445590",
+      "steps_per_ms": 80,
+      "step_current_pA": 600,
+      "shape": [
+        96001,
+        5
+      ],
+      "independent_structural_errors": [],
+      "reset_transitions_audited": 16,
+      "refractory_substeps_audited": 1866,
+      "baseline_max_error_mV": 0.0,
+      "holding_max_error_mV": null,
+      "first_pulse_capacitance_times_dVdt_pA": 599.9084383262926,
+      "first_pulse_dVdt_difference_from_step_pA": -0.09156167370736057,
+      "transition_times_on_observed_grid_ms": [
+        100.0,
+        1100.0
+      ]
+    },
+    {
+      "trace": "data/workspaces/003-whitebirch-gpu-pre-freeze-v7/traces/rk80_step700.csv",
+      "trace_sha256": "9367d7c4a64f15feeb59e74a9615970ef6fd0df8a9b36bc19febf62904e0dc22",
+      "native_exit_record_sha256": "cb4028c40ec4be8f1b0c5f9da9ca4198d214e9c1421108fe2504b3c961f1bcb3",
+      "steps_per_ms": 80,
+      "step_current_pA": 700,
+      "shape": [
+        96001,
+        5
+      ],
+      "independent_structural_errors": [],
+      "reset_transitions_audited": 18,
+      "refractory_substeps_audited": 2118,
+      "baseline_max_error_mV": 0.0,
+      "holding_max_error_mV": null,
+      "first_pulse_capacitance_times_dVdt_pA": 699.3957415313163,
+      "first_pulse_dVdt_difference_from_step_pA": -0.6042584686837245,
+      "transition_times_on_observed_grid_ms": [
+        100.0,
+        1100.0
+      ]
+    },
+    {
+      "trace": "data/workspaces/003-whitebirch-gpu-pre-freeze-v7/traces/rk80_step800.csv",
+      "trace_sha256": "c932f43931214001c77a653a8037975fa6a8abd7fef7e3fffdc136f728065f86",
+      "native_exit_record_sha256": "39f901566921d6a280c765235d188418057513af08e5874e5d8811fb78dca30f",
+      "steps_per_ms": 80,
+      "step_current_pA": 800,
+      "shape": [
+        96001,
+        5
+      ],
+      "independent_structural_errors": [],
+      "reset_transitions_audited": 20,
+      "refractory_substeps_audited": 2323,
+      "baseline_max_error_mV": 0.0,
+      "holding_max_error_mV": null,
+      "first_pulse_capacitance_times_dVdt_pA": 799.8779177683903,
+      "first_pulse_dVdt_difference_from_step_pA": -0.1220822316097383,
+      "transition_times_on_observed_grid_ms": [
+        100.0,
+        1100.0
+      ]
+    },
+    {
+      "trace": "data/workspaces/003-whitebirch-gpu-pre-freeze-v7/traces/rk80_step900.csv",
+      "trace_sha256": "b8d6c121b1edabb120a4eb66f1f70b74d5959eb93555c9e022ea5baf3e5c7a6a",
+      "native_exit_record_sha256": "9534cdcd192ffb7c4bce1d72b41d32a74dc9d4d85aabd1ea2a67ceb9dbff0325",
+      "steps_per_ms": 80,
+      "step_current_pA": 900,
+      "shape": [
+        96001,
+        5
+      ],
+      "independent_structural_errors": [],
+      "reset_transitions_audited": 21,
+      "refractory_substeps_audited": 2577,
+      "baseline_max_error_mV": 0.0,
+      "holding_max_error_mV": null,
+      "first_pulse_capacitance_times_dVdt_pA": 899.3652209734139,
+      "first_pulse_dVdt_difference_from_step_pA": -0.6347790265861022,
+      "transition_times_on_observed_grid_ms": [
+        100.0,
+        1100.0
+      ]
+    }
+  ],
+  "method": "Separately written CSV audit of every reset/refractory transition, float32 state roundtrip and grid. No production validator, ODE integration, reference output or biological target score reused in this final audit. Native exit records provide applied-current metadata; source-defined runNetwork phase boundaries match trace grid. Onset finite difference is descriptive engineering telemetry, not a preregistered acceptance gate.",
+  "limitations": [
+    "No direct external-current channel recorded; transition-current identity rests on frozen harness source, exact native configuration and phase durations, with first-onset voltage finite-difference check as supporting evidence.",
+    "Structural success is not independent high-accuracy integration validation; tightened reference and timestep comparison gates remain pending.",
+    "No biological agreement assessment performed."
+  ],
+  "auditor_source": "experiments/003_whitebirch_intrinsic/results/audit_native_trace.py",
+  "auditor_sha256": "540568019afc65d9e289bff7c2c4ee337e79508cad0755d1f516f7519b61a565",
+  "auditor_preservation_note": "Auditor preserved from executed review, then path formatting extended to external workspaces; validation logic unchanged and no native audit rerun during path-formatting amendment."
+}

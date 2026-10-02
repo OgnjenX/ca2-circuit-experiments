@@ -1,0 +1,19 @@
+{
+  "asset_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/87f7/9547935/0671c81157dc/nihms-1828702-f0001.jpg",
+  "source_sha256": "669562afb125d5d6ca5bfafc271368d6be1a02864a957b5c1b5ac08b1a4dbb65",
+  "dimensions": [
+    1447,
+    1561
+  ],
+  "bytes": 1055608,
+  "highest_resolution": "Not established. Official accessible JPG supplied by PMC link. Repeated figure/article curl returned CAPTCHA; publisher web open inaccessible; source inventory request failed404. No manufactured upsampling or imputed hidden values.",
+  "identity": "Blue control verified by actual figure legend and paper caption. Cohort92cells48mice in article RESULTS.",
+  "analysis_code": {
+    "url": "https://zenodo.org/records/6835900/files/I_F_051022.mlx",
+    "sha256": "f36c36ece4a3306eab6ce12e06d6ac441bab87cc4d2623d2aa6773f2957951ab",
+    "md5": "26682d89edd6538e72ceeef7fa064b1a",
+    "bytes": 350700,
+    "license": "CC BY4.0",
+    "inspection": "MLX ZIP matlab/document.xml inspected for baseline,Fs,findpeaks threshold/distance and whole-array call. No raw voltages available."
+  }
+}

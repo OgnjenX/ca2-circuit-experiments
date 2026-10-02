@@ -1,0 +1,28 @@
+{
+  "review_kind": "Independent scoped output-serialization recovery review",
+  "approved_serializer_only_recovery": true,
+  "reviewed_recover_py_sha256": "702e0ec79129616edd5982d7645c084a3323f643b245d9f21ed1713ccfb33e37",
+  "original_scientific_freeze": "233b068cb7e22663b9ce551806e4a4e573a63872",
+  "approval_scope": "Committed and checksum-pinned recovery code may reconstruct the original numerical aggregate from retained native traces and clock-reference JSON, normalize NumPy scalars at JSON writes, and invoke the unchanged originally preregistered immediate diagnostic. Existing numerical failures remain failures. No backend, neuron, target, equations, windows, counting rules, integration tolerances or acceptance criteria change.",
+  "reviewer_executed_neuron_or_reference_integrations": false,
+  "reviewer_created_recovered_numerical_or_diagnostic_outputs": false,
+  "biological_scoring_inspected": false,
+  "verified": [
+    "Revision002 numerical controller, both references, scientific protocol and target are byte-identical to the original scientific freeze.",
+    "All198 existing raw file checksums in existing_raw_sha256.json verified: 132 native trace/sidecar files and66 clock-reference JSON files.",
+    "Recovery gate checks committed source pins and ancestor relationship of recovery freeze while retaining original scientific freeze identity.",
+    "Exact66reference filename set and exact132native trace/sidecar filename set are mandatory; selected raw file hashes verified before new outputs or immediate integration.",
+    "Native sidecar checks and every structural/reset/reference-refinement/same-grid/production-refinement comparison reuse unchanged frozen functions; no clock reference simulate call exists in recovery code.",
+    "Existing clock-reference identity checks require actual float32 native parameters/initialstate/current, timestep/substeps, tolerances/maxstep, hardcoded refractory constant and all phase boundaries.",
+    "Normalization converts NumPy scalars using item() recursively at JSON write boundary; tuple-to-list behavior matches ordinary JSON encoding and values/decisions are preserved.",
+    "Generic normalization test for nested NumPy boolean, float and integer values passed; no model integration, numerical aggregation or biological score executed during review.",
+    "Recovery output requires fresh directory; original failed controller record and all retained raw references remain untouched. Immediate diagnostic is the unchanged frozen function, not a replacement model chosen by outcome."
+  ],
+  "resolved_review_issue": "Empty/partial native hash maps are now rejected by exact132-file-set validation.",
+  "limitations": [
+    "Recovery manifest creation/commit is pending at review time and remains mandatory through the code's freeze gate.",
+    "Approval addresses serialization and record identity only; independent numerical criteria may fail and must block biological discrepancy interpretation as originally declared.",
+    "No biological equivalence claim follows from a recovered engineering result."
+  ],
+  "remaining_implementation_blockers": []
+}

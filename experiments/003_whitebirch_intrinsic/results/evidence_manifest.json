@@ -1,0 +1,22 @@
+{
+  "kind": "Executed negative engineering result, not a biological validation pass",
+  "frozen_commit": "233b068cb7e22663b9ce551806e4a4e573a63872",
+  "recovery_commit": "80049ab001aa6c4e444edb0bab018ded1897a8a9",
+  "sha256": {
+    "archive_record.json": "55d6deeedf2b8ad3d352b1dc2e49ba5434d8cbab971889c9af1151f377fa8044",
+    "audit_native_trace.py": "540568019afc65d9e289bff7c2c4ee337e79508cad0755d1f516f7519b61a565",
+    "audit_numerical_record.py": "1e5fc2e3edd333cca7a5e62739a1edcebce85bdbd6631ef0881d0f5297d7b03d",
+    "engineering_summary.csv": "f9eea57dba0caf27adb39e5aa62da6ae8c82e762948f0d3ab2bfbba92ab51a86",
+    "engineering_summary.json": "d6a7c5ed9ada796a3d1a23e1570451597b1f76c07645e71c2fb5539df3482c4d",
+    "immediate_diagnostic.json": "ac74249ac20b105d3c69e652aa16c191c5ab922a304fedd3350e0c90a29747fd",
+    "late_source_addendum.json": "ae24cc94a2067ade1a6ac924ce92425c3a68e50ee6888b8475f153cefbfa541e",
+    "numerical_checks.json": "d7ba44405d692f145c70c54c6e5367b410c906e3d4cc8b9cbdc88823766662d1",
+    "numerical_review.json": "950f8a07aecd6e5d0c2a51b1a585735c896fe7e51b03d8cad184a4b9ee5d05e7",
+    "numerical_verification.png": "c52092bdb1f51086f7e859d83df9f4c990040ea484a91812c3de803f77428f62",
+    "plot_engineering.py": "a8458ba8e815ba3aa514db744f016b57a4cac08f16e650a36af4b5f714f515b6",
+    "recovery_execution.log": "f438bd0e590dbed743db52d46e93690391c40322b6bf593a18ae8f444a55ab03",
+    "report.md": "76e32a061d822136207e62e1dc78eefad4a5262da042bcd79b5276f17c0efc0d",
+    "runtime_review.json": "32de5f3875b048f1ac83487b1d9862fa17cb9f5337723bdaa9a24e0a3260b87f",
+    "source_geometry_sensitivity.json": "2cbc41277620122b1a11bd63907c90b52cce0f7cdd526425c1e3e4272c59ef55"
+  }
+}

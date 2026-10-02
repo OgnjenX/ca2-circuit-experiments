@@ -1,0 +1,133 @@
+{
+  "status": "incomplete_target_blocker",
+  "reconciliation": "Unweighted mean of two model-blind readings for readable means; conservative union of both intervals; no discrepancy discarded. Missing 100pA retained missing. Pass A top-axis y98.5 versus pass B97.5 produces scale difference captured by union; no model outcome influenced reconciliation.",
+  "rows": [
+    {
+      "current_pA": 100,
+      "mean_Hz": null,
+      "digitization_interval_Hz": null,
+      "pass_difference_Hz": null,
+      "paper_SEM_Hz": null,
+      "SEM_status": "unrecoverable_hidden_or_absent",
+      "model_count": null,
+      "residual_spikes_per_second": null
+    },
+    {
+      "current_pA": 200,
+      "mean_Hz": 0.0,
+      "digitization_interval_Hz": [
+        0,
+        0.2843601895734597
+      ],
+      "pass_difference_Hz": 0.0,
+      "paper_SEM_Hz": null,
+      "SEM_status": "unrecoverable_hidden_or_absent",
+      "model_count": null,
+      "residual_spikes_per_second": null
+    },
+    {
+      "current_pA": 300,
+      "mean_Hz": 0.2598806460834763,
+      "digitization_interval_Hz": [
+        0.046948356807511735,
+        0.5213270142180094
+      ],
+      "pass_difference_Hz": 0.04627644368210404,
+      "paper_SEM_Hz": null,
+      "SEM_status": "unrecoverable_hidden_or_absent",
+      "model_count": null,
+      "residual_spikes_per_second": null
+    },
+    {
+      "current_pA": 400,
+      "mean_Hz": 1.8227344196683817,
+      "digitization_interval_Hz": [
+        1.596244131455399,
+        2.0445497630331744
+      ],
+      "pass_difference_Hz": 0.046983990851914736,
+      "paper_SEM_Hz": null,
+      "SEM_status": "unrecoverable_hidden_or_absent",
+      "model_count": null,
+      "residual_spikes_per_second": null
+    },
+    {
+      "current_pA": 500,
+      "mean_Hz": 4.46924671240709,
+      "digitization_interval_Hz": [
+        4.225352112676056,
+        4.698578199052132
+      ],
+      "pass_difference_Hz": 0.036978273299027364,
+      "paper_SEM_Hz": null,
+      "SEM_status": "unrecoverable_hidden_or_absent",
+      "model_count": null,
+      "residual_spikes_per_second": null
+    },
+    {
+      "current_pA": 600,
+      "mean_Hz": 7.497134076615208,
+      "digitization_interval_Hz": [
+        7.230046948356807,
+        7.738388625592415
+      ],
+      "pass_difference_Hz": 0.03214694110920391,
+      "paper_SEM_Hz": null,
+      "SEM_status": "unrecoverable_hidden_or_absent",
+      "model_count": null,
+      "residual_spikes_per_second": null
+    },
+    {
+      "current_pA": 700,
+      "mean_Hz": 10.280235134362494,
+      "digitization_interval_Hz": [
+        10.0,
+        10.524170616113743
+      ],
+      "pass_difference_Hz": 0.011227844482561977,
+      "paper_SEM_Hz": null,
+      "SEM_status": "unrecoverable_hidden_or_absent",
+      "model_count": null,
+      "residual_spikes_per_second": null
+    },
+    {
+      "current_pA": 800,
+      "mean_Hz": 12.93099271012007,
+      "digitization_interval_Hz": [
+        12.629107981220656,
+        13.186729857819905
+      ],
+      "pass_difference_Hz": 0.00971269296741184,
+      "paper_SEM_Hz": null,
+      "SEM_status": "unrecoverable_hidden_or_absent",
+      "model_count": null,
+      "residual_spikes_per_second": null
+    },
+    {
+      "current_pA": 900,
+      "mean_Hz": 15.14651229273871,
+      "digitization_interval_Hz": [
+        14.835680751173708,
+        15.413891531874405
+      ],
+      "pass_difference_Hz": 0.010005717552887816,
+      "paper_SEM_Hz": null,
+      "SEM_status": "unrecoverable_hidden_or_absent",
+      "model_count": null,
+      "residual_spikes_per_second": null
+    },
+    {
+      "current_pA": 1000,
+      "mean_Hz": 16.80246926815323,
+      "digitization_interval_Hz": [
+        16.47887323943662,
+        17.07897240723121
+      ],
+      "pass_difference_Hz": 0.012485706117782769,
+      "paper_SEM_Hz": null,
+      "SEM_status": "unrecoverable_hidden_or_absent",
+      "model_count": null,
+      "residual_spikes_per_second": null
+    }
+  ]
+}

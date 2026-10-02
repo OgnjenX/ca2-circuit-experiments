@@ -1,0 +1,9 @@
+{
+  "kind": "Bounded output serialization recovery amendment",
+  "original_model_protocol_freeze": "233b068cb7e22663b9ce551806e4a4e573a63872",
+  "scope": "Reconstruct identical aggregate from existing raw files through unchanged revision002 validators; convert NumPy scalars to Python scalars only at JSON serialization boundary. Run originally preregistered immediate-reset diagnostic after committed recovery freeze. No clock reintegration, backend/model/target/equations/counting/windows/criteria changes.",
+  "original_failure_record": "original_failure.json",
+  "new_outputs_before_recovery_freeze": false,
+  "biological_agreement_inspected": false,
+  "review_required": "Independent source review of recovery identity and unchanged numerical gates before invocation. Numerical failure remains a failure after serializer repair. Scorer remains original frozen revision002."
+}

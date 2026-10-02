@@ -1,0 +1,30 @@
+name: whitebirch assay evidence
+on: [push, pull_request]
+jobs:
+  frozen-record:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify preserved revision 1 blocked snapshot
+        run: python experiments/003_whitebirch_intrinsic/verify_readiness.py
+      - name: Confirm revision 1 remains blocked
+        shell: bash
+        run: |
+          set +e
+          python experiments/003_whitebirch_intrinsic/verify_readiness.py --require-ready
+          result=$?
+          set -e
+          test "$result" -eq 2
+      - name: Install amended assay verification dependencies
+        run: python -m pip install -r experiments/003_whitebirch_intrinsic/revisions/002/requirements.txt
+      - name: Test amended reset, trace identity and detector gates
+        run: python experiments/003_whitebirch_intrinsic/revisions/002/tests_unit.py
+      - name: Verify amended frozen inputs and result consistency
+        run: python experiments/003_whitebirch_intrinsic/verify_results.py
+      - name: Verify bounded post-hoc addenda without reopening primary gates
+        run: python experiments/003_whitebirch_intrinsic/addenda/verify_addenda.py

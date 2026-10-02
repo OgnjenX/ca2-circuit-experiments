@@ -1,0 +1,2218 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "step_current_pA": 0,
+      "events": [],
+      "refinement_pass": true,
+      "refinement": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0,
+        "max_reset_u_before_error_pA": 0,
+        "pass": true
+      },
+      "loose_metrics": {
+        "reset_states_pass": true,
+        "holding_check_pass": true,
+        "baseline_boundary_max_error_mV": 2.886159620629769e-06,
+        "holding_boundary_max_error_mV": 3.116180550932768e-06,
+        "holding_sampling": "All returned phase-boundary states; event absence also required.",
+        "audit": {
+          "raw_counts": {
+            "pre": 0,
+            "pulse": 0,
+            "post": 0
+          },
+          "compatible_counts": {
+            "pre": 0,
+            "pulse": 0,
+            "post": 0
+          },
+          "pulse_inclusive_count": 0,
+          "nearest_phase_boundaries": {
+            "100": null,
+            "1100": null,
+            "1200": null
+          },
+          "windows": "pre [0,100), primary pulse [100,1100), post [1100,1200] (recording end closed)",
+          "whole_trace_raw": 0,
+          "whole_trace_compatible": 0,
+          "minimum_ISI_ms": null,
+          "ISIs_below_6ms": [],
+          "amplitude_equivalent_mV": null,
+          "pulse_endpoint_brackets": []
+        }
+      },
+      "tight_metrics": {
+        "reset_states_pass": true,
+        "holding_check_pass": true,
+        "baseline_boundary_max_error_mV": 2.8861597911600256e-06,
+        "holding_boundary_max_error_mV": 3.1161805225110584e-06,
+        "holding_sampling": "All returned phase-boundary states; event absence also required.",
+        "audit": {
+          "raw_counts": {
+            "pre": 0,
+            "pulse": 0,
+            "post": 0
+          },
+          "compatible_counts": {
+            "pre": 0,
+            "pulse": 0,
+            "post": 0
+          },
+          "pulse_inclusive_count": 0,
+          "nearest_phase_boundaries": {
+            "100": null,
+            "1100": null,
+            "1200": null
+          },
+          "windows": "pre [0,100), primary pulse [100,1100), post [1100,1200] (recording end closed)",
+          "whole_trace_raw": 0,
+          "whole_trace_compatible": 0,
+          "minimum_ISI_ms": null,
+          "ISIs_below_6ms": [],
+          "amplitude_equivalent_mV": null,
+          "pulse_endpoint_brackets": []
+        }
+      },
+      "rawpaths": [
+        "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step0_loose.json",
+        "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step0_tight.json"
+      ]
+    },
+    {
+      "step_current_pA": 100,
+      "events": [
+        {
+          "time_ms": 858.8231582406927,
+          "phase": "pulse",
+          "v_before": 19.99006080627563,
+          "u_before": -92.87023087009862,
+          "v_after": -62.64677810668945,
+          "u_after": -18.870230870098624
+        },
+        {
+          "time_ms": 969.3037091262478,
+          "phase": "pulse",
+          "v_before": 19.990060806275146,
+          "u_before": -47.1719484066536,
+          "v_after": -62.64677810668945,
+          "u_after": 26.8280515933464
+        }
+      ],
+      "refinement_pass": true,
+      "refinement": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 1.4846364138065837e-09,
+        "max_reset_u_before_error_pA": 8.053717692746432e-10,
+        "pass": true
+      },
+      "loose_metrics": {
+        "reset_states_pass": true,
+        "holding_check_pass": true,
+        "baseline_boundary_max_error_mV": 2.886159620629769e-06,
+        "holding_boundary_max_error_mV": null,
+        "holding_sampling": "All returned phase-boundary states; event absence also required.",
+        "audit": {
+          "raw_counts": {
+            "pre": 0,
+            "pulse": 2,
+            "post": 0
+          },
+          "compatible_counts": {
+            "pre": 0,
+            "pulse": 2,
+            "post": 0
+          },
+          "pulse_inclusive_count": 2,
+          "nearest_phase_boundaries": {
+            "100": {
+              "event_time_ms": 858.8231582396055,
+              "distance_ms": 758.8231582396055
+            },
+            "1100": {
+              "event_time_ms": 969.3037091277324,
+              "distance_ms": 130.69629087226758
+            },
+            "1200": {
+              "event_time_ms": 969.3037091277324,
+              "distance_ms": 230.69629087226758
+            }
+          },
+          "windows": "pre [0,100), primary pulse [100,1100), post [1100,1200] (recording end closed)",
+          "whole_trace_raw": 2,
+          "whole_trace_compatible": 2,
+          "minimum_ISI_ms": 110.48055088812691,
+          "ISIs_below_6ms": [],
+          "amplitude_equivalent_mV": null,
+          "pulse_endpoint_brackets": []
+        }
+      },
+      "tight_metrics": {
+        "reset_states_pass": true,
+        "holding_check_pass": true,
+        "baseline_boundary_max_error_mV": 2.8861597911600256e-06,
+        "holding_boundary_max_error_mV": null,
+        "holding_sampling": "All returned phase-boundary states; event absence also required.",
+        "audit": {
+          "raw_counts": {
+            "pre": 0,
+            "pulse": 2,
+            "post": 0
+          },
+          "compatible_counts": {
+            "pre": 0,
+            "pulse": 2,
+            "post": 0
+          },
+          "pulse_inclusive_count": 2,
+          "nearest_phase_boundaries": {
+            "100": {
+              "event_time_ms": 858.8231582406927,
+              "distance_ms": 758.8231582406927
+            },
+            "1100": {
+              "event_time_ms": 969.3037091262478,
+              "distance_ms": 130.69629087375222
+            },
+            "1200": {
+              "event_time_ms": 969.3037091262478,
+              "distance_ms": 230.69629087375222
+            }
+          },
+          "windows": "pre [0,100), primary pulse [100,1100), post [1100,1200] (recording end closed)",
+          "whole_trace_raw": 2,
+          "whole_trace_compatible": 2,
+          "minimum_ISI_ms": 110.48055088555509,
+          "ISIs_below_6ms": [],
+          "amplitude_equivalent_mV": null,
+          "pulse_endpoint_brackets": []
+        }
+      },
+      "rawpaths": [
+        "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step100_loose.json",
+        "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step100_tight.json"
+      ]
+    },
+    {
+      "step_current_pA": 200,
+      "events": [
+        {
+          "time_ms": 263.1984224112427,
+          "phase": "pulse",
+          "v_before": 19.99006080627376,
+          "u_before": -65.76646130591962,
+          "v_after": -62.64677810668945,
+          "u_after": 8.23353869408038
+        },
+        {
+          "time_ms": 333.58545736552566,
+          "phase": "pulse",
+          "v_before": 19.99006080627459,
+          "u_before": -15.522447507041132,
+          "v_after": -62.64677810668945,
+          "u_after": 58.477552492958864
+        },
+        {
+          "time_ms": 423.07661052095403,
+          "phase": "pulse",
+          "v_before": 19.990060806274773,
+          "u_before": 26.060847500261165,
+          "v_after": -62.64677810668945,
+          "u_after": 100.06084750026116
+        },
+        {
+          "time_ms": 561.2382291358988,
+          "phase": "pulse",
+          "v_before": 19.99006080627378,
+          "u_before": 50.595559476425976,
+          "v_after": -62.64677810668945,
+          "u_after": 124.59555947642598
+        }
+      ],
+      "refinement_pass": true,
+      "refinement": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 1.9643948689918034e-09,
+        "max_reset_u_before_error_pA": 1.3466276982398995e-09,
+        "pass": true
+      },
+      "loose_metrics": {
+        "reset_states_pass": true,
+        "holding_check_pass": true,
+        "baseline_boundary_max_error_mV": 2.886159620629769e-06,
+        "holding_boundary_max_error_mV": null,
+        "holding_sampling": "All returned phase-boundary states; event absence also required.",
+        "audit": {
+          "raw_counts": {
+            "pre": 0,
+            "pulse": 4,
+            "post": 0
+          },
+          "compatible_counts": {
+            "pre": 0,
+            "pulse": 4,
+            "post": 0
+          },
+          "pulse_inclusive_count": 4,
+          "nearest_phase_boundaries": {
+            "100": {
+              "event_time_ms": 263.1984224111923,
+              "distance_ms": 163.19842241119233
+            },
+            "1100": {
+              "event_time_ms": 561.2382291339344,
+              "distance_ms": 538.7617708660656
+            },
+            "1200": {
+              "event_time_ms": 561.2382291339344,
+              "distance_ms": 638.7617708660656
+            }
+          },
+          "windows": "pre [0,100), primary pulse [100,1100), post [1100,1200] (recording end closed)",
+          "whole_trace_raw": 4,
+          "whole_trace_compatible": 4,
+          "minimum_ISI_ms": 70.38703495421055,
+          "ISIs_below_6ms": [],
+          "amplitude_equivalent_mV": null,
+          "pulse_endpoint_brackets": []
+        }
+      },
+      "tight_metrics": {
+        "reset_states_pass": true,
+        "holding_check_pass": true,
+        "baseline_boundary_max_error_mV": 2.8861597911600256e-06,
+        "holding_boundary_max_error_mV": null,
+        "holding_sampling": "All returned phase-boundary states; event absence also required.",
+        "audit": {
+          "raw_counts": {
+            "pre": 0,
+            "pulse": 4,
+            "post": 0
+          },
+          "compatible_counts": {
+            "pre": 0,
+            "pulse": 4,
+            "post": 0
+          },
+          "pulse_inclusive_count": 4,
+          "nearest_phase_boundaries": {
+            "100": {
+              "event_time_ms": 263.1984224112427,
+              "distance_ms": 163.1984224112427
+            },
+            "1100": {
+              "event_time_ms": 561.2382291358988,
+              "distance_ms": 538.7617708641012
+            },
+            "1200": {
+              "event_time_ms": 561.2382291358988,
+              "distance_ms": 638.7617708641012
+            }
+          },
+          "windows": "pre [0,100), primary pulse [100,1100), post [1100,1200] (recording end closed)",
+          "whole_trace_raw": 4,
+          "whole_trace_compatible": 4,
+          "minimum_ISI_ms": 70.38703495428297,
+          "ISIs_below_6ms": [],
+          "amplitude_equivalent_mV": null,
+          "pulse_endpoint_brackets": []
+        }
+      },
+      "rawpaths": [
+        "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step200_loose.json",
+        "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step200_tight.json"
+      ]
+    },
+    {
+      "step_current_pA": 300,
+      "events": [
+        {
+          "time_ms": 203.97109596325285,
+          "phase": "pulse",
+          "v_before": 19.990060806274787,
+          "u_before": -60.87783550313228,
+          "v_after": -62.64677810668945,
+          "u_after": 13.122164496867718
+        },
+        {
+          "time_ms": 258.0753810422453,
+          "phase": "pulse",
+          "v_before": 19.990060806274794,
+          "u_before": -7.357114003825366,
+          "v_after": -62.64677810668945,
+          "u_after": 66.64288599617464
+        },
+        {
+          "time_ms": 319.4517545436104,
+          "phase": "pulse",
+          "v_before": 19.99006080627432,
+          "u_before": 40.89499850484952,
+          "v_after": -62.64677810668945,
+          "u_after": 114.89499850484953
+        },
+        {
+          "time_ms": 391.0232054903492,
+          "phase": "pulse",
+          "v_before": 19.990060806274787,
+          "u_before": 82.59101749030809,
+          "v_after": -62.64677810668945,
+          "u_after": 156.5910174903081
+        },
+        {
+          "time_ms": 478.067530653769,
+          "phase": "pulse",
+          "v_before": 19.99006080627192,
+          "u_before": 115.57627425714018,
+          "v_after": -62.64677810668945,
+          "u_after": 189.5762742571402
+        },
+        {
+          "time_ms": 591.2547834091622,
+          "phase": "pulse",
+          "v_before": 19.990060806273622,
+          "u_before": 135.88442947729826,
+          "v_after": -62.64677810668945,
+          "u_after": 209.88442947729826
+        },
+        {
+          "time_ms": 749.0413599280789,
+          "phase": "pulse",
+          "v_before": 19.990060806274716,
+          "u_before": 137.7479773270442,
+          "v_after": -62.64677810668945,
+          "u_after": 211.7479773270442
+        },
+        {
+          "time_ms": 915.0773214971946,
+          "phase": "pulse",
+          "v_before": 19.990060806274982,
+          "u_before": 136.48203375237895,
+          "v_after": -62.64677810668945,
+          "u_after": 210.48203375237895
+        },
+        {
+          "time_ms": 1075.3499254226701,
+          "phase": "pulse",
+          "v_before": 19.99006080627511,
+          "u_before": 137.3949356714921,
+          "v_after": -62.64677810668945,
+          "u_after": 211.3949356714921
+        }
+      ],
+      "refinement_pass": true,
+      "refinement": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 6.634081728407182e-09,
+        "max_reset_u_before_error_pA": 2.1624373403028585e-09,
+        "pass": true
+      },
+      "loose_metrics": {
+        "reset_states_pass": true,
+        "holding_check_pass": true,
+        "baseline_boundary_max_error_mV": 2.886159620629769e-06,
+        "holding_boundary_max_error_mV": null,
+        "holding_sampling": "All returned phase-boundary states; event absence also required.",
+        "audit": {
+          "raw_counts": {
+            "pre": 0,
+            "pulse": 9,
+            "post": 0
+          },
+          "compatible_counts": {
+            "pre": 0,
+            "pulse": 9,
+            "post": 0
+          },
+          "pulse_inclusive_count": 9,
+          "nearest_phase_boundaries": {
+            "100": {
+              "event_time_ms": 203.97109596473518,
+              "distance_ms": 103.97109596473518
+            },
+            "1100": {
+              "event_time_ms": 1075.349925416036,
+              "distance_ms": 24.650074583963942
+            },
+            "1200": {
+              "event_time_ms": 1075.349925416036,
+              "distance_ms": 124.65007458396394
+            }
+          },
+          "windows": "pre [0,100), primary pulse [100,1100), post [1100,1200] (recording end closed)",
+          "whole_trace_raw": 9,
+          "whole_trace_compatible": 9,
+          "minimum_ISI_ms": 54.10428507880914,
+          "ISIs_below_6ms": [],
+          "amplitude_equivalent_mV": null,
+          "pulse_endpoint_brackets": []
+        }
+      },
+      "tight_metrics": {
+        "reset_states_pass": true,
+        "holding_check_pass": true,
+        "baseline_boundary_max_error_mV": 2.8861597911600256e-06,
+        "holding_boundary_max_error_mV": null,
+        "holding_sampling": "All returned phase-boundary states; event absence also required.",
+        "audit": {
+          "raw_counts": {
+            "pre": 0,
+            "pulse": 9,
+            "post": 0
+          },
+          "compatible_counts": {
+            "pre": 0,
+            "pulse": 9,
+            "post": 0
+          },
+          "pulse_inclusive_count": 9,
+          "nearest_phase_boundaries": {
+            "100": {
+              "event_time_ms": 203.97109596325285,
+              "distance_ms": 103.97109596325285
+            },
+            "1100": {
+              "event_time_ms": 1075.3499254226701,
+              "distance_ms": 24.65007457732986
+            },
+            "1200": {
+              "event_time_ms": 1075.3499254226701,
+              "distance_ms": 124.65007457732986
+            }
+          },
+          "windows": "pre [0,100), primary pulse [100,1100), post [1100,1200] (recording end closed)",
+          "whole_trace_raw": 9,
+          "whole_trace_compatible": 9,
+          "minimum_ISI_ms": 54.10428507899243,
+          "ISIs_below_6ms": [],
+          "amplitude_equivalent_mV": null,
+          "pulse_endpoint_brackets": []
+        }
+      },
+      "rawpaths": [
+        "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step300_loose.json",
+        "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step300_tight.json"
+      ]
+    },
+    {
+      "step_current_pA": 400,
+      "events": [
+        {
+          "time_ms": 179.94645511179786,
+          "phase": "pulse",
+          "v_before": 19.990060806274602,
+          "u_before": -58.52213195077497,
+          "v_after": -62.64677810668945,
+          "u_after": 15.47786804922503
+        },
+        {
+          "time_ms": 225.55876386317848,
+          "phase": "pulse",
+          "v_before": 19.990060806274535,
+          "u_before": -3.0532541111017104,
+          "v_after": -62.64677810668945,
+          "u_after": 70.94674588889829
+        },
+        {
+          "time_ms": 275.35738396197416,
+          "phase": "pulse",
+          "v_before": 19.990060806274233,
+          "u_before": 48.324723641667916,
+          "v_after": -62.64677810668945,
+          "u_after": 122.32472364166792
+        },
+        {
+          "time_ms": 330.31295942644283,
+          "phase": "pulse",
+          "v_before": 19.990060806274084,
+          "u_before": 95.05199699229783,
+          "v_after": -62.64677810668945,
+          "u_after": 169.05199699229783
+        },
+        {
+          "time_ms": 391.76601974449613,
+          "phase": "pulse",
+          "v_before": 19.990060806274148,
+          "u_before": 136.39597799363742,
+          "v_after": -62.64677810668945,
+          "u_after": 210.39597799363742
+        },
+        {
+          "time_ms": 461.59900839054484,
+          "phase": "pulse",
+          "v_before": 19.99006080627498,
+          "u_before": 171.38813170341618,
+          "v_after": -62.64677810668945,
+          "u_after": 245.38813170341618
+        },
+        {
+          "time_ms": 542.4249063633418,
+          "phase": "pulse",
+          "v_before": 19.990060806274947,
+          "u_before": 198.78018449172666,
+          "v_after": -62.64677810668945,
+          "u_after": 272.7801844917267
+        },
+        {
+          "time_ms": 637.4703176044271,
+          "phase": "pulse",
+          "v_before": 19.990060806273483,
+          "u_before": 217.20349764311598,
+          "v_after": -62.64677810668945,
+          "u_after": 291.20349764311595
+        },
+        {
+          "time_ms": 748.8021438562872,
+          "phase": "pulse",
+          "v_before": 19.99006080627303,
+          "u_before": 226.1798859666754,
+          "v_after": -62.64677810668945,
+          "u_after": 300.17988596667544
+        },
+        {
+          "time_ms": 872.540438040878,
+          "phase": "pulse",
+          "v_before": 19.990060806272925,
+          "u_before": 228.3900240268717,
+          "v_after": -62.64677810668945,
+          "u_after": 302.39002402687174
+        },
+        {
+          "time_ms": 1000.1347771776951,
+          "phase": "pulse",
+          "v_before": 19.990060806274926,
+          "u_before": 228.55884519351508,
+          "v_after": -62.64677810668945,
+          "u_after": 302.5588451935151
+        },
+        {
+          "time_ms": 1152.8068463995953,
+          "phase": "postpulse",
+          "v_before": 19.990060806274567,
+          "u_before": 214.14355323825734,
+          "v_after": -62.64677810668945,
+          "u_after": 288.14355323825737
+        }
+      ],
+      "refinement_pass": true,
+      "refinement": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 5.1365987019380555e-09,
+        "max_reset_u_before_error_pA": 1.785679160093423e-09,
+        "pass": true
+      },
+      "loose_metrics": {
+        "reset_states_pass": true,
+        "holding_check_pass": true,
+        "baseline_boundary_max_error_mV": 2.886159620629769e-06,
+        "holding_boundary_max_error_mV": null,
+        "holding_sampling": "All returned phase-boundary states; event absence also required.",
+        "audit": {
+          "raw_counts": {
+            "pre": 0,
+            "pulse": 11,
+            "post": 1
+          },
+          "compatible_counts": {
+            "pre": 0,
+            "pulse": 11,
+            "post": 1
+          },
+          "pulse_inclusive_count": 11,
+          "nearest_phase_boundaries": {
+            "100": {
+              "event_time_ms": 179.94645511283625,
+              "distance_ms": 79.94645511283625
+            },
+            "1100": {
+              "event_time_ms": 1152.806846404732,
+              "distance_ms": 52.806846404731914
+            },
+            "1200": {
+              "event_time_ms": 1152.806846404732,
+              "distance_ms": 47.193153595268086
+            }
+          },
+          "windows": "pre [0,100), primary pulse [100,1100), post [1100,1200] (recording end closed)",
+          "whole_trace_raw": 12,
+          "whole_trace_compatible": 12,
+          "minimum_ISI_ms": 45.61230875125776,
+          "ISIs_below_6ms": [],
+          "amplitude_equivalent_mV": null,
+          "pulse_endpoint_brackets": []
+        }
+      },
+      "tight_metrics": {
+        "reset_states_pass": true,
+        "holding_check_pass": true,
+        "baseline_boundary_max_error_mV": 2.8861597911600256e-06,
+        "holding_boundary_max_error_mV": null,
+        "holding_sampling": "All returned phase-boundary states; event absence also required.",
+        "audit": {
+          "raw_counts": {
+            "pre": 0,
+            "pulse": 11,
+            "post": 1
+          },
+          "compatible_counts": {
+            "pre": 0,
+            "pulse": 11,
+            "post": 1
+          },
+          "pulse_inclusive_count": 11,
+          "nearest_phase_boundaries": {
+            "100": {
+              "event_time_ms": 179.94645511179786,
+              "distance_ms": 79.94645511179786
+            },
+            "1100": {
+              "event_time_ms": 1152.8068463995953,
+              "distance_ms": 52.806846399595315
+            },
+            "1200": {
+              "event_time_ms": 1152.8068463995953,
+              "distance_ms": 47.193153600404685
+            }
+          },
+          "windows": "pre [0,100), primary pulse [100,1100), post [1100,1200] (recording end closed)",
+          "whole_trace_raw": 12,
+          "whole_trace_compatible": 12,
+          "minimum_ISI_ms": 45.612308751380624,
+          "ISIs_below_6ms": [],
+          "amplitude_equivalent_mV": null,
+          "pulse_endpoint_brackets": []
+        }
+      },
+      "rawpaths": [
+        "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step400_loose.json",
+        "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step400_tight.json"
+      ]
+    },
+    {
+      "step_current_pA": 500,
+      "events": [
+        {
+          "time_ms": 166.42342216059333,
+          "phase": "pulse",
+          "v_before": 19.990060806274368,
+          "u_before": -57.02989101372097,
+          "v_after": -62.64677810668945,
+          "u_after": 16.97010898627903
+        },
+        {
+          "time_ms": 206.59341206198602,
+          "phase": "pulse",
+          "v_before": 19.99006080627444,
+          "u_before": -0.20843871422336657,
+          "v_after": -62.64677810668945,
+          "u_after": 73.79156128577664
+        },
+        {
+          "time_ms": 249.59810475251882,
+          "phase": "pulse",
+          "v_before": 19.990060806274535,
+          "u_before": 53.15603434219763,
+          "v_after": -62.64677810668945,
+          "u_after": 127.15603434219763
+        },
+        {
+          "time_ms": 295.8964139766835,
+          "phase": "pulse",
+          "v_before": 19.990060806273764,
+          "u_before": 102.740180836457,
+          "v_after": -62.64677810668945,
+          "u_after": 176.740180836457
+        },
+        {
+          "time_ms": 346.05760357311885,
+          "phase": "pulse",
+          "v_before": 19.99006080627423,
+          "u_before": 148.1602431047432,
+          "v_after": -62.64677810668945,
+          "u_after": 222.1602431047432
+        },
+        {
+          "time_ms": 400.7883987407371,
+          "phase": "pulse",
+          "v_before": 19.99006080627448,
+          "u_before": 188.96232781448234,
+          "v_after": -62.64677810668945,
+          "u_after": 262.96232781448236
+        },
+        {
+          "time_ms": 460.9563838789567,
+          "phase": "pulse",
+          "v_before": 19.990060806273664,
+          "u_before": 224.61960861419547,
+          "v_after": -62.64677810668945,
+          "u_after": 298.6196086141955
+        },
+        {
+          "time_ms": 527.586990621054,
+          "phase": "pulse",
+          "v_before": 19.990060806273977,
+          "u_before": 254.55275470712476,
+          "v_after": -62.64677810668945,
+          "u_after": 328.5527547071248
+        },
+        {
+          "time_ms": 601.7751817815214,
+          "phase": "pulse",
+          "v_before": 19.99006080627398,
+          "u_before": 278.2111493094511,
+          "v_after": -62.64677810668945,
+          "u_after": 352.2111493094511
+        },
+        {
+          "time_ms": 684.3950337147991,
+          "phase": "pulse",
+          "v_before": 19.990060806274695,
+          "u_before": 295.2810869075891,
+          "v_after": -62.64677810668945,
+          "u_after": 369.2810869075891
+        },
+        {
+          "time_ms": 775.503853049164,
+          "phase": "pulse",
+          "v_before": 19.99006080627592,
+          "u_before": 306.05980446050853,
+          "v_after": -62.64677810668945,
+          "u_after": 380.05980446050853
+        },
+        {
+          "time_ms": 873.7284426781293,
+          "phase": "pulse",
+          "v_before": 19.990060806275576,
+          "u_before": 311.77772435108574,
+          "v_after": -62.64677810668945,
+          "u_after": 385.77772435108574
+        },
+        {
+          "time_ms": 976.5607063724144,
+          "phase": "pulse",
+          "v_before": 19.990060806274453,
+          "u_before": 314.3064707550335,
+          "v_after": -62.64677810668945,
+          "u_after": 388.3064707550335
+        },
+        {
+          "time_ms": 1081.671816123851,
+          "phase": "pulse",
+          "v_before": 19.990060806276308,
+          "u_before": 315.2809295407601,
+          "v_after": -62.64677810668945,
+          "u_after": 389.2809295407601
+        }
+      ],
+      "refinement_pass": true,
+      "refinement": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 2.0520758425845997e-09,
+        "max_reset_u_before_error_pA": 1.673647886946128e-09,
+        "pass": true
+      },
+      "loose_metrics": {
+        "reset_states_pass": true,
+        "holding_check_pass": true,
+        "baseline_boundary_max_error_mV": 2.886159620629769e-06,
+        "holding_boundary_max_error_mV": null,
+        "holding_sampling": "All returned phase-boundary states; event absence also required.",
+        "audit": {
+          "raw_counts": {
+            "pre": 0,
+            "pulse": 14,
+            "post": 0
+          },
+          "compatible_counts": {
+            "pre": 0,
+            "pulse": 14,
+            "post": 0
+          },
+          "pulse_inclusive_count": 14,
+          "nearest_phase_boundaries": {
+            "100": {
+              "event_time_ms": 166.42342216108844,
+              "distance_ms": 66.42342216108844
+            },
+            "1100": {
+              "event_time_ms": 1081.671816124218,
+              "distance_ms": 18.328183875782088
+            },
+            "1200": {
+              "event_time_ms": 1081.671816124218,
+              "distance_ms": 118.32818387578209
+            }
+          },
+          "windows": "pre [0,100), primary pulse [100,1100), post [1100,1200] (recording end closed)",
+          "whole_trace_raw": 14,
+          "whole_trace_compatible": 14,
+          "minimum_ISI_ms": 40.16998990133979,
+          "ISIs_below_6ms": [],
+          "amplitude_equivalent_mV": null,
+          "pulse_endpoint_brackets": []
+        }
+      },
+      "tight_metrics": {
+        "reset_states_pass": true,
+        "holding_check_pass": true,
+        "baseline_boundary_max_error_mV": 2.8861597911600256e-06,
+        "holding_boundary_max_error_mV": null,
+        "holding_sampling": "All returned phase-boundary states; event absence also required.",
+        "audit": {
+          "raw_counts": {
+            "pre": 0,
+            "pulse": 14,
+            "post": 0
+          },
+          "compatible_counts": {
+            "pre": 0,
+            "pulse": 14,
+            "post": 0
+          },
+          "pulse_inclusive_count": 14,
+          "nearest_phase_boundaries": {
+            "100": {
+              "event_time_ms": 166.42342216059333,
+              "distance_ms": 66.42342216059333
+            },
+            "1100": {
+              "event_time_ms": 1081.671816123851,
+              "distance_ms": 18.32818387614907
+            },
+            "1200": {
+              "event_time_ms": 1081.671816123851,
+              "distance_ms": 118.32818387614907
+            }
+          },
+          "windows": "pre [0,100), primary pulse [100,1100), post [1100,1200] (recording end closed)",
+          "whole_trace_raw": 14,
+          "whole_trace_compatible": 14,
+          "minimum_ISI_ms": 40.16998990139268,
+          "ISIs_below_6ms": [],
+          "amplitude_equivalent_mV": null,
+          "pulse_endpoint_brackets": []
+        }
+      },
+      "rawpaths": [
+        "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step500_loose.json",
+        "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step500_tight.json"
+      ]
+    },
+    {
+      "step_current_pA": 600,
+      "events": [
+        {
+          "time_ms": 157.5708746423646,
+          "phase": "pulse",
+          "v_before": 19.99006080627442,
+          "u_before": -55.95869873050053,
+          "v_after": -62.64677810668945,
+          "u_after": 18.04130126949947
+        },
+        {
+          "time_ms": 193.85919722309674,
+          "phase": "pulse",
+          "v_before": 19.9900608062744,
+          "u_before": 1.8862378524531758,
+          "v_after": -62.64677810668945,
+          "u_after": 75.88623785245318
+        },
+        {
+          "time_ms": 232.2428903138795,
+          "phase": "pulse",
+          "v_before": 19.99006080627454,
+          "u_before": 56.683347455370495,
+          "v_after": -62.64677810668945,
+          "u_after": 130.6833474553705
+        },
+        {
+          "time_ms": 272.9809718881982,
+          "phase": "pulse",
+          "v_before": 19.99006080627458,
+          "u_before": 108.21853159803219,
+          "v_after": -62.64677810668945,
+          "u_after": 182.2185315980322
+        },
+        {
+          "time_ms": 316.37648686079024,
+          "phase": "pulse",
+          "v_before": 19.990060806275,
+          "u_before": 156.250834302793,
+          "v_after": -62.64677810668945,
+          "u_after": 230.250834302793
+        },
+        {
+          "time_ms": 362.7826952503857,
+          "phase": "pulse",
+          "v_before": 19.99006080627376,
+          "u_before": 200.5109942452775,
+          "v_after": -62.64677810668945,
+          "u_after": 274.5109942452775
+        },
+        {
+          "time_ms": 412.60705737727517,
+          "phase": "pulse",
+          "v_before": 19.99006080627444,
+          "u_before": 240.7029547443334,
+          "v_after": -62.64677810668945,
+          "u_after": 314.7029547443334
+        },
+        {
+          "time_ms": 466.3089341387086,
+          "phase": "pulse",
+          "v_before": 19.990060806273945,
+          "u_before": 276.5117347999935,
+          "v_after": -62.64677810668945,
+          "u_after": 350.5117347999935
+        },
+        {
+          "time_ms": 524.3831615147731,
+          "phase": "pulse",
+          "v_before": 19.990060806275263,
+          "u_before": 307.6236594912437,
+          "v_after": -62.64677810668945,
+          "u_after": 381.6236594912437
+        },
+        {
+          "time_ms": 587.3163402431111,
+          "phase": "pulse",
+          "v_before": 19.990060806273483,
+          "u_before": 333.76816704792105,
+          "v_after": -62.64677810668945,
+          "u_after": 407.76816704792105
+        },
+        {
+          "time_ms": 655.4989179305958,
+          "phase": "pulse",
+          "v_before": 19.990060806273767,
+          "u_before": 354.7914610426739,
+          "v_after": -62.64677810668945,
+          "u_after": 428.7914610426739
+        },
+        {
+          "time_ms": 729.0851433703656,
+          "phase": "pulse",
+          "v_before": 19.99006080627403,
+          "u_before": 370.7627359280113,
+          "v_after": -62.64677810668945,
+          "u_after": 444.7627359280113
+        },
+        {
+          "time_ms": 807.8343977134209,
+          "phase": "pulse",
+          "v_before": 19.990060806276638,
+          "u_before": 382.0809270446311,
+          "v_after": -62.64677810668945,
+          "u_after": 456.0809270446311
+        },
+        {
+          "time_ms": 891.0377431831874,
+          "phase": "pulse",
+          "v_before": 19.99006080627347,
+          "u_before": 389.5017165998462,
+          "v_after": -62.64677810668945,
+          "u_after": 463.5017165998462
+        },
+        {
+          "time_ms": 977.6440128869452,
+          "phase": "pulse",
+          "v_before": 19.990060806273522,
+          "u_before": 394.0091402936292,
+          "v_after": -62.64677810668945,
+          "u_after": 468.0091402936292
+        },
+        {
+          "time_ms": 1066.5503790238445,
+          "phase": "pulse",
+          "v_before": 19.990060806276638,
+          "u_before": 396.5761097565927,
+          "v_after": -62.64677810668945,
+          "u_after": 470.5761097565927
+        }
+      ],
+      "refinement_pass": true,
+      "refinement": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 2.914077867899323e-09,
+        "max_reset_u_before_error_pA": 2.5597728381399065e-09,
+        "pass": true
+      },
+      "loose_metrics": {
+        "reset_states_pass": true,
+        "holding_check_pass": true,
+        "baseline_boundary_max_error_mV": 2.886159620629769e-06,
+        "holding_boundary_max_error_mV": null,
+        "holding_sampling": "All returned phase-boundary states; event absence also required.",
+        "audit": {
+          "raw_counts": {
+            "pre": 0,
+            "pulse": 16,
+            "post": 0
+          },
+          "compatible_counts": {
+            "pre": 0,
+            "pulse": 16,
+            "post": 0
+          },
+          "pulse_inclusive_count": 16,
+          "nearest_phase_boundaries": {
+            "100": {
+              "event_time_ms": 157.57087464244134,
+              "distance_ms": 57.57087464244134
+            },
+            "1100": {
+              "event_time_ms": 1066.5503790231437,
+              "distance_ms": 33.449620976856295
+            },
+            "1200": {
+              "event_time_ms": 1066.5503790231437,
+              "distance_ms": 133.4496209768563
+            }
+          },
+          "windows": "pre [0,100), primary pulse [100,1100), post [1100,1200] (recording end closed)",
+          "whole_trace_raw": 16,
+          "whole_trace_compatible": 16,
+          "minimum_ISI_ms": 36.288322579664964,
+          "ISIs_below_6ms": [],
+          "amplitude_equivalent_mV": null,
+          "pulse_endpoint_brackets": []
+        }
+      },
+      "tight_metrics": {
+        "reset_states_pass": true,
+        "holding_check_pass": true,
+        "baseline_boundary_max_error_mV": 2.8861597911600256e-06,
+        "holding_boundary_max_error_mV": null,
+        "holding_sampling": "All returned phase-boundary states; event absence also required.",
+        "audit": {
+          "raw_counts": {
+            "pre": 0,
+            "pulse": 16,
+            "post": 0
+          },
+          "compatible_counts": {
+            "pre": 0,
+            "pulse": 16,
+            "post": 0
+          },
+          "pulse_inclusive_count": 16,
+          "nearest_phase_boundaries": {
+            "100": {
+              "event_time_ms": 157.5708746423646,
+              "distance_ms": 57.5708746423646
+            },
+            "1100": {
+              "event_time_ms": 1066.5503790238445,
+              "distance_ms": 33.44962097615553
+            },
+            "1200": {
+              "event_time_ms": 1066.5503790238445,
+              "distance_ms": 133.44962097615553
+            }
+          },
+          "windows": "pre [0,100), primary pulse [100,1100), post [1100,1200] (recording end closed)",
+          "whole_trace_raw": 16,
+          "whole_trace_compatible": 16,
+          "minimum_ISI_ms": 36.28832258073214,
+          "ISIs_below_6ms": [],
+          "amplitude_equivalent_mV": null,
+          "pulse_endpoint_brackets": []
+        }
+      },
+      "rawpaths": [
+        "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step600_loose.json",
+        "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step600_tight.json"
+      ]
+    },
+    {
+      "step_current_pA": 700,
+      "events": [
+        {
+          "time_ms": 151.2431476645107,
+          "phase": "pulse",
+          "v_before": 19.990060806274514,
+          "u_before": -55.132492317931664,
+          "v_after": -62.64677810668945,
+          "u_after": 18.867507682068336
+        },
+        {
+          "time_ms": 184.57639144204455,
+          "phase": "pulse",
+          "v_before": 19.990060806274627,
+          "u_before": 3.529479270658242,
+          "v_after": -62.64677810668945,
+          "u_after": 77.52947927065824
+        },
+        {
+          "time_ms": 219.5462167714468,
+          "phase": "pulse",
+          "v_before": 19.990060806274176,
+          "u_before": 59.435493184537165,
+          "v_after": -62.64677810668945,
+          "u_after": 133.43549318453717
+        },
+        {
+          "time_ms": 256.31539495743283,
+          "phase": "pulse",
+          "v_before": 19.990060806274705,
+          "u_before": 112.4319086105091,
+          "v_after": -62.64677810668945,
+          "u_after": 186.43190861050908
+        },
+        {
+          "time_ms": 295.0674651642474,
+          "phase": "pulse",
+          "v_before": 19.990060806274165,
+          "u_before": 162.35151821701422,
+          "v_after": -62.64677810668945,
+          "u_after": 236.35151821701422
+        },
+        {
+          "time_ms": 336.00832284667183,
+          "phase": "pulse",
+          "v_before": 19.990060806272744,
+          "u_before": 209.01384125881205,
+          "v_after": -62.64677810668945,
+          "u_after": 283.013841258812
+        },
+        {
+          "time_ms": 379.3667097509893,
+          "phase": "pulse",
+          "v_before": 19.990060806274354,
+          "u_before": 252.2268621277315,
+          "v_after": -62.64677810668945,
+          "u_after": 326.22686212773147
+        },
+        {
+          "time_ms": 425.3924944008479,
+          "phase": "pulse",
+          "v_before": 19.99006080627457,
+          "u_before": 291.7912569447462,
+          "v_after": -62.64677810668945,
+          "u_after": 365.7912569447462
+        },
+        {
+          "time_ms": 474.35096248290307,
+          "phase": "pulse",
+          "v_before": 19.99006080627461,
+          "u_before": 327.5086685170899,
+          "v_after": -62.64677810668945,
+          "u_after": 401.5086685170899
+        },
+        {
+          "time_ms": 526.51051116277,
+          "phase": "pulse",
+          "v_before": 19.990060806272915,
+          "u_before": 359.1961494084493,
+          "v_after": -62.64677810668945,
+          "u_after": 433.1961494084493
+        },
+        {
+          "time_ms": 582.1204884413904,
+          "phase": "pulse",
+          "v_before": 19.990060806275224,
+          "u_before": 386.7091505329953,
+          "v_after": -62.64677810668945,
+          "u_after": 460.7091505329953
+        },
+        {
+          "time_ms": 641.3763587159347,
+          "phase": "pulse",
+          "v_before": 19.990060806272968,
+          "u_before": 409.97455634969083,
+          "v_after": -62.64677810668945,
+          "u_after": 483.97455634969083
+        },
+        {
+          "time_ms": 704.3726474117425,
+          "phase": "pulse",
+          "v_before": 19.990060806274823,
+          "u_before": 429.0318492439499,
+          "v_after": -62.64677810668945,
+          "u_after": 503.0318492439499
+        },
+        {
+          "time_ms": 771.0520065657226,
+          "phase": "pulse",
+          "v_before": 19.990060806275256,
+          "u_before": 444.073378288133,
+          "v_after": -62.64677810668945,
+          "u_after": 518.073378288133
+        },
+        {
+          "time_ms": 841.1698787377621,
+          "phase": "pulse",
+          "v_before": 19.99006080627501,
+          "u_before": 455.46581197986404,
+          "v_after": -62.64677810668945,
+          "u_after": 529.465811979864
+        },
+        {
+          "time_ms": 914.2997211554363,
+          "phase": "pulse",
+          "v_before": 19.990060806275753,
+          "u_before": 463.73229763707235,
+          "v_after": -62.64677810668945,
+          "u_after": 537.7322976370724
+        },
+        {
+          "time_ms": 989.890662303738,
+          "phase": "pulse",
+          "v_before": 19.99006080627482,
+          "u_before": 469.4888242128877,
+          "v_after": -62.64677810668945,
+          "u_after": 543.4888242128877
+        },
+        {
+          "time_ms": 1067.359227071234,
+          "phase": "pulse",
+          "v_before": 19.99006080627527,
+          "u_before": 473.3552248270426,
+          "v_after": -62.64677810668945,
+          "u_after": 547.3552248270425
+        }
+      ],
+      "refinement_pass": true,
+      "refinement": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 1.7179218048113398e-09,
+        "max_reset_u_before_error_pA": 2.7457076612336095e-09,
+        "pass": true
+      },
+      "loose_metrics": {
+        "reset_states_pass": true,
+        "holding_check_pass": true,
+        "baseline_boundary_max_error_mV": 2.886159620629769e-06,
+        "holding_boundary_max_error_mV": null,
+        "holding_sampling": "All returned phase-boundary states; event absence also required.",
+        "audit": {
+          "raw_counts": {
+            "pre": 0,
+            "pulse": 18,
+            "post": 0
+          },
+          "compatible_counts": {
+            "pre": 0,
+            "pulse": 18,
+            "post": 0
+          },
+          "pulse_inclusive_count": 18,
+          "nearest_phase_boundaries": {
+            "100": {
+              "event_time_ms": 151.24314766396074,
+              "distance_ms": 51.24314766396074
+            },
+            "1100": {
+              "event_time_ms": 1067.3592270721213,
+              "distance_ms": 32.64077292787874
+            },
+            "1200": {
+              "event_time_ms": 1067.3592270721213,
+              "distance_ms": 132.64077292787874
+            }
+          },
+          "windows": "pre [0,100), primary pulse [100,1100), post [1100,1200] (recording end closed)",
+          "whole_trace_raw": 18,
+          "whole_trace_compatible": 18,
+          "minimum_ISI_ms": 33.33324377657928,
+          "ISIs_below_6ms": [],
+          "amplitude_equivalent_mV": null,
+          "pulse_endpoint_brackets": []
+        }
+      },
+      "tight_metrics": {
+        "reset_states_pass": true,
+        "holding_check_pass": true,
+        "baseline_boundary_max_error_mV": 2.8861597911600256e-06,
+        "holding_boundary_max_error_mV": null,
+        "holding_sampling": "All returned phase-boundary states; event absence also required.",
+        "audit": {
+          "raw_counts": {
+            "pre": 0,
+            "pulse": 18,
+            "post": 0
+          },
+          "compatible_counts": {
+            "pre": 0,
+            "pulse": 18,
+            "post": 0
+          },
+          "pulse_inclusive_count": 18,
+          "nearest_phase_boundaries": {
+            "100": {
+              "event_time_ms": 151.2431476645107,
+              "distance_ms": 51.2431476645107
+            },
+            "1100": {
+              "event_time_ms": 1067.359227071234,
+              "distance_ms": 32.640772928765955
+            },
+            "1200": {
+              "event_time_ms": 1067.359227071234,
+              "distance_ms": 132.64077292876595
+            }
+          },
+          "windows": "pre [0,100), primary pulse [100,1100), post [1100,1200] (recording end closed)",
+          "whole_trace_raw": 18,
+          "whole_trace_compatible": 18,
+          "minimum_ISI_ms": 33.33324377753385,
+          "ISIs_below_6ms": [],
+          "amplitude_equivalent_mV": null,
+          "pulse_endpoint_brackets": []
+        }
+      },
+      "rawpaths": [
+        "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step700_loose.json",
+        "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step700_tight.json"
+      ]
+    },
+    {
+      "step_current_pA": 800,
+      "events": [
+        {
+          "time_ms": 146.45132308969443,
+          "phase": "pulse",
+          "v_before": 19.99006080627463,
+          "u_before": -54.46486895153346,
+          "v_after": -62.64677810668945,
+          "u_after": 19.53513104846654
+        },
+        {
+          "time_ms": 177.43387396521732,
+          "phase": "pulse",
+          "v_before": 19.990060806274148,
+          "u_before": 4.8734764706684635,
+          "v_after": -62.64677810668945,
+          "u_after": 78.87347647066846
+        },
+        {
+          "time_ms": 209.7440280031408,
+          "phase": "pulse",
+          "v_before": 19.990060806274276,
+          "u_before": 61.67767459838821,
+          "v_after": -62.64677810668945,
+          "u_after": 135.6776745983882
+        },
+        {
+          "time_ms": 243.4917499051977,
+          "phase": "pulse",
+          "v_before": 19.990060806274567,
+          "u_before": 115.83145830536868,
+          "v_after": -62.64677810668945,
+          "u_after": 189.8314583053687
+        },
+        {
+          "time_ms": 278.797922587889,
+          "phase": "pulse",
+          "v_before": 19.990060806274982,
+          "u_before": 167.2111995811009,
+          "v_after": -62.64677810668945,
+          "u_after": 241.2111995811009
+        },
+        {
+          "time_ms": 315.79468957471914,
+          "phase": "pulse",
+          "v_before": 19.99006080627459,
+          "u_before": 215.68655648339083,
+          "v_after": -62.64677810668945,
+          "u_after": 289.68655648339086
+        },
+        {
+          "time_ms": 354.6252266266064,
+          "phase": "pulse",
+          "v_before": 19.990060806274133,
+          "u_before": 261.1219020447725,
+          "v_after": -62.64677810668945,
+          "u_after": 335.1219020447725
+        },
+        {
+          "time_ms": 395.4425590217423,
+          "phase": "pulse",
+          "v_before": 19.990060806273668,
+          "u_before": 303.3789326261786,
+          "v_after": -62.64677810668945,
+          "u_after": 377.3789326261786
+        },
+        {
+          "time_ms": 438.40687871412524,
+          "phase": "pulse",
+          "v_before": 19.990060806274972,
+          "u_before": 342.320988868987,
+          "v_after": -62.64677810668945,
+          "u_after": 416.320988868987
+        },
+        {
+          "time_ms": 483.68063787775486,
+          "phase": "pulse",
+          "v_before": 19.990060806274307,
+          "u_before": 377.81974968426186,
+          "v_after": -62.64677810668945,
+          "u_after": 451.81974968426186
+        },
+        {
+          "time_ms": 531.4205641039638,
+          "phase": "pulse",
+          "v_before": 19.99006080627528,
+          "u_before": 409.76500681658507,
+          "v_after": -62.64677810668945,
+          "u_after": 483.76500681658507
+        },
+        {
+          "time_ms": 581.7657952136768,
+          "phase": "pulse",
+          "v_before": 19.99006080627656,
+          "u_before": 438.0780521551765,
+          "v_after": -62.64677810668945,
+          "u_after": 512.0780521551765
+        },
+        {
+          "time_ms": 634.8218054603308,
+          "phase": "pulse",
+          "v_before": 19.990060806272997,
+          "u_before": 462.7285881130809,
+          "v_after": -62.64677810668945,
+          "u_after": 536.7285881130808
+        },
+        {
+          "time_ms": 690.6409831433247,
+          "phase": "pulse",
+          "v_before": 19.990060806275938,
+          "u_before": 483.75376088505624,
+          "v_after": -62.64677810668945,
+          "u_after": 557.7537608850562
+        },
+        {
+          "time_ms": 749.2027539828205,
+          "phase": "pulse",
+          "v_before": 19.99006080627433,
+          "u_before": 501.2758887856028,
+          "v_after": -62.64677810668945,
+          "u_after": 575.2758887856028
+        },
+        {
+          "time_ms": 810.3985478861695,
+          "phase": "pulse",
+          "v_before": 19.990060806272954,
+          "u_before": 515.5133190651313,
+          "v_after": -62.64677810668945,
+          "u_after": 589.5133190651313
+        },
+        {
+          "time_ms": 874.0281998251149,
+          "phase": "pulse",
+          "v_before": 19.990060806273064,
+          "u_before": 526.7781253950741,
+          "v_after": -62.64677810668945,
+          "u_after": 600.7781253950741
+        },
+        {
+          "time_ms": 939.8125582193562,
+          "phase": "pulse",
+          "v_before": 19.990060806275363,
+          "u_before": 535.4568804796604,
+          "v_after": -62.64677810668945,
+          "u_after": 609.4568804796604
+        },
+        {
+          "time_ms": 1007.4215407960082,
+          "phase": "pulse",
+          "v_before": 19.990060806274,
+          "u_before": 541.9767040086931,
+          "v_after": -62.64677810668945,
+          "u_after": 615.9767040086931
+        },
+        {
+          "time_ms": 1076.5102608715902,
+          "phase": "pulse",
+          "v_before": 19.99006080627404,
+          "u_before": 546.7652105544975,
+          "v_after": -62.64677810668945,
+          "u_after": 620.7652105544975
+        }
+      ],
+      "refinement_pass": true,
+      "refinement": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 2.9758950859104516e-09,
+        "max_reset_u_before_error_pA": 2.254155084813192e-09,
+        "pass": true
+      },
+      "loose_metrics": {
+        "reset_states_pass": true,
+        "holding_check_pass": true,
+        "baseline_boundary_max_error_mV": 2.886159620629769e-06,
+        "holding_boundary_max_error_mV": null,
+        "holding_sampling": "All returned phase-boundary states; event absence also required.",
+        "audit": {
+          "raw_counts": {
+            "pre": 0,
+            "pulse": 20,
+            "post": 0
+          },
+          "compatible_counts": {
+            "pre": 0,
+            "pulse": 20,
+            "post": 0
+          },
+          "pulse_inclusive_count": 20,
+          "nearest_phase_boundaries": {
+            "100": {
+              "event_time_ms": 146.4513230910157,
+              "distance_ms": 46.451323091015695
+            },
+            "1100": {
+              "event_time_ms": 1076.5102608713564,
+              "distance_ms": 23.489739128643578
+            },
+            "1200": {
+              "event_time_ms": 1076.5102608713564,
+              "distance_ms": 123.48973912864358
+            }
+          },
+          "windows": "pre [0,100), primary pulse [100,1100), post [1100,1200] (recording end closed)",
+          "whole_trace_raw": 20,
+          "whole_trace_compatible": 20,
+          "minimum_ISI_ms": 30.982550877177516,
+          "ISIs_below_6ms": [],
+          "amplitude_equivalent_mV": null,
+          "pulse_endpoint_brackets": []
+        }
+      },
+      "tight_metrics": {
+        "reset_states_pass": true,
+        "holding_check_pass": true,
+        "baseline_boundary_max_error_mV": 2.8861597911600256e-06,
+        "holding_boundary_max_error_mV": null,
+        "holding_sampling": "All returned phase-boundary states; event absence also required.",
+        "audit": {
+          "raw_counts": {
+            "pre": 0,
+            "pulse": 20,
+            "post": 0
+          },
+          "compatible_counts": {
+            "pre": 0,
+            "pulse": 20,
+            "post": 0
+          },
+          "pulse_inclusive_count": 20,
+          "nearest_phase_boundaries": {
+            "100": {
+              "event_time_ms": 146.45132308969443,
+              "distance_ms": 46.45132308969443
+            },
+            "1100": {
+              "event_time_ms": 1076.5102608715902,
+              "distance_ms": 23.489739128409838
+            },
+            "1200": {
+              "event_time_ms": 1076.5102608715902,
+              "distance_ms": 123.48973912840984
+            }
+          },
+          "windows": "pre [0,100), primary pulse [100,1100), post [1100,1200] (recording end closed)",
+          "whole_trace_raw": 20,
+          "whole_trace_compatible": 20,
+          "minimum_ISI_ms": 30.98255087552289,
+          "ISIs_below_6ms": [],
+          "amplitude_equivalent_mV": null,
+          "pulse_endpoint_brackets": []
+        }
+      },
+      "rawpaths": [
+        "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step800_loose.json",
+        "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step800_tight.json"
+      ]
+    },
+    {
+      "step_current_pA": 900,
+      "events": [
+        {
+          "time_ms": 142.6712694696326,
+          "phase": "pulse",
+          "v_before": 19.990060806274315,
+          "u_before": -53.90752089551459,
+          "v_after": -62.64677810668945,
+          "u_after": 20.092479104485413
+        },
+        {
+          "time_ms": 171.72382195379322,
+          "phase": "pulse",
+          "v_before": 19.990060806274055,
+          "u_before": 6.005658408962748,
+          "v_after": -62.64677810668945,
+          "u_after": 80.00565840896274
+        },
+        {
+          "time_ms": 201.88356403788467,
+          "phase": "pulse",
+          "v_before": 19.990060806274606,
+          "u_before": 63.560765752301386,
+          "v_after": -62.64677810668945,
+          "u_after": 137.5607657523014
+        },
+        {
+          "time_ms": 233.22876451273163,
+          "phase": "pulse",
+          "v_before": 19.990060806274048,
+          "u_before": 118.6664380731604,
+          "v_after": -62.64677810668945,
+          "u_after": 192.6664380731604
+        },
+        {
+          "time_ms": 265.8438797656605,
+          "phase": "pulse",
+          "v_before": 19.990060806273902,
+          "u_before": 171.22717525931418,
+          "v_after": -62.64677810668945,
+          "u_after": 245.22717525931418
+        },
+        {
+          "time_ms": 299.819529334794,
+          "phase": "pulse",
+          "v_before": 19.990060806274606,
+          "u_before": 221.14399465314185,
+          "v_after": -62.64677810668945,
+          "u_after": 295.1439946531418
+        },
+        {
+          "time_ms": 335.25215652478965,
+          "phase": "pulse",
+          "v_before": 19.9900608062749,
+          "u_before": 268.3155422882327,
+          "v_after": -62.64677810668945,
+          "u_after": 342.3155422882327
+        },
+        {
+          "time_ms": 372.2432192646364,
+          "phase": "pulse",
+          "v_before": 19.99006080627507,
+          "u_before": 312.6398355035309,
+          "v_after": -62.64677810668945,
+          "u_after": 386.6398355035309
+        },
+        {
+          "time_ms": 410.89770872059637,
+          "phase": "pulse",
+          "v_before": 19.99006080627486,
+          "u_before": 354.0168532789083,
+          "v_after": -62.64677810668945,
+          "u_after": 428.0168532789083
+        },
+        {
+          "time_ms": 451.3217463194731,
+          "phase": "pulse",
+          "v_before": 19.990060806274478,
+          "u_before": 392.35222382076506,
+          "v_after": -62.64677810668945,
+          "u_after": 466.35222382076506
+        },
+        {
+          "time_ms": 493.61897988052147,
+          "phase": "pulse",
+          "v_before": 19.9900608062738,
+          "u_before": 427.56226336603186,
+          "v_after": -62.64677810668945,
+          "u_after": 501.56226336603186
+        },
+        {
+          "time_ms": 537.8855163437601,
+          "phase": "pulse",
+          "v_before": 19.99006080627331,
+          "u_before": 459.58056150668136,
+          "v_after": -62.64677810668945,
+          "u_after": 533.5805615066813
+        },
+        {
+          "time_ms": 584.2032386297334,
+          "phase": "pulse",
+          "v_before": 19.99006080627469,
+          "u_before": 488.36613710886286,
+          "v_after": -62.64677810668945,
+          "u_after": 562.3661371088629
+        },
+        {
+          "time_ms": 632.6316151291878,
+          "phase": "pulse",
+          "v_before": 19.99006080627346,
+          "u_before": 513.9128501019931,
+          "v_after": -62.64677810668945,
+          "u_after": 587.9128501019931
+        },
+        {
+          "time_ms": 683.1985660400129,
+          "phase": "pulse",
+          "v_before": 19.990060806273213,
+          "u_before": 536.2592185853804,
+          "v_after": -62.64677810668945,
+          "u_after": 610.2592185853804
+        },
+        {
+          "time_ms": 735.891577327078,
+          "phase": "pulse",
+          "v_before": 19.990060806273554,
+          "u_before": 555.4971136958885,
+          "v_after": -62.64677810668945,
+          "u_after": 629.4971136958885
+        },
+        {
+          "time_ms": 790.6508868541171,
+          "phase": "pulse",
+          "v_before": 19.99006080627507,
+          "u_before": 571.777198321261,
+          "v_after": -62.64677810668945,
+          "u_after": 645.777198321261
+        },
+        {
+          "time_ms": 847.3668732771898,
+          "phase": "pulse",
+          "v_before": 19.990060806273302,
+          "u_before": 585.3088212712729,
+          "v_after": -62.64677810668945,
+          "u_after": 659.3088212712729
+        },
+        {
+          "time_ms": 905.8833594116735,
+          "phase": "pulse",
+          "v_before": 19.99006080627458,
+          "u_before": 596.3527796404459,
+          "v_after": -62.64677810668945,
+          "u_after": 670.3527796404459
+        },
+        {
+          "time_ms": 966.0072308965074,
+          "phase": "pulse",
+          "v_before": 19.990060806273426,
+          "u_before": 605.2070150819059,
+          "v_after": -62.64677810668945,
+          "u_after": 679.2070150819059
+        },
+        {
+          "time_ms": 1027.5229331983805,
+          "phase": "pulse",
+          "v_before": 19.990060806274634,
+          "u_before": 612.1874070457283,
+          "v_after": -62.64677810668945,
+          "u_after": 686.1874070457283
+        },
+        {
+          "time_ms": 1090.2088959735484,
+          "phase": "pulse",
+          "v_before": 19.990060806276148,
+          "u_before": 617.6073782580133,
+          "v_after": -62.64677810668945,
+          "u_after": 691.6073782580133
+        }
+      ],
+      "refinement_pass": true,
+      "refinement": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 3.3511469155200757e-09,
+        "max_reset_u_before_error_pA": 3.638888301793486e-09,
+        "pass": true
+      },
+      "loose_metrics": {
+        "reset_states_pass": true,
+        "holding_check_pass": true,
+        "baseline_boundary_max_error_mV": 2.886159620629769e-06,
+        "holding_boundary_max_error_mV": null,
+        "holding_sampling": "All returned phase-boundary states; event absence also required.",
+        "audit": {
+          "raw_counts": {
+            "pre": 0,
+            "pulse": 22,
+            "post": 0
+          },
+          "compatible_counts": {
+            "pre": 0,
+            "pulse": 22,
+            "post": 0
+          },
+          "pulse_inclusive_count": 22,
+          "nearest_phase_boundaries": {
+            "100": {
+              "event_time_ms": 142.67126946959306,
+              "distance_ms": 42.67126946959306
+            },
+            "1100": {
+              "event_time_ms": 1090.2088959757923,
+              "distance_ms": 9.791104024207698
+            },
+            "1200": {
+              "event_time_ms": 1090.2088959757923,
+              "distance_ms": 109.7911040242077
+            }
+          },
+          "windows": "pre [0,100), primary pulse [100,1100), post [1100,1200] (recording end closed)",
+          "whole_trace_raw": 22,
+          "whole_trace_compatible": 22,
+          "minimum_ISI_ms": 29.052552484379135,
+          "ISIs_below_6ms": [],
+          "amplitude_equivalent_mV": null,
+          "pulse_endpoint_brackets": []
+        }
+      },
+      "tight_metrics": {
+        "reset_states_pass": true,
+        "holding_check_pass": true,
+        "baseline_boundary_max_error_mV": 2.8861597911600256e-06,
+        "holding_boundary_max_error_mV": null,
+        "holding_sampling": "All returned phase-boundary states; event absence also required.",
+        "audit": {
+          "raw_counts": {
+            "pre": 0,
+            "pulse": 22,
+            "post": 0
+          },
+          "compatible_counts": {
+            "pre": 0,
+            "pulse": 22,
+            "post": 0
+          },
+          "pulse_inclusive_count": 22,
+          "nearest_phase_boundaries": {
+            "100": {
+              "event_time_ms": 142.6712694696326,
+              "distance_ms": 42.67126946963259
+            },
+            "1100": {
+              "event_time_ms": 1090.2088959735484,
+              "distance_ms": 9.791104026451649
+            },
+            "1200": {
+              "event_time_ms": 1090.2088959735484,
+              "distance_ms": 109.79110402645165
+            }
+          },
+          "windows": "pre [0,100), primary pulse [100,1100), post [1100,1200] (recording end closed)",
+          "whole_trace_raw": 22,
+          "whole_trace_compatible": 22,
+          "minimum_ISI_ms": 29.05255248416063,
+          "ISIs_below_6ms": [],
+          "amplitude_equivalent_mV": null,
+          "pulse_endpoint_brackets": []
+        }
+      },
+      "rawpaths": [
+        "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step900_loose.json",
+        "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step900_tight.json"
+      ]
+    },
+    {
+      "step_current_pA": 1000,
+      "events": [
+        {
+          "time_ms": 139.59717829634818,
+          "phase": "pulse",
+          "v_before": 19.99006080627455,
+          "u_before": -53.43090780344491,
+          "v_after": -62.64677810668945,
+          "u_after": 20.56909219655509
+        },
+        {
+          "time_ms": 167.0268583279136,
+          "phase": "pulse",
+          "v_before": 19.99006080627475,
+          "u_before": 6.9806092229170265,
+          "v_after": -62.64677810668945,
+          "u_after": 80.98060922291702
+        },
+        {
+          "time_ms": 195.39962605828669,
+          "phase": "pulse",
+          "v_before": 19.99006080627429,
+          "u_before": 65.17833714836122,
+          "v_after": -62.64677810668945,
+          "u_after": 139.1783371483612
+        },
+        {
+          "time_ms": 224.77343238719453,
+          "phase": "pulse",
+          "v_before": 19.99006080627458,
+          "u_before": 121.08843335049987,
+          "v_after": -62.64677810668945,
+          "u_after": 195.08843335049988
+        },
+        {
+          "time_ms": 255.20992978465054,
+          "phase": "pulse",
+          "v_before": 19.99006080627452,
+          "u_before": 174.63472096093244,
+          "v_after": -62.64677810668945,
+          "u_after": 248.63472096093244
+        },
+        {
+          "time_ms": 286.7743462354287,
+          "phase": "pulse",
+          "v_before": 19.99006080627493,
+          "u_before": 225.73926634648095,
+          "v_after": -62.64677810668945,
+          "u_after": 299.7392663464809
+        },
+        {
+          "time_ms": 319.5351755183311,
+          "phase": "pulse",
+          "v_before": 19.990060806273856,
+          "u_before": 274.32323962705544,
+          "v_after": -62.64677810668945,
+          "u_after": 348.32323962705544
+        },
+        {
+          "time_ms": 353.56361399126877,
+          "phase": "pulse",
+          "v_before": 19.990060806273885,
+          "u_before": 320.30814296932056,
+          "v_after": -62.64677810668945,
+          "u_after": 394.30814296932056
+        },
+        {
+          "time_ms": 388.9326581551059,
+          "phase": "pulse",
+          "v_before": 19.990060806274016,
+          "u_before": 363.61750534464664,
+          "v_after": -62.64677810668945,
+          "u_after": 437.61750534464664
+        },
+        {
+          "time_ms": 425.71576332619975,
+          "phase": "pulse",
+          "v_before": 19.990060806274,
+          "u_before": 404.17915112313864,
+          "v_after": -62.64677810668945,
+          "u_after": 478.17915112313864
+        },
+        {
+          "time_ms": 463.9849568541905,
+          "phase": "pulse",
+          "v_before": 19.990060806274755,
+          "u_before": 441.928146404353,
+          "v_after": -62.64677810668945,
+          "u_after": 515.928146404353
+        },
+        {
+          "time_ms": 503.80830776038096,
+          "phase": "pulse",
+          "v_before": 19.990060806274286,
+          "u_before": 476.810500944595,
+          "v_after": -62.64677810668945,
+          "u_after": 550.810500944595
+        },
+        {
+          "time_ms": 545.246690248547,
+          "phase": "pulse",
+          "v_before": 19.990060806274762,
+          "u_before": 508.78764111156704,
+          "v_after": -62.64677810668945,
+          "u_after": 582.787641111567
+        },
+        {
+          "time_ms": 588.349855365735,
+          "phase": "pulse",
+          "v_before": 19.990060806275487,
+          "u_before": 537.8415554990813,
+          "v_after": -62.64677810668945,
+          "u_after": 611.8415554990813
+        },
+        {
+          "time_ms": 633.1519552351181,
+          "phase": "pulse",
+          "v_before": 19.990060806275004,
+          "u_before": 563.9803396373975,
+          "v_after": -62.64677810668945,
+          "u_after": 637.9803396373975
+        },
+        {
+          "time_ms": 679.6668488255981,
+          "phase": "pulse",
+          "v_before": 19.990060806275295,
+          "u_before": 587.243635833284,
+          "v_after": -62.64677810668945,
+          "u_after": 661.243635833284
+        },
+        {
+          "time_ms": 727.883734219228,
+          "phase": "pulse",
+          "v_before": 19.990060806275935,
+          "u_before": 607.7072159180165,
+          "v_after": -62.64677810668945,
+          "u_after": 681.7072159180165
+        },
+        {
+          "time_ms": 777.7638412287168,
+          "phase": "pulse",
+          "v_before": 19.990060806273636,
+          "u_before": 625.4857679887551,
+          "v_after": -62.64677810668945,
+          "u_after": 699.4857679887551
+        },
+        {
+          "time_ms": 829.2389880018527,
+          "phase": "pulse",
+          "v_before": 19.990060806273515,
+          "u_before": 640.7329364304728,
+          "v_after": -62.64677810668945,
+          "u_after": 714.7329364304728
+        },
+        {
+          "time_ms": 882.21266064842,
+          "phase": "pulse",
+          "v_before": 19.99006080627306,
+          "u_before": 653.6379324544364,
+          "v_after": -62.64677810668945,
+          "u_after": 727.6379324544364
+        },
+        {
+          "time_ms": 936.5638762244176,
+          "phase": "pulse",
+          "v_before": 19.99006080627299,
+          "u_before": 664.4186035767568,
+          "v_after": -62.64677810668945,
+          "u_after": 738.4186035767568
+        },
+        {
+          "time_ms": 992.1535100559698,
+          "phase": "pulse",
+          "v_before": 19.990060806275693,
+          "u_before": 673.3116043575382,
+          "v_after": -62.64677810668945,
+          "u_after": 747.3116043575382
+        },
+        {
+          "time_ms": 1048.8321978426748,
+          "phase": "pulse",
+          "v_before": 19.990060806276414,
+          "u_before": 680.5609943432758,
+          "v_after": -62.64677810668945,
+          "u_after": 754.5609943432758
+        },
+        {
+          "time_ms": 1107.1853838022907,
+          "phase": "postpulse",
+          "v_before": 19.990060806275757,
+          "u_before": 685.2277940155886,
+          "v_after": -62.64677810668945,
+          "u_after": 759.2277940155886
+        }
+      ],
+      "refinement_pass": true,
+      "refinement": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 2.2954509404371493e-09,
+        "max_reset_u_before_error_pA": 3.27406723954482e-09,
+        "pass": true
+      },
+      "loose_metrics": {
+        "reset_states_pass": true,
+        "holding_check_pass": true,
+        "baseline_boundary_max_error_mV": 2.886159620629769e-06,
+        "holding_boundary_max_error_mV": null,
+        "holding_sampling": "All returned phase-boundary states; event absence also required.",
+        "audit": {
+          "raw_counts": {
+            "pre": 0,
+            "pulse": 23,
+            "post": 1
+          },
+          "compatible_counts": {
+            "pre": 0,
+            "pulse": 23,
+            "post": 1
+          },
+          "pulse_inclusive_count": 23,
+          "nearest_phase_boundaries": {
+            "100": {
+              "event_time_ms": 139.59717829630847,
+              "distance_ms": 39.59717829630847
+            },
+            "1100": {
+              "event_time_ms": 1107.185383802365,
+              "distance_ms": 7.185383802365095
+            },
+            "1200": {
+              "event_time_ms": 1107.185383802365,
+              "distance_ms": 92.8146161976349
+            }
+          },
+          "windows": "pre [0,100), primary pulse [100,1100), post [1100,1200] (recording end closed)",
+          "whole_trace_raw": 24,
+          "whole_trace_compatible": 24,
+          "minimum_ISI_ms": 27.429680032541995,
+          "ISIs_below_6ms": [],
+          "amplitude_equivalent_mV": null,
+          "pulse_endpoint_brackets": []
+        }
+      },
+      "tight_metrics": {
+        "reset_states_pass": true,
+        "holding_check_pass": true,
+        "baseline_boundary_max_error_mV": 2.8861597911600256e-06,
+        "holding_boundary_max_error_mV": null,
+        "holding_sampling": "All returned phase-boundary states; event absence also required.",
+        "audit": {
+          "raw_counts": {
+            "pre": 0,
+            "pulse": 23,
+            "post": 1
+          },
+          "compatible_counts": {
+            "pre": 0,
+            "pulse": 23,
+            "post": 1
+          },
+          "pulse_inclusive_count": 23,
+          "nearest_phase_boundaries": {
+            "100": {
+              "event_time_ms": 139.59717829634818,
+              "distance_ms": 39.597178296348176
+            },
+            "1100": {
+              "event_time_ms": 1107.1853838022907,
+              "distance_ms": 7.185383802290744
+            },
+            "1200": {
+              "event_time_ms": 1107.1853838022907,
+              "distance_ms": 92.81461619770926
+            }
+          },
+          "windows": "pre [0,100), primary pulse [100,1100), post [1100,1200] (recording end closed)",
+          "whole_trace_raw": 24,
+          "whole_trace_compatible": 24,
+          "minimum_ISI_ms": 27.429680031565425,
+          "ISIs_below_6ms": [],
+          "amplitude_equivalent_mV": null,
+          "pulse_endpoint_brackets": []
+        }
+      },
+      "rawpaths": [
+        "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step1000_loose.json",
+        "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step1000_tight.json"
+      ]
+    }
+  ],
+  "rawhashes": {
+    "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step0_loose.json": "47e940a86c9d9393a89ac8a8ca68fe2569fba0bfabece4d3848f6feb77a25655",
+    "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step0_tight.json": "32db8f3e033b16429f1d8f50b05fd70d22047eb81a482c4c3555192f00183107",
+    "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step100_loose.json": "191386822d3438bb41eda85c7dc9bfab7ac1309c765706b515b5b8f401704f7b",
+    "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step100_tight.json": "7fd60aa1c6efa140fb63e236322724ad6820e60cda6097024cdaf64a4cb15e21",
+    "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step200_loose.json": "4e40b06b5d4ff639e8840dd5a9e79c24b6e9b421312f49f436bb7b5b85fcfcc9",
+    "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step200_tight.json": "bc03e0031c89293cadd2367456e38f1cc8d8c47c6dc6fa81eaec9abc47698767",
+    "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step300_loose.json": "c604e516987293218777994b7566d9d6cea9a46e5f1117016c32aea69a6fe64b",
+    "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step300_tight.json": "66d1496de3111abd74f2ded46f5ee2416648b7b22d5beba257ddfc6cedf2baf7",
+    "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step400_loose.json": "673dc962cbd7690898dd56f630da2f5d03415a3ce0684d5cdcd1db150f51aaa8",
+    "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step400_tight.json": "614e7535b40297ccfec14cd5df9b03549e5aa42e00e01ccb3098b85f4b3fba97",
+    "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step500_loose.json": "1f70baa536658f6b79c9a547e61fb6448e444121dc488dea18ccabc3c3de1025",
+    "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step500_tight.json": "562156272045d0396e1418d64c5375427caa5737730a1ce89a5ab2a112f5f8be",
+    "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step600_loose.json": "a8b51ebd8f14f8cb69d3abaf445693b8fb0f9d131f9338724a66ad668dd85b69",
+    "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step600_tight.json": "d3fad500dcf59dbc0e6803db15202d61f79ad98347303d90536cb54606954f32",
+    "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step700_loose.json": "e913cc9dbb30029e42cb761bf443aa7d31c0bc30a2a08707aaf3871929b3ffe8",
+    "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step700_tight.json": "aaae39e4af10393c66259b3557c5beb9891caa37985e7d5cea99cd9e75e8efe6",
+    "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step800_loose.json": "2a72beab00234e943a3f724f3cd070fae054894855e0f17888089482a6590e7d",
+    "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step800_tight.json": "2c0eab6e6cffecd34451912575d2eb9e3d434a90c22204f57ff6bd11189b8acc",
+    "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step900_loose.json": "0a3bd53e8366733bd39f27008c4bc6ce0d0b3f0aa83114b7f30eee5e69d15542",
+    "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step900_tight.json": "f4db4b567c5ef1912d27beebfaa188e5e19beb4d08ed03eecae0d1df76bbbeaf",
+    "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step1000_loose.json": "77f39064815e1b1997a456dccdd295dc35cd819de142f7aa9625929f1c97a46d",
+    "/home/ognjen/Documents/Codex/2026-10-02/task-2/ca2-whitebirch/data/workspaces/003-whitebirch-numerics-v2/immediate_step1000_tight.json": "3e5582fc6c6150ec74bc5460da9a8d825ca14aaed1d812296faede6ffda0249a"
+  },
+  "frozen_commit": "233b068cb7e22663b9ce551806e4a4e573a63872",
+  "scope": "Separate immediate-reset diagnostic; no CARLsim refractory clock and no biological scoring."
+}

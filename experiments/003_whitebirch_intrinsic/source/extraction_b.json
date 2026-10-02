@@ -1,0 +1,303 @@
+{
+  "extraction_pass": "B",
+  "model_blind": true,
+  "independence": "No pass A coordinates or model output viewed; own visual axis calibration and thresholded white-interior centroids using Python Pillow only.",
+  "source": {
+    "path": "figure1.jpg",
+    "sha256": "669562afb125d5d6ca5bfafc271368d6be1a02864a957b5c1b5ac08b1a4dbb65",
+    "width_px": 1447,
+    "height_px": 1561,
+    "coordinates": "original image pixel coordinates; origin top left; zero based",
+    "resolution_status": "highest official asset made available to this pass; highest possible publisher resolution not established",
+    "retrieval_attempts": [
+      {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9547935/",
+        "result": "web tool CAPTCHA"
+      },
+      {
+        "local_path": "/tmp/whitebirch-F1.html",
+        "result": "Google recaptcha challenge HTML, no asset metadata"
+      },
+      {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9547935/?report=xml",
+        "result": "web tool internal error"
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35987207/",
+        "result": "no useful metadata returned"
+      },
+      {
+        "url": "https://europepmc.org/article/MED/35987207",
+        "result": "web tool inaccessible"
+      }
+    ]
+  },
+  "control_identity": {
+    "panel": "Figure 1C",
+    "legend": "blue open circles labeled control; red open circles labeled PILO-SE",
+    "target": "NON-PILO controls according to task-provided paper cohort; only blue series digitized"
+  },
+  "calibration": {
+    "x_ticks": [
+      [
+        1105.5,
+        0
+      ],
+      [
+        1210.5,
+        400
+      ],
+      [
+        1263.5,
+        600
+      ],
+      [
+        1316.5,
+        800
+      ],
+      [
+        1369.5,
+        1000
+      ]
+    ],
+    "x_formula": "I_pA=(x-1105.5)*1000/264",
+    "y_ticks": [
+      [
+        362.5,
+        0
+      ],
+      [
+        309.5,
+        5
+      ],
+      [
+        256.5,
+        10
+      ],
+      [
+        203.5,
+        15
+      ],
+      [
+        150.5,
+        20
+      ],
+      [
+        97.5,
+        25
+      ]
+    ],
+    "y_formula": "f_Hz=(362.5-y)/10.6",
+    "y_origin_uncertainty_px": 0.5,
+    "y_scale_interval_px_per_Hz": [
+      10.55,
+      10.65
+    ],
+    "method": "Dark tick raster centers read independently. Frequency ticks all separated by 53 px; baseline center y362.5. Marker centroids from connected white interiors threshold R,G,B>200 in panel C, after identifying colors visually; overlapped points read from remaining perimeter."
+  },
+  "uncertainty_method": "Conservative interval combines marker y half-width plus 0.5 px origin error and scale interval 10.55..10.65 px/Hz; floor at physical nonnegative firing. These bounds are figure reading bounds, not CI or SEM.",
+  "rows": [
+    {
+      "current_pA": 100,
+      "mean_pixel_xy": null,
+      "current_marker_x_pixel": 1131.5,
+      "mean_Hz": null,
+      "mean_reading_interval_Hz": null,
+      "mean_pixel_y_uncertainty_px": null,
+      "mean_visibility": "fully_occluded_by_red_PILO_SE_marker",
+      "SEM_upper_pixel_y": null,
+      "SEM_lower_pixel_y": null,
+      "SEM_Hz": null,
+      "SEM_status": "no_independently_visible_endpoint; hidden or absent cannot be distinguished",
+      "notes": "100 pA control marker cannot be independently located; do not use an inferred zero as primary target."
+    },
+    {
+      "current_pA": 200,
+      "mean_pixel_xy": [
+        1158.0,
+        362.5
+      ],
+      "current_marker_x_pixel": 1158.0,
+      "mean_Hz": 0.0,
+      "mean_reading_interval_Hz": [
+        0,
+        0.2843601895734597
+      ],
+      "mean_pixel_y_uncertainty_px": 2.5,
+      "mean_visibility": "partially_occluded_blue_lower_arc",
+      "SEM_upper_pixel_y": null,
+      "SEM_lower_pixel_y": null,
+      "SEM_Hz": null,
+      "SEM_status": "no_independently_visible_endpoint; hidden or absent cannot be distinguished",
+      "notes": "Blue center read from surviving arc; no zero SEM inferred."
+    },
+    {
+      "current_pA": 300,
+      "mean_pixel_xy": [
+        1184.4,
+        359.5
+      ],
+      "current_marker_x_pixel": 1184.4,
+      "mean_Hz": 0.2830188679245283,
+      "mean_reading_interval_Hz": [
+        0.046948356807511735,
+        0.5213270142180094
+      ],
+      "mean_pixel_y_uncertainty_px": 2.0,
+      "mean_visibility": "partially_occluded_blue_marker",
+      "SEM_upper_pixel_y": null,
+      "SEM_lower_pixel_y": null,
+      "SEM_Hz": null,
+      "SEM_status": "no_independently_visible_endpoint; hidden or absent cannot be distinguished",
+      "notes": "White marker interior partially overwritten by red curve; use surviving blue perimeter."
+    },
+    {
+      "current_pA": 400,
+      "mean_pixel_xy": [
+        1210.6,
+        342.93
+      ],
+      "current_marker_x_pixel": 1210.6,
+      "mean_Hz": 1.846226415094339,
+      "mean_reading_interval_Hz": [
+        1.6497652582159616,
+        2.0445497630331744
+      ],
+      "mean_pixel_y_uncertainty_px": 1.5,
+      "mean_visibility": "visible_blue_marker",
+      "SEM_upper_pixel_y": null,
+      "SEM_lower_pixel_y": null,
+      "SEM_Hz": null,
+      "SEM_status": "no_independently_visible_endpoint; hidden or absent cannot be distinguished",
+      "notes": "White interior centroid checked against blue ring perimeter."
+    },
+    {
+      "current_pA": 500,
+      "mean_pixel_xy": [
+        1237.4,
+        314.93
+      ],
+      "current_marker_x_pixel": 1237.4,
+      "mean_Hz": 4.4877358490566035,
+      "mean_reading_interval_Hz": [
+        4.278873239436619,
+        4.698578199052132
+      ],
+      "mean_pixel_y_uncertainty_px": 1.5,
+      "mean_visibility": "visible_blue_marker",
+      "SEM_upper_pixel_y": null,
+      "SEM_lower_pixel_y": null,
+      "SEM_Hz": null,
+      "SEM_status": "no_independently_visible_endpoint; hidden or absent cannot be distinguished",
+      "notes": "White interior centroid checked against blue ring perimeter."
+    },
+    {
+      "current_pA": 600,
+      "mean_pixel_xy": [
+        1263.5,
+        282.86
+      ],
+      "current_marker_x_pixel": 1263.5,
+      "mean_Hz": 7.51320754716981,
+      "mean_reading_interval_Hz": [
+        7.290140845070421,
+        7.738388625592415
+      ],
+      "mean_pixel_y_uncertainty_px": 1.5,
+      "mean_visibility": "visible_blue_marker",
+      "SEM_upper_pixel_y": null,
+      "SEM_lower_pixel_y": null,
+      "SEM_Hz": null,
+      "SEM_status": "no_independently_visible_endpoint; hidden or absent cannot be distinguished",
+      "notes": "White interior centroid checked against blue ring perimeter."
+    },
+    {
+      "current_pA": 700,
+      "mean_pixel_xy": [
+        1290.07,
+        253.47
+      ],
+      "current_marker_x_pixel": 1290.07,
+      "mean_Hz": 10.285849056603775,
+      "mean_reading_interval_Hz": [
+        10.049765258215961,
+        10.524170616113743
+      ],
+      "mean_pixel_y_uncertainty_px": 1.5,
+      "mean_visibility": "visible_blue_marker",
+      "SEM_upper_pixel_y": null,
+      "SEM_lower_pixel_y": null,
+      "SEM_Hz": null,
+      "SEM_status": "no_independently_visible_endpoint; hidden or absent cannot be distinguished",
+      "notes": "White interior centroid checked against blue ring perimeter."
+    },
+    {
+      "current_pA": 800,
+      "mean_pixel_xy": [
+        1316.5,
+        225.38
+      ],
+      "current_marker_x_pixel": 1316.5,
+      "mean_Hz": 12.935849056603775,
+      "mean_reading_interval_Hz": [
+        12.687323943661973,
+        13.186729857819905
+      ],
+      "mean_pixel_y_uncertainty_px": 1.5,
+      "mean_visibility": "visible_blue_marker",
+      "SEM_upper_pixel_y": null,
+      "SEM_lower_pixel_y": null,
+      "SEM_Hz": null,
+      "SEM_status": "no_independently_visible_endpoint; hidden or absent cannot be distinguished",
+      "notes": "White interior centroid checked against blue ring perimeter."
+    },
+    {
+      "current_pA": 900,
+      "mean_pixel_xy": [
+        1342.9,
+        202.0
+      ],
+      "current_marker_x_pixel": 1342.9,
+      "mean_Hz": 15.141509433962264,
+      "mean_reading_interval_Hz": [
+        14.88262910798122,
+        15.402843601895734
+      ],
+      "mean_pixel_y_uncertainty_px": 1.5,
+      "mean_visibility": "visible_blue_marker",
+      "SEM_upper_pixel_y": null,
+      "SEM_lower_pixel_y": null,
+      "SEM_Hz": null,
+      "SEM_status": "no_independently_visible_endpoint; hidden or absent cannot be distinguished",
+      "notes": "White interior centroid checked against blue ring perimeter."
+    },
+    {
+      "current_pA": 1000,
+      "mean_pixel_xy": [
+        1369.35,
+        184.46
+      ],
+      "current_marker_x_pixel": 1369.35,
+      "mean_Hz": 16.79622641509434,
+      "mean_reading_interval_Hz": [
+        16.52957746478873,
+        17.065402843601895
+      ],
+      "mean_pixel_y_uncertainty_px": 1.5,
+      "mean_visibility": "visible_blue_marker",
+      "SEM_upper_pixel_y": null,
+      "SEM_lower_pixel_y": null,
+      "SEM_Hz": null,
+      "SEM_status": "no_independently_visible_endpoint; hidden or absent cannot be distinguished",
+      "notes": "White interior centroid checked against blue ring perimeter."
+    }
+  ],
+  "readiness": {
+    "means_visible": 9,
+    "means_missing": 1,
+    "SEM_endpoints_visible": 0,
+    "all_ten_target_gate": "incomplete",
+    "biological_scoring_ready": false,
+    "blocker": "100 pA blue mean is fully obscured by red marker. Hidden SEM values cannot be numerically recovered from this accessible figure. Do not invent either."
+  }
+}

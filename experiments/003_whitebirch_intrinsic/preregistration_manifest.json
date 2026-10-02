@@ -1,0 +1,21 @@
+{
+  "kind": "Blocked pre-run preregistration snapshot;not a production-ready freeze",
+  "base_commit": "ffb10ccb60b36742b9906b3c3001bb31ff46b105",
+  "production_outputs_exist": false,
+  "references_executed": false,
+  "sha256": {
+    "backend_semantics.json": "d40fcdaec6f81304fa6c01eb1fabc923a1b43a7fd19b723b4bbf7881673ba843",
+    "model_configuration.json": "2e46372f5a79b704a28fbf3f523c42c17976e6f0ac9af61b5800023b90527e7c",
+    "protocol.json": "33540da5e46614e8cbea46ea78fb376d39a7db484b06ae71f12385c27370171e",
+    "readme.md": "dd42d155cd6d9cd83faf9c23dd3cebecd4d14e071acd680f663f3c0c9dadf2a6",
+    "reference.py": "7c08be46fc26247aab88441d51291bc8155c885f545c9ad4d49dfe34e99d0482",
+    "reference_carlsim.py": "dd6122ca6ddb130b95a154b925609f81521f1657bc96a01720355838854c4954",
+    "report.md": "0e4d7dd9244b514d6661c5707cfcb7fd997f009ee78df200b47bbcf4fb394d6f",
+    "source/extraction_a.json": "ec480e56369020c5708fdd7dd67a46eee46ef8435570a0a3b75577ed8b87cb3d",
+    "source/extraction_b.json": "197347406fc8266f35c31a4f69c48289e250a5cd353ada895365600fbc00e1bb",
+    "source/figure1.jpg": "669562afb125d5d6ca5bfafc271368d6be1a02864a957b5c1b5ac08b1a4dbb65",
+    "source/source_audit.json": "a7675a7ed26f2ec6eed6e4ad284e9d4990778a3767d36b45e1fed7ff6f5ca4fd",
+    "target_data.json": "5883bce8ea3eebc5d3b7875279b575ca1422abfdb6396ee2582a4c59ca09aaa9",
+    "verify_readiness.py": "248e48dd6f7682fc59bc1fd1827140bcec64cc3d21619feff37e7132898ead74"
+  }
+}

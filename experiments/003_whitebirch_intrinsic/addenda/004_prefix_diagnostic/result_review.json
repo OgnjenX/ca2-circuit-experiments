@@ -1,0 +1,27 @@
+{
+  "review_kind": "Independent raw-state prefix diagnostic result review",
+  "frozen_diagnostic_commit": "bff3d5ffd1e08ac46dbea3b95e9cade94f9f99bc",
+  "result_sha256": "09478b0c12fc96b9b6108deab39663cad046c39514d4d8c975ca25545b0be742",
+  "auditor_sha256": "842b261493812cbe6d8a9e633a9f2e8d71890025de1af4b7e215704ca5a98116",
+  "five_state_csv_and_four_native_hashes_verified": true,
+  "all68680_native_and_method_times_match": true,
+  "all10_comparison_metrics_independently_recomputed": true,
+  "all_checkpoint_and_crossing_bracket_records_verified": true,
+  "common_prethreshold_end_ms": 858.475,
+  "every_common_prefix_voltage_strictly_below_Vpeak": true,
+  "DOP_reference_refinement_reliable": true,
+  "standard_float64_RK4_vs_tight_DOP_max_voltage_mV": 1.4551204685631092e-10,
+  "matched_float64_RK4_vs_tight_DOP_max_voltage_mV": 0.0006998510435991534,
+  "native_vs_tight_DOP_max_voltage_mV": 8.141614525226064,
+  "native_vs_tight_DOP_max_recovery_pA": 0.4929777700274087,
+  "native_vs_explicit_float32_max_voltage_mV": 7.62939453125e-06,
+  "native_vs_explicit_float32_max_recovery_pA": 7.62939453125e-06,
+  "interpretation": "In this100pA condition before first threshold crossing, standard float64 RK4 truncation and joint coefficient rounding differences are much smaller than native-versus-float64 drift. Explicit scalar float32 rounding closely tracks native states, supporting operation-level float32 rounding as the dominant observed contributor here. This does not identify exact compiler FMA choices or demonstrate equivalence for other conditions, post-reset trajectories or firing outcomes.",
+  "preservation": "Original numerical failure remains a failure. No gate relaxation, new integration, parameter/current/backend edits or biological scoring in this audit.",
+  "limitations": [
+    "One selected post hoc condition and prethreshold window only.",
+    "Promoted coefficients change three constants jointly.",
+    "No-FMA scalar variant is not claimed exact GPU arithmetic equivalence.",
+    "Saved smooth extensions beyond crossing are not interpreted as reset trajectories."
+  ]
+}

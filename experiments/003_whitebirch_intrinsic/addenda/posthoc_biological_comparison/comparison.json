@@ -1,0 +1,230 @@
+{
+  "status": "Explicitly authorized POST-HOC exploratory comparison; original primary numerical gate failed and remains gated",
+  "authorization": "User requested actual current biological agreement after reviewing original failed numerical result; no preregistered validation claim",
+  "source_result_commit": "ae666025e3597b66da0aab4b7a6fd9a47252147e",
+  "primary_numerical_pass": false,
+  "rows": [
+    {
+      "current_pA": 100,
+      "model_count_1s": 2.0,
+      "model_rate_Hz": 2.0,
+      "paper_mean_Hz": null,
+      "paper_mean_interval_Hz": [
+        0.0,
+        1.2
+      ],
+      "paper_SEM_Hz": null,
+      "residual_interval_Hz": [
+        0.8,
+        2.0
+      ],
+      "visible_mean_residual_Hz": null,
+      "target_status": "conditional_interval_censored_mean_no_point_estimate",
+      "whole_recording_count": 2,
+      "postpulse_count": 0
+    },
+    {
+      "current_pA": 200,
+      "model_count_1s": 4.0,
+      "model_rate_Hz": 4.0,
+      "paper_mean_Hz": 0.024509803921569557,
+      "paper_mean_interval_Hz": [
+        0.0,
+        0.192386410151455
+      ],
+      "paper_SEM_Hz": null,
+      "residual_interval_Hz": [
+        3.807613589848545,
+        4.0
+      ],
+      "visible_mean_residual_Hz": 3.9754901960784306,
+      "target_status": "readable_mean",
+      "whole_recording_count": 4,
+      "postpulse_count": 0
+    },
+    {
+      "current_pA": 300,
+      "model_count_1s": 9.0,
+      "model_rate_Hz": 9.0,
+      "paper_mean_Hz": 0.2757352941176471,
+      "paper_mean_interval_Hz": [
+        0.10183299389002036,
+        0.4502660663119116
+      ],
+      "paper_SEM_Hz": null,
+      "residual_interval_Hz": [
+        8.549733933688088,
+        8.89816700610998
+      ],
+      "visible_mean_residual_Hz": 8.724264705882353,
+      "target_status": "readable_mean",
+      "whole_recording_count": 9,
+      "postpulse_count": 0
+    },
+    {
+      "current_pA": 400,
+      "model_count_1s": 11.0,
+      "model_rate_Hz": 11.0,
+      "paper_mean_Hz": 1.8007557189542476,
+      "paper_mean_interval_Hz": [
+        1.6089613034623218,
+        1.9510847318870226
+      ],
+      "paper_SEM_Hz": null,
+      "residual_interval_Hz": [
+        9.048915268112978,
+        9.391038696537677
+      ],
+      "visible_mean_residual_Hz": 9.199244281045752,
+      "target_status": "readable_mean",
+      "whole_recording_count": 11,
+      "postpulse_count": 0
+    },
+    {
+      "current_pA": 500,
+      "model_count_1s": 13.0,
+      "model_rate_Hz": 13.0,
+      "paper_mean_Hz": 4.453329248366012,
+      "paper_mean_interval_Hz": [
+        4.256619144602851,
+        4.610655737704918
+      ],
+      "paper_SEM_Hz": null,
+      "residual_interval_Hz": [
+        8.389344262295083,
+        8.743380855397149
+      ],
+      "visible_mean_residual_Hz": 8.546670751633988,
+      "target_status": "readable_mean",
+      "whole_recording_count": 14,
+      "postpulse_count": 1
+    },
+    {
+      "current_pA": 600,
+      "model_count_1s": 16.0,
+      "model_rate_Hz": 16.0,
+      "paper_mean_Hz": 7.508619281045751,
+      "paper_mean_interval_Hz": [
+        7.311608961303462,
+        7.6844262295081975
+      ],
+      "paper_SEM_Hz": null,
+      "residual_interval_Hz": [
+        8.315573770491802,
+        8.688391038696537
+      ],
+      "visible_mean_residual_Hz": 8.49138071895425,
+      "target_status": "readable_mean",
+      "whole_recording_count": 16,
+      "postpulse_count": 0
+    },
+    {
+      "current_pA": 700,
+      "model_count_1s": 18.0,
+      "model_rate_Hz": 18.0,
+      "paper_mean_Hz": 10.28841911764706,
+      "paper_mean_interval_Hz": [
+        10.081466395112017,
+        10.471311475409836
+      ],
+      "paper_SEM_Hz": null,
+      "residual_interval_Hz": [
+        7.528688524590164,
+        7.918533604887983
+      ],
+      "visible_mean_residual_Hz": 7.711580882352941,
+      "target_status": "readable_mean",
+      "whole_recording_count": 18,
+      "postpulse_count": 0
+    },
+    {
+      "current_pA": 800,
+      "model_count_1s": 19.0,
+      "model_rate_Hz": 19.0,
+      "paper_mean_Hz": 12.9406454248366,
+      "paper_mean_interval_Hz": [
+        12.729124236252545,
+        13.135245901639346
+      ],
+      "paper_SEM_Hz": null,
+      "residual_interval_Hz": [
+        5.864754098360654,
+        6.270875763747455
+      ],
+      "visible_mean_residual_Hz": 6.0593545751634,
+      "target_status": "readable_mean",
+      "whole_recording_count": 20,
+      "postpulse_count": 1
+    },
+    {
+      "current_pA": 900,
+      "model_count_1s": 21.0,
+      "model_rate_Hz": 21.0,
+      "paper_mean_Hz": 15.150531045751634,
+      "paper_mean_interval_Hz": [
+        14.928716904276985,
+        15.348360655737705
+      ],
+      "paper_SEM_Hz": null,
+      "residual_interval_Hz": [
+        5.6516393442622945,
+        6.071283095723015
+      ],
+      "visible_mean_residual_Hz": 5.8494689542483655,
+      "target_status": "readable_mean",
+      "whole_recording_count": 21,
+      "postpulse_count": 0
+    },
+    {
+      "current_pA": 1000,
+      "model_count_1s": 23.0,
+      "model_rate_Hz": 23.0,
+      "paper_mean_Hz": 16.821425653594773,
+      "paper_mean_interval_Hz": [
+        16.59877800407332,
+        17.028688524590166
+      ],
+      "paper_SEM_Hz": null,
+      "residual_interval_Hz": [
+        5.971311475409834,
+        6.401221995926679
+      ],
+      "visible_mean_residual_Hz": 6.178574346405227,
+      "target_status": "readable_mean",
+      "whole_recording_count": 23,
+      "postpulse_count": 0
+    }
+  ],
+  "exploratory_all_ten_conditional_bounds": {
+    "n": 10,
+    "signed_mean_error_bounds_Hz": [
+      6.392757426705944,
+      6.838289205702648
+    ],
+    "RMSE_bounds_Hz": [
+      6.843410574766417,
+      7.205324491360282
+    ],
+    "max_absolute_error_bounds_Hz": [
+      9.048915268112978,
+      9.391038696537677
+    ],
+    "point_metrics": null,
+    "interpretation": "POST-HOC conditional figure-reading bounds, not confidence intervals, restored primary scores or biological equivalence."
+  },
+  "exploratory_nine_visible_mean_summary": {
+    "n": 9,
+    "signed_mean_error_Hz": 7.192892156862745,
+    "RMSE_Hz": 7.380664418482136,
+    "max_absolute_error_Hz": 9.199244281045752,
+    "interpretation": "Secondary visible-mean point summary; excludes missing means and is not the primary all-current result."
+  },
+  "input_sha256": {
+    "numerical_checks.json": "d7ba44405d692f145c70c54c6e5367b410c906e3d4cc8b9cbdc88823766662d1",
+    "target_data.json": "3f157e1e029701dbad9331718439e2be7fe7d4671831b69b8efba1d4fe625cf2"
+  },
+  "frozen_100pA_interval_unchanged": [
+    0,
+    1.2
+  ]
+}
