@@ -72,10 +72,10 @@
     ]
   },
   "numerical_criteria": {
-    "counts_and_event_order": "all phases identical across production refinements and reference refinements",
+    "counts_and_event_order": "All phases identical across refinements and separately refined reference;primary detection/reset counts and localized crossing counts each recorded. Threshold-grid boundary ambiguity is numerical/comparability failure,not favourable selection.",
     "event_time_max_error_ms": 0.05,
     "interpretation": "engineering criterion based on20kHz sample interval, not biological tolerance",
-    "reset": "At every localized event verify Vbefore=Vpeak within1e-7mV,Vafter=Vmin,uafter-ubefore=d within1e-7pA. Compare pre-reset u across solvers within0.01pA.",
+    "reset": "Primary:before-reset state can overshoot Vpeak because detection is delayed;independently compare production/reference reset-timeV/u within0.01mV/0.01pA;compare separately localized crossing stateV=Vpeak within1e-7mV. Both:Vafter=Vmin,uafter-ubefore=d within1e-7(float64reference)or1e-4(float32production);compare counters and suppressed intervals exactly. Diagnostic:reset at localized crossing,without primary overshoot.",
     "holding_only": "zero spikes;baseline stays within1e-7mV of-70",
     "fail_policy": "Preserve failures; do not interpret biological residuals for numerically failing production.",
     "event_times": "Audit localized ODE crossing and actual delayed grid reset/detection times separately. Compare like-for-like records; quantized1ms spike monitors cannot establish0.05ms timing. Primary highaccuracy reference follows unchanged counter clock; diagnostic has immediate events."
