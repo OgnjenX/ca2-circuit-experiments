@@ -1,0 +1,619 @@
+{
+  "frozen_diagnostic_commit": "bff3d5ffd1e08ac46dbea3b95e9cade94f9f99bc",
+  "source_freeze_commit": "233b068cb7e22663b9ce551806e4a4e573a63872",
+  "native_input_sha256": {
+    "rk80_step100.csv": "1a643f0c86f0120ef0f326c9d15e8965c8597f554e96669e9016390d3f5b1270",
+    "rk80_step100.stdout": "8efdd9b0948dc721304e1deb0ecdba85495ad32855265595882283c2c4b3e0fa",
+    "rk80_step100.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "rk80_step100.exit.json": "26169f5625010984ab43335f706d1b61f50f3d9889197644b9f212962bbdb9f4"
+  },
+  "state_csv_sha256": {
+    "dop853_loose.csv": "2912ceba460f378a93623e58cf619f0cb612b3da062af15bf9a1cf459a207c9f",
+    "dop853_tight.csv": "5d41f323ec4810d4c13e4adc5828fc5a17918d904ec83d89eb8635de28328a9d",
+    "rk4_float64_exact_coefficients.csv": "42540c5b5c294d86833e79b10b0bd950943ccde8c91e9c5a7c839fc1b07bd14b",
+    "rk4_float64_matched_float32_coefficients.csv": "75659c2a3f519e555db4bcf043e7bce1810d7a195f2aad442cc4a961d4f738f4",
+    "rk4_float32_explicit_no_fma.csv": "4beb0418f651ba178697f4ab857189c61639f9a94f33d49579d981306b35e370"
+  },
+  "window_ms": [
+    0.0,
+    858.4875
+  ],
+  "sample_count": 68680,
+  "native_first_reset_end_ms": 858.5,
+  "native_first_reset_detection_ms": 858.4875,
+  "valid_comparison_end_ms": 858.475,
+  "first_threshold_brackets": {
+    "native": {
+      "bracket_ms": [
+        858.475,
+        858.4875
+      ],
+      "linear_interpolation_ms": 858.4851189592564
+    },
+    "dop853_loose": null,
+    "dop853_tight": null,
+    "rk4_float64_exact_coefficients": null,
+    "rk4_float64_matched_float32_coefficients": null,
+    "rk4_float32_explicit_no_fma": {
+      "bracket_ms": [
+        858.475,
+        858.4875
+      ],
+      "linear_interpolation_ms": 858.4851189592564
+    }
+  },
+  "reference_reliable_for_drift_attribution": true,
+  "reference_attribution_refinement_threshold": {
+    "voltage_mV": 1e-07,
+    "recovery_pA": 1e-07
+  },
+  "checkpoints": {
+    "native": [
+      {
+        "time_ms": 0.0,
+        "v_mV": -70.0,
+        "u_pA": -41.11566162109375,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 100.0,
+        "v_mV": -70.0,
+        "u_pA": -41.11566162109375,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 100.0125,
+        "v_mV": -69.99923706054688,
+        "u_pA": -41.11566162109375,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 200.0,
+        "v_mV": -67.64273834228516,
+        "u_pA": -43.78398513793945,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 400.0,
+        "v_mV": -66.64215087890625,
+        "u_pA": -52.75791931152344,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 600.0,
+        "v_mV": -65.65941619873047,
+        "u_pA": -62.74043655395508,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 800.0,
+        "v_mV": -61.585872650146484,
+        "u_pA": -76.57827758789062,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 858.475,
+        "v_mV": 19.719633102416992,
+        "u_pA": -92.84595489501953,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 858.4875,
+        "v_mV": 20.053693771362305,
+        "u_pA": -92.865478515625,
+        "within_common_prethreshold_prefix": false
+      }
+    ],
+    "dop853_loose": [
+      {
+        "time_ms": 0.0,
+        "v_mV": -70.0,
+        "u_pA": -41.11566162109375,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 100.0,
+        "v_mV": -69.99999711384038,
+        "u_pA": -41.115660676303484,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 100.0125,
+        "v_mV": -69.99923039337777,
+        "u_pA": -41.11566076277178,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 200.0,
+        "v_mV": -67.64248770479287,
+        "u_pA": -43.7840971914954,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 400.0,
+        "v_mV": -66.63359745472147,
+        "u_pA": -52.76306717383958,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 600.0,
+        "v_mV": -65.66324646272835,
+        "u_pA": -62.73605385849073,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 800.0,
+        "v_mV": -61.61175040388754,
+        "u_pA": -76.54986510470091,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 858.475,
+        "v_mV": 11.578018576597595,
+        "u_pA": -92.35297712496556,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 858.4875,
+        "v_mV": 11.851374935092288,
+        "u_pA": -92.37066709486578,
+        "within_common_prethreshold_prefix": false
+      }
+    ],
+    "dop853_tight": [
+      {
+        "time_ms": 0.0,
+        "v_mV": -70.0,
+        "u_pA": -41.11566162109375,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 100.0,
+        "v_mV": -69.99999711384021,
+        "u_pA": -41.11566067630368,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 100.0125,
+        "v_mV": -69.9992303933776,
+        "u_pA": -41.11566076277198,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 200.0,
+        "v_mV": -67.64248770479276,
+        "u_pA": -43.78409719149573,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 400.0,
+        "v_mV": -66.6335974547215,
+        "u_pA": -52.7630671738401,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 600.0,
+        "v_mV": -65.66324646272847,
+        "u_pA": -62.736053858490855,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 800.0,
+        "v_mV": -61.61175040388734,
+        "u_pA": -76.54986510470124,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 858.475,
+        "v_mV": 11.578018577190928,
+        "u_pA": -92.35297712499212,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 858.4875,
+        "v_mV": 11.851374935359162,
+        "u_pA": -92.37066709488151,
+        "within_common_prethreshold_prefix": false
+      }
+    ],
+    "rk4_float64_exact_coefficients": [
+      {
+        "time_ms": 0.0,
+        "v_mV": -70.0,
+        "u_pA": -41.11566162109375,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 100.0,
+        "v_mV": -69.99999711384042,
+        "u_pA": -41.11566067630355,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 100.0125,
+        "v_mV": -69.99923039337781,
+        "u_pA": -41.115660762771846,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 200.0,
+        "v_mV": -67.64248770479284,
+        "u_pA": -43.784097191495505,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 400.0,
+        "v_mV": -66.63359745472137,
+        "u_pA": -52.76306717384024,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 600.0,
+        "v_mV": -65.66324646272828,
+        "u_pA": -62.73605385849153,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 800.0,
+        "v_mV": -61.61175040388737,
+        "u_pA": -76.54986510470154,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 858.475,
+        "v_mV": 11.578018577045416,
+        "u_pA": -92.35297712497696,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 858.4875,
+        "v_mV": 11.85137493521235,
+        "u_pA": -92.3706670948662,
+        "within_common_prethreshold_prefix": false
+      }
+    ],
+    "rk4_float64_matched_float32_coefficients": [
+      {
+        "time_ms": 0.0,
+        "v_mV": -70.0,
+        "u_pA": -41.11566162109375,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 100.0,
+        "v_mV": -69.9999971138404,
+        "u_pA": -41.11566067630356,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 100.0125,
+        "v_mV": -69.99923039334682,
+        "u_pA": -41.11566076277186,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 200.0,
+        "v_mV": -67.64248766790577,
+        "u_pA": -43.78409736206806,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 400.0,
+        "v_mV": -66.63359740530821,
+        "u_pA": -52.763067795871834,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 600.0,
+        "v_mV": -65.66324631852312,
+        "u_pA": -62.73605503191174,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 800.0,
+        "v_mV": -61.61174815075634,
+        "u_pA": -76.54986846534766,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 858.475,
+        "v_mV": 11.578718428234527,
+        "u_pA": -92.35302261613943,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 858.4875,
+        "v_mV": 11.852079752994662,
+        "u_pA": -92.37071274446522,
+        "within_common_prethreshold_prefix": false
+      }
+    ],
+    "rk4_float32_explicit_no_fma": [
+      {
+        "time_ms": 0.0,
+        "v_mV": -70.0,
+        "u_pA": -41.11566162109375,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 100.0,
+        "v_mV": -70.0,
+        "u_pA": -41.11566162109375,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 100.0125,
+        "v_mV": -69.99923706054688,
+        "u_pA": -41.11566162109375,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 200.0,
+        "v_mV": -67.64273834228516,
+        "u_pA": -43.78398513793945,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 400.0,
+        "v_mV": -66.64215087890625,
+        "u_pA": -52.75791931152344,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 600.0,
+        "v_mV": -65.65941619873047,
+        "u_pA": -62.74043655395508,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 800.0,
+        "v_mV": -61.585872650146484,
+        "u_pA": -76.57828521728516,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 858.475,
+        "v_mV": 19.719633102416992,
+        "u_pA": -92.84596252441406,
+        "within_common_prethreshold_prefix": true
+      },
+      {
+        "time_ms": 858.4875,
+        "v_mV": 20.053693771362305,
+        "u_pA": -92.86548614501953,
+        "within_common_prethreshold_prefix": false
+      }
+    ]
+  },
+  "post_crossing_note": "Saved no-reset smooth extensions beyond each method's crossing are not claimed faithful to the resetting GPU model; telemetry uses only the common prethreshold prefix.",
+  "actual_native_metadata": {
+    "mode": "GPU_MODE",
+    "steps_per_ms": 80,
+    "step_current_pA": 100,
+    "holding_float32_pA": 131.42408752441406,
+    "pulse_float32_pA": 231.42408752441406,
+    "initial_u_float32_pA": -41.11566162109375,
+    "parameters_float32": {
+      "C": 1630,
+      "k": 5.943243503570557,
+      "Vr": -72.58828735351562,
+      "Vt": -58.78361892700195,
+      "a": 0.0011350542772561312,
+      "b": -15.885260581970215,
+      "Vpeak": 19.990060806274414,
+      "Vmin": -62.64677810668945,
+      "d": 74
+    },
+    "library_sha256": "0a113b96470ce862f32e6494f899b237e45542a7fa5089ad7e3e027fdc404895",
+    "harness_sha256": "8f841eb794b70813068f50216683edf8ae907220fead9e6a449d0905e2f6a0b1",
+    "header_sha256": "80a20324d01a1dfd91835a6934b8485c44cbddd2008810419e216c1872981795",
+    "dt_float32_ms": 0.012500000186264515,
+    "refractory_period": 1
+  },
+  "controls": [
+    [
+      1e-09,
+      1e-10,
+      0.5
+    ],
+    [
+      1e-11,
+      1e-12,
+      0.1
+    ]
+  ],
+  "coefficient_handling": {
+    "exact_inverse_C": 0.0006134969325153375,
+    "matched_float32_inverse_C": 0.000613496929872781,
+    "exact_dt_ms": 0.0125,
+    "matched_float32_dt_ms": 0.012500000186264515,
+    "exact_one_sixth": 0.16666666666666666,
+    "matched_float32_one_sixth": 0.1666666716337204,
+    "matched_variant_note": "Float64 matched variant jointly changes inverseC, dt and one-sixth coefficients; no variant selection.",
+    "inverse_C_note": "GPU kernel computes float reciprocal; inferred from pinned actual C, not directly observed stdout.",
+    "float32_note": "Explicit operation rounding without FMA; not claimed to reproduce GPU compiler arithmetic exactly."
+  },
+  "comparisons": {
+    "native_vs_dop853_loose": {
+      "voltage_mV": {
+        "max_abs": 8.141614525819397,
+        "rms": 0.2955977628237605,
+        "signed_endpoint_difference": 8.141614525819397,
+        "first_exceedance_threshold": 1e-05,
+        "first_exceedance_time_ms": 100.025,
+        "first_exceedance_signed_difference": -1.0146785626830024e-05
+      },
+      "recovery_pA": {
+        "max_abs": 0.4929777700539688,
+        "rms": 0.031008802109672537,
+        "signed_endpoint_difference": -0.4929777700539688,
+        "first_exceedance_threshold": 1e-05,
+        "first_exceedance_time_ms": 104.0875,
+        "first_exceedance_signed_difference": -1.003935273757861e-05
+      }
+    },
+    "native_vs_dop853_tight": {
+      "voltage_mV": {
+        "max_abs": 8.141614525226064,
+        "rms": 0.2955977628043863,
+        "signed_endpoint_difference": 8.141614525226064,
+        "first_exceedance_threshold": 1e-05,
+        "first_exceedance_time_ms": 100.025,
+        "first_exceedance_signed_difference": -1.014678579736028e-05
+      },
+      "recovery_pA": {
+        "max_abs": 0.4929777700274087,
+        "rms": 0.031008802108993778,
+        "signed_endpoint_difference": -0.4929777700274087,
+        "first_exceedance_threshold": 1e-05,
+        "first_exceedance_time_ms": 104.0875,
+        "first_exceedance_signed_difference": -1.0039352538626645e-05
+      }
+    },
+    "native_vs_rk4_float64_exact_coefficients": {
+      "voltage_mV": {
+        "max_abs": 8.141614525371576,
+        "rms": 0.29559776280676914,
+        "signed_endpoint_difference": 8.141614525371576,
+        "first_exceedance_threshold": 1e-05,
+        "first_exceedance_time_ms": 100.025,
+        "first_exceedance_signed_difference": -1.0146785598408314e-05
+      },
+      "recovery_pA": {
+        "max_abs": 0.4929777700425717,
+        "rms": 0.031008802109116853,
+        "signed_endpoint_difference": -0.4929777700425717,
+        "first_exceedance_threshold": 1e-05,
+        "first_exceedance_time_ms": 104.0875,
+        "first_exceedance_signed_difference": -1.0039352680735192e-05
+      }
+    },
+    "native_vs_rk4_float64_matched_float32_coefficients": {
+      "voltage_mV": {
+        "max_abs": 8.140914674182465,
+        "rms": 0.29557176561038834,
+        "signed_endpoint_difference": 8.140914674182465,
+        "first_exceedance_threshold": 1e-05,
+        "first_exceedance_time_ms": 100.025,
+        "first_exceedance_signed_difference": -1.0146847529313163e-05
+      },
+      "recovery_pA": {
+        "max_abs": 0.4929322788801045,
+        "rms": 0.031005752794336275,
+        "signed_endpoint_difference": -0.4929322788801045,
+        "first_exceedance_threshold": 1e-05,
+        "first_exceedance_time_ms": 104.0875,
+        "first_exceedance_signed_difference": -1.0038615563701114e-05
+      }
+    },
+    "native_vs_rk4_float32_explicit_no_fma": {
+      "voltage_mV": {
+        "max_abs": 7.62939453125e-06,
+        "rms": 2.5956380407239904e-07,
+        "signed_endpoint_difference": 0.0,
+        "first_exceedance_threshold": 1e-05,
+        "first_exceedance_time_ms": null,
+        "first_exceedance_signed_difference": null
+      },
+      "recovery_pA": {
+        "max_abs": 7.62939453125e-06,
+        "rms": 4.3531564946300435e-06,
+        "signed_endpoint_difference": 7.62939453125e-06,
+        "first_exceedance_threshold": 1e-05,
+        "first_exceedance_time_ms": null,
+        "first_exceedance_signed_difference": null
+      }
+    },
+    "dop853_tolerance_refinement": {
+      "voltage_mV": {
+        "max_abs": 7.376540267500786e-09,
+        "rms": 8.817759128939e-11,
+        "signed_endpoint_difference": -5.933333824259535e-10,
+        "first_exceedance_threshold": 1e-05,
+        "first_exceedance_time_ms": null,
+        "first_exceedance_signed_difference": null
+      },
+      "recovery_pA": {
+        "max_abs": 2.9318414362933254e-10,
+        "rms": 3.698847347775142e-12,
+        "signed_endpoint_difference": 2.6560087462712545e-11,
+        "first_exceedance_threshold": 1e-05,
+        "first_exceedance_time_ms": null,
+        "first_exceedance_signed_difference": null
+      }
+    },
+    "rk4_float64_exact_vs_dop853_tight": {
+      "voltage_mV": {
+        "max_abs": 1.4551204685631092e-10,
+        "rms": 2.9515138165303846e-12,
+        "signed_endpoint_difference": -1.4551204685631092e-10,
+        "first_exceedance_threshold": 1e-05,
+        "first_exceedance_time_ms": null,
+        "first_exceedance_signed_difference": null
+      },
+      "recovery_pA": {
+        "max_abs": 1.5162981981120538e-11,
+        "rms": 4.809391854582254e-13,
+        "signed_endpoint_difference": 1.5162981981120538e-11,
+        "first_exceedance_threshold": 1e-05,
+        "first_exceedance_time_ms": null,
+        "first_exceedance_signed_difference": null
+      }
+    },
+    "rk4_float64_matched_vs_dop853_tight": {
+      "voltage_mV": {
+        "max_abs": 0.0006998510435991534,
+        "rms": 2.6001788192048986e-05,
+        "signed_endpoint_difference": 0.0006998510435991534,
+        "first_exceedance_threshold": 1e-05,
+        "first_exceedance_time_ms": 832.5875,
+        "first_exceedance_signed_difference": 1.0000445740843134e-05
+      },
+      "recovery_pA": {
+        "max_abs": 4.549114730423298e-05,
+        "rms": 3.1235497204353595e-06,
+        "signed_endpoint_difference": -4.549114730423298e-05,
+        "first_exceedance_threshold": 1e-05,
+        "first_exceedance_time_ms": 844.825,
+        "first_exceedance_signed_difference": -1.0004422094311849e-05
+      }
+    },
+    "rk4_coefficient_rounding": {
+      "voltage_mV": {
+        "max_abs": 0.0006998511891112003,
+        "rms": 2.6001790545686663e-05,
+        "signed_endpoint_difference": -0.0006998511891112003,
+        "first_exceedance_threshold": 1e-05,
+        "first_exceedance_time_ms": 832.5875,
+        "first_exceedance_signed_difference": -1.0000445421098902e-05
+      },
+      "recovery_pA": {
+        "max_abs": 4.549116246721496e-05,
+        "rms": 3.1235497828535163e-06,
+        "signed_endpoint_difference": 4.549116246721496e-05,
+        "first_exceedance_threshold": 1e-05,
+        "first_exceedance_time_ms": 844.825,
+        "first_exceedance_signed_difference": 1.000442158272108e-05
+      }
+    },
+    "rk4_float32_operation_rounding": {
+      "voltage_mV": {
+        "max_abs": 8.140914674182465,
+        "rms": 0.2955718415039292,
+        "signed_endpoint_difference": 8.140914674182465,
+        "first_exceedance_threshold": 1e-05,
+        "first_exceedance_time_ms": 100.025,
+        "first_exceedance_signed_difference": -1.0146847529313163e-05
+      },
+      "recovery_pA": {
+        "max_abs": 0.49293990827463574,
+        "rms": 0.03100790079309638,
+        "signed_endpoint_difference": -0.49293990827463574,
+        "first_exceedance_threshold": 1e-05,
+        "first_exceedance_time_ms": 104.0875,
+        "first_exceedance_signed_difference": -1.0038615563701114e-05
+      }
+    }
+  },
+  "scope": "Post hoc pre-reset precision/integrator diagnostic only; original numerical gates and biological conclusions unchanged."
+}

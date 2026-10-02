@@ -26,3 +26,5 @@ jobs:
         run: python experiments/003_whitebirch_intrinsic/revisions/002/tests_unit.py
       - name: Verify amended frozen inputs and result consistency
         run: python experiments/003_whitebirch_intrinsic/verify_results.py
+      - name: Verify bounded post-hoc addenda without reopening primary gates
+        run: python experiments/003_whitebirch_intrinsic/addenda/verify_addenda.py

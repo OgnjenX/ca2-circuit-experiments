@@ -1,0 +1,24 @@
+{
+  "name": "experiment-003-whitebirch-prefix-diagnostic-v1-raw.tar.gz",
+  "sha256": "a6472b3d5ec15bd1a79b2fd2ec26a834e016c50d1c5c42a06bd44398875800c4",
+  "bytes": 7063258,
+  "members": 17,
+  "frozen_diagnostic_commit": "bff3d5ffd1e08ac46dbea3b95e9cade94f9f99bc",
+  "original_archive_unchanged_sha256": "9ae381ee089aedf6b8dbb55242d0e83899356811ac4b8477c1b13031677a9343",
+  "local_path": "/home/ognjen/Documents/Codex/2026-10-02/task-2/experiment-003-whitebirch-prefix-diagnostic-v1-raw.tar.gz",
+  "kind": "Separate bounded prefix raw evidence; original archive and historical releases untouched",
+  "draft_release": {
+    "draft": true,
+    "html_url": "https://github.com/OgnjenX/ca2-circuit-experiments/releases/tag/untagged-87cd0657571c62a3e3fd",
+    "id": 402208809,
+    "tag_name": "experiment-003-whitebirch-v1",
+    "asset": {
+      "browser_download_url": "https://github.com/OgnjenX/ca2-circuit-experiments/releases/download/untagged-87cd0657571c62a3e3fd/experiment-003-whitebirch-prefix-diagnostic-v1-raw.tar.gz",
+      "digest": "sha256:a6472b3d5ec15bd1a79b2fd2ec26a834e016c50d1c5c42a06bd44398875800c4",
+      "id": 606742247,
+      "name": "experiment-003-whitebirch-prefix-diagnostic-v1-raw.tar.gz",
+      "size": 7063258
+    }
+  },
+  "authenticated_download": "gh release download experiment-003-whitebirch-v1 --repo OgnjenX/ca2-circuit-experiments --pattern experiment-003-whitebirch-prefix-diagnostic-v1-raw.tar.gz"
+}

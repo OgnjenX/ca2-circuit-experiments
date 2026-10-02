@@ -1,0 +1,26 @@
+{
+  "frozen_diagnostic_commit": "bff3d5ffd1e08ac46dbea3b95e9cade94f9f99bc",
+  "source_freeze_commit": "233b068cb7e22663b9ce551806e4a4e573a63872",
+  "original_result_commit": "ae666025e3597b66da0aab4b7a6fd9a47252147e",
+  "scope": "Separately authorized post-hoc compact evidence; original scientific gate remains failed",
+  "sha256": {
+    "004_prefix_diagnostic/archive_record.json": "37fe37d1b73aaabd9ad106e26c2a2eeb5aa1f6f859110e016b125dd0591287ca",
+    "004_prefix_diagnostic/audit_result.py": "842b261493812cbe6d8a9e633a9f2e8d71890025de1af4b7e215704ca5a98116",
+    "004_prefix_diagnostic/plot.py": "6c2079bb0c38c0e0a8d2b172e27af6e02fa17eae5d6c69085f10eb37ae5ba230",
+    "004_prefix_diagnostic/prefix.py": "0984866b5c36035d37d523c2cbd868d512fbc7a48466c793a17643a5eb2b48e1",
+    "004_prefix_diagnostic/prefix_differences.png": "e2c46eb2439f93e0cd6d7a2b32b6018eae3fa82c149cc4d138ac82f1fd3a1973",
+    "004_prefix_diagnostic/prefix_results.json": "09478b0c12fc96b9b6108deab39663cad046c39514d4d8c975ca25545b0be742",
+    "004_prefix_diagnostic/preregistration_manifest.json": "85b83ddacdc0137ef37306cf2db45482d4d7274b857f8a1cb5b58e2517c1b0b4",
+    "004_prefix_diagnostic/protocol.json": "6d8f6ad5ed9eaa72a80a39c391cbb8ffe40b4a0a5b83619cf38714b951a4f8fd",
+    "004_prefix_diagnostic/readme.md": "7fe4d0a6afc3e2a03fa5a397e10f1982f954d6c3ec5b9aa24729e6c6fb67d3a8",
+    "004_prefix_diagnostic/report.md": "a40518bf754303ad73d57f4a0ee088cac34969b11c89f7a10b10035c9afbd2ad",
+    "004_prefix_diagnostic/result_review.json": "0620f81d451f6464c0246bf0985ee10e1faad20b0e5e1993d12aaef4d8aabb53",
+    "004_prefix_diagnostic/review.json": "a9318094f49bfc2dd1953d6a4a8a1e9d0a8692b639fb8a1cb4bcaeb6eab10b25",
+    "posthoc_biological_comparison/analyze_exploratory.py": "9355d97d2094769f3f825ff97322048a4194a255e0c690e162f42cb59a26f27f",
+    "posthoc_biological_comparison/comparison.csv": "508c669bf0b265bf99cab0c6b647405056f29558840df131aa42d3026cac58b4",
+    "posthoc_biological_comparison/comparison.json": "213060fcfe17d7ec24769efede154f71e56f65a387e187c1eed7d6974b73dff7",
+    "posthoc_biological_comparison/comparison.png": "73107011e1330e523eebddea04c99655584376a6d2b97768e86c32dd143d0c1d",
+    "posthoc_biological_comparison/report.md": "b069b4e62f3054bbcf20f5e13f3fc1b5d79c8a866fb09c7297e6a0e39bf94c2c",
+    "verify_addenda.py": "c0392d853b46589d2b81bdf983ed88f026c4fd40ac3c572447e95925717034b9"
+  }
+}
