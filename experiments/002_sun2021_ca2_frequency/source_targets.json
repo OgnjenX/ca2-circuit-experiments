@@ -1,0 +1,95 @@
+{
+  "paper": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482869/",
+  "figure_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482869/figure/F5/",
+  "image_url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/a9a5/8482869/7a8ee8bf1ebe/SN-JNSJ210596F005.jpg",
+  "image_sha256": "b6adecb35e30ece10c25309888b6576873deedbd2006424a66f1cc658927695d",
+  "image_width": 817,
+  "image_height": 1078,
+  "method": "Manual reading of blue APV markers in Figure 5H. Coordinates in original image; y=188 is zero and 16 px per ratio unit. Tick positions y=188,156,124,92,60 correspond to0,2,4,6,8. Low-frequency marker and error bars overlap; SEM_upper_bound spans visible marker/error-bar extent conservatively and is not a recovered exact SEM. Two-pixel error assigned to mean. Source figure remains external and is downloaded/verified for inspection.",
+  "biological_n": 5,
+  "error_bars_in_paper": "SEM",
+  "interval_note": "Conservative approximate compatibility band: digitized mean +/- t(0.975,4)*SEM_upper_bound +/- mean_extraction_error. Not an exact CI, significance test or a prediction interval for animals.",
+  "points": [
+    {
+      "frequency_Hz": 2,
+      "x": 668,
+      "y": 174,
+      "sem_pixel_upper": 5,
+      "mean": 0.875,
+      "SEM_upper_bound": 0.3125,
+      "mean_extraction_error": 0.125,
+      "interval": [
+        -0.11763909531250005,
+        1.8676390953125002
+      ]
+    },
+    {
+      "frequency_Hz": 5,
+      "x": 679,
+      "y": 174,
+      "sem_pixel_upper": 7,
+      "mean": 0.875,
+      "SEM_upper_bound": 0.4375,
+      "mean_extraction_error": 0.125,
+      "interval": [
+        -0.4646947334375,
+        2.2146947334375
+      ]
+    },
+    {
+      "frequency_Hz": 10,
+      "x": 693,
+      "y": 174,
+      "sem_pixel_upper": 5,
+      "mean": 0.875,
+      "SEM_upper_bound": 0.3125,
+      "mean_extraction_error": 0.125,
+      "interval": [
+        -0.11763909531250005,
+        1.8676390953125002
+      ]
+    },
+    {
+      "frequency_Hz": 20,
+      "x": 721,
+      "y": 167,
+      "sem_pixel_upper": 4,
+      "mean": 1.3125,
+      "SEM_upper_bound": 0.25,
+      "mean_extraction_error": 0.125,
+      "interval": [
+        0.49338872375,
+        2.13161127625
+      ]
+    },
+    {
+      "frequency_Hz": 30,
+      "x": 750,
+      "y": 158.5,
+      "sem_pixel_upper": 4,
+      "mean": 1.84375,
+      "SEM_upper_bound": 0.25,
+      "mean_extraction_error": 0.125,
+      "interval": [
+        1.0246387237499999,
+        2.66286127625
+      ]
+    },
+    {
+      "frequency_Hz": 50,
+      "x": 808,
+      "y": 141,
+      "sem_pixel_upper": 7.5,
+      "mean": 2.9375,
+      "SEM_upper_bound": 0.46875,
+      "mean_extraction_error": 0.125,
+      "interval": [
+        1.51104135703125,
+        4.3639586429687505
+      ]
+    }
+  ],
+  "raw_recordings_available": false,
+  "actual_APV_initial_amplitude_mV": null,
+  "exact_naturalistic_timestamps_available": false
+}

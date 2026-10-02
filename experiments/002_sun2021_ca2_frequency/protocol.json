@@ -1,0 +1,82 @@
+{
+  "id": "002_sun2021_ca2_frequency",
+  "title": "CA2 somatic EPSP frequency response under NMDA and GABA blockade",
+  "status": "prospective",
+  "paper": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8482869/",
+  "figure": "5H APV CA2",
+  "question": "After fixing single-pulse input strength, does the exported direct-input CA2 point model reproduce measured EPSP5/EPSP1 at 30 and 50 Hz?",
+  "holding_mV": -70,
+  "settle_ms": 4950,
+  "first_pulse_ms": 5100,
+  "record_start_ms": 4950,
+  "post_ms": 100,
+  "delay_ms": 1,
+  "calibration_amplitudes_mV": [
+    1.44,
+    1.76,
+    2.08
+  ],
+  "amplitude_origin": "Figure 4 CA2 weak single EPSP 1.76 +/- 0.32 mV SEM; transfer to Figure 5 APV is an explicit unverified cross-figure assumption. +/- SEM scenarios are setup sensitivity, not animal variability or a known APV amplitude range.",
+  "calibration_seeds": [
+    101,
+    102
+  ],
+  "evaluation_seeds": [
+    201,
+    202,
+    203,
+    204,
+    205
+  ],
+  "max_calibration_iterations": 12,
+  "calibration_tolerance_mV": 0.03,
+  "frequencies_Hz": [
+    2,
+    5,
+    10,
+    20,
+    30,
+    50
+  ],
+  "primary_frequencies_Hz": [
+    30,
+    50
+  ],
+  "nominal_substeps": 20,
+  "precision_substeps": 40,
+  "model_cell_count": 128,
+  "source_pool": 10818,
+  "fit_permissions": [
+    "Single-pulse active afferent count",
+    "Analytic holding current from unchanged intrinsic model"
+  ],
+  "fixed": [
+    "Izhikevich intrinsic parameters",
+    "exported conductance factor",
+    "short-term plasticity parameters",
+    "connection probability",
+    "delay",
+    "zero NMDA factor",
+    "no inhibition",
+    "no recurrent excitation"
+  ],
+  "peak_measurement": "Each cell peak after pulse plus 1ms delay and before next pulse plus delay; last peak window ends 100ms after last pulse. Normalize all peaks to the same 100ms prestimulus baseline and to the first peak. Average per-cell ratios, not a ratio of population averages.",
+  "measurement_limit": "Baseline convention inferred from normalized traces; authors' analysis code not available. Also report an incremental-from-pre-pulse convention as a diagnostic without changing primary scoring.",
+  "subthreshold_gate": "No spikes in any target, mean baseline within 0.05 mV of -70, max per-cell baseline drift <0.01 mV across the last100ms.",
+  "numerical_gates": {
+    "max_ratio_absolute_difference": 0.05,
+    "max_EPSP_peak_difference_mV": 0.1,
+    "same_eligibility": true
+  },
+  "agreement_rule": "Model mean at both primary frequencies must lie inside conservative digitized source-mean compatibility intervals. Report each seed and pooled means. If a primary cell response is suprathreshold, that run is ineligible and cannot pass EPSP scoring.",
+  "robustness_rule": "Report all three predeclared operating levels. Robust conditional mismatch requires a miss at a primary frequency at every weak setup level, with numerical gates passing.",
+  "claim_limit": "A match is conditional compatibility with selected published CA2 drug-blocked mean responses, not replication of the full paper or independent biological validation. A mismatch establishes failure for this implementation and these setup scenarios, not impossibility for every possible preparation.",
+  "excluded_claims": [
+    "CA1 versus CA2 comparison",
+    "NMDA blockade effect between arms",
+    "naturalistic firing replay",
+    "extracellular field potentials or population spikes",
+    "behaviour or CA2 function"
+  ],
+  "no_post_outcome_tuning": true
+}
