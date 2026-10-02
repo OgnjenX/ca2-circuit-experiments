@@ -1,0 +1,722 @@
+[
+  {
+    "label": "test-a1.44-s201-f2-rk20",
+    "baseline_ratio": 0.9674739837646484,
+    "incremental_ratio": 0.9339529275894165,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s201-f5-rk20",
+    "baseline_ratio": 0.8198066353797913,
+    "incremental_ratio": 0.7802825570106506,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s201-f10-rk20",
+    "baseline_ratio": 0.7304474115371704,
+    "incremental_ratio": 0.6534671187400818,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s201-f20-rk20",
+    "baseline_ratio": 0.8058494925498962,
+    "incremental_ratio": 0.541147768497467,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s201-f30-rk20",
+    "baseline_ratio": 1.0207641124725342,
+    "incremental_ratio": 0.46718597412109375,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s201-f50-rk20",
+    "baseline_ratio": 1.5366642475128174,
+    "incremental_ratio": 0.36070021986961365,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s201-f30-rk40",
+    "baseline_ratio": 1.0223195552825928,
+    "incremental_ratio": 0.46721720695495605,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s201-f50-rk40",
+    "baseline_ratio": 1.5376274585723877,
+    "incremental_ratio": 0.36075523495674133,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s202-f2-rk20",
+    "baseline_ratio": 0.9671072363853455,
+    "incremental_ratio": 0.933957576751709,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s202-f5-rk20",
+    "baseline_ratio": 0.8196111917495728,
+    "incremental_ratio": 0.7802896499633789,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s202-f10-rk20",
+    "baseline_ratio": 0.7303830981254578,
+    "incremental_ratio": 0.6534745693206787,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s202-f20-rk20",
+    "baseline_ratio": 0.8059360980987549,
+    "incremental_ratio": 0.541145920753479,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s202-f30-rk20",
+    "baseline_ratio": 1.0207459926605225,
+    "incremental_ratio": 0.4671686291694641,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s202-f50-rk20",
+    "baseline_ratio": 1.5363094806671143,
+    "incremental_ratio": 0.36054837703704834,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s202-f30-rk40",
+    "baseline_ratio": 1.0222516059875488,
+    "incremental_ratio": 0.4672052264213562,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s202-f50-rk40",
+    "baseline_ratio": 1.5372450351715088,
+    "incremental_ratio": 0.36060768365859985,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s203-f2-rk20",
+    "baseline_ratio": 0.9669474363327026,
+    "incremental_ratio": 0.9339656829833984,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s203-f5-rk20",
+    "baseline_ratio": 0.8195834159851074,
+    "incremental_ratio": 0.7803082466125488,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s203-f10-rk20",
+    "baseline_ratio": 0.730560302734375,
+    "incremental_ratio": 0.6534912586212158,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s203-f20-rk20",
+    "baseline_ratio": 0.8071739673614502,
+    "incremental_ratio": 0.5410754680633545,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s203-f30-rk20",
+    "baseline_ratio": 1.024558663368225,
+    "incremental_ratio": 0.4669683575630188,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s203-f50-rk20",
+    "baseline_ratio": 1.5464019775390625,
+    "incremental_ratio": 0.36034470796585083,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s203-f30-rk40",
+    "baseline_ratio": 1.0260286331176758,
+    "incremental_ratio": 0.4670051336288452,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s203-f50-rk40",
+    "baseline_ratio": 1.5472885370254517,
+    "incremental_ratio": 0.3604036271572113,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s204-f2-rk20",
+    "baseline_ratio": 0.9673855900764465,
+    "incremental_ratio": 0.9339516162872314,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s204-f5-rk20",
+    "baseline_ratio": 0.8197144269943237,
+    "incremental_ratio": 0.780267059803009,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s204-f10-rk20",
+    "baseline_ratio": 0.7303096055984497,
+    "incremental_ratio": 0.6534688472747803,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s204-f20-rk20",
+    "baseline_ratio": 0.8050552010536194,
+    "incremental_ratio": 0.5411940813064575,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s204-f30-rk20",
+    "baseline_ratio": 1.0180460214614868,
+    "incremental_ratio": 0.4673146605491638,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s204-f50-rk20",
+    "baseline_ratio": 1.5292010307312012,
+    "incremental_ratio": 0.36072301864624023,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s204-f30-rk40",
+    "baseline_ratio": 1.0195993185043335,
+    "incremental_ratio": 0.46734535694122314,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s204-f50-rk40",
+    "baseline_ratio": 1.5301860570907593,
+    "incremental_ratio": 0.36077994108200073,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s205-f2-rk20",
+    "baseline_ratio": 0.9668067693710327,
+    "incremental_ratio": 0.9339683055877686,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s205-f5-rk20",
+    "baseline_ratio": 0.8195379972457886,
+    "incremental_ratio": 0.7803225517272949,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s205-f10-rk20",
+    "baseline_ratio": 0.7306303381919861,
+    "incremental_ratio": 0.6534982919692993,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s205-f20-rk20",
+    "baseline_ratio": 0.8078030347824097,
+    "incremental_ratio": 0.5410369634628296,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s205-f30-rk20",
+    "baseline_ratio": 1.0265495777130127,
+    "incremental_ratio": 0.46686458587646484,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s205-f50-rk20",
+    "baseline_ratio": 1.5517053604125977,
+    "incremental_ratio": 0.3602496385574341,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s205-f30-rk40",
+    "baseline_ratio": 1.0279967784881592,
+    "incremental_ratio": 0.46690475940704346,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.44-s205-f50-rk40",
+    "baseline_ratio": 1.552558183670044,
+    "incremental_ratio": 0.3603074848651886,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s201-f2-rk20",
+    "baseline_ratio": 0.9654019474983215,
+    "incremental_ratio": 0.9340125322341919,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s201-f5-rk20",
+    "baseline_ratio": 0.8192702531814575,
+    "incremental_ratio": 0.7804786562919617,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s201-f10-rk20",
+    "baseline_ratio": 0.7318574786186218,
+    "incremental_ratio": 0.6536060571670532,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s201-f20-rk20",
+    "baseline_ratio": 0.8172815442085266,
+    "incremental_ratio": 0.5404946804046631,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s201-f30-rk20",
+    "baseline_ratio": 1.0565834045410156,
+    "incremental_ratio": 0.46531909704208374,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s201-f50-rk20",
+    "baseline_ratio": 1.6319150924682617,
+    "incremental_ratio": 0.3589365482330322,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s201-f30-rk40",
+    "baseline_ratio": 1.0577330589294434,
+    "incremental_ratio": 0.46537142992019653,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s201-f50-rk40",
+    "baseline_ratio": 1.6323764324188232,
+    "incremental_ratio": 0.35900741815567017,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s202-f2-rk20",
+    "baseline_ratio": 0.9650251865386963,
+    "incremental_ratio": 0.9340226650238037,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s202-f5-rk20",
+    "baseline_ratio": 0.8191672563552856,
+    "incremental_ratio": 0.7805052399635315,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s202-f10-rk20",
+    "baseline_ratio": 0.7319959402084351,
+    "incremental_ratio": 0.6536261439323425,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s202-f20-rk20",
+    "baseline_ratio": 0.8185552358627319,
+    "incremental_ratio": 0.5404253005981445,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s202-f30-rk20",
+    "baseline_ratio": 1.0602796077728271,
+    "incremental_ratio": 0.46511146426200867,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s202-f50-rk20",
+    "baseline_ratio": 1.6414703130722046,
+    "incremental_ratio": 0.358627051115036,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s202-f30-rk40",
+    "baseline_ratio": 1.0613670349121094,
+    "incremental_ratio": 0.4651685357093811,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s202-f50-rk40",
+    "baseline_ratio": 1.64186692237854,
+    "incremental_ratio": 0.3587002754211426,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s203-f2-rk20",
+    "baseline_ratio": 0.9650446772575378,
+    "incremental_ratio": 0.9340242147445679,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s203-f5-rk20",
+    "baseline_ratio": 0.8192487955093384,
+    "incremental_ratio": 0.7805161476135254,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s203-f10-rk20",
+    "baseline_ratio": 0.7321295738220215,
+    "incremental_ratio": 0.6536368131637573,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s203-f20-rk20",
+    "baseline_ratio": 0.8192517161369324,
+    "incremental_ratio": 0.540386438369751,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s203-f30-rk20",
+    "baseline_ratio": 1.062359094619751,
+    "incremental_ratio": 0.46500149369239807,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s203-f50-rk20",
+    "baseline_ratio": 1.6469389200210571,
+    "incremental_ratio": 0.3585067093372345,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s203-f30-rk40",
+    "baseline_ratio": 1.0634448528289795,
+    "incremental_ratio": 0.46505945920944214,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s203-f50-rk40",
+    "baseline_ratio": 1.64732027053833,
+    "incremental_ratio": 0.3585815727710724,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s204-f2-rk20",
+    "baseline_ratio": 0.9651021957397461,
+    "incremental_ratio": 0.9340200424194336,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s204-f5-rk20",
+    "baseline_ratio": 0.8191673755645752,
+    "incremental_ratio": 0.7804955244064331,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s204-f10-rk20",
+    "baseline_ratio": 0.7318928241729736,
+    "incremental_ratio": 0.6536197662353516,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s204-f20-rk20",
+    "baseline_ratio": 0.8178077936172485,
+    "incremental_ratio": 0.5404684543609619,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s204-f30-rk20",
+    "baseline_ratio": 1.0578534603118896,
+    "incremental_ratio": 0.4652335047721863,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s204-f50-rk20",
+    "baseline_ratio": 1.6349319219589233,
+    "incremental_ratio": 0.35870254039764404,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s204-f30-rk40",
+    "baseline_ratio": 1.0589605569839478,
+    "incremental_ratio": 0.4652891755104065,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s204-f50-rk40",
+    "baseline_ratio": 1.6353535652160645,
+    "incremental_ratio": 0.35877370834350586,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s205-f2-rk20",
+    "baseline_ratio": 0.9648486971855164,
+    "incremental_ratio": 0.9340313673019409,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s205-f5-rk20",
+    "baseline_ratio": 0.8192223310470581,
+    "incremental_ratio": 0.780544102191925,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s205-f10-rk20",
+    "baseline_ratio": 0.7323740720748901,
+    "incremental_ratio": 0.6536493301391602,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s205-f20-rk20",
+    "baseline_ratio": 0.8211290240287781,
+    "incremental_ratio": 0.5402765274047852,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s205-f30-rk20",
+    "baseline_ratio": 1.0686691999435425,
+    "incremental_ratio": 0.4646942913532257,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s205-f50-rk20",
+    "baseline_ratio": 1.664097547531128,
+    "incremental_ratio": 0.3583947718143463,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s205-f30-rk40",
+    "baseline_ratio": 1.0697021484375,
+    "incremental_ratio": 0.4647563099861145,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a1.76-s205-f50-rk40",
+    "baseline_ratio": 1.6644041538238525,
+    "incremental_ratio": 0.3584691286087036,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s201-f2-rk20",
+    "baseline_ratio": 0.9640076160430908,
+    "incremental_ratio": 0.9340714812278748,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s201-f5-rk20",
+    "baseline_ratio": 0.8193535804748535,
+    "incremental_ratio": 0.7807169556617737,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s201-f10-rk20",
+    "baseline_ratio": 0.7341448068618774,
+    "incremental_ratio": 0.6537430286407471,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s201-f20-rk20",
+    "baseline_ratio": 0.8338388204574585,
+    "incremental_ratio": 0.5395248532295227,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s201-f30-rk20",
+    "baseline_ratio": 1.1117537021636963,
+    "incremental_ratio": 0.4626356363296509,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s201-f50-rk20",
+    "baseline_ratio": 1.7824466228485107,
+    "incremental_ratio": 0.3586416244506836,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s201-f30-rk40",
+    "baseline_ratio": 1.1125004291534424,
+    "incremental_ratio": 0.4627164900302887,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s201-f50-rk40",
+    "baseline_ratio": 1.7815110683441162,
+    "incremental_ratio": 0.3579758107662201,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s202-f2-rk20",
+    "baseline_ratio": 0.9638678431510925,
+    "incremental_ratio": 0.9340712428092957,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s202-f5-rk20",
+    "baseline_ratio": 0.819260835647583,
+    "incremental_ratio": 0.7807148098945618,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s202-f10-rk20",
+    "baseline_ratio": 0.7339887619018555,
+    "incremental_ratio": 0.6537429690361023,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s202-f20-rk20",
+    "baseline_ratio": 0.8327544927597046,
+    "incremental_ratio": 0.5395960807800293,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s202-f30-rk20",
+    "baseline_ratio": 1.1071163415908813,
+    "incremental_ratio": 0.4628073573112488,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s202-f50-rk20",
+    "baseline_ratio": 1.7697243690490723,
+    "incremental_ratio": 0.3590090274810791,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s202-f30-rk40",
+    "baseline_ratio": 1.1078685522079468,
+    "incremental_ratio": 0.4628879427909851,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s202-f50-rk40",
+    "baseline_ratio": 1.7680870294570923,
+    "incremental_ratio": 0.3576032519340515,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s203-f2-rk20",
+    "baseline_ratio": 0.9639416337013245,
+    "incremental_ratio": 0.9340725541114807,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s203-f5-rk20",
+    "baseline_ratio": 0.8193504810333252,
+    "incremental_ratio": 0.7807241678237915,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s203-f10-rk20",
+    "baseline_ratio": 0.7341163158416748,
+    "incremental_ratio": 0.65374755859375,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s203-f20-rk20",
+    "baseline_ratio": 0.8333488702774048,
+    "incremental_ratio": 0.5395609140396118,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s203-f30-rk20",
+    "baseline_ratio": 1.1088252067565918,
+    "incremental_ratio": 0.46270960569381714,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s203-f50-rk20",
+    "baseline_ratio": 1.7726848125457764,
+    "incremental_ratio": 0.35736942291259766,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s203-f30-rk40",
+    "baseline_ratio": 1.109588861465454,
+    "incremental_ratio": 0.4627917408943176,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s203-f50-rk40",
+    "baseline_ratio": 1.7725433111190796,
+    "incremental_ratio": 0.357446551322937,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s204-f2-rk20",
+    "baseline_ratio": 0.9639652967453003,
+    "incremental_ratio": 0.9340701103210449,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s204-f5-rk20",
+    "baseline_ratio": 0.8192940354347229,
+    "incremental_ratio": 0.7807108163833618,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s204-f10-rk20",
+    "baseline_ratio": 0.7339850664138794,
+    "incremental_ratio": 0.6537416577339172,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s204-f20-rk20",
+    "baseline_ratio": 0.8325496315956116,
+    "incremental_ratio": 0.539607048034668,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s204-f30-rk20",
+    "baseline_ratio": 1.1062883138656616,
+    "incremental_ratio": 0.46283605694770813,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s204-f50-rk20",
+    "baseline_ratio": 1.7658782005310059,
+    "incremental_ratio": 0.35744038224220276,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s204-f30-rk40",
+    "baseline_ratio": 1.1070609092712402,
+    "incremental_ratio": 0.4629162549972534,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s204-f50-rk40",
+    "baseline_ratio": 1.765753984451294,
+    "incremental_ratio": 0.3575173020362854,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s205-f2-rk20",
+    "baseline_ratio": 0.9637128710746765,
+    "incremental_ratio": 0.9340822696685791,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s205-f5-rk20",
+    "baseline_ratio": 0.8193478584289551,
+    "incremental_ratio": 0.7807644605636597,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s205-f10-rk20",
+    "baseline_ratio": 0.7345383167266846,
+    "incremental_ratio": 0.6537683606147766,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s205-f20-rk20",
+    "baseline_ratio": 0.8366699814796448,
+    "incremental_ratio": 0.5393621921539307,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s205-f30-rk20",
+    "baseline_ratio": 1.1209430694580078,
+    "incremental_ratio": 0.4621829092502594,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s205-f50-rk20",
+    "baseline_ratio": 1.9515782594680786,
+    "incremental_ratio": 0.5028261542320251,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s205-f30-rk40",
+    "baseline_ratio": 1.1216137409210205,
+    "incremental_ratio": 0.4622686505317688,
+    "not_used_for_primary_scoring": true
+  },
+  {
+    "label": "test-a2.08-s205-f50-rk40",
+    "baseline_ratio": 1.9781899452209473,
+    "incremental_ratio": 0.529827356338501,
+    "not_used_for_primary_scoring": true
+  }
+]

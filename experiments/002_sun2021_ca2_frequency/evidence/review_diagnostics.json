@@ -1,0 +1,43 @@
+{
+  "post_analysis_descriptive_audit": true,
+  "primary_scores_changed": false,
+  "eligible_pair_count": 29,
+  "all_pair_maxima": {
+    "mean_ratio_difference": 0.026611685752868652,
+    "max_mean_peak_difference_mV": 0.09095478057861328,
+    "max_cell_ratio_difference": 3.5334415435791016
+  },
+  "eligible_pair_maxima": {
+    "mean_ratio_difference": 0.0016373395919799805,
+    "max_mean_peak_difference_mV": 0.006589174270629883,
+    "max_cell_ratio_difference": 0.09939384460449219
+  },
+  "excluded_runs": [
+    {
+      "label": "test-a2.08-s205-f50-rk20",
+      "reason": "Target spiking; EPSP comparison ineligible",
+      "spikes": [
+        {
+          "absolute_ms": 5229,
+          "cell_id": 12
+        }
+      ],
+      "baseline_mV": -70.01869201660156,
+      "baseline_drift_mV": 0.000946044921875
+    },
+    {
+      "label": "test-a2.08-s205-f50-rk40",
+      "reason": "Target spiking; EPSP comparison ineligible",
+      "spikes": [
+        {
+          "absolute_ms": 5230,
+          "cell_id": 12
+        }
+      ],
+      "baseline_mV": -70.02210998535156,
+      "baseline_drift_mV": 0.000946044921875
+    }
+  ],
+  "numerical_limit": "The declared gates concern mean EPSP ratios and mean peaks, and unchanged eligibility/spike counts. They do not establish convergence of every cell or spike time. The ineligible spiking pair has a large individual-cell ratio difference and a 1ms spike-time difference.",
+  "ineligible_aggregation_limit": "results.json retains all-run means and errors even for the ineligible upper 50Hz condition, for auditability. These numbers include a spike and are not valid subthreshold EPSP comparisons. Figures omit that group, without dropping a seed to rescue its score."
+}

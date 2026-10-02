@@ -1,0 +1,675 @@
+{
+  "frozen_configuration_sha256": "3d34c138b84a2258b5a3896d9213fafd071f5f8b527beedae68ab4adb0398d31",
+  "run_count": 120,
+  "nominal_run_count": 90,
+  "precision_pair_count": 30,
+  "numerical_pass": true,
+  "eligible_run_count": 118,
+  "comparisons": [
+    {
+      "target_single_EPSP_mV": 1.44,
+      "active_afferents": 1859,
+      "frequency_Hz": 2,
+      "model_mean_ratio": 0.9671442031860351,
+      "model_seed_min": 0.9668067693710327,
+      "model_seed_max": 0.9674739837646484,
+      "source_mean_ratio": 0.875,
+      "conservative_source_interval": [
+        -0.11763909531250005,
+        1.8676390953125002
+      ],
+      "absolute_error": 0.09214420318603511,
+      "relative_error": 0.10530766078404012,
+      "eligible_all_seeds": true,
+      "inside_compatibility_band": true,
+      "all_seeds_below_band": false,
+      "all_seeds_above_band": false,
+      "model_seeds": [
+        201,
+        202,
+        203,
+        204,
+        205
+      ],
+      "mean_first_EPSP_mV": 1.427925133705139
+    },
+    {
+      "target_single_EPSP_mV": 1.44,
+      "active_afferents": 1859,
+      "frequency_Hz": 5,
+      "model_mean_ratio": 0.8196507334709168,
+      "model_seed_min": 0.8195379972457886,
+      "model_seed_max": 0.8198066353797913,
+      "source_mean_ratio": 0.875,
+      "conservative_source_interval": [
+        -0.4646947334375,
+        2.2146947334375
+      ],
+      "absolute_error": 0.05534926652908323,
+      "relative_error": -0.06325630460466655,
+      "eligible_all_seeds": true,
+      "inside_compatibility_band": true,
+      "all_seeds_below_band": false,
+      "all_seeds_above_band": false,
+      "model_seeds": [
+        201,
+        202,
+        203,
+        204,
+        205
+      ],
+      "mean_first_EPSP_mV": 1.427925133705139
+    },
+    {
+      "target_single_EPSP_mV": 1.44,
+      "active_afferents": 1859,
+      "frequency_Hz": 10,
+      "model_mean_ratio": 0.7304661512374878,
+      "model_seed_min": 0.7303096055984497,
+      "model_seed_max": 0.7306303381919861,
+      "source_mean_ratio": 0.875,
+      "conservative_source_interval": [
+        -0.11763909531250005,
+        1.8676390953125002
+      ],
+      "absolute_error": 0.14453384876251218,
+      "relative_error": -0.16518154144287106,
+      "eligible_all_seeds": true,
+      "inside_compatibility_band": true,
+      "all_seeds_below_band": false,
+      "all_seeds_above_band": false,
+      "model_seeds": [
+        201,
+        202,
+        203,
+        204,
+        205
+      ],
+      "mean_first_EPSP_mV": 1.427925133705139
+    },
+    {
+      "target_single_EPSP_mV": 1.44,
+      "active_afferents": 1859,
+      "frequency_Hz": 20,
+      "model_mean_ratio": 0.806363558769226,
+      "model_seed_min": 0.8050552010536194,
+      "model_seed_max": 0.8078030347824097,
+      "source_mean_ratio": 1.3125,
+      "conservative_source_interval": [
+        0.49338872375,
+        2.13161127625
+      ],
+      "absolute_error": 0.506136441230774,
+      "relative_error": -0.38562776474725635,
+      "eligible_all_seeds": true,
+      "inside_compatibility_band": true,
+      "all_seeds_below_band": false,
+      "all_seeds_above_band": false,
+      "model_seeds": [
+        201,
+        202,
+        203,
+        204,
+        205
+      ],
+      "mean_first_EPSP_mV": 1.427925133705139
+    },
+    {
+      "target_single_EPSP_mV": 1.44,
+      "active_afferents": 1859,
+      "frequency_Hz": 30,
+      "model_mean_ratio": 1.0221328735351562,
+      "model_seed_min": 1.0180460214614868,
+      "model_seed_max": 1.0265495777130127,
+      "source_mean_ratio": 1.84375,
+      "conservative_source_interval": [
+        1.0246387237499999,
+        2.66286127625
+      ],
+      "absolute_error": 0.8216171264648438,
+      "relative_error": -0.4456228482521186,
+      "eligible_all_seeds": true,
+      "inside_compatibility_band": false,
+      "all_seeds_below_band": false,
+      "all_seeds_above_band": false,
+      "model_seeds": [
+        201,
+        202,
+        203,
+        204,
+        205
+      ],
+      "mean_first_EPSP_mV": 1.427925133705139
+    },
+    {
+      "target_single_EPSP_mV": 1.44,
+      "active_afferents": 1859,
+      "frequency_Hz": 50,
+      "model_mean_ratio": 1.5400564193725585,
+      "model_seed_min": 1.5292010307312012,
+      "model_seed_max": 1.5517053604125977,
+      "source_mean_ratio": 2.9375,
+      "conservative_source_interval": [
+        1.51104135703125,
+        4.3639586429687505
+      ],
+      "absolute_error": 1.3974435806274415,
+      "relative_error": -0.4757254742561503,
+      "eligible_all_seeds": true,
+      "inside_compatibility_band": true,
+      "all_seeds_below_band": false,
+      "all_seeds_above_band": false,
+      "model_seeds": [
+        201,
+        202,
+        203,
+        204,
+        205
+      ],
+      "mean_first_EPSP_mV": 1.427925133705139
+    },
+    {
+      "target_single_EPSP_mV": 1.76,
+      "active_afferents": 2281,
+      "frequency_Hz": 2,
+      "model_mean_ratio": 0.9650845408439637,
+      "model_seed_min": 0.9648486971855164,
+      "model_seed_max": 0.9654019474983215,
+      "source_mean_ratio": 0.875,
+      "conservative_source_interval": [
+        -0.11763909531250005,
+        1.8676390953125002
+      ],
+      "absolute_error": 0.09008454084396367,
+      "relative_error": 0.1029537609645299,
+      "eligible_all_seeds": true,
+      "inside_compatibility_band": true,
+      "all_seeds_below_band": false,
+      "all_seeds_above_band": false,
+      "model_seeds": [
+        201,
+        202,
+        203,
+        204,
+        205
+      ],
+      "mean_first_EPSP_mV": 1.74197416305542
+    },
+    {
+      "target_single_EPSP_mV": 1.76,
+      "active_afferents": 2281,
+      "frequency_Hz": 5,
+      "model_mean_ratio": 0.819215202331543,
+      "model_seed_min": 0.8191672563552856,
+      "model_seed_max": 0.8192702531814575,
+      "source_mean_ratio": 0.875,
+      "conservative_source_interval": [
+        -0.4646947334375,
+        2.2146947334375
+      ],
+      "absolute_error": 0.05578479766845701,
+      "relative_error": -0.06375405447823658,
+      "eligible_all_seeds": true,
+      "inside_compatibility_band": true,
+      "all_seeds_below_band": false,
+      "all_seeds_above_band": false,
+      "model_seeds": [
+        201,
+        202,
+        203,
+        204,
+        205
+      ],
+      "mean_first_EPSP_mV": 1.74197416305542
+    },
+    {
+      "target_single_EPSP_mV": 1.76,
+      "active_afferents": 2281,
+      "frequency_Hz": 10,
+      "model_mean_ratio": 0.7320499777793884,
+      "model_seed_min": 0.7318574786186218,
+      "model_seed_max": 0.7323740720748901,
+      "source_mean_ratio": 0.875,
+      "conservative_source_interval": [
+        -0.11763909531250005,
+        1.8676390953125002
+      ],
+      "absolute_error": 0.1429500222206116,
+      "relative_error": -0.16337145396641325,
+      "eligible_all_seeds": true,
+      "inside_compatibility_band": true,
+      "all_seeds_below_band": false,
+      "all_seeds_above_band": false,
+      "model_seeds": [
+        201,
+        202,
+        203,
+        204,
+        205
+      ],
+      "mean_first_EPSP_mV": 1.74197416305542
+    },
+    {
+      "target_single_EPSP_mV": 1.76,
+      "active_afferents": 2281,
+      "frequency_Hz": 20,
+      "model_mean_ratio": 0.8188050627708435,
+      "model_seed_min": 0.8172815442085266,
+      "model_seed_max": 0.8211290240287781,
+      "source_mean_ratio": 1.3125,
+      "conservative_source_interval": [
+        0.49338872375,
+        2.13161127625
+      ],
+      "absolute_error": 0.49369493722915647,
+      "relative_error": -0.37614852360316686,
+      "eligible_all_seeds": true,
+      "inside_compatibility_band": true,
+      "all_seeds_below_band": false,
+      "all_seeds_above_band": false,
+      "model_seeds": [
+        201,
+        202,
+        203,
+        204,
+        205
+      ],
+      "mean_first_EPSP_mV": 1.74197416305542
+    },
+    {
+      "target_single_EPSP_mV": 1.76,
+      "active_afferents": 2281,
+      "frequency_Hz": 30,
+      "model_mean_ratio": 1.0611489534378051,
+      "model_seed_min": 1.0565834045410156,
+      "model_seed_max": 1.0686691999435425,
+      "source_mean_ratio": 1.84375,
+      "conservative_source_interval": [
+        1.0246387237499999,
+        2.66286127625
+      ],
+      "absolute_error": 0.7826010465621949,
+      "relative_error": -0.42446158457610567,
+      "eligible_all_seeds": true,
+      "inside_compatibility_band": true,
+      "all_seeds_below_band": false,
+      "all_seeds_above_band": false,
+      "model_seeds": [
+        201,
+        202,
+        203,
+        204,
+        205
+      ],
+      "mean_first_EPSP_mV": 1.74197416305542
+    },
+    {
+      "target_single_EPSP_mV": 1.76,
+      "active_afferents": 2281,
+      "frequency_Hz": 50,
+      "model_mean_ratio": 1.643870759010315,
+      "model_seed_min": 1.6319150924682617,
+      "model_seed_max": 1.664097547531128,
+      "source_mean_ratio": 2.9375,
+      "conservative_source_interval": [
+        1.51104135703125,
+        4.3639586429687505
+      ],
+      "absolute_error": 1.293629240989685,
+      "relative_error": -0.4403844224645736,
+      "eligible_all_seeds": true,
+      "inside_compatibility_band": true,
+      "all_seeds_below_band": false,
+      "all_seeds_above_band": false,
+      "model_seeds": [
+        201,
+        202,
+        203,
+        204,
+        205
+      ],
+      "mean_first_EPSP_mV": 1.74197416305542
+    },
+    {
+      "target_single_EPSP_mV": 2.08,
+      "active_afferents": 2704,
+      "frequency_Hz": 2,
+      "model_mean_ratio": 0.9638990521430969,
+      "model_seed_min": 0.9637128710746765,
+      "model_seed_max": 0.9640076160430908,
+      "source_mean_ratio": 0.875,
+      "conservative_source_interval": [
+        -0.11763909531250005,
+        1.8676390953125002
+      ],
+      "absolute_error": 0.0888990521430969,
+      "relative_error": 0.10159891673496789,
+      "eligible_all_seeds": true,
+      "inside_compatibility_band": true,
+      "all_seeds_below_band": false,
+      "all_seeds_above_band": false,
+      "model_seeds": [
+        201,
+        202,
+        203,
+        204,
+        205
+      ],
+      "mean_first_EPSP_mV": 2.0588871955871584
+    },
+    {
+      "target_single_EPSP_mV": 2.08,
+      "active_afferents": 2704,
+      "frequency_Hz": 5,
+      "model_mean_ratio": 0.819321358203888,
+      "model_seed_min": 0.819260835647583,
+      "model_seed_max": 0.8193535804748535,
+      "source_mean_ratio": 0.875,
+      "conservative_source_interval": [
+        -0.4646947334375,
+        2.2146947334375
+      ],
+      "absolute_error": 0.05567864179611204,
+      "relative_error": -0.0636327334812709,
+      "eligible_all_seeds": true,
+      "inside_compatibility_band": true,
+      "all_seeds_below_band": false,
+      "all_seeds_above_band": false,
+      "model_seeds": [
+        201,
+        202,
+        203,
+        204,
+        205
+      ],
+      "mean_first_EPSP_mV": 2.0588871955871584
+    },
+    {
+      "target_single_EPSP_mV": 2.08,
+      "active_afferents": 2704,
+      "frequency_Hz": 10,
+      "model_mean_ratio": 0.7341546535491943,
+      "model_seed_min": 0.7339850664138794,
+      "model_seed_max": 0.7345383167266846,
+      "source_mean_ratio": 0.875,
+      "conservative_source_interval": [
+        -0.11763909531250005,
+        1.8676390953125002
+      ],
+      "absolute_error": 0.1408453464508057,
+      "relative_error": -0.16096611022949223,
+      "eligible_all_seeds": true,
+      "inside_compatibility_band": true,
+      "all_seeds_below_band": false,
+      "all_seeds_above_band": false,
+      "model_seeds": [
+        201,
+        202,
+        203,
+        204,
+        205
+      ],
+      "mean_first_EPSP_mV": 2.0588871955871584
+    },
+    {
+      "target_single_EPSP_mV": 2.08,
+      "active_afferents": 2704,
+      "frequency_Hz": 20,
+      "model_mean_ratio": 0.8338323593139648,
+      "model_seed_min": 0.8325496315956116,
+      "model_seed_max": 0.8366699814796448,
+      "source_mean_ratio": 1.3125,
+      "conservative_source_interval": [
+        0.49338872375,
+        2.13161127625
+      ],
+      "absolute_error": 0.4786676406860352,
+      "relative_error": -0.36469915480840776,
+      "eligible_all_seeds": true,
+      "inside_compatibility_band": true,
+      "all_seeds_below_band": false,
+      "all_seeds_above_band": false,
+      "model_seeds": [
+        201,
+        202,
+        203,
+        204,
+        205
+      ],
+      "mean_first_EPSP_mV": 2.0588871955871584
+    },
+    {
+      "target_single_EPSP_mV": 2.08,
+      "active_afferents": 2704,
+      "frequency_Hz": 30,
+      "model_mean_ratio": 1.1109853267669678,
+      "model_seed_min": 1.1062883138656616,
+      "model_seed_max": 1.1209430694580078,
+      "source_mean_ratio": 1.84375,
+      "conservative_source_interval": [
+        1.0246387237499999,
+        2.66286127625
+      ],
+      "absolute_error": 0.7327646732330322,
+      "relative_error": -0.3974316871772378,
+      "eligible_all_seeds": true,
+      "inside_compatibility_band": true,
+      "all_seeds_below_band": false,
+      "all_seeds_above_band": false,
+      "model_seeds": [
+        201,
+        202,
+        203,
+        204,
+        205
+      ],
+      "mean_first_EPSP_mV": 2.0588871955871584
+    },
+    {
+      "target_single_EPSP_mV": 2.08,
+      "active_afferents": 2704,
+      "frequency_Hz": 50,
+      "model_mean_ratio": 1.8084624528884887,
+      "model_seed_min": 1.7658782005310059,
+      "model_seed_max": 1.9515782594680786,
+      "source_mean_ratio": 2.9375,
+      "conservative_source_interval": [
+        1.51104135703125,
+        4.3639586429687505
+      ],
+      "absolute_error": 1.1290375471115113,
+      "relative_error": -0.384353207527323,
+      "eligible_all_seeds": false,
+      "inside_compatibility_band": false,
+      "all_seeds_below_band": false,
+      "all_seeds_above_band": false,
+      "model_seeds": [
+        201,
+        202,
+        203,
+        204,
+        205
+      ],
+      "mean_first_EPSP_mV": 2.0588871955871584
+    }
+  ],
+  "primary": [
+    {
+      "target_single_EPSP_mV": 1.44,
+      "active_afferents": 1859,
+      "frequency_Hz": 30,
+      "model_mean_ratio": 1.0221328735351562,
+      "model_seed_min": 1.0180460214614868,
+      "model_seed_max": 1.0265495777130127,
+      "source_mean_ratio": 1.84375,
+      "conservative_source_interval": [
+        1.0246387237499999,
+        2.66286127625
+      ],
+      "absolute_error": 0.8216171264648438,
+      "relative_error": -0.4456228482521186,
+      "eligible_all_seeds": true,
+      "inside_compatibility_band": false,
+      "all_seeds_below_band": false,
+      "all_seeds_above_band": false,
+      "model_seeds": [
+        201,
+        202,
+        203,
+        204,
+        205
+      ],
+      "mean_first_EPSP_mV": 1.427925133705139
+    },
+    {
+      "target_single_EPSP_mV": 1.44,
+      "active_afferents": 1859,
+      "frequency_Hz": 50,
+      "model_mean_ratio": 1.5400564193725585,
+      "model_seed_min": 1.5292010307312012,
+      "model_seed_max": 1.5517053604125977,
+      "source_mean_ratio": 2.9375,
+      "conservative_source_interval": [
+        1.51104135703125,
+        4.3639586429687505
+      ],
+      "absolute_error": 1.3974435806274415,
+      "relative_error": -0.4757254742561503,
+      "eligible_all_seeds": true,
+      "inside_compatibility_band": true,
+      "all_seeds_below_band": false,
+      "all_seeds_above_band": false,
+      "model_seeds": [
+        201,
+        202,
+        203,
+        204,
+        205
+      ],
+      "mean_first_EPSP_mV": 1.427925133705139
+    },
+    {
+      "target_single_EPSP_mV": 1.76,
+      "active_afferents": 2281,
+      "frequency_Hz": 30,
+      "model_mean_ratio": 1.0611489534378051,
+      "model_seed_min": 1.0565834045410156,
+      "model_seed_max": 1.0686691999435425,
+      "source_mean_ratio": 1.84375,
+      "conservative_source_interval": [
+        1.0246387237499999,
+        2.66286127625
+      ],
+      "absolute_error": 0.7826010465621949,
+      "relative_error": -0.42446158457610567,
+      "eligible_all_seeds": true,
+      "inside_compatibility_band": true,
+      "all_seeds_below_band": false,
+      "all_seeds_above_band": false,
+      "model_seeds": [
+        201,
+        202,
+        203,
+        204,
+        205
+      ],
+      "mean_first_EPSP_mV": 1.74197416305542
+    },
+    {
+      "target_single_EPSP_mV": 1.76,
+      "active_afferents": 2281,
+      "frequency_Hz": 50,
+      "model_mean_ratio": 1.643870759010315,
+      "model_seed_min": 1.6319150924682617,
+      "model_seed_max": 1.664097547531128,
+      "source_mean_ratio": 2.9375,
+      "conservative_source_interval": [
+        1.51104135703125,
+        4.3639586429687505
+      ],
+      "absolute_error": 1.293629240989685,
+      "relative_error": -0.4403844224645736,
+      "eligible_all_seeds": true,
+      "inside_compatibility_band": true,
+      "all_seeds_below_band": false,
+      "all_seeds_above_band": false,
+      "model_seeds": [
+        201,
+        202,
+        203,
+        204,
+        205
+      ],
+      "mean_first_EPSP_mV": 1.74197416305542
+    },
+    {
+      "target_single_EPSP_mV": 2.08,
+      "active_afferents": 2704,
+      "frequency_Hz": 30,
+      "model_mean_ratio": 1.1109853267669678,
+      "model_seed_min": 1.1062883138656616,
+      "model_seed_max": 1.1209430694580078,
+      "source_mean_ratio": 1.84375,
+      "conservative_source_interval": [
+        1.0246387237499999,
+        2.66286127625
+      ],
+      "absolute_error": 0.7327646732330322,
+      "relative_error": -0.3974316871772378,
+      "eligible_all_seeds": true,
+      "inside_compatibility_band": true,
+      "all_seeds_below_band": false,
+      "all_seeds_above_band": false,
+      "model_seeds": [
+        201,
+        202,
+        203,
+        204,
+        205
+      ],
+      "mean_first_EPSP_mV": 2.0588871955871584
+    },
+    {
+      "target_single_EPSP_mV": 2.08,
+      "active_afferents": 2704,
+      "frequency_Hz": 50,
+      "model_mean_ratio": 1.8084624528884887,
+      "model_seed_min": 1.7658782005310059,
+      "model_seed_max": 1.9515782594680786,
+      "source_mean_ratio": 2.9375,
+      "conservative_source_interval": [
+        1.51104135703125,
+        4.3639586429687505
+      ],
+      "absolute_error": 1.1290375471115113,
+      "relative_error": -0.384353207527323,
+      "eligible_all_seeds": false,
+      "inside_compatibility_band": false,
+      "all_seeds_below_band": false,
+      "all_seeds_above_band": false,
+      "model_seeds": [
+        201,
+        202,
+        203,
+        204,
+        205
+      ],
+      "mean_first_EPSP_mV": 2.0588871955871584
+    }
+  ],
+  "setup_level_passes": {
+    "1.44": false,
+    "1.76": true,
+    "2.08": false
+  },
+  "robust_conditional_mismatch": false,
+  "scope": "Selected CA2 APV frequency response in a reduced direct-input assay with a cross-figure amplitude assumption.",
+  "full_paper_replication_established": false,
+  "source_bands": "Conservative approximate mean-compatibility bands from digitized graph, not exact confidence/prediction intervals.",
+  "unresolved": [
+    "Exact Figure 5 APV initial amplitude",
+    "Deployed Hippocampome physiology-source ancestry",
+    "Authors EPSP analysis convention",
+    "Dendritic and recurrent circuit mechanisms omitted"
+  ]
+}

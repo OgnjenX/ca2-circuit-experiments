@@ -1,0 +1,18 @@
+{
+  "experiment": "002_sun2021_ca2_frequency",
+  "release": "experiment-002-v1",
+  "asset": {
+    "filename": "experiment_002_recorded.tar.gz",
+    "bytes": 220163977,
+    "sha256": "1b9e03be83de996691fa90dd5a6f3a4f280c1e8ba3afd0b38d9b6f652fafefe6",
+    "url": "https://github.com/OgnjenX/ca2-circuit-experiments/releases/download/experiment-002-v1/experiment_002_recorded.tar.gz"
+  },
+  "contains": [
+    "Original executable and generated configuration",
+    "Single-pulse calibration",
+    "All 120 test runs and full raw neuron/spike monitors",
+    "Retained setup reader failure"
+  ],
+  "external_backend": "artifacts/experiment_001.json runtime asset; identical nominal library SHA",
+  "copyrighted_source_figure_included": false
+}

@@ -1,0 +1,23 @@
+{
+  "execution_date": "2026-10-02",
+  "gpu": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+  "gpu_memory_MiB": 4096,
+  "compute_capability": "8.6",
+  "driver": "580.178.04",
+  "CUDA_toolkit": "12.4.131",
+  "compiler": "g++ 12; exact version and command in frozen build_record",
+  "CARLsim": "CARLsim4 commit 11ea96f750d125e4dcfbf67231429204322fa1bd plus recorded CUDA/sm86 and monitor/reversal patches",
+  "backend_library_sha256": "aeb6838ecde6859f50ddcce09975c85f2d9f72bfd0680ccc2a2741df3ef9345d",
+  "temperature": "Paper 31-32 C; no explicit simulator temperature parameter or temperature scaling introduced",
+  "execution_warnings": "No warning or failed native exit was observed in the assay run logs. Backend's recorded build contains legacy CPU return-value and CUDA deprecation warnings, retained in simulator source metadata; CPU integration was not used.",
+  "monitor_limit": "Recorded backend monitors 128 target cells. It writes warmup to disk even when the in-memory monitor is stopped; the entire file is validated before window extraction.",
+  "analysis_runtime": {
+    "Python": "3.12.14",
+    "NumPy": "2.3.5"
+  },
+  "figure_runtime": {
+    "Python": "3.12.14",
+    "NumPy": "2.5.3",
+    "Matplotlib": "3.11.2"
+  }
+}
