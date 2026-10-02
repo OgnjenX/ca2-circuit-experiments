@@ -1,0 +1,20 @@
+{
+  "original_frozen_commit": "233b068cb7e22663b9ce551806e4a4e573a63872",
+  "command": ".venv-whitebirch/bin/python experiments/003_whitebirch_intrinsic/revisions/002/numerics.py --workspace data/workspaces/003-whitebirch-gpu-pre-freeze-v7 --output data/workspaces/003-whitebirch-numerics-v1 --frozen-commit 233b068cb7e22663b9ce551806e4a4e573a63872",
+  "exit_code": 1,
+  "completed_native_sweeps": 33,
+  "completed_clock_reference_files": 66,
+  "failed_at": "numerics.py:405 json.dumps(result, indent=2), before immediate_diagnostic",
+  "exception": "TypeError: Object of type bool is not JSON serializable",
+  "exception_path": [
+    "production_timestep_refinements",
+    3,
+    "detections",
+    "pass"
+  ],
+  "cause": "NumPy boolean scalar at JSON output boundary; no integration exception",
+  "original_numerical_checks_json_written": false,
+  "immediate_diagnostic_executed": false,
+  "biological_scoring_executed": false,
+  "preservation": "All native traces/sidecars and 66 reference JSON files retained in original workspaces; frozen revision002 remains byte-identical."
+}
