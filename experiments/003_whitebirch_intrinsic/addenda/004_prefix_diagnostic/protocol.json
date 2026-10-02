@@ -1,0 +1,24 @@
+{
+  "design": "Authorized post-hoc bounded engineering diagnostic, frozen before new integrations",
+  "source_freeze_commit": "233b068cb7e22663b9ce551806e4a4e573a63872",
+  "original_result_commit": "ae666025e3597b66da0aab4b7a6fd9a47252147e",
+  "condition": "Only retained actual GPU 100 pA added pulse, 80 substeps per ms; no GPU rerun",
+  "window_ms": [0, 858.4875],
+  "native_first_reset_end_ms": 858.5,
+  "inputs": "Four checksum-pinned original native files; original float32 initial state, parameters and holding/pulse current promoted without fitting",
+  "variants": [
+    "Independent smooth DOP853 rtol 1e-9, atol 1e-10, max_step 0.5 ms",
+    "Independent smooth DOP853 rtol 1e-11, atol 1e-12, max_step 0.1 ms",
+    "Independent coupled float64 classical RK4, nominal dt 1/80 ms and exact reciprocal/one-sixth",
+    "Float64 RK4 with jointly promoted float32 dt, reciprocal and one-sixth coefficients",
+    "Explicit scalar float32 RK4 operation rounding without FMA; no compiled GPU equivalence claim"
+  ],
+  "stimulus": "Exact transition at 100 ms, retained holding baseline before it; full per-substep states",
+  "stop": "No resets implemented. Save fixed smooth prefix; comparisons stop at the earliest lower endpoint of any first-crossing bracket. Beyond-crossing smooth extensions are not reset-model trajectories.",
+  "comparisons": "Native versus each variant; DOP853 refinement; each float64 RK4 versus tight DOP853; joint coefficient sensitivity; explicit float32 versus matched float64. Report max absolute, RMS, signed endpoint and first absolute exceedance of 1e-5 mV or pA, plus all predefined checkpoints.",
+  "checkpoints_ms": [0, 100, 100.0125, 200, 400, 600, 800, 858.475, 858.4875],
+  "reference_reliability": "If either component's maximum DOP853 refinement difference exceeds 1e-7 mV or pA on the common prefix, do not attribute production drift using this reference. This state reliability check is engineering-only and does not amend original event gates.",
+  "interpretation": "Locate or bound drift in this one pre-first-reset condition. Distinguish coefficient sensitivity, scalar operation rounding, and residual compiled arithmetic differences where possible; no exact FMA attribution without compiler-level evidence. First-exceedance threshold is descriptive telemetry, not acceptance or biological tolerance.",
+  "preservation": "Original failed numerical gates, target, results, model, backend and existing archives remain unchanged. No retuning, new biological validation, broader conditions or parameter/current optimization. Separately authorized post-hoc biological comparison remains explicitly exploratory.",
+  "completion": "Stop after this condition and report what the evidence can and cannot locate. Preserve failures; update the existing draft PR and exact-head checks without merging."
+}

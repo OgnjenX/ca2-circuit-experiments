@@ -1,0 +1,16 @@
+{
+  "source_freeze_commit": "233b068cb7e22663b9ce551806e4a4e573a63872",
+  "kind": "Bounded post-hoc engineering design frozen before new diagnostic outputs",
+  "sha256": {
+    "addenda/004_prefix_diagnostic/prefix.py": "0984866b5c36035d37d523c2cbd868d512fbc7a48466c793a17643a5eb2b48e1",
+    "addenda/004_prefix_diagnostic/protocol.json": "6d8f6ad5ed9eaa72a80a39c391cbb8ffe40b4a0a5b83619cf38714b951a4f8fd",
+    "addenda/004_prefix_diagnostic/review.json": "a9318094f49bfc2dd1953d6a4a8a1e9d0a8692b639fb8a1cb4bcaeb6eab10b25",
+    "addenda/004_prefix_diagnostic/readme.md": "7fe4d0a6afc3e2a03fa5a397e10f1982f954d6c3ec5b9aa24729e6c6fb67d3a8"
+  },
+  "native_sha256": {
+    "rk80_step100.csv": "1a643f0c86f0120ef0f326c9d15e8965c8597f554e96669e9016390d3f5b1270",
+    "rk80_step100.stdout": "8efdd9b0948dc721304e1deb0ecdba85495ad32855265595882283c2c4b3e0fa",
+    "rk80_step100.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "rk80_step100.exit.json": "26169f5625010984ab43335f706d1b61f50f3d9889197644b9f212962bbdb9f4"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "review_kind": "Independent pre-run review of bounded post hoc pre-reset precision diagnostic",
+  "approved_prefix_diagnostic_execution": true,
+  "reviewed_prefix_py_sha256": "0984866b5c36035d37d523c2cbd868d512fbc7a48466c793a17643a5eb2b48e1",
+  "approval_scope": "One pinned existing native 100pA/80-substeps trace and five predefined smooth no-reset variants over fixed0..858.4875ms; descriptive common-prethreshold telemetry only. Commit the diagnostic protocol, source and input checksum manifest before execution. No original primary criteria or model/backend changes.",
+  "reviewer_executed_CA2_integration": false,
+  "reviewer_created_new_CA2_diagnostic_outputs": false,
+  "verified_design": [
+    "Original four native trace/sidecar files require exact manifest coverage and hashes, successful original exit and exact native metadata. Original preregistration manifest and all original source hashes are checked.",
+    "Native prefix ends at final pre-reset overshoot858.4875ms and excludes reset END858.5ms. Native reset validation uses the next row's end time with1e-10ms tolerance and checks Vmin, float32 u+=d and AP latch; detection-time label is distinct.",
+    "Standard float64 RK4 uses exact reciprocal, nominal timestep and one-sixth. Matched float64 jointly promotes GPU-rounded float32 reciprocal, timestep and one-sixth. Both integrate coupled voltage/recovery through all RK4 stages.",
+    "Explicit float32 RK4 rounds scalar arithmetic operations in pinned source order without FMA and is explicitly not asserted to equal compiled GPU arithmetic.",
+    "DOP853 integrates exact0/100ms phase transition with independently tightened tolerance/maxstep controls, dense output at full native substep times and same actual float32 initialstate/parameters/current promoted to float64.",
+    "First crossing brackets are computed separately for native and each variant; common telemetry ends at earliest bracket lower endpoint. Saved extensions beyond individual threshold crossings are explicitly not treated as faithful reset-model trajectories.",
+    "Component maximum/RMS/endpoint differences, first1e-5 exceedance and predefined checkpoints are descriptive telemetry, not replacement numerical acceptance criteria or biological tolerance.",
+    "No reset implementation, GPU rerun, biological scoring, parameter fitting, current fitting or variant selection is added.",
+    "Final source explicitly reports each float64 RK4 versus tight DOP853 using the same common-prethreshold mask, and flags reference reliability only when BOTH component DOP refinement maxima are at most1e-7. Protocol matches code and limits attribution when that flag fails."
+  ],
+  "generic_test_evidence": "Imported through pinned environment; generic telemetry and crossing-bracket tests plus two-step non-CA2 equilibrium arithmetic tests for standard/matched float64 and explicit float32 passed. No CA2 or DOP853 integration executed in review.",
+  "resolved_draft_issues": [
+    "Reset boundary now distinguishes previous overshoot/detection row from next reset-end row rather than comparing wrong row or exact decimal timestamps.",
+    "Matched64 now includes promotedfloat32 one-sixth coefficient.",
+    "Crossing brackets, common-prethreshold telemetry mask and all predefined checkpoints added."
+  ],
+  "interpretation_limits": [
+    "This is authorized post hoc engineering evidence for a selected condition, not a new population biological validation or a repair of original failed gates.",
+    "Matched coefficient variant changes three constants jointly; its contrast is joint coefficient sensitivity rather than isolation of one constant.",
+    "Explicit non-FMA float32 arithmetic may differ from GPU compiler fusion/rounding, so matching or mismatch cannot alone prove exact GPU implementation equivalence.",
+    "Crossing interpolation is a bracketed descriptive estimate. Common telemetry remains confined to sampled states before the earliest crossing bracket."
+  ],
+  "remaining_implementation_blockers": [],
+  "reviewed_protocol_json_sha256": "6d8f6ad5ed9eaa72a80a39c391cbb8ffe40b4a0a5b83619cf38714b951a4f8fd",
+  "final_scoped_rereview": "Two explicit RK4/reference telemetry records and attribution reliability flag added; arithmetic, integrations, native inputs, common stop and original criteria unchanged. AST syntax check passed; no new integrations."
+}
