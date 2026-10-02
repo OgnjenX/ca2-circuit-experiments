@@ -1,0 +1,38 @@
+{
+  "neuron_rows": 14,
+  "connection_rows": 87,
+  "default_flagged_connections": 37,
+  "missing_explicit_edges": [
+    {
+      "pre": "EC LI-II Pyramidal-Fan",
+      "post": "CA2 Pyramidal",
+      "interpretation": "Missing in selected database export; does not establish absence in biology. Do not invent mapping or default edge."
+    },
+    {
+      "pre": "LEC LIII Complex Pyramidal",
+      "post": "CA2 Pyramidal",
+      "interpretation": "Missing in selected database export; does not establish absence in biology. Do not invent mapping or default edge."
+    },
+    {
+      "pre": "LEC LIII Multipolar Principal",
+      "post": "CA2 Pyramidal",
+      "interpretation": "Missing in selected database export; does not establish absence in biology. Do not invent mapping or default edge."
+    },
+    {
+      "pre": "MEC LIII Complex Pyramidal",
+      "post": "CA1 Pyramidal",
+      "interpretation": "Missing in selected database export; does not establish absence in biology. Do not invent mapping or default edge."
+    }
+  ],
+  "files": {
+    "outputs/ca2-experiment/revised-source-export/CA2_CA3_CA1_EC_conn_parameters10-01-2026_10_48_20.csv": "93df10e7cb0b00261e9d5051c99d62a97f55afaa56f9e3c039eab6660b4fd9e9",
+    "outputs/ca2-experiment/revised-source-export/CA2_CA3_CA1_EC_neuron_parameters10-01-2026_10_48_20.csv": "48a4651de1028785e582029955d5150a31d905d90874c0f17a4ceaeba85ce73a"
+  },
+  "physiology_reference_mismatch": {
+    "parameter": "CA2 pyramidal capacitance pF",
+    "Hippocampome_Izh_C": 1630,
+    "Chevaleyre2010_measured_C_mean": 305.3,
+    "Chevaleyre2010_SEM": 20.8,
+    "interpretation": "Effective fitted point-neuron parameter differs from this experimental capacitance. Model is not already matched to that experiment; audit provenance and physiological responses before validation claims."
+  }
+}

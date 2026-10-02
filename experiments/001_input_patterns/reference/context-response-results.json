@@ -1,0 +1,621 @@
+{
+  "variants": [
+    {
+      "label": "nominal",
+      "trials": 80,
+      "summaries": [
+        {
+          "population": "CA2_Pyramidal",
+          "paired_network_results": [
+            {
+              "network_seed": 31,
+              "cortex_only_rate": 0.6514098438489132,
+              "CA3_present_rate": 0.062117535345009495,
+              "difference_Hz_per_cell": -0.5892923085039037,
+              "ratio_CA3_present_to_cortex_only": 0.09535860707597309
+            },
+            {
+              "network_seed": 32,
+              "cortex_only_rate": 0.6730059084194977,
+              "CA3_present_rate": 0.0619526798902722,
+              "difference_Hz_per_cell": -0.6110532285292255,
+              "ratio_CA3_present_to_cortex_only": 0.09205369390554576
+            },
+            {
+              "network_seed": 33,
+              "cortex_only_rate": 0.6377268411057184,
+              "CA3_present_rate": 0.06554652880354504,
+              "difference_Hz_per_cell": -0.5721803123021734,
+              "ratio_CA3_present_to_cortex_only": 0.1027815117361183
+            },
+            {
+              "network_seed": 34,
+              "cortex_only_rate": 0.646925775480059,
+              "CA3_present_rate": 0.06089760497995357,
+              "difference_Hz_per_cell": -0.5860281705001055,
+              "ratio_CA3_present_to_cortex_only": 0.09413383619591253
+            },
+            {
+              "network_seed": 35,
+              "cortex_only_rate": 0.6553334036716607,
+              "CA3_present_rate": 0.07111864317366533,
+              "difference_Hz_per_cell": -0.5842147604979954,
+              "ratio_CA3_present_to_cortex_only": 0.10852284161803179
+            }
+          ],
+          "mean_rate_difference": -0.5885537560666807,
+          "descriptive_bootstrap95_interval": [
+            -0.6010432053175775,
+            -0.5783722831821059
+          ]
+        },
+        {
+          "population": "CA2_Basket",
+          "paired_network_results": [
+            {
+              "network_seed": 31,
+              "cortex_only_rate": 39.63690476190476,
+              "CA3_present_rate": 55.16666666666667,
+              "difference_Hz_per_cell": 15.529761904761912,
+              "ratio_CA3_present_to_cortex_only": 1.3918005706562548
+            },
+            {
+              "network_seed": 32,
+              "cortex_only_rate": 39.916666666666664,
+              "CA3_present_rate": 55.26190476190476,
+              "difference_Hz_per_cell": 15.345238095238095,
+              "ratio_CA3_present_to_cortex_only": 1.3844318520727708
+            },
+            {
+              "network_seed": 33,
+              "cortex_only_rate": 40.24404761904762,
+              "CA3_present_rate": 55.22023809523809,
+              "difference_Hz_per_cell": 14.976190476190467,
+              "ratio_CA3_present_to_cortex_only": 1.3721342996598134
+            },
+            {
+              "network_seed": 34,
+              "cortex_only_rate": 39.93452380952381,
+              "CA3_present_rate": 55.14285714285714,
+              "difference_Hz_per_cell": 15.208333333333329,
+              "ratio_CA3_present_to_cortex_only": 1.3808317185869725
+            },
+            {
+              "network_seed": 35,
+              "cortex_only_rate": 39.94047619047619,
+              "CA3_present_rate": 55.17857142857143,
+              "difference_Hz_per_cell": 15.23809523809524,
+              "ratio_CA3_present_to_cortex_only": 1.3815201192250373
+            }
+          ],
+          "mean_rate_difference": 15.259523809523808,
+          "descriptive_bootstrap95_interval": [
+            15.096428571428566,
+            15.419047619047621
+          ]
+        },
+        {
+          "population": "CA2_Wide_Arbor_Basket",
+          "paired_network_results": [
+            {
+              "network_seed": 31,
+              "cortex_only_rate": 25.0,
+              "CA3_present_rate": 30.068027210884352,
+              "difference_Hz_per_cell": 5.0680272108843525,
+              "ratio_CA3_present_to_cortex_only": 1.202721088435374
+            },
+            {
+              "network_seed": 32,
+              "cortex_only_rate": 25.0,
+              "CA3_present_rate": 30.1062925170068,
+              "difference_Hz_per_cell": 5.1062925170068,
+              "ratio_CA3_present_to_cortex_only": 1.204251700680272
+            },
+            {
+              "network_seed": 33,
+              "cortex_only_rate": 25.0,
+              "CA3_present_rate": 30.11054421768707,
+              "difference_Hz_per_cell": 5.110544217687071,
+              "ratio_CA3_present_to_cortex_only": 1.2044217687074827
+            },
+            {
+              "network_seed": 34,
+              "cortex_only_rate": 25.0,
+              "CA3_present_rate": 30.080782312925166,
+              "difference_Hz_per_cell": 5.080782312925166,
+              "ratio_CA3_present_to_cortex_only": 1.2032312925170066
+            },
+            {
+              "network_seed": 35,
+              "cortex_only_rate": 25.0,
+              "CA3_present_rate": 30.08928571428571,
+              "difference_Hz_per_cell": 5.089285714285712,
+              "ratio_CA3_present_to_cortex_only": 1.2035714285714285
+            }
+          ],
+          "mean_rate_difference": 5.09098639455782,
+          "descriptive_bootstrap95_interval": [
+            5.07738095238095,
+            5.1045918367346905
+          ]
+        },
+        {
+          "population": "CA2_Bistratified",
+          "paired_network_results": [
+            {
+              "network_seed": 31,
+              "cortex_only_rate": 5.0,
+              "CA3_present_rate": 25.0,
+              "difference_Hz_per_cell": 20.0,
+              "ratio_CA3_present_to_cortex_only": 5.0
+            },
+            {
+              "network_seed": 32,
+              "cortex_only_rate": 5.0,
+              "CA3_present_rate": 25.0,
+              "difference_Hz_per_cell": 20.0,
+              "ratio_CA3_present_to_cortex_only": 5.0
+            },
+            {
+              "network_seed": 33,
+              "cortex_only_rate": 5.0,
+              "CA3_present_rate": 25.0,
+              "difference_Hz_per_cell": 20.0,
+              "ratio_CA3_present_to_cortex_only": 5.0
+            },
+            {
+              "network_seed": 34,
+              "cortex_only_rate": 5.0,
+              "CA3_present_rate": 25.0,
+              "difference_Hz_per_cell": 20.0,
+              "ratio_CA3_present_to_cortex_only": 5.0
+            },
+            {
+              "network_seed": 35,
+              "cortex_only_rate": 5.0,
+              "CA3_present_rate": 25.0,
+              "difference_Hz_per_cell": 20.0,
+              "ratio_CA3_present_to_cortex_only": 5.0
+            }
+          ],
+          "mean_rate_difference": 20.0,
+          "descriptive_bootstrap95_interval": [
+            20.0,
+            20.0
+          ]
+        },
+        {
+          "population": "CA2_SP_SR",
+          "paired_network_results": [
+            {
+              "network_seed": 31,
+              "cortex_only_rate": 4.840425531914894,
+              "CA3_present_rate": 20.0,
+              "difference_Hz_per_cell": 15.159574468085106,
+              "ratio_CA3_present_to_cortex_only": 4.131868131868131
+            },
+            {
+              "network_seed": 32,
+              "cortex_only_rate": 5.0,
+              "CA3_present_rate": 19.9468085106383,
+              "difference_Hz_per_cell": 14.946808510638299,
+              "ratio_CA3_present_to_cortex_only": 3.9893617021276597
+            },
+            {
+              "network_seed": 33,
+              "cortex_only_rate": 5.0,
+              "CA3_present_rate": 19.820478723404257,
+              "difference_Hz_per_cell": 14.820478723404257,
+              "ratio_CA3_present_to_cortex_only": 3.9640957446808516
+            },
+            {
+              "network_seed": 34,
+              "cortex_only_rate": 5.0,
+              "CA3_present_rate": 19.95345744680851,
+              "difference_Hz_per_cell": 14.95345744680851,
+              "ratio_CA3_present_to_cortex_only": 3.9906914893617023
+            },
+            {
+              "network_seed": 35,
+              "cortex_only_rate": 5.0,
+              "CA3_present_rate": 19.95345744680851,
+              "difference_Hz_per_cell": 14.95345744680851,
+              "ratio_CA3_present_to_cortex_only": 3.9906914893617023
+            }
+          ],
+          "mean_rate_difference": 14.966755319148936,
+          "descriptive_bootstrap95_interval": [
+            14.873670212765958,
+            15.075797872340425
+          ]
+        }
+      ]
+    },
+    {
+      "label": "egaba75-gain100",
+      "trials": 16,
+      "summaries": [
+        {
+          "population": "CA2_Pyramidal",
+          "paired_network_results": [
+            {
+              "network_seed": 31,
+              "cortex_only_rate": 0.6900519624393331,
+              "CA3_present_rate": 0.10171581557290568,
+              "difference_Hz_per_cell": -0.5883361468664274,
+              "ratio_CA3_present_to_cortex_only": 0.14740312485068569
+            }
+          ],
+          "mean_rate_difference": -0.5883361468664274,
+          "descriptive_bootstrap95_interval": null
+        },
+        {
+          "population": "CA2_Basket",
+          "paired_network_results": [
+            {
+              "network_seed": 31,
+              "cortex_only_rate": 39.63690476190476,
+              "CA3_present_rate": 55.19047619047619,
+              "difference_Hz_per_cell": 15.55357142857143,
+              "ratio_CA3_present_to_cortex_only": 1.3924012614506684
+            }
+          ],
+          "mean_rate_difference": 15.55357142857143,
+          "descriptive_bootstrap95_interval": null
+        },
+        {
+          "population": "CA2_Wide_Arbor_Basket",
+          "paired_network_results": [
+            {
+              "network_seed": 31,
+              "cortex_only_rate": 25.0,
+              "CA3_present_rate": 30.080782312925166,
+              "difference_Hz_per_cell": 5.080782312925166,
+              "ratio_CA3_present_to_cortex_only": 1.2032312925170066
+            }
+          ],
+          "mean_rate_difference": 5.080782312925166,
+          "descriptive_bootstrap95_interval": null
+        },
+        {
+          "population": "CA2_Bistratified",
+          "paired_network_results": [
+            {
+              "network_seed": 31,
+              "cortex_only_rate": 5.0,
+              "CA3_present_rate": 25.0,
+              "difference_Hz_per_cell": 20.0,
+              "ratio_CA3_present_to_cortex_only": 5.0
+            }
+          ],
+          "mean_rate_difference": 20.0,
+          "descriptive_bootstrap95_interval": null
+        },
+        {
+          "population": "CA2_SP_SR",
+          "paired_network_results": [
+            {
+              "network_seed": 31,
+              "cortex_only_rate": 4.900265957446808,
+              "CA3_present_rate": 20.0,
+              "difference_Hz_per_cell": 15.099734042553191,
+              "ratio_CA3_present_to_cortex_only": 4.081411126187246
+            }
+          ],
+          "mean_rate_difference": 15.099734042553191,
+          "descriptive_bootstrap95_interval": null
+        }
+      ]
+    },
+    {
+      "label": "egaba80-gain100",
+      "trials": 16,
+      "summaries": [
+        {
+          "population": "CA2_Pyramidal",
+          "paired_network_results": [
+            {
+              "network_seed": 31,
+              "cortex_only_rate": 0.6361112576492931,
+              "CA3_present_rate": 0.04378560877822325,
+              "difference_Hz_per_cell": -0.5923256488710699,
+              "ratio_CA3_present_to_cortex_only": 0.06883325558492717
+            }
+          ],
+          "mean_rate_difference": -0.5923256488710699,
+          "descriptive_bootstrap95_interval": null
+        },
+        {
+          "population": "CA2_Basket",
+          "paired_network_results": [
+            {
+              "network_seed": 31,
+              "cortex_only_rate": 39.63690476190476,
+              "CA3_present_rate": 55.18452380952381,
+              "difference_Hz_per_cell": 15.547619047619051,
+              "ratio_CA3_present_to_cortex_only": 1.392251088752065
+            }
+          ],
+          "mean_rate_difference": 15.547619047619051,
+          "descriptive_bootstrap95_interval": null
+        },
+        {
+          "population": "CA2_Wide_Arbor_Basket",
+          "paired_network_results": [
+            {
+              "network_seed": 31,
+              "cortex_only_rate": 25.0,
+              "CA3_present_rate": 30.038265306122447,
+              "difference_Hz_per_cell": 5.038265306122447,
+              "ratio_CA3_present_to_cortex_only": 1.2015306122448979
+            }
+          ],
+          "mean_rate_difference": 5.038265306122447,
+          "descriptive_bootstrap95_interval": null
+        },
+        {
+          "population": "CA2_Bistratified",
+          "paired_network_results": [
+            {
+              "network_seed": 31,
+              "cortex_only_rate": 5.0,
+              "CA3_present_rate": 25.0,
+              "difference_Hz_per_cell": 20.0,
+              "ratio_CA3_present_to_cortex_only": 5.0
+            }
+          ],
+          "mean_rate_difference": 20.0,
+          "descriptive_bootstrap95_interval": null
+        },
+        {
+          "population": "CA2_SP_SR",
+          "paired_network_results": [
+            {
+              "network_seed": 31,
+              "cortex_only_rate": 4.820478723404255,
+              "CA3_present_rate": 20.0,
+              "difference_Hz_per_cell": 15.179521276595745,
+              "ratio_CA3_present_to_cortex_only": 4.148965517241379
+            }
+          ],
+          "mean_rate_difference": 15.179521276595745,
+          "descriptive_bootstrap95_interval": null
+        }
+      ]
+    },
+    {
+      "label": "egaba77p8-gain50",
+      "trials": 16,
+      "summaries": [
+        {
+          "population": "CA2_Pyramidal",
+          "paired_network_results": [
+            {
+              "network_seed": 31,
+              "cortex_only_rate": 1.2911479215024266,
+              "CA3_present_rate": 1.6264309453471195,
+              "difference_Hz_per_cell": 0.3352830238446929,
+              "ratio_CA3_present_to_cortex_only": 1.2596782431052094
+            }
+          ],
+          "mean_rate_difference": 0.3352830238446929,
+          "descriptive_bootstrap95_interval": null
+        },
+        {
+          "population": "CA2_Basket",
+          "paired_network_results": [
+            {
+              "network_seed": 31,
+              "cortex_only_rate": 40.00595238095238,
+              "CA3_present_rate": 57.29761904761905,
+              "difference_Hz_per_cell": 17.29166666666667,
+              "ratio_CA3_present_to_cortex_only": 1.4322273471209643
+            }
+          ],
+          "mean_rate_difference": 17.29166666666667,
+          "descriptive_bootstrap95_interval": null
+        },
+        {
+          "population": "CA2_Wide_Arbor_Basket",
+          "paired_network_results": [
+            {
+              "network_seed": 31,
+              "cortex_only_rate": 25.0,
+              "CA3_present_rate": 30.182823129251698,
+              "difference_Hz_per_cell": 5.182823129251698,
+              "ratio_CA3_present_to_cortex_only": 1.2073129251700678
+            }
+          ],
+          "mean_rate_difference": 5.182823129251698,
+          "descriptive_bootstrap95_interval": null
+        },
+        {
+          "population": "CA2_Bistratified",
+          "paired_network_results": [
+            {
+              "network_seed": 31,
+              "cortex_only_rate": 10.118670886075948,
+              "CA3_present_rate": 34.45411392405063,
+              "difference_Hz_per_cell": 24.335443037974684,
+              "ratio_CA3_present_to_cortex_only": 3.405003909304144
+            }
+          ],
+          "mean_rate_difference": 24.335443037974684,
+          "descriptive_bootstrap95_interval": null
+        },
+        {
+          "population": "CA2_SP_SR",
+          "paired_network_results": [
+            {
+              "network_seed": 31,
+              "cortex_only_rate": 5.0,
+              "CA3_present_rate": 20.472074468085104,
+              "difference_Hz_per_cell": 15.472074468085104,
+              "ratio_CA3_present_to_cortex_only": 4.094414893617021
+            }
+          ],
+          "mean_rate_difference": 15.472074468085104,
+          "descriptive_bootstrap95_interval": null
+        }
+      ]
+    },
+    {
+      "label": "egaba77p8-gain150",
+      "trials": 16,
+      "summaries": [
+        {
+          "population": "CA2_Pyramidal",
+          "paired_network_results": [
+            {
+              "network_seed": 31,
+              "cortex_only_rate": 0.5999419708799324,
+              "CA3_present_rate": 0.013584089470352393,
+              "difference_Hz_per_cell": -0.58635788140958,
+              "ratio_CA3_present_to_cortex_only": 0.022642338975599034
+            }
+          ],
+          "mean_rate_difference": -0.58635788140958,
+          "descriptive_bootstrap95_interval": null
+        },
+        {
+          "population": "CA2_Basket",
+          "paired_network_results": [
+            {
+              "network_seed": 31,
+              "cortex_only_rate": 39.63690476190476,
+              "CA3_present_rate": 55.14880952380952,
+              "difference_Hz_per_cell": 15.51190476190476,
+              "ratio_CA3_present_to_cortex_only": 1.3913500525604445
+            }
+          ],
+          "mean_rate_difference": 15.51190476190476,
+          "descriptive_bootstrap95_interval": null
+        },
+        {
+          "population": "CA2_Wide_Arbor_Basket",
+          "paired_network_results": [
+            {
+              "network_seed": 31,
+              "cortex_only_rate": 25.0,
+              "CA3_present_rate": 30.04676870748299,
+              "difference_Hz_per_cell": 5.04676870748299,
+              "ratio_CA3_present_to_cortex_only": 1.2018707482993196
+            }
+          ],
+          "mean_rate_difference": 5.04676870748299,
+          "descriptive_bootstrap95_interval": null
+        },
+        {
+          "population": "CA2_Bistratified",
+          "paired_network_results": [
+            {
+              "network_seed": 31,
+              "cortex_only_rate": 5.0,
+              "CA3_present_rate": 25.0,
+              "difference_Hz_per_cell": 20.0,
+              "ratio_CA3_present_to_cortex_only": 5.0
+            }
+          ],
+          "mean_rate_difference": 20.0,
+          "descriptive_bootstrap95_interval": null
+        },
+        {
+          "population": "CA2_SP_SR",
+          "paired_network_results": [
+            {
+              "network_seed": 31,
+              "cortex_only_rate": 4.827127659574469,
+              "CA3_present_rate": 19.98005319148936,
+              "difference_Hz_per_cell": 15.152925531914892,
+              "ratio_CA3_present_to_cortex_only": 4.139118457300275
+            }
+          ],
+          "mean_rate_difference": 15.152925531914892,
+          "descriptive_bootstrap95_interval": null
+        }
+      ]
+    },
+    {
+      "label": "full-rk80",
+      "trials": 16,
+      "summaries": [
+        {
+          "population": "CA2_Pyramidal",
+          "paired_network_results": [
+            {
+              "network_seed": 31,
+              "cortex_only_rate": 0.6512779594851235,
+              "CA3_present_rate": 0.06248021734543152,
+              "difference_Hz_per_cell": -0.5887977421396919,
+              "ratio_CA3_present_to_cortex_only": 0.09593479471472686
+            }
+          ],
+          "mean_rate_difference": -0.5887977421396919,
+          "descriptive_bootstrap95_interval": null
+        },
+        {
+          "population": "CA2_Basket",
+          "paired_network_results": [
+            {
+              "network_seed": 31,
+              "cortex_only_rate": 39.77380952380952,
+              "CA3_present_rate": 55.24404761904762,
+              "difference_Hz_per_cell": 15.470238095238102,
+              "ratio_CA3_present_to_cortex_only": 1.3889554025740798
+            }
+          ],
+          "mean_rate_difference": 15.470238095238102,
+          "descriptive_bootstrap95_interval": null
+        },
+        {
+          "population": "CA2_Wide_Arbor_Basket",
+          "paired_network_results": [
+            {
+              "network_seed": 31,
+              "cortex_only_rate": 25.0,
+              "CA3_present_rate": 30.063775510204074,
+              "difference_Hz_per_cell": 5.063775510204074,
+              "ratio_CA3_present_to_cortex_only": 1.2025510204081629
+            }
+          ],
+          "mean_rate_difference": 5.063775510204074,
+          "descriptive_bootstrap95_interval": null
+        },
+        {
+          "population": "CA2_Bistratified",
+          "paired_network_results": [
+            {
+              "network_seed": 31,
+              "cortex_only_rate": 5.0,
+              "CA3_present_rate": 25.0,
+              "difference_Hz_per_cell": 20.0,
+              "ratio_CA3_present_to_cortex_only": 5.0
+            }
+          ],
+          "mean_rate_difference": 20.0,
+          "descriptive_bootstrap95_interval": null
+        },
+        {
+          "population": "CA2_SP_SR",
+          "paired_network_results": [
+            {
+              "network_seed": 31,
+              "cortex_only_rate": 4.840425531914894,
+              "CA3_present_rate": 20.0,
+              "difference_Hz_per_cell": 15.159574468085106,
+              "ratio_CA3_present_to_cortex_only": 4.131868131868131
+            }
+          ],
+          "mean_rate_difference": 15.159574468085106,
+          "descriptive_bootstrap95_interval": null
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Descriptive context comparison: cortical pulse jitter is separately drawn in the two contexts, so this is not an exact matched-input counterfactual for adding CA3.",
+    "CA2 gain was fitted to CA3 inhibition; suppression is conditional on that fit, not independent discovery or evidence of animal function.",
+    "Core parameter and full numerical sensitivity use only seed31; no interval or network-population robustness claim there.",
+    "Counts include all modeled cells; rates refer to the200msresponse window, not sustained in-vivo firing."
+  ]
+}

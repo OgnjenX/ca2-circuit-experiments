@@ -1,0 +1,31 @@
+{
+  "status": "Prospective before independent task outcomes",
+  "primary_sensitivity_network_seed": 31,
+  "reason": "Selected first independent seed before its outcomes; this screen is not full uncertainty across networks.",
+  "core_variants": [
+    {
+      "GABAa_reversal_mV": -75,
+      "pyramidal_inhibitory_gain": 100
+    },
+    {
+      "GABAa_reversal_mV": -80,
+      "pyramidal_inhibitory_gain": 100
+    },
+    {
+      "GABAa_reversal_mV": -77.8,
+      "pyramidal_inhibitory_gain": 50
+    },
+    {
+      "GABAa_reversal_mV": -77.8,
+      "pyramidal_inhibitory_gain": 150
+    }
+  ],
+  "core_protocol": "Same full16resettrials, inputs and paired replays at seed31 for each variant; retain all calibration/model failures; precision40substeps with spot40vs80ifnewdynamics differ substantially.",
+  "CA1_coupling_variants": [
+    0.5,
+    2
+  ],
+  "CA1_coupling_scope": "Phenomenological multiplier on outgoingCA2pyramidal-to-CA1 exported connections flaggeddefaultY; preserve nominal inputevents and connectiontopology for a clean effective-strength test. Exact edge audit required before implementation. Half/double are exploratory perturbations, not measured uncertainty bounds.",
+  "CA1_protocol": "Replay all nominal80trials across5seeds under each outputcouplingvariant; same threeCA2outputcontrols, frozen classifier and splits.",
+  "claim_limit": "A single sensitivity network tests fragility of this model result, not robustness across animals. If results reverse, report dependence rather than selecting a convenient variant."
+}

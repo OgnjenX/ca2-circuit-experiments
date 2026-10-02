@@ -1,0 +1,144 @@
+{
+  "status": "Exploratory calibration; not independent validation",
+  "results": [
+    {
+      "reversal_mV": -70,
+      "gain": 0,
+      "min_voltage_difference_mV": 0.0,
+      "min_mean_voltage_mV": -72.58828735351562,
+      "mean_cell_peak_response_mV": 10.817364126443863,
+      "CA2_Pyramidal_spikes": 0,
+      "eligible_subthreshold": true,
+      "target_error_mV": 13.8,
+      "run": "runs/physiology-default-CA3_Pyramidal-gain0"
+    },
+    {
+      "reversal_mV": -70,
+      "gain": 1,
+      "min_voltage_difference_mV": -0.2664765417575836,
+      "min_mean_voltage_mV": -72.58828735351562,
+      "mean_cell_peak_response_mV": 10.817364126443863,
+      "CA2_Pyramidal_spikes": 0,
+      "eligible_subthreshold": true,
+      "target_error_mV": 13.533523458242417,
+      "run": "runs/physiology-default-CA3_Pyramidal-gain1"
+    },
+    {
+      "reversal_mV": -70,
+      "gain": 10,
+      "min_voltage_difference_mV": -1.6913919746875763,
+      "min_mean_voltage_mV": -72.58828735351562,
+      "mean_cell_peak_response_mV": 10.817364126443863,
+      "CA2_Pyramidal_spikes": 0,
+      "eligible_subthreshold": true,
+      "target_error_mV": 12.108608025312424,
+      "run": "runs/physiology-default-CA3_Pyramidal-gain10"
+    },
+    {
+      "reversal_mV": -70,
+      "gain": 100,
+      "min_voltage_difference_mV": -6.058226317167282,
+      "min_mean_voltage_mV": -72.58828735351562,
+      "mean_cell_peak_response_mV": 10.817364126443863,
+      "CA2_Pyramidal_spikes": 0,
+      "eligible_subthreshold": true,
+      "target_error_mV": 7.741773682832719,
+      "run": "runs/physiology-default-CA3_Pyramidal-gain100"
+    },
+    {
+      "reversal_mV": -77.8,
+      "gain": 0,
+      "min_voltage_difference_mV": 0.0,
+      "min_mean_voltage_mV": -72.58828735351562,
+      "mean_cell_peak_response_mV": 10.817364126443863,
+      "CA2_Pyramidal_spikes": 0,
+      "eligible_subthreshold": true,
+      "target_error_mV": 13.8,
+      "run": "runs/physiology-egaba77p8-CA3_Pyramidal-gain0"
+    },
+    {
+      "reversal_mV": -77.8,
+      "gain": 1,
+      "min_voltage_difference_mV": -0.5138428509235382,
+      "min_mean_voltage_mV": -72.58828735351562,
+      "mean_cell_peak_response_mV": 10.817364126443863,
+      "CA2_Pyramidal_spikes": 0,
+      "eligible_subthreshold": true,
+      "target_error_mV": 13.286157149076463,
+      "run": "runs/physiology-egaba77p8-CA3_Pyramidal-gain1"
+    },
+    {
+      "reversal_mV": -77.8,
+      "gain": 10,
+      "min_voltage_difference_mV": -2.910342812538147,
+      "min_mean_voltage_mV": -72.58828735351562,
+      "mean_cell_peak_response_mV": 10.817364126443863,
+      "CA2_Pyramidal_spikes": 0,
+      "eligible_subthreshold": true,
+      "target_error_mV": 10.889657187461854,
+      "run": "runs/physiology-egaba77p8-CA3_Pyramidal-gain10"
+    },
+    {
+      "reversal_mV": -77.8,
+      "gain": 100,
+      "min_voltage_difference_mV": -11.781377911567688,
+      "min_mean_voltage_mV": -73.91457825899124,
+      "mean_cell_peak_response_mV": 10.817364126443863,
+      "CA2_Pyramidal_spikes": 0,
+      "eligible_subthreshold": true,
+      "target_error_mV": 2.0186220884323127,
+      "run": "runs/physiology-egaba77p8-CA3_Pyramidal-gain100"
+    },
+    {
+      "reversal_mV": -77.8,
+      "gain": 180,
+      "min_voltage_difference_mV": -14.031798899173737,
+      "min_mean_voltage_mV": -76.16499924659729,
+      "mean_cell_peak_response_mV": 10.817364126443863,
+      "CA2_Pyramidal_spikes": 0,
+      "eligible_subthreshold": true,
+      "target_error_mV": 0.23179889917373586,
+      "run": "runs/physiology-egaba77p8-CA3_Pyramidal-gain180"
+    },
+    {
+      "reversal_mV": -77.8,
+      "gain": 250,
+      "min_voltage_difference_mV": -14.753750741481781,
+      "min_mean_voltage_mV": -76.88695108890533,
+      "mean_cell_peak_response_mV": 10.817364126443863,
+      "CA2_Pyramidal_spikes": 0,
+      "eligible_subthreshold": true,
+      "target_error_mV": 0.9537507414817803,
+      "run": "runs/physiology-egaba77p8-CA3_Pyramidal-gain250"
+    },
+    {
+      "reversal_mV": -77.8,
+      "gain": 1000,
+      "min_voltage_difference_mV": -15.366231143474579,
+      "min_mean_voltage_mV": -77.6262948513031,
+      "mean_cell_peak_response_mV": 11.046877145767212,
+      "CA2_Pyramidal_spikes": 2,
+      "eligible_subthreshold": false,
+      "target_error_mV": 1.5662311434745781,
+      "run": "runs/physiology-egaba77p8-CA3_Pyramidal-gain1000"
+    }
+  ],
+  "selected_tested_candidate": {
+    "reversal_mV": -77.8,
+    "gain": 180,
+    "min_voltage_difference_mV": -14.031798899173737,
+    "min_mean_voltage_mV": -76.16499924659729,
+    "mean_cell_peak_response_mV": 10.817364126443863,
+    "CA2_Pyramidal_spikes": 0,
+    "eligible_subthreshold": true,
+    "target_error_mV": 0.23179889917373586,
+    "run": "runs/physiology-egaba77p8-CA3_Pyramidal-gain180"
+  },
+  "selection_rule": "Nearest tested non-spiking inhibitory difference to -13.8mV. Functional outcomes are not selection criteria.",
+  "limitations": [
+    "Reversal is assumed from recording recipe, not measured EGABAa.",
+    "Aggregate inhibitory gain is fitted, not exported or a measured synaptic conductance.",
+    "Very large gains warn about missing biology or an unsuitable fitted model.",
+    "Numerical stability and held-out physiology must pass before a functional claim."
+  ]
+}

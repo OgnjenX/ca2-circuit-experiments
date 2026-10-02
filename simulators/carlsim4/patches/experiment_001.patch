@@ -1,0 +1,189 @@
+--- a/carlsim/configure.mk
++++ b/carlsim/configure.mk
+@@ -125,7 +125,7 @@
+ GENCODE_SM70       := -gencode arch=compute_70,code=sm_70
+ GENCODE_SM75       := -gencode arch=compute_75,code=sm_75
+ 
+-NVCCFL          += $(GENCODE_SM30) $(GENCODE_SM35) $(GENCODE_SM37) $(GENCODE_SM50) $(GENCODE_SM52) $(GENCODE_SM60) $(GENCODE_SM61) $(GENCODE_SM70) $(GENCODE_SM75)
++NVCCFL          += -gencode arch=compute_86,code=sm_86 -gencode arch=compute_86,code=compute_86
+ # NVCCFL          += $(GENCODE_SM75)
+ 
+ # # Common to all supported CUDA versions:
+@@ -203,3 +203,8 @@
+ 
+ CARLSIM4_FLG := -I$(CARLSIM4_INC_DIR) -L$(CARLSIM4_LIB_DIR)
+ CARLSIM4_LIB := -l$(SIM_LIB_NAME)
++
++# Experiment-only sensitivity parameter; original simulator is preserved.
++CA2_GABAA_MAGNITUDE ?= 70.0f
++CXXFL += -DCA2_EXPERIMENT_GABAA_REVERSE_MAGNITUDE=$(CA2_GABAA_MAGNITUDE)
++NVCCFL += -DCA2_EXPERIMENT_GABAA_REVERSE_MAGNITUDE=$(CA2_GABAA_MAGNITUDE)
+--- a/carlsim/kernel/src/snn_cpu_module.cpp
++++ b/carlsim/kernel/src/snn_cpu_module.cpp
+@@ -1,3 +1,6 @@
++#ifndef CA2_EXPERIMENT_GABAA_REVERSE_MAGNITUDE
++#define CA2_EXPERIMENT_GABAA_REVERSE_MAGNITUDE 70.0f
++#endif
+ /* * Copyright (c) 2016 Regents of the University of California. All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+@@ -1041,7 +1044,7 @@
+ 
+ 					I_sum = -(runtimeData[netId].gAMPA[lNId] * (v - 0.0f)
+ 						+ gNMDA * NMDAtmp / (1.0f + NMDAtmp) * (v - 0.0f)
+-						+ runtimeData[netId].gGABAa[lNId] * (v + 70.0f)
++						+ runtimeData[netId].gGABAa[lNId] * (v + CA2_EXPERIMENT_GABAA_REVERSE_MAGNITUDE)
+ 						+ gGABAb * (v + 90.0f));
+ 
+ 					totalCurrent += I_sum;
+--- a/carlsim/kernel/inc/snn_definitions.h
++++ b/carlsim/kernel/inc/snn_definitions.h
+@@ -163,7 +163,7 @@
+ // #define MAX_NEURON_MON_BUFFER_SIZE 524288000 // about 500 MB. size is in bytes. (???)
+ #define MAX_NEURON_MON_BUFFER_SIZE 10485760000 // about 10,000 MB (10 GB). size is in bytes. (???)
+ #define LONG_NEURON_MON_DURATION 100000       // about 100 seconds
+-#define MAX_NEURON_MON_GRP_SZIE 75000
++#define MAX_NEURON_MON_GRP_SZIE 128 // Recording capacity only; network population sizes unchanged.
+ 
+ // This flag is used when having a common poisson generator for both CPU and GPU simulation
+ // We basically use the CPU poisson generator. Evaluate if there is any firing due to the
+--- a/carlsim/kernel/inc/cuda_version_control.h
++++ b/carlsim/kernel/inc/cuda_version_control.h
+@@ -53,27 +53,34 @@
+ 	#include <cuda.h>
+ 	#include <cuda_runtime.h>
+ 
+-	// we no longer support CUDA3 and CUDA4, but keep cuda_version_control.h for
+-	// handling future CUDA toolkit API differences
+-	#if defined(__CUDA5__) || defined(__CUDA6__) || defined(__CUDA7__) || defined(__CUDA8__) || defined(__CUDA9__) || defined(__CUDA10__) 
+-		#include <helper_cuda.h>
+-		#include <helper_functions.h>
+-		#include <helper_timer.h>
+-		//#include <helper_math.h>
+ 
+-		#define CUDA_CREATE_TIMER(x) sdkCreateTimer(&(x))
+-		#define CUDA_DELETE_TIMER(x) sdkDeleteTimer(&(x))
+-		#define CUDA_RESET_TIMER(x) sdkResetTimer(&(x))
+-		#define CUDA_START_TIMER(x) sdkStartTimer(&(x))
+-		#define CUDA_STOP_TIMER(x) sdkStopTimer(&(x))
+-		#define CUDA_GET_TIMER_VALUE(x) sdkGetTimerValue(&(x))
++#include <chrono>
++#include <cstdio>
++#include <cstdlib>
++struct StopWatchInterface {
++ std::chrono::steady_clock::time_point start;
++ float elapsed = 0;
++};
++inline void ca2CudaCheck(cudaError_t err, const char* expression, const char* file, int line) {
++ if(err != cudaSuccess) { std::fprintf(stderr,"CUDA error %s:%d: %s: %s\n",file,line,expression,cudaGetErrorString(err)); std::exit(1); }
++}
++inline int ca2BestDevice() {
++ int count=0, best=0; long long score=-1;
++ ca2CudaCheck(cudaGetDeviceCount(&count),"cudaGetDeviceCount",__FILE__,__LINE__);
++ for(int i=0;i<count;++i) { cudaDeviceProp prop; ca2CudaCheck(cudaGetDeviceProperties(&prop,i),"cudaGetDeviceProperties",__FILE__,__LINE__); long long current=(long long)prop.multiProcessorCount*prop.clockRate; if(current>score){score=current;best=i;} }
++ return best;
++}
++#define CUDA_CREATE_TIMER(x) ((x)=new StopWatchInterface())
++#define CUDA_DELETE_TIMER(x) (delete (x))
++#define CUDA_RESET_TIMER(x) ((x)->elapsed=0)
++#define CUDA_START_TIMER(x) ((x)->start=std::chrono::steady_clock::now())
++#define CUDA_STOP_TIMER(x) ((x)->elapsed += std::chrono::duration<float,std::milli>(std::chrono::steady_clock::now()-(x)->start).count())
++#define CUDA_GET_TIMER_VALUE(x) ((x)->elapsed)
++#define CUDA_CHECK_ERRORS(x) ca2CudaCheck((x),#x,__FILE__,__LINE__)
++#define CUDA_GET_LAST_ERROR(x) ca2CudaCheck(cudaGetLastError(),(x),__FILE__,__LINE__)
++#define CUDA_GET_MAXGFLOP_DEVICE_ID ca2BestDevice
++#define CUDA_DEVICE_RESET cudaDeviceReset
+ 
+-		#define CUDA_CHECK_ERRORS(x) checkCudaErrors(x)
+-		#define CUDA_GET_LAST_ERROR(x) getLastCudaError(x)
+-
+-		#define CUDA_GET_MAXGFLOP_DEVICE_ID gpuGetMaxGflopsDeviceId
+-		#define CUDA_DEVICE_RESET cudaDeviceReset
+-	#endif
+ #endif
+ 
+ #endif /* _CUDA_VERSION_CONTROL_H_ */
+--- a/carlsim/kernel/src/gpu_module/snn_gpu_module.cu
++++ b/carlsim/kernel/src/gpu_module/snn_gpu_module.cu
+@@ -1,3 +1,6 @@
++#ifndef CA2_EXPERIMENT_GABAA_REVERSE_MAGNITUDE
++#define CA2_EXPERIMENT_GABAA_REVERSE_MAGNITUDE 70.0f
++#endif
+ /* * Copyright (c) 2016 Regents of the University of California. All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+@@ -109,11 +112,6 @@
+ __device__  int	  loadBufferCount; 
+ __device__  int   loadBufferSize;
+ 
+-texture <int,    1, cudaReadModeElementType>  timeTableD2GPU_tex;
+-texture <int,    1, cudaReadModeElementType>  timeTableD1GPU_tex;
+-texture <int,    1, cudaReadModeElementType>  groupIdInfo_tex; // groupIDInfo is allocated using cudaMalloc thus doesn't require an offset when using textures
+-__device__  int timeTableD1GPU_tex_offset;
+-__device__  int timeTableD2GPU_tex_offset;
+ 
+ // example of the quick synaptic table
+ // index     cnt
+@@ -254,7 +252,6 @@
+ 
+ 	CUDA_CHECK_ERRORS(cudaMalloc((void**)&runtimeData[netId].groupIdInfo, sizeof(int3) * networkConfigs[netId].numGroups));
+ 	CUDA_CHECK_ERRORS(cudaMemcpy(runtimeData[netId].groupIdInfo, tempNeuronAllocation, sizeof(int3) * networkConfigs[netId].numGroups, cudaMemcpyHostToDevice));
+-	CUDA_CHECK_ERRORS(cudaBindTexture(NULL, groupIdInfo_tex, runtimeData[netId].groupIdInfo, sizeof(int3) * networkConfigs[netId].numGroups));
+ 
+ 	free(tempNeuronAllocation);
+ }
+@@ -1048,7 +1045,7 @@
+ 
+ 		I_sum = -(runtimeDataGPU.gAMPA[nid] * (v - 0.0f)
+ 			+ gNMDA * NMDAtmp / (1.0f + NMDAtmp) * (v - 0.0f)
+-			+ runtimeDataGPU.gGABAa[nid] * (v + 70.0f)
++			+ runtimeDataGPU.gGABAa[nid] * (v + CA2_EXPERIMENT_GABAA_REVERSE_MAGNITUDE)
+ 			+ gGABAb * (v + 90.0f));
+ 
+ 		totalCurrent += I_sum;
+@@ -1883,10 +1880,10 @@
+ 	__syncthreads();
+ 
+ 	// stores the number of fired neurons at time t
+-	int k = tex1Dfetch(timeTableD2GPU_tex, simTimeMs + networkConfigGPU.maxDelay + 1 + timeTableD2GPU_tex_offset) - 1;
++	int k = (int)timeTableD2GPU[simTimeMs + networkConfigGPU.maxDelay + 1] - 1;
+ 
+ 	// stores the number of fired neurons at time (t - maxDelay_)
+-	int k_end = tex1Dfetch(timeTableD2GPU_tex, simTimeMs + 1 + timeTableD2GPU_tex_offset);
++	int k_end = (int)timeTableD2GPU[simTimeMs + 1];
+ 
+ 	int t_pos = simTimeMs;
+ 
+@@ -1906,8 +1903,8 @@
+ 				int nid = runtimeDataGPU.firingTableD2[fPos];
+ 
+ 				// find the time of firing based on the firing number fPos
+-				while (!((fPos >= tex1Dfetch(timeTableD2GPU_tex, t_pos + networkConfigGPU.maxDelay + timeTableD2GPU_tex_offset))
+-					&& (fPos < tex1Dfetch(timeTableD2GPU_tex, t_pos + networkConfigGPU.maxDelay + 1 + timeTableD2GPU_tex_offset)))) {
++				while (!((fPos >= (int)timeTableD2GPU[t_pos + networkConfigGPU.maxDelay])
++					&& (fPos < (int)timeTableD2GPU[t_pos + networkConfigGPU.maxDelay + 1]))) {
+ 					t_pos--;
+ 				}
+ 
+@@ -4099,20 +4096,7 @@
+ 	// allocation of gpu runtime data is done
+ 	runtimeData[netId].allocated = true;
+ 
+-	// map the timing table to texture.. saves a lot of headache in using shared memory
+-	void* devPtr;
+-	size_t offset;
+-	CUDA_CHECK_ERRORS(cudaGetSymbolAddress(&devPtr, timeTableD2GPU));
+-	CUDA_CHECK_ERRORS(cudaBindTexture(&offset, timeTableD2GPU_tex, devPtr, sizeof(int) * TIMING_COUNT));
+-	offset = offset / sizeof(int);
+-	CUDA_CHECK_ERRORS(cudaGetSymbolAddress(&devPtr, timeTableD2GPU_tex_offset));
+-	CUDA_CHECK_ERRORS(cudaMemcpy(devPtr, &offset, sizeof(int), cudaMemcpyHostToDevice));
+-
+-	CUDA_CHECK_ERRORS(cudaGetSymbolAddress(&devPtr, timeTableD1GPU));
+-	CUDA_CHECK_ERRORS(cudaBindTexture(&offset, timeTableD1GPU_tex, devPtr, sizeof(int) * TIMING_COUNT));
+-	offset = offset / sizeof(int);
+-	CUDA_CHECK_ERRORS(cudaGetSymbolAddress(&devPtr, timeTableD1GPU_tex_offset));
+-	CUDA_CHECK_ERRORS(cudaMemcpy(devPtr, &offset, sizeof(int), cudaMemcpyHostToDevice));
++	// CUDA 12: timing tables are read directly from device memory.
+ 
+ 	initGPU(netId);
+ }

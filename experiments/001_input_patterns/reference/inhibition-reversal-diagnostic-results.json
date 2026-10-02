@@ -1,0 +1,37 @@
+[
+  {
+    "gain": 0,
+    "min_voltage_difference_mV": 0.0,
+    "min_voltage_mV": -72.58828735351562,
+    "peak_response_mV": 10.817364126443863,
+    "CA2_Pyramidal_spikes": 0
+  },
+  {
+    "gain": 1,
+    "min_voltage_difference_mV": -0.5138428509235382,
+    "min_voltage_mV": -72.58828735351562,
+    "peak_response_mV": 10.817364126443863,
+    "CA2_Pyramidal_spikes": 0
+  },
+  {
+    "gain": 10,
+    "min_voltage_difference_mV": -2.910342812538147,
+    "min_voltage_mV": -72.58828735351562,
+    "peak_response_mV": 10.817364126443863,
+    "CA2_Pyramidal_spikes": 0
+  },
+  {
+    "gain": 100,
+    "min_voltage_difference_mV": -11.781377911567688,
+    "min_voltage_mV": -73.91457825899124,
+    "peak_response_mV": 10.817364126443863,
+    "CA2_Pyramidal_spikes": 0
+  },
+  {
+    "gain": 1000,
+    "min_voltage_difference_mV": -15.366231143474579,
+    "min_voltage_mV": -77.6262948513031,
+    "peak_response_mV": 11.046877145767212,
+    "CA2_Pyramidal_spikes": 2
+  }
+]

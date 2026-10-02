@@ -1,0 +1,9 @@
+{
+  "status": "Declared before inspecting probe output",
+  "counts": "5% maximum relative spike-count difference per CA1 population; bothcounts<=1 allowsdifference<=1",
+  "voltage": "RMS difference of baseline-subtracted four50ms-window mean voltages across128CA1 cells <=0.5mV",
+  "first_pyramidal_latency": "<=1ms, and bothactive or bothsilent",
+  "precision": "20vs40RK4substeps/ms",
+  "inputs": "All six replay streams must exactly match recorded delivery, checked in execution script.",
+  "source": "A numerical/instrument check; not a biological CA1 validation."
+}

@@ -1,0 +1,7 @@
+{
+  "all_fresh_pairs_present_in_revised_export": true,
+  "differences": [],
+  "pass": true,
+  "earlier_export_rows": 73,
+  "description": "All73connection rows of the earlier candidate-circuit export are present with identical field values in the revised87row export. Includes the25internalCA2 rows."
+}

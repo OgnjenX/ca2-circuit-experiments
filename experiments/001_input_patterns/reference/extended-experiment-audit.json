@@ -1,0 +1,152 @@
+{
+  "complete": true,
+  "variants": [
+    {
+      "label": "egaba75-gain100",
+      "trials": 16,
+      "verified_core_runs": 16,
+      "verified_readouts": 48,
+      "network_seeds": [
+        31
+      ]
+    },
+    {
+      "label": "precision-egaba75-gain100",
+      "trials": 2,
+      "verified_core_runs": 2,
+      "verified_readouts": 6,
+      "network_seeds": [
+        31
+      ]
+    },
+    {
+      "label": "egaba80-gain100",
+      "trials": 16,
+      "verified_core_runs": 16,
+      "verified_readouts": 48,
+      "network_seeds": [
+        31
+      ]
+    },
+    {
+      "label": "precision-egaba80-gain100",
+      "trials": 2,
+      "verified_core_runs": 2,
+      "verified_readouts": 6,
+      "network_seeds": [
+        31
+      ]
+    },
+    {
+      "label": "egaba77p8-gain50",
+      "trials": 16,
+      "verified_core_runs": 16,
+      "verified_readouts": 48,
+      "network_seeds": [
+        31
+      ]
+    },
+    {
+      "label": "precision-egaba77p8-gain50",
+      "trials": 2,
+      "verified_core_runs": 2,
+      "verified_readouts": 6,
+      "network_seeds": [
+        31
+      ]
+    },
+    {
+      "label": "egaba77p8-gain150",
+      "trials": 16,
+      "verified_core_runs": 16,
+      "verified_readouts": 48,
+      "network_seeds": [
+        31
+      ]
+    },
+    {
+      "label": "precision-egaba77p8-gain150",
+      "trials": 2,
+      "verified_core_runs": 2,
+      "verified_readouts": 6,
+      "network_seeds": [
+        31
+      ]
+    },
+    {
+      "label": "output-gain0.5",
+      "trials": 80,
+      "verified_core_runs": 0,
+      "verified_readouts": 240,
+      "network_seeds": [
+        31,
+        32,
+        33,
+        34,
+        35
+      ]
+    },
+    {
+      "label": "output-gain2",
+      "trials": 80,
+      "verified_core_runs": 0,
+      "verified_readouts": 240,
+      "network_seeds": [
+        31,
+        32,
+        33,
+        34,
+        35
+      ]
+    },
+    {
+      "label": "readout-rk80",
+      "trials": 80,
+      "verified_core_runs": 0,
+      "verified_readouts": 240,
+      "network_seeds": [
+        31,
+        32,
+        33,
+        34,
+        35
+      ]
+    },
+    {
+      "label": "full-rk80",
+      "trials": 16,
+      "verified_core_runs": 16,
+      "verified_readouts": 48,
+      "network_seeds": [
+        31
+      ]
+    },
+    {
+      "label": "generalization",
+      "trials": 120,
+      "verified_core_runs": 120,
+      "verified_readouts": 360,
+      "network_seeds": [
+        31,
+        32,
+        33,
+        34,
+        35
+      ]
+    }
+  ],
+  "total_verified_core_runs": 208,
+  "total_verified_readouts": 1344,
+  "checks": [
+    "Exact source input hashes and delivery",
+    "Configurations and executable hashes",
+    "Complete finite monitored voltage data and valid complete spike files",
+    "Every delivered replay stream independently reconstructed from its source core and exact permutation",
+    "Reset baseline and aggregate graph-count matching within variants and seeds"
+  ],
+  "limits": [
+    "Aggregate graph-count signatures are not individual-edge hashes.",
+    "Voltages record monitored subsets; spikes cover all modeled cells.",
+    "This validates execution and controls, not biological accuracy."
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "purpose": "Clarify trained centroids versus fixed analysis rule; no numerical or analytic rule changes.",
+  "nominal_source": "analyze_reset_task_v2.py",
+  "nominal_source_sha256": "97358946b113538f5b638a30d0fd7901b17bb32d8088f71c3f439099886dccd2",
+  "nominal_and_sensitivity": "Decoder is called separately within network/context/output-condition datasets, and within variants. Class means use only split=train rows.",
+  "generalization": "Each dataset combines original nominal training rows and new test-only rows; class means never use new tests.",
+  "claim": "Condition-specific available information, not acute transfer of one unchanged trained decoder across all interventions.",
+  "updated_unix": 1790882125.0025892
+}

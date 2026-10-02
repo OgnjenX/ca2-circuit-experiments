@@ -1,0 +1,497 @@
+{
+  "status": "Prospective before nominal decoder outcomes; no neural parameters or frozen nominal protocol changed",
+  "purpose": "Unseen variants of the same two synthetic pattern classes and unseen CA3 timing; test the fixed nominal readout without retraining. This is not novel animal/object recognition.",
+  "network_seed": 31,
+  "seed_scope": "First independent seed selected prospectively; one-network descriptive generalization, not animal or network-population uncertainty.",
+  "readout": "Use only nominalseed31trainingtrial centroids for the corresponding context and condition; no update on these new trials.",
+  "duration_ms": 250,
+  "substeps": 40,
+  "MEC_active_cells": 9800,
+  "shared_base_cells": 8820,
+  "distinctive_cells": 980,
+  "source_classes": "Label follows majority membership of the original identity-specific cell pool. Replacement levels10/50%ofdistinctivecells correspond1/5%ofthe fullactiveensemble. Near-balanced50%case leaves a small38cellclassmargin and is intentionally harder.",
+  "positive_control": "The fixed input-pattern decoder trained on nominalinputcounts must classify allnewpatternvariants correctly; labels/counts/inputfiles verified. Equal totalcounts remainnoninformative.",
+  "cases": [
+    {
+      "name": "pattern10-ctx0-id0-rep0",
+      "network_seed": 31,
+      "group": "pattern10",
+      "context": 0,
+      "identity": 0,
+      "repeat": 0,
+      "split": "unseen-test-only",
+      "CA3_delay_ms": 25,
+      "fraction_distinctive_cells_replaced": 0.1,
+      "replaced_cells": 98,
+      "new_unrepresented_cells_used": 38,
+      "own_identity_cells_retained": 882,
+      "competing_identity_cells_added": 60,
+      "rng_seed": 9535891472626454131,
+      "files_sha256": {
+        "MEC_LII_Stellate.txt": "3965c9907b1c859f900b078442ea37283237117db56c987c092fde48a9f97c0a",
+        "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "name": "pattern10-ctx0-id0-rep1",
+      "network_seed": 31,
+      "group": "pattern10",
+      "context": 0,
+      "identity": 0,
+      "repeat": 1,
+      "split": "unseen-test-only",
+      "CA3_delay_ms": 25,
+      "fraction_distinctive_cells_replaced": 0.1,
+      "replaced_cells": 98,
+      "new_unrepresented_cells_used": 38,
+      "own_identity_cells_retained": 882,
+      "competing_identity_cells_added": 60,
+      "rng_seed": 4304685572171692067,
+      "files_sha256": {
+        "MEC_LII_Stellate.txt": "487bbb0ddd70113bfe9b1d07d52b43c9b39edc9c607e5f6225f088e711285552",
+        "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "name": "pattern10-ctx0-id1-rep0",
+      "network_seed": 31,
+      "group": "pattern10",
+      "context": 0,
+      "identity": 1,
+      "repeat": 0,
+      "split": "unseen-test-only",
+      "CA3_delay_ms": 25,
+      "fraction_distinctive_cells_replaced": 0.1,
+      "replaced_cells": 98,
+      "new_unrepresented_cells_used": 38,
+      "own_identity_cells_retained": 882,
+      "competing_identity_cells_added": 60,
+      "rng_seed": 18397656699228083798,
+      "files_sha256": {
+        "MEC_LII_Stellate.txt": "6416b4210d14bf41663f7113af8f7d5d489f12e14ff679df0f678c9d387a7e1a",
+        "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "name": "pattern10-ctx0-id1-rep1",
+      "network_seed": 31,
+      "group": "pattern10",
+      "context": 0,
+      "identity": 1,
+      "repeat": 1,
+      "split": "unseen-test-only",
+      "CA3_delay_ms": 25,
+      "fraction_distinctive_cells_replaced": 0.1,
+      "replaced_cells": 98,
+      "new_unrepresented_cells_used": 38,
+      "own_identity_cells_retained": 882,
+      "competing_identity_cells_added": 60,
+      "rng_seed": 502365223793883224,
+      "files_sha256": {
+        "MEC_LII_Stellate.txt": "070adcf594d2d6cf86605524facbcd35c9e622a2a13be006e752690c5227aad7",
+        "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "name": "pattern10-ctx1-id0-rep0",
+      "network_seed": 31,
+      "group": "pattern10",
+      "context": 1,
+      "identity": 0,
+      "repeat": 0,
+      "split": "unseen-test-only",
+      "CA3_delay_ms": 25,
+      "fraction_distinctive_cells_replaced": 0.1,
+      "replaced_cells": 98,
+      "new_unrepresented_cells_used": 38,
+      "own_identity_cells_retained": 882,
+      "competing_identity_cells_added": 60,
+      "rng_seed": 1631197370301375470,
+      "files_sha256": {
+        "MEC_LII_Stellate.txt": "febcca9928c7d03e7703f9e4ca1dbb95b671395f78b6d66f68114cb0da33b95d",
+        "CA3_Pyramidal.txt": "b8cca22f193a0e5f63cc43bf459bef33ac36d8efb2b738d97475315c6260ab0f"
+      }
+    },
+    {
+      "name": "pattern10-ctx1-id0-rep1",
+      "network_seed": 31,
+      "group": "pattern10",
+      "context": 1,
+      "identity": 0,
+      "repeat": 1,
+      "split": "unseen-test-only",
+      "CA3_delay_ms": 25,
+      "fraction_distinctive_cells_replaced": 0.1,
+      "replaced_cells": 98,
+      "new_unrepresented_cells_used": 38,
+      "own_identity_cells_retained": 882,
+      "competing_identity_cells_added": 60,
+      "rng_seed": 8418833158034791571,
+      "files_sha256": {
+        "MEC_LII_Stellate.txt": "dca436118054133851106551387982e274bf74b5d0351d5fcc4eb0be48772974",
+        "CA3_Pyramidal.txt": "9276f296c79f69acb55eb4e80c70d19d0455aa597273b3d70a2bbae84747ccb2"
+      }
+    },
+    {
+      "name": "pattern10-ctx1-id1-rep0",
+      "network_seed": 31,
+      "group": "pattern10",
+      "context": 1,
+      "identity": 1,
+      "repeat": 0,
+      "split": "unseen-test-only",
+      "CA3_delay_ms": 25,
+      "fraction_distinctive_cells_replaced": 0.1,
+      "replaced_cells": 98,
+      "new_unrepresented_cells_used": 38,
+      "own_identity_cells_retained": 882,
+      "competing_identity_cells_added": 60,
+      "rng_seed": 10158745991808972110,
+      "files_sha256": {
+        "MEC_LII_Stellate.txt": "671ccfe926d77cab031a31b72b1685f2640b83dd0da7629f4016c61480a90eb0",
+        "CA3_Pyramidal.txt": "6b99f61e2080e0300d188ee91ea60037fb3347eafbc65b163890fe7bbb784fe0"
+      }
+    },
+    {
+      "name": "pattern10-ctx1-id1-rep1",
+      "network_seed": 31,
+      "group": "pattern10",
+      "context": 1,
+      "identity": 1,
+      "repeat": 1,
+      "split": "unseen-test-only",
+      "CA3_delay_ms": 25,
+      "fraction_distinctive_cells_replaced": 0.1,
+      "replaced_cells": 98,
+      "new_unrepresented_cells_used": 38,
+      "own_identity_cells_retained": 882,
+      "competing_identity_cells_added": 60,
+      "rng_seed": 10617937607028881774,
+      "files_sha256": {
+        "MEC_LII_Stellate.txt": "638ed4e5c1f67fab395aeb8984f67a52d51f36620f4834fdddfa817a4f89b2f0",
+        "CA3_Pyramidal.txt": "de945795c13fc05b512f56eb9b7433956611cc009fb5ef66885deb6588c02ecc"
+      }
+    },
+    {
+      "name": "pattern50-ctx0-id0-rep0",
+      "network_seed": 31,
+      "group": "pattern50",
+      "context": 0,
+      "identity": 0,
+      "repeat": 0,
+      "split": "unseen-test-only",
+      "CA3_delay_ms": 25,
+      "fraction_distinctive_cells_replaced": 0.5,
+      "replaced_cells": 490,
+      "new_unrepresented_cells_used": 38,
+      "own_identity_cells_retained": 490,
+      "competing_identity_cells_added": 452,
+      "rng_seed": 17366739462485120660,
+      "files_sha256": {
+        "MEC_LII_Stellate.txt": "cc514e1616e6d03847275f893170297207b33aa5bb576b91c63e4559b3e05599",
+        "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "name": "pattern50-ctx0-id0-rep1",
+      "network_seed": 31,
+      "group": "pattern50",
+      "context": 0,
+      "identity": 0,
+      "repeat": 1,
+      "split": "unseen-test-only",
+      "CA3_delay_ms": 25,
+      "fraction_distinctive_cells_replaced": 0.5,
+      "replaced_cells": 490,
+      "new_unrepresented_cells_used": 38,
+      "own_identity_cells_retained": 490,
+      "competing_identity_cells_added": 452,
+      "rng_seed": 11684629927699063953,
+      "files_sha256": {
+        "MEC_LII_Stellate.txt": "d5b9ee61dd03d6dc69786bdd7ba6c688cafb5e81391a801c1effab75e6144a25",
+        "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "name": "pattern50-ctx0-id1-rep0",
+      "network_seed": 31,
+      "group": "pattern50",
+      "context": 0,
+      "identity": 1,
+      "repeat": 0,
+      "split": "unseen-test-only",
+      "CA3_delay_ms": 25,
+      "fraction_distinctive_cells_replaced": 0.5,
+      "replaced_cells": 490,
+      "new_unrepresented_cells_used": 38,
+      "own_identity_cells_retained": 490,
+      "competing_identity_cells_added": 452,
+      "rng_seed": 10684501102649184544,
+      "files_sha256": {
+        "MEC_LII_Stellate.txt": "11505c120acb41c51cf9105ade248822adff313e1ac7f94f894fdbe0d0749bad",
+        "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "name": "pattern50-ctx0-id1-rep1",
+      "network_seed": 31,
+      "group": "pattern50",
+      "context": 0,
+      "identity": 1,
+      "repeat": 1,
+      "split": "unseen-test-only",
+      "CA3_delay_ms": 25,
+      "fraction_distinctive_cells_replaced": 0.5,
+      "replaced_cells": 490,
+      "new_unrepresented_cells_used": 38,
+      "own_identity_cells_retained": 490,
+      "competing_identity_cells_added": 452,
+      "rng_seed": 980220074916722997,
+      "files_sha256": {
+        "MEC_LII_Stellate.txt": "90b3ba024214e4068fd248f59a1fbd8e0abc8616bcfe84861485bad97de420a7",
+        "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "name": "pattern50-ctx1-id0-rep0",
+      "network_seed": 31,
+      "group": "pattern50",
+      "context": 1,
+      "identity": 0,
+      "repeat": 0,
+      "split": "unseen-test-only",
+      "CA3_delay_ms": 25,
+      "fraction_distinctive_cells_replaced": 0.5,
+      "replaced_cells": 490,
+      "new_unrepresented_cells_used": 38,
+      "own_identity_cells_retained": 490,
+      "competing_identity_cells_added": 452,
+      "rng_seed": 642874158282170075,
+      "files_sha256": {
+        "MEC_LII_Stellate.txt": "a8e8ab6cf823b6069cf599f5132de207339e0153ac6d4347a136894e5224ec92",
+        "CA3_Pyramidal.txt": "95cef6c3fbc63fe623debeaa77ace3b45ce4467c0445dd3e3968748d9c332274"
+      }
+    },
+    {
+      "name": "pattern50-ctx1-id0-rep1",
+      "network_seed": 31,
+      "group": "pattern50",
+      "context": 1,
+      "identity": 0,
+      "repeat": 1,
+      "split": "unseen-test-only",
+      "CA3_delay_ms": 25,
+      "fraction_distinctive_cells_replaced": 0.5,
+      "replaced_cells": 490,
+      "new_unrepresented_cells_used": 38,
+      "own_identity_cells_retained": 490,
+      "competing_identity_cells_added": 452,
+      "rng_seed": 15720741253747161888,
+      "files_sha256": {
+        "MEC_LII_Stellate.txt": "f18bc80418e7218623c03cc620eed0cfe4e50d3eb9f1685ed674457d95c6b852",
+        "CA3_Pyramidal.txt": "7be18d22629eecbf1a4500d4e64c01f36035d219c5ff6a84b2e1910ca2ec45cc"
+      }
+    },
+    {
+      "name": "pattern50-ctx1-id1-rep0",
+      "network_seed": 31,
+      "group": "pattern50",
+      "context": 1,
+      "identity": 1,
+      "repeat": 0,
+      "split": "unseen-test-only",
+      "CA3_delay_ms": 25,
+      "fraction_distinctive_cells_replaced": 0.5,
+      "replaced_cells": 490,
+      "new_unrepresented_cells_used": 38,
+      "own_identity_cells_retained": 490,
+      "competing_identity_cells_added": 452,
+      "rng_seed": 6337158720538550289,
+      "files_sha256": {
+        "MEC_LII_Stellate.txt": "217fb0c09321d57c17b646588dfebc3c654cf036259e67360ab60a8170c41d20",
+        "CA3_Pyramidal.txt": "fb0d656d1f177a01a9edd6f82a67e65563dacd6bb0184d03ac10edeb6ffce84f"
+      }
+    },
+    {
+      "name": "pattern50-ctx1-id1-rep1",
+      "network_seed": 31,
+      "group": "pattern50",
+      "context": 1,
+      "identity": 1,
+      "repeat": 1,
+      "split": "unseen-test-only",
+      "CA3_delay_ms": 25,
+      "fraction_distinctive_cells_replaced": 0.5,
+      "replaced_cells": 490,
+      "new_unrepresented_cells_used": 38,
+      "own_identity_cells_retained": 490,
+      "competing_identity_cells_added": 452,
+      "rng_seed": 8403549617460552812,
+      "files_sha256": {
+        "MEC_LII_Stellate.txt": "de9bf5c72d0379c3f45996e7f90bf6842b8e0fff77d2f8875c4cf906bffd1de2",
+        "CA3_Pyramidal.txt": "0d9ba51ab4aca20c6eef8735c9bc37a45cb12834cd34c97f3085a012a5eea889"
+      }
+    },
+    {
+      "name": "delay15-ctx1-id0-rep0",
+      "network_seed": 31,
+      "group": "delay15",
+      "context": 1,
+      "identity": 0,
+      "repeat": 0,
+      "split": "unseen-test-only",
+      "CA3_delay_ms": 15,
+      "fraction_distinctive_cells_replaced": 0,
+      "replaced_cells": 0,
+      "new_unrepresented_cells_used": 0,
+      "own_identity_cells_retained": 980,
+      "competing_identity_cells_added": 0,
+      "rng_seed": 9711232494673566772,
+      "files_sha256": {
+        "MEC_LII_Stellate.txt": "083276185a0c0151bc91887d24415119defa7155889b8b17bb967ae671b365f7",
+        "CA3_Pyramidal.txt": "eeee786e82877d1071c2601d558b20aee45721d2f63f25f0527ea7f05fc8c794"
+      }
+    },
+    {
+      "name": "delay15-ctx1-id0-rep1",
+      "network_seed": 31,
+      "group": "delay15",
+      "context": 1,
+      "identity": 0,
+      "repeat": 1,
+      "split": "unseen-test-only",
+      "CA3_delay_ms": 15,
+      "fraction_distinctive_cells_replaced": 0,
+      "replaced_cells": 0,
+      "new_unrepresented_cells_used": 0,
+      "own_identity_cells_retained": 980,
+      "competing_identity_cells_added": 0,
+      "rng_seed": 8342623228451400825,
+      "files_sha256": {
+        "MEC_LII_Stellate.txt": "1e029949832efa85a2d19e2c21c04577b2b3c32afa56a4f38042eed1bdb1c8c2",
+        "CA3_Pyramidal.txt": "f98b6ca2f43ccbe1f8831d7e34d60a2439d356d10ea308b5a59e3eb55eda10e1"
+      }
+    },
+    {
+      "name": "delay15-ctx1-id1-rep0",
+      "network_seed": 31,
+      "group": "delay15",
+      "context": 1,
+      "identity": 1,
+      "repeat": 0,
+      "split": "unseen-test-only",
+      "CA3_delay_ms": 15,
+      "fraction_distinctive_cells_replaced": 0,
+      "replaced_cells": 0,
+      "new_unrepresented_cells_used": 0,
+      "own_identity_cells_retained": 980,
+      "competing_identity_cells_added": 0,
+      "rng_seed": 11404608889506108870,
+      "files_sha256": {
+        "MEC_LII_Stellate.txt": "999a15cfce1e40c523921425911353c0f8f9cfae3dfbc1dfd0d5b9262c1f8818",
+        "CA3_Pyramidal.txt": "a2a243d8df510858f31407fa7d64558311bf863fc0ce67f9c77b63939a2b916e"
+      }
+    },
+    {
+      "name": "delay15-ctx1-id1-rep1",
+      "network_seed": 31,
+      "group": "delay15",
+      "context": 1,
+      "identity": 1,
+      "repeat": 1,
+      "split": "unseen-test-only",
+      "CA3_delay_ms": 15,
+      "fraction_distinctive_cells_replaced": 0,
+      "replaced_cells": 0,
+      "new_unrepresented_cells_used": 0,
+      "own_identity_cells_retained": 980,
+      "competing_identity_cells_added": 0,
+      "rng_seed": 16386420205032275883,
+      "files_sha256": {
+        "MEC_LII_Stellate.txt": "eb3af740920086a86141516f47137d239f36d48ecd41d5b6abdaad4225c959c2",
+        "CA3_Pyramidal.txt": "fbc9ffa2866a977bf4f2fa88f6a866be427bb1757bb202920c305694947dc814"
+      }
+    },
+    {
+      "name": "delay35-ctx1-id0-rep0",
+      "network_seed": 31,
+      "group": "delay35",
+      "context": 1,
+      "identity": 0,
+      "repeat": 0,
+      "split": "unseen-test-only",
+      "CA3_delay_ms": 35,
+      "fraction_distinctive_cells_replaced": 0,
+      "replaced_cells": 0,
+      "new_unrepresented_cells_used": 0,
+      "own_identity_cells_retained": 980,
+      "competing_identity_cells_added": 0,
+      "rng_seed": 1528708654221062997,
+      "files_sha256": {
+        "MEC_LII_Stellate.txt": "434726cf72242a683a6f28e00dbde299d4c408201e22636511f9415acc4c8968",
+        "CA3_Pyramidal.txt": "bc821e97f418d2e1da7efbb9c430bd1cf1f164112f8e878a721435d8ebb44af7"
+      }
+    },
+    {
+      "name": "delay35-ctx1-id0-rep1",
+      "network_seed": 31,
+      "group": "delay35",
+      "context": 1,
+      "identity": 0,
+      "repeat": 1,
+      "split": "unseen-test-only",
+      "CA3_delay_ms": 35,
+      "fraction_distinctive_cells_replaced": 0,
+      "replaced_cells": 0,
+      "new_unrepresented_cells_used": 0,
+      "own_identity_cells_retained": 980,
+      "competing_identity_cells_added": 0,
+      "rng_seed": 1607720266369032271,
+      "files_sha256": {
+        "MEC_LII_Stellate.txt": "884c32106ee9f2625a0e32c8b35207055968b4d597c4d9ed305afff971a148cf",
+        "CA3_Pyramidal.txt": "2bba8997939f08e74f05dcd1665ad8614e2bc88639c8bdc5f7d31f92ec5f9945"
+      }
+    },
+    {
+      "name": "delay35-ctx1-id1-rep0",
+      "network_seed": 31,
+      "group": "delay35",
+      "context": 1,
+      "identity": 1,
+      "repeat": 0,
+      "split": "unseen-test-only",
+      "CA3_delay_ms": 35,
+      "fraction_distinctive_cells_replaced": 0,
+      "replaced_cells": 0,
+      "new_unrepresented_cells_used": 0,
+      "own_identity_cells_retained": 980,
+      "competing_identity_cells_added": 0,
+      "rng_seed": 13631397555412568227,
+      "files_sha256": {
+        "MEC_LII_Stellate.txt": "d0b5f377f09af132fe33bbf56fb5ffee9b9ce8fa017410535b2885f892e931a6",
+        "CA3_Pyramidal.txt": "18d8640dce0fb2c42e54b2d3ea314f26e1ed50ce6f87a8f2600f09754e8fcff9"
+      }
+    },
+    {
+      "name": "delay35-ctx1-id1-rep1",
+      "network_seed": 31,
+      "group": "delay35",
+      "context": 1,
+      "identity": 1,
+      "repeat": 1,
+      "split": "unseen-test-only",
+      "CA3_delay_ms": 35,
+      "fraction_distinctive_cells_replaced": 0,
+      "replaced_cells": 0,
+      "new_unrepresented_cells_used": 0,
+      "own_identity_cells_retained": 980,
+      "competing_identity_cells_added": 0,
+      "rng_seed": 4901335823746535949,
+      "files_sha256": {
+        "MEC_LII_Stellate.txt": "4a1ad8d2ed744bac66c12eba6b3d913f56afad424e7bd5594929a948749d28cc",
+        "CA3_Pyramidal.txt": "18c096032377fc347ead6e7a5e201111803ea4847d9ed80d3bfaab05f94f859e"
+      }
+    }
+  ],
+  "requirement": "Addresses original experiment-design stage to test held-out input patterns and timings with a frozen readout; nominal testing alone holdsout jittered trials, not pattern templates."
+}

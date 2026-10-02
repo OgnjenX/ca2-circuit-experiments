@@ -1,0 +1,139 @@
+{
+  "reviewed_utc": "2026-10-01T21:18:20.960546+00:00",
+  "evidence_sha256": {
+    "sensitivity-results.json": "4165f1c74accc6cf498c3bc3cdc61a168ef277b6bbf232628e521076f1487372",
+    "context-response-results.json": "b7d83c35e384b486683fbff39353313e7e2c1769abac8e6f62c9efe014793dc6",
+    "variant-precision-results.json": "28e7a43d2bb7bef7175af85a0995f2ddb945f4bddc111b5349021815c11e01c0"
+  },
+  "all9variants_primary_at_chance": true,
+  "variant_precision_passes": 7,
+  "variant_precision_failures": [
+    {
+      "variant": "egaba77p8-gain150",
+      "trial": "seed31-ctx0-id0-rep0",
+      "context": 0,
+      "checks": {
+        "core": {
+          "population_count_checks": {
+            "CA2_Pyramidal": {
+              "rk40": 2299,
+              "rk80": 2295,
+              "relative_difference": 0.0017398869073510222,
+              "pass": true
+            },
+            "CA2_Basket": {
+              "rk40": 835,
+              "rk80": 837,
+              "relative_difference": 0.0023894862604540022,
+              "pass": true
+            },
+            "CA2_Wide_Arbor_Basket": {
+              "rk40": 735,
+              "rk80": 735,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA2_Bistratified": {
+              "rk40": 79,
+              "rk80": 79,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA2_SP_SR": {
+              "rk40": 90,
+              "rk80": 90,
+              "relative_difference": 0.0,
+              "pass": true
+            }
+          },
+          "first_pyramidal_latency_pass": true,
+          "voltage_feature_RMS_difference_mV": null,
+          "pass": true
+        },
+        "intact": {
+          "population_count_checks": {
+            "CA1_Pyramidal": {
+              "rk40": 0,
+              "rk80": 0,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Basket": {
+              "rk40": 39,
+              "rk80": 36,
+              "relative_difference": 0.07692307692307693,
+              "pass": false
+            },
+            "CA1_Bistratified": {
+              "rk40": 3909,
+              "rk80": 3910,
+              "relative_difference": 0.0002557544757033248,
+              "pass": true
+            }
+          },
+          "first_pyramidal_latency_pass": true,
+          "voltage_feature_RMS_difference_mV": 0.006238965122059854,
+          "pass": false
+        },
+        "blocked": {
+          "population_count_checks": {
+            "CA1_Pyramidal": {
+              "rk40": 0,
+              "rk80": 0,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Basket": {
+              "rk40": 0,
+              "rk80": 0,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Bistratified": {
+              "rk40": 0,
+              "rk80": 0,
+              "relative_difference": 0.0,
+              "pass": true
+            }
+          },
+          "first_pyramidal_latency_pass": true,
+          "voltage_feature_RMS_difference_mV": 0.001280403110871813,
+          "pass": true
+        },
+        "scrambled": {
+          "population_count_checks": {
+            "CA1_Pyramidal": {
+              "rk40": 0,
+              "rk80": 0,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Basket": {
+              "rk40": 67,
+              "rk80": 66,
+              "relative_difference": 0.014925373134328358,
+              "pass": true
+            },
+            "CA1_Bistratified": {
+              "rk40": 3917,
+              "rk80": 3918,
+              "relative_difference": 0.00025523226135783564,
+              "pass": true
+            }
+          },
+          "first_pyramidal_latency_pass": true,
+          "voltage_feature_RMS_difference_mV": 0.007991899017414128,
+          "pass": true
+        }
+      },
+      "pass": false
+    }
+  ],
+  "interpretation": [
+    "CA3-associated CA2 pyramidal suppression changes to an increase at fitted inhibitory gain50 in network31; context dependence is conditional on fitted inhibition.",
+    "Primary four-window spike classification remains at chance in every tested sensitivity variant.",
+    "Secondary voltage intervention effects change with parameters and full-core precision; positive output-gain2 descriptive intervals do not validate assumed output strengths.",
+    "One gain150 cortex-only intact readout basket count differs39versus36 (7.7%); variant-wide numerical robustness remains limited."
+  ],
+  "generalization_and_final_review": "Generalization and seven-page report scientifically reviewed; numerical and biological failures retained. Completion audit provides the final requirement-level review."
+}

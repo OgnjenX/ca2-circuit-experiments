@@ -1,0 +1,12 @@
+{
+  "id": null,
+  "title": null,
+  "status": "planned",
+  "model_commit": null,
+  "protocol_commit": null,
+  "calibration_sources": [],
+  "held_out_validation_sources": [],
+  "primary_measure": null,
+  "acceptance_criteria": null,
+  "artifacts": []
+}

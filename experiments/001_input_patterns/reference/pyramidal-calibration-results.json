@@ -1,0 +1,87 @@
+{
+  "design": {
+    "status": "Recorded before target-specific gain calibration",
+    "target": "CA3 single-pulse inhibitory difference -13.8\u00b12.4mV, Figure3 Chevaleyre&Siegelbaum2010",
+    "scope": "Scale only four CA2 inhibitory populations to CA2 pyramidal population; preserve all exported inhibitory-to-inhibitory synapses.",
+    "reason": "Calibration measures a pyramidal postsynaptic response. Global inhibitory scaling changes unmeasured interneuron circuitry and its stiff dynamics; all-inhibitory gain candidate failed numerical spike-count convergence.",
+    "GABAa_reversal_mV": -77.8,
+    "reversal_status": "Assumption from recording recipe; require -75/-80 sensitivity.",
+    "CA3_stimulated_afferents": 1940,
+    "gain_candidates": [
+      0,
+      30,
+      60,
+      100,
+      180
+    ],
+    "selection": "Closest non-spiking single-pulse inhibitory difference to target; no functional outcome used. After selection, recheck unused100Hz train and RK4precision.",
+    "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2905041/",
+    "warning": "Fitted aggregate conductance multiplier is phenomenological, not a measured or original exported parameter.",
+    "RK4_substeps_per_ms": 20,
+    "zero_gain_role": "Control with only inhibitory-to-pyramidal weights zero; inhibitory-to-inhibitory weights remain exported."
+  },
+  "complete": true,
+  "results": [
+    {
+      "gain": 0,
+      "mean_waveform_min_inhibitory_difference_mV": 0.0,
+      "mean_cell_min_inhibitory_difference_mV": 0.0,
+      "target_error_mV": 13.8,
+      "spikes": 0,
+      "eligible": true,
+      "min_mean_voltage_mV": -72.58828735351562,
+      "complete_finite_voltage": true
+    },
+    {
+      "gain": 30,
+      "mean_waveform_min_inhibitory_difference_mV": -7.721001774072647,
+      "mean_cell_min_inhibitory_difference_mV": -7.822651237249374,
+      "target_error_mV": 6.078998225927354,
+      "spikes": 0,
+      "eligible": true,
+      "min_mean_voltage_mV": -72.58828735351562,
+      "complete_finite_voltage": true
+    },
+    {
+      "gain": 60,
+      "mean_waveform_min_inhibitory_difference_mV": -11.389481157064438,
+      "mean_cell_min_inhibitory_difference_mV": -11.44444689154625,
+      "target_error_mV": 2.410518842935563,
+      "spikes": 0,
+      "eligible": true,
+      "min_mean_voltage_mV": -73.57867985963821,
+      "complete_finite_voltage": true
+    },
+    {
+      "gain": 100,
+      "mean_waveform_min_inhibitory_difference_mV": -13.647222191095352,
+      "mean_cell_min_inhibitory_difference_mV": -13.680762141942978,
+      "target_error_mV": 0.15277780890464854,
+      "spikes": 0,
+      "eligible": true,
+      "min_mean_voltage_mV": -75.82490080595016,
+      "complete_finite_voltage": true
+    },
+    {
+      "gain": 180,
+      "mean_waveform_min_inhibitory_difference_mV": -15.06698402762413,
+      "mean_cell_min_inhibitory_difference_mV": -15.081103324890137,
+      "target_error_mV": 1.2669840276241295,
+      "spikes": 0,
+      "eligible": true,
+      "min_mean_voltage_mV": -77.24466264247894,
+      "complete_finite_voltage": true
+    }
+  ],
+  "selected": {
+    "gain": 100,
+    "mean_waveform_min_inhibitory_difference_mV": -13.647222191095352,
+    "mean_cell_min_inhibitory_difference_mV": -13.680762141942978,
+    "target_error_mV": 0.15277780890464854,
+    "spikes": 0,
+    "eligible": true,
+    "min_mean_voltage_mV": -75.82490080595016,
+    "complete_finite_voltage": true
+  },
+  "note": "Calibration, not independent validation. Model neurons are not animal replicates. Extreme gain is a model-adequacy warning."
+}

@@ -1,0 +1,12 @@
+{
+  "id": "001",
+  "title": "CA2 input-pattern transmission",
+  "status": "completed exploratory model study",
+  "original_study_completed": "2026-10-02",
+  "core_runs": 288,
+  "matched_readouts": 1584,
+  "biological_validation": "limited; no behavioral recording comparison",
+  "implementation": "implementation/",
+  "reference_results": "reference/",
+  "archive_index": "../../artifacts/experiment_001.json"
+}

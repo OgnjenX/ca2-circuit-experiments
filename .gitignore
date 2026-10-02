@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+data/downloads/
+data/workspaces/
+data/recorded/
+data/local/
+*.tar.gz
+*.tar.zst
+*.part[0-9][0-9]

@@ -1,0 +1,62 @@
+{
+  "all80trials_complete": true,
+  "verified_trials": 80,
+  "verified_readout_runs": 240,
+  "trials_verified_by_network": {
+    "31": 16,
+    "32": 16,
+    "33": 16,
+    "34": 16,
+    "35": 16
+  },
+  "pending_trials": [],
+  "checks": [
+    "Exact input hashes and delivered core events",
+    "Core and readout seed/configuration and exit statuses",
+    "Complete finite voltage/adaptation/current data for every monitored CA2 group and CA1 target",
+    "Exact intact and blocked pyramidal streams",
+    "Exact bijective scrambled pyramidal stream, conserving spike times and cell trains",
+    "All four inhibitory streams and CA3 identical across controls",
+    "Same aggregate connection-count signatures across controls and repeated core trials",
+    "Identical pre-stimulus core voltage records across reset trials within network"
+  ],
+  "aggregate_connection_signatures_by_seed": {
+    "31": [
+      "c778ed13463cbd8fa93bf3b64035b816e0a5fc61e987a009fdfb30cde8e74474"
+    ],
+    "32": [
+      "2dd6208194812c074f5a183cbe48cd03858d681367ab4e4d9cfa64ed1ab7d43e"
+    ],
+    "33": [
+      "97250714f09a9fb352c366bda22cfd88c14f162dbb00deefe53c04c989836306"
+    ],
+    "34": [
+      "0f6c642b287aa73f17ed9b3e19a2430ca4c77151ac719d0927b102e89aa03910"
+    ],
+    "35": [
+      "2e5b356be8885db2c8cf5c7c2ee0180d46e5d600df0aca87615853f89ffd9ea1"
+    ]
+  },
+  "pre_stimulus_voltage_signatures_by_seed": {
+    "31": [
+      "a2d80489863aa0bb1bd2fa942b39eb06d0ce89974bc0f7779eee01aec3f5778f"
+    ],
+    "32": [
+      "a2d80489863aa0bb1bd2fa942b39eb06d0ce89974bc0f7779eee01aec3f5778f"
+    ],
+    "33": [
+      "a2d80489863aa0bb1bd2fa942b39eb06d0ce89974bc0f7779eee01aec3f5778f"
+    ],
+    "34": [
+      "a2d80489863aa0bb1bd2fa942b39eb06d0ce89974bc0f7779eee01aec3f5778f"
+    ],
+    "35": [
+      "a2d80489863aa0bb1bd2fa942b39eb06d0ce89974bc0f7779eee01aec3f5778f"
+    ]
+  },
+  "limits": [
+    "Connection-count signatures are not individual-edge hashes. Matching source configuration/seeds and event-loader code without RNG draws support fixed topology; this audit does not independently export every edge.",
+    "Monitor limit128pergroup means complete records for the monitored subset, not voltage recordings of all19,381CA2 neurons. Spikes are recorded for all modeled cells.",
+    "Partial progress is not a full completion claim."
+  ]
+}

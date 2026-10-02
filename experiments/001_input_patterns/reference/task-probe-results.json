@@ -1,0 +1,153 @@
+{
+  "complete": true,
+  "pass": true,
+  "results": {
+    "0": {
+      "complete": true,
+      "comparisons": {
+        "20": {
+          "counts": {
+            "CA2_Pyramidal": 2435,
+            "CA2_Basket": 834,
+            "CA2_Wide_Arbor_Basket": 735,
+            "CA2_Bistratified": 79,
+            "CA2_SP_SR": 93
+          },
+          "latency": {
+            "CA2_Pyramidal": 29,
+            "CA2_Basket": 1,
+            "CA2_Wide_Arbor_Basket": 6,
+            "CA2_Bistratified": 42,
+            "CA2_SP_SR": 43
+          },
+          "complete_finite_recording": true
+        },
+        "40": {
+          "counts": {
+            "CA2_Pyramidal": 2432,
+            "CA2_Basket": 837,
+            "CA2_Wide_Arbor_Basket": 735,
+            "CA2_Bistratified": 79,
+            "CA2_SP_SR": 93
+          },
+          "latency": {
+            "CA2_Pyramidal": 29,
+            "CA2_Basket": 1,
+            "CA2_Wide_Arbor_Basket": 6,
+            "CA2_Bistratified": 42,
+            "CA2_SP_SR": 43
+          },
+          "complete_finite_recording": true
+        }
+      },
+      "checks": {
+        "CA2_Pyramidal": {
+          "rk20": 2435,
+          "rk40": 2432,
+          "relative_difference": 0.0012320328542094457,
+          "pass": true
+        },
+        "CA2_Basket": {
+          "rk20": 834,
+          "rk40": 837,
+          "relative_difference": 0.0035842293906810036,
+          "pass": true
+        },
+        "CA2_Wide_Arbor_Basket": {
+          "rk20": 735,
+          "rk40": 735,
+          "relative_difference": 0.0,
+          "pass": true
+        },
+        "CA2_Bistratified": {
+          "rk20": 79,
+          "rk40": 79,
+          "relative_difference": 0.0,
+          "pass": true
+        },
+        "CA2_SP_SR": {
+          "rk20": 93,
+          "rk40": 93,
+          "relative_difference": 0.0,
+          "pass": true
+        }
+      },
+      "first_pyramidal_latency_pass": true,
+      "pass": true
+    },
+    "1": {
+      "complete": true,
+      "comparisons": {
+        "20": {
+          "counts": {
+            "CA2_Pyramidal": 234,
+            "CA2_Basket": 1156,
+            "CA2_Wide_Arbor_Basket": 887,
+            "CA2_Bistratified": 395,
+            "CA2_SP_SR": 376
+          },
+          "latency": {
+            "CA2_Pyramidal": 29,
+            "CA2_Basket": 1,
+            "CA2_Wide_Arbor_Basket": 6,
+            "CA2_Bistratified": 29,
+            "CA2_SP_SR": 29
+          },
+          "complete_finite_recording": true
+        },
+        "40": {
+          "counts": {
+            "CA2_Pyramidal": 240,
+            "CA2_Basket": 1157,
+            "CA2_Wide_Arbor_Basket": 886,
+            "CA2_Bistratified": 395,
+            "CA2_SP_SR": 376
+          },
+          "latency": {
+            "CA2_Pyramidal": 29,
+            "CA2_Basket": 1,
+            "CA2_Wide_Arbor_Basket": 6,
+            "CA2_Bistratified": 29,
+            "CA2_SP_SR": 29
+          },
+          "complete_finite_recording": true
+        }
+      },
+      "checks": {
+        "CA2_Pyramidal": {
+          "rk20": 234,
+          "rk40": 240,
+          "relative_difference": 0.025,
+          "pass": true
+        },
+        "CA2_Basket": {
+          "rk20": 1156,
+          "rk40": 1157,
+          "relative_difference": 0.000864304235090752,
+          "pass": true
+        },
+        "CA2_Wide_Arbor_Basket": {
+          "rk20": 887,
+          "rk40": 886,
+          "relative_difference": 0.0011273957158962795,
+          "pass": true
+        },
+        "CA2_Bistratified": {
+          "rk20": 395,
+          "rk40": 395,
+          "relative_difference": 0.0,
+          "pass": true
+        },
+        "CA2_SP_SR": {
+          "rk20": 376,
+          "rk40": 376,
+          "relative_difference": 0.0,
+          "pass": true
+        }
+      },
+      "first_pyramidal_latency_pass": true,
+      "pass": true
+    }
+  },
+  "gate": "Same5% population-count and1ms latency criteria as physiological precision check, evaluated on actual jittered task inputs at calibration network seed20. Held-out seeds31-35 remain unused."
+}

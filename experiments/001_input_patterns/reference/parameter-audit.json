@@ -1,0 +1,192 @@
+{
+  "changes": [
+    {
+      "pre": "CA2_Pyramidal",
+      "post": "CA2_Pyramidal",
+      "old": 0.030908314328374,
+      "fresh": 0.030908317834903
+    },
+    {
+      "pre": "CA2_Basket",
+      "post": "CA2_Pyramidal",
+      "old": 0.01,
+      "fresh": 0.0064326945260721
+    },
+    {
+      "pre": "CA2_Wide_Arbor_Basket",
+      "post": "CA2_Pyramidal",
+      "old": 0.01,
+      "fresh": 0.0064326945260721
+    },
+    {
+      "pre": "CA2_Bistratified",
+      "post": "CA2_Pyramidal",
+      "old": 0.08167983777125,
+      "fresh": 0.08167983129439771
+    },
+    {
+      "pre": "CA2_SP_SR",
+      "post": "CA2_Pyramidal",
+      "old": 0.021248215336034,
+      "fresh": 0.02124822330167153
+    },
+    {
+      "pre": "CA2_Pyramidal",
+      "post": "CA2_Basket",
+      "old": 0.031593922544006,
+      "fresh": 0.031593940949846355
+    },
+    {
+      "pre": "CA2_Basket",
+      "post": "CA2_Basket",
+      "old": 0.01,
+      "fresh": 0.0044047045817104
+    },
+    {
+      "pre": "CA2_Wide_Arbor_Basket",
+      "post": "CA2_Basket",
+      "old": 0.01,
+      "fresh": 0.0044047045817104
+    },
+    {
+      "pre": "CA2_Bistratified",
+      "post": "CA2_Basket",
+      "old": 0.082874585381234,
+      "fresh": 0.08287461826910658
+    },
+    {
+      "pre": "CA2_SP_SR",
+      "post": "CA2_Basket",
+      "old": 0.018541388236679,
+      "fresh": 0.018541397614546762
+    },
+    {
+      "pre": "CA2_Pyramidal",
+      "post": "CA2_Wide_Arbor_Basket",
+      "old": 0.028730226626313,
+      "fresh": 0.028730227895285787
+    },
+    {
+      "pre": "CA2_Basket",
+      "post": "CA2_Wide_Arbor_Basket",
+      "old": 0.01,
+      "fresh": 0.0044047045817104
+    },
+    {
+      "pre": "CA2_Wide_Arbor_Basket",
+      "post": "CA2_Wide_Arbor_Basket",
+      "old": 0.01,
+      "fresh": 0.0044047045817104
+    },
+    {
+      "pre": "CA2_Bistratified",
+      "post": "CA2_Wide_Arbor_Basket",
+      "old": 0.080050112189312,
+      "fresh": 0.08005011896578751
+    },
+    {
+      "pre": "CA2_SP_SR",
+      "post": "CA2_Wide_Arbor_Basket",
+      "old": 0.014167378308657,
+      "fresh": 0.014167372017220403
+    },
+    {
+      "pre": "CA2_Pyramidal",
+      "post": "CA2_Bistratified",
+      "old": 0.046816822325913,
+      "fresh": 0.046816837968892244
+    },
+    {
+      "pre": "CA2_Basket",
+      "post": "CA2_Bistratified",
+      "old": 0.01,
+      "fresh": 0.0044047045817104
+    },
+    {
+      "pre": "CA2_Wide_Arbor_Basket",
+      "post": "CA2_Bistratified",
+      "old": 0.01,
+      "fresh": 0.0044047045817104
+    },
+    {
+      "pre": "CA2_Bistratified",
+      "post": "CA2_Bistratified",
+      "old": 0.099506587450737,
+      "fresh": 0.09950658396784695
+    },
+    {
+      "pre": "CA2_SP_SR",
+      "post": "CA2_Bistratified",
+      "old": 0.025674375219259,
+      "fresh": 0.02567438573882086
+    },
+    {
+      "pre": "CA2_Pyramidal",
+      "post": "CA2_SP_SR",
+      "old": 0.034122283582825,
+      "fresh": 0.03412228821554508
+    },
+    {
+      "pre": "CA2_Basket",
+      "post": "CA2_SP_SR",
+      "old": 0.01,
+      "fresh": 0.0044047045817104
+    },
+    {
+      "pre": "CA2_Wide_Arbor_Basket",
+      "post": "CA2_SP_SR",
+      "old": 0.01,
+      "fresh": 0.0044047045817104
+    },
+    {
+      "pre": "CA2_Bistratified",
+      "post": "CA2_SP_SR",
+      "old": 0.08407639045648,
+      "fresh": 0.08407634114305151
+    },
+    {
+      "pre": "CA2_SP_SR",
+      "post": "CA2_SP_SR",
+      "old": 0.0241494187625,
+      "fresh": 0.024149422428933698
+    }
+  ],
+  "other_exported_fields": "matched exactly against packaged source",
+  "default_flags": {
+    "neurons": {
+      "CA2 Basket": "N",
+      "CA2 Bistratified": "N",
+      "CA2 Pyramidal": "N",
+      "CA2 SP-SR": "N",
+      "CA2 Wide-Arbor Basket": "N"
+    },
+    "connections": {
+      "CA2 Basket -> CA2 Pyramidal": "Y",
+      "CA2 Basket -> CA2 Basket": "Y",
+      "CA2 Basket -> CA2 Wide-Arbor Basket": "Y",
+      "CA2 Basket -> CA2 Bistratified": "Y",
+      "CA2 Basket -> CA2 SP-SR": "Y",
+      "CA2 Bistratified -> CA2 Pyramidal": "N",
+      "CA2 Bistratified -> CA2 Basket": "N",
+      "CA2 Bistratified -> CA2 Wide-Arbor Basket": "N",
+      "CA2 Bistratified -> CA2 Bistratified": "N",
+      "CA2 Bistratified -> CA2 SP-SR": "N",
+      "CA2 Pyramidal -> CA2 Pyramidal": "N",
+      "CA2 Pyramidal -> CA2 Basket": "N",
+      "CA2 Pyramidal -> CA2 Wide-Arbor Basket": "N",
+      "CA2 Pyramidal -> CA2 Bistratified": "N",
+      "CA2 Pyramidal -> CA2 SP-SR": "N",
+      "CA2 SP-SR -> CA2 Pyramidal": "N",
+      "CA2 SP-SR -> CA2 Basket": "N",
+      "CA2 SP-SR -> CA2 Wide-Arbor Basket": "N",
+      "CA2 SP-SR -> CA2 Bistratified": "N",
+      "CA2 SP-SR -> CA2 SP-SR": "N",
+      "CA2 Wide-Arbor Basket -> CA2 Pyramidal": "Y",
+      "CA2 Wide-Arbor Basket -> CA2 Basket": "Y",
+      "CA2 Wide-Arbor Basket -> CA2 Wide-Arbor Basket": "Y",
+      "CA2 Wide-Arbor Basket -> CA2 Bistratified": "Y",
+      "CA2 Wide-Arbor Basket -> CA2 SP-SR": "Y"
+    }
+  },
+  "warning": "Connection default flags are row-level; do not imply every parameter is a direct measurement. Export does not distinguish dorsal/ventral CA2 or certify matched mouse experiments."
+}

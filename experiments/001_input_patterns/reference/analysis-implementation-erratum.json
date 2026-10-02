@@ -1,0 +1,9 @@
+{
+  "reason": "In frozen analysis v1, the local name base was reused for the voltage baseline, overwriting the trial directory before the second replay condition. Found by source inspection before test-set analysis.",
+  "correction": "Rename only voltage-baseline local variable in v2. Original frozen v1 retained unchanged. No features, classifier, split, metrics or inference rules changed.",
+  "original_sha256": "2a5bf911ce72d7303dcb2c7bf4218c85269b975a076d6168626cd64ed52b0cf7",
+  "corrected_file": "analyze_reset_task_v2.py",
+  "corrected_sha256": "97358946b113538f5b638a30d0fd7901b17bb32d8088f71c3f439099886dccd2",
+  "feature_and_decoder_AST_unchanged": true,
+  "impact": "v1 would stop on the second condition; no v1 result is accepted as complete. The queued analysis must use v2."
+}

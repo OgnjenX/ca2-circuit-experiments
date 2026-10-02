@@ -1,0 +1,24 @@
+{
+  "experiment": "001_input_patterns",
+  "release": "experiment-001-v1",
+  "assets": {
+    "runtime": {
+      "filename": "experiment_001_runtime.tar.gz",
+      "bytes": 82764147,
+      "sha256": "f66ce88dc1334c8f0cf7e295bfb397c8f4cb5fd1552359c4174b13112acd2c87",
+      "url": "https://github.com/OgnjenX/ca2-circuit-experiments/releases/download/experiment-001-v1/experiment_001_runtime.tar.gz"
+    },
+    "recorded": {
+      "filename": "experiment_001_recorded.tar.zst",
+      "bytes": 788812299,
+      "sha256": "6311548303f5e7cc7b03f67e0750a53c614c013895b6c7ec6d675499d248f56a",
+      "url": "https://github.com/OgnjenX/ca2-circuit-experiments/releases/download/experiment-001-v1/experiment_001_recorded.tar.zst"
+    },
+    "source": {
+      "filename": "carlsim4_11ea96f_source.zip",
+      "bytes": 10234328,
+      "sha256": "c92ef9a742a7d68df4b051787901db8b6ec05b49cafdb3d35996d53c301c75d7",
+      "url": "https://github.com/OgnjenX/ca2-circuit-experiments/releases/download/experiment-001-v1/carlsim4_11ea96f_source.zip"
+    }
+  }
+}

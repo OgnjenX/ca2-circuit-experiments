@@ -1,0 +1,9 @@
+{
+  "status": "Before inspecting core-variant outcomes; nominal outcomes already known",
+  "created_unix": 1790878473.913219,
+  "reason": "Core parameter perturbations alter dynamics; original plan requires precision spot checks if substantially altered. Conservatively check allfour rather than choosing by outcomes.",
+  "trials": "Network31,identity0repeat0,bothcontexts:8core+24readout runs",
+  "precision": "80substeps versus existing40variant outputs; identical sourceinput events, seed and parameters",
+  "criteria_source": "Existing core/readout convergencecriteria:5%populationcounts,1msfirstpyramidalspikelatency,0.5mVRMSbaseline-subtractedfour-windowreadoutvoltagefeatures; <=1countdifference onlyifbothcounts<=1.",
+  "interpretation": "Retain everyfailure and label affectedvariant numerically unresolved. This spotcheck is not fullclassifierrobustness."
+}

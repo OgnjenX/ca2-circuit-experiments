@@ -1,0 +1,5 @@
+{
+  "source": "response-dynamics-results.json",
+  "rate": "All modeled cells; response50-249ms. Bars are five-network means; points are network means.",
+  "limits": "Context comparisons use separately drawn0-2ms cortical jitter. Conditional on fitted inhibition. Logarithmic vertical scale; this is not steady in-vivo firing."
+}

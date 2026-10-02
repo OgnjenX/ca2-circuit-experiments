@@ -1,0 +1,11 @@
+{
+  "declared_before_fine_run_analysis": true,
+  "comparison": "Fresh parameters, seed10, same current300 and 10s duration; RK4 5 versus10 substeps per ms",
+  "pilot_screen": {
+    "all_population_mean_rate_relative_difference_max": 0.05,
+    "pyramidal_burst_count_equal": true,
+    "burst_onset_difference_max_ms": 100,
+    "burst_detection": "50ms bins; contiguous bins with population mean pyramidal rate >1Hz; events separated by >=100ms below threshold"
+  },
+  "interpretation": "Passing is a preliminary numerical sensitivity screen, not proof of convergence. Extended circuit uses evoked windows and must separately test numerical sensitivity. Failure requires resolving numerical dependence before functional claims. Exact spike-event equality is required only for reproducing the original run at unchanged configuration, not for different integration steps."
+}

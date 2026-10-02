@@ -1,0 +1,23 @@
+{
+  "status": "Recorded before train validation outcomes",
+  "candidate": {
+    "GABAa_reversal_mV": -77.8,
+    "CA2_inhibitory_outgoing_gain": 100,
+    "CA3_active_afferents": 1940,
+    "MEC_LII_active_afferents": 9800,
+    "inhibitory_scope": "Four inhibitory-to-pyramidal connections only"
+  },
+  "reason": "Closest non-spiking single-pulse inhibitory calibration candidate; no task outcome used. Gain is very large and phenomenological. This is no longer the unchanged Hippocampome model.",
+  "physiology_gate": "CA3 five-pulse100Hz train must show lower total CA2 pyramidal spiking with fitted inhibition than with blocked inhibition. Zero evoked spikes under fitted inhibition is a stronger qualitative match; do not interpret 128 or18956 model cells as animal replicates or require exact6/8 fraction.",
+  "numerical_gate": {
+    "comparison": "20 vs40 RK4 substeps per ms, same events and graph seed",
+    "max_relative_spike_count_difference_per_CA2_population": 0.05,
+    "low_count_rule": "If both counts <=1, an absolute difference <=1 passes; otherwise denominator max(counts,1).",
+    "first_pyramidal_spike_latency_tolerance_ms": 1,
+    "require_same_pyramidal_active_or_silent_classification": true,
+    "require_finite_voltage_and_complete_recording": true
+  },
+  "MEC_gate": "Qualitative evoked excitability check only; no published LII train spike fraction is available. Report silent responses; do not substitute LIII targets.",
+  "remaining": "Passing these screens alone does not establish biological validity; source/default, reversal, gain and independent-seed sensitivity are required.",
+  "control_limit": "Removing only inhibition onto pyramidal targets leaves interneuron circuitry intact. This isolates the effect on model targets and is not an exact replication of global PTX/CGP drug application."
+}

@@ -1,0 +1,22 @@
+{
+  "blocked_spikes": [
+    135367,
+    129609
+  ],
+  "fitted_spikes": [
+    28,
+    2451
+  ],
+  "maximum_precision_differences_percent": {
+    "CA3 train": 3.4482758620689653,
+    "MEC train": 1.248992747784045,
+    "Task alone": 0.35842293906810035,
+    "Task + CA3": 2.5,
+    "CA1 replay": 4.761904761904762
+  },
+  "sources": [
+    "pyramidal-train-validation-results.json",
+    "task-probe-results.json",
+    "readout-precision40vs80-results.json"
+  ]
+}

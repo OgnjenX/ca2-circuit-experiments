@@ -1,0 +1,2374 @@
+{
+  "analysis_method_source": "analyze_reset_task_v2.py",
+  "analysis_method_sha256": "97358946b113538f5b638a30d0fd7901b17bb32d8088f71c3f439099886dccd2",
+  "variants": [
+    {
+      "label": "nominal",
+      "trials": 80,
+      "network_seeds": [
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "per_seed_context_condition": [
+        {
+          "seed": 31,
+          "context": 0,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 31,
+          "context": 0,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 31,
+          "context": 0,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 0.5,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 31,
+          "context": 1,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 31,
+          "context": 1,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 0.75,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 31,
+          "context": 1,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 0.25,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 32,
+          "context": 0,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 32,
+          "context": 0,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 32,
+          "context": 0,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 0.75,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 32,
+          "context": 1,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 0.5,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 32,
+          "context": 1,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 0.5,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 32,
+          "context": 1,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 0.5,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 33,
+          "context": 0,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 33,
+          "context": 0,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 33,
+          "context": 0,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 33,
+          "context": 1,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 0.5,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 33,
+          "context": 1,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 0.5,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 33,
+          "context": 1,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 0.5,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 34,
+          "context": 0,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 34,
+          "context": 0,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 34,
+          "context": 0,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 34,
+          "context": 1,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 0.5,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 34,
+          "context": 1,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 0.5,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 34,
+          "context": 1,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 0.75,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 35,
+          "context": 0,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 35,
+          "context": 0,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 35,
+          "context": 0,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 35,
+          "context": 1,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 0.25,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 35,
+          "context": 1,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 0.0,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 35,
+          "context": 1,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 0.25,
+          "total_evoked_spikes": 5120
+        }
+      ],
+      "paired_effects": [
+        {
+          "measure": "spikes",
+          "comparison": "intact_minus_blocked",
+          "network_seeds": [
+            31,
+            32,
+            33,
+            34,
+            35
+          ],
+          "paired_differences": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_difference": 0.0,
+          "descriptive_bootstrap95_interval": [
+            0.0,
+            0.0
+          ],
+          "note": "Network-level descriptive uncertainty, not animal uncertainty. Single-network sensitivity has no confidence interval."
+        },
+        {
+          "measure": "spikes",
+          "comparison": "intact_minus_scrambled",
+          "network_seeds": [
+            31,
+            32,
+            33,
+            34,
+            35
+          ],
+          "paired_differences": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_difference": 0.0,
+          "descriptive_bootstrap95_interval": [
+            0.0,
+            0.0
+          ],
+          "note": "Network-level descriptive uncertainty, not animal uncertainty. Single-network sensitivity has no confidence interval."
+        },
+        {
+          "measure": "voltage",
+          "comparison": "intact_minus_blocked",
+          "network_seeds": [
+            31,
+            32,
+            33,
+            34,
+            35
+          ],
+          "paired_differences": [
+            0.125,
+            0.0,
+            0.0,
+            0.0,
+            0.125
+          ],
+          "mean_difference": 0.05,
+          "descriptive_bootstrap95_interval": [
+            0.0,
+            0.1
+          ],
+          "note": "Network-level descriptive uncertainty, not animal uncertainty. Single-network sensitivity has no confidence interval."
+        },
+        {
+          "measure": "voltage",
+          "comparison": "intact_minus_scrambled",
+          "network_seeds": [
+            31,
+            32,
+            33,
+            34,
+            35
+          ],
+          "paired_differences": [
+            0.625,
+            0.125,
+            0.0,
+            -0.125,
+            0.0
+          ],
+          "mean_difference": 0.125,
+          "descriptive_bootstrap95_interval": [
+            -0.05,
+            0.375
+          ],
+          "note": "Network-level descriptive uncertainty, not animal uncertainty. Single-network sensitivity has no confidence interval."
+        }
+      ]
+    },
+    {
+      "label": "egaba75-gain100",
+      "trials": 16,
+      "network_seeds": [
+        31
+      ],
+      "per_seed_context_condition": [
+        {
+          "seed": 31,
+          "context": 0,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 31,
+          "context": 0,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 31,
+          "context": 0,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 0.25,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 31,
+          "context": 1,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 0.75,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 31,
+          "context": 1,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 31,
+          "context": 1,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 0.5,
+          "total_evoked_spikes": 5120
+        }
+      ],
+      "paired_effects": [
+        {
+          "measure": "spikes",
+          "comparison": "intact_minus_blocked",
+          "network_seeds": [
+            31
+          ],
+          "paired_differences": [
+            0.0
+          ],
+          "mean_difference": 0.0,
+          "descriptive_bootstrap95_interval": null,
+          "note": "Network-level descriptive uncertainty, not animal uncertainty. Single-network sensitivity has no confidence interval."
+        },
+        {
+          "measure": "spikes",
+          "comparison": "intact_minus_scrambled",
+          "network_seeds": [
+            31
+          ],
+          "paired_differences": [
+            0.0
+          ],
+          "mean_difference": 0.0,
+          "descriptive_bootstrap95_interval": null,
+          "note": "Network-level descriptive uncertainty, not animal uncertainty. Single-network sensitivity has no confidence interval."
+        },
+        {
+          "measure": "voltage",
+          "comparison": "intact_minus_blocked",
+          "network_seeds": [
+            31
+          ],
+          "paired_differences": [
+            -0.125
+          ],
+          "mean_difference": -0.125,
+          "descriptive_bootstrap95_interval": null,
+          "note": "Network-level descriptive uncertainty, not animal uncertainty. Single-network sensitivity has no confidence interval."
+        },
+        {
+          "measure": "voltage",
+          "comparison": "intact_minus_scrambled",
+          "network_seeds": [
+            31
+          ],
+          "paired_differences": [
+            0.5
+          ],
+          "mean_difference": 0.5,
+          "descriptive_bootstrap95_interval": null,
+          "note": "Network-level descriptive uncertainty, not animal uncertainty. Single-network sensitivity has no confidence interval."
+        }
+      ]
+    },
+    {
+      "label": "egaba80-gain100",
+      "trials": 16,
+      "network_seeds": [
+        31
+      ],
+      "per_seed_context_condition": [
+        {
+          "seed": 31,
+          "context": 0,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 31,
+          "context": 0,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 31,
+          "context": 0,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 0.75,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 31,
+          "context": 1,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 0.25,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 31,
+          "context": 1,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 0.75,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 31,
+          "context": 1,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 0.5,
+          "total_evoked_spikes": 5120
+        }
+      ],
+      "paired_effects": [
+        {
+          "measure": "spikes",
+          "comparison": "intact_minus_blocked",
+          "network_seeds": [
+            31
+          ],
+          "paired_differences": [
+            0.0
+          ],
+          "mean_difference": 0.0,
+          "descriptive_bootstrap95_interval": null,
+          "note": "Network-level descriptive uncertainty, not animal uncertainty. Single-network sensitivity has no confidence interval."
+        },
+        {
+          "measure": "spikes",
+          "comparison": "intact_minus_scrambled",
+          "network_seeds": [
+            31
+          ],
+          "paired_differences": [
+            0.0
+          ],
+          "mean_difference": 0.0,
+          "descriptive_bootstrap95_interval": null,
+          "note": "Network-level descriptive uncertainty, not animal uncertainty. Single-network sensitivity has no confidence interval."
+        },
+        {
+          "measure": "voltage",
+          "comparison": "intact_minus_blocked",
+          "network_seeds": [
+            31
+          ],
+          "paired_differences": [
+            -0.25
+          ],
+          "mean_difference": -0.25,
+          "descriptive_bootstrap95_interval": null,
+          "note": "Network-level descriptive uncertainty, not animal uncertainty. Single-network sensitivity has no confidence interval."
+        },
+        {
+          "measure": "voltage",
+          "comparison": "intact_minus_scrambled",
+          "network_seeds": [
+            31
+          ],
+          "paired_differences": [
+            0.0
+          ],
+          "mean_difference": 0.0,
+          "descriptive_bootstrap95_interval": null,
+          "note": "Network-level descriptive uncertainty, not animal uncertainty. Single-network sensitivity has no confidence interval."
+        }
+      ]
+    },
+    {
+      "label": "egaba77p8-gain50",
+      "trials": 16,
+      "network_seeds": [
+        31
+      ],
+      "per_seed_context_condition": [
+        {
+          "seed": 31,
+          "context": 0,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 31,
+          "context": 0,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 31,
+          "context": 0,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 31,
+          "context": 1,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 31,
+          "context": 1,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 0.75,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 31,
+          "context": 1,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 5120
+        }
+      ],
+      "paired_effects": [
+        {
+          "measure": "spikes",
+          "comparison": "intact_minus_blocked",
+          "network_seeds": [
+            31
+          ],
+          "paired_differences": [
+            0.0
+          ],
+          "mean_difference": 0.0,
+          "descriptive_bootstrap95_interval": null,
+          "note": "Network-level descriptive uncertainty, not animal uncertainty. Single-network sensitivity has no confidence interval."
+        },
+        {
+          "measure": "spikes",
+          "comparison": "intact_minus_scrambled",
+          "network_seeds": [
+            31
+          ],
+          "paired_differences": [
+            0.0
+          ],
+          "mean_difference": 0.0,
+          "descriptive_bootstrap95_interval": null,
+          "note": "Network-level descriptive uncertainty, not animal uncertainty. Single-network sensitivity has no confidence interval."
+        },
+        {
+          "measure": "voltage",
+          "comparison": "intact_minus_blocked",
+          "network_seeds": [
+            31
+          ],
+          "paired_differences": [
+            0.125
+          ],
+          "mean_difference": 0.125,
+          "descriptive_bootstrap95_interval": null,
+          "note": "Network-level descriptive uncertainty, not animal uncertainty. Single-network sensitivity has no confidence interval."
+        },
+        {
+          "measure": "voltage",
+          "comparison": "intact_minus_scrambled",
+          "network_seeds": [
+            31
+          ],
+          "paired_differences": [
+            0.0
+          ],
+          "mean_difference": 0.0,
+          "descriptive_bootstrap95_interval": null,
+          "note": "Network-level descriptive uncertainty, not animal uncertainty. Single-network sensitivity has no confidence interval."
+        }
+      ]
+    },
+    {
+      "label": "egaba77p8-gain150",
+      "trials": 16,
+      "network_seeds": [
+        31
+      ],
+      "per_seed_context_condition": [
+        {
+          "seed": 31,
+          "context": 0,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 31,
+          "context": 0,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 31,
+          "context": 0,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 0.75,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 31,
+          "context": 1,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 0.5,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 31,
+          "context": 1,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 0.75,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 31,
+          "context": 1,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 5120
+        }
+      ],
+      "paired_effects": [
+        {
+          "measure": "spikes",
+          "comparison": "intact_minus_blocked",
+          "network_seeds": [
+            31
+          ],
+          "paired_differences": [
+            0.0
+          ],
+          "mean_difference": 0.0,
+          "descriptive_bootstrap95_interval": null,
+          "note": "Network-level descriptive uncertainty, not animal uncertainty. Single-network sensitivity has no confidence interval."
+        },
+        {
+          "measure": "spikes",
+          "comparison": "intact_minus_scrambled",
+          "network_seeds": [
+            31
+          ],
+          "paired_differences": [
+            0.0
+          ],
+          "mean_difference": 0.0,
+          "descriptive_bootstrap95_interval": null,
+          "note": "Network-level descriptive uncertainty, not animal uncertainty. Single-network sensitivity has no confidence interval."
+        },
+        {
+          "measure": "voltage",
+          "comparison": "intact_minus_blocked",
+          "network_seeds": [
+            31
+          ],
+          "paired_differences": [
+            -0.125
+          ],
+          "mean_difference": -0.125,
+          "descriptive_bootstrap95_interval": null,
+          "note": "Network-level descriptive uncertainty, not animal uncertainty. Single-network sensitivity has no confidence interval."
+        },
+        {
+          "measure": "voltage",
+          "comparison": "intact_minus_scrambled",
+          "network_seeds": [
+            31
+          ],
+          "paired_differences": [
+            -0.125
+          ],
+          "mean_difference": -0.125,
+          "descriptive_bootstrap95_interval": null,
+          "note": "Network-level descriptive uncertainty, not animal uncertainty. Single-network sensitivity has no confidence interval."
+        }
+      ]
+    },
+    {
+      "label": "output-gain0.5",
+      "trials": 80,
+      "network_seeds": [
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "per_seed_context_condition": [
+        {
+          "seed": 31,
+          "context": 0,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 31,
+          "context": 0,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 31,
+          "context": 0,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 0.5,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 31,
+          "context": 1,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 0.25,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 31,
+          "context": 1,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 0.75,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 31,
+          "context": 1,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 0.5,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 32,
+          "context": 0,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 32,
+          "context": 0,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 32,
+          "context": 0,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 0.75,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 32,
+          "context": 1,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 0.5,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 32,
+          "context": 1,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 0.5,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 32,
+          "context": 1,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 0.5,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 33,
+          "context": 0,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 33,
+          "context": 0,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 33,
+          "context": 0,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 0.75,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 33,
+          "context": 1,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 0.5,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 33,
+          "context": 1,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 0.5,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 33,
+          "context": 1,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 0.5,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 34,
+          "context": 0,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 34,
+          "context": 0,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 34,
+          "context": 0,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 34,
+          "context": 1,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 0.5,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 34,
+          "context": 1,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 0.5,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 34,
+          "context": 1,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 0.75,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 35,
+          "context": 0,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 35,
+          "context": 0,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 35,
+          "context": 0,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 35,
+          "context": 1,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 0.25,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 35,
+          "context": 1,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 0.0,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 35,
+          "context": 1,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 0.0,
+          "total_evoked_spikes": 5120
+        }
+      ],
+      "paired_effects": [
+        {
+          "measure": "spikes",
+          "comparison": "intact_minus_blocked",
+          "network_seeds": [
+            31,
+            32,
+            33,
+            34,
+            35
+          ],
+          "paired_differences": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_difference": 0.0,
+          "descriptive_bootstrap95_interval": [
+            0.0,
+            0.0
+          ],
+          "note": "Network-level descriptive uncertainty, not animal uncertainty. Single-network sensitivity has no confidence interval."
+        },
+        {
+          "measure": "spikes",
+          "comparison": "intact_minus_scrambled",
+          "network_seeds": [
+            31,
+            32,
+            33,
+            34,
+            35
+          ],
+          "paired_differences": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_difference": 0.0,
+          "descriptive_bootstrap95_interval": [
+            0.0,
+            0.0
+          ],
+          "note": "Network-level descriptive uncertainty, not animal uncertainty. Single-network sensitivity has no confidence interval."
+        },
+        {
+          "measure": "voltage",
+          "comparison": "intact_minus_blocked",
+          "network_seeds": [
+            31,
+            32,
+            33,
+            34,
+            35
+          ],
+          "paired_differences": [
+            -0.25,
+            0.0,
+            0.0,
+            0.0,
+            0.125
+          ],
+          "mean_difference": -0.025,
+          "descriptive_bootstrap95_interval": [
+            -0.15,
+            0.075
+          ],
+          "note": "Network-level descriptive uncertainty, not animal uncertainty. Single-network sensitivity has no confidence interval."
+        },
+        {
+          "measure": "voltage",
+          "comparison": "intact_minus_scrambled",
+          "network_seeds": [
+            31,
+            32,
+            33,
+            34,
+            35
+          ],
+          "paired_differences": [
+            0.125,
+            0.125,
+            0.125,
+            -0.125,
+            0.125
+          ],
+          "mean_difference": 0.075,
+          "descriptive_bootstrap95_interval": [
+            -0.025,
+            0.125
+          ],
+          "note": "Network-level descriptive uncertainty, not animal uncertainty. Single-network sensitivity has no confidence interval."
+        }
+      ]
+    },
+    {
+      "label": "output-gain2",
+      "trials": 80,
+      "network_seeds": [
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "per_seed_context_condition": [
+        {
+          "seed": 31,
+          "context": 0,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 31,
+          "context": 0,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 31,
+          "context": 0,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 0.75,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 31,
+          "context": 1,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 0.75,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 31,
+          "context": 1,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 0.75,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 31,
+          "context": 1,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 0.25,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 32,
+          "context": 0,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 32,
+          "context": 0,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 32,
+          "context": 0,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 0.75,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 32,
+          "context": 1,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 0.75,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 32,
+          "context": 1,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 0.5,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 32,
+          "context": 1,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 0.5,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 33,
+          "context": 0,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 33,
+          "context": 0,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 33,
+          "context": 0,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 0.75,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 33,
+          "context": 1,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 0.5,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 33,
+          "context": 1,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 0.5,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 33,
+          "context": 1,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 0.5,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 34,
+          "context": 0,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 34,
+          "context": 0,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 34,
+          "context": 0,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 34,
+          "context": 1,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 0.75,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 34,
+          "context": 1,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 0.5,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 34,
+          "context": 1,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 0.5,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 35,
+          "context": 0,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 35,
+          "context": 0,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 35,
+          "context": 0,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 35,
+          "context": 1,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 0.25,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 35,
+          "context": 1,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 0.0,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 35,
+          "context": 1,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 0.25,
+          "total_evoked_spikes": 5120
+        }
+      ],
+      "paired_effects": [
+        {
+          "measure": "spikes",
+          "comparison": "intact_minus_blocked",
+          "network_seeds": [
+            31,
+            32,
+            33,
+            34,
+            35
+          ],
+          "paired_differences": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_difference": 0.0,
+          "descriptive_bootstrap95_interval": [
+            0.0,
+            0.0
+          ],
+          "note": "Network-level descriptive uncertainty, not animal uncertainty. Single-network sensitivity has no confidence interval."
+        },
+        {
+          "measure": "spikes",
+          "comparison": "intact_minus_scrambled",
+          "network_seeds": [
+            31,
+            32,
+            33,
+            34,
+            35
+          ],
+          "paired_differences": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_difference": 0.0,
+          "descriptive_bootstrap95_interval": [
+            0.0,
+            0.0
+          ],
+          "note": "Network-level descriptive uncertainty, not animal uncertainty. Single-network sensitivity has no confidence interval."
+        },
+        {
+          "measure": "voltage",
+          "comparison": "intact_minus_blocked",
+          "network_seeds": [
+            31,
+            32,
+            33,
+            34,
+            35
+          ],
+          "paired_differences": [
+            0.0,
+            0.125,
+            0.0,
+            0.125,
+            0.125
+          ],
+          "mean_difference": 0.075,
+          "descriptive_bootstrap95_interval": [
+            0.025,
+            0.125
+          ],
+          "note": "Network-level descriptive uncertainty, not animal uncertainty. Single-network sensitivity has no confidence interval."
+        },
+        {
+          "measure": "voltage",
+          "comparison": "intact_minus_scrambled",
+          "network_seeds": [
+            31,
+            32,
+            33,
+            34,
+            35
+          ],
+          "paired_differences": [
+            0.375,
+            0.25,
+            0.125,
+            0.125,
+            0.0
+          ],
+          "mean_difference": 0.175,
+          "descriptive_bootstrap95_interval": [
+            0.075,
+            0.3
+          ],
+          "note": "Network-level descriptive uncertainty, not animal uncertainty. Single-network sensitivity has no confidence interval."
+        }
+      ]
+    },
+    {
+      "label": "readout-rk80",
+      "trials": 80,
+      "network_seeds": [
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "per_seed_context_condition": [
+        {
+          "seed": 31,
+          "context": 0,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 31,
+          "context": 0,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 31,
+          "context": 0,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 0.5,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 31,
+          "context": 1,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 31,
+          "context": 1,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 31,
+          "context": 1,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 0.5,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 32,
+          "context": 0,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 32,
+          "context": 0,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 32,
+          "context": 0,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 0.75,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 32,
+          "context": 1,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 0.75,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 32,
+          "context": 1,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 0.5,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 32,
+          "context": 1,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 0.75,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 33,
+          "context": 0,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 33,
+          "context": 0,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 33,
+          "context": 0,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 33,
+          "context": 1,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 0.5,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 33,
+          "context": 1,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 0.5,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 33,
+          "context": 1,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 0.5,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 34,
+          "context": 0,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 34,
+          "context": 0,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 34,
+          "context": 0,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 34,
+          "context": 1,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 0.75,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 34,
+          "context": 1,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 0.75,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 34,
+          "context": 1,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 0.75,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 35,
+          "context": 0,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 35,
+          "context": 0,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 35,
+          "context": 0,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 35,
+          "context": 1,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 0.0,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 35,
+          "context": 1,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 0.0,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 35,
+          "context": 1,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 0.0,
+          "total_evoked_spikes": 5120
+        }
+      ],
+      "paired_effects": [
+        {
+          "measure": "spikes",
+          "comparison": "intact_minus_blocked",
+          "network_seeds": [
+            31,
+            32,
+            33,
+            34,
+            35
+          ],
+          "paired_differences": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_difference": 0.0,
+          "descriptive_bootstrap95_interval": [
+            0.0,
+            0.0
+          ],
+          "note": "Network-level descriptive uncertainty, not animal uncertainty. Single-network sensitivity has no confidence interval."
+        },
+        {
+          "measure": "spikes",
+          "comparison": "intact_minus_scrambled",
+          "network_seeds": [
+            31,
+            32,
+            33,
+            34,
+            35
+          ],
+          "paired_differences": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_difference": 0.0,
+          "descriptive_bootstrap95_interval": [
+            0.0,
+            0.0
+          ],
+          "note": "Network-level descriptive uncertainty, not animal uncertainty. Single-network sensitivity has no confidence interval."
+        },
+        {
+          "measure": "voltage",
+          "comparison": "intact_minus_blocked",
+          "network_seeds": [
+            31,
+            32,
+            33,
+            34,
+            35
+          ],
+          "paired_differences": [
+            0.0,
+            0.125,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_difference": 0.025,
+          "descriptive_bootstrap95_interval": [
+            0.0,
+            0.075
+          ],
+          "note": "Network-level descriptive uncertainty, not animal uncertainty. Single-network sensitivity has no confidence interval."
+        },
+        {
+          "measure": "voltage",
+          "comparison": "intact_minus_scrambled",
+          "network_seeds": [
+            31,
+            32,
+            33,
+            34,
+            35
+          ],
+          "paired_differences": [
+            0.5,
+            0.125,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean_difference": 0.125,
+          "descriptive_bootstrap95_interval": [
+            0.0,
+            0.325
+          ],
+          "note": "Network-level descriptive uncertainty, not animal uncertainty. Single-network sensitivity has no confidence interval."
+        }
+      ]
+    },
+    {
+      "label": "full-rk80",
+      "trials": 16,
+      "network_seeds": [
+        31
+      ],
+      "per_seed_context_condition": [
+        {
+          "seed": 31,
+          "context": 0,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 31,
+          "context": 0,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 31,
+          "context": 0,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 0.75,
+          "total_evoked_spikes": 0
+        },
+        {
+          "seed": 31,
+          "context": 1,
+          "condition": "intact",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 31,
+          "context": 1,
+          "condition": "blocked",
+          "spikes": 0.5,
+          "voltage": 1.0,
+          "total_evoked_spikes": 5120
+        },
+        {
+          "seed": 31,
+          "context": 1,
+          "condition": "scrambled",
+          "spikes": 0.5,
+          "voltage": 0.5,
+          "total_evoked_spikes": 5120
+        }
+      ],
+      "paired_effects": [
+        {
+          "measure": "spikes",
+          "comparison": "intact_minus_blocked",
+          "network_seeds": [
+            31
+          ],
+          "paired_differences": [
+            0.0
+          ],
+          "mean_difference": 0.0,
+          "descriptive_bootstrap95_interval": null,
+          "note": "Network-level descriptive uncertainty, not animal uncertainty. Single-network sensitivity has no confidence interval."
+        },
+        {
+          "measure": "spikes",
+          "comparison": "intact_minus_scrambled",
+          "network_seeds": [
+            31
+          ],
+          "paired_differences": [
+            0.0
+          ],
+          "mean_difference": 0.0,
+          "descriptive_bootstrap95_interval": null,
+          "note": "Network-level descriptive uncertainty, not animal uncertainty. Single-network sensitivity has no confidence interval."
+        },
+        {
+          "measure": "voltage",
+          "comparison": "intact_minus_blocked",
+          "network_seeds": [
+            31
+          ],
+          "paired_differences": [
+            0.0
+          ],
+          "mean_difference": 0.0,
+          "descriptive_bootstrap95_interval": null,
+          "note": "Network-level descriptive uncertainty, not animal uncertainty. Single-network sensitivity has no confidence interval."
+        },
+        {
+          "measure": "voltage",
+          "comparison": "intact_minus_scrambled",
+          "network_seeds": [
+            31
+          ],
+          "paired_differences": [
+            0.375
+          ],
+          "mean_difference": 0.375,
+          "descriptive_bootstrap95_interval": null,
+          "note": "Network-level descriptive uncertainty, not animal uncertainty. Single-network sensitivity has no confidence interval."
+        }
+      ]
+    }
+  ],
+  "comparisons_with_nominal": [
+    {
+      "variant": "egaba75-gain100",
+      "measure": "spikes",
+      "comparison": "intact_minus_blocked",
+      "matched_seed_effect_changes": [
+        0.0
+      ],
+      "mean_effect_change": 0.0,
+      "variant_effect": 0.0,
+      "matched_nominal_effect": 0.0
+    },
+    {
+      "variant": "egaba75-gain100",
+      "measure": "spikes",
+      "comparison": "intact_minus_scrambled",
+      "matched_seed_effect_changes": [
+        0.0
+      ],
+      "mean_effect_change": 0.0,
+      "variant_effect": 0.0,
+      "matched_nominal_effect": 0.0
+    },
+    {
+      "variant": "egaba75-gain100",
+      "measure": "voltage",
+      "comparison": "intact_minus_blocked",
+      "matched_seed_effect_changes": [
+        -0.25
+      ],
+      "mean_effect_change": -0.25,
+      "variant_effect": -0.125,
+      "matched_nominal_effect": 0.125
+    },
+    {
+      "variant": "egaba75-gain100",
+      "measure": "voltage",
+      "comparison": "intact_minus_scrambled",
+      "matched_seed_effect_changes": [
+        -0.125
+      ],
+      "mean_effect_change": -0.125,
+      "variant_effect": 0.5,
+      "matched_nominal_effect": 0.625
+    },
+    {
+      "variant": "egaba80-gain100",
+      "measure": "spikes",
+      "comparison": "intact_minus_blocked",
+      "matched_seed_effect_changes": [
+        0.0
+      ],
+      "mean_effect_change": 0.0,
+      "variant_effect": 0.0,
+      "matched_nominal_effect": 0.0
+    },
+    {
+      "variant": "egaba80-gain100",
+      "measure": "spikes",
+      "comparison": "intact_minus_scrambled",
+      "matched_seed_effect_changes": [
+        0.0
+      ],
+      "mean_effect_change": 0.0,
+      "variant_effect": 0.0,
+      "matched_nominal_effect": 0.0
+    },
+    {
+      "variant": "egaba80-gain100",
+      "measure": "voltage",
+      "comparison": "intact_minus_blocked",
+      "matched_seed_effect_changes": [
+        -0.375
+      ],
+      "mean_effect_change": -0.375,
+      "variant_effect": -0.25,
+      "matched_nominal_effect": 0.125
+    },
+    {
+      "variant": "egaba80-gain100",
+      "measure": "voltage",
+      "comparison": "intact_minus_scrambled",
+      "matched_seed_effect_changes": [
+        -0.625
+      ],
+      "mean_effect_change": -0.625,
+      "variant_effect": 0.0,
+      "matched_nominal_effect": 0.625
+    },
+    {
+      "variant": "egaba77p8-gain50",
+      "measure": "spikes",
+      "comparison": "intact_minus_blocked",
+      "matched_seed_effect_changes": [
+        0.0
+      ],
+      "mean_effect_change": 0.0,
+      "variant_effect": 0.0,
+      "matched_nominal_effect": 0.0
+    },
+    {
+      "variant": "egaba77p8-gain50",
+      "measure": "spikes",
+      "comparison": "intact_minus_scrambled",
+      "matched_seed_effect_changes": [
+        0.0
+      ],
+      "mean_effect_change": 0.0,
+      "variant_effect": 0.0,
+      "matched_nominal_effect": 0.0
+    },
+    {
+      "variant": "egaba77p8-gain50",
+      "measure": "voltage",
+      "comparison": "intact_minus_blocked",
+      "matched_seed_effect_changes": [
+        0.0
+      ],
+      "mean_effect_change": 0.0,
+      "variant_effect": 0.125,
+      "matched_nominal_effect": 0.125
+    },
+    {
+      "variant": "egaba77p8-gain50",
+      "measure": "voltage",
+      "comparison": "intact_minus_scrambled",
+      "matched_seed_effect_changes": [
+        -0.625
+      ],
+      "mean_effect_change": -0.625,
+      "variant_effect": 0.0,
+      "matched_nominal_effect": 0.625
+    },
+    {
+      "variant": "egaba77p8-gain150",
+      "measure": "spikes",
+      "comparison": "intact_minus_blocked",
+      "matched_seed_effect_changes": [
+        0.0
+      ],
+      "mean_effect_change": 0.0,
+      "variant_effect": 0.0,
+      "matched_nominal_effect": 0.0
+    },
+    {
+      "variant": "egaba77p8-gain150",
+      "measure": "spikes",
+      "comparison": "intact_minus_scrambled",
+      "matched_seed_effect_changes": [
+        0.0
+      ],
+      "mean_effect_change": 0.0,
+      "variant_effect": 0.0,
+      "matched_nominal_effect": 0.0
+    },
+    {
+      "variant": "egaba77p8-gain150",
+      "measure": "voltage",
+      "comparison": "intact_minus_blocked",
+      "matched_seed_effect_changes": [
+        -0.25
+      ],
+      "mean_effect_change": -0.25,
+      "variant_effect": -0.125,
+      "matched_nominal_effect": 0.125
+    },
+    {
+      "variant": "egaba77p8-gain150",
+      "measure": "voltage",
+      "comparison": "intact_minus_scrambled",
+      "matched_seed_effect_changes": [
+        -0.75
+      ],
+      "mean_effect_change": -0.75,
+      "variant_effect": -0.125,
+      "matched_nominal_effect": 0.625
+    },
+    {
+      "variant": "output-gain0.5",
+      "measure": "spikes",
+      "comparison": "intact_minus_blocked",
+      "matched_seed_effect_changes": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_effect_change": 0.0,
+      "variant_effect": 0.0,
+      "matched_nominal_effect": 0.0
+    },
+    {
+      "variant": "output-gain0.5",
+      "measure": "spikes",
+      "comparison": "intact_minus_scrambled",
+      "matched_seed_effect_changes": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_effect_change": 0.0,
+      "variant_effect": 0.0,
+      "matched_nominal_effect": 0.0
+    },
+    {
+      "variant": "output-gain0.5",
+      "measure": "voltage",
+      "comparison": "intact_minus_blocked",
+      "matched_seed_effect_changes": [
+        -0.375,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_effect_change": -0.075,
+      "variant_effect": -0.025,
+      "matched_nominal_effect": 0.05
+    },
+    {
+      "variant": "output-gain0.5",
+      "measure": "voltage",
+      "comparison": "intact_minus_scrambled",
+      "matched_seed_effect_changes": [
+        -0.5,
+        0.0,
+        0.125,
+        0.0,
+        0.125
+      ],
+      "mean_effect_change": -0.05,
+      "variant_effect": 0.075,
+      "matched_nominal_effect": 0.125
+    },
+    {
+      "variant": "output-gain2",
+      "measure": "spikes",
+      "comparison": "intact_minus_blocked",
+      "matched_seed_effect_changes": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_effect_change": 0.0,
+      "variant_effect": 0.0,
+      "matched_nominal_effect": 0.0
+    },
+    {
+      "variant": "output-gain2",
+      "measure": "spikes",
+      "comparison": "intact_minus_scrambled",
+      "matched_seed_effect_changes": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_effect_change": 0.0,
+      "variant_effect": 0.0,
+      "matched_nominal_effect": 0.0
+    },
+    {
+      "variant": "output-gain2",
+      "measure": "voltage",
+      "comparison": "intact_minus_blocked",
+      "matched_seed_effect_changes": [
+        -0.125,
+        0.125,
+        0.0,
+        0.125,
+        0.0
+      ],
+      "mean_effect_change": 0.025,
+      "variant_effect": 0.075,
+      "matched_nominal_effect": 0.05
+    },
+    {
+      "variant": "output-gain2",
+      "measure": "voltage",
+      "comparison": "intact_minus_scrambled",
+      "matched_seed_effect_changes": [
+        -0.25,
+        0.125,
+        0.125,
+        0.25,
+        0.0
+      ],
+      "mean_effect_change": 0.05,
+      "variant_effect": 0.175,
+      "matched_nominal_effect": 0.125
+    },
+    {
+      "variant": "readout-rk80",
+      "measure": "spikes",
+      "comparison": "intact_minus_blocked",
+      "matched_seed_effect_changes": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_effect_change": 0.0,
+      "variant_effect": 0.0,
+      "matched_nominal_effect": 0.0
+    },
+    {
+      "variant": "readout-rk80",
+      "measure": "spikes",
+      "comparison": "intact_minus_scrambled",
+      "matched_seed_effect_changes": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_effect_change": 0.0,
+      "variant_effect": 0.0,
+      "matched_nominal_effect": 0.0
+    },
+    {
+      "variant": "readout-rk80",
+      "measure": "voltage",
+      "comparison": "intact_minus_blocked",
+      "matched_seed_effect_changes": [
+        -0.125,
+        0.125,
+        0.0,
+        0.0,
+        -0.125
+      ],
+      "mean_effect_change": -0.025,
+      "variant_effect": 0.025,
+      "matched_nominal_effect": 0.05
+    },
+    {
+      "variant": "readout-rk80",
+      "measure": "voltage",
+      "comparison": "intact_minus_scrambled",
+      "matched_seed_effect_changes": [
+        -0.125,
+        0.0,
+        0.0,
+        0.125,
+        0.0
+      ],
+      "mean_effect_change": 0.0,
+      "variant_effect": 0.125,
+      "matched_nominal_effect": 0.125
+    },
+    {
+      "variant": "full-rk80",
+      "measure": "spikes",
+      "comparison": "intact_minus_blocked",
+      "matched_seed_effect_changes": [
+        0.0
+      ],
+      "mean_effect_change": 0.0,
+      "variant_effect": 0.0,
+      "matched_nominal_effect": 0.0
+    },
+    {
+      "variant": "full-rk80",
+      "measure": "spikes",
+      "comparison": "intact_minus_scrambled",
+      "matched_seed_effect_changes": [
+        0.0
+      ],
+      "mean_effect_change": 0.0,
+      "variant_effect": 0.0,
+      "matched_nominal_effect": 0.0
+    },
+    {
+      "variant": "full-rk80",
+      "measure": "voltage",
+      "comparison": "intact_minus_blocked",
+      "matched_seed_effect_changes": [
+        -0.125
+      ],
+      "mean_effect_change": -0.125,
+      "variant_effect": 0.0,
+      "matched_nominal_effect": 0.125
+    },
+    {
+      "variant": "full-rk80",
+      "measure": "voltage",
+      "comparison": "intact_minus_scrambled",
+      "matched_seed_effect_changes": [
+        -0.25
+      ],
+      "mean_effect_change": -0.25,
+      "variant_effect": 0.375,
+      "matched_nominal_effect": 0.625
+    }
+  ],
+  "limits": [
+    "Frozen feature/classifier definitions and train/test split for every variant; centroids refitted only on each variant/condition's designated training responses. This measures available information, not transfer of one unchanged trained readout across interventions.",
+    "Core perturbations and full-core numerical sensitivity use one preselected network; absence of a change there does not prove robustness across networks.",
+    "Half/double couplings andgain50/150 are exploratory perturbations, not measured confidence bounds.",
+    "Primary spike results remain primary even if secondary voltage decoding is positive.",
+    "Any numerical change in an inferred voltage effect limits its scientific interpretation."
+  ]
+}

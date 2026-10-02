@@ -1,0 +1,56 @@
+{
+  "output_edges": [
+    {
+      "Source Subregion": "CA2",
+      "Presynaptic Neuron Type": "CA2 Pyramidal",
+      "Target Subregion": "CA1",
+      "Postsynaptic Neuron Type": "CA1 Bistratified",
+      "g": "1.8853904872549019",
+      "tau_d": "4.119105360784314",
+      "tau_r": "282.6695063333334",
+      "tau_f": "53.30909201960784",
+      "u": "0.26038196500000005",
+      "Connection Probability": "0.025602090327574",
+      "Synaptic Delay": "1",
+      "CARLsim_default": "Y"
+    },
+    {
+      "Source Subregion": "CA2",
+      "Presynaptic Neuron Type": "CA2 Pyramidal",
+      "Target Subregion": "CA1",
+      "Postsynaptic Neuron Type": "CA1 Pyramidal",
+      "g": "1.599495870588236",
+      "tau_d": "5.551110058823532",
+      "tau_r": "494.48744137254914",
+      "tau_f": "35.86985992156861",
+      "u": "0.24291311970588242",
+      "Connection Probability": "0.0084661227921748",
+      "Synaptic Delay": "1",
+      "CARLsim_default": "Y"
+    },
+    {
+      "Source Subregion": "CA2",
+      "Presynaptic Neuron Type": "CA2 Pyramidal",
+      "Target Subregion": "CA1",
+      "Postsynaptic Neuron Type": "CA1 Basket",
+      "g": "1.5504239329411764",
+      "tau_d": "3.591727284313726",
+      "tau_r": "330.90846754901963",
+      "tau_f": "66.95639193137254",
+      "u": "0.2387691498039217",
+      "Connection Probability": "0.025602090327574",
+      "Synaptic Delay": "1",
+      "CARLsim_default": "Y"
+    }
+  ],
+  "output_gain_scope": "Scale only these3connectionweights after setup, maintaining topology and allothercouplings. These rows are flaggeddefaultY; varying one effective strength does not cover every default field.",
+  "source_configuration": "Frozen nominal source headers copied into model/sensitivity; nominal source untouched.",
+  "reversal_builds": "Same CPU/GPU configurable reversal patch as nominal, compile constants75/80mV; original nominallibrary preserved.",
+  "source_hashes": {
+    "model/sensitivity/core_config.h": "42b3eed12457f55bf5c4ac14417ec5790b60441f1de2bd1286e965e68e7a689c",
+    "model/sensitivity/readout_config.h": "628d508b6205ae286267bf3c48c7c783e34386d7c94df459fcb5afff135c967d",
+    "model/sensitivity/setup.h": "da861450062757173d36a284d145413c8ef7b4351f1823afaeead8ae1ad27ed7",
+    "model/sensitivity/calibration_config.h": "e40c4562256a19f3fcfbab4d587db537b4932f5a39f0919a07d92675235f7f2d",
+    "model/sensitivity/src/circuit.cpp": "4fc1829c0a176ae3c83616f2d8d7751f8e0b2e191944b5c31f7bb9a6b6938f92"
+  }
+}

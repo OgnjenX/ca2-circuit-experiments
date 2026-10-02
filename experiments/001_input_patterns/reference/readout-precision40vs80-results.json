@@ -1,0 +1,181 @@
+{
+  "complete": true,
+  "pass": true,
+  "results": [
+    {
+      "context": 0,
+      "condition": "intact",
+      "complete": true,
+      "count_checks": {
+        "CA1_Pyramidal": {
+          "rk40": 0,
+          "rk80": 0,
+          "relative_difference": 0.0,
+          "pass": true
+        },
+        "CA1_Basket": {
+          "rk40": 46,
+          "rk80": 46,
+          "relative_difference": 0.0,
+          "pass": true
+        },
+        "CA1_Bistratified": {
+          "rk40": 3914,
+          "rk80": 3914,
+          "relative_difference": 0.0,
+          "pass": true
+        }
+      },
+      "voltage_feature_RMS_difference_mV": 0.0010680929426116477,
+      "voltage_RMS_le_0p5mV": true,
+      "latency_check": true,
+      "pass": true
+    },
+    {
+      "context": 0,
+      "condition": "blocked",
+      "complete": true,
+      "count_checks": {
+        "CA1_Pyramidal": {
+          "rk40": 0,
+          "rk80": 0,
+          "relative_difference": 0.0,
+          "pass": true
+        },
+        "CA1_Basket": {
+          "rk40": 0,
+          "rk80": 0,
+          "relative_difference": 0.0,
+          "pass": true
+        },
+        "CA1_Bistratified": {
+          "rk40": 0,
+          "rk80": 0,
+          "relative_difference": 0.0,
+          "pass": true
+        }
+      },
+      "voltage_feature_RMS_difference_mV": 0.001247830258395802,
+      "voltage_RMS_le_0p5mV": true,
+      "latency_check": true,
+      "pass": true
+    },
+    {
+      "context": 0,
+      "condition": "scrambled",
+      "complete": true,
+      "count_checks": {
+        "CA1_Pyramidal": {
+          "rk40": 0,
+          "rk80": 0,
+          "relative_difference": 0.0,
+          "pass": true
+        },
+        "CA1_Basket": {
+          "rk40": 42,
+          "rk80": 40,
+          "relative_difference": 0.047619047619047616,
+          "pass": true
+        },
+        "CA1_Bistratified": {
+          "rk40": 3919,
+          "rk80": 3919,
+          "relative_difference": 0.0,
+          "pass": true
+        }
+      },
+      "voltage_feature_RMS_difference_mV": 0.002722974535380528,
+      "voltage_RMS_le_0p5mV": true,
+      "latency_check": true,
+      "pass": true
+    },
+    {
+      "context": 1,
+      "condition": "intact",
+      "complete": true,
+      "count_checks": {
+        "CA1_Pyramidal": {
+          "rk40": 640,
+          "rk80": 640,
+          "relative_difference": 0.0,
+          "pass": true
+        },
+        "CA1_Basket": {
+          "rk40": 4095,
+          "rk80": 4095,
+          "relative_difference": 0.0,
+          "pass": true
+        },
+        "CA1_Bistratified": {
+          "rk40": 10171,
+          "rk80": 10235,
+          "relative_difference": 0.006253053248656571,
+          "pass": true
+        }
+      },
+      "voltage_feature_RMS_difference_mV": 0.20011097323759644,
+      "voltage_RMS_le_0p5mV": true,
+      "latency_check": true,
+      "pass": true
+    },
+    {
+      "context": 1,
+      "condition": "blocked",
+      "complete": true,
+      "count_checks": {
+        "CA1_Pyramidal": {
+          "rk40": 640,
+          "rk80": 640,
+          "relative_difference": 0.0,
+          "pass": true
+        },
+        "CA1_Basket": {
+          "rk40": 4095,
+          "rk80": 4095,
+          "relative_difference": 0.0,
+          "pass": true
+        },
+        "CA1_Bistratified": {
+          "rk40": 10166,
+          "rk80": 10227,
+          "relative_difference": 0.005964603500537792,
+          "pass": true
+        }
+      },
+      "voltage_feature_RMS_difference_mV": 0.1807325571341523,
+      "voltage_RMS_le_0p5mV": true,
+      "latency_check": true,
+      "pass": true
+    },
+    {
+      "context": 1,
+      "condition": "scrambled",
+      "complete": true,
+      "count_checks": {
+        "CA1_Pyramidal": {
+          "rk40": 640,
+          "rk80": 640,
+          "relative_difference": 0.0,
+          "pass": true
+        },
+        "CA1_Basket": {
+          "rk40": 4095,
+          "rk80": 4095,
+          "relative_difference": 0.0,
+          "pass": true
+        },
+        "CA1_Bistratified": {
+          "rk40": 10172,
+          "rk80": 10230,
+          "relative_difference": 0.005669599217986315,
+          "pass": true
+        }
+      },
+      "voltage_feature_RMS_difference_mV": 0.18034317659182947,
+      "voltage_RMS_le_0p5mV": true,
+      "latency_check": true,
+      "pass": true
+    }
+  ],
+  "criteria": "5% count difference (<=1 tolerated only if bothcounts<=1); pyramidal first latency<=1ms; baseline-subtracted four-window voltage features RMSdifference<=0.5mV. Same replay and seed20 at both precisions."
+}

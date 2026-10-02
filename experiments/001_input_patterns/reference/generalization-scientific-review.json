@@ -1,0 +1,27 @@
+{
+  "reviewed_utc": "2026-10-01T23:56:11.272023+00:00",
+  "evidence_sha256": {
+    "generalization-results.json": "faf65b15b8ff074f3094f597380afa216312c992e392b88a5418ef00c3c12b22",
+    "extended-experiment-audit.json": "8b5091d4aee99fe8b58d236b79e09818a0c8657057c3fe77d57914d39ead098e",
+    "stimuli/generalization/configuration.json": "ea152d5b4644f9245e94c608aeb14459e9f042fb384c8ed0710dbeb2af80da2b",
+    "analyze_generalization.py": "aea06daea2c86630e8856a704ec8f3dda448859af5637e71a94c1429f190b8b1"
+  },
+  "coverage": {
+    "core_trials": 120,
+    "matched_readouts": 360,
+    "score_rows": 90,
+    "core_population_response_rows": 600,
+    "paired_effects": 24,
+    "input_positive_controls": 30
+  },
+  "all_primary_spike_scores_chance": true,
+  "all_input_positive_controls_pass": true,
+  "interpretation": [
+    "Fixed nominal centroids; no training on unseen inputs.",
+    "Small pattern change without CA3: intact/blocked/scrambled voltage accuracies100/95/55%; paired intact-minus-scrambled45points[35,50], intact-minus-blocked5points[0,15]. Preserved inhibitory streams can convey the class.",
+    "Larger pattern changes do not retain a consistent intact advantage; both new CA3 delays yield50%voltage accuracy for every condition.",
+    "Five model networks, not animal replicates. New timing comparisons also change jitter. No social recognition or learned memory task is modeled.",
+    "Aggregate graph-count signatures support reset/topology checks but are not individual-edge hashes.",
+    "Successful execution and file audits do not resolve the failed gain150 numerical spot check or validate CA1 biological responses."
+  ]
+}

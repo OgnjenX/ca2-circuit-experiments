@@ -1,0 +1,456 @@
+{
+  "status": "exploratory pilot; independent-seed confirmatory testing still required",
+  "trials": [
+    {
+      "trial": 0,
+      "identity": 1,
+      "CA3_context": 0,
+      "start_ms": 500,
+      "response_end_ms": 700,
+      "pulse_count": 5,
+      "pulse_interval_ms": 10
+    },
+    {
+      "trial": 1,
+      "identity": 0,
+      "CA3_context": 0,
+      "start_ms": 800,
+      "response_end_ms": 1000,
+      "pulse_count": 5,
+      "pulse_interval_ms": 10
+    },
+    {
+      "trial": 2,
+      "identity": 1,
+      "CA3_context": 1,
+      "start_ms": 1100,
+      "response_end_ms": 1300,
+      "pulse_count": 5,
+      "pulse_interval_ms": 10
+    },
+    {
+      "trial": 3,
+      "identity": 1,
+      "CA3_context": 0,
+      "start_ms": 1400,
+      "response_end_ms": 1600,
+      "pulse_count": 5,
+      "pulse_interval_ms": 10
+    },
+    {
+      "trial": 4,
+      "identity": 0,
+      "CA3_context": 1,
+      "start_ms": 1700,
+      "response_end_ms": 1900,
+      "pulse_count": 5,
+      "pulse_interval_ms": 10
+    },
+    {
+      "trial": 5,
+      "identity": 0,
+      "CA3_context": 1,
+      "start_ms": 2000,
+      "response_end_ms": 2200,
+      "pulse_count": 5,
+      "pulse_interval_ms": 10
+    },
+    {
+      "trial": 6,
+      "identity": 1,
+      "CA3_context": 1,
+      "start_ms": 2300,
+      "response_end_ms": 2500,
+      "pulse_count": 5,
+      "pulse_interval_ms": 10
+    },
+    {
+      "trial": 7,
+      "identity": 0,
+      "CA3_context": 1,
+      "start_ms": 2600,
+      "response_end_ms": 2800,
+      "pulse_count": 5,
+      "pulse_interval_ms": 10
+    },
+    {
+      "trial": 8,
+      "identity": 0,
+      "CA3_context": 0,
+      "start_ms": 2900,
+      "response_end_ms": 3100,
+      "pulse_count": 5,
+      "pulse_interval_ms": 10
+    },
+    {
+      "trial": 9,
+      "identity": 1,
+      "CA3_context": 0,
+      "start_ms": 3200,
+      "response_end_ms": 3400,
+      "pulse_count": 5,
+      "pulse_interval_ms": 10
+    },
+    {
+      "trial": 10,
+      "identity": 0,
+      "CA3_context": 0,
+      "start_ms": 3500,
+      "response_end_ms": 3700,
+      "pulse_count": 5,
+      "pulse_interval_ms": 10
+    },
+    {
+      "trial": 11,
+      "identity": 1,
+      "CA3_context": 1,
+      "start_ms": 3800,
+      "response_end_ms": 4000,
+      "pulse_count": 5,
+      "pulse_interval_ms": 10
+    }
+  ],
+  "conditions": {
+    "intact": {
+      "CA1_spikes": 2682,
+      "trial_window_spikes": [
+        0,
+        380,
+        505,
+        0,
+        256,
+        133,
+        510,
+        127,
+        0,
+        0,
+        0,
+        650
+      ],
+      "identity_LOO_by_context": {
+        "0": {
+          "accuracy": 0.5833333333333334,
+          "predictions": [
+            {
+              "trial": 0,
+              "identity": 1,
+              "prediction": 1,
+              "correct": 1
+            },
+            {
+              "trial": 1,
+              "identity": 0,
+              "prediction": "tie",
+              "correct": 0.5
+            },
+            {
+              "trial": 3,
+              "identity": 1,
+              "prediction": 1,
+              "correct": 1
+            },
+            {
+              "trial": 8,
+              "identity": 0,
+              "prediction": 1,
+              "correct": 0
+            },
+            {
+              "trial": 9,
+              "identity": 1,
+              "prediction": 1,
+              "correct": 1
+            },
+            {
+              "trial": 10,
+              "identity": 0,
+              "prediction": 1,
+              "correct": 0
+            }
+          ],
+          "note": "Exploratory leave-one-trial-out nearest-centroid result, no tuning. Small samples and adaptation mean this is not confirmatory performance; ties count as chance."
+        },
+        "1": {
+          "accuracy": 0.6666666666666666,
+          "predictions": [
+            {
+              "trial": 2,
+              "identity": 1,
+              "prediction": 0,
+              "correct": 0
+            },
+            {
+              "trial": 4,
+              "identity": 0,
+              "prediction": 0,
+              "correct": 1
+            },
+            {
+              "trial": 5,
+              "identity": 0,
+              "prediction": 0,
+              "correct": 1
+            },
+            {
+              "trial": 6,
+              "identity": 1,
+              "prediction": 0,
+              "correct": 0
+            },
+            {
+              "trial": 7,
+              "identity": 0,
+              "prediction": 0,
+              "correct": 1
+            },
+            {
+              "trial": 11,
+              "identity": 1,
+              "prediction": 1,
+              "correct": 1
+            }
+          ],
+          "note": "Exploratory leave-one-trial-out nearest-centroid result, no tuning. Small samples and adaptation mean this is not confirmatory performance; ties count as chance."
+        }
+      }
+    },
+    "blocked": {
+      "CA1_spikes": 1327,
+      "trial_window_spikes": [
+        0,
+        0,
+        384,
+        0,
+        256,
+        171,
+        132,
+        128,
+        0,
+        0,
+        0,
+        256
+      ],
+      "identity_LOO_by_context": {
+        "0": {
+          "accuracy": 0.5,
+          "predictions": [
+            {
+              "trial": 0,
+              "identity": 1,
+              "prediction": "tie",
+              "correct": 0.5
+            },
+            {
+              "trial": 1,
+              "identity": 0,
+              "prediction": "tie",
+              "correct": 0.5
+            },
+            {
+              "trial": 3,
+              "identity": 1,
+              "prediction": "tie",
+              "correct": 0.5
+            },
+            {
+              "trial": 8,
+              "identity": 0,
+              "prediction": "tie",
+              "correct": 0.5
+            },
+            {
+              "trial": 9,
+              "identity": 1,
+              "prediction": "tie",
+              "correct": 0.5
+            },
+            {
+              "trial": 10,
+              "identity": 0,
+              "prediction": "tie",
+              "correct": 0.5
+            }
+          ],
+          "note": "Exploratory leave-one-trial-out nearest-centroid result, no tuning. Small samples and adaptation mean this is not confirmatory performance; ties count as chance."
+        },
+        "1": {
+          "accuracy": 0.5,
+          "predictions": [
+            {
+              "trial": 2,
+              "identity": 1,
+              "prediction": 1,
+              "correct": 1
+            },
+            {
+              "trial": 4,
+              "identity": 0,
+              "prediction": 1,
+              "correct": 0
+            },
+            {
+              "trial": 5,
+              "identity": 0,
+              "prediction": 0,
+              "correct": 1
+            },
+            {
+              "trial": 6,
+              "identity": 1,
+              "prediction": 0,
+              "correct": 0
+            },
+            {
+              "trial": 7,
+              "identity": 0,
+              "prediction": 0,
+              "correct": 1
+            },
+            {
+              "trial": 11,
+              "identity": 1,
+              "prediction": 0,
+              "correct": 0
+            }
+          ],
+          "note": "Exploratory leave-one-trial-out nearest-centroid result, no tuning. Small samples and adaptation mean this is not confirmatory performance; ties count as chance."
+        }
+      }
+    },
+    "scrambled": {
+      "CA1_spikes": 2687,
+      "trial_window_spikes": [
+        0,
+        382,
+        502,
+        0,
+        256,
+        133,
+        512,
+        127,
+        0,
+        0,
+        0,
+        653
+      ],
+      "identity_LOO_by_context": {
+        "0": {
+          "accuracy": 0.5833333333333334,
+          "predictions": [
+            {
+              "trial": 0,
+              "identity": 1,
+              "prediction": 1,
+              "correct": 1
+            },
+            {
+              "trial": 1,
+              "identity": 0,
+              "prediction": "tie",
+              "correct": 0.5
+            },
+            {
+              "trial": 3,
+              "identity": 1,
+              "prediction": 1,
+              "correct": 1
+            },
+            {
+              "trial": 8,
+              "identity": 0,
+              "prediction": 1,
+              "correct": 0
+            },
+            {
+              "trial": 9,
+              "identity": 1,
+              "prediction": 1,
+              "correct": 1
+            },
+            {
+              "trial": 10,
+              "identity": 0,
+              "prediction": 1,
+              "correct": 0
+            }
+          ],
+          "note": "Exploratory leave-one-trial-out nearest-centroid result, no tuning. Small samples and adaptation mean this is not confirmatory performance; ties count as chance."
+        },
+        "1": {
+          "accuracy": 0.6666666666666666,
+          "predictions": [
+            {
+              "trial": 2,
+              "identity": 1,
+              "prediction": 0,
+              "correct": 0
+            },
+            {
+              "trial": 4,
+              "identity": 0,
+              "prediction": 0,
+              "correct": 1
+            },
+            {
+              "trial": 5,
+              "identity": 0,
+              "prediction": 0,
+              "correct": 1
+            },
+            {
+              "trial": 6,
+              "identity": 1,
+              "prediction": 0,
+              "correct": 0
+            },
+            {
+              "trial": 7,
+              "identity": 0,
+              "prediction": 0,
+              "correct": 1
+            },
+            {
+              "trial": 11,
+              "identity": 1,
+              "prediction": 1,
+              "correct": 1
+            }
+          ],
+          "note": "Exploratory leave-one-trial-out nearest-centroid result, no tuning. Small samples and adaptation mean this is not confirmatory performance; ties count as chance."
+        }
+      }
+    }
+  },
+  "core": {
+    "pyramidal_spikes": 437712,
+    "trial_window_spikes": [
+      4042,
+      78946,
+      72022,
+      0,
+      6797,
+      0,
+      93979,
+      400,
+      0,
+      0,
+      0,
+      108431
+    ],
+    "trial_rate_Hz_per_cell": [
+      1.0661531968769782,
+      20.823485967503693,
+      18.99715129774214,
+      0.0,
+      1.7928360413589364,
+      0.0,
+      24.78872124920869,
+      0.10550749103186326,
+      0.0,
+      0.0,
+      0.0,
+      28.600706900189913
+    ]
+  },
+  "validity_warning": "300ms spacing yielded large carryover and silent trial windows. This pilot cannot support an identity-specific or social-memory conclusion; redesign uses separately reset trials."
+}

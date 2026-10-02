@@ -1,0 +1,175 @@
+{
+  "objective": "Reproducible, experimentally grounded CA2-centered circuit experiment with scientifically interpretable, evidence-bounded results",
+  "reviewed_utc": "2026-10-02T00:01:52.331863+00:00",
+  "completion_supported": true,
+  "requirements": [
+    {
+      "requirement": "Experimentally grounded CA2-centered circuit and explicit defaults",
+      "evidence": [
+        "circuit-source-audit.json",
+        "export-consistency-audit.json",
+        "nominal-parameter-classification.json",
+        "methods.txt"
+      ],
+      "verified": "14 exported types and87connectionrows;51implementedrows including25default flags; missing pathways and fitted point-neuron parameters disclosed."
+    },
+    {
+      "requirement": "Installed simulator executes on the local NVIDIA GPU",
+      "evidence": [
+        "backend-source-provenance.json",
+        "runs/reset-task-v1/seed31-ctx0-id0-rep0/core/results/carlsim.log"
+      ],
+      "verified": "Archived source commit, all3library hashes and modified source hashes match; runtime log records1GPU/0CPU; native architecture/runtime limitations disclosed."
+    },
+    {
+      "requirement": "Defined task, frozen protocol, state reset and matched interventions",
+      "evidence": [
+        "frozen-task-protocol.json",
+        "nominal-experiment-audit.json",
+        "extended-experiment-audit.json",
+        "readout-training-scope.json"
+      ],
+      "verified": "14frozenhashes unchanged;80nominalcore/240readouts plus208extendedcore/1344readouts independently audited. Every replay stream reconstructed; configurations and complete raw outputs checked.",
+      "limit": "Aggregate graph signatures are not individual-edge hashes; output blocking is not a whole-cell lesion."
+    },
+    {
+      "requirement": "Held-out primary/secondary measures, input control and null results",
+      "evidence": [
+        "reset-task-results.json",
+        "secondary-voltage-results.json",
+        "generalization-results.json"
+      ],
+      "verified": "Five network seeds; primary chance outcomes retained;10nominal and30unseen input controls100%/countcontrol50%; paired bootstrap and1000label-permutation diagnostics retained."
+    },
+    {
+      "requirement": "Response dynamics and population comparisons",
+      "evidence": [
+        "response-dynamics-results.json",
+        "context-response-results.json",
+        "generalization-results.json",
+        "figures/response-dynamics.png"
+      ],
+      "verified": "Rates, latencies, responsive fractions, similarity and class separation cover all5CA2types; silent populations retained as missing where undefined."
+    },
+    {
+      "requirement": "Sensitivity to parameters and numerical precision",
+      "evidence": [
+        "sensitivity-results.json",
+        "variant-precision-results.json",
+        "readout-precision40vs80-results.json"
+      ],
+      "verified": "All prospectively specified parameter/output/precision variants and matched controls completed;7/8spot checks meet tolerance; failed gain150case retained.",
+      "limit": "Core parameter screens use one network; voltage effects are conditional and numerically fragile."
+    },
+    {
+      "requirement": "Unseen input patterns and timing with fixed readout",
+      "evidence": [
+        "generalization-results.json",
+        "generalization-scientific-review.json"
+      ],
+      "verified": "120newcoretrials/360readouts across5networks; nominal centroids never retrained on new test data;6cases retain nulls and selective voltage generalization."
+    },
+    {
+      "requirement": "Physiology calibration distinguished from validation",
+      "evidence": [
+        "pyramidal-calibration-results.json",
+        "pyramidal-train-validation-results.json",
+        "ca1-adequacy-results.json"
+      ],
+      "verified": "Calibration targets and held-out train checks archived; failed defaults and mismatched CA1subthreshold check disclosed.",
+      "limit": "CA1biological adequacy remains unestablished; no animal function claim follows."
+    },
+    {
+      "requirement": "Reproducible configuration, raw records, analyses and scientific figures",
+      "evidence": [
+        "artifact-manifest.json",
+        "REPRODUCE.txt",
+        "reproduction-copy-validation.json"
+      ],
+      "verified": "40217 inventoried files rehashed; isolated fresh copy verified inputs, frozen hashes and dependencies.",
+      "limit": "No second full GPU rerun; rerun uses this archived implementation and the installed CUDA-compatible runtime."
+    },
+    {
+      "requirement": "Inspectable report and bounded scientific conclusion",
+      "evidence": [
+        "output/pdf/ca2-scientific-experiment.pdf",
+        "report-visual-review.json"
+      ],
+      "verified": "Seven rendered pages reviewed; effect sizes and limitations agree with actual analyses; reports numerical failure and downstream biological-validation limits."
+    }
+  ],
+  "nominal_input_positive_controls": [
+    {
+      "seed": 31,
+      "context": 0,
+      "input_identity_accuracy": 1.0,
+      "total_count_accuracy": 0.5
+    },
+    {
+      "seed": 31,
+      "context": 1,
+      "input_identity_accuracy": 1.0,
+      "total_count_accuracy": 0.5
+    },
+    {
+      "seed": 32,
+      "context": 0,
+      "input_identity_accuracy": 1.0,
+      "total_count_accuracy": 0.5
+    },
+    {
+      "seed": 32,
+      "context": 1,
+      "input_identity_accuracy": 1.0,
+      "total_count_accuracy": 0.5
+    },
+    {
+      "seed": 33,
+      "context": 0,
+      "input_identity_accuracy": 1.0,
+      "total_count_accuracy": 0.5
+    },
+    {
+      "seed": 33,
+      "context": 1,
+      "input_identity_accuracy": 1.0,
+      "total_count_accuracy": 0.5
+    },
+    {
+      "seed": 34,
+      "context": 0,
+      "input_identity_accuracy": 1.0,
+      "total_count_accuracy": 0.5
+    },
+    {
+      "seed": 34,
+      "context": 1,
+      "input_identity_accuracy": 1.0,
+      "total_count_accuracy": 0.5
+    },
+    {
+      "seed": 35,
+      "context": 0,
+      "input_identity_accuracy": 1.0,
+      "total_count_accuracy": 0.5
+    },
+    {
+      "seed": 35,
+      "context": 1,
+      "input_identity_accuracy": 1.0,
+      "total_count_accuracy": 0.5
+    }
+  ],
+  "inventory_sha256": "6f930679215d075e6e7e6ecb152bfa204e171cbe1c0e992cac9621abeb022220",
+  "all_inventoried_files_rehashed": 40217,
+  "total_verified_core_runs": 288,
+  "total_verified_readouts": 1584,
+  "unresolved_scientific_limits": [
+    "One gain150numerical spot check fails tolerance.",
+    "CA1downstream assay lacks matched biological validation.",
+    "CA3-associated suppression reverses when fitted inhibitory gain is halved.",
+    "Voltage effects depend on assumptions and input conditions.",
+    "No social learning, behavioral validation or general animal function established."
+  ],
+  "completion_meaning": "The planned controlled experiment, checks and bounded report are complete. Failed biological/numerical tests are results and limitations, not successes."
+}

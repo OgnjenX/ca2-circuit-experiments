@@ -1,0 +1,66 @@
+{
+  "pass": true,
+  "results": [
+    {
+      "seed": 31,
+      "context": 0,
+      "cell_pattern_accuracy": 1.0,
+      "aggregate_count_accuracy": 0.5
+    },
+    {
+      "seed": 31,
+      "context": 1,
+      "cell_pattern_accuracy": 1.0,
+      "aggregate_count_accuracy": 0.5
+    },
+    {
+      "seed": 32,
+      "context": 0,
+      "cell_pattern_accuracy": 1.0,
+      "aggregate_count_accuracy": 0.5
+    },
+    {
+      "seed": 32,
+      "context": 1,
+      "cell_pattern_accuracy": 1.0,
+      "aggregate_count_accuracy": 0.5
+    },
+    {
+      "seed": 33,
+      "context": 0,
+      "cell_pattern_accuracy": 1.0,
+      "aggregate_count_accuracy": 0.5
+    },
+    {
+      "seed": 33,
+      "context": 1,
+      "cell_pattern_accuracy": 1.0,
+      "aggregate_count_accuracy": 0.5
+    },
+    {
+      "seed": 34,
+      "context": 0,
+      "cell_pattern_accuracy": 1.0,
+      "aggregate_count_accuracy": 0.5
+    },
+    {
+      "seed": 34,
+      "context": 1,
+      "cell_pattern_accuracy": 1.0,
+      "aggregate_count_accuracy": 0.5
+    },
+    {
+      "seed": 35,
+      "context": 0,
+      "cell_pattern_accuracy": 1.0,
+      "aggregate_count_accuracy": 0.5
+    },
+    {
+      "seed": 35,
+      "context": 1,
+      "cell_pattern_accuracy": 1.0,
+      "aggregate_count_accuracy": 0.5
+    }
+  ],
+  "meaning": "Frozen feature extraction and classifier identify prescribed patterns perfectly, while equal total counts contain no identity label. This checks task and analysis validity, not brain physiology."
+}

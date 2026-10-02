@@ -1,0 +1,23 @@
+{
+  "primary-decoding": [
+    "reset-task-results.json",
+    "per_seed_context_condition.heldout_accuracy"
+  ],
+  "secondary-decoding": [
+    "secondary-voltage-results.json",
+    "per_seed_context_condition.accuracy"
+  ],
+  "physiology-report": [
+    "pyramidal-train-validation-results.json",
+    "results.*.fitted.mean_voltage_trace"
+  ],
+  "sensitivity-effects": [
+    "sensitivity-results.json",
+    "variants.*.paired_effects.intact_minus_scrambled"
+  ],
+  "notes": [
+    "Five model-network points, not animal replicates.",
+    "Single-network sensitivity has no confidence interval; square points denote n1.",
+    "Intervals are descriptive network bootstraps; not biological parameter confidence intervals."
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "complete": true,
+  "copied_workspace": "/tmp/ca2-final-reproduction-validation",
+  "frozen_hashes_checked": 14,
+  "nominal_input_files_checked": 160,
+  "new_input_audit": {
+    "complete": true,
+    "trials": 120,
+    "checks": "Exact file hashes, five events per active cell, timing bounds, matched active counts, fixed nominal input decoder and total count negative control.",
+    "positive_controls": [
+      {
+        "network_seed": 31,
+        "group": "delay15",
+        "context": 1,
+        "input_accuracy": 1.0,
+        "total_count_accuracy": 0.5
+      },
+      {
+        "network_seed": 31,
+        "group": "delay35",
+        "context": 1,
+        "input_accuracy": 1.0,
+        "total_count_accuracy": 0.5
+      },
+      {
+        "network_seed": 31,
+        "group": "pattern10",
+        "context": 0,
+        "input_accuracy": 1.0,
+        "total_count_accuracy": 0.5
+      },
+      {
+        "network_seed": 31,
+        "group": "pattern10",
+        "context": 1,
+        "input_accuracy": 1.0,
+        "total_count_accuracy": 0.5
+      },
+      {
+        "network_seed": 31,
+        "group": "pattern50",
+        "context": 0,
+        "input_accuracy": 1.0,
+        "total_count_accuracy": 0.5
+      },
+      {
+        "network_seed": 31,
+        "group": "pattern50",
+        "context": 1,
+        "input_accuracy": 1.0,
+        "total_count_accuracy": 0.5
+      },
+      {
+        "network_seed": 32,
+        "group": "delay15",
+        "context": 1,
+        "input_accuracy": 1.0,
+        "total_count_accuracy": 0.5
+      },
+      {
+        "network_seed": 32,
+        "group": "delay35",
+        "context": 1,
+        "input_accuracy": 1.0,
+        "total_count_accuracy": 0.5
+      },
+      {
+        "network_seed": 32,
+        "group": "pattern10",
+        "context": 0,
+        "input_accuracy": 1.0,
+        "total_count_accuracy": 0.5
+      },
+      {
+        "network_seed": 32,
+        "group": "pattern10",
+        "context": 1,
+        "input_accuracy": 1.0,
+        "total_count_accuracy": 0.5
+      },
+      {
+        "network_seed": 32,
+        "group": "pattern50",
+        "context": 0,
+        "input_accuracy": 1.0,
+        "total_count_accuracy": 0.5
+      },
+      {
+        "network_seed": 32,
+        "group": "pattern50",
+        "context": 1,
+        "input_accuracy": 1.0,
+        "total_count_accuracy": 0.5
+      },
+      {
+        "network_seed": 33,
+        "group": "delay15",
+        "context": 1,
+        "input_accuracy": 1.0,
+        "total_count_accuracy": 0.5
+      },
+      {
+        "network_seed": 33,
+        "group": "delay35",
+        "context": 1,
+        "input_accuracy": 1.0,
+        "total_count_accuracy": 0.5
+      },
+      {
+        "network_seed": 33,
+        "group": "pattern10",
+        "context": 0,
+        "input_accuracy": 1.0,
+        "total_count_accuracy": 0.5
+      },
+      {
+        "network_seed": 33,
+        "group": "pattern10",
+        "context": 1,
+        "input_accuracy": 1.0,
+        "total_count_accuracy": 0.5
+      },
+      {
+        "network_seed": 33,
+        "group": "pattern50",
+        "context": 0,
+        "input_accuracy": 1.0,
+        "total_count_accuracy": 0.5
+      },
+      {
+        "network_seed": 33,
+        "group": "pattern50",
+        "context": 1,
+        "input_accuracy": 1.0,
+        "total_count_accuracy": 0.5
+      },
+      {
+        "network_seed": 34,
+        "group": "delay15",
+        "context": 1,
+        "input_accuracy": 1.0,
+        "total_count_accuracy": 0.5
+      },
+      {
+        "network_seed": 34,
+        "group": "delay35",
+        "context": 1,
+        "input_accuracy": 1.0,
+        "total_count_accuracy": 0.5
+      },
+      {
+        "network_seed": 34,
+        "group": "pattern10",
+        "context": 0,
+        "input_accuracy": 1.0,
+        "total_count_accuracy": 0.5
+      },
+      {
+        "network_seed": 34,
+        "group": "pattern10",
+        "context": 1,
+        "input_accuracy": 1.0,
+        "total_count_accuracy": 0.5
+      },
+      {
+        "network_seed": 34,
+        "group": "pattern50",
+        "context": 0,
+        "input_accuracy": 1.0,
+        "total_count_accuracy": 0.5
+      },
+      {
+        "network_seed": 34,
+        "group": "pattern50",
+        "context": 1,
+        "input_accuracy": 1.0,
+        "total_count_accuracy": 0.5
+      },
+      {
+        "network_seed": 35,
+        "group": "delay15",
+        "context": 1,
+        "input_accuracy": 1.0,
+        "total_count_accuracy": 0.5
+      },
+      {
+        "network_seed": 35,
+        "group": "delay35",
+        "context": 1,
+        "input_accuracy": 1.0,
+        "total_count_accuracy": 0.5
+      },
+      {
+        "network_seed": 35,
+        "group": "pattern10",
+        "context": 0,
+        "input_accuracy": 1.0,
+        "total_count_accuracy": 0.5
+      },
+      {
+        "network_seed": 35,
+        "group": "pattern10",
+        "context": 1,
+        "input_accuracy": 1.0,
+        "total_count_accuracy": 0.5
+      },
+      {
+        "network_seed": 35,
+        "group": "pattern50",
+        "context": 0,
+        "input_accuracy": 1.0,
+        "total_count_accuracy": 0.5
+      },
+      {
+        "network_seed": 35,
+        "group": "pattern50",
+        "context": 1,
+        "input_accuracy": 1.0,
+        "total_count_accuracy": 0.5
+      }
+    ],
+    "configuration_sha256": "ea152d5b4644f9245e94c608aeb14459e9f042fb384c8ed0710dbeb2af80da2b"
+  },
+  "fresh_task_outputs_and_completion_markers_absent": true,
+  "historical_references_separate": true,
+  "shared_library_resolution": "\tlinux-vdso.so.1 (0x000075dba917d000)\n\tlibcurand.so.10 => /usr/lib/x86_64-linux-gnu/libcurand.so.10 (0x000075dba2c00000)\n\tlibcudart.so.12 => /usr/lib/x86_64-linux-gnu/libcudart.so.12 (0x000075dba2800000)\n\tlibstdc++.so.6 => /usr/lib/x86_64-linux-gnu/libstdc++.so.6 (0x000075dba2400000)\n\tlibm.so.6 => /usr/lib/x86_64-linux-gnu/libm.so.6 (0x000075dba2ada000)\n\tlibgcc_s.so.1 => /usr/lib/x86_64-linux-gnu/libgcc_s.so.1 (0x000075dba27d2000)\n\tlibc.so.6 => /usr/lib/x86_64-linux-gnu/libc.so.6 (0x000075dba2000000)\n\tlibrt.so.1 => /usr/lib/x86_64-linux-gnu/librt.so.1 (0x000075dba2ad5000)\n\tlibpthread.so.0 => /usr/lib/x86_64-linux-gnu/libpthread.so.0 (0x000075dba2ad0000)\n\tlibdl.so.2 => /usr/lib/x86_64-linux-gnu/libdl.so.2 (0x000075dba2acb000)\n\t/lib64/ld-linux-x86-64.so.2 (0x000075dba917f000)\n",
+  "python_runtime": "/home/ognjen/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "runtime_modules_imported": [
+    "numpy",
+    "reportlab",
+    "PIL"
+  ],
+  "limits": "Copy, input hashes, prerequisites and fresh-state layout verified. No secondGPUbatch or fullindependent simulation rerunwasperformed.",
+  "reviewed_utc": "2026-10-02T00:01:34.466203+00:00",
+  "fresh_review_records_absent": true
+}

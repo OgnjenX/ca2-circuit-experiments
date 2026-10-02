@@ -1,0 +1,14 @@
+{
+  "status": "Declared before assay results; no nominal parameter change",
+  "purpose": "Independent downstream model adequacy check, not tuning to obtain a preferred identity effect.",
+  "reference": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2905041/",
+  "reference_CA1_SC_EPSP_mV": 17.5,
+  "reference_SEM_mV": 2.6,
+  "reference_n": 8,
+  "reference_condition": "Figure3singleSC16V, inhibition blocked, cells held at-73mV.",
+  "model_condition": "Same1940afferents selected against CA2singleSCexcitation, a singlepulse50ms, noCA2streams; CA1pointmodel retained, seed20excluded, RK4steps40, duration250ms; compareintact versusremovalofallinhibitoryinputtoCA1pyramidal targets.",
+  "baseline_limit": "No voltage-clamp or holding-current fit; model initializes at exportedrestnear-69.36mV. Compare cautiously, not an exact matchedslice replication.",
+  "eligibility": "An EPSP amplitude is compared only if all target cells remain subthreshold; if spiking occurs, report failure of a subthreshold-assay comparison and do not call spike peaks EPSPs.",
+  "interpretation": "This check tests whether a common source-calibrated stimulus also gives appropriate downstream drive. Failure limits inference about realCA2function; no fittedparameter will be silently changed.",
+  "driver": "Separate model/ca1-adequacy binary; gainargument applies only to4inhibitory-to-CA1pyramidal connections in readout mode."
+}

@@ -1,0 +1,8 @@
+{
+  "status": "Recorded before nominal test-set decoder outcomes",
+  "readout": "Replay all nominal80trials and3controls at80substeps/ms, keeping core40output fixed. Repeat identical spike and secondaryvoltage classifiers and splits.",
+  "core": "At preselectedseed31, repeat16coretasktrials at80substeps/ms and all3readouts at80substeps. Compare with nominal40core/40readout.",
+  "purpose": "Small voltage information may be below a broad0.5mV RMS numerical tolerance. Test actual inferred effects and classifiers, not only aggregate counts.",
+  "interpretation": "Report effect changes and per-seed values at both precisions. If a secondary voltage effect changes direction or loses identity discrimination, label it numerically fragile; do not promote it to a biological finding.",
+  "primary_unchanged": "Frozen spike decoder remains primary; higherprecisionchecks are sensitivity, not a convenient replacement nominal result."
+}

@@ -1,0 +1,282 @@
+{
+  "prespecified_secondary_measure": true,
+  "per_seed_context_condition": [
+    {
+      "seed": 31,
+      "context": 0,
+      "condition": "intact",
+      "accuracy": 1.0
+    },
+    {
+      "seed": 31,
+      "context": 0,
+      "condition": "blocked",
+      "accuracy": 1.0
+    },
+    {
+      "seed": 31,
+      "context": 0,
+      "condition": "scrambled",
+      "accuracy": 0.5
+    },
+    {
+      "seed": 31,
+      "context": 1,
+      "condition": "intact",
+      "accuracy": 1.0
+    },
+    {
+      "seed": 31,
+      "context": 1,
+      "condition": "blocked",
+      "accuracy": 0.75
+    },
+    {
+      "seed": 31,
+      "context": 1,
+      "condition": "scrambled",
+      "accuracy": 0.25
+    },
+    {
+      "seed": 32,
+      "context": 0,
+      "condition": "intact",
+      "accuracy": 1.0
+    },
+    {
+      "seed": 32,
+      "context": 0,
+      "condition": "blocked",
+      "accuracy": 1.0
+    },
+    {
+      "seed": 32,
+      "context": 0,
+      "condition": "scrambled",
+      "accuracy": 0.75
+    },
+    {
+      "seed": 32,
+      "context": 1,
+      "condition": "intact",
+      "accuracy": 0.5
+    },
+    {
+      "seed": 32,
+      "context": 1,
+      "condition": "blocked",
+      "accuracy": 0.5
+    },
+    {
+      "seed": 32,
+      "context": 1,
+      "condition": "scrambled",
+      "accuracy": 0.5
+    },
+    {
+      "seed": 33,
+      "context": 0,
+      "condition": "intact",
+      "accuracy": 1.0
+    },
+    {
+      "seed": 33,
+      "context": 0,
+      "condition": "blocked",
+      "accuracy": 1.0
+    },
+    {
+      "seed": 33,
+      "context": 0,
+      "condition": "scrambled",
+      "accuracy": 1.0
+    },
+    {
+      "seed": 33,
+      "context": 1,
+      "condition": "intact",
+      "accuracy": 0.5
+    },
+    {
+      "seed": 33,
+      "context": 1,
+      "condition": "blocked",
+      "accuracy": 0.5
+    },
+    {
+      "seed": 33,
+      "context": 1,
+      "condition": "scrambled",
+      "accuracy": 0.5
+    },
+    {
+      "seed": 34,
+      "context": 0,
+      "condition": "intact",
+      "accuracy": 1.0
+    },
+    {
+      "seed": 34,
+      "context": 0,
+      "condition": "blocked",
+      "accuracy": 1.0
+    },
+    {
+      "seed": 34,
+      "context": 0,
+      "condition": "scrambled",
+      "accuracy": 1.0
+    },
+    {
+      "seed": 34,
+      "context": 1,
+      "condition": "intact",
+      "accuracy": 0.5
+    },
+    {
+      "seed": 34,
+      "context": 1,
+      "condition": "blocked",
+      "accuracy": 0.5
+    },
+    {
+      "seed": 34,
+      "context": 1,
+      "condition": "scrambled",
+      "accuracy": 0.75
+    },
+    {
+      "seed": 35,
+      "context": 0,
+      "condition": "intact",
+      "accuracy": 1.0
+    },
+    {
+      "seed": 35,
+      "context": 0,
+      "condition": "blocked",
+      "accuracy": 1.0
+    },
+    {
+      "seed": 35,
+      "context": 0,
+      "condition": "scrambled",
+      "accuracy": 1.0
+    },
+    {
+      "seed": 35,
+      "context": 1,
+      "condition": "intact",
+      "accuracy": 0.25
+    },
+    {
+      "seed": 35,
+      "context": 1,
+      "condition": "blocked",
+      "accuracy": 0.0
+    },
+    {
+      "seed": 35,
+      "context": 1,
+      "condition": "scrambled",
+      "accuracy": 0.25
+    }
+  ],
+  "per_seed_accuracy": [
+    {
+      "seed": 31,
+      "intact": 1.0,
+      "blocked": 0.875,
+      "scrambled": 0.375
+    },
+    {
+      "seed": 32,
+      "intact": 0.75,
+      "blocked": 0.75,
+      "scrambled": 0.625
+    },
+    {
+      "seed": 33,
+      "intact": 0.75,
+      "blocked": 0.75,
+      "scrambled": 0.75
+    },
+    {
+      "seed": 34,
+      "intact": 0.75,
+      "blocked": 0.75,
+      "scrambled": 0.875
+    },
+    {
+      "seed": 35,
+      "intact": 0.625,
+      "blocked": 0.5,
+      "scrambled": 0.625
+    }
+  ],
+  "paired_effects": {
+    "intact_minus_blocked": {
+      "paired_seed_differences": [
+        0.125,
+        0.0,
+        0.0,
+        0.0,
+        0.125
+      ],
+      "mean_difference": 0.05,
+      "descriptive_bootstrap95_interval": [
+        0.0,
+        0.1
+      ]
+    },
+    "intact_minus_scrambled": {
+      "paired_seed_differences": [
+        0.625,
+        0.125,
+        0.0,
+        -0.125,
+        0.0
+      ],
+      "mean_difference": 0.125,
+      "descriptive_bootstrap95_interval": [
+        -0.05,
+        0.375
+      ]
+    }
+  },
+  "permutation_null": {
+    "intact": {
+      "observed_accuracy": 0.775,
+      "permutation95_range": [
+        0.325,
+        0.6506249999999995
+      ],
+      "one_sided_descriptive_p": 0.002997002997002997,
+      "permutations": 1000
+    },
+    "blocked": {
+      "observed_accuracy": 0.725,
+      "permutation95_range": [
+        0.375,
+        0.625
+      ],
+      "one_sided_descriptive_p": 0.002997002997002997,
+      "permutations": 1000
+    },
+    "scrambled": {
+      "observed_accuracy": 0.65,
+      "permutation95_range": [
+        0.35,
+        0.65
+      ],
+      "one_sided_descriptive_p": 0.03596403596403597,
+      "permutations": 1000
+    }
+  },
+  "limits": [
+    "Secondary voltage decoding does not replace the primary spike result.",
+    "Bootstrap describes five model networks, not animal uncertainty.",
+    "Voltage effects require numerical sensitivity checks and are not called spike transmission or social memory.",
+    "Permutation p values are descriptive without multiple-comparison adjustment."
+  ]
+}

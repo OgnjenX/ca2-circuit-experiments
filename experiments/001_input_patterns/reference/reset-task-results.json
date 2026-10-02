@@ -1,0 +1,4095 @@
+{
+  "protocol": {
+    "status": "frozen before confirmatory outcomes",
+    "frozen_utc": "2026-10-01T16:18:25.834992+00:00",
+    "executable_path": "model/circuit-task-v1",
+    "executable_sha256": "e3a10f779016451056bf5ca85e2c4c130be25df0c71a6116399e4e36a7cc37cc",
+    "substeps": 40,
+    "method": "RK4",
+    "duration_ms": 250,
+    "core": {
+      "CA2_types": 5,
+      "population_counts": {
+        "CA2_Pyramidal": 18956,
+        "CA2_Basket": 105,
+        "CA2_Wide_Arbor_Basket": 147,
+        "CA2_Bistratified": 79,
+        "CA2_SP_SR": 94
+      },
+      "inhibitory_gain": 100,
+      "gain_scope": "Only four CA2 inhibitory-to-pyramidal connections. All other exported weights retained.",
+      "GABAa_reversal_mV": -77.8,
+      "reversal_scope": "Simulator-wide GABAa reversal, including CA2 and CA1 interneuron synapses.",
+      "calibration_status": "Phenomenological inhibitory multiplier fitted to published single-pulse CA3 response. Reversal estimated from recipe, not measured EGABA. Fit is not validation."
+    },
+    "CA1": {
+      "target_pyramidal": 128,
+      "basket": 819,
+      "bistratified": 1962,
+      "CA1_inhibitory_gain": 1,
+      "boundary": "Feedforward target assay; no CA1 pyramidal feedback, no upstream feedback, no explicit learning.",
+      "output_control": "CA2 pyramidal replay only; identical four inhibitory streams and CA3 stream across conditions."
+    },
+    "stimulus_definition": {
+      "status": "Prospective stimulus definition; execution waits for physiology/numerical assessment; model configuration not yet frozen",
+      "purpose": "Synthetic identity transfer; no social-memory or learning claim",
+      "duration_ms": 250,
+      "response_window_ms": [
+        50,
+        250
+      ],
+      "MEC_afferents": 10818,
+      "MEC_active_per_identity": 9800,
+      "MEC_shared_active_cells": 8820,
+      "CA3_afferents": 4096,
+      "CA3_active_if_context_present": 1940,
+      "pulse_count": 5,
+      "pulse_interval_ms": 10,
+      "MEC_first_pulse_ms": 50,
+      "CA3_first_pulse_ms": 75,
+      "jitter_ms": [
+        0,
+        1,
+        2
+      ],
+      "state": "Every trial starts a new simulator process, resetting membrane, synapse and plasticity states. Fixed connectivity seed within each replicate.",
+      "network_seeds": [
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "trials_per_network": 16,
+      "primary_readout": "CA1 128 targets: four50ms bins of cell spike counts; nearest-class-centroid Euclidean classifier trained only on designated training trials separately per context. Fixed classifier, no tuning. Balanced held-out accuracy; equal distance earns0.5.",
+      "controls": [
+        "Intact CA2 pyramidal output",
+        "Deleted CA2 pyramidal output, keeping all other input streams fixed",
+        "Independently permuted CA2 pyramidal neuron IDs per reset trial, preserving every spike time and cell train up to ID remapping"
+      ],
+      "secondary_readout": "Aggregate population-count features using identical split and classifier. Report comparison without choosing the better decoder as primary.",
+      "uncertainty": "Paired effects computed per network seed; seeds are model replicates, not animals. Five seeds give exploratory uncertainty, not population-level biological significance.",
+      "null": "Balanced label permutations within context and split, fixed random seed, 1000 permutations for aggregate primary accuracy. Retain chance/no-response outcomes.",
+      "trials": [
+        {
+          "name": "seed31-ctx0-id0-rep0",
+          "network_seed": 31,
+          "context": 0,
+          "identity": 0,
+          "repeat": 0,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "734f6ee443d6eb640544170365a8555dee24177a0d918dc4b4f6cad6b6c6bb13",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed31-ctx0-id0-rep1",
+          "network_seed": 31,
+          "context": 0,
+          "identity": 0,
+          "repeat": 1,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "2bed5285c739bd8556ef6c4b73108afbe6fe5366acfe13b24bc9682be271c477",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed31-ctx0-id0-rep2",
+          "network_seed": 31,
+          "context": 0,
+          "identity": 0,
+          "repeat": 2,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "8de32762f8f7f67a3964623ce0073e8aaeecefbe129f80001170f13d937e8f2d",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed31-ctx0-id0-rep3",
+          "network_seed": 31,
+          "context": 0,
+          "identity": 0,
+          "repeat": 3,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "54afdedb63992baa6424593b53d9108eb0308c32840e097eb84f8128c08b4e8b",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed31-ctx0-id1-rep0",
+          "network_seed": 31,
+          "context": 0,
+          "identity": 1,
+          "repeat": 0,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "d3dd806a8c32dd34c4b12973d25640819844b6e06c1e7a1ab80ffa66fd0b5747",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed31-ctx0-id1-rep1",
+          "network_seed": 31,
+          "context": 0,
+          "identity": 1,
+          "repeat": 1,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "15d795b00c86fdafe1c8faf48f8026aaefd27edbee6227ccecd2b7752aa86d68",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed31-ctx0-id1-rep2",
+          "network_seed": 31,
+          "context": 0,
+          "identity": 1,
+          "repeat": 2,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "48a5617d38945986217745d4bdef9f80d745120cb7c5c1cfcee5650092298477",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed31-ctx0-id1-rep3",
+          "network_seed": 31,
+          "context": 0,
+          "identity": 1,
+          "repeat": 3,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "be91d4d30406f2d059bb52ddf6e9e217c5018ae109df7f50cebcd547854b0b8e",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed31-ctx1-id0-rep0",
+          "network_seed": 31,
+          "context": 1,
+          "identity": 0,
+          "repeat": 0,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "8661d178413cd25d88dd66867dbbf6117e24bba8549b991305586e7a6464f31c",
+            "CA3_Pyramidal.txt": "4270f8753948ca9429c565d70f95f2ac52a402b9500cc343ea456a4abf4af840"
+          }
+        },
+        {
+          "name": "seed31-ctx1-id0-rep1",
+          "network_seed": 31,
+          "context": 1,
+          "identity": 0,
+          "repeat": 1,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "5d8b296ccd34b23bc99d9f4368573f75516f15c80da607296578b49af7c5dc40",
+            "CA3_Pyramidal.txt": "b5cfedf6d029f84445cf5a609d98f16525bfa92b61d71f33a45a27ef6e3d8ba3"
+          }
+        },
+        {
+          "name": "seed31-ctx1-id0-rep2",
+          "network_seed": 31,
+          "context": 1,
+          "identity": 0,
+          "repeat": 2,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "748c23b680ef71d9cf7aa34beb1774cfcc801b40c2d88b6dab060c1a103aa34b",
+            "CA3_Pyramidal.txt": "e2b0223832e5135f8545273a634a18ea7bdbb689d0ecadeeca15ef18aad6ffce"
+          }
+        },
+        {
+          "name": "seed31-ctx1-id0-rep3",
+          "network_seed": 31,
+          "context": 1,
+          "identity": 0,
+          "repeat": 3,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "6859e5f4bccd03d4a9c43ad279b564254e2b5df7de064847ecd94acbcc317914",
+            "CA3_Pyramidal.txt": "8fc07b5d46a86880ce1d2429a88070fc57e91187b51e8e97a268de1f3c996610"
+          }
+        },
+        {
+          "name": "seed31-ctx1-id1-rep0",
+          "network_seed": 31,
+          "context": 1,
+          "identity": 1,
+          "repeat": 0,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "af2ddd3c8f3186beec564980ba1183af0acbca3de7aa2972e261abb20a480d8b",
+            "CA3_Pyramidal.txt": "25e16ec5c9b6e02011cc1cba15e5e2eef89caf2a3c346ca69effdfa806fd3c24"
+          }
+        },
+        {
+          "name": "seed31-ctx1-id1-rep1",
+          "network_seed": 31,
+          "context": 1,
+          "identity": 1,
+          "repeat": 1,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "9eb431fe22d0d7d6b268c6a06260b4e295dda8260ebd976c0a04c1af2fc02254",
+            "CA3_Pyramidal.txt": "45093805f34d74d75834fe55d7d9980c475f3c101d4d0a23d3a0c2fba3810711"
+          }
+        },
+        {
+          "name": "seed31-ctx1-id1-rep2",
+          "network_seed": 31,
+          "context": 1,
+          "identity": 1,
+          "repeat": 2,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "30ce2ea76a3b38b19387ed3a6f78d9969731d6dae5779fd1007eae0ee10e2e6d",
+            "CA3_Pyramidal.txt": "7c2ce6d0e5cbecc3bfebaf58e9a365996fcd1cbf5d119fecf23be3e5d134971a"
+          }
+        },
+        {
+          "name": "seed31-ctx1-id1-rep3",
+          "network_seed": 31,
+          "context": 1,
+          "identity": 1,
+          "repeat": 3,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "c534f64c6dced8604963e8144b1157057c79ddd27143ff437b4234308b43af6a",
+            "CA3_Pyramidal.txt": "1ee0a4e921ad8ddc21ed4f934278137a9f747d23bca5d592fa0a1714169ac4e1"
+          }
+        },
+        {
+          "name": "seed32-ctx0-id0-rep0",
+          "network_seed": 32,
+          "context": 0,
+          "identity": 0,
+          "repeat": 0,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "70a72613af921b6147df2929b4c298bf6060dede954f8c538798307b893f1e74",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed32-ctx0-id0-rep1",
+          "network_seed": 32,
+          "context": 0,
+          "identity": 0,
+          "repeat": 1,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "36b9826117ffa14e4b32d320493dc1cf71a69b71184e22bf53d9763883d4a1fc",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed32-ctx0-id0-rep2",
+          "network_seed": 32,
+          "context": 0,
+          "identity": 0,
+          "repeat": 2,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "41870aa8af3ed62f29e7c1a9e3908c10abc584805b7d680c820ad1f276085835",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed32-ctx0-id0-rep3",
+          "network_seed": 32,
+          "context": 0,
+          "identity": 0,
+          "repeat": 3,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "8e071156d1b2d87c252d61e1d2032ffbcd6c0ed382e2396e6633f78b24b9907c",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed32-ctx0-id1-rep0",
+          "network_seed": 32,
+          "context": 0,
+          "identity": 1,
+          "repeat": 0,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "0cecb40b94ee88093fe70c73ed317c1dab46aec4cb0ab89ac05031def39a27b3",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed32-ctx0-id1-rep1",
+          "network_seed": 32,
+          "context": 0,
+          "identity": 1,
+          "repeat": 1,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "47aa866393fafb90934db49838f7b0b3f3cbc5a6b0e00e89d58723451dad9149",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed32-ctx0-id1-rep2",
+          "network_seed": 32,
+          "context": 0,
+          "identity": 1,
+          "repeat": 2,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "b79e2662604cded5f6385f211441a4a7eaae05381f57120558d2eac9d61647c1",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed32-ctx0-id1-rep3",
+          "network_seed": 32,
+          "context": 0,
+          "identity": 1,
+          "repeat": 3,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "63c9b8852234a53a645772610557bca97959a6c9780d698a76b1b9d5729b25df",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed32-ctx1-id0-rep0",
+          "network_seed": 32,
+          "context": 1,
+          "identity": 0,
+          "repeat": 0,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "859be34670a0dbe8f17a551b9f37cd6705c18efbe304cf78264a89e2ac143a0b",
+            "CA3_Pyramidal.txt": "4eda565b6d042c2ac4e36b709b2c18e2cd2365b47cb8dcc8d749785d2f58147d"
+          }
+        },
+        {
+          "name": "seed32-ctx1-id0-rep1",
+          "network_seed": 32,
+          "context": 1,
+          "identity": 0,
+          "repeat": 1,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "38b5eced84992d70c8f1577998558ea0eacdaf9dc34c6c1dad684fc48e2cc902",
+            "CA3_Pyramidal.txt": "cdbebaecdc751bc823d104815b48f2202a2a18b83776e9af8ea9f02f1cd8946c"
+          }
+        },
+        {
+          "name": "seed32-ctx1-id0-rep2",
+          "network_seed": 32,
+          "context": 1,
+          "identity": 0,
+          "repeat": 2,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "f9c947c8345fd54b34523338e9bfdc16ff9194d6e417e1d9bdfb22ae08cc2f43",
+            "CA3_Pyramidal.txt": "465c6f7bbb9b9c516c5c90c1a86fdefd4251265b2c3f5e1402132e6f1664942e"
+          }
+        },
+        {
+          "name": "seed32-ctx1-id0-rep3",
+          "network_seed": 32,
+          "context": 1,
+          "identity": 0,
+          "repeat": 3,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "632e1902ec6399c0d94268c034a8f5371c114c3058fb365062e7f8afac89bd62",
+            "CA3_Pyramidal.txt": "e4d3017e6919f2f849b7f251e8b869976d1c594c316835dc0c0f2e8d44547562"
+          }
+        },
+        {
+          "name": "seed32-ctx1-id1-rep0",
+          "network_seed": 32,
+          "context": 1,
+          "identity": 1,
+          "repeat": 0,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "e3b7d07924e42a447671ac6e34bd46e1cd0e803d70a9c82ea0b5163320b68b4e",
+            "CA3_Pyramidal.txt": "c9d3c9dbd529a495f9df2d15b927b5a22cbed47b96a5b5b93b7fa29daf641c89"
+          }
+        },
+        {
+          "name": "seed32-ctx1-id1-rep1",
+          "network_seed": 32,
+          "context": 1,
+          "identity": 1,
+          "repeat": 1,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "213e063fd688ab9d369a385d1a58a860327629f680f59e6a046f5fabb1ee942d",
+            "CA3_Pyramidal.txt": "64826667a0a48b5b4cdeb8c449ace8e6221a2005bfe9384a1fa6586f9dea92ee"
+          }
+        },
+        {
+          "name": "seed32-ctx1-id1-rep2",
+          "network_seed": 32,
+          "context": 1,
+          "identity": 1,
+          "repeat": 2,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "0fbeabe065e9b7896150850178be870a5e38da083a79448a451757db382994c2",
+            "CA3_Pyramidal.txt": "18e8b8752b22317a939262c575ccd686d034fceea9f200cefc5a19ee8c0f52bd"
+          }
+        },
+        {
+          "name": "seed32-ctx1-id1-rep3",
+          "network_seed": 32,
+          "context": 1,
+          "identity": 1,
+          "repeat": 3,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "c137d60fbd1cdd572f836ae26c0ad8aa8838dc338ce0b960ad0073ed34ebe3f1",
+            "CA3_Pyramidal.txt": "504e3f2bcb8e2428d811aa3e0c22da41084ab785765374e7c4c9ce7b0585b269"
+          }
+        },
+        {
+          "name": "seed33-ctx0-id0-rep0",
+          "network_seed": 33,
+          "context": 0,
+          "identity": 0,
+          "repeat": 0,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "35ccdca5d537503bb3b9ed7b901bd1251db0aebe3c9c389fe96fb34f98a802f4",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed33-ctx0-id0-rep1",
+          "network_seed": 33,
+          "context": 0,
+          "identity": 0,
+          "repeat": 1,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "881655542f9d60351c46e4507a57bee0c16e24b40cef2db3f71b3b296c0fbe85",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed33-ctx0-id0-rep2",
+          "network_seed": 33,
+          "context": 0,
+          "identity": 0,
+          "repeat": 2,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "48ef31a531cefdfafaf99ed4bd90da082abdccfd2eeb3b3383ede6ddc23ad4a0",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed33-ctx0-id0-rep3",
+          "network_seed": 33,
+          "context": 0,
+          "identity": 0,
+          "repeat": 3,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "81ed0836108fb24755192384fa7cc151aaefbebbe5e279db39a0b0b361e84b51",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed33-ctx0-id1-rep0",
+          "network_seed": 33,
+          "context": 0,
+          "identity": 1,
+          "repeat": 0,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "d5de0e9c642a39a3370ab85c488b4918cb928c3d395335dd60035e838f22db4a",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed33-ctx0-id1-rep1",
+          "network_seed": 33,
+          "context": 0,
+          "identity": 1,
+          "repeat": 1,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "9c71f05fc04993b9962b77092ba658ae80bc446dcfe27b4a9b9da77a6eb30b01",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed33-ctx0-id1-rep2",
+          "network_seed": 33,
+          "context": 0,
+          "identity": 1,
+          "repeat": 2,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "1b36774948ad503a2a3be7363256c56588b973528f4c368e4dc6cee30e7540e2",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed33-ctx0-id1-rep3",
+          "network_seed": 33,
+          "context": 0,
+          "identity": 1,
+          "repeat": 3,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "96e651c1bef82d4259c7358ef3627cbd6c2f689e8b3048a234435cf65bc25d12",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed33-ctx1-id0-rep0",
+          "network_seed": 33,
+          "context": 1,
+          "identity": 0,
+          "repeat": 0,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "590eae746497c62f03d13e5d63a87c393e47eb982429560293271c8e86bc0ba7",
+            "CA3_Pyramidal.txt": "4c137c84b838078d46a317fcff24c575803ee0d7d5fe4439478a573edad6050c"
+          }
+        },
+        {
+          "name": "seed33-ctx1-id0-rep1",
+          "network_seed": 33,
+          "context": 1,
+          "identity": 0,
+          "repeat": 1,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "d37b4dfabea56b808ad42637c336ad5f5c5a1771604c29adc7ba77fd1715e069",
+            "CA3_Pyramidal.txt": "6ec88b9547dce9e4a641f13de6ede027016a65d2f82f2e5c9f8365cdfa648f8b"
+          }
+        },
+        {
+          "name": "seed33-ctx1-id0-rep2",
+          "network_seed": 33,
+          "context": 1,
+          "identity": 0,
+          "repeat": 2,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "e12fd781e313227a9f010ac2237ea77beb05583b0074ea35e89ab526c8289ee8",
+            "CA3_Pyramidal.txt": "b7ae83e733f912b0ee3aca94989169dae96906672c9554f6bf8a729f16625ee9"
+          }
+        },
+        {
+          "name": "seed33-ctx1-id0-rep3",
+          "network_seed": 33,
+          "context": 1,
+          "identity": 0,
+          "repeat": 3,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "b5b3323f473b215a80849f1d57b9283e59cd4a0c88023f09ecd44002e591ed1e",
+            "CA3_Pyramidal.txt": "79a1f074ab15c3619089ed789b427e199f49874b7871cb85a28d405c91ac52c9"
+          }
+        },
+        {
+          "name": "seed33-ctx1-id1-rep0",
+          "network_seed": 33,
+          "context": 1,
+          "identity": 1,
+          "repeat": 0,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "4f727e04f443e96aec9c42612a8732b2a3ad2b68cc6095afde2e83316c5d2bdc",
+            "CA3_Pyramidal.txt": "2c37284fa548ca7323d03a21d30f2255465f40863f13260b0a69e1927c27ddef"
+          }
+        },
+        {
+          "name": "seed33-ctx1-id1-rep1",
+          "network_seed": 33,
+          "context": 1,
+          "identity": 1,
+          "repeat": 1,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "ec84491f35dee2b9ba0f8abb275d2667571fbc61e5ccc9c1a05751feaf32e5c7",
+            "CA3_Pyramidal.txt": "7a5bbdfce1f07914b091a5599b11063ea73dfc53387e8df81f73e46a6d5f52ad"
+          }
+        },
+        {
+          "name": "seed33-ctx1-id1-rep2",
+          "network_seed": 33,
+          "context": 1,
+          "identity": 1,
+          "repeat": 2,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "69a3991a24d23fa7d487e0ab1cab9dfff0d5549db402688db5fd0c7222f21773",
+            "CA3_Pyramidal.txt": "e79385a65d0953e851b5261af0013c845759838c37e0fe1c87a19d1f25fd865b"
+          }
+        },
+        {
+          "name": "seed33-ctx1-id1-rep3",
+          "network_seed": 33,
+          "context": 1,
+          "identity": 1,
+          "repeat": 3,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "6ce19caf7f650687b1f171398adde75aae5edfe69b3fc020405cf59a5c79f6c3",
+            "CA3_Pyramidal.txt": "d52e0a49d695f2a8bc51119d728bbe19a328fc9444348a36784596cc58f3b511"
+          }
+        },
+        {
+          "name": "seed34-ctx0-id0-rep0",
+          "network_seed": 34,
+          "context": 0,
+          "identity": 0,
+          "repeat": 0,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "fade58dded51ddacb83eafc30e89ee3545c9852615ed3c248da64be8b741cf5d",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed34-ctx0-id0-rep1",
+          "network_seed": 34,
+          "context": 0,
+          "identity": 0,
+          "repeat": 1,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "4faca35e80adfa7660e7b930e952649783fd2726b075e4740407984b48796971",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed34-ctx0-id0-rep2",
+          "network_seed": 34,
+          "context": 0,
+          "identity": 0,
+          "repeat": 2,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "3676245a9102c3734c5577d5f9a42ab34739f4916d4792ca06518a74f1fde72e",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed34-ctx0-id0-rep3",
+          "network_seed": 34,
+          "context": 0,
+          "identity": 0,
+          "repeat": 3,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "f1d4c04d07fca5f29e0094d129596b106494c0782f74e67e5da132236c76999c",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed34-ctx0-id1-rep0",
+          "network_seed": 34,
+          "context": 0,
+          "identity": 1,
+          "repeat": 0,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "6c3f62b947d1d685cd91bff4315e1d2611be3823b0b01461d3f2d51bf88b9967",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed34-ctx0-id1-rep1",
+          "network_seed": 34,
+          "context": 0,
+          "identity": 1,
+          "repeat": 1,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "6e0f27de3bcc9530c2e16c54ff1112eb5d8e22287a5c7363b5b0ec9fabb2691a",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed34-ctx0-id1-rep2",
+          "network_seed": 34,
+          "context": 0,
+          "identity": 1,
+          "repeat": 2,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "41ac2bf0226288cdeb40f91b25f0b80c963f6b170b8bfd54ce83a43308e04cf7",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed34-ctx0-id1-rep3",
+          "network_seed": 34,
+          "context": 0,
+          "identity": 1,
+          "repeat": 3,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "84d08263d87fccc4f9b4ffcec55b9a33fb2bb831b40ec92c40de5e2be303373b",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed34-ctx1-id0-rep0",
+          "network_seed": 34,
+          "context": 1,
+          "identity": 0,
+          "repeat": 0,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "fadc1fb92d391da167fe2ab5fc53b22bb0a335bcd517d5aa04686a5462b195fe",
+            "CA3_Pyramidal.txt": "723fbed2521140ee689f5607021c16df8c63e58acf056789d81a204a892ca0b3"
+          }
+        },
+        {
+          "name": "seed34-ctx1-id0-rep1",
+          "network_seed": 34,
+          "context": 1,
+          "identity": 0,
+          "repeat": 1,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "a86449b5d081a2486754f9bd778e6201981252ff912ef408569afb3777141ff8",
+            "CA3_Pyramidal.txt": "971947797b3ba470065c14d62851f3588969333bccfb7a8a93318ee41e7c6e78"
+          }
+        },
+        {
+          "name": "seed34-ctx1-id0-rep2",
+          "network_seed": 34,
+          "context": 1,
+          "identity": 0,
+          "repeat": 2,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "0de74b3afe3c0639b62ce7fa7df147d10788f1056cec49728254afd0d8f0b261",
+            "CA3_Pyramidal.txt": "6f2249207d4dbb4892c67c3f90739e7806cb08be61cae364ee9e413b457ac20b"
+          }
+        },
+        {
+          "name": "seed34-ctx1-id0-rep3",
+          "network_seed": 34,
+          "context": 1,
+          "identity": 0,
+          "repeat": 3,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "0f2a451dfe1b603d97946855a05814a01b2aafc47849fd194491f57fdd00fd21",
+            "CA3_Pyramidal.txt": "607a744f863f3adcd3f1a2ccd821499569347ec474d8202daa974652172a1ef5"
+          }
+        },
+        {
+          "name": "seed34-ctx1-id1-rep0",
+          "network_seed": 34,
+          "context": 1,
+          "identity": 1,
+          "repeat": 0,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "d3059c3ff053b8c4567f63d0724b7d008b26ebf52e9ae923b12ef398fcb9d570",
+            "CA3_Pyramidal.txt": "bda3b2cae63249b43ef326abb664129b3709bdfa01529bfbc3fef6fbe5024f01"
+          }
+        },
+        {
+          "name": "seed34-ctx1-id1-rep1",
+          "network_seed": 34,
+          "context": 1,
+          "identity": 1,
+          "repeat": 1,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "a6a098ac8fe50ba52ab7868bbe8ebcc3f39b431294084a6143b2435284adfa4a",
+            "CA3_Pyramidal.txt": "02de460fc85297c3473a2ef836d4e9da97bfa415b8f393f95e4e230f3b38297d"
+          }
+        },
+        {
+          "name": "seed34-ctx1-id1-rep2",
+          "network_seed": 34,
+          "context": 1,
+          "identity": 1,
+          "repeat": 2,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "cea14beae78456857de6117e190a5d3918bedb6cf85960a1188a10b0071767c4",
+            "CA3_Pyramidal.txt": "9f92459e3cd11d3440adc35bb64e912ae98d8e3d042f26a007fb2d8f27dc2b29"
+          }
+        },
+        {
+          "name": "seed34-ctx1-id1-rep3",
+          "network_seed": 34,
+          "context": 1,
+          "identity": 1,
+          "repeat": 3,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "11fe6939a4be1837444950fb2771148c6f2b9b38035f555531e589a2c73b7978",
+            "CA3_Pyramidal.txt": "a71d28f8e76de3ace81161c2f1398cf5cc4e9ec9b66a292b23c9e1e5796a9988"
+          }
+        },
+        {
+          "name": "seed35-ctx0-id0-rep0",
+          "network_seed": 35,
+          "context": 0,
+          "identity": 0,
+          "repeat": 0,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "539e7fa2c7c7369d682c98be9a6bbcf66bc9535831529be5621f25c8d6023133",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed35-ctx0-id0-rep1",
+          "network_seed": 35,
+          "context": 0,
+          "identity": 0,
+          "repeat": 1,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "3ccff69ba37087db18f0822657929844584448020563a78847c67350d5e989e6",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed35-ctx0-id0-rep2",
+          "network_seed": 35,
+          "context": 0,
+          "identity": 0,
+          "repeat": 2,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "0eea593c5a21dc16828be43fd247e776944f306752c496418bae6a754eca32c1",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed35-ctx0-id0-rep3",
+          "network_seed": 35,
+          "context": 0,
+          "identity": 0,
+          "repeat": 3,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "fce4cbd7a9198eafd9ad14335486e7f79c9d247911128af6210f430839475a40",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed35-ctx0-id1-rep0",
+          "network_seed": 35,
+          "context": 0,
+          "identity": 1,
+          "repeat": 0,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "30ec2421bab704ac3aeb62bd45fd652c71b117bdb065f32cb6f95cadc7beb011",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed35-ctx0-id1-rep1",
+          "network_seed": 35,
+          "context": 0,
+          "identity": 1,
+          "repeat": 1,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "9cdf337e6a270df26fa3f1fba1a98bd2721b02d277a8838f39d0ea5687452919",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed35-ctx0-id1-rep2",
+          "network_seed": 35,
+          "context": 0,
+          "identity": 1,
+          "repeat": 2,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "24f7395bfe588c9dd8245ed8638ee09d035566c5108340fc24f2f8a175de8394",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed35-ctx0-id1-rep3",
+          "network_seed": 35,
+          "context": 0,
+          "identity": 1,
+          "repeat": 3,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "4d0353ffad28cf47013a4972cf884a016b988892455d64d0dbcd30ca07570e1c",
+            "CA3_Pyramidal.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        {
+          "name": "seed35-ctx1-id0-rep0",
+          "network_seed": 35,
+          "context": 1,
+          "identity": 0,
+          "repeat": 0,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "50dc0ea78b3ca56a932bf59b9812083a362447771b3107a8b1667753fbf37f96",
+            "CA3_Pyramidal.txt": "40811ec271413992c8f2b55ffed68f70f73b4aecd561f760b652438b6a3c3523"
+          }
+        },
+        {
+          "name": "seed35-ctx1-id0-rep1",
+          "network_seed": 35,
+          "context": 1,
+          "identity": 0,
+          "repeat": 1,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "3477c9cbe28f23ae72ad83b89dbe10ca742517a1b367f30d06af298227bb059c",
+            "CA3_Pyramidal.txt": "777771def4f8d802a3f1b1f091059d61fbb1a6a06eb1f09d9a141d62656af728"
+          }
+        },
+        {
+          "name": "seed35-ctx1-id0-rep2",
+          "network_seed": 35,
+          "context": 1,
+          "identity": 0,
+          "repeat": 2,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "3a16a0ea399561ac604bc8e36c88b5359506fef1e2ccabf50299fcccc9b460c3",
+            "CA3_Pyramidal.txt": "2ccb78170661948043afad4a243985a99e7c6fcd121c23da4947e8b55417f64f"
+          }
+        },
+        {
+          "name": "seed35-ctx1-id0-rep3",
+          "network_seed": 35,
+          "context": 1,
+          "identity": 0,
+          "repeat": 3,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "1e5ae961f036612a33ed3cb0bbf8fa05fd9cb865fffed863fafe5c570dfd2f3d",
+            "CA3_Pyramidal.txt": "4824c66836008cde24e62a1ff10544c6f6946ab50734d5d4510151bf914f1486"
+          }
+        },
+        {
+          "name": "seed35-ctx1-id1-rep0",
+          "network_seed": 35,
+          "context": 1,
+          "identity": 1,
+          "repeat": 0,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "cb72e02842ff734d04ee83177d1d2c1988e12d890ae9d1163c2420379fd545c8",
+            "CA3_Pyramidal.txt": "798325e251cbe7ac2eb523fec351b0d680bd0cb3cf7ae91d9e52cd4f47cee7a2"
+          }
+        },
+        {
+          "name": "seed35-ctx1-id1-rep1",
+          "network_seed": 35,
+          "context": 1,
+          "identity": 1,
+          "repeat": 1,
+          "split": "train",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "f52beda1c812b1e27839d2a822ad43f19b12fcd6a0aba2f68c34912ab63915ca",
+            "CA3_Pyramidal.txt": "d39d54b950f79d0c8ec7506ccb4e674e8b269ee0cbfc1e19c799c6675f6b79ef"
+          }
+        },
+        {
+          "name": "seed35-ctx1-id1-rep2",
+          "network_seed": 35,
+          "context": 1,
+          "identity": 1,
+          "repeat": 2,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "15c04e710272ad33433e17a3a98a8738ac453c9213d87c4b71f4e35754952ea5",
+            "CA3_Pyramidal.txt": "7362439dda79a650f7374f606034bbe2f0bf769dc8070065ecff7121b46420be"
+          }
+        },
+        {
+          "name": "seed35-ctx1-id1-rep3",
+          "network_seed": 35,
+          "context": 1,
+          "identity": 1,
+          "repeat": 3,
+          "split": "test",
+          "files_sha256": {
+            "MEC_LII_Stellate.txt": "22a86ad795a79a442c0da1a32da400dcefd98bade7c3e75f127e545a916c2622",
+            "CA3_Pyramidal.txt": "821c15afa5bab91479b281ed2cdae80587eb8e17c48206ea9287822f096efc24"
+          }
+        }
+      ],
+      "secondary_voltage_readout": "CA1 first128 cells: mean membrane voltage in the same four50ms windows, minus each cell baseline mean40-49ms; same predetermined training/test split and centroid classifier. Report as subthreshold/state information, not spike transmission. No tuning and no selecting the better decoder as primary.",
+      "positive_control": "Input-identity decoding must be perfect for noiseless prescribed cell-pattern counts; identical total spike counts must give chance under aggregate input-count features. This checks stimulus labels and readout calculations, not biological validity."
+    },
+    "validation_evidence": [
+      "pyramidal-calibration-results.json",
+      "pyramidal-train-validation-results.json",
+      "task-probe-results.json",
+      "readout-precision40vs80-results.json"
+    ],
+    "excluded_attempts": [
+      "Original300ms-spaced pilot: history carryover",
+      "Original unchanged model: poor CA3 inhibition",
+      "All-inhibitory gain180: inadequate numerical convergence",
+      "Readout20vs40: one basket count comparison failed5%; final precision40vs80passes"
+    ],
+    "interpretation": "Confirmatory relative to frozen synthetic-task model and independent connectivity seeds. Biological interpretation remains exploratory and conditional on calibration, source defaults and incomplete circuitry. No claim of social memory or validated real CA2 function.",
+    "required_after_execution": [
+      "Verify all80core trials and240matched readout runs with exact input delivery and finite complete recording.",
+      "Evaluate held-out primary spike decoder, secondary voltage decoder and input-positive control; retain null outcomes.",
+      "Report paired effects per five independent network seeds and uncertainty.",
+      "Test inhibitory-reversal, fitted-gain, numerical and default synaptic-parameter sensitivity.",
+      "Deliver inspectable configurations, analysis, scientific figures and bounded conclusion."
+    ],
+    "files_sha256": {
+      "model/circuit-task-v1": "e3a10f779016451056bf5ca85e2c4c130be25df0c71a6116399e4e36a7cc37cc",
+      "model/src/circuit.cpp": "c3951c60b616eff994ac6f2f7361cd0f342da2b62c2ccdacc0608cca6a7afad9",
+      "model/core_config.h": "42b3eed12457f55bf5c4ac14417ec5790b60441f1de2bd1286e965e68e7a689c",
+      "model/readout_config.h": "923df83a6b55f80b6c8793907b8ddd6de86cb9c20005d9402bd169f666ec50dc",
+      "model/calibration_config.h": "e40c4562256a19f3fcfbab4d587db537b4932f5a39f0919a07d92675235f7f2d",
+      "model/setup.h": "da861450062757173d36a284d145413c8ef7b4351f1823afaeead8ae1ad27ed7",
+      "simulator-reversal-variant/libcarlsim.a.4.0.0": "aeb6838ecde6859f50ddcce09975c85f2d9f72bfd0680ccc2a2741df3ef9345d",
+      "run_reset_task.py": "60f1f79618cabc4a6d4d82d97a1b2ecb54c71cdd7f98c8833da746e7b7ea3956",
+      "analyze_reset_task.py": "2a5bf911ce72d7303dcb2c7bf4218c85269b975a076d6168626cd64ed52b0cf7",
+      "task_io.py": "26ad136070c82a96d4f56cb7bae6c93f2d6223d20143bbd6aa13e0b51820e96a",
+      "replay_reset_trial.py": "6336725fea69590a8ff9bd4f8d19158fc8538d1668d71b74cc9f5176c46c2552",
+      "stimuli/reset-task-v1/configuration.json": "7ba99175812e7298c836868e2283af2a8a7971991930f7dd477770308a618af9",
+      "revised-source-export/CA2_CA3_CA1_EC_conn_parameters10-01-2026_10_48_20.csv": "93df10e7cb0b00261e9d5051c99d62a97f55afaa56f9e3c039eab6660b4fd9e9",
+      "revised-source-export/CA2_CA3_CA1_EC_neuron_parameters10-01-2026_10_48_20.csv": "48a4651de1028785e582029955d5150a31d905d90874c0f17a4ceaeba85ce73a"
+    }
+  },
+  "per_seed_context_condition": [
+    {
+      "network_seed": 31,
+      "context": 0,
+      "condition": "intact",
+      "heldout_accuracy": 0.5,
+      "rate_only_accuracy": 0.5,
+      "secondary_voltage_accuracy": 1.0,
+      "total_evoked_spikes": 0
+    },
+    {
+      "network_seed": 31,
+      "context": 0,
+      "condition": "blocked",
+      "heldout_accuracy": 0.5,
+      "rate_only_accuracy": 0.5,
+      "secondary_voltage_accuracy": 1.0,
+      "total_evoked_spikes": 0
+    },
+    {
+      "network_seed": 31,
+      "context": 0,
+      "condition": "scrambled",
+      "heldout_accuracy": 0.5,
+      "rate_only_accuracy": 0.5,
+      "secondary_voltage_accuracy": 0.5,
+      "total_evoked_spikes": 0
+    },
+    {
+      "network_seed": 31,
+      "context": 1,
+      "condition": "intact",
+      "heldout_accuracy": 0.5,
+      "rate_only_accuracy": 0.5,
+      "secondary_voltage_accuracy": 1.0,
+      "total_evoked_spikes": 5120
+    },
+    {
+      "network_seed": 31,
+      "context": 1,
+      "condition": "blocked",
+      "heldout_accuracy": 0.5,
+      "rate_only_accuracy": 0.5,
+      "secondary_voltage_accuracy": 0.75,
+      "total_evoked_spikes": 5120
+    },
+    {
+      "network_seed": 31,
+      "context": 1,
+      "condition": "scrambled",
+      "heldout_accuracy": 0.5,
+      "rate_only_accuracy": 0.5,
+      "secondary_voltage_accuracy": 0.25,
+      "total_evoked_spikes": 5120
+    },
+    {
+      "network_seed": 32,
+      "context": 0,
+      "condition": "intact",
+      "heldout_accuracy": 0.5,
+      "rate_only_accuracy": 0.5,
+      "secondary_voltage_accuracy": 1.0,
+      "total_evoked_spikes": 0
+    },
+    {
+      "network_seed": 32,
+      "context": 0,
+      "condition": "blocked",
+      "heldout_accuracy": 0.5,
+      "rate_only_accuracy": 0.5,
+      "secondary_voltage_accuracy": 1.0,
+      "total_evoked_spikes": 0
+    },
+    {
+      "network_seed": 32,
+      "context": 0,
+      "condition": "scrambled",
+      "heldout_accuracy": 0.5,
+      "rate_only_accuracy": 0.5,
+      "secondary_voltage_accuracy": 0.75,
+      "total_evoked_spikes": 0
+    },
+    {
+      "network_seed": 32,
+      "context": 1,
+      "condition": "intact",
+      "heldout_accuracy": 0.5,
+      "rate_only_accuracy": 0.5,
+      "secondary_voltage_accuracy": 0.5,
+      "total_evoked_spikes": 5120
+    },
+    {
+      "network_seed": 32,
+      "context": 1,
+      "condition": "blocked",
+      "heldout_accuracy": 0.5,
+      "rate_only_accuracy": 0.5,
+      "secondary_voltage_accuracy": 0.5,
+      "total_evoked_spikes": 5120
+    },
+    {
+      "network_seed": 32,
+      "context": 1,
+      "condition": "scrambled",
+      "heldout_accuracy": 0.5,
+      "rate_only_accuracy": 0.5,
+      "secondary_voltage_accuracy": 0.5,
+      "total_evoked_spikes": 5120
+    },
+    {
+      "network_seed": 33,
+      "context": 0,
+      "condition": "intact",
+      "heldout_accuracy": 0.5,
+      "rate_only_accuracy": 0.5,
+      "secondary_voltage_accuracy": 1.0,
+      "total_evoked_spikes": 0
+    },
+    {
+      "network_seed": 33,
+      "context": 0,
+      "condition": "blocked",
+      "heldout_accuracy": 0.5,
+      "rate_only_accuracy": 0.5,
+      "secondary_voltage_accuracy": 1.0,
+      "total_evoked_spikes": 0
+    },
+    {
+      "network_seed": 33,
+      "context": 0,
+      "condition": "scrambled",
+      "heldout_accuracy": 0.5,
+      "rate_only_accuracy": 0.5,
+      "secondary_voltage_accuracy": 1.0,
+      "total_evoked_spikes": 0
+    },
+    {
+      "network_seed": 33,
+      "context": 1,
+      "condition": "intact",
+      "heldout_accuracy": 0.5,
+      "rate_only_accuracy": 0.5,
+      "secondary_voltage_accuracy": 0.5,
+      "total_evoked_spikes": 5120
+    },
+    {
+      "network_seed": 33,
+      "context": 1,
+      "condition": "blocked",
+      "heldout_accuracy": 0.5,
+      "rate_only_accuracy": 0.5,
+      "secondary_voltage_accuracy": 0.5,
+      "total_evoked_spikes": 5120
+    },
+    {
+      "network_seed": 33,
+      "context": 1,
+      "condition": "scrambled",
+      "heldout_accuracy": 0.5,
+      "rate_only_accuracy": 0.5,
+      "secondary_voltage_accuracy": 0.5,
+      "total_evoked_spikes": 5120
+    },
+    {
+      "network_seed": 34,
+      "context": 0,
+      "condition": "intact",
+      "heldout_accuracy": 0.5,
+      "rate_only_accuracy": 0.5,
+      "secondary_voltage_accuracy": 1.0,
+      "total_evoked_spikes": 0
+    },
+    {
+      "network_seed": 34,
+      "context": 0,
+      "condition": "blocked",
+      "heldout_accuracy": 0.5,
+      "rate_only_accuracy": 0.5,
+      "secondary_voltage_accuracy": 1.0,
+      "total_evoked_spikes": 0
+    },
+    {
+      "network_seed": 34,
+      "context": 0,
+      "condition": "scrambled",
+      "heldout_accuracy": 0.5,
+      "rate_only_accuracy": 0.5,
+      "secondary_voltage_accuracy": 1.0,
+      "total_evoked_spikes": 0
+    },
+    {
+      "network_seed": 34,
+      "context": 1,
+      "condition": "intact",
+      "heldout_accuracy": 0.5,
+      "rate_only_accuracy": 0.5,
+      "secondary_voltage_accuracy": 0.5,
+      "total_evoked_spikes": 5120
+    },
+    {
+      "network_seed": 34,
+      "context": 1,
+      "condition": "blocked",
+      "heldout_accuracy": 0.5,
+      "rate_only_accuracy": 0.5,
+      "secondary_voltage_accuracy": 0.5,
+      "total_evoked_spikes": 5120
+    },
+    {
+      "network_seed": 34,
+      "context": 1,
+      "condition": "scrambled",
+      "heldout_accuracy": 0.5,
+      "rate_only_accuracy": 0.5,
+      "secondary_voltage_accuracy": 0.75,
+      "total_evoked_spikes": 5120
+    },
+    {
+      "network_seed": 35,
+      "context": 0,
+      "condition": "intact",
+      "heldout_accuracy": 0.5,
+      "rate_only_accuracy": 0.5,
+      "secondary_voltage_accuracy": 1.0,
+      "total_evoked_spikes": 0
+    },
+    {
+      "network_seed": 35,
+      "context": 0,
+      "condition": "blocked",
+      "heldout_accuracy": 0.5,
+      "rate_only_accuracy": 0.5,
+      "secondary_voltage_accuracy": 1.0,
+      "total_evoked_spikes": 0
+    },
+    {
+      "network_seed": 35,
+      "context": 0,
+      "condition": "scrambled",
+      "heldout_accuracy": 0.5,
+      "rate_only_accuracy": 0.5,
+      "secondary_voltage_accuracy": 1.0,
+      "total_evoked_spikes": 0
+    },
+    {
+      "network_seed": 35,
+      "context": 1,
+      "condition": "intact",
+      "heldout_accuracy": 0.5,
+      "rate_only_accuracy": 0.5,
+      "secondary_voltage_accuracy": 0.25,
+      "total_evoked_spikes": 5120
+    },
+    {
+      "network_seed": 35,
+      "context": 1,
+      "condition": "blocked",
+      "heldout_accuracy": 0.5,
+      "rate_only_accuracy": 0.5,
+      "secondary_voltage_accuracy": 0.0,
+      "total_evoked_spikes": 5120
+    },
+    {
+      "network_seed": 35,
+      "context": 1,
+      "condition": "scrambled",
+      "heldout_accuracy": 0.5,
+      "rate_only_accuracy": 0.5,
+      "secondary_voltage_accuracy": 0.25,
+      "total_evoked_spikes": 5120
+    }
+  ],
+  "per_seed_primary_accuracy": [
+    {
+      "network_seed": 31,
+      "intact": 0.5,
+      "blocked": 0.5,
+      "scrambled": 0.5
+    },
+    {
+      "network_seed": 32,
+      "intact": 0.5,
+      "blocked": 0.5,
+      "scrambled": 0.5
+    },
+    {
+      "network_seed": 33,
+      "intact": 0.5,
+      "blocked": 0.5,
+      "scrambled": 0.5
+    },
+    {
+      "network_seed": 34,
+      "intact": 0.5,
+      "blocked": 0.5,
+      "scrambled": 0.5
+    },
+    {
+      "network_seed": 35,
+      "intact": 0.5,
+      "blocked": 0.5,
+      "scrambled": 0.5
+    }
+  ],
+  "paired_effects": {
+    "intact_minus_blocked": {
+      "mean_accuracy_difference": 0.0,
+      "paired_seed_differences": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "descriptive_bootstrap95_interval": [
+        0.0,
+        0.0
+      ],
+      "replicates": 5,
+      "note": "Exact five-seed bootstrap distribution; model-network uncertainty only, not uncertainty across animals."
+    },
+    "intact_minus_scrambled": {
+      "mean_accuracy_difference": 0.0,
+      "paired_seed_differences": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "descriptive_bootstrap95_interval": [
+        0.0,
+        0.0
+      ],
+      "replicates": 5,
+      "note": "Exact five-seed bootstrap distribution; model-network uncertainty only, not uncertainty across animals."
+    }
+  },
+  "permutation_null": {
+    "intact": {
+      "observed_accuracy": 0.5,
+      "permutation95_range": [
+        0.5,
+        0.5
+      ],
+      "one_sided_descriptive_p": 1.0,
+      "permutations": 1000,
+      "note": "Balanced label permutations within network, context and split; no multiple-comparison adjustment. Primary intervention evidence is paired seed effects, not these diagnostic p values."
+    },
+    "blocked": {
+      "observed_accuracy": 0.5,
+      "permutation95_range": [
+        0.5,
+        0.5
+      ],
+      "one_sided_descriptive_p": 1.0,
+      "permutations": 1000,
+      "note": "Balanced label permutations within network, context and split; no multiple-comparison adjustment. Primary intervention evidence is paired seed effects, not these diagnostic p values."
+    },
+    "scrambled": {
+      "observed_accuracy": 0.5,
+      "permutation95_range": [
+        0.5,
+        0.5
+      ],
+      "one_sided_descriptive_p": 1.0,
+      "permutations": 1000,
+      "note": "Balanced label permutations within network, context and split; no multiple-comparison adjustment. Primary intervention evidence is paired seed effects, not these diagnostic p values."
+    }
+  },
+  "trials": [
+    {
+      "name": "seed31-ctx0-id0-rep0",
+      "network_seed": 31,
+      "context": 0,
+      "identity": 0,
+      "repeat": 0,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed31-ctx0-id0-rep0",
+      "network_seed": 31,
+      "context": 0,
+      "identity": 0,
+      "repeat": 0,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed31-ctx0-id0-rep0",
+      "network_seed": 31,
+      "context": 0,
+      "identity": 0,
+      "repeat": 0,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed31-ctx0-id0-rep1",
+      "network_seed": 31,
+      "context": 0,
+      "identity": 0,
+      "repeat": 1,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed31-ctx0-id0-rep1",
+      "network_seed": 31,
+      "context": 0,
+      "identity": 0,
+      "repeat": 1,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed31-ctx0-id0-rep1",
+      "network_seed": 31,
+      "context": 0,
+      "identity": 0,
+      "repeat": 1,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed31-ctx0-id0-rep2",
+      "network_seed": 31,
+      "context": 0,
+      "identity": 0,
+      "repeat": 2,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed31-ctx0-id0-rep2",
+      "network_seed": 31,
+      "context": 0,
+      "identity": 0,
+      "repeat": 2,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed31-ctx0-id0-rep2",
+      "network_seed": 31,
+      "context": 0,
+      "identity": 0,
+      "repeat": 2,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed31-ctx0-id0-rep3",
+      "network_seed": 31,
+      "context": 0,
+      "identity": 0,
+      "repeat": 3,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed31-ctx0-id0-rep3",
+      "network_seed": 31,
+      "context": 0,
+      "identity": 0,
+      "repeat": 3,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed31-ctx0-id0-rep3",
+      "network_seed": 31,
+      "context": 0,
+      "identity": 0,
+      "repeat": 3,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed31-ctx0-id1-rep0",
+      "network_seed": 31,
+      "context": 0,
+      "identity": 1,
+      "repeat": 0,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed31-ctx0-id1-rep0",
+      "network_seed": 31,
+      "context": 0,
+      "identity": 1,
+      "repeat": 0,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed31-ctx0-id1-rep0",
+      "network_seed": 31,
+      "context": 0,
+      "identity": 1,
+      "repeat": 0,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed31-ctx0-id1-rep1",
+      "network_seed": 31,
+      "context": 0,
+      "identity": 1,
+      "repeat": 1,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed31-ctx0-id1-rep1",
+      "network_seed": 31,
+      "context": 0,
+      "identity": 1,
+      "repeat": 1,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed31-ctx0-id1-rep1",
+      "network_seed": 31,
+      "context": 0,
+      "identity": 1,
+      "repeat": 1,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed31-ctx0-id1-rep2",
+      "network_seed": 31,
+      "context": 0,
+      "identity": 1,
+      "repeat": 2,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed31-ctx0-id1-rep2",
+      "network_seed": 31,
+      "context": 0,
+      "identity": 1,
+      "repeat": 2,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed31-ctx0-id1-rep2",
+      "network_seed": 31,
+      "context": 0,
+      "identity": 1,
+      "repeat": 2,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed31-ctx0-id1-rep3",
+      "network_seed": 31,
+      "context": 0,
+      "identity": 1,
+      "repeat": 3,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed31-ctx0-id1-rep3",
+      "network_seed": 31,
+      "context": 0,
+      "identity": 1,
+      "repeat": 3,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed31-ctx0-id1-rep3",
+      "network_seed": 31,
+      "context": 0,
+      "identity": 1,
+      "repeat": 3,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed31-ctx1-id0-rep0",
+      "network_seed": 31,
+      "context": 1,
+      "identity": 0,
+      "repeat": 0,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed31-ctx1-id0-rep0",
+      "network_seed": 31,
+      "context": 1,
+      "identity": 0,
+      "repeat": 0,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed31-ctx1-id0-rep0",
+      "network_seed": 31,
+      "context": 1,
+      "identity": 0,
+      "repeat": 0,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed31-ctx1-id0-rep1",
+      "network_seed": 31,
+      "context": 1,
+      "identity": 0,
+      "repeat": 1,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed31-ctx1-id0-rep1",
+      "network_seed": 31,
+      "context": 1,
+      "identity": 0,
+      "repeat": 1,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed31-ctx1-id0-rep1",
+      "network_seed": 31,
+      "context": 1,
+      "identity": 0,
+      "repeat": 1,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed31-ctx1-id0-rep2",
+      "network_seed": 31,
+      "context": 1,
+      "identity": 0,
+      "repeat": 2,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed31-ctx1-id0-rep2",
+      "network_seed": 31,
+      "context": 1,
+      "identity": 0,
+      "repeat": 2,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed31-ctx1-id0-rep2",
+      "network_seed": 31,
+      "context": 1,
+      "identity": 0,
+      "repeat": 2,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed31-ctx1-id0-rep3",
+      "network_seed": 31,
+      "context": 1,
+      "identity": 0,
+      "repeat": 3,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed31-ctx1-id0-rep3",
+      "network_seed": 31,
+      "context": 1,
+      "identity": 0,
+      "repeat": 3,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed31-ctx1-id0-rep3",
+      "network_seed": 31,
+      "context": 1,
+      "identity": 0,
+      "repeat": 3,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed31-ctx1-id1-rep0",
+      "network_seed": 31,
+      "context": 1,
+      "identity": 1,
+      "repeat": 0,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed31-ctx1-id1-rep0",
+      "network_seed": 31,
+      "context": 1,
+      "identity": 1,
+      "repeat": 0,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed31-ctx1-id1-rep0",
+      "network_seed": 31,
+      "context": 1,
+      "identity": 1,
+      "repeat": 0,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed31-ctx1-id1-rep1",
+      "network_seed": 31,
+      "context": 1,
+      "identity": 1,
+      "repeat": 1,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed31-ctx1-id1-rep1",
+      "network_seed": 31,
+      "context": 1,
+      "identity": 1,
+      "repeat": 1,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed31-ctx1-id1-rep1",
+      "network_seed": 31,
+      "context": 1,
+      "identity": 1,
+      "repeat": 1,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed31-ctx1-id1-rep2",
+      "network_seed": 31,
+      "context": 1,
+      "identity": 1,
+      "repeat": 2,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed31-ctx1-id1-rep2",
+      "network_seed": 31,
+      "context": 1,
+      "identity": 1,
+      "repeat": 2,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed31-ctx1-id1-rep2",
+      "network_seed": 31,
+      "context": 1,
+      "identity": 1,
+      "repeat": 2,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed31-ctx1-id1-rep3",
+      "network_seed": 31,
+      "context": 1,
+      "identity": 1,
+      "repeat": 3,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed31-ctx1-id1-rep3",
+      "network_seed": 31,
+      "context": 1,
+      "identity": 1,
+      "repeat": 3,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed31-ctx1-id1-rep3",
+      "network_seed": 31,
+      "context": 1,
+      "identity": 1,
+      "repeat": 3,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed32-ctx0-id0-rep0",
+      "network_seed": 32,
+      "context": 0,
+      "identity": 0,
+      "repeat": 0,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed32-ctx0-id0-rep0",
+      "network_seed": 32,
+      "context": 0,
+      "identity": 0,
+      "repeat": 0,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed32-ctx0-id0-rep0",
+      "network_seed": 32,
+      "context": 0,
+      "identity": 0,
+      "repeat": 0,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed32-ctx0-id0-rep1",
+      "network_seed": 32,
+      "context": 0,
+      "identity": 0,
+      "repeat": 1,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed32-ctx0-id0-rep1",
+      "network_seed": 32,
+      "context": 0,
+      "identity": 0,
+      "repeat": 1,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed32-ctx0-id0-rep1",
+      "network_seed": 32,
+      "context": 0,
+      "identity": 0,
+      "repeat": 1,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed32-ctx0-id0-rep2",
+      "network_seed": 32,
+      "context": 0,
+      "identity": 0,
+      "repeat": 2,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed32-ctx0-id0-rep2",
+      "network_seed": 32,
+      "context": 0,
+      "identity": 0,
+      "repeat": 2,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed32-ctx0-id0-rep2",
+      "network_seed": 32,
+      "context": 0,
+      "identity": 0,
+      "repeat": 2,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed32-ctx0-id0-rep3",
+      "network_seed": 32,
+      "context": 0,
+      "identity": 0,
+      "repeat": 3,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed32-ctx0-id0-rep3",
+      "network_seed": 32,
+      "context": 0,
+      "identity": 0,
+      "repeat": 3,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed32-ctx0-id0-rep3",
+      "network_seed": 32,
+      "context": 0,
+      "identity": 0,
+      "repeat": 3,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed32-ctx0-id1-rep0",
+      "network_seed": 32,
+      "context": 0,
+      "identity": 1,
+      "repeat": 0,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed32-ctx0-id1-rep0",
+      "network_seed": 32,
+      "context": 0,
+      "identity": 1,
+      "repeat": 0,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed32-ctx0-id1-rep0",
+      "network_seed": 32,
+      "context": 0,
+      "identity": 1,
+      "repeat": 0,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed32-ctx0-id1-rep1",
+      "network_seed": 32,
+      "context": 0,
+      "identity": 1,
+      "repeat": 1,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed32-ctx0-id1-rep1",
+      "network_seed": 32,
+      "context": 0,
+      "identity": 1,
+      "repeat": 1,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed32-ctx0-id1-rep1",
+      "network_seed": 32,
+      "context": 0,
+      "identity": 1,
+      "repeat": 1,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed32-ctx0-id1-rep2",
+      "network_seed": 32,
+      "context": 0,
+      "identity": 1,
+      "repeat": 2,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed32-ctx0-id1-rep2",
+      "network_seed": 32,
+      "context": 0,
+      "identity": 1,
+      "repeat": 2,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed32-ctx0-id1-rep2",
+      "network_seed": 32,
+      "context": 0,
+      "identity": 1,
+      "repeat": 2,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed32-ctx0-id1-rep3",
+      "network_seed": 32,
+      "context": 0,
+      "identity": 1,
+      "repeat": 3,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed32-ctx0-id1-rep3",
+      "network_seed": 32,
+      "context": 0,
+      "identity": 1,
+      "repeat": 3,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed32-ctx0-id1-rep3",
+      "network_seed": 32,
+      "context": 0,
+      "identity": 1,
+      "repeat": 3,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed32-ctx1-id0-rep0",
+      "network_seed": 32,
+      "context": 1,
+      "identity": 0,
+      "repeat": 0,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 32
+    },
+    {
+      "name": "seed32-ctx1-id0-rep0",
+      "network_seed": 32,
+      "context": 1,
+      "identity": 0,
+      "repeat": 0,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 32
+    },
+    {
+      "name": "seed32-ctx1-id0-rep0",
+      "network_seed": 32,
+      "context": 1,
+      "identity": 0,
+      "repeat": 0,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 32
+    },
+    {
+      "name": "seed32-ctx1-id0-rep1",
+      "network_seed": 32,
+      "context": 1,
+      "identity": 0,
+      "repeat": 1,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 32
+    },
+    {
+      "name": "seed32-ctx1-id0-rep1",
+      "network_seed": 32,
+      "context": 1,
+      "identity": 0,
+      "repeat": 1,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 32
+    },
+    {
+      "name": "seed32-ctx1-id0-rep1",
+      "network_seed": 32,
+      "context": 1,
+      "identity": 0,
+      "repeat": 1,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 32
+    },
+    {
+      "name": "seed32-ctx1-id0-rep2",
+      "network_seed": 32,
+      "context": 1,
+      "identity": 0,
+      "repeat": 2,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 32
+    },
+    {
+      "name": "seed32-ctx1-id0-rep2",
+      "network_seed": 32,
+      "context": 1,
+      "identity": 0,
+      "repeat": 2,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 32
+    },
+    {
+      "name": "seed32-ctx1-id0-rep2",
+      "network_seed": 32,
+      "context": 1,
+      "identity": 0,
+      "repeat": 2,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 32
+    },
+    {
+      "name": "seed32-ctx1-id0-rep3",
+      "network_seed": 32,
+      "context": 1,
+      "identity": 0,
+      "repeat": 3,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 32
+    },
+    {
+      "name": "seed32-ctx1-id0-rep3",
+      "network_seed": 32,
+      "context": 1,
+      "identity": 0,
+      "repeat": 3,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 32
+    },
+    {
+      "name": "seed32-ctx1-id0-rep3",
+      "network_seed": 32,
+      "context": 1,
+      "identity": 0,
+      "repeat": 3,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 32
+    },
+    {
+      "name": "seed32-ctx1-id1-rep0",
+      "network_seed": 32,
+      "context": 1,
+      "identity": 1,
+      "repeat": 0,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 32
+    },
+    {
+      "name": "seed32-ctx1-id1-rep0",
+      "network_seed": 32,
+      "context": 1,
+      "identity": 1,
+      "repeat": 0,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 32
+    },
+    {
+      "name": "seed32-ctx1-id1-rep0",
+      "network_seed": 32,
+      "context": 1,
+      "identity": 1,
+      "repeat": 0,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 32
+    },
+    {
+      "name": "seed32-ctx1-id1-rep1",
+      "network_seed": 32,
+      "context": 1,
+      "identity": 1,
+      "repeat": 1,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 32
+    },
+    {
+      "name": "seed32-ctx1-id1-rep1",
+      "network_seed": 32,
+      "context": 1,
+      "identity": 1,
+      "repeat": 1,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 32
+    },
+    {
+      "name": "seed32-ctx1-id1-rep1",
+      "network_seed": 32,
+      "context": 1,
+      "identity": 1,
+      "repeat": 1,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 32
+    },
+    {
+      "name": "seed32-ctx1-id1-rep2",
+      "network_seed": 32,
+      "context": 1,
+      "identity": 1,
+      "repeat": 2,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 32
+    },
+    {
+      "name": "seed32-ctx1-id1-rep2",
+      "network_seed": 32,
+      "context": 1,
+      "identity": 1,
+      "repeat": 2,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 32
+    },
+    {
+      "name": "seed32-ctx1-id1-rep2",
+      "network_seed": 32,
+      "context": 1,
+      "identity": 1,
+      "repeat": 2,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 32
+    },
+    {
+      "name": "seed32-ctx1-id1-rep3",
+      "network_seed": 32,
+      "context": 1,
+      "identity": 1,
+      "repeat": 3,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed32-ctx1-id1-rep3",
+      "network_seed": 32,
+      "context": 1,
+      "identity": 1,
+      "repeat": 3,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed32-ctx1-id1-rep3",
+      "network_seed": 32,
+      "context": 1,
+      "identity": 1,
+      "repeat": 3,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed33-ctx0-id0-rep0",
+      "network_seed": 33,
+      "context": 0,
+      "identity": 0,
+      "repeat": 0,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed33-ctx0-id0-rep0",
+      "network_seed": 33,
+      "context": 0,
+      "identity": 0,
+      "repeat": 0,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed33-ctx0-id0-rep0",
+      "network_seed": 33,
+      "context": 0,
+      "identity": 0,
+      "repeat": 0,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed33-ctx0-id0-rep1",
+      "network_seed": 33,
+      "context": 0,
+      "identity": 0,
+      "repeat": 1,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed33-ctx0-id0-rep1",
+      "network_seed": 33,
+      "context": 0,
+      "identity": 0,
+      "repeat": 1,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed33-ctx0-id0-rep1",
+      "network_seed": 33,
+      "context": 0,
+      "identity": 0,
+      "repeat": 1,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed33-ctx0-id0-rep2",
+      "network_seed": 33,
+      "context": 0,
+      "identity": 0,
+      "repeat": 2,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed33-ctx0-id0-rep2",
+      "network_seed": 33,
+      "context": 0,
+      "identity": 0,
+      "repeat": 2,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed33-ctx0-id0-rep2",
+      "network_seed": 33,
+      "context": 0,
+      "identity": 0,
+      "repeat": 2,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed33-ctx0-id0-rep3",
+      "network_seed": 33,
+      "context": 0,
+      "identity": 0,
+      "repeat": 3,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed33-ctx0-id0-rep3",
+      "network_seed": 33,
+      "context": 0,
+      "identity": 0,
+      "repeat": 3,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed33-ctx0-id0-rep3",
+      "network_seed": 33,
+      "context": 0,
+      "identity": 0,
+      "repeat": 3,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed33-ctx0-id1-rep0",
+      "network_seed": 33,
+      "context": 0,
+      "identity": 1,
+      "repeat": 0,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed33-ctx0-id1-rep0",
+      "network_seed": 33,
+      "context": 0,
+      "identity": 1,
+      "repeat": 0,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed33-ctx0-id1-rep0",
+      "network_seed": 33,
+      "context": 0,
+      "identity": 1,
+      "repeat": 0,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed33-ctx0-id1-rep1",
+      "network_seed": 33,
+      "context": 0,
+      "identity": 1,
+      "repeat": 1,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed33-ctx0-id1-rep1",
+      "network_seed": 33,
+      "context": 0,
+      "identity": 1,
+      "repeat": 1,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed33-ctx0-id1-rep1",
+      "network_seed": 33,
+      "context": 0,
+      "identity": 1,
+      "repeat": 1,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed33-ctx0-id1-rep2",
+      "network_seed": 33,
+      "context": 0,
+      "identity": 1,
+      "repeat": 2,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed33-ctx0-id1-rep2",
+      "network_seed": 33,
+      "context": 0,
+      "identity": 1,
+      "repeat": 2,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed33-ctx0-id1-rep2",
+      "network_seed": 33,
+      "context": 0,
+      "identity": 1,
+      "repeat": 2,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed33-ctx0-id1-rep3",
+      "network_seed": 33,
+      "context": 0,
+      "identity": 1,
+      "repeat": 3,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed33-ctx0-id1-rep3",
+      "network_seed": 33,
+      "context": 0,
+      "identity": 1,
+      "repeat": 3,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed33-ctx0-id1-rep3",
+      "network_seed": 33,
+      "context": 0,
+      "identity": 1,
+      "repeat": 3,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed33-ctx1-id0-rep0",
+      "network_seed": 33,
+      "context": 1,
+      "identity": 0,
+      "repeat": 0,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed33-ctx1-id0-rep0",
+      "network_seed": 33,
+      "context": 1,
+      "identity": 0,
+      "repeat": 0,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed33-ctx1-id0-rep0",
+      "network_seed": 33,
+      "context": 1,
+      "identity": 0,
+      "repeat": 0,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed33-ctx1-id0-rep1",
+      "network_seed": 33,
+      "context": 1,
+      "identity": 0,
+      "repeat": 1,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed33-ctx1-id0-rep1",
+      "network_seed": 33,
+      "context": 1,
+      "identity": 0,
+      "repeat": 1,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed33-ctx1-id0-rep1",
+      "network_seed": 33,
+      "context": 1,
+      "identity": 0,
+      "repeat": 1,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed33-ctx1-id0-rep2",
+      "network_seed": 33,
+      "context": 1,
+      "identity": 0,
+      "repeat": 2,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 32
+    },
+    {
+      "name": "seed33-ctx1-id0-rep2",
+      "network_seed": 33,
+      "context": 1,
+      "identity": 0,
+      "repeat": 2,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 32
+    },
+    {
+      "name": "seed33-ctx1-id0-rep2",
+      "network_seed": 33,
+      "context": 1,
+      "identity": 0,
+      "repeat": 2,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 32
+    },
+    {
+      "name": "seed33-ctx1-id0-rep3",
+      "network_seed": 33,
+      "context": 1,
+      "identity": 0,
+      "repeat": 3,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed33-ctx1-id0-rep3",
+      "network_seed": 33,
+      "context": 1,
+      "identity": 0,
+      "repeat": 3,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed33-ctx1-id0-rep3",
+      "network_seed": 33,
+      "context": 1,
+      "identity": 0,
+      "repeat": 3,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed33-ctx1-id1-rep0",
+      "network_seed": 33,
+      "context": 1,
+      "identity": 1,
+      "repeat": 0,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed33-ctx1-id1-rep0",
+      "network_seed": 33,
+      "context": 1,
+      "identity": 1,
+      "repeat": 0,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed33-ctx1-id1-rep0",
+      "network_seed": 33,
+      "context": 1,
+      "identity": 1,
+      "repeat": 0,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed33-ctx1-id1-rep1",
+      "network_seed": 33,
+      "context": 1,
+      "identity": 1,
+      "repeat": 1,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed33-ctx1-id1-rep1",
+      "network_seed": 33,
+      "context": 1,
+      "identity": 1,
+      "repeat": 1,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed33-ctx1-id1-rep1",
+      "network_seed": 33,
+      "context": 1,
+      "identity": 1,
+      "repeat": 1,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed33-ctx1-id1-rep2",
+      "network_seed": 33,
+      "context": 1,
+      "identity": 1,
+      "repeat": 2,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed33-ctx1-id1-rep2",
+      "network_seed": 33,
+      "context": 1,
+      "identity": 1,
+      "repeat": 2,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed33-ctx1-id1-rep2",
+      "network_seed": 33,
+      "context": 1,
+      "identity": 1,
+      "repeat": 2,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed33-ctx1-id1-rep3",
+      "network_seed": 33,
+      "context": 1,
+      "identity": 1,
+      "repeat": 3,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed33-ctx1-id1-rep3",
+      "network_seed": 33,
+      "context": 1,
+      "identity": 1,
+      "repeat": 3,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed33-ctx1-id1-rep3",
+      "network_seed": 33,
+      "context": 1,
+      "identity": 1,
+      "repeat": 3,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed34-ctx0-id0-rep0",
+      "network_seed": 34,
+      "context": 0,
+      "identity": 0,
+      "repeat": 0,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed34-ctx0-id0-rep0",
+      "network_seed": 34,
+      "context": 0,
+      "identity": 0,
+      "repeat": 0,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed34-ctx0-id0-rep0",
+      "network_seed": 34,
+      "context": 0,
+      "identity": 0,
+      "repeat": 0,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed34-ctx0-id0-rep1",
+      "network_seed": 34,
+      "context": 0,
+      "identity": 0,
+      "repeat": 1,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed34-ctx0-id0-rep1",
+      "network_seed": 34,
+      "context": 0,
+      "identity": 0,
+      "repeat": 1,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed34-ctx0-id0-rep1",
+      "network_seed": 34,
+      "context": 0,
+      "identity": 0,
+      "repeat": 1,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed34-ctx0-id0-rep2",
+      "network_seed": 34,
+      "context": 0,
+      "identity": 0,
+      "repeat": 2,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed34-ctx0-id0-rep2",
+      "network_seed": 34,
+      "context": 0,
+      "identity": 0,
+      "repeat": 2,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed34-ctx0-id0-rep2",
+      "network_seed": 34,
+      "context": 0,
+      "identity": 0,
+      "repeat": 2,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed34-ctx0-id0-rep3",
+      "network_seed": 34,
+      "context": 0,
+      "identity": 0,
+      "repeat": 3,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed34-ctx0-id0-rep3",
+      "network_seed": 34,
+      "context": 0,
+      "identity": 0,
+      "repeat": 3,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed34-ctx0-id0-rep3",
+      "network_seed": 34,
+      "context": 0,
+      "identity": 0,
+      "repeat": 3,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed34-ctx0-id1-rep0",
+      "network_seed": 34,
+      "context": 0,
+      "identity": 1,
+      "repeat": 0,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed34-ctx0-id1-rep0",
+      "network_seed": 34,
+      "context": 0,
+      "identity": 1,
+      "repeat": 0,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed34-ctx0-id1-rep0",
+      "network_seed": 34,
+      "context": 0,
+      "identity": 1,
+      "repeat": 0,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed34-ctx0-id1-rep1",
+      "network_seed": 34,
+      "context": 0,
+      "identity": 1,
+      "repeat": 1,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed34-ctx0-id1-rep1",
+      "network_seed": 34,
+      "context": 0,
+      "identity": 1,
+      "repeat": 1,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed34-ctx0-id1-rep1",
+      "network_seed": 34,
+      "context": 0,
+      "identity": 1,
+      "repeat": 1,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed34-ctx0-id1-rep2",
+      "network_seed": 34,
+      "context": 0,
+      "identity": 1,
+      "repeat": 2,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed34-ctx0-id1-rep2",
+      "network_seed": 34,
+      "context": 0,
+      "identity": 1,
+      "repeat": 2,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed34-ctx0-id1-rep2",
+      "network_seed": 34,
+      "context": 0,
+      "identity": 1,
+      "repeat": 2,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed34-ctx0-id1-rep3",
+      "network_seed": 34,
+      "context": 0,
+      "identity": 1,
+      "repeat": 3,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed34-ctx0-id1-rep3",
+      "network_seed": 34,
+      "context": 0,
+      "identity": 1,
+      "repeat": 3,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed34-ctx0-id1-rep3",
+      "network_seed": 34,
+      "context": 0,
+      "identity": 1,
+      "repeat": 3,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed34-ctx1-id0-rep0",
+      "network_seed": 34,
+      "context": 1,
+      "identity": 0,
+      "repeat": 0,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed34-ctx1-id0-rep0",
+      "network_seed": 34,
+      "context": 1,
+      "identity": 0,
+      "repeat": 0,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed34-ctx1-id0-rep0",
+      "network_seed": 34,
+      "context": 1,
+      "identity": 0,
+      "repeat": 0,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed34-ctx1-id0-rep1",
+      "network_seed": 34,
+      "context": 1,
+      "identity": 0,
+      "repeat": 1,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed34-ctx1-id0-rep1",
+      "network_seed": 34,
+      "context": 1,
+      "identity": 0,
+      "repeat": 1,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed34-ctx1-id0-rep1",
+      "network_seed": 34,
+      "context": 1,
+      "identity": 0,
+      "repeat": 1,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed34-ctx1-id0-rep2",
+      "network_seed": 34,
+      "context": 1,
+      "identity": 0,
+      "repeat": 2,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed34-ctx1-id0-rep2",
+      "network_seed": 34,
+      "context": 1,
+      "identity": 0,
+      "repeat": 2,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed34-ctx1-id0-rep2",
+      "network_seed": 34,
+      "context": 1,
+      "identity": 0,
+      "repeat": 2,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed34-ctx1-id0-rep3",
+      "network_seed": 34,
+      "context": 1,
+      "identity": 0,
+      "repeat": 3,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed34-ctx1-id0-rep3",
+      "network_seed": 34,
+      "context": 1,
+      "identity": 0,
+      "repeat": 3,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed34-ctx1-id0-rep3",
+      "network_seed": 34,
+      "context": 1,
+      "identity": 0,
+      "repeat": 3,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed34-ctx1-id1-rep0",
+      "network_seed": 34,
+      "context": 1,
+      "identity": 1,
+      "repeat": 0,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 32
+    },
+    {
+      "name": "seed34-ctx1-id1-rep0",
+      "network_seed": 34,
+      "context": 1,
+      "identity": 1,
+      "repeat": 0,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 32
+    },
+    {
+      "name": "seed34-ctx1-id1-rep0",
+      "network_seed": 34,
+      "context": 1,
+      "identity": 1,
+      "repeat": 0,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 32
+    },
+    {
+      "name": "seed34-ctx1-id1-rep1",
+      "network_seed": 34,
+      "context": 1,
+      "identity": 1,
+      "repeat": 1,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed34-ctx1-id1-rep1",
+      "network_seed": 34,
+      "context": 1,
+      "identity": 1,
+      "repeat": 1,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed34-ctx1-id1-rep1",
+      "network_seed": 34,
+      "context": 1,
+      "identity": 1,
+      "repeat": 1,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed34-ctx1-id1-rep2",
+      "network_seed": 34,
+      "context": 1,
+      "identity": 1,
+      "repeat": 2,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed34-ctx1-id1-rep2",
+      "network_seed": 34,
+      "context": 1,
+      "identity": 1,
+      "repeat": 2,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed34-ctx1-id1-rep2",
+      "network_seed": 34,
+      "context": 1,
+      "identity": 1,
+      "repeat": 2,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed34-ctx1-id1-rep3",
+      "network_seed": 34,
+      "context": 1,
+      "identity": 1,
+      "repeat": 3,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed34-ctx1-id1-rep3",
+      "network_seed": 34,
+      "context": 1,
+      "identity": 1,
+      "repeat": 3,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed34-ctx1-id1-rep3",
+      "network_seed": 34,
+      "context": 1,
+      "identity": 1,
+      "repeat": 3,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed35-ctx0-id0-rep0",
+      "network_seed": 35,
+      "context": 0,
+      "identity": 0,
+      "repeat": 0,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed35-ctx0-id0-rep0",
+      "network_seed": 35,
+      "context": 0,
+      "identity": 0,
+      "repeat": 0,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed35-ctx0-id0-rep0",
+      "network_seed": 35,
+      "context": 0,
+      "identity": 0,
+      "repeat": 0,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed35-ctx0-id0-rep1",
+      "network_seed": 35,
+      "context": 0,
+      "identity": 0,
+      "repeat": 1,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed35-ctx0-id0-rep1",
+      "network_seed": 35,
+      "context": 0,
+      "identity": 0,
+      "repeat": 1,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed35-ctx0-id0-rep1",
+      "network_seed": 35,
+      "context": 0,
+      "identity": 0,
+      "repeat": 1,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed35-ctx0-id0-rep2",
+      "network_seed": 35,
+      "context": 0,
+      "identity": 0,
+      "repeat": 2,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed35-ctx0-id0-rep2",
+      "network_seed": 35,
+      "context": 0,
+      "identity": 0,
+      "repeat": 2,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed35-ctx0-id0-rep2",
+      "network_seed": 35,
+      "context": 0,
+      "identity": 0,
+      "repeat": 2,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed35-ctx0-id0-rep3",
+      "network_seed": 35,
+      "context": 0,
+      "identity": 0,
+      "repeat": 3,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed35-ctx0-id0-rep3",
+      "network_seed": 35,
+      "context": 0,
+      "identity": 0,
+      "repeat": 3,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed35-ctx0-id0-rep3",
+      "network_seed": 35,
+      "context": 0,
+      "identity": 0,
+      "repeat": 3,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed35-ctx0-id1-rep0",
+      "network_seed": 35,
+      "context": 0,
+      "identity": 1,
+      "repeat": 0,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed35-ctx0-id1-rep0",
+      "network_seed": 35,
+      "context": 0,
+      "identity": 1,
+      "repeat": 0,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed35-ctx0-id1-rep0",
+      "network_seed": 35,
+      "context": 0,
+      "identity": 1,
+      "repeat": 0,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed35-ctx0-id1-rep1",
+      "network_seed": 35,
+      "context": 0,
+      "identity": 1,
+      "repeat": 1,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed35-ctx0-id1-rep1",
+      "network_seed": 35,
+      "context": 0,
+      "identity": 1,
+      "repeat": 1,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed35-ctx0-id1-rep1",
+      "network_seed": 35,
+      "context": 0,
+      "identity": 1,
+      "repeat": 1,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed35-ctx0-id1-rep2",
+      "network_seed": 35,
+      "context": 0,
+      "identity": 1,
+      "repeat": 2,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed35-ctx0-id1-rep2",
+      "network_seed": 35,
+      "context": 0,
+      "identity": 1,
+      "repeat": 2,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed35-ctx0-id1-rep2",
+      "network_seed": 35,
+      "context": 0,
+      "identity": 1,
+      "repeat": 2,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed35-ctx0-id1-rep3",
+      "network_seed": 35,
+      "context": 0,
+      "identity": 1,
+      "repeat": 3,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed35-ctx0-id1-rep3",
+      "network_seed": 35,
+      "context": 0,
+      "identity": 1,
+      "repeat": 3,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed35-ctx0-id1-rep3",
+      "network_seed": 35,
+      "context": 0,
+      "identity": 1,
+      "repeat": 3,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 0,
+      "first_latency_ms": null
+    },
+    {
+      "name": "seed35-ctx1-id0-rep0",
+      "network_seed": 35,
+      "context": 1,
+      "identity": 0,
+      "repeat": 0,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed35-ctx1-id0-rep0",
+      "network_seed": 35,
+      "context": 1,
+      "identity": 0,
+      "repeat": 0,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed35-ctx1-id0-rep0",
+      "network_seed": 35,
+      "context": 1,
+      "identity": 0,
+      "repeat": 0,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed35-ctx1-id0-rep1",
+      "network_seed": 35,
+      "context": 1,
+      "identity": 0,
+      "repeat": 1,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed35-ctx1-id0-rep1",
+      "network_seed": 35,
+      "context": 1,
+      "identity": 0,
+      "repeat": 1,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed35-ctx1-id0-rep1",
+      "network_seed": 35,
+      "context": 1,
+      "identity": 0,
+      "repeat": 1,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed35-ctx1-id0-rep2",
+      "network_seed": 35,
+      "context": 1,
+      "identity": 0,
+      "repeat": 2,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed35-ctx1-id0-rep2",
+      "network_seed": 35,
+      "context": 1,
+      "identity": 0,
+      "repeat": 2,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed35-ctx1-id0-rep2",
+      "network_seed": 35,
+      "context": 1,
+      "identity": 0,
+      "repeat": 2,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed35-ctx1-id0-rep3",
+      "network_seed": 35,
+      "context": 1,
+      "identity": 0,
+      "repeat": 3,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed35-ctx1-id0-rep3",
+      "network_seed": 35,
+      "context": 1,
+      "identity": 0,
+      "repeat": 3,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed35-ctx1-id0-rep3",
+      "network_seed": 35,
+      "context": 1,
+      "identity": 0,
+      "repeat": 3,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed35-ctx1-id1-rep0",
+      "network_seed": 35,
+      "context": 1,
+      "identity": 1,
+      "repeat": 0,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed35-ctx1-id1-rep0",
+      "network_seed": 35,
+      "context": 1,
+      "identity": 1,
+      "repeat": 0,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed35-ctx1-id1-rep0",
+      "network_seed": 35,
+      "context": 1,
+      "identity": 1,
+      "repeat": 0,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed35-ctx1-id1-rep1",
+      "network_seed": 35,
+      "context": 1,
+      "identity": 1,
+      "repeat": 1,
+      "split": "train",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed35-ctx1-id1-rep1",
+      "network_seed": 35,
+      "context": 1,
+      "identity": 1,
+      "repeat": 1,
+      "split": "train",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed35-ctx1-id1-rep1",
+      "network_seed": 35,
+      "context": 1,
+      "identity": 1,
+      "repeat": 1,
+      "split": "train",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed35-ctx1-id1-rep2",
+      "network_seed": 35,
+      "context": 1,
+      "identity": 1,
+      "repeat": 2,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed35-ctx1-id1-rep2",
+      "network_seed": 35,
+      "context": 1,
+      "identity": 1,
+      "repeat": 2,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed35-ctx1-id1-rep2",
+      "network_seed": 35,
+      "context": 1,
+      "identity": 1,
+      "repeat": 2,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed35-ctx1-id1-rep3",
+      "network_seed": 35,
+      "context": 1,
+      "identity": 1,
+      "repeat": 3,
+      "split": "test",
+      "condition": "intact",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed35-ctx1-id1-rep3",
+      "network_seed": 35,
+      "context": 1,
+      "identity": 1,
+      "repeat": 3,
+      "split": "test",
+      "condition": "blocked",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    },
+    {
+      "name": "seed35-ctx1-id1-rep3",
+      "network_seed": 35,
+      "context": 1,
+      "identity": 1,
+      "repeat": 3,
+      "split": "test",
+      "condition": "scrambled",
+      "evoked_spikes": 640,
+      "first_latency_ms": 31
+    }
+  ],
+  "limits": [
+    "Synthetic identities and random connectivity do not model familiarity, learning, or animal behavior.",
+    "CA1 is a feedforward sample with no pyramidal feedback.",
+    "CA2 intervention changes only pyramidal output; all inhibitory streams and direct CA3 input are preserved.",
+    "Reversal and inhibitory gain include assumptions and calibration; results are conditional on this revised model.",
+    "Five model networks do not establish CA2 function in animals.",
+    "No decoder tuning; trial split predetermined before outcomes."
+  ]
+}

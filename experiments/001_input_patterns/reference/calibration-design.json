@@ -1,0 +1,99 @@
+{
+  "status": "Calibration specification before sweep results",
+  "cases": [
+    {
+      "case": "MEC_LII_Stellate-1024",
+      "pathway": "MEC_LII_Stellate",
+      "active_afferents": 1024,
+      "target_EPSP_mV": 7.4,
+      "target_SEM_mV": 0.9,
+      "duration_ms": 150,
+      "pulse_time_ms": 50,
+      "steps": 10,
+      "network_seed": 20
+    },
+    {
+      "case": "MEC_LII_Stellate-2048",
+      "pathway": "MEC_LII_Stellate",
+      "active_afferents": 2048,
+      "target_EPSP_mV": 7.4,
+      "target_SEM_mV": 0.9,
+      "duration_ms": 150,
+      "pulse_time_ms": 50,
+      "steps": 10,
+      "network_seed": 20
+    },
+    {
+      "case": "MEC_LII_Stellate-3072",
+      "pathway": "MEC_LII_Stellate",
+      "active_afferents": 3072,
+      "target_EPSP_mV": 7.4,
+      "target_SEM_mV": 0.9,
+      "duration_ms": 150,
+      "pulse_time_ms": 50,
+      "steps": 10,
+      "network_seed": 20
+    },
+    {
+      "case": "MEC_LII_Stellate-4096",
+      "pathway": "MEC_LII_Stellate",
+      "active_afferents": 4096,
+      "target_EPSP_mV": 7.4,
+      "target_SEM_mV": 0.9,
+      "duration_ms": 150,
+      "pulse_time_ms": 50,
+      "steps": 10,
+      "network_seed": 20
+    },
+    {
+      "case": "CA3_Pyramidal-128",
+      "pathway": "CA3_Pyramidal",
+      "active_afferents": 128,
+      "target_EPSP_mV": 10.8,
+      "target_SEM_mV": 2.2,
+      "duration_ms": 150,
+      "pulse_time_ms": 50,
+      "steps": 10,
+      "network_seed": 20
+    },
+    {
+      "case": "CA3_Pyramidal-256",
+      "pathway": "CA3_Pyramidal",
+      "active_afferents": 256,
+      "target_EPSP_mV": 10.8,
+      "target_SEM_mV": 2.2,
+      "duration_ms": 150,
+      "pulse_time_ms": 50,
+      "steps": 10,
+      "network_seed": 20
+    },
+    {
+      "case": "CA3_Pyramidal-384",
+      "pathway": "CA3_Pyramidal",
+      "active_afferents": 384,
+      "target_EPSP_mV": 10.8,
+      "target_SEM_mV": 2.2,
+      "duration_ms": 150,
+      "pulse_time_ms": 50,
+      "steps": 10,
+      "network_seed": 20
+    },
+    {
+      "case": "CA3_Pyramidal-512",
+      "pathway": "CA3_Pyramidal",
+      "active_afferents": 512,
+      "target_EPSP_mV": 10.8,
+      "target_SEM_mV": 2.2,
+      "duration_ms": 150,
+      "pulse_time_ms": 50,
+      "steps": 10,
+      "network_seed": 20
+    }
+  ],
+  "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2905041/",
+  "targets": "Figure5: LII-to-CA2 EPSP 7.4\u00b10.9mV at20V with inhibition blocked; Figure3: SC-to-CA2 EPSP10.8\u00b12.2mV at16V with inhibition blocked. n8 and n7; errors SEM.",
+  "mapping_limits": "Electrical stimulus voltage has no direct CARLsim equivalent; calibrate stimulated afferent count, retain all intrinsic and synaptic parameters. MEC LII is a subset of the aggregate EC LII pathway. Postsynaptic sample has no inhibitory or recurrent inputs, approximating isolated early EPSP under GABA blockade, not an exact slice preparation.",
+  "selection": "Choose tested afferent count with mean peak EPSP nearest target, excluding any case that evokes spikes; if range does not bracket target extend sweep before task freeze. Require independently held-out functional/physiological checks; calibration is not validation.",
+  "measurement": "Per-neuron peak voltage from pulse to60ms later minus mean baseline t40-49ms; average128 target cells. Check no target spikes before interpreting EPSP.",
+  "provenance": "Calibration controls intervention on stimulated-fiber count only. Target cells use exported fitted point-neuron parameters; they are not experimentally measured replicates."
+}

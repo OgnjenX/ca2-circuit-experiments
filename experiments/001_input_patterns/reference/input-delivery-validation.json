@@ -1,0 +1,10 @@
+{
+  "MEC_LII_Stellate": {
+    "exact_event_match": true,
+    "events": 324540
+  },
+  "CA3_Pyramidal": {
+    "exact_event_match": true,
+    "events": 30720
+  }
+}

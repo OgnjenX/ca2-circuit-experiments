@@ -1,0 +1,90 @@
+{
+  "pass": true,
+  "reviewed_utc": "2026-10-01T23:56:11.272023+00:00",
+  "checks": [
+    {
+      "file": "model/circuit-task-v1",
+      "expected_sha256": "e3a10f779016451056bf5ca85e2c4c130be25df0c71a6116399e4e36a7cc37cc",
+      "actual_sha256": "e3a10f779016451056bf5ca85e2c4c130be25df0c71a6116399e4e36a7cc37cc",
+      "unchanged": true
+    },
+    {
+      "file": "model/src/circuit.cpp",
+      "expected_sha256": "c3951c60b616eff994ac6f2f7361cd0f342da2b62c2ccdacc0608cca6a7afad9",
+      "actual_sha256": "c3951c60b616eff994ac6f2f7361cd0f342da2b62c2ccdacc0608cca6a7afad9",
+      "unchanged": true
+    },
+    {
+      "file": "model/core_config.h",
+      "expected_sha256": "42b3eed12457f55bf5c4ac14417ec5790b60441f1de2bd1286e965e68e7a689c",
+      "actual_sha256": "42b3eed12457f55bf5c4ac14417ec5790b60441f1de2bd1286e965e68e7a689c",
+      "unchanged": true
+    },
+    {
+      "file": "model/readout_config.h",
+      "expected_sha256": "923df83a6b55f80b6c8793907b8ddd6de86cb9c20005d9402bd169f666ec50dc",
+      "actual_sha256": "923df83a6b55f80b6c8793907b8ddd6de86cb9c20005d9402bd169f666ec50dc",
+      "unchanged": true
+    },
+    {
+      "file": "model/calibration_config.h",
+      "expected_sha256": "e40c4562256a19f3fcfbab4d587db537b4932f5a39f0919a07d92675235f7f2d",
+      "actual_sha256": "e40c4562256a19f3fcfbab4d587db537b4932f5a39f0919a07d92675235f7f2d",
+      "unchanged": true
+    },
+    {
+      "file": "model/setup.h",
+      "expected_sha256": "da861450062757173d36a284d145413c8ef7b4351f1823afaeead8ae1ad27ed7",
+      "actual_sha256": "da861450062757173d36a284d145413c8ef7b4351f1823afaeead8ae1ad27ed7",
+      "unchanged": true
+    },
+    {
+      "file": "simulator-reversal-variant/libcarlsim.a.4.0.0",
+      "expected_sha256": "aeb6838ecde6859f50ddcce09975c85f2d9f72bfd0680ccc2a2741df3ef9345d",
+      "actual_sha256": "aeb6838ecde6859f50ddcce09975c85f2d9f72bfd0680ccc2a2741df3ef9345d",
+      "unchanged": true
+    },
+    {
+      "file": "run_reset_task.py",
+      "expected_sha256": "60f1f79618cabc4a6d4d82d97a1b2ecb54c71cdd7f98c8833da746e7b7ea3956",
+      "actual_sha256": "60f1f79618cabc4a6d4d82d97a1b2ecb54c71cdd7f98c8833da746e7b7ea3956",
+      "unchanged": true
+    },
+    {
+      "file": "analyze_reset_task.py",
+      "expected_sha256": "2a5bf911ce72d7303dcb2c7bf4218c85269b975a076d6168626cd64ed52b0cf7",
+      "actual_sha256": "2a5bf911ce72d7303dcb2c7bf4218c85269b975a076d6168626cd64ed52b0cf7",
+      "unchanged": true
+    },
+    {
+      "file": "task_io.py",
+      "expected_sha256": "26ad136070c82a96d4f56cb7bae6c93f2d6223d20143bbd6aa13e0b51820e96a",
+      "actual_sha256": "26ad136070c82a96d4f56cb7bae6c93f2d6223d20143bbd6aa13e0b51820e96a",
+      "unchanged": true
+    },
+    {
+      "file": "replay_reset_trial.py",
+      "expected_sha256": "6336725fea69590a8ff9bd4f8d19158fc8538d1668d71b74cc9f5176c46c2552",
+      "actual_sha256": "6336725fea69590a8ff9bd4f8d19158fc8538d1668d71b74cc9f5176c46c2552",
+      "unchanged": true
+    },
+    {
+      "file": "stimuli/reset-task-v1/configuration.json",
+      "expected_sha256": "7ba99175812e7298c836868e2283af2a8a7971991930f7dd477770308a618af9",
+      "actual_sha256": "7ba99175812e7298c836868e2283af2a8a7971991930f7dd477770308a618af9",
+      "unchanged": true
+    },
+    {
+      "file": "revised-source-export/CA2_CA3_CA1_EC_conn_parameters10-01-2026_10_48_20.csv",
+      "expected_sha256": "93df10e7cb0b00261e9d5051c99d62a97f55afaa56f9e3c039eab6660b4fd9e9",
+      "actual_sha256": "93df10e7cb0b00261e9d5051c99d62a97f55afaa56f9e3c039eab6660b4fd9e9",
+      "unchanged": true
+    },
+    {
+      "file": "revised-source-export/CA2_CA3_CA1_EC_neuron_parameters10-01-2026_10_48_20.csv",
+      "expected_sha256": "48a4651de1028785e582029955d5150a31d905d90874c0f17a4ceaeba85ce73a",
+      "actual_sha256": "48a4651de1028785e582029955d5150a31d905d90874c0f17a4ceaeba85ce73a",
+      "unchanged": true
+    }
+  ]
+}

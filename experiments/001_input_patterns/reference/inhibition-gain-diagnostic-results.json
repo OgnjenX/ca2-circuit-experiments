@@ -1,0 +1,26 @@
+[
+  {
+    "gain": 0,
+    "min_voltage_difference_mV": 0.0,
+    "min_voltage_mV": -72.58828735351562,
+    "peak_response_mV": 10.817364126443863
+  },
+  {
+    "gain": 1,
+    "min_voltage_difference_mV": -0.2664765417575836,
+    "min_voltage_mV": -72.58828735351562,
+    "peak_response_mV": 10.817364126443863
+  },
+  {
+    "gain": 10,
+    "min_voltage_difference_mV": -1.6913919746875763,
+    "min_voltage_mV": -72.58828735351562,
+    "peak_response_mV": 10.817364126443863
+  },
+  {
+    "gain": 100,
+    "min_voltage_difference_mV": -6.058226317167282,
+    "min_voltage_mV": -72.58828735351562,
+    "peak_response_mV": 10.817364126443863
+  }
+]

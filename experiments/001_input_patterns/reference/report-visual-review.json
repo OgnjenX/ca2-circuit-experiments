@@ -1,0 +1,25 @@
+{
+  "reviewed_utc": "2026-10-01T23:56:11.272023+00:00",
+  "pdf_sha256": "53907261c6c261024046ca4255a4ad02bf92d85a4322714e3bc5d3e599574f9e",
+  "page_count": 7,
+  "render_command": "pdftoppm -r110 -png",
+  "page_sha256": {
+    "page-1.png": "dd4b0eb3953d5224e5ddbd2b517a8968e7b83f6682d50fccaf2f487b16ce3d2d",
+    "page-2.png": "b20bd7310a2e7446d096affd84632b687c3a8a322fca4ec9885ddeecfef66b22",
+    "page-3.png": "95bf173485088bf28d24156e4565e2b2e05fd6c0dac46fb05f6295387ee649b2",
+    "page-4.png": "0e1dc8f32f39b005a639a5cbeaf66c0fa55e6fc6edfa1828f58cd2a02487ac26",
+    "page-5.png": "090acecd1e0c344350af79c6e19961b6c20adb689c2438d096b913c3901db653",
+    "page-6.png": "eed20f2882ac0a8a0d8343db333088b7cbb5af8152cba68538273fe9bcedeccf",
+    "page-7.png": "7b01d4be12939d952e5c7f3634613c5f6cd2abe4ea19cf4237b09ead16eddf57"
+  },
+  "review": "All seven pages visually inspected; final changes to pages5and7 rerendered and inspected. Figures, tables, captions, evidence labels and footers are readable without clipping or overlap.",
+  "known_render_diagnostic": "Poppler reported unwritable Fontconfig cache locations; rendering succeeded and all page images were inspected.",
+  "scientific_checks": [
+    "Primary null result and zero-width descriptive interval bounded to this assay.",
+    "Core suppression described as conditional and gain50 direction reversal disclosed.",
+    "Secondary voltage is not spike transmission, social memory or proof of biological function.",
+    "Blocked condition preserves inhibitory streams; main/sensitivity centroids refitted, unseen-input centroids fixed.",
+    "CA1 adequacy mismatch, global reversal assumption, fitted inhibitory gain and numerical failure disclosed.",
+    "Reproduction copy validation distinguished from a second full GPU rerun."
+  ]
+}

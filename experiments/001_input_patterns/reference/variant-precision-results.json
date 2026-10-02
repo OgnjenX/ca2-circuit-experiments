@@ -1,0 +1,969 @@
+{
+  "complete": true,
+  "pass": false,
+  "results": [
+    {
+      "variant": "egaba75-gain100",
+      "trial": "seed31-ctx0-id0-rep0",
+      "context": 0,
+      "checks": {
+        "core": {
+          "population_count_checks": {
+            "CA2_Pyramidal": {
+              "rk40": 2634,
+              "rk80": 2633,
+              "relative_difference": 0.00037965072133637056,
+              "pass": true
+            },
+            "CA2_Basket": {
+              "rk40": 835,
+              "rk80": 837,
+              "relative_difference": 0.0023894862604540022,
+              "pass": true
+            },
+            "CA2_Wide_Arbor_Basket": {
+              "rk40": 735,
+              "rk80": 735,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA2_Bistratified": {
+              "rk40": 79,
+              "rk80": 79,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA2_SP_SR": {
+              "rk40": 92,
+              "rk80": 92,
+              "relative_difference": 0.0,
+              "pass": true
+            }
+          },
+          "first_pyramidal_latency_pass": true,
+          "voltage_feature_RMS_difference_mV": null,
+          "pass": true
+        },
+        "intact": {
+          "population_count_checks": {
+            "CA1_Pyramidal": {
+              "rk40": 0,
+              "rk80": 0,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Basket": {
+              "rk40": 61,
+              "rk80": 58,
+              "relative_difference": 0.04918032786885246,
+              "pass": true
+            },
+            "CA1_Bistratified": {
+              "rk40": 3925,
+              "rk80": 3925,
+              "relative_difference": 0.0,
+              "pass": true
+            }
+          },
+          "first_pyramidal_latency_pass": true,
+          "voltage_feature_RMS_difference_mV": 0.011448049784267693,
+          "pass": true
+        },
+        "blocked": {
+          "population_count_checks": {
+            "CA1_Pyramidal": {
+              "rk40": 0,
+              "rk80": 0,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Basket": {
+              "rk40": 0,
+              "rk80": 0,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Bistratified": {
+              "rk40": 0,
+              "rk80": 0,
+              "relative_difference": 0.0,
+              "pass": true
+            }
+          },
+          "first_pyramidal_latency_pass": true,
+          "voltage_feature_RMS_difference_mV": 0.0012996551563067807,
+          "pass": true
+        },
+        "scrambled": {
+          "population_count_checks": {
+            "CA1_Pyramidal": {
+              "rk40": 0,
+              "rk80": 0,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Basket": {
+              "rk40": 96,
+              "rk80": 95,
+              "relative_difference": 0.010416666666666666,
+              "pass": true
+            },
+            "CA1_Bistratified": {
+              "rk40": 3932,
+              "rk80": 3933,
+              "relative_difference": 0.0002542588354945334,
+              "pass": true
+            }
+          },
+          "first_pyramidal_latency_pass": true,
+          "voltage_feature_RMS_difference_mV": 0.010406377425372525,
+          "pass": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "variant": "egaba75-gain100",
+      "trial": "seed31-ctx1-id0-rep0",
+      "context": 1,
+      "checks": {
+        "core": {
+          "population_count_checks": {
+            "CA2_Pyramidal": {
+              "rk40": 382,
+              "rk80": 386,
+              "relative_difference": 0.010362694300518135,
+              "pass": true
+            },
+            "CA2_Basket": {
+              "rk40": 1164,
+              "rk80": 1164,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA2_Wide_Arbor_Basket": {
+              "rk40": 884,
+              "rk80": 884,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA2_Bistratified": {
+              "rk40": 395,
+              "rk80": 395,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA2_SP_SR": {
+              "rk40": 376,
+              "rk80": 376,
+              "relative_difference": 0.0,
+              "pass": true
+            }
+          },
+          "first_pyramidal_latency_pass": true,
+          "voltage_feature_RMS_difference_mV": null,
+          "pass": true
+        },
+        "intact": {
+          "population_count_checks": {
+            "CA1_Pyramidal": {
+              "rk40": 640,
+              "rk80": 640,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Basket": {
+              "rk40": 4095,
+              "rk80": 4095,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Bistratified": {
+              "rk40": 10174,
+              "rk80": 10233,
+              "relative_difference": 0.005765660119222124,
+              "pass": true
+            }
+          },
+          "first_pyramidal_latency_pass": true,
+          "voltage_feature_RMS_difference_mV": 0.13566486688927593,
+          "pass": true
+        },
+        "blocked": {
+          "population_count_checks": {
+            "CA1_Pyramidal": {
+              "rk40": 640,
+              "rk80": 640,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Basket": {
+              "rk40": 4095,
+              "rk80": 4095,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Bistratified": {
+              "rk40": 10159,
+              "rk80": 10218,
+              "relative_difference": 0.005774124094734782,
+              "pass": true
+            }
+          },
+          "first_pyramidal_latency_pass": true,
+          "voltage_feature_RMS_difference_mV": 0.17359947134743495,
+          "pass": true
+        },
+        "scrambled": {
+          "population_count_checks": {
+            "CA1_Pyramidal": {
+              "rk40": 640,
+              "rk80": 640,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Basket": {
+              "rk40": 4095,
+              "rk80": 4095,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Bistratified": {
+              "rk40": 10168,
+              "rk80": 10232,
+              "relative_difference": 0.006254886630179828,
+              "pass": true
+            }
+          },
+          "first_pyramidal_latency_pass": true,
+          "voltage_feature_RMS_difference_mV": 0.1360649569435701,
+          "pass": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "variant": "egaba80-gain100",
+      "trial": "seed31-ctx0-id0-rep0",
+      "context": 0,
+      "checks": {
+        "core": {
+          "population_count_checks": {
+            "CA2_Pyramidal": {
+              "rk40": 2428,
+              "rk80": 2425,
+              "relative_difference": 0.0012355848434925864,
+              "pass": true
+            },
+            "CA2_Basket": {
+              "rk40": 835,
+              "rk80": 837,
+              "relative_difference": 0.0023894862604540022,
+              "pass": true
+            },
+            "CA2_Wide_Arbor_Basket": {
+              "rk40": 735,
+              "rk80": 735,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA2_Bistratified": {
+              "rk40": 79,
+              "rk80": 79,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA2_SP_SR": {
+              "rk40": 90,
+              "rk80": 90,
+              "relative_difference": 0.0,
+              "pass": true
+            }
+          },
+          "first_pyramidal_latency_pass": true,
+          "voltage_feature_RMS_difference_mV": null,
+          "pass": true
+        },
+        "intact": {
+          "population_count_checks": {
+            "CA1_Pyramidal": {
+              "rk40": 0,
+              "rk80": 0,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Basket": {
+              "rk40": 31,
+              "rk80": 31,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Bistratified": {
+              "rk40": 3906,
+              "rk80": 3907,
+              "relative_difference": 0.0002559508574353724,
+              "pass": true
+            }
+          },
+          "first_pyramidal_latency_pass": true,
+          "voltage_feature_RMS_difference_mV": 0.008466499102404206,
+          "pass": true
+        },
+        "blocked": {
+          "population_count_checks": {
+            "CA1_Pyramidal": {
+              "rk40": 0,
+              "rk80": 0,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Basket": {
+              "rk40": 0,
+              "rk80": 0,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Bistratified": {
+              "rk40": 0,
+              "rk80": 0,
+              "relative_difference": 0.0,
+              "pass": true
+            }
+          },
+          "first_pyramidal_latency_pass": true,
+          "voltage_feature_RMS_difference_mV": 0.0012671211837492248,
+          "pass": true
+        },
+        "scrambled": {
+          "population_count_checks": {
+            "CA1_Pyramidal": {
+              "rk40": 0,
+              "rk80": 0,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Basket": {
+              "rk40": 59,
+              "rk80": 57,
+              "relative_difference": 0.03389830508474576,
+              "pass": true
+            },
+            "CA1_Bistratified": {
+              "rk40": 3911,
+              "rk80": 3912,
+              "relative_difference": 0.0002556237218813906,
+              "pass": true
+            }
+          },
+          "first_pyramidal_latency_pass": true,
+          "voltage_feature_RMS_difference_mV": 0.00980559096359605,
+          "pass": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "variant": "egaba80-gain100",
+      "trial": "seed31-ctx1-id0-rep0",
+      "context": 1,
+      "checks": {
+        "core": {
+          "population_count_checks": {
+            "CA2_Pyramidal": {
+              "rk40": 166,
+              "rk80": 167,
+              "relative_difference": 0.005988023952095809,
+              "pass": true
+            },
+            "CA2_Basket": {
+              "rk40": 1165,
+              "rk80": 1165,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA2_Wide_Arbor_Basket": {
+              "rk40": 883,
+              "rk80": 883,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA2_Bistratified": {
+              "rk40": 395,
+              "rk80": 395,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA2_SP_SR": {
+              "rk40": 376,
+              "rk80": 376,
+              "relative_difference": 0.0,
+              "pass": true
+            }
+          },
+          "first_pyramidal_latency_pass": true,
+          "voltage_feature_RMS_difference_mV": null,
+          "pass": true
+        },
+        "intact": {
+          "population_count_checks": {
+            "CA1_Pyramidal": {
+              "rk40": 640,
+              "rk80": 640,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Basket": {
+              "rk40": 4095,
+              "rk80": 4095,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Bistratified": {
+              "rk40": 10127,
+              "rk80": 10189,
+              "relative_difference": 0.006084993620571204,
+              "pass": true
+            }
+          },
+          "first_pyramidal_latency_pass": true,
+          "voltage_feature_RMS_difference_mV": 0.029316785146411794,
+          "pass": true
+        },
+        "blocked": {
+          "population_count_checks": {
+            "CA1_Pyramidal": {
+              "rk40": 640,
+              "rk80": 640,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Basket": {
+              "rk40": 4095,
+              "rk80": 4095,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Bistratified": {
+              "rk40": 10118,
+              "rk80": 10178,
+              "relative_difference": 0.005895067793279623,
+              "pass": true
+            }
+          },
+          "first_pyramidal_latency_pass": true,
+          "voltage_feature_RMS_difference_mV": 0.08869933059826456,
+          "pass": true
+        },
+        "scrambled": {
+          "population_count_checks": {
+            "CA1_Pyramidal": {
+              "rk40": 640,
+              "rk80": 640,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Basket": {
+              "rk40": 4095,
+              "rk80": 4095,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Bistratified": {
+              "rk40": 10122,
+              "rk80": 10185,
+              "relative_difference": 0.006185567010309278,
+              "pass": true
+            }
+          },
+          "first_pyramidal_latency_pass": true,
+          "voltage_feature_RMS_difference_mV": 0.028059460271778934,
+          "pass": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "variant": "egaba77p8-gain50",
+      "trial": "seed31-ctx0-id0-rep0",
+      "context": 0,
+      "checks": {
+        "core": {
+          "population_count_checks": {
+            "CA2_Pyramidal": {
+              "rk40": 4920,
+              "rk80": 4918,
+              "relative_difference": 0.0004065040650406504,
+              "pass": true
+            },
+            "CA2_Basket": {
+              "rk40": 843,
+              "rk80": 845,
+              "relative_difference": 0.002366863905325444,
+              "pass": true
+            },
+            "CA2_Wide_Arbor_Basket": {
+              "rk40": 735,
+              "rk80": 735,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA2_Bistratified": {
+              "rk40": 157,
+              "rk80": 157,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA2_SP_SR": {
+              "rk40": 94,
+              "rk80": 94,
+              "relative_difference": 0.0,
+              "pass": true
+            }
+          },
+          "first_pyramidal_latency_pass": true,
+          "voltage_feature_RMS_difference_mV": null,
+          "pass": true
+        },
+        "intact": {
+          "population_count_checks": {
+            "CA1_Pyramidal": {
+              "rk40": 0,
+              "rk80": 0,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Basket": {
+              "rk40": 299,
+              "rk80": 289,
+              "relative_difference": 0.033444816053511704,
+              "pass": true
+            },
+            "CA1_Bistratified": {
+              "rk40": 8797,
+              "rk80": 8796,
+              "relative_difference": 0.00011367511651699443,
+              "pass": true
+            }
+          },
+          "first_pyramidal_latency_pass": true,
+          "voltage_feature_RMS_difference_mV": 0.022123949264540716,
+          "pass": true
+        },
+        "blocked": {
+          "population_count_checks": {
+            "CA1_Pyramidal": {
+              "rk40": 0,
+              "rk80": 0,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Basket": {
+              "rk40": 0,
+              "rk80": 0,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Bistratified": {
+              "rk40": 0,
+              "rk80": 0,
+              "relative_difference": 0.0,
+              "pass": true
+            }
+          },
+          "first_pyramidal_latency_pass": true,
+          "voltage_feature_RMS_difference_mV": 0.0012382894790765426,
+          "pass": true
+        },
+        "scrambled": {
+          "population_count_checks": {
+            "CA1_Pyramidal": {
+              "rk40": 0,
+              "rk80": 0,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Basket": {
+              "rk40": 271,
+              "rk80": 268,
+              "relative_difference": 0.01107011070110701,
+              "pass": true
+            },
+            "CA1_Bistratified": {
+              "rk40": 8754,
+              "rk80": 8776,
+              "relative_difference": 0.0025068368277119417,
+              "pass": true
+            }
+          },
+          "first_pyramidal_latency_pass": true,
+          "voltage_feature_RMS_difference_mV": 0.023760623903221742,
+          "pass": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "variant": "egaba77p8-gain50",
+      "trial": "seed31-ctx1-id0-rep0",
+      "context": 1,
+      "checks": {
+        "core": {
+          "population_count_checks": {
+            "CA2_Pyramidal": {
+              "rk40": 6184,
+              "rk80": 6293,
+              "relative_difference": 0.017320832671221992,
+              "pass": true
+            },
+            "CA2_Basket": {
+              "rk40": 1210,
+              "rk80": 1206,
+              "relative_difference": 0.003305785123966942,
+              "pass": true
+            },
+            "CA2_Wide_Arbor_Basket": {
+              "rk40": 885,
+              "rk80": 885,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA2_Bistratified": {
+              "rk40": 547,
+              "rk80": 549,
+              "relative_difference": 0.0036429872495446266,
+              "pass": true
+            },
+            "CA2_SP_SR": {
+              "rk40": 383,
+              "rk80": 384,
+              "relative_difference": 0.0026041666666666665,
+              "pass": true
+            }
+          },
+          "first_pyramidal_latency_pass": true,
+          "voltage_feature_RMS_difference_mV": null,
+          "pass": true
+        },
+        "intact": {
+          "population_count_checks": {
+            "CA1_Pyramidal": {
+              "rk40": 640,
+              "rk80": 640,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Basket": {
+              "rk40": 4097,
+              "rk80": 4097,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Bistratified": {
+              "rk40": 16940,
+              "rk80": 17153,
+              "relative_difference": 0.012417652888707515,
+              "pass": true
+            }
+          },
+          "first_pyramidal_latency_pass": true,
+          "voltage_feature_RMS_difference_mV": 0.16338922613597984,
+          "pass": true
+        },
+        "blocked": {
+          "population_count_checks": {
+            "CA1_Pyramidal": {
+              "rk40": 640,
+              "rk80": 640,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Basket": {
+              "rk40": 4095,
+              "rk80": 4095,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Bistratified": {
+              "rk40": 10130,
+              "rk80": 10198,
+              "relative_difference": 0.006667974112571092,
+              "pass": true
+            }
+          },
+          "first_pyramidal_latency_pass": true,
+          "voltage_feature_RMS_difference_mV": 0.1729416379044861,
+          "pass": true
+        },
+        "scrambled": {
+          "population_count_checks": {
+            "CA1_Pyramidal": {
+              "rk40": 640,
+              "rk80": 640,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Basket": {
+              "rk40": 4095,
+              "rk80": 4095,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Bistratified": {
+              "rk40": 16919,
+              "rk80": 17121,
+              "relative_difference": 0.011798376263068747,
+              "pass": true
+            }
+          },
+          "first_pyramidal_latency_pass": true,
+          "voltage_feature_RMS_difference_mV": 0.14601493754346195,
+          "pass": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "variant": "egaba77p8-gain150",
+      "trial": "seed31-ctx0-id0-rep0",
+      "context": 0,
+      "checks": {
+        "core": {
+          "population_count_checks": {
+            "CA2_Pyramidal": {
+              "rk40": 2299,
+              "rk80": 2295,
+              "relative_difference": 0.0017398869073510222,
+              "pass": true
+            },
+            "CA2_Basket": {
+              "rk40": 835,
+              "rk80": 837,
+              "relative_difference": 0.0023894862604540022,
+              "pass": true
+            },
+            "CA2_Wide_Arbor_Basket": {
+              "rk40": 735,
+              "rk80": 735,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA2_Bistratified": {
+              "rk40": 79,
+              "rk80": 79,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA2_SP_SR": {
+              "rk40": 90,
+              "rk80": 90,
+              "relative_difference": 0.0,
+              "pass": true
+            }
+          },
+          "first_pyramidal_latency_pass": true,
+          "voltage_feature_RMS_difference_mV": null,
+          "pass": true
+        },
+        "intact": {
+          "population_count_checks": {
+            "CA1_Pyramidal": {
+              "rk40": 0,
+              "rk80": 0,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Basket": {
+              "rk40": 39,
+              "rk80": 36,
+              "relative_difference": 0.07692307692307693,
+              "pass": false
+            },
+            "CA1_Bistratified": {
+              "rk40": 3909,
+              "rk80": 3910,
+              "relative_difference": 0.0002557544757033248,
+              "pass": true
+            }
+          },
+          "first_pyramidal_latency_pass": true,
+          "voltage_feature_RMS_difference_mV": 0.006238965122059854,
+          "pass": false
+        },
+        "blocked": {
+          "population_count_checks": {
+            "CA1_Pyramidal": {
+              "rk40": 0,
+              "rk80": 0,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Basket": {
+              "rk40": 0,
+              "rk80": 0,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Bistratified": {
+              "rk40": 0,
+              "rk80": 0,
+              "relative_difference": 0.0,
+              "pass": true
+            }
+          },
+          "first_pyramidal_latency_pass": true,
+          "voltage_feature_RMS_difference_mV": 0.001280403110871813,
+          "pass": true
+        },
+        "scrambled": {
+          "population_count_checks": {
+            "CA1_Pyramidal": {
+              "rk40": 0,
+              "rk80": 0,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Basket": {
+              "rk40": 67,
+              "rk80": 66,
+              "relative_difference": 0.014925373134328358,
+              "pass": true
+            },
+            "CA1_Bistratified": {
+              "rk40": 3917,
+              "rk80": 3918,
+              "relative_difference": 0.00025523226135783564,
+              "pass": true
+            }
+          },
+          "first_pyramidal_latency_pass": true,
+          "voltage_feature_RMS_difference_mV": 0.007991899017414128,
+          "pass": true
+        }
+      },
+      "pass": false
+    },
+    {
+      "variant": "egaba77p8-gain150",
+      "trial": "seed31-ctx1-id0-rep0",
+      "context": 1,
+      "checks": {
+        "core": {
+          "population_count_checks": {
+            "CA2_Pyramidal": {
+              "rk40": 53,
+              "rk80": 53,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA2_Basket": {
+              "rk40": 1164,
+              "rk80": 1164,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA2_Wide_Arbor_Basket": {
+              "rk40": 883,
+              "rk80": 883,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA2_Bistratified": {
+              "rk40": 395,
+              "rk80": 395,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA2_SP_SR": {
+              "rk40": 375,
+              "rk80": 375,
+              "relative_difference": 0.0,
+              "pass": true
+            }
+          },
+          "first_pyramidal_latency_pass": true,
+          "voltage_feature_RMS_difference_mV": null,
+          "pass": true
+        },
+        "intact": {
+          "population_count_checks": {
+            "CA1_Pyramidal": {
+              "rk40": 640,
+              "rk80": 640,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Basket": {
+              "rk40": 4095,
+              "rk80": 4095,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Bistratified": {
+              "rk40": 10139,
+              "rk80": 10210,
+              "relative_difference": 0.006953966699314398,
+              "pass": true
+            }
+          },
+          "first_pyramidal_latency_pass": true,
+          "voltage_feature_RMS_difference_mV": 0.17186675030482948,
+          "pass": true
+        },
+        "blocked": {
+          "population_count_checks": {
+            "CA1_Pyramidal": {
+              "rk40": 640,
+              "rk80": 640,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Basket": {
+              "rk40": 4095,
+              "rk80": 4095,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Bistratified": {
+              "rk40": 10130,
+              "rk80": 10198,
+              "relative_difference": 0.006667974112571092,
+              "pass": true
+            }
+          },
+          "first_pyramidal_latency_pass": true,
+          "voltage_feature_RMS_difference_mV": 0.19137814687531357,
+          "pass": true
+        },
+        "scrambled": {
+          "population_count_checks": {
+            "CA1_Pyramidal": {
+              "rk40": 640,
+              "rk80": 640,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Basket": {
+              "rk40": 4095,
+              "rk80": 4095,
+              "relative_difference": 0.0,
+              "pass": true
+            },
+            "CA1_Bistratified": {
+              "rk40": 10137,
+              "rk80": 10206,
+              "relative_difference": 0.006760728982951205,
+              "pass": true
+            }
+          },
+          "first_pyramidal_latency_pass": true,
+          "voltage_feature_RMS_difference_mV": 0.14821519095431182,
+          "pass": true
+        }
+      },
+      "pass": true
+    }
+  ],
+  "criteria": "Same pre-existing5%population-count/1msfirst-pyramidal-latency/0.5mVvoltage-featureRMS criteria; <=1difference tolerated onlywhen bothcounts<=1.",
+  "scope": "Two preselected seed31 identity0repeat0 trials per core variant, covering both contexts. Both core and readout use80substeps; matched nominal-variant runs use40. This spot check does not test full classifier robustness or all parameter networks.",
+  "completed_unix": 1790889428.64188
+}

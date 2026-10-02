@@ -1,0 +1,27 @@
+{
+  "spk_CA2_Pyramidal.dat": {
+    "exact_spike_event_match": true,
+    "spikes": 360710,
+    "comparison": "events sorted by time and cell ID; GPU serialization order is immaterial"
+  },
+  "spk_CA2_Basket.dat": {
+    "exact_spike_event_match": true,
+    "spikes": 9479,
+    "comparison": "events sorted by time and cell ID; GPU serialization order is immaterial"
+  },
+  "spk_CA2_Wide_Arbor_Basket.dat": {
+    "exact_spike_event_match": true,
+    "spikes": 3526,
+    "comparison": "events sorted by time and cell ID; GPU serialization order is immaterial"
+  },
+  "spk_CA2_SP_SR.dat": {
+    "exact_spike_event_match": true,
+    "spikes": 880,
+    "comparison": "events sorted by time and cell ID; GPU serialization order is immaterial"
+  },
+  "spk_CA2_Bistratified.dat": {
+    "exact_spike_event_match": true,
+    "spikes": 7056,
+    "comparison": "events sorted by time and cell ID; GPU serialization order is immaterial"
+  }
+}

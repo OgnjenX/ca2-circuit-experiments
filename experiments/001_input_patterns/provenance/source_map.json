@@ -1,0 +1,318 @@
+{
+  "analyze_ca1_adequacy.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/analyze_ca1_adequacy.py",
+    "sha256": "7ea90d5c532363405cedd1a715d6064aa9207d0ae1d7109f334fe90d16615822"
+  },
+  "analyze_calibration.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/analyze_calibration.py",
+    "sha256": "e02df9c40a40f41de976171038f91445fa80bad713267a1984fe3dfe62804e6f"
+  },
+  "analyze_context_responses.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/analyze_context_responses.py",
+    "sha256": "91ddad873bea2622e50e8ffd38618bbbb68201f675ac8cd1ab00632b99e4a8c0"
+  },
+  "analyze_generalization.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/analyze_generalization.py",
+    "sha256": "aea06daea2c86630e8856a704ec8f3dda448859af5637e71a94c1429f190b8b1"
+  },
+  "analyze_inhibition_diagnostics.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/analyze_inhibition_diagnostics.py",
+    "sha256": "bdb6fdc71f370ce1b610c15772a38e16292ba9f2962f7bde2b33aed2006f372b"
+  },
+  "analyze_physiology.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/analyze_physiology.py",
+    "sha256": "8da1074d8661add3ece5b7fa3577df5257973a58eacffccf0bf35a483e073fda"
+  },
+  "analyze_pilot.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/analyze_pilot.py",
+    "sha256": "647575ee0b3d025b272bba8eb29e2611dd71e0b4007fe785b01a870258f3898b"
+  },
+  "analyze_pyramidal_calibration.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/analyze_pyramidal_calibration.py",
+    "sha256": "cad69f71d0a2b73d46facb608b48bbddb80de5172ebfe44ec6163aa21b456651"
+  },
+  "analyze_pyramidal_trains.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/analyze_pyramidal_trains.py",
+    "sha256": "72be47c22d8770641fad378bbf3c437117f4eeccbd5c1deb54e89e24b48f9922"
+  },
+  "analyze_readout_precision80.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/analyze_readout_precision80.py",
+    "sha256": "49d2cc6e0bbb5f27cdb264472d329404ed4597237d5c5d27cb2e1cd6bfc6cf60"
+  },
+  "analyze_readout_probe.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/analyze_readout_probe.py",
+    "sha256": "948c6f093950616fc194959d33cb6433ad8e59345e68d91e640d7f2758d49a5b"
+  },
+  "analyze_refined_calibration.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/analyze_refined_calibration.py",
+    "sha256": "db5a8c3884c084180d9d099e19132c528c8b75a60eae8eb4d9c7668c53e6c396"
+  },
+  "analyze_reset_task.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/analyze_reset_task.py",
+    "sha256": "2a5bf911ce72d7303dcb2c7bf4218c85269b975a076d6168626cd64ed52b0cf7"
+  },
+  "analyze_reset_task_v2.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/analyze_reset_task_v2.py",
+    "sha256": "97358946b113538f5b638a30d0fd7901b17bb32d8088f71c3f439099886dccd2"
+  },
+  "analyze_response_dynamics.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/analyze_response_dynamics.py",
+    "sha256": "47c96f32dfb79421fd31941542ea7bd7575767cffe1b8d790e9472aaac24df37"
+  },
+  "analyze_secondary_voltage.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/analyze_secondary_voltage.py",
+    "sha256": "d600f87beac23a2736a8d4ebfffaca384537b0d5c2741bc330effcfdb97d89a3"
+  },
+  "analyze_sensitivity_results.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/analyze_sensitivity_results.py",
+    "sha256": "de86d043390bf604a12b24828fcf3de5d81e1176301f3359f305b797e7fc09c3"
+  },
+  "analyze_task_probe.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/analyze_task_probe.py",
+    "sha256": "a2db8004e95ee9b27dc64ddb94821cff97113e33986abe8652ee659082fcaef0"
+  },
+  "analyze_train_validation.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/analyze_train_validation.py",
+    "sha256": "b936412127211eeeb9b835cd98f9b2dc18fb383634f9f7f92288dc801fcfbf40"
+  },
+  "audit_completion.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/audit_completion.py",
+    "sha256": "c62038935d94bbb232c60dcf8a96c91e85d69e3185e4e980567099b0d14484a9"
+  },
+  "audit_extended_experiments.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/audit_extended_experiments.py",
+    "sha256": "7b67fce261dfa5ee25171d201f110dfeab997ce0ec4cd07452d1b547a6f4319f"
+  },
+  "audit_generalization_inputs.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/audit_generalization_inputs.py",
+    "sha256": "6938ea3ccb04ee4c99444d5f39d61d8e698a27d3b4462685824300e816c180f8"
+  },
+  "audit_nominal_experiment.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/audit_nominal_experiment.py",
+    "sha256": "a5b8b7ef4d005e25053fb1af5601edb78ae38b8a2f3b8e7e9f859971cf1e0b11"
+  },
+  "build_circuit.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/build_circuit.py",
+    "sha256": "c442955b9b896e7464b75ab2016ef404d27bfcc375e8a0714e03ff364e8aa972"
+  },
+  "build_final_manifest.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/build_final_manifest.py",
+    "sha256": "dc2baedb7b4650b55b82a13bb72ce88d3a28305801151b4fc42c9a23cb863304"
+  },
+  "build_scientific_report.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/build_scientific_report.py",
+    "sha256": "56a4a304ff6fb25440edcb3e7c462fbd7eb0808d5ccd57748e07ef16bd0e94be"
+  },
+  "check_analysis_implementation.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/check_analysis_implementation.py",
+    "sha256": "3e16ef5db0078ce495afd7248270841a3886d617c92efe09862096ce76bd478c"
+  },
+  "check_input_readout.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/check_input_readout.py",
+    "sha256": "9633a1afa024b46212fcc88139fc75a37eba98e1e675307461f0ed675f47adc4"
+  },
+  "check_numerics.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/check_numerics.py",
+    "sha256": "8918f2c66da85295703e0e5509dbd5c785c68b4850974679fb6a7f628b121f09"
+  },
+  "extend_generalization.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/extend_generalization.py",
+    "sha256": "5504c2b42e99cd0c50dd0863804a027c9db7fa4e6223bf7dc9865f58632ce394"
+  },
+  "freeze_protocol.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/freeze_protocol.py",
+    "sha256": "3702ae9b0db4abe0c21e16a91a87537de885feb9ab3fd13b6f6c9b50d7dadf19"
+  },
+  "make_replays.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/make_replays.py",
+    "sha256": "acf7238eee0adb7c3ba20ba06d680b533ae71ea543699d77a286529d8a0306d1"
+  },
+  "make_stimuli.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/make_stimuli.py",
+    "sha256": "867a650c898b19f935cfb118ca21f2612ebc97707ea8be779bcc195d5a8a0e4d"
+  },
+  "plot_final_results.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/plot_final_results.py",
+    "sha256": "9580d8de90068c1c79be03da76b3dfb5702af35f54757791a97b2d58c9db4714"
+  },
+  "plot_nominal_results.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/plot_nominal_results.py",
+    "sha256": "de0aeebe5f642e089b06d833ce870d4b634ab3153d5929628cd8edf896ba8035"
+  },
+  "plot_physiology.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/plot_physiology.py",
+    "sha256": "82c7235022d783053e2c9d0445db5363c473c74f0aa3452481ab135245957128"
+  },
+  "plot_response_dynamics.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/plot_response_dynamics.py",
+    "sha256": "a66c946e5ae9ed270fbae1781789b0c938875121adc4d9ac27e3aa26a222b74e"
+  },
+  "plot_validation.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/plot_validation.py",
+    "sha256": "d52ea1ec40fa558dc01734891aefb01784d0b421b289586240fee4fbc97b6da6"
+  },
+  "prepare_baseline.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/prepare_baseline.py",
+    "sha256": "9a8eea25dae2bf5603e1ac81a2a1a7ad1750ab1191f560ad2f586237805335b7"
+  },
+  "prepare_calibration.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/prepare_calibration.py",
+    "sha256": "07de539f16274661b3198f62c2fa8fd4fec2c8f6d0fb09f7f098974388e8ed65"
+  },
+  "prepare_generalization.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/prepare_generalization.py",
+    "sha256": "9f17763da4c3b03fac7a9dcbe78256708a2b8678ef4698b4eee10314a7a648bf"
+  },
+  "prepare_refined_calibration.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/prepare_refined_calibration.py",
+    "sha256": "e35d724f8f27e84f8ef11cd84444549dacfdadc392fcdef933b39d6911786666"
+  },
+  "prepare_reproduction_copy.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/prepare_reproduction_copy.py",
+    "sha256": "1ca4e4070789279f37ef05b7465ba624efe1947d5ae6d447062511a795d1f7a4"
+  },
+  "prepare_reset_task.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/prepare_reset_task.py",
+    "sha256": "55897e1ffc5f237b5fdec497b81be602ea028cf7b3d6bc8cd65d75feadb5c81c"
+  },
+  "prepare_reversal_variant.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/prepare_reversal_variant.py",
+    "sha256": "4be713cf5deb96b67f30773b8c71085d591eddc4f4247aa83be7002bca5cccbd"
+  },
+  "prepare_sensitivity.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/prepare_sensitivity.py",
+    "sha256": "d3496899b412aa73315530c61e6fb4342fa3ca6a30b601386feb04cd2b5d8726"
+  },
+  "prepare_train_validation.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/prepare_train_validation.py",
+    "sha256": "0a297d80e76a7713b3d294805332f55108fc6a9d691fbb5d53d85ae7a075e10c"
+  },
+  "replay_reset_trial.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/replay_reset_trial.py",
+    "sha256": "6336725fea69590a8ff9bd4f8d19158fc8538d1668d71b74cc9f5176c46c2552"
+  },
+  "run_ca1_adequacy.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/run_ca1_adequacy.py",
+    "sha256": "2a62a452d9556119021070c6c2e4f29f8f8209e76744862360e4a0e778eccb5a"
+  },
+  "run_generalization.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/run_generalization.py",
+    "sha256": "425ddb298c59f6f32839426e2d5f1c480bf04669e9ef622fd32b7e628966102a"
+  },
+  "run_numerical_sensitivity.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/run_numerical_sensitivity.py",
+    "sha256": "3d666f78d0ff6221d9c51e41961b1194a3928e0feb597a4e5fc7152ab04a8bf3"
+  },
+  "run_readout_precision80.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/run_readout_precision80.py",
+    "sha256": "708729fa224396685d09a0098b7c9283fe1ad6d2fbe7bc32c35640c7aa485b96"
+  },
+  "run_readout_probe.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/run_readout_probe.py",
+    "sha256": "e5b0d7d6c69672bac0fbc4645f43c05213ac3d7da609ed24476e3daf0f298a21"
+  },
+  "run_reset_task.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/run_reset_task.py",
+    "sha256": "60f1f79618cabc4a6d4d82d97a1b2ecb54c71cdd7f98c8833da746e7b7ea3956"
+  },
+  "run_sensitivities.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/run_sensitivities.py",
+    "sha256": "9fdf0153fb36ba16ec5e567e9e12026c8adc0dc36814bd60cfbddd69c3dddee6"
+  },
+  "run_task_probe.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/run_task_probe.py",
+    "sha256": "cf3f3f045c985e217fc0ec661b8c96af613df4774e005a4fc355e3e65a17ddd6"
+  },
+  "run_variant_precision.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/run_variant_precision.py",
+    "sha256": "1cddba095da48ffda5782bcfc073ba68cbd788c9a6c960174d57af26563a90d1"
+  },
+  "sensitivity_io.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/sensitivity_io.py",
+    "sha256": "53069621699c6c00d77ea94879b7e06b508fe597ab383275a8a7e915fda37ea5"
+  },
+  "task_io.py": {
+    "repository_path": "experiments/001_input_patterns/implementation/task_io.py",
+    "sha256": "26ad136070c82a96d4f56cb7bae6c93f2d6223d20143bbd6aa13e0b51820e96a"
+  },
+  "model/calibration_config.h": {
+    "repository_path": "models/ca2_carlsim/nominal/calibration_config.h",
+    "sha256": "e40c4562256a19f3fcfbab4d587db537b4932f5a39f0919a07d92675235f7f2d"
+  },
+  "model/core_config.h": {
+    "repository_path": "models/ca2_carlsim/nominal/core_config.h",
+    "sha256": "42b3eed12457f55bf5c4ac14417ec5790b60441f1de2bd1286e965e68e7a689c"
+  },
+  "model/fresh_config.h": {
+    "repository_path": "models/ca2_carlsim/nominal/fresh_config.h",
+    "sha256": "edcf0ff0198083a045f2cc24f22bd7496046ad738dec97838841e3a7912292d0"
+  },
+  "model/old_config.h": {
+    "repository_path": "models/ca2_carlsim/nominal/old_config.h",
+    "sha256": "57c025707fdfbbd266bd66b00e5797a0cf53349f1e907523d438fd86632b3e32"
+  },
+  "model/readout_config.h": {
+    "repository_path": "models/ca2_carlsim/nominal/readout_config.h",
+    "sha256": "923df83a6b55f80b6c8793907b8ddd6de86cb9c20005d9402bd169f666ec50dc"
+  },
+  "model/setup.h": {
+    "repository_path": "models/ca2_carlsim/nominal/setup.h",
+    "sha256": "da861450062757173d36a284d145413c8ef7b4351f1823afaeead8ae1ad27ed7"
+  },
+  "model/src/baseline.cpp": {
+    "repository_path": "models/ca2_carlsim/nominal/src/baseline.cpp",
+    "sha256": "54d7f96da8cdb7ac619ee15304cbd3545792128f895cdd7e5270ee09dd31c29a"
+  },
+  "model/src/circuit.cpp": {
+    "repository_path": "models/ca2_carlsim/nominal/src/circuit.cpp",
+    "sha256": "c3951c60b616eff994ac6f2f7361cd0f342da2b62c2ccdacc0608cca6a7afad9"
+  },
+  "model/sensitivity/calibration_config.h": {
+    "repository_path": "models/ca2_carlsim/sensitivity/calibration_config.h",
+    "sha256": "e40c4562256a19f3fcfbab4d587db537b4932f5a39f0919a07d92675235f7f2d"
+  },
+  "model/sensitivity/core_config.h": {
+    "repository_path": "models/ca2_carlsim/sensitivity/core_config.h",
+    "sha256": "42b3eed12457f55bf5c4ac14417ec5790b60441f1de2bd1286e965e68e7a689c"
+  },
+  "model/sensitivity/readout_config.h": {
+    "repository_path": "models/ca2_carlsim/sensitivity/readout_config.h",
+    "sha256": "628d508b6205ae286267bf3c48c7c783e34386d7c94df459fcb5afff135c967d"
+  },
+  "model/sensitivity/setup.h": {
+    "repository_path": "models/ca2_carlsim/sensitivity/setup.h",
+    "sha256": "da861450062757173d36a284d145413c8ef7b4351f1823afaeead8ae1ad27ed7"
+  },
+  "model/sensitivity/src/circuit.cpp": {
+    "repository_path": "models/ca2_carlsim/sensitivity/src/circuit.cpp",
+    "sha256": "4fc1829c0a176ae3c83616f2d8d7751f8e0b2e191944b5c31f7bb9a6b6938f92"
+  },
+  "model/ca1-adequacy/calibration_config.h": {
+    "repository_path": "models/ca2_carlsim/ca1_adequacy/calibration_config.h",
+    "sha256": "e40c4562256a19f3fcfbab4d587db537b4932f5a39f0919a07d92675235f7f2d"
+  },
+  "model/ca1-adequacy/core_config.h": {
+    "repository_path": "models/ca2_carlsim/ca1_adequacy/core_config.h",
+    "sha256": "42b3eed12457f55bf5c4ac14417ec5790b60441f1de2bd1286e965e68e7a689c"
+  },
+  "model/ca1-adequacy/readout_config.h": {
+    "repository_path": "models/ca2_carlsim/ca1_adequacy/readout_config.h",
+    "sha256": "e8be2835251b1607b87558a5a5afc2994df8f0c2ab0257844292c47d3e502029"
+  },
+  "model/ca1-adequacy/setup.h": {
+    "repository_path": "models/ca2_carlsim/ca1_adequacy/setup.h",
+    "sha256": "da861450062757173d36a284d145413c8ef7b4351f1823afaeead8ae1ad27ed7"
+  },
+  "model/ca1-adequacy/src/circuit.cpp": {
+    "repository_path": "models/ca2_carlsim/ca1_adequacy/src/circuit.cpp",
+    "sha256": "e92a31dfb98e05b00a83d33963c92ef1e88d9ffe7aa25386cfecd45f95694d11"
+  },
+  "revised-source-export/CA2_CA3_CA1_EC_conn_parameters10-01-2026_10_48_20.csv": {
+    "repository_path": "data/hippocampome/2026-10-01/CA2_CA3_CA1_EC_conn_parameters10-01-2026_10_48_20.csv",
+    "sha256": "93df10e7cb0b00261e9d5051c99d62a97f55afaa56f9e3c039eab6660b4fd9e9"
+  },
+  "revised-source-export/CA2_CA3_CA1_EC_neuron_parameters10-01-2026_10_48_20.csv": {
+    "repository_path": "data/hippocampome/2026-10-01/CA2_CA3_CA1_EC_neuron_parameters10-01-2026_10_48_20.csv",
+    "sha256": "48a4651de1028785e582029955d5150a31d905d90874c0f17a4ceaeba85ce73a"
+  }
+}

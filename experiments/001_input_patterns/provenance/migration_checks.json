@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-02",
+  "scope": "Repository migration checks; not a second full GPU replication or new biological validation",
+  "repository": {
+    "preserved_source_and_parameter_files": 79,
+    "reference_inventory_files_checked": 62,
+    "shared_code_tests_passed": 8,
+    "editable_install_checked": true
+  },
+  "runtime": {
+    "archive_restored": true,
+    "frozen_artifact_hashes_verified": 14,
+    "fresh_task_runs_absent_before_smoke": true
+  },
+  "recorded_archive_roundtrip": {
+    "files_verified": 40217,
+    "bytes_verified": 10419555502,
+    "inventory_sha256": "6f930679215d075e6e7e6ecb152bfa204e171cbe1c0e992cac9621abeb022220",
+    "all_file_content_hashes_match": true
+  },
+  "backend": {
+    "patch_source_files_matching_recorded": 77,
+    "compilation_and_nominal_circuit_link_passed": true,
+    "rebuilt_library_sha256": "72b4102337f0e8b8549bbbdd1c753db2a4a0523a372fc645296989850d41994c",
+    "rebuilt_executable_sha256": "d0e21c3b18d506bb9d61946be72b5b21adca2b24f33b7545865768ea6b3a8ed8",
+    "rebuilt_binary_equivalence_or_convergence_tested": false
+  },
+  "gpu_smoke": {
+    "trial": "seed31-ctx0-id0-rep0",
+    "matching_spike_events_and_voltage_arrays": 42,
+    "different": [],
+    "comparison": "Spike events sorted by time and cell ID; monitored voltage array at every time and cell. Binary monitor order may differ."
+  }
+}

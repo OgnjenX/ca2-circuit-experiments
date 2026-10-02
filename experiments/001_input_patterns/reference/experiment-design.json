@@ -1,0 +1,77 @@
+{
+  "status": "Physiology calibration and model adequacy checks; confirmatory functional experiment not yet frozen.",
+  "goal": "Experimentally grounded CA2-centered circuit experiment with matched interventions and reproducible results",
+  "primary_question": "Under controlled cortical and hippocampal input, what does CA2 contribute to information transmission to CA1?",
+  "task": "Present distinct rate-matched afferent spike patterns under different timing and distractor conditions; quantify downstream identity discriminability and response timing. No familiarity label is supplied and identity transfer is not called social recognition memory.",
+  "circuit": {
+    "core": "Five CA2 types from fresh Hippocampome export",
+    "upstream": "Controlled EC and CA3 afferent spikes; explicit upstream populations only if required by feedback hypothesis",
+    "downstream": "Source-constrained CA1 readout with alternative inputs retained; dorsal/ventral specificity must be audited",
+    "boundary": "No thalamus or basal ganglia initially; add a specific pathway when an unmet hypothesis requires it"
+  },
+  "stages": [
+    "Reproduce original driver and audit fresh export and defaults",
+    "Check numerical sensitivity and baseline behavior with fresh parameters",
+    "Extract physiological response targets and afferent/output parameters; reject unjustified anatomical mapping",
+    "Calibrate only on physiological training targets, freeze parameters and document calibrated versus measured versus default values",
+    "Run identity-transfer task with paired input and connectivity seeds across intact CA2, interrupted CA2 output, and an activity-matched scrambled CA2 output control",
+    "Test held-out input patterns and timings with a frozen readout; repeat across independent network seeds",
+    "Run parameter and numerical sensitivity; compare with physiological targets not used for calibration",
+    "Deliver plots, effect sizes, uncertainty, negative results, configuration hashes, execution logs and bounded conclusions"
+  ],
+  "primary_measure": "CA1 identity decoder balanced accuracy on held-out trials; labels correspond only to input identity",
+  "secondary_measures": [
+    "evoked spike rate",
+    "latency",
+    "population separation",
+    "trial reliability",
+    "remaining response to competing input"
+  ],
+  "controls": [
+    "Same input events and network seed across interventions",
+    "Preserve topology and parameter draws when interrupting CA2 output",
+    "Shuffled output control matched for rate; avoid interpreting generic loss of drive as specific information processing",
+    "Label-permutation null; trial-level data split; no train/test leakage",
+    "Network seeds are replicates; neurons or time bins are not independent animal replicates",
+    "Calibration data are not counted as independent validation",
+    "Negative or null intervention outcomes are valid results"
+  ],
+  "initial_target_replications": 5,
+  "replication_note": "Five seeds are a pilot target, not a power calculation; assess uncertainty and expand before broad conclusions.",
+  "sources": [
+    {
+      "title": "Strong CA2 Pyramidal Neuron Synapses Define a Powerful Disynaptic Cortico-Hippocampal Loop",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2905041/",
+      "use": "Figures3 and5 single-pulse excitatory calibration; Figure3 CA3 inhibition calibration; held-out train response checks. MEC LII is not the LIII pathway in Figures2 or9."
+    },
+    {
+      "title": "A direct lateral entorhinal cortex to hippocampal CA2 circuit conveys social information required for social memory",
+      "url": "https://doi.org/10.1016/j.neuron.2022.01.028",
+      "use": "Mouse LEC/MEC physiology and pathway interventions. Raw data available from lead contact on request; unavailable locally. Paper-level summary is not raw spike input."
+    },
+    {
+      "title": "A hippocampal circuit linking dorsal CA2 to ventral CA1 critical for social memory dynamics",
+      "url": "https://www.nature.com/articles/s41467-018-06501-w",
+      "use": "Supports output-pathway relevance; generic CA1 must not be called ventral CA1 without parameters"
+    }
+  ],
+  "claim_limits": [
+    "A synthetic pattern task tests circuit information transmission, not animal recognition or behavior",
+    "Extending to social memory requires an explicit source-constrained learning mechanism and delay protocol",
+    "Mixed rodent parameter provenance does not constitute matched validation in mice",
+    "A point-neuron model cannot independently validate dendritic integration mechanisms",
+    "Scientific success means a reproducible and defensible answer, not a positive outcome"
+  ],
+  "pilot_implementation": {
+    "input": "MEC LII Stellate afferents from selected export; does not stand in for LEC",
+    "core": "Full fresh-export CA2 network plus prescribed MEC and CA3 spikes",
+    "downstream": "CA1 feedforward target assay; 128 pyramidal targets and selected full-count inhibitory populations",
+    "CA2_intervention": "Replay recorded pyramidal output intact, deleted, or independently permuted in cell identity for each trial; same spike times in intact and scrambled controls",
+    "limitations": "Open-loop afferents and target assay omit region feedback. Synthetic identities and pulse protocol do not implement social recognition, LIII dendritic physiology, or a matched behavioral experiment.",
+    "next_gate": "Inspect pilot evoked voltages and transmission before selecting confirmatory stimuli; freeze final stimuli, parameters and metrics before independent-seed testing."
+  },
+  "pilot_findings": {
+    "history": "300ms-spaced trials have severe carryover and are excluded from confirmatory identity inference. Subsequent task trials must reset simulator state.",
+    "physiology": "Default source-constrained model has weak aggregate CA3 inhibition after matching single-pulse excitation. Test isolated reversal and aggregate inhibitory gain; document fits, assumptions and independent validation."
+  }
+}
