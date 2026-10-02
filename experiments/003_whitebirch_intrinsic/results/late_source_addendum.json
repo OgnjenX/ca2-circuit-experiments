@@ -1,0 +1,51 @@
+{
+  "kind": "Late source-only addendum; excluded from frozen primary comparison",
+  "provenance": "Parent independent PDF/supplement audit, received after all primary integrations and recovery. Values not independently redigitized here; no model outcomes viewed by source worker.",
+  "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/9547935/bin/NIHMS1828702-supplement-2.pdf",
+  "location": "Supplemental Table1 page3, linkedtoFigure1 page4",
+  "control_summary": {
+    "maximum_current_evoked_firing": {
+      "mean": 17.16,
+      "reported_plus_minus": 0.6439,
+      "unit": "Hz"
+    },
+    "input_resistance": {
+      "mean": 50.38,
+      "reported_plus_minus": 1.203,
+      "unit": "Mohm"
+    },
+    "membrane_tau": {
+      "mean": 15.02,
+      "reported_plus_minus": 0.3872,
+      "unit": "ms"
+    },
+    "capacitance": {
+      "mean": 300,
+      "reported_plus_minus": 6.047,
+      "unit": "pF"
+    },
+    "resting_membrane_potential": {
+      "mean": -69.34,
+      "reported_plus_minus": 0.4136,
+      "unit": "mV"
+    },
+    "ramp_rheobase": {
+      "mean": 608.3,
+      "reported_plus_minus": 13.34,
+      "unit": "pA"
+    },
+    "AP_threshold": {
+      "mean": -41.78,
+      "reported_plus_minus": 0.5022,
+      "unit": "mV"
+    }
+  },
+  "limits": [
+    "Mean of per-cellmaximum firing is not the1000pA mean or thetenpointFigure1Ccurve.",
+    "Reported plus/minus summaries must be interpreted against source table caption; none restores missingFigure1CSEM.",
+    "Fitted modelC must not be equated with population biologicalcapacitance.",
+    "Unresolvedramp assay cannot substitute for currentstepthreshold.",
+    "No retuning, retroactive scoring or primary target substitution."
+  ],
+  "publisher_figure_recheck": "Parent suppliedpublisherPDF27pages: Figure1page3 raster2018x2176, no vectors; samecohort, hidden100pA marker remains."
+}

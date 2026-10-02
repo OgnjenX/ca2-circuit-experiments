@@ -1,0 +1,961 @@
+{
+  "kind": "Independent bounded final numerical review",
+  "scientific_freeze": "233b068cb7e22663b9ce551806e4a4e573a63872",
+  "serialization_recovery_freeze": "80049ab001aa6c4e444edb0bab018ded1897a8a9",
+  "numerical_record_sha256": "d7ba44405d692f145c70c54c6e5367b410c906e3d4cc8b9cbdc88823766662d1",
+  "auditor_source": "experiments/003_whitebirch_intrinsic/results/audit_numerical_record.py",
+  "auditor_sha256": "1e5fc2e3edd333cca7a5e62739a1edcebce85bdbd6631ef0881d0f5297d7b03d",
+  "native_and_clock_reference_hashes_verified": 198,
+  "same_grid_crossing_failures": 23,
+  "same_grid_detection_failures": 23,
+  "same_grid_crossing_time_failures": 9,
+  "same_grid_detection_time_failures": 11,
+  "same_grid_pre_reset_u_failures": 22,
+  "production_timestep_failed_comparisons": 23,
+  "production_timestep_crossing_time_failures": 21,
+  "production_timestep_detection_time_failures": 23,
+  "max_cross_grid_crossing_difference_ms": 1.9583981355679043,
+  "max_cross_grid_detection_difference_ms": 2.0,
+  "all33_structural_and_reference_reset_refinement_checks_pass": true,
+  "pulse_counts_stable_all3_grids": true,
+  "currents_with_postpulse_crossings_pA": [
+    500,
+    800
+  ],
+  "no_ISI_below6ms": true,
+  "comparability_unresolved": true,
+  "primary_numerical_pass": false,
+  "immediate_diagnostic_pass": true,
+  "independent_same_grid_comparisons": [
+    {
+      "steps_per_ms": 20,
+      "current_pA": 0,
+      "reference_refinement_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0,
+        "max_reset_u_before_error_pA": 0,
+        "pass": true
+      },
+      "reference_refinement_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0,
+        "max_reset_u_before_error_pA": 0,
+        "pass": true
+      },
+      "same_grid_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0,
+        "max_reset_u_before_error_pA": 0,
+        "pass": true
+      },
+      "same_grid_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0,
+        "max_reset_u_before_error_pA": 0,
+        "pass": true
+      }
+    },
+    {
+      "steps_per_ms": 20,
+      "current_pA": 100,
+      "reference_refinement_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 4.547473508864641e-13,
+        "max_reset_u_before_error_pA": 5.755396159656812e-13,
+        "pass": true
+      },
+      "reference_refinement_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 5.755396159656812e-13,
+        "pass": true
+      },
+      "same_grid_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.13321228354902814,
+        "max_reset_u_before_error_pA": 0.02869900518282975,
+        "pass": false
+      },
+      "same_grid_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.14999999999997726,
+        "max_reset_u_before_error_pA": 0.02869900518282975,
+        "pass": false
+      }
+    },
+    {
+      "steps_per_ms": 20,
+      "current_pA": 1000,
+      "reference_refinement_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 1.1368683772161603e-12,
+        "max_reset_u_before_error_pA": 6.934897101018578e-12,
+        "pass": true
+      },
+      "reference_refinement_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 6.934897101018578e-12,
+        "pass": true
+      },
+      "same_grid_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.00035149946029378043,
+        "max_reset_u_before_error_pA": 0.0007149641103296744,
+        "pass": true
+      },
+      "same_grid_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 0.0007149641103296744,
+        "pass": true
+      }
+    },
+    {
+      "steps_per_ms": 20,
+      "current_pA": 200,
+      "reference_refinement_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 2.8421709430404007e-12,
+        "max_reset_u_before_error_pA": 5.350386800273554e-12,
+        "pass": true
+      },
+      "reference_refinement_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 5.350386800273554e-12,
+        "pass": true
+      },
+      "same_grid_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.23428138996382586,
+        "max_reset_u_before_error_pA": 0.10020935291540312,
+        "pass": false
+      },
+      "same_grid_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.25,
+        "max_reset_u_before_error_pA": 0.10020935291540312,
+        "pass": false
+      }
+    },
+    {
+      "steps_per_ms": 20,
+      "current_pA": 300,
+      "reference_refinement_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 1.9269918993813917e-09,
+        "max_reset_u_before_error_pA": 3.2744651434768457e-09,
+        "pass": true
+      },
+      "reference_refinement_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 3.2744651434768457e-09,
+        "pass": true
+      },
+      "same_grid_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 1.101644718300122,
+        "max_reset_u_before_error_pA": 0.08788156618118137,
+        "pass": false
+      },
+      "same_grid_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 1.099999999999909,
+        "max_reset_u_before_error_pA": 0.08788156618118137,
+        "pass": false
+      }
+    },
+    {
+      "steps_per_ms": 20,
+      "current_pA": 400,
+      "reference_refinement_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 8.390088623855263e-11,
+        "max_reset_u_before_error_pA": 1.6342482922482304e-10,
+        "pass": true
+      },
+      "reference_refinement_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 1.6342482922482304e-10,
+        "pass": true
+      },
+      "same_grid_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.13051784669119115,
+        "max_reset_u_before_error_pA": 0.07960039315761946,
+        "pass": false
+      },
+      "same_grid_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.15000000000009095,
+        "max_reset_u_before_error_pA": 0.07960039315761946,
+        "pass": false
+      }
+    },
+    {
+      "steps_per_ms": 20,
+      "current_pA": 500,
+      "reference_refinement_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 4.4565240386873484e-11,
+        "max_reset_u_before_error_pA": 1.0982148523908108e-10,
+        "pass": true
+      },
+      "reference_refinement_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 1.0982148523908108e-10,
+        "pass": true
+      },
+      "same_grid_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.06231114168485874,
+        "max_reset_u_before_error_pA": 0.06423284093699522,
+        "pass": false
+      },
+      "same_grid_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0500000000001819,
+        "max_reset_u_before_error_pA": 0.06423284093699522,
+        "pass": false
+      }
+    },
+    {
+      "steps_per_ms": 20,
+      "current_pA": 600,
+      "reference_refinement_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 4.547473508864641e-13,
+        "max_reset_u_before_error_pA": 1.3073986337985843e-12,
+        "pass": true
+      },
+      "reference_refinement_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 1.3073986337985843e-12,
+        "pass": true
+      },
+      "same_grid_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.004278966918036531,
+        "max_reset_u_before_error_pA": 0.014669010575005359,
+        "pass": false
+      },
+      "same_grid_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 0.014669010575005359,
+        "pass": false
+      }
+    },
+    {
+      "steps_per_ms": 20,
+      "current_pA": 700,
+      "reference_refinement_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 9.094947017729282e-13,
+        "max_reset_u_before_error_pA": 3.922195901395753e-12,
+        "pass": true
+      },
+      "reference_refinement_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 3.922195901395753e-12,
+        "pass": true
+      },
+      "same_grid_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.02870751740169908,
+        "max_reset_u_before_error_pA": 0.10464316479499303,
+        "pass": false
+      },
+      "same_grid_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.05000000000006821,
+        "max_reset_u_before_error_pA": 0.10464316479499303,
+        "pass": false
+      }
+    },
+    {
+      "steps_per_ms": 20,
+      "current_pA": 800,
+      "reference_refinement_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 4.547473508864641e-13,
+        "max_reset_u_before_error_pA": 2.9558577807620168e-12,
+        "pass": true
+      },
+      "reference_refinement_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 2.9558577807620168e-12,
+        "pass": true
+      },
+      "same_grid_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.03414626745018268,
+        "max_reset_u_before_error_pA": 0.19117310879107663,
+        "pass": false
+      },
+      "same_grid_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.05000000000006821,
+        "max_reset_u_before_error_pA": 0.19117310879107663,
+        "pass": false
+      }
+    },
+    {
+      "steps_per_ms": 20,
+      "current_pA": 900,
+      "reference_refinement_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 1.0231815394945443e-12,
+        "max_reset_u_before_error_pA": 7.275957614183426e-12,
+        "pass": true
+      },
+      "reference_refinement_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 7.275957614183426e-12,
+        "pass": true
+      },
+      "same_grid_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.00027351729147540027,
+        "max_reset_u_before_error_pA": 0.001864202635943002,
+        "pass": true
+      },
+      "same_grid_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 0.001864202635943002,
+        "pass": true
+      }
+    },
+    {
+      "steps_per_ms": 40,
+      "current_pA": 0,
+      "reference_refinement_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0,
+        "max_reset_u_before_error_pA": 0,
+        "pass": true
+      },
+      "reference_refinement_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0,
+        "max_reset_u_before_error_pA": 0,
+        "pass": true
+      },
+      "same_grid_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0,
+        "max_reset_u_before_error_pA": 0,
+        "pass": true
+      },
+      "same_grid_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0,
+        "max_reset_u_before_error_pA": 0,
+        "pass": true
+      }
+    },
+    {
+      "steps_per_ms": 40,
+      "current_pA": 100,
+      "reference_refinement_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 8.526512829121202e-14,
+        "pass": true
+      },
+      "reference_refinement_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 8.526512829121202e-14,
+        "pass": true
+      },
+      "same_grid_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.17488222540600873,
+        "max_reset_u_before_error_pA": 0.007231492742121759,
+        "pass": false
+      },
+      "same_grid_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.1750000000000682,
+        "max_reset_u_before_error_pA": 0.007231492742121759,
+        "pass": false
+      }
+    },
+    {
+      "steps_per_ms": 40,
+      "current_pA": 1000,
+      "reference_refinement_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 2.2737367544323206e-13,
+        "max_reset_u_before_error_pA": 2.0463630789890885e-12,
+        "pass": true
+      },
+      "reference_refinement_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 2.0463630789890885e-12,
+        "pass": true
+      },
+      "same_grid_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.00044738920041709207,
+        "max_reset_u_before_error_pA": 0.002907695683120437,
+        "pass": true
+      },
+      "same_grid_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 0.002907695683120437,
+        "pass": true
+      }
+    },
+    {
+      "steps_per_ms": 40,
+      "current_pA": 200,
+      "reference_refinement_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 2.2737367544323206e-13,
+        "max_reset_u_before_error_pA": 5.968558980384842e-13,
+        "pass": true
+      },
+      "reference_refinement_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 5.968558980384842e-13,
+        "pass": true
+      },
+      "same_grid_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.05791115192948837,
+        "max_reset_u_before_error_pA": 0.022028197653845893,
+        "pass": false
+      },
+      "same_grid_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.05000000000006821,
+        "max_reset_u_before_error_pA": 0.022028197653845893,
+        "pass": false
+      }
+    },
+    {
+      "steps_per_ms": 40,
+      "current_pA": 300,
+      "reference_refinement_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 7.275957614183426e-12,
+        "max_reset_u_before_error_pA": 1.2050804798491299e-11,
+        "pass": true
+      },
+      "reference_refinement_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 1.2050804798491299e-11,
+        "pass": true
+      },
+      "same_grid_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.09140585915088195,
+        "max_reset_u_before_error_pA": 0.028947169230349346,
+        "pass": false
+      },
+      "same_grid_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.10000000000013642,
+        "max_reset_u_before_error_pA": 0.028947169230349346,
+        "pass": false
+      }
+    },
+    {
+      "steps_per_ms": 40,
+      "current_pA": 400,
+      "reference_refinement_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 1.1368683772161603e-13,
+        "max_reset_u_before_error_pA": 2.2737367544323206e-13,
+        "pass": true
+      },
+      "reference_refinement_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 2.2737367544323206e-13,
+        "pass": true
+      },
+      "same_grid_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.026065291315148897,
+        "max_reset_u_before_error_pA": 0.014442188883037943,
+        "pass": false
+      },
+      "same_grid_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.02500000000009095,
+        "max_reset_u_before_error_pA": 0.014442188883037943,
+        "pass": false
+      }
+    },
+    {
+      "steps_per_ms": 40,
+      "current_pA": 500,
+      "reference_refinement_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 1.4779288903810084e-12,
+        "max_reset_u_before_error_pA": 4.547473508864641e-12,
+        "pass": true
+      },
+      "reference_refinement_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 4.547473508864641e-12,
+        "pass": true
+      },
+      "same_grid_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.024297226993439835,
+        "max_reset_u_before_error_pA": 0.024961458707878137,
+        "pass": false
+      },
+      "same_grid_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.024999999999863576,
+        "max_reset_u_before_error_pA": 0.024961458707878137,
+        "pass": false
+      }
+    },
+    {
+      "steps_per_ms": 40,
+      "current_pA": 600,
+      "reference_refinement_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 4.547473508864641e-13,
+        "max_reset_u_before_error_pA": 1.8189894035458565e-12,
+        "pass": true
+      },
+      "reference_refinement_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 1.8189894035458565e-12,
+        "pass": true
+      },
+      "same_grid_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0035263988363567478,
+        "max_reset_u_before_error_pA": 0.011847504446052426,
+        "pass": false
+      },
+      "same_grid_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 0.011847504446052426,
+        "pass": false
+      }
+    },
+    {
+      "steps_per_ms": 40,
+      "current_pA": 700,
+      "reference_refinement_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 1.1368683772161603e-12,
+        "max_reset_u_before_error_pA": 5.002220859751105e-12,
+        "pass": true
+      },
+      "reference_refinement_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 5.002220859751105e-12,
+        "pass": true
+      },
+      "same_grid_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0019580231992222252,
+        "max_reset_u_before_error_pA": 0.010757752473182336,
+        "pass": false
+      },
+      "same_grid_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 0.010757752473182336,
+        "pass": false
+      }
+    },
+    {
+      "steps_per_ms": 40,
+      "current_pA": 800,
+      "reference_refinement_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 6.821210263296962e-13,
+        "max_reset_u_before_error_pA": 3.751665644813329e-12,
+        "pass": true
+      },
+      "reference_refinement_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 3.751665644813329e-12,
+        "pass": true
+      },
+      "same_grid_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.005783385385257134,
+        "max_reset_u_before_error_pA": 0.05435853563096771,
+        "pass": false
+      },
+      "same_grid_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.025000000000034106,
+        "max_reset_u_before_error_pA": 0.05435853563096771,
+        "pass": false
+      }
+    },
+    {
+      "steps_per_ms": 40,
+      "current_pA": 900,
+      "reference_refinement_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 3.410605131648481e-13,
+        "max_reset_u_before_error_pA": 3.865352482534945e-12,
+        "pass": true
+      },
+      "reference_refinement_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 3.865352482534945e-12,
+        "pass": true
+      },
+      "same_grid_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.00040077452331388486,
+        "max_reset_u_before_error_pA": 0.0017217464550185468,
+        "pass": true
+      },
+      "same_grid_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 0.0017217464550185468,
+        "pass": true
+      }
+    },
+    {
+      "steps_per_ms": 80,
+      "current_pA": 0,
+      "reference_refinement_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0,
+        "max_reset_u_before_error_pA": 0,
+        "pass": true
+      },
+      "reference_refinement_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0,
+        "max_reset_u_before_error_pA": 0,
+        "pass": true
+      },
+      "same_grid_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0,
+        "max_reset_u_before_error_pA": 0,
+        "pass": true
+      },
+      "same_grid_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0,
+        "max_reset_u_before_error_pA": 0,
+        "pass": true
+      }
+    },
+    {
+      "steps_per_ms": 80,
+      "current_pA": 100,
+      "reference_refinement_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 0.0,
+        "pass": true
+      },
+      "reference_refinement_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 0.0,
+        "pass": true
+      },
+      "same_grid_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.33803928138320316,
+        "max_reset_u_before_error_pA": 0.021495471659413568,
+        "pass": false
+      },
+      "same_grid_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.33750000000009095,
+        "max_reset_u_before_error_pA": 0.021495471659413568,
+        "pass": false
+      }
+    },
+    {
+      "steps_per_ms": 80,
+      "current_pA": 1000,
+      "reference_refinement_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 0.0,
+        "pass": true
+      },
+      "reference_refinement_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 0.0,
+        "pass": true
+      },
+      "same_grid_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0007968000129494612,
+        "max_reset_u_before_error_pA": 0.025810575932268875,
+        "pass": false
+      },
+      "same_grid_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.012500000000045475,
+        "max_reset_u_before_error_pA": 0.025810575932268875,
+        "pass": false
+      }
+    },
+    {
+      "steps_per_ms": 80,
+      "current_pA": 200,
+      "reference_refinement_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 0.0,
+        "pass": true
+      },
+      "reference_refinement_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 0.0,
+        "pass": true
+      },
+      "same_grid_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.01242339188894448,
+        "max_reset_u_before_error_pA": 0.005710774741416458,
+        "pass": true
+      },
+      "same_grid_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.012499999999988631,
+        "max_reset_u_before_error_pA": 0.005710774741416458,
+        "pass": true
+      }
+    },
+    {
+      "steps_per_ms": 80,
+      "current_pA": 300,
+      "reference_refinement_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 0.0,
+        "pass": true
+      },
+      "reference_refinement_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 0.0,
+        "pass": true
+      },
+      "same_grid_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.043656496240828346,
+        "max_reset_u_before_error_pA": 0.011088154990346766,
+        "pass": false
+      },
+      "same_grid_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.03750000000002274,
+        "max_reset_u_before_error_pA": 0.011088154990346766,
+        "pass": false
+      }
+    },
+    {
+      "steps_per_ms": 80,
+      "current_pA": 400,
+      "reference_refinement_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 0.0,
+        "pass": true
+      },
+      "reference_refinement_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 0.0,
+        "pass": true
+      },
+      "same_grid_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.00965301149676634,
+        "max_reset_u_before_error_pA": 0.004453676058744804,
+        "pass": true
+      },
+      "same_grid_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.012500000000045475,
+        "max_reset_u_before_error_pA": 0.004453676058744804,
+        "pass": true
+      }
+    },
+    {
+      "steps_per_ms": 80,
+      "current_pA": 500,
+      "reference_refinement_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 0.0,
+        "pass": true
+      },
+      "reference_refinement_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 0.0,
+        "pass": true
+      },
+      "same_grid_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.01463226431746989,
+        "max_reset_u_before_error_pA": 0.019559463822190537,
+        "pass": false
+      },
+      "same_grid_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.012500000000045475,
+        "max_reset_u_before_error_pA": 0.019559463822190537,
+        "pass": false
+      }
+    },
+    {
+      "steps_per_ms": 80,
+      "current_pA": 600,
+      "reference_refinement_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 0.0,
+        "pass": true
+      },
+      "reference_refinement_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 0.0,
+        "pass": true
+      },
+      "same_grid_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0015942547818212915,
+        "max_reset_u_before_error_pA": 0.005134234893603207,
+        "pass": true
+      },
+      "same_grid_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 0.005134234893603207,
+        "pass": true
+      }
+    },
+    {
+      "steps_per_ms": 80,
+      "current_pA": 700,
+      "reference_refinement_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 0.0,
+        "pass": true
+      },
+      "reference_refinement_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 0.0,
+        "pass": true
+      },
+      "same_grid_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.009006022605490216,
+        "max_reset_u_before_error_pA": 0.02057931520624834,
+        "pass": false
+      },
+      "same_grid_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.012500000000045475,
+        "max_reset_u_before_error_pA": 0.02057931520624834,
+        "pass": false
+      }
+    },
+    {
+      "steps_per_ms": 80,
+      "current_pA": 800,
+      "reference_refinement_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 0.0,
+        "pass": true
+      },
+      "reference_refinement_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 0.0,
+        "pass": true
+      },
+      "same_grid_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.003290923093800302,
+        "max_reset_u_before_error_pA": 0.01605364588874636,
+        "pass": false
+      },
+      "same_grid_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 0.01605364588874636,
+        "pass": false
+      }
+    },
+    {
+      "steps_per_ms": 80,
+      "current_pA": 900,
+      "reference_refinement_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 0.0,
+        "pass": true
+      },
+      "reference_refinement_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 0.0,
+        "pass": true
+      },
+      "same_grid_crossings": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0016555147435610706,
+        "max_reset_u_before_error_pA": 0.012179501904824974,
+        "pass": false
+      },
+      "same_grid_detections": {
+        "stable_counts_order_and_phases": true,
+        "max_time_error_ms": 0.0,
+        "max_reset_u_before_error_pA": 0.012179501904824974,
+        "pass": false
+      }
+    }
+  ],
+  "interpretation": "Primary fails frozen event-time/reset-recovery numerical gates. Stable counts and structural fidelity do not waive those failures. Immediate diagnostic passes its own numerical gates but cannot replace primary or support primary biological scoring.",
+  "limits": [
+    "No biological target values or biological score inspected.",
+    "CSV structural evidence comes from prior independent runtime audit; this audit independently recomputes comparison metrics from recorded events and pinned raw references, without integrating any neuron.",
+    "Detector compatibility remains unresolved because recording-wide versus pulse counts include postpulse events."
+  ]
+}

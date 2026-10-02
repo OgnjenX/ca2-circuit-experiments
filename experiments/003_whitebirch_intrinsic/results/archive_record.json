@@ -1,0 +1,30 @@
+{
+  "name": "experiment-003-whitebirch-v1-raw.tar.gz",
+  "local_path": "/home/ognjen/Documents/Codex/2026-10-02/task-2/experiment-003-whitebirch-v1-raw.tar.gz",
+  "sha256": "9ae381ee089aedf6b8dbb55242d0e83899356811ac4b8477c1b13031677a9343",
+  "bytes": 28162995,
+  "kind": "Raw traces, all reference outputs, native artifacts, pinned backend source/library and retained failure; uniquely named draft archive",
+  "scientific_freeze_commit": "233b068cb7e22663b9ce551806e4a4e573a63872",
+  "serializer_recovery_commit": "80049ab001aa6c4e444edb0bab018ded1897a8a9",
+  "historical_release_tag_untouched": "experiment-003-v1",
+  "reproduction": "Read revisions/002/readme.md and revisions/003/readme.md; original pinned native runtime uses recorded absolute paths. Independent auditors accept extracted raw directories.",
+  "draft_release": {
+    "assets": [
+      {
+        "browser_download_url": "https://github.com/OgnjenX/ca2-circuit-experiments/releases/download/untagged-87cd0657571c62a3e3fd/experiment-003-whitebirch-v1-raw.tar.gz",
+        "digest": "sha256:9ae381ee089aedf6b8dbb55242d0e83899356811ac4b8477c1b13031677a9343",
+        "id": 606666317,
+        "name": "experiment-003-whitebirch-v1-raw.tar.gz",
+        "size": 28162995,
+        "url": "https://api.github.com/repos/OgnjenX/ca2-circuit-experiments/releases/assets/606666317"
+      }
+    ],
+    "draft": true,
+    "html_url": "https://github.com/OgnjenX/ca2-circuit-experiments/releases/tag/untagged-87cd0657571c62a3e3fd",
+    "id": 402208809,
+    "tag_name": "experiment-003-whitebirch-v1",
+    "target_commitish": "80049ab001aa6c4e444edb0bab018ded1897a8a9"
+  },
+  "authenticated_download": "gh release download experiment-003-whitebirch-v1 --repo OgnjenX/ca2-circuit-experiments --pattern experiment-003-whitebirch-v1-raw.tar.gz",
+  "archive_members_checked_safe": 330
+}

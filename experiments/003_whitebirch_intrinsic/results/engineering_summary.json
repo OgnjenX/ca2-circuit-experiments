@@ -1,0 +1,195 @@
+{
+  "scope": "Engineering counts/errors only; numerical gate failed; no paper residuals or biological scores",
+  "rows": [
+    {
+      "current_pA": 100,
+      "native_pulse_counts_by_steps": {
+        "20": 2,
+        "40": 2,
+        "80": 2
+      },
+      "native_pre": 0,
+      "native_pulse": 2,
+      "native_post": 0,
+      "detector_compatible_pulse": 2,
+      "native_delayed_pulse": 2,
+      "immediate_pulse": 2,
+      "max_same_grid_crossing_error_ms": 0.33803928138320316,
+      "max_same_grid_detection_error_ms": 0.33750000000009095,
+      "max_same_grid_reset_u_error_pA": 0.02869900518282975,
+      "max_cross_grid_crossing_error_ms": 0.20482699795502413,
+      "max_cross_grid_detection_error_ms": 0.21250000000009095
+    },
+    {
+      "current_pA": 200,
+      "native_pulse_counts_by_steps": {
+        "20": 4,
+        "40": 4,
+        "80": 4
+      },
+      "native_pre": 0,
+      "native_pulse": 4,
+      "native_post": 0,
+      "detector_compatible_pulse": 4,
+      "native_delayed_pulse": 4,
+      "immediate_pulse": 4,
+      "max_same_grid_crossing_error_ms": 0.23428138996382586,
+      "max_same_grid_detection_error_ms": 0.25,
+      "max_same_grid_reset_u_error_pA": 0.10020935291540312,
+      "max_cross_grid_crossing_error_ms": 0.3267235095167962,
+      "max_cross_grid_detection_error_ms": 0.3125
+    },
+    {
+      "current_pA": 300,
+      "native_pulse_counts_by_steps": {
+        "20": 9,
+        "40": 9,
+        "80": 9
+      },
+      "native_pre": 0,
+      "native_pulse": 9,
+      "native_post": 0,
+      "detector_compatible_pulse": 9,
+      "native_delayed_pulse": 9,
+      "immediate_pulse": 9,
+      "max_same_grid_crossing_error_ms": 1.101644718300122,
+      "max_same_grid_detection_error_ms": 1.099999999999909,
+      "max_same_grid_reset_u_error_pA": 0.08788156618118137,
+      "max_cross_grid_crossing_error_ms": 0.9993118852562475,
+      "max_cross_grid_detection_error_ms": 1.025000000000034
+    },
+    {
+      "current_pA": 400,
+      "native_pulse_counts_by_steps": {
+        "20": 11,
+        "40": 11,
+        "80": 11
+      },
+      "native_pre": 0,
+      "native_pulse": 11,
+      "native_post": 0,
+      "detector_compatible_pulse": 11,
+      "native_delayed_pulse": 11,
+      "immediate_pulse": 11,
+      "max_same_grid_crossing_error_ms": 0.13051784669119115,
+      "max_same_grid_detection_error_ms": 0.15000000000009095,
+      "max_same_grid_reset_u_error_pA": 0.07960039315761946,
+      "max_cross_grid_crossing_error_ms": 1.125177834135343,
+      "max_cross_grid_detection_error_ms": 1.1124999999999545
+    },
+    {
+      "current_pA": 500,
+      "native_pulse_counts_by_steps": {
+        "20": 13,
+        "40": 13,
+        "80": 13
+      },
+      "native_pre": 0,
+      "native_pulse": 13,
+      "native_post": 1,
+      "detector_compatible_pulse": 13,
+      "native_delayed_pulse": 13,
+      "immediate_pulse": 14,
+      "max_same_grid_crossing_error_ms": 0.06231114168485874,
+      "max_same_grid_detection_error_ms": 0.0500000000001819,
+      "max_same_grid_reset_u_error_pA": 0.06423284093699522,
+      "max_cross_grid_crossing_error_ms": 0.10945099681271131,
+      "max_cross_grid_detection_error_ms": 0.11249999999995453
+    },
+    {
+      "current_pA": 600,
+      "native_pulse_counts_by_steps": {
+        "20": 16,
+        "40": 16,
+        "80": 16
+      },
+      "native_pre": 0,
+      "native_pulse": 16,
+      "native_post": 0,
+      "detector_compatible_pulse": 16,
+      "native_delayed_pulse": 16,
+      "immediate_pulse": 16,
+      "max_same_grid_crossing_error_ms": 0.004278966918036531,
+      "max_same_grid_detection_error_ms": 0.0,
+      "max_same_grid_reset_u_error_pA": 0.014669010575005359,
+      "max_cross_grid_crossing_error_ms": 0.08299335662718477,
+      "max_cross_grid_detection_error_ms": 0.08749999999997726
+    },
+    {
+      "current_pA": 700,
+      "native_pulse_counts_by_steps": {
+        "20": 18,
+        "40": 18,
+        "80": 18
+      },
+      "native_pre": 0,
+      "native_pulse": 18,
+      "native_post": 0,
+      "detector_compatible_pulse": 18,
+      "native_delayed_pulse": 18,
+      "immediate_pulse": 18,
+      "max_same_grid_crossing_error_ms": 0.02870751740169908,
+      "max_same_grid_detection_error_ms": 0.05000000000006821,
+      "max_same_grid_reset_u_error_pA": 0.10464316479499303,
+      "max_cross_grid_crossing_error_ms": 1.9583981355679043,
+      "max_cross_grid_detection_error_ms": 2.0
+    },
+    {
+      "current_pA": 800,
+      "native_pulse_counts_by_steps": {
+        "20": 19,
+        "40": 19,
+        "80": 19
+      },
+      "native_pre": 0,
+      "native_pulse": 19,
+      "native_post": 1,
+      "detector_compatible_pulse": 19,
+      "native_delayed_pulse": 19,
+      "immediate_pulse": 20,
+      "max_same_grid_crossing_error_ms": 0.03414626745018268,
+      "max_same_grid_detection_error_ms": 0.05000000000006821,
+      "max_same_grid_reset_u_error_pA": 0.19117310879107663,
+      "max_cross_grid_crossing_error_ms": 1.0949996029050908,
+      "max_cross_grid_detection_error_ms": 1.1000000000001364
+    },
+    {
+      "current_pA": 900,
+      "native_pulse_counts_by_steps": {
+        "20": 21,
+        "40": 21,
+        "80": 21
+      },
+      "native_pre": 0,
+      "native_pulse": 21,
+      "native_post": 0,
+      "detector_compatible_pulse": 21,
+      "native_delayed_pulse": 21,
+      "immediate_pulse": 22,
+      "max_same_grid_crossing_error_ms": 0.0016555147435610706,
+      "max_same_grid_detection_error_ms": 0.0,
+      "max_same_grid_reset_u_error_pA": 0.012179501904824974,
+      "max_cross_grid_crossing_error_ms": 0.9929980169210353,
+      "max_cross_grid_detection_error_ms": 1.025000000000091
+    },
+    {
+      "current_pA": 1000,
+      "native_pulse_counts_by_steps": {
+        "20": 23,
+        "40": 23,
+        "80": 23
+      },
+      "native_pre": 0,
+      "native_pulse": 23,
+      "native_post": 0,
+      "detector_compatible_pulse": 23,
+      "native_delayed_pulse": 23,
+      "immediate_pulse": 23,
+      "max_same_grid_crossing_error_ms": 0.0007968000129494612,
+      "max_same_grid_detection_error_ms": 0.012500000000045475,
+      "max_same_grid_reset_u_error_pA": 0.025810575932268875,
+      "max_cross_grid_crossing_error_ms": 0.056684900018922235,
+      "max_cross_grid_detection_error_ms": 0.05000000000006821
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "tested_head": "80049ab001aa6c4e444edb0bab018ded1897a8a9",
+  "frozen_commit": "233b068cb7e22663b9ce551806e4a4e573a63872",
+  "source_sufficient_for_conditional_bounds": true,
+  "source_condition": "100pA marker plotted under red occluder; mean remains unidentified",
+  "implementation_frozen": true,
+  "pinned_runtime_available": true,
+  "pinned_numerical_dependencies_available": true,
+  "ready_for_numerical_validation": true,
+  "numerically_valid_for_scoring": false,
+  "measurement_comparable": false,
+  "population_biological_validation": "not established; no equivalence margin or cell/mouse covariance"
+}
+Recovered unchanged checks for rk20_step0; no reintegration
+Recovered unchanged checks for rk20_step100; no reintegration
+Recovered unchanged checks for rk20_step1000; no reintegration
+Recovered unchanged checks for rk20_step200; no reintegration
+Recovered unchanged checks for rk20_step300; no reintegration
+Recovered unchanged checks for rk20_step400; no reintegration
+Recovered unchanged checks for rk20_step500; no reintegration
+Recovered unchanged checks for rk20_step600; no reintegration
+Recovered unchanged checks for rk20_step700; no reintegration
+Recovered unchanged checks for rk20_step800; no reintegration
+Recovered unchanged checks for rk20_step900; no reintegration
+Recovered unchanged checks for rk40_step0; no reintegration
+Recovered unchanged checks for rk40_step100; no reintegration
+Recovered unchanged checks for rk40_step1000; no reintegration
+Recovered unchanged checks for rk40_step200; no reintegration
+Recovered unchanged checks for rk40_step300; no reintegration
+Recovered unchanged checks for rk40_step400; no reintegration
+Recovered unchanged checks for rk40_step500; no reintegration
+Recovered unchanged checks for rk40_step600; no reintegration
+Recovered unchanged checks for rk40_step700; no reintegration
+Recovered unchanged checks for rk40_step800; no reintegration
+Recovered unchanged checks for rk40_step900; no reintegration
+Recovered unchanged checks for rk80_step0; no reintegration
+Recovered unchanged checks for rk80_step100; no reintegration
+Recovered unchanged checks for rk80_step1000; no reintegration
+Recovered unchanged checks for rk80_step200; no reintegration
+Recovered unchanged checks for rk80_step300; no reintegration
+Recovered unchanged checks for rk80_step400; no reintegration
+Recovered unchanged checks for rk80_step500; no reintegration
+Recovered unchanged checks for rk80_step600; no reintegration
+Recovered unchanged checks for rk80_step700; no reintegration
+Recovered unchanged checks for rk80_step800; no reintegration
+Recovered unchanged checks for rk80_step900; no reintegration
+Immediate diagnostic step 0 pA: both reference refinements complete; pass=True
+Immediate diagnostic step 100 pA: both reference refinements complete; pass=True
+Immediate diagnostic step 200 pA: both reference refinements complete; pass=True
+Immediate diagnostic step 300 pA: both reference refinements complete; pass=True
+Immediate diagnostic step 400 pA: both reference refinements complete; pass=True
+Immediate diagnostic step 500 pA: both reference refinements complete; pass=True
+Immediate diagnostic step 600 pA: both reference refinements complete; pass=True
+Immediate diagnostic step 700 pA: both reference refinements complete; pass=True
+Immediate diagnostic step 800 pA: both reference refinements complete; pass=True
+Immediate diagnostic step 900 pA: both reference refinements complete; pass=True
+Immediate diagnostic step 1000 pA: both reference refinements complete; pass=True
+{"passed": false, "diagnostic_passed": true}
